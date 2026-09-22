@@ -1,0 +1,60 @@
+perception_config: default.yaml
+events:
+  min_track_duration: 0.8
+  min_observations: 3
+  min_detector_confidence: 0.4
+  disappearance_seconds: 1.0
+  before_offset_seconds: 1.0
+  after_offset_seconds: 1.0
+  proximity_change_threshold: 0.12
+  proximity_window_seconds: 1.2
+  near_threshold: 0.35
+  motion_coupling_threshold: 0.85
+  min_motion_speed: 0.03
+  signal_persistence_seconds: 0.6
+  merge_window_seconds: 0.4
+  max_merged_duration: 4.0
+  cooldown_seconds: 1.0
+  max_vlm_events: 8
+  nearest_neighbors: 3
+keyframes:
+  search_radius_seconds: 0.45
+  require_involved_track_visibility: true
+  sharpness_weight: 0.2
+  bbox_area_weight: 0.3
+  detector_confidence_weight: 0.2
+  visibility_weight: 0.3
+  image_width: 960
+  max_context_tracks: 6
+vlm:
+  backend: disabled
+  model: HuggingFaceTB/SmolVLM2-500M-Video-Instruct
+  revision: main
+  cache_dir: .models/huggingface
+  local_files_only: true
+  device: auto
+  cpu_threads: 4
+  max_new_tokens: 768
+  max_inference_seconds: 120
+  image_longest_edge: 512
+  confidence_threshold: 0.55
+  semantic_margin: 0.15
+  endpoint: http://127.0.0.1:8000/v1/chat/completions
+  api_key_env: VLM_API_KEY
+  request_timeout_seconds: 120
+admission:
+  min_observations: 4
+  min_track_duration: 0.8
+  min_mean_confidence: 0.4
+  min_area_fraction: 0.001
+graph:
+  max_geometric_neighbors: 3
+  min_relation_confidence: 0.55
+  near_threshold: 0.35
+  direction_margin: 0.025
+  conflict_multiplier: 0.25
+  temporal_merge_gap_seconds: 1.2
+  transition_max_gap_seconds: 3.0
+  max_render_entities: 24
+  max_render_relations: 32
+  max_attributes_per_entity: 3

@@ -1,0 +1,51 @@
+video:
+  sample_fps: 5
+detector:
+  model: yolo11s.pt
+  confidence: 0.25
+  image_size: 960
+  device: auto
+  cpu_threads: 4
+tracking:
+  high_threshold: 0.35
+  low_threshold: 0.1
+  new_track_threshold: 0.35
+  match_threshold: 0.8
+  lost_seconds: 2.0
+episodes:
+  min_duration_seconds: 5.0
+  scene_change_threshold: 0.55
+  cooldown_seconds: 5.0
+anchors:
+  classes: [table, desk, chair, sofa, bed, refrigerator, cabinet, shelf, door, counter, sink, bench, toilet, tv, microwave, oven]
+  min_observations: 5
+  min_track_duration: 2.0
+  min_area_fraction: 0.01
+  max_center_speed: 0.30
+  min_anchor_score: 0.60
+  duration_saturation_seconds: 6.0
+  area_saturation_fraction: 0.10
+objects:
+  aliases: {dining table: table, couch: sofa}
+  excluded_subject_classes: [person]
+relations:
+  near_threshold: 0.25
+  direction_margin: 0.03
+  overlap_threshold: 0.05
+  containment_threshold: 0.90
+  on_above_max_gap: 0.15
+  min_confidence: 0.5
+  max_anchors_per_object: 3
+temporal_filter:
+  min_support: 3
+  min_duration_seconds: 0.6
+  max_gap_seconds: 1.0
+  confidence_threshold: 0.50
+transitions:
+  predicates: [INSIDE, ON_OR_ABOVE, NEAR]
+  max_gap_seconds: 10.0
+visualization:
+  annotated_video: true
+  max_video_width: 1280
+  graph_nodes_per_page: 24
+  overlay_relations: 5
