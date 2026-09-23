@@ -20,6 +20,8 @@ class VLMEntity(Model):
     @classmethod
     def normalize_class(cls, value):
         value = " ".join(value.lower().strip().split())
+        if value in {"category", "category or unknown", "object category", "category name"}:
+            raise ValueError("Schema placeholder is not an object category; use unknown")
         return value or "unknown"
 
     @field_validator("attributes")

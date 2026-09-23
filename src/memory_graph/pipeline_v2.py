@@ -19,6 +19,8 @@ from .visualization.scene_graph_visualizer import render_semantic_graph
 from .visualization.memory_graph_visualizer import render_memory
 from .visualization.video_visualizer_v2 import render_video_v2
 from .vlm.schemas import INTERACTIONS
+from .vlm.schemas import VLMSceneGraphResult
+from .vlm.prompts import make_prompt
 
 log = logging.getLogger(__name__)
 
@@ -37,8 +39,12 @@ def _prepare_output(output):
         for directory in events_dir.iterdir():
             if directory.is_dir() and re.fullmatch(r"evt_\d+", directory.name):
                 for name in ["before.jpg", "during.jpg", "after.jpg", "event.json", "vlm_raw.json", "scene_graph.json",
-                             "scene_graph.png", "scene_graph.png.render.json", "analysis_error.json", "keyframes.json", "vlm_input.json"]:
+                             "scene_graph.png", "scene_graph.png.render.json", "analysis_error.json", "keyframes.json", "vlm_input.json",
+                             "vlm_validated.json", "prompt.txt", "track_crops.jpg", "track_crops.json"]:
                     (directory/name).unlink(missing_ok=True)
+                for crop in directory.glob("identity_*.jpg"):
+                    if re.fullmatch(r"identity_\d+_(before|during|after)\.jpg", crop.name):
+                        crop.unlink()
                 if not any(directory.iterdir()):
                     directory.rmdir()
     return output
@@ -74,6 +80,7 @@ def run_video_v2(source, config, output=None, events_only=False, backend=None):
         hardware = hardware_report()
         save_json(output/"hardware.json", hardware)
         save_json(output/"run_config.json", config)
+        save_json(output/"vlm_schema.json", VLMSceneGraphResult.model_json_schema())
         metadata, episodes, timelines = collect_tracks(source, output, config)
         log.info("Building track timelines: %d fixed numeric track IDs", len(timelines))
         raw = propose_events(timelines, metadata.duration, config.events)
@@ -92,7 +99,7 @@ def run_video_v2(source, config, output=None, events_only=False, backend=None):
                 backend_error = str(error)
                 log.error("VLM unavailable; keeping event/geometry outputs: %s", error)
         results, scenes, event_records = [], [], []
-        attempted = cache_hits = failures = 0
+        attempted = cache_hits = failures = partial_events = generation_calls = component_failures = 0
         for event in events:
             record = event.model_dump()
             if not event.selected:
@@ -105,8 +112,11 @@ def run_video_v2(source, config, output=None, events_only=False, backend=None):
             track_metadata = _track_metadata(event, frames, timelines)
             event_metadata = {"event_id": event.event_id, "event_type": event.event_type, "signals": event.signals,
                 "start_time": event.start_time, "peak_time": event.peak_time, "end_time": event.end_time,
+                "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+                "original_image_size": {"width": metadata.width, "height": metadata.height},
                 "frames": [{"phase": f.phase, "timestamp": f.timestamp, "visible_ids": f.visible_track_ids} for f in frames]}
             save_json(directory/"vlm_input.json", {"tracks": track_metadata, "event": event_metadata})
+            (directory/"prompt.txt").write_text(make_prompt(track_metadata, event_metadata), encoding="utf-8")
             result = None
             status = "skipped_events_only" if events_only else "unavailable" if backend_error else "skipped_disabled"
             error_message = backend_error
@@ -114,11 +124,17 @@ def run_video_v2(source, config, output=None, events_only=False, backend=None):
                 attempted += 1
                 log.info("Analyzing event %s (%d/%d)", event.event_id, attempted, len(windows))
                 try:
-                    result, hit = analyze_cached(backend, [directory/f.image_path for f in frames], track_metadata,
+                    result, hit = analyze_cached(backend, [*[directory/f.image_path for f in frames], directory/"track_crops.jpg"], track_metadata,
                         event_metadata, output/".vlm_cache", directory/"vlm_raw.json")
                     results.append(result)
+                    save_json(directory/"vlm_validated.json", result)
                     cache_hits += int(hit)
-                    status = "success"
+                    raw_record = json.loads((directory/"vlm_raw.json").read_text(encoding="utf-8"))
+                    errors = raw_record.get("component_errors", [])
+                    component_failures += len(errors)
+                    generation_calls += 0 if hit else max(1, len(raw_record.get("generation_trace", [])))
+                    status = "partial" if errors else "success"
+                    partial_events += int(bool(errors))
                 except Exception as error:
                     failures += 1
                     status, error_message = "failed", str(error)
@@ -150,6 +166,8 @@ def run_video_v2(source, config, output=None, events_only=False, backend=None):
             "video": source.name, "raw_track_ids": len(timelines), "raw_event_signals": len(raw), "merged_events": len(events),
             "selected_events": len(windows), "vlm_attempted_events": attempted, "vlm_analyzed_events": len(results),
             "vlm_failed_events": failures, "cache_hits": cache_hits, "skipped_events": len(events)-len(results),
+            "vlm_partial_events": partial_events, "vlm_component_failures": component_failures,
+            "vlm_generation_calls": generation_calls,
             "confirmed_semantic_entities": sum(e.semantic_class != "unknown" for e in entities),
             "unknown_entities": sum(e.semantic_class == "unknown" for e in entities), "rejected_tracks": len(rejected),
             "semantic_corrections": [{"track_id": e.track_id, "detector_class": e.detector_class, "semantic_class": e.semantic_class}

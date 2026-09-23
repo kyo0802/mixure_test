@@ -115,6 +115,9 @@ def merge_events(proposals, config):
         event.priority += .4*(len(event.signals)-1)
     selected = []
     for event in sorted(merged, key=lambda e: (-e.priority, e.peak_time)):
+        # Selection is a property of this budget pass, never inherited input state.
+        event.selected = False
+        event.skip_reason = None
         duplicate = any(abs(e.peak_time-event.peak_time) < config.cooldown_seconds and
                         set(e.involved_track_ids) & set(event.involved_track_ids) for e in selected)
         if len(selected) < config.max_vlm_events and not duplicate:

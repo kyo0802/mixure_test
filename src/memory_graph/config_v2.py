@@ -47,6 +47,8 @@ class VLMConfig(Model):
     cpu_threads: int = Field(default=4, ge=1)
     max_new_tokens: int = Field(default=768, ge=64)
     max_inference_seconds: float = Field(default=120, gt=0)
+    ground_entities_individually: bool = False
+    load_in_4bit: bool = False
     image_longest_edge: int = Field(default=512, ge=256)
     confidence_threshold: Probability = .55
     semantic_margin: Probability = .15

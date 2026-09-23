@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import time
+from importlib.metadata import version
 from pathlib import Path
 from ..models import VideoMetadata, Episode, ObjectTrack, AnchorInfo
 from ..video.reader import VideoReader
@@ -28,7 +29,8 @@ def collect_tracks(source, output, config):
     output = Path(output)
     reader = VideoReader(source)
     fingerprint = hashlib.sha256(json.dumps({"video": sha256(source), "config": config.perception.model_dump(),
-        "neighbors": config.events.nearest_neighbors, "version": "v2-timelines-1",
+        "neighbors": config.events.nearest_neighbors, "version": "v2-timelines-2",
+        "runtime": {name: version(name) for name in ("torch", "ultralytics", "opencv-python")},
         "weights": sha256(config.perception.detector.model) if Path(config.perception.detector.model).is_file() else config.perception.detector.model}, sort_keys=True).encode()).hexdigest()
     cache = output/"perception_cache.json"
     if cache.exists() and json.loads(cache.read_text())["fingerprint"] == fingerprint:

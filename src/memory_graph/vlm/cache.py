@@ -18,11 +18,20 @@ def analyze_cached(backend, images, tracks, event, cache_dir, raw_path):
     hit = path.is_file()
     if hit:
         record = json.loads(path.read_text(encoding="utf-8"))
+        if any(item.get("stage") == "identity" for item in record.get("generation_trace", [])):
+            from .grounded_analysis import track_crops
+            for track in tracks:
+                track_crops(images, track, event)
     else:
         raw = backend.analyze_event(images, tracks, event)
         record = {"cache_key": key, "backend": backend.identity, "prompt_version": PROMPT_VERSION, "response": raw}
+        record["generation_trace"] = getattr(backend, "last_trace", [])
+        record["component_errors"] = getattr(backend, "last_component_errors", [])
         save_json(path, record)
     save_json(raw_path, {**record, "cache_hit": hit})
+    trace = record.get("generation_trace", [])
+    if trace and all(item.get("error") for item in trace):
+        raise ValueError("All VLM components failed; no semantic result admitted")
     # Failed parse output is cached as well: retry requires changed inputs or explicit cache removal.
     result = parse_result(record["response"], [t["track_id"] for t in tracks], event["event_id"])
     return result, hit

@@ -1,0 +1,12 @@
+# Same perception/event/admission defaults as v2.yaml; explicit GPU VLM profile.
+perception_config: default.yaml
+vlm:
+  backend: local
+  model: .models/Qwen2.5-VL-3B-Instruct
+  revision: 66285546d2b821cf421d4f5eb2576359d3770cd3
+  local_files_only: true
+  device: cuda
+  image_longest_edge: 960
+  max_new_tokens: 2048
+  max_inference_seconds: 180
+  ground_entities_individually: true

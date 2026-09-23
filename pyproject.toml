@@ -10,6 +10,12 @@ dev = ["pytest>=8,<9"]
 
 [project.optional-dependencies]
 vlm = ["transformers>=4.57,<5", "Pillow>=12,<13", "huggingface-hub>=0.34,<1", "psutil>=5.9,<8"]
+gpu = ["torch==2.10.0; sys_platform == 'win32'", "torchvision==0.25.0; sys_platform == 'win32'"]
+quantized = ["accelerate>=1.0,<2", "bitsandbytes>=0.48,<0.51"]
+
+[tool.uv.sources]
+torch = [{ url = "https://download.pytorch.org/whl/cu128/torch-2.10.0%2Bcu128-cp312-cp312-win_amd64.whl", extra = "gpu", marker = "sys_platform == 'win32'" }]
+torchvision = [{ url = "https://download.pytorch.org/whl/cu128/torchvision-0.25.0%2Bcu128-cp312-cp312-win_amd64.whl", extra = "gpu", marker = "sys_platform == 'win32'" }]
 
 [build-system]
 requires = ["hatchling"]

@@ -13,6 +13,34 @@ def score_candidates(samples, timelines):
     return by_frame
 
 
+def save_track_crops(directory, frames, supplied, images, by_frame):
+    """Identity reference only: crop layout is never spatial/temporal evidence."""
+    width, height, columns = 320, 264, 3
+    sheet = np.full((max(1, (len(supplied)+columns-1)//columns)*height, columns*width, 3), 245, dtype=np.uint8)
+    records = []
+    for index, tid in enumerate(supplied):
+        candidates = [(frame, obs) for frame in frames for obs in by_frame.get(frame.frame_index, []) if obs.track_id == tid]
+        frame, obs = max(candidates, key=lambda pair: pair[1].area_fraction*pair[1].confidence)
+        source = images[frame.frame_index]
+        x1,y1,x2,y2 = obs.bbox
+        pad = .04*max(x2-x1,y2-y1)
+        left,top = max(0,int(x1-pad)),max(0,int(y1-pad))
+        right,bottom = min(source.shape[1],int(np.ceil(x2+pad))),min(source.shape[0],int(np.ceil(y2+pad)))
+        crop = source[top:bottom,left:right]
+        scale = min((width-8)/crop.shape[1],(height-32)/crop.shape[0])
+        crop = cv2.resize(crop,(max(1,int(crop.shape[1]*scale)),max(1,int(crop.shape[0]*scale))))
+        x,y = (index%columns)*width,(index//columns)*height
+        sheet[y+28:y+28+crop.shape[0],x+4:x+4+crop.shape[1]] = crop
+        cv2.putText(sheet,f'ID:{tid} | {frame.phase} {frame.timestamp:.2f}s',(x+6,y+20),
+                    cv2.FONT_HERSHEY_SIMPLEX,.48,(20,20,20),1,cv2.LINE_AA)
+        records.append({'track_id':tid,'phase':frame.phase,'timestamp':frame.timestamp,
+                        'source_frame_index':frame.frame_index,'crop_bbox':[left,top,right,bottom]})
+    if not cv2.imwrite(str(directory/'track_crops.jpg'),sheet):
+        raise RuntimeError('Failed to save grounded track crop reference')
+    from ..memory.memory_store import save_json
+    save_json(directory/'track_crops.json',{'purpose':'identity only; tile layout is not scene geometry','crops':records})
+
+
 def select_keyframes(event, samples, by_frame, sharpness, duration, event_config, config):
     selected = []
     targets = {"before": max(0, event.peak_time-event_config.before_offset_seconds), "during": event.peak_time,
@@ -71,6 +99,7 @@ def prepare_windows(source, output, events, timelines, metadata, config):
         priority = sorted(union, key=lambda tid: (tid not in event.involved_track_ids,
             -sum(o.confidence*o.area_fraction for f in frames for o in by_frame.get(f.frame_index, []) if o.track_id == tid), tid))
         supplied = priority[:config.keyframes.max_context_tracks]
+        save_track_crops(directory, frames, supplied, images, by_frame)
         for keyframe in frames:
             image = images[keyframe.frame_index]
             scale = min(1, config.keyframes.image_width/image.shape[1])

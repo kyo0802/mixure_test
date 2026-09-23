@@ -22,16 +22,12 @@ def render_semantic_graph(entities, relations, path, title, config, status=""):
     for entity in sorted(entities, key=lambda e: (e.semantic_class == "unknown", -e.semantic_confidence, e.track_id)):
         if len(ids) < config.max_render_entities:
             ids.add(entity.track_id)
-    graph, labels, attributes = nx.DiGraph(), {}, []
+    graph, labels = nx.DiGraph(), {}
     for tid in sorted(ids):
         e = lookup[tid]
         graph.add_node(tid)
-        labels[tid] = f"{e.entity_id}\nID:{tid}" + (f"\nYOLO? {e.detector_class}" if e.semantic_class == "unknown" else "")
-        for key, value in list(e.attributes.items())[:config.max_attributes_per_entity]:
-            attribute_id = f"attr:{tid}:{key}"
-            attributes.append(attribute_id)
-            graph.add_edge(tid, attribute_id)
-            labels[attribute_id] = "\n".join(textwrap.wrap(f"{key}: {value}", 20))
+        name = e.semantic_class if e.entity_id.startswith("track_") else e.entity_id
+        labels[tid] = f"{name}\nID:{tid}" + (f"\nYOLO? {e.detector_class}" if e.semantic_class == "unknown" else "")
     edge_data = defaultdict(list)
     for r in chosen:
         if r.object_track_id is None:
@@ -45,42 +41,54 @@ def render_semantic_graph(entities, relations, path, title, config, status=""):
     cols = max(1, math.ceil(math.sqrt(len(components))))
     for index, component in enumerate(components):
         sub = graph.subgraph(component)
-        local = nx.kamada_kawai_layout(sub.to_undirected()) if len(sub) > 2 else nx.circular_layout(sub)
+        local = nx.circular_layout(sub)
         for node, xy in local.items():
             positions[node] = (float(xy[0])+3.4*(index%cols), float(xy[1])-3.4*(index//cols))
-    figure, ax = plt.subplots(figsize=(18, 12) if len(graph) > 8 else (12, 8))
+    figure, (ax, attribute_ax) = plt.subplots(1, 2, figsize=(20, 13) if len(graph) > 8 else (16, 10),
+                                            gridspec_kw={"width_ratios": [3.5, 1.2]})
     ax.axis("off")
+    attribute_ax.axis("off")
+    attribute_entities = [lookup[tid] for tid in sorted(ids) if lookup[tid].attributes][:12]
+    attribute_ax.set_title("VLM attributes (unverified)", fontsize=10, loc="left")
+    for index, entity in enumerate(attribute_entities):
+        lines = [f"ID:{entity.track_id} | {entity.semantic_class}"]
+        for key, value in list(entity.attributes.items())[:min(2, config.max_attributes_per_entity)]:
+            lines.extend(textwrap.wrap(f"{key}: {value[:70]}", 32))
+        attribute_ax.text(0, 1-index/max(1,len(attribute_entities)), '\n'.join(lines),
+                          transform=attribute_ax.transAxes, fontsize=8, va="top")
+    attribute_ax.text(0, -.06, "Full attributes and all relation intervals\nare retained in the JSON artifact.",
+                      transform=attribute_ax.transAxes, fontsize=8)
     if graph:
         entity_ids = sorted(ids)
         colors = ["#85c8e8" if lookup[tid].semantic_class != "unknown" else "#c6cbd1" for tid in entity_ids]
         borders = ["#c89518" if lookup[tid].is_anchor else "#52606d" for tid in entity_ids]
         nx.draw_networkx_nodes(graph, positions, nodelist=entity_ids, node_color=colors,
-                               edgecolors=borders, linewidths=2, node_size=2200, ax=ax)
-        nx.draw_networkx_nodes(graph, positions, nodelist=attributes, node_shape="D", node_color="#d3bbef", node_size=1400, ax=ax)
+                               edgecolors=borders, linewidths=2, node_size=1800, ax=ax)
         nx.draw_networkx_labels(graph, positions, labels=labels, font_size=8, ax=ax)
         for edge, values in edge_data.items():
             vlm = any(r.evidence.vlm for r in values)
             nx.draw_networkx_edges(graph, positions, edgelist=[edge], style="solid" if vlm else "dashed",
-                edge_color="#3c5570" if vlm else "#99a4ae", arrowsize=15, node_size=2200, ax=ax,
+                edge_color="#3c5570" if vlm else "#99a4ae", arrowsize=15, node_size=1800, ax=ax,
                 connectionstyle="arc3,rad=0.08")
-        attribute_edges = [(a, b) for a, b in graph.edges if b in attributes]
-        nx.draw_networkx_edges(graph, positions, edgelist=attribute_edges, edge_color="#9573ba", node_size=2200, ax=ax)
         edge_labels = {}
         for edge, values in edge_data.items():
-            predicates = "/".join(dict.fromkeys(r.predicate for r in values))
+            names = list(dict.fromkeys(r.predicate for r in values))
+            predicates = "/".join(names[:2])+(f" (+{len(names)-2})" if len(names)>2 else "")
             edge_labels[edge] = "\n".join(textwrap.wrap(predicates, 28))+f"\n{min(r.start_time for r in values):.1f}-{max(r.end_time for r in values):.1f}s"
-        nx.draw_networkx_edge_labels(graph, positions, edge_labels=edge_labels, font_size=6.5, rotate=False,
+        nx.draw_networkx_edge_labels(graph, positions, edge_labels=edge_labels, font_size=6.5, rotate=False, label_pos=.3,
             bbox={"facecolor": "white", "edgecolor": "none", "alpha": .9}, ax=ax)
         ax.margins(.2)
     else:
         ax.text(.5, .5, "No admitted entities / relations.\nInspect rejection and analysis-status records.", ha="center", transform=ax.transAxes)
-    ax.set_title(f"{title}\n{status}\n{len(entities)} entities, {len(relations)} relation intervals; "
-                 f"rendering {len(ids)} entities, {len(chosen)} intervals", fontsize=13, loc="left", pad=20)
+    figure.suptitle(f"{title}\n{status}\n{len(entities)} entities, {len(relations)} relation intervals; "
+                   f"rendering {len(ids)} entities, {len(chosen)} intervals", fontsize=12, x=.02, ha="left")
     figure.legend(handles=[Patch(color="#85c8e8", label="VLM semantic entity"), Patch(color="#c6cbd1", label="Unknown entity"),
-                           Patch(color="#d3bbef", label="VLM attribute")], loc="lower center", ncol=3, frameon=False)
+                           Patch(color="#99a4ae", label="Dashed: geometry only")], loc="lower center", ncol=3, frameon=False)
     figure.text(.02, .045, "Dashed edges: geometry only. Gold border: anchor prior (metadata only). All data retained in JSON; edge times summarize sparse evidence.", fontsize=8)
-    figure.tight_layout(rect=(0, .08, 1, 1))
+    figure.tight_layout(rect=(0, .08, 1, .89))
     figure.savefig(path, dpi=150, facecolor="white")
     plt.close(figure)
     save_json(str(path)+".render.json", {"displayed_track_ids": sorted(ids), "omitted_track_ids": sorted(set(lookup)-ids),
-        "displayed_relation_count": len(chosen), "total_relation_count": len(relations), "edge_labels": "predicate union and outer time span; see JSON for exact intervals"})
+        "displayed_relation_count": len(chosen), "total_relation_count": len(relations),
+        "attribute_sidebar_track_ids": [e.track_id for e in attribute_entities],
+        "edge_labels": "up to two predicates plus remaining count and outer time span; see JSON for exact intervals"})

@@ -1,6 +1,8 @@
 from ..spatial.geometry import pair_signals
 from ..vlm.schemas import INTERACTIONS
 
+HUMAN_ACTORS = {"person", "human", "man", "woman", "child", "hand", "arm", "human hand", "human arm", "person hand"}
+
 
 def geometry_verdict(predicate, a, b, width, height, config):
     if b is None:
@@ -32,7 +34,8 @@ def geometry_verdict(predicate, a, b, width, height, config):
 
 
 def validate_relation(relation, frames, observations, width, height, config, entities):
-    phases = [f for f in frames if relation.temporal_phase in {"persistent", "transition"} or f.phase == relation.temporal_phase]
+    dynamic_action = relation.predicate in {"PICKING_UP", "PUTTING_DOWN"}
+    phases = [f for f in frames if dynamic_action or relation.temporal_phase in {"persistent", "transition"} or f.phase == relation.temporal_phase]
     evidence = []
     times = []
     for frame in phases:
@@ -45,17 +48,22 @@ def validate_relation(relation, frames, observations, width, height, config, ent
         times.append(frame.timestamp)
     if not evidence:
         return None, "relation endpoints not co-visible in the claimed phase"
+    if (dynamic_action or relation.temporal_phase in {"persistent", "transition"}) and len(set(times)) < 2:
+        return None, "temporal claim requires at least two distinct co-visible frames"
     if relation.predicate == "UNKNOWN":
         return None, "UNKNOWN is not promoted as an asserted relation"
     if relation.predicate in INTERACTIONS:
         actor = entities.get(relation.subject_track_id)
-        if actor is None or actor.semantic_class not in {"person", "human", "man", "woman", "child"}:
+        if actor is None or actor.semantic_class not in HUMAN_ACTORS:
             return None, "human-object interaction actor lacks VLM person semantics"
     verdicts = [e["verdict"] for e in evidence]
+    if relation.predicate in {"LEFT_OF", "RIGHT_OF", "ABOVE", "BELOW", "NEAR", "OVERLAPPING", "INSIDE"} and "supports" not in verdicts:
+        return None, "insufficient geometric support for the claimed image-relative relation"
     conflicts = verdicts.count("conflicts")
     confidence = relation.confidence*(config.conflict_multiplier if conflicts else 1)
     if confidence < config.min_relation_confidence:
         return None, "geometry conflict or relation confidence below threshold"
     geometry = "conflicts" if conflicts else "supports" if "supports" in verdicts else "not_testable"
     return {"confidence": confidence, "times": sorted(set(times)), "geometry": geometry, "details": {"phase_checks": evidence,
-            "physical_or_action_verification": False}}, None
+            "physical_or_action_verification": False,
+            "actor_scope": entities[relation.subject_track_id].semantic_class if relation.predicate in INTERACTIONS else None}}, None

@@ -1,0 +1,19 @@
+{
+  "cache_key": "7c57619075b1b04fe8601d21d9ce4d2914ab7263897862e99efc37060d7fe4f1",
+  "backend": {
+    "backend": "transformers",
+    "model": ".models/Qwen2.5-VL-3B-Instruct",
+    "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "max_new_tokens": 2048,
+    "image_longest_edge": 960,
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "sampling": false,
+    "transformers_version": "4.57.6",
+    "torch_version": "2.10.0+cu128",
+    "processor": "Qwen2VLImageProcessorFast"
+  },
+  "prompt_version": "v2-grounded-events-1",
+  "response": "```json\n{\n  \"event_id\": \"evt_011\",\n  \"entities\": [\n    {\n      \"track_id\": 17,\n      \"semantic_class\": \"cell phone\",\n      \"confidence\": 0.8607611349400353,\n      \"attributes\": {}\n    },\n    {\n      \"track_id\": 24,\n      \"semantic_class\": \"cup\",\n      \"confidence\": 0.8663011933818008,\n      \"attributes\": {}\n    },\n    {\n      \"track_id\": 25,\n      \"semantic_class\": \"cup\",\n      \"confidence\": 0.8663011933818008,\n      \"attributes\": {}\n    },\n    {\n      \"track_id\": 27,\n      \"semantic_class\": \"chair\",\n      \"confidence\": 0.5537471393744151,\n      \"attributes\": {}\n    },\n    {\n      \"track_id\": 28,\n      \"semantic_class\": \"chair\",\n      \"confidence\": 0.6026700117758342,\n      \"attributes\": {}\n    }\n  ],\n  \"relations\": [\n    {\n      \"subject_track_id\": 17,\n      \"predicate\": \"ON\",\n      \"object_track_id\": 24,\n      \"confidence\": 0.0,\n      \"temporal_phase\": \"during\"\n    },\n    {\n      \"subject_track_id\": 17,\n      \"predicate\": \"ON\",\n      \"object_track_id\": 25,\n      \"confidence\": 0.0,\n      \"temporal_phase\": \"during\"\n    },\n    {\n      \"subject_track_id\": 17,\n      \"predicate\": \"ON\",\n      \"object_track_id\": 27,\n      \"confidence\": 0.0,\n      \"temporal_phase\": \"during\"\n    },\n    {\n      \"subject_track_id\": 17,\n      \"predicate\": \"ON\",\n      \"object_track_id\": 28,\n      \"confidence\": 0.0,\n      \"temporal_phase\": \"during\"\n    }\n  ],\n  \"summary\": \"A cell phone and cups are placed on a table, with chairs nearby.\"\n}\n```",
+  "cache_hit": false
+}

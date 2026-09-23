@@ -1,0 +1,232 @@
+{
+  "runs": [
+    {
+      "output": "outputs_v2_events\\task1",
+      "structural_pass": true,
+      "errors": [],
+      "status": {
+        "status": "complete",
+        "semantic_status": "not_analyzed_or_validated",
+        "video": "test1.mp4",
+        "raw_track_ids": 77,
+        "raw_event_signals": 124,
+        "merged_events": 45,
+        "selected_events": 8,
+        "vlm_attempted_events": 0,
+        "vlm_analyzed_events": 0,
+        "vlm_failed_events": 0,
+        "cache_hits": 0,
+        "skipped_events": 45,
+        "confirmed_semantic_entities": 0,
+        "unknown_entities": 44,
+        "rejected_tracks": 33,
+        "semantic_corrections": [],
+        "semantic_relations": 0,
+        "geometry_only_relations": 86,
+        "interaction_relations": 0,
+        "transitions": 0,
+        "decoded_frames": 967,
+        "elapsed_seconds": 11.125,
+        "backend_error": null
+      },
+      "decoded_annotated_frames": 967,
+      "event_analysis_statuses": [
+        {
+          "event_id": "evt_011",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_016",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_017",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_019",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_023",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_024",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_034",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_040",
+          "status": "skipped_events_only"
+        }
+      ],
+      "semantic_ground_truth_verified": false,
+      "note": "Manual inspection is required; schema-valid VLM output can still be incorrect."
+    },
+    {
+      "output": "outputs_v2_events\\task2",
+      "structural_pass": true,
+      "errors": [],
+      "status": {
+        "status": "complete",
+        "semantic_status": "not_analyzed_or_validated",
+        "video": "test2.mp4",
+        "raw_track_ids": 96,
+        "raw_event_signals": 138,
+        "merged_events": 53,
+        "selected_events": 8,
+        "vlm_attempted_events": 0,
+        "vlm_analyzed_events": 0,
+        "vlm_failed_events": 0,
+        "cache_hits": 0,
+        "skipped_events": 53,
+        "vlm_partial_events": 0,
+        "vlm_component_failures": 0,
+        "vlm_generation_calls": 0,
+        "confirmed_semantic_entities": 0,
+        "unknown_entities": 42,
+        "rejected_tracks": 54,
+        "semantic_corrections": [],
+        "semantic_relations": 0,
+        "geometry_only_relations": 78,
+        "interaction_relations": 0,
+        "transitions": 0,
+        "decoded_frames": 924,
+        "elapsed_seconds": 8.671999999904074,
+        "backend_error": null
+      },
+      "decoded_annotated_frames": 924,
+      "event_analysis_statuses": [
+        {
+          "event_id": "evt_006",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_019",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_021",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_023",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_030",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_038",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_046",
+          "status": "skipped_events_only"
+        },
+        {
+          "event_id": "evt_053",
+          "status": "skipped_events_only"
+        }
+      ],
+      "semantic_ground_truth_verified": false,
+      "note": "Manual inspection is required; schema-valid VLM output can still be incorrect."
+    }
+  ],
+  "v1_preservation": {
+    "unchanged_this_session": [
+      "src\\memory_graph\\config.py",
+      "src\\memory_graph\\models.py",
+      "src\\memory_graph\\pipeline.py",
+      "src\\memory_graph\\__init__.py",
+      "src\\memory_graph\\memory\\graph_builder.py",
+      "src\\memory_graph\\memory\\memory_store.py",
+      "src\\memory_graph\\memory\\temporal_filter.py",
+      "src\\memory_graph\\memory\\__init__.py",
+      "src\\memory_graph\\perception\\detector.py",
+      "src\\memory_graph\\perception\\object_classifier.py",
+      "src\\memory_graph\\perception\\runtime.py",
+      "src\\memory_graph\\perception\\tracker.py",
+      "src\\memory_graph\\perception\\__init__.py",
+      "src\\memory_graph\\spatial\\anchor_selector.py",
+      "src\\memory_graph\\spatial\\geometry.py",
+      "src\\memory_graph\\spatial\\relation_extractor.py",
+      "src\\memory_graph\\spatial\\__init__.py",
+      "src\\memory_graph\\video\\episode_segmenter.py",
+      "src\\memory_graph\\video\\reader.py",
+      "src\\memory_graph\\video\\__init__.py",
+      "src\\memory_graph\\visualization\\graph_visualizer.py",
+      "src\\memory_graph\\visualization\\video_visualizer.py",
+      "src\\memory_graph\\visualization\\__init__.py",
+      "tests\\test_graph_builder.py",
+      "tests\\test_models.py",
+      "tests\\test_pipeline.py",
+      "tests\\test_relations.py",
+      "tests\\test_temporal_filter.py",
+      "tests\\test_tracker.py",
+      "tests\\test_video.py",
+      "configs\\default.yaml"
+    ],
+    "changed_this_session": [],
+    "historical_mismatch": [
+      "src\\memory_graph\\visualization\\graph_visualizer.py"
+    ],
+    "historical_missing": [
+      "outputs\\task1\\anchors.json",
+      "outputs\\task1\\annotated.mp4",
+      "outputs\\task1\\detections.json",
+      "outputs\\task1\\episodes.json",
+      "outputs\\task1\\inspection.txt",
+      "outputs\\task1\\memory_graph.json",
+      "outputs\\task1\\memory_graph.png",
+      "outputs\\task1\\memory_graph_page_001.png",
+      "outputs\\task1\\memory_graph_page_002.png",
+      "outputs\\task1\\memory_graph_page_003.png",
+      "outputs\\task1\\memory_graph_page_004.png",
+      "outputs\\task1\\memory_graph_page_005.png",
+      "outputs\\task1\\memory_graph_page_006.png",
+      "outputs\\task1\\memory_graph_page_007.png",
+      "outputs\\task1\\memory_graph_page_008.png",
+      "outputs\\task1\\memory_graph_page_009.png",
+      "outputs\\task1\\relation_observations.json",
+      "outputs\\task1\\run.log",
+      "outputs\\task1\\run_config.json",
+      "outputs\\task1\\run_status.json",
+      "outputs\\task1\\stable_relations.json",
+      "outputs\\task1\\tracks.json",
+      "outputs\\task1\\transitions.json",
+      "outputs\\task1\\validation_frame_10s.png",
+      "outputs\\task1\\validation_frame_25s.png",
+      "outputs\\task1\\video_metadata.json",
+      "outputs\\task2\\anchors.json",
+      "outputs\\task2\\annotated.mp4",
+      "outputs\\task2\\detections.json",
+      "outputs\\task2\\episodes.json",
+      "outputs\\task2\\inspection.txt",
+      "outputs\\task2\\memory_graph.json",
+      "outputs\\task2\\memory_graph.png",
+      "outputs\\task2\\memory_graph_page_001.png",
+      "outputs\\task2\\memory_graph_page_002.png",
+      "outputs\\task2\\memory_graph_page_003.png",
+      "outputs\\task2\\memory_graph_page_004.png",
+      "outputs\\task2\\memory_graph_page_005.png",
+      "outputs\\task2\\memory_graph_page_006.png",
+      "outputs\\task2\\memory_graph_page_007.png",
+      "outputs\\task2\\relation_observations.json",
+      "outputs\\task2\\run.log",
+      "outputs\\task2\\run_config.json",
+      "outputs\\task2\\run_status.json",
+      "outputs\\task2\\stable_relations.json",
+      "outputs\\task2\\tracks.json",
+      "outputs\\task2\\transitions.json",
+      "outputs\\task2\\validation_frame_10s.png",
+      "outputs\\task2\\validation_frame_25s.png",
+      "outputs\\task2\\video_metadata.json"
+    ]
+  }
+}

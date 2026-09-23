@@ -10,7 +10,7 @@ def fuse_relations(scenes, admitted_ids, max_gap):
             if relation.subject_track_id not in admitted_ids or (relation.object_track_id is not None and relation.object_track_id not in admitted_ids):
                 continue
             key = (relation.subject_track_id, relation.predicate, relation.object_track_id,
-                   relation.evidence.vlm, relation.reference_frame)
+                   relation.evidence.vlm, relation.reference_frame, relation.temporal_phase)
             groups[key].append(relation)
     fused = []
     for values in groups.values():

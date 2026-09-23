@@ -43,6 +43,19 @@ def test_event_budget_is_enforced():
     assert sum(e.selected for e in merge_events(events,EventConfig(max_vlm_events=2)))==2
 
 
+def test_budget_recomputes_stale_selection_and_does_not_mutate_inputs():
+    proposals = [event(ids=(i+1,), start=i*3, peak=i*3+.5, end=i*3+1) for i in range(5)]
+    for proposal in proposals:
+        proposal.selected = True
+        proposal.skip_reason = 'old budget'
+    selected = merge_events(proposals, EventConfig(max_vlm_events=2))
+    assert [e.selected for e in selected] == [True, True, False, False, False]
+    assert all(e.skip_reason is None for e in selected if e.selected)
+    assert all(e.skip_reason == 'max_vlm_events budget' for e in selected if not e.selected)
+    assert all(e.selected and e.skip_reason == 'old budget' for e in proposals)
+    assert not any(e.selected for e in merge_events(selected, EventConfig(max_vlm_events=0)))
+
+
 def test_keyframes_are_ordered_and_absence_is_retained():
     tracks,meta = timelines([[(10,20)]*5])
     chosen=select_keyframes(event(ids=(1,),peak=1.2),meta.sampled_frames,score_candidates(meta.sampled_frames,tracks),

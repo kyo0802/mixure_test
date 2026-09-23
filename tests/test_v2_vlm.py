@@ -5,6 +5,7 @@ from memory_graph.vlm.cache import analyze_cached
 from memory_graph.scene_graph.fusion import aggregate_entities
 from memory_graph.config_v2 import V2Config
 from v2_helpers import timelines,event
+from memory_graph.vlm.prompts import make_prompt
 
 
 def response(label='basketball',confidence=.9):
@@ -22,12 +23,23 @@ def test_invalid_ids_and_predicates_rejected():
         parse_result(response(),[1],'evt_002')
 
 
+def test_prompt_hides_detector_hypotheses_and_normalizes_grounding():
+    prompt = make_prompt([{'track_id':7, 'detector_hypothesis':'wrong_label',
+        'detector_confidence':.87654321, 'observations':[{
+        'phase':'during', 'visible':True, 'bbox':[10,20,30,40]}]}],
+        {'event_id':'evt_001', 'original_image_size':{'width':100,'height':100}})
+    assert 'wrong_label' not in prompt and '0.87654321' not in prompt
+    assert '"track_id":7' in prompt and '[0.1,0.2,0.3,0.4]' in prompt
+
+
 def test_prose_is_not_accepted_and_ownership_attribute_rejected():
     with pytest.raises(ValueError):
         parse_result('The object is a basketball.',[1],'evt_001')
     raw=response();raw['entities'][0]['attributes']={'owner':'person'}
     with pytest.raises(ValueError):
         parse_result(raw,[1],'evt_001')
+    with pytest.raises(ValueError, match='placeholder'):
+        parse_result(response('category or unknown'),[1],'evt_001')
 
 
 def test_semantic_correction_preserves_identity():
@@ -54,6 +66,17 @@ def test_separate_chairs_are_never_merged_by_class():
     raw=response('chair');raw['entities'].append({'track_id':2,'semantic_class':'chair','confidence':.9,'attributes':{}})
     entities,_,_=aggregate_entities(tracks,[event()],[parse_result(raw,[1,2],'evt_001')],V2Config())
     assert [(e.track_id,e.entity_id) for e in entities]==[(1,'chair_01'),(2,'chair_02')]
+
+
+def test_strong_vlm_label_cannot_admit_a_one_frame_noisy_track():
+    tracks,_ = timelines([[(10,20)]*6,[(50,20)]],['chair','chair'])
+    raw = response('chair')
+    raw['entities'].append({'track_id':2,'semantic_class':'chair','confidence':1.0})
+    entities,rejected,_ = aggregate_entities(tracks,[event()],
+        [parse_result(raw,[1,2],'evt_001')],V2Config())
+    assert [e.track_id for e in entities] == [1]
+    assert rejected[0]['track_id'] == 2
+    assert 'insufficient observation count' in rejected[0]['reasons']
 
 
 def test_cache_invalidation_uses_images_prompt_metadata_and_model(tmp_path):
