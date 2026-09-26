@@ -1,0 +1,43 @@
+{
+  "schema": "v26-baseline-1",
+  "v25_prediction_manifest_sha256": "d4c14bfb7e5bcbdef3d52179edabe35073d3a3871a2975a104d35ca6662234bf",
+  "v25_architecture_manifest_sha256": "9d412e62f5a428c9b6cb5e7bd114b170469f8a8a76adc458abd0b28cb61c36ed",
+  "pinned_manifest_newline_note": "Pinned Windows text validates after original CRLF restoration (including one mixed-LF patch in v25rerun/reid.py); binary videos and images match byte-for-byte.",
+  "video_sha256": {
+    "test3.mp4": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+    "test4.mp4": "c86204ba5b31f174c3a6f71f4f5eee71dc044985e62831395310c23efb880e47",
+    "test5.mp4": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+    "test6.mp4": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+    "test7.mp4": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "test8.mp4": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+    "test9.mp4": "29ac3d80e79207c6e0b1fa0f2bbd62bb22cd9aa62f9fcd1dceba0649fbee5e12"
+  },
+  "v25_v21_input_manifest_sha256": {
+    "test3": "a50bb0f84a36e955a7e1b28ce33848fe8c9b7feb3ef25fb94501bc629dee7eae",
+    "test4": "d8a1a9dba0a87138330350b4fceece4ad4e16cbb99f0bac68cd45958bc06a302",
+    "test5": "a51ce95358509a4f2253ef3895bcf4b805dc3ce0f93fb0580247d40c4dba5479",
+    "test6": "1880fba30412f4e8407f6b4c075651bd4611b8541f7769eac8316c2ddb51e1ed",
+    "test7": "3c329d9a94aa1191d301642b5d98d6880c5243450595e0c55e19c6114c972387",
+    "test8": "ef8e364440b05795145b51da4d0e4b3ec2aaf83920e574a19b04baeae8bdf04b",
+    "test9": "1a5b8a431423ed87591d6110660876275cc030196798da329b5747ec8fb941bb"
+  },
+  "frozen_component_sha256": {
+    "configs/v2_gpu_7b.yaml": "c165bc1f4ff2036fa2a678973b0ea9f6af25d0a5be8b72c7f0add811e60e3f23",
+    "configs/default.yaml": "3ad7da0a7d810df72d06ca2e7b9c4b140da0cfd1f1f7f802fd22fa9cf1e57319",
+    "yolo11s.pt": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    ".models/sam2.1_hiera_small.pt": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "outputs_v24/reid_parameter_manifest.json": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+    "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "src/memory_graph/v22/sam_tracking.py": "894e96ada6ed1ab178ad918774dab264377cfed60c5fdd0bc962ff3e685e97ba",
+    "src/memory_graph/v23/fusion.py": "adaa2e9b9053f9c184e51ea952ed447b48beca8e8c380881faf33d8956161900",
+    "src/memory_graph/v24/appearance.py": "612fb6e1e83d10275aa1f02686bc67af1bc99135f6d92187cbc8e3aeced2bd54",
+    "src/memory_graph/v24/reid.py": "6102b2f577437d817914a238159974264de229a2109dc5b79ba2003639f8824b"
+  },
+  "v25_reid": {
+    "minimum_match_similarity": 0.6,
+    "minimum_uniqueness_margin": 0.1,
+    "minimum_evidence_prototypes": 2,
+    "candidate_view_policy": "highest-confidence available view, reevaluated after each new view; no GT ranking"
+  },
+  "gt_used": false
+}

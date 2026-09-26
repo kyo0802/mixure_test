@@ -1,0 +1,75 @@
+{
+  "schema": "v26-prediction-freeze-2",
+  "stage": "B_POSTFREEZE_PROVENANCE_REPAIR",
+  "initial_blind_manifest_sha256": "a8c89d6aa99aaca92f75dc5e0d582bc42aa6a994fc7f913639f6934bbe6728b7",
+  "initial_blind_predictions_frozen_before_gt": true,
+  "postfreeze_repair_after_review": true,
+  "gt_labels_used_in_repair": false,
+  "categorical_reid_decisions_identical_to_initial_blind": true,
+  "repair_scope": "remove inherited V2.5 merged candidate provenance from comparison registry and mark confirmed entity MATCHED",
+  "baseline_manifest_sha256": "66288b289e611ce0362715199b9487b9195c494d569d9bba873295413c5dfcab",
+  "inference_code_sha256": {
+    "src/memory_graph/v26/__init__.py": "49d9c6777ad99135202351ceded2b44da19d33c4b643bb562b1673a27b5dd35d",
+    "src/memory_graph/v26/authorization.py": "c85e230ce17fdcc4a523a4afbc4552709fbb2896fd5a8e81510accab77fc672f",
+    "src/memory_graph/v26/pipeline.py": "bf740e963d4a863bca94761c2cb38343b0e50bbf908d2950a078625374930de3",
+    "scripts/run_v26.py": "af6a5cc8f25f070f6cd28ee3885325b3bc4b9c6f7d5e9e5b475fc5678e6289ed"
+  },
+  "videos": {
+    "test3": {
+      "reid_audit.json": "4760ef6ad2f90e8e2d1713866bdc04756e6440a1f8b1962583be66cd090de02e",
+      "candidate_stream.json": "ee3e968575402a6d578e8dace372806c9e629fc39b17fa39182eb2c01a75af0b",
+      "candidate_grouping_audit.json": "22e76d7b6135fd643e3386b45536015e275d0b7380f46b30863f40f4432dc379",
+      "entity_registry.json": "55df833d1cf5e3c723118172b0d1cf7fd34f9a63d5047d09de6dd87e44818b77",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "8a7995359de8c4bdff4e98db54e572183cf0828a16af12a365bf1f499d8e4dfa"
+    },
+    "test4": {
+      "reid_audit.json": "5b0ef7701ab03e7c392ad2191acba1ef5bf91eb451cf96099afa1904c19d1d01",
+      "candidate_stream.json": "d19fa279d1d7e33ac244759711ae0e47e9cd92092a4731e4057a1193d02551ce",
+      "candidate_grouping_audit.json": "f6548f7f6cb23c363ad649ac8371e305faec3abf220ed426c5e63a51d007f6af",
+      "entity_registry.json": "ae5724148f525e24df2643fb447f49874d3eac65d6b723405536921f7c671856",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "d1df00569a28620ed9545e48ca822f74c656175be2cdec76c90c310485bc4edf"
+    },
+    "test5": {
+      "reid_audit.json": "e220adc1c0210c3e2824019fbb5c380151e463d81a00b3216ac00528dc18211c",
+      "candidate_stream.json": "ad849a01b92ba9ffaae743097425fcc4f0ae0b84e659e6627acdcd84c68fb161",
+      "candidate_grouping_audit.json": "52c3af75303077770d0af6cc185d2fa136339e327ea52761e327707896a6db52",
+      "entity_registry.json": "5b3a5587f4784fe63ae76f782985052b82a4a36aae76c4d94f087a3c16a4f0a2",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "5849f76222d1eb2262641090423c6281186edf97dc953e0fd3f048c6015c5cbf"
+    },
+    "test6": {
+      "reid_audit.json": "cf500fbcd569a8e917d17ad7e8d8788557b02ac5a6ea981d68c3d25e71e210b2",
+      "candidate_stream.json": "8ca21d9cfc2639845ffe5b0d813ba703338f879ba2b4569f7e58c97585fb8ddc",
+      "candidate_grouping_audit.json": "67205c5cce535f822161fbbb2ef762beca770a0e9ebe355fd5ac530bab11c033",
+      "entity_registry.json": "f2883ae848806434e013107fc9a979345254f87760f973c33f228ad13687711c",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "f61baef011807e9c37d75ebea4585a1a105b57cc9b37cd6708aec5765baa6a4f"
+    },
+    "test7": {
+      "reid_audit.json": "0e87041405ffb0369483ba263bb7f68477c7b1889ac8ba2f756390a3d339aea8",
+      "candidate_stream.json": "6d9d152f45ff97c76a1e45d21a0e89bebb4ceadd33d03aac4f471f69c134ad00",
+      "candidate_grouping_audit.json": "6334accb53954d625788f953a8c4022c75a70458368e9d5fc5954f0408805ae0",
+      "entity_registry.json": "4de35cd95a4d80a2e42d8fe3a24d7af6f03fad8a1f9f348d5abaa1c1fa13b088",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "6f0ca5b3993f2247bdcb28f3fb8da52c58d397cc5755fe0d186f2ba1e996c917"
+    },
+    "test8": {
+      "reid_audit.json": "104965882d190709b4087b7434b6e7045532f28ffbdbff63bd4dd58d08a61aa0",
+      "candidate_stream.json": "105e95428a060f37dbe759941a96c05eec0e2b6c377c3f09fa11620ec08206b6",
+      "candidate_grouping_audit.json": "249c71a4c34248357aa8198fc72264715c98e9fef641626c11b007e448b9acea",
+      "entity_registry.json": "5dd214874705ad2ebddda1ce4b0403cea4ca62d3e7fe76e888fd5928437c1b95",
+      "sam_reinit_log.json": "a535ff56b258b5986ad82f8e04088df09b11e11572b136cf8445281e613016d5",
+      "identity_timeline.json": "9a96f77b8dd30bf49551146a45d4904c90746914e94d53d4923aaf4c3c40a5b6"
+    },
+    "test9": {
+      "reid_audit.json": "87cfe269207c7ee535f47ade04f878ace4dcb4256fccc7979d476fbd4cd20fb1",
+      "candidate_stream.json": "9ae296b497d10b35895f9a3f1a3881c5b2fbd1ec2730dc093000f6db0c69506d",
+      "candidate_grouping_audit.json": "31375e9b769f4ad197fb1f1907c43a00cd2147c423416cc2181dce45eb53596a",
+      "entity_registry.json": "38becae37b7b3f376637baf4987ebf267dc5502551fa86c5ac3e4dc0c4330c88",
+      "sam_reinit_log.json": "b7df6abaf9717ad81b6482659fe3e64adc34463e66d5f340b40bc4233f294931",
+      "identity_timeline.json": "307eb3898e0dc708e6db5e8b165593c25a3a39cfd99dc655dca6900bf539891d"
+    }
+  }
+}
