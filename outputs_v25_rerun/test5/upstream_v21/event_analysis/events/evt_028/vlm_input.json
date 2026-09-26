@@ -1,0 +1,125 @@
+{
+  "tracks": [
+    {
+      "track_id": 50,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.6795541443386857,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 19.8,
+          "visible": true,
+          "bbox": [
+            718.9105224609375,
+            186.0380096435547,
+            945.6408081054688,
+            470.72943115234375
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 20.4,
+          "visible": true,
+          "bbox": [
+            844.0302734375,
+            261.2614440917969,
+            1105.307373046875,
+            554.8831176757812
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 21.0,
+          "visible": true,
+          "bbox": [
+            846.5167846679688,
+            260.5525817871094,
+            1110.3719482421875,
+            576.52685546875
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 47,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.7922588538150398,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 19.8,
+          "visible": true,
+          "bbox": [
+            484.44378662109375,
+            177.1368408203125,
+            650.266357421875,
+            278.34649658203125
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 20.4,
+          "visible": true,
+          "bbox": [
+            635.7467651367188,
+            242.8013153076172,
+            787.8131713867188,
+            345.7003173828125
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 21.0,
+          "visible": true,
+          "bbox": [
+            601.1162109375,
+            263.46746826171875,
+            763.0008544921875,
+            375.63031005859375
+          ]
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_028",
+    "event_type": "motion_coupling_candidate",
+    "signals": [
+      "motion_coupling_candidate"
+    ],
+    "start_time": 19.6,
+    "peak_time": 20.4,
+    "end_time": 20.4,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 19.8,
+        "visible_ids": [
+          47,
+          50
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 20.4,
+        "visible_ids": [
+          47,
+          50
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 21.0,
+        "visible_ids": [
+          47,
+          50
+        ]
+      }
+    ]
+  }
+}

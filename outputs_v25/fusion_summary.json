@@ -1,0 +1,186 @@
+{
+  "prediction_manifest_sha256": "f86055c99b849fdac78dd15278df5fadefd89ebae8455693c2dd40968868c967",
+  "review_scope": "sparse manually reviewed frames only",
+  "videos": {
+    "test3": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 39,
+      "candidate_count": 23,
+      "reviewed_target_samples": [],
+      "reid_decision": "NO_SAFE_MATCH",
+      "match_candidate_id": null,
+      "match_review_label": "none",
+      "reid_attempt_frames": 25,
+      "sam_reinit_executed": false,
+      "primary_failure": "final_location_not_visible"
+    },
+    "test4": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 36,
+      "candidate_count": 22,
+      "reviewed_target_samples": [
+        {
+          "frame_index": 1050,
+          "track_id": 107,
+          "candidate_ids": [
+            "candidate_018"
+          ],
+          "reid_evaluated": true
+        }
+      ],
+      "reid_decision": "NO_SAFE_MATCH",
+      "match_candidate_id": null,
+      "match_review_label": "none",
+      "reid_attempt_frames": 19,
+      "sam_reinit_executed": false,
+      "primary_failure": "ambiguous_appearance"
+    },
+    "test5": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": false,
+      "binding_track": 13,
+      "candidate_count": 22,
+      "reviewed_target_samples": [
+        {
+          "frame_index": 288,
+          "track_id": 35,
+          "candidate_ids": [
+            "candidate_006"
+          ],
+          "reid_evaluated": false
+        },
+        {
+          "frame_index": 366,
+          "track_id": 38,
+          "candidate_ids": [
+            "candidate_009"
+          ],
+          "reid_evaluated": false
+        }
+      ],
+      "reid_decision": "MATCH",
+      "match_candidate_id": "candidate_003",
+      "match_review_label": "wrong_initial_object_self_match",
+      "reid_attempt_frames": 2,
+      "sam_reinit_executed": true,
+      "primary_failure": "target_binding",
+      "match_frame": 30,
+      "match_similarity": 0.7409560084342957,
+      "match_margin": 0.46488744020462036
+    },
+    "test6": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 31,
+      "candidate_count": 22,
+      "reviewed_target_samples": [],
+      "reid_decision": "NO_SAFE_MATCH",
+      "match_candidate_id": null,
+      "match_review_label": "none",
+      "reid_attempt_frames": 26,
+      "sam_reinit_executed": false,
+      "primary_failure": "target_detection_miss"
+    },
+    "test7": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 29,
+      "candidate_count": 27,
+      "reviewed_target_samples": [
+        {
+          "frame_index": 720,
+          "track_id": 57,
+          "candidate_ids": [
+            "candidate_014"
+          ],
+          "reid_evaluated": false
+        },
+        {
+          "frame_index": 888,
+          "track_id": 67,
+          "candidate_ids": [
+            "candidate_015"
+          ],
+          "reid_evaluated": false
+        }
+      ],
+      "reid_decision": "MATCH",
+      "match_candidate_id": "candidate_004",
+      "match_review_label": "false_distractor",
+      "reid_attempt_frames": 1,
+      "sam_reinit_executed": true,
+      "primary_failure": "false_merge",
+      "match_frame": 636,
+      "match_similarity": 0.6110749244689941,
+      "match_margin": null
+    },
+    "test8": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 29,
+      "candidate_count": 24,
+      "reviewed_target_samples": [
+        {
+          "frame_index": 804,
+          "track_id": null,
+          "candidate_ids": [
+            "candidate_009"
+          ],
+          "reid_evaluated": true
+        },
+        {
+          "frame_index": 888,
+          "track_id": 73,
+          "candidate_ids": [
+            "candidate_014"
+          ],
+          "reid_evaluated": false
+        },
+        {
+          "frame_index": 918,
+          "track_id": 74,
+          "candidate_ids": [
+            "candidate_014"
+          ],
+          "reid_evaluated": false
+        }
+      ],
+      "reid_decision": "MATCH",
+      "match_candidate_id": "candidate_009",
+      "match_review_label": "true_target",
+      "reid_attempt_frames": 8,
+      "sam_reinit_executed": true,
+      "primary_failure": "post_match_continuity_unproven",
+      "match_frame": 804,
+      "match_similarity": 0.6813112497329712,
+      "match_margin": 0.25927048921585083
+    },
+    "test9": {
+      "binding_decision": "BOUND",
+      "binding_correct_reviewed": true,
+      "binding_track": 53,
+      "candidate_count": 38,
+      "reviewed_target_samples": [],
+      "reid_decision": "NO_SAFE_MATCH",
+      "match_candidate_id": null,
+      "match_review_label": "none",
+      "reid_attempt_frames": 18,
+      "sam_reinit_executed": false,
+      "primary_failure": "target_detection_miss"
+    }
+  },
+  "aggregate": {
+    "videos": 7,
+    "correct_bindings": 6,
+    "candidate_hypotheses": 178,
+    "reviewed_late_target_boxes_admitted": 8,
+    "reviewed_late_target_boxes_reid_evaluated": 2,
+    "matches": 3,
+    "true_target_matches": 1,
+    "false_distractor_matches": 1,
+    "wrong_binding_self_matches": 1,
+    "sam_reinitializations": 3
+  }
+}

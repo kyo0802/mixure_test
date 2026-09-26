@@ -1,0 +1,148 @@
+{
+  "result_classification": "FUSION_WORKS_BUT_REIDENTIFICATION_UNRESOLVED",
+  "architecture_decision": "IMPROVE_REIDENTIFICATION_FIRST",
+  "tasks": {
+    "task1": {
+      "task": "task1",
+      "persistent_entities": 75,
+      "audit_decisions": {
+        "NEW_ENTITY": 75,
+        "MATCH": 597,
+        "AMBIGUOUS": 2
+      },
+      "correct_yolo_sam_fusion_reviewed_phone_frames": 6,
+      "sam_only_phone_frames_accepted": 6,
+      "duplicate_entity_creation_count_reviewed_phone": 0,
+      "false_merge_count_on_reviewed_distinct_pairs": 0,
+      "distinct_pair_tests": [
+        {
+          "objects": [
+            "smartphone_01",
+            "desk_phone_01"
+          ],
+          "left_entities": [
+            "phone_01"
+          ],
+          "right_entities": [
+            "entity_0067"
+          ],
+          "false_merge": false
+        },
+        {
+          "objects": [
+            "chair_01",
+            "chair_02"
+          ],
+          "left_entities": [
+            "entity_0055"
+          ],
+          "right_entities": [
+            "entity_0057"
+          ],
+          "false_merge": false
+        }
+      ],
+      "confirmed_drift_accepted_in_trusted_phone_history": 0,
+      "confirmed_drift_rejected_or_flagged": 0,
+      "drift_decisions": [],
+      "max_remembered_unobserved_nodes_in_snapshots": 65,
+      "phone_yolo_track_ids": [
+        17
+      ],
+      "phone_sam_target_ids": [
+        "phone_track17"
+      ],
+      "late_candidates": {},
+      "graph_node_identity_check": true
+    },
+    "task2": {
+      "task": "task2",
+      "persistent_entities": 95,
+      "audit_decisions": {
+        "NEW_ENTITY": 95,
+        "MATCH": 827,
+        "AMBIGUOUS": 5,
+        "CONFLICT": 1
+      },
+      "correct_yolo_sam_fusion_reviewed_phone_frames": 7,
+      "sam_only_phone_frames_accepted": 2,
+      "duplicate_entity_creation_count_reviewed_phone": 1,
+      "false_merge_count_on_reviewed_distinct_pairs": 0,
+      "distinct_pair_tests": [
+        {
+          "objects": [
+            "smartphone_01",
+            "desk_phone_01"
+          ],
+          "left_entities": [
+            "phone_01"
+          ],
+          "right_entities": [
+            "candidate_phone_02"
+          ],
+          "false_merge": false
+        },
+        {
+          "objects": [
+            "smartphone_01",
+            "desk_phone_02"
+          ],
+          "left_entities": [
+            "phone_01"
+          ],
+          "right_entities": [
+            "candidate_phone_03"
+          ],
+          "false_merge": false
+        },
+        {
+          "objects": [
+            "desk_phone_01",
+            "desk_phone_02"
+          ],
+          "left_entities": [
+            "candidate_phone_02"
+          ],
+          "right_entities": [
+            "candidate_phone_03"
+          ],
+          "false_merge": false
+        },
+        {
+          "objects": [
+            "chair_01",
+            "chair_02"
+          ],
+          "left_entities": [
+            "entity_0083"
+          ],
+          "right_entities": [
+            "entity_0085"
+          ],
+          "false_merge": false
+        }
+      ],
+      "confirmed_drift_accepted_in_trusted_phone_history": 0,
+      "confirmed_drift_rejected_or_flagged": 1,
+      "drift_decisions": [
+        "CONFLICT"
+      ],
+      "max_remembered_unobserved_nodes_in_snapshots": 72,
+      "phone_yolo_track_ids": [
+        22,
+        43
+      ],
+      "phone_sam_target_ids": [
+        "phone_track22"
+      ],
+      "late_candidates": {
+        "late_candidate_1": "candidate_phone_01",
+        "late_candidate_2": "candidate_phone_02",
+        "late_candidate_3": "candidate_phone_03"
+      },
+      "graph_node_identity_check": true
+    }
+  },
+  "new_vlm_calls": 0,
+  "limits": "Sparse GT; known frame312 regression informed the fixed contradiction gate; late candidate physical identity is evaluation-only."
+}

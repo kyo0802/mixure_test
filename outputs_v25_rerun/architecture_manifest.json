@@ -1,0 +1,72 @@
+{
+  "schema": "v25-full-rerun-architecture-1",
+  "frozen_component_sha256": {
+    "configs/v2_gpu_7b.yaml": "c165bc1f4ff2036fa2a678973b0ea9f6af25d0a5be8b72c7f0add811e60e3f23",
+    "configs/default.yaml": "3ad7da0a7d810df72d06ca2e7b9c4b140da0cfd1f1f7f802fd22fa9cf1e57319",
+    "yolo11s.pt": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    ".models/sam2.1_hiera_small.pt": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "outputs_v24/reid_parameter_manifest.json": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+    "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "src/memory_graph/v22/sam_tracking.py": "894e96ada6ed1ab178ad918774dab264377cfed60c5fdd0bc962ff3e685e97ba",
+    "src/memory_graph/v23/fusion.py": "adaa2e9b9053f9c184e51ea952ed447b48beca8e8c380881faf33d8956161900",
+    "src/memory_graph/v24/appearance.py": "612fb6e1e83d10275aa1f02686bc67af1bc99135f6d92187cbc8e3aeced2bd54",
+    "src/memory_graph/v24/reid.py": "6102b2f577437d817914a238159974264de229a2109dc5b79ba2003639f8824b"
+  },
+  "v241_prediction_manifest_sha256": "0ed8de03e35d6fa869a13f0137532ca6d6eebfc143e0b72606965970280d87a0",
+  "v241_video_input_sha256": {
+    "test3.mp4": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+    "test4.mp4": "c86204ba5b31f174c3a6f71f4f5eee71dc044985e62831395310c23efb880e47",
+    "test5.mp4": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+    "test6.mp4": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+    "test7.mp4": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "test8.mp4": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+    "test9.mp4": "29ac3d80e79207c6e0b1fa0f2bbd62bb22cd9aa62f9fcd1dceba0649fbee5e12"
+  },
+  "target_binding": {
+    "minimum_observations": 3,
+    "minimum_span_seconds": 0.4,
+    "minimum_mean_confidence": 0.5,
+    "tie_quality_margin": 0.1
+  },
+  "candidate_grouping": {
+    "max_time_gap_seconds": 0.8,
+    "minimum_box_iou": 0.3,
+    "same_frame_distinct_iou_below": 0.1,
+    "max_appearance_views": 4
+  },
+  "reid": {
+    "minimum_match_similarity": 0.6,
+    "minimum_uniqueness_margin": 0.1,
+    "minimum_evidence_prototypes": 2,
+    "candidate_view_policy": "highest-confidence available view, reevaluated after each new view; no GT ranking"
+  },
+  "sam": {
+    "checkpoint": "sam2.1_hiera_small.pt",
+    "step_frames": 6,
+    "target_span": "from online binding to end of sampled video",
+    "candidate_seed": "first eligible frozen YOLO local/raw phone box; selective short support"
+  },
+  "gt_isolation": "scenario descriptions and reviewed identities evaluation-only after prediction freeze",
+  "source_v25_architecture_sha256": "938921c01f3601809e9d876f778bd1301d2c4c682f1cfdc194e4e8171df326e2",
+  "current_video_sha256": {
+    "test3.mp4": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+    "test4.mp4": "c86204ba5b31f174c3a6f71f4f5eee71dc044985e62831395310c23efb880e47",
+    "test5.mp4": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+    "test6.mp4": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+    "test7.mp4": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "test8.mp4": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+    "test9.mp4": "29ac3d80e79207c6e0b1fa0f2bbd62bb22cd9aa62f9fcd1dceba0649fbee5e12"
+  },
+  "rerun_inference_code_sha256": {
+    "src/memory_graph/v25rerun/adapter.py": "f228373ce49885368242c26fb717921be04872fbd442543c7dcbba6ea6e08614",
+    "src/memory_graph/v25rerun/binding.py": "10660113ef32e106c64954f5bddda7856d5f97c20d6ce1efc522e77ce6fd4f35",
+    "src/memory_graph/v25rerun/candidates.py": "73161ab79935c185850cd190cf83a44f972b27f65839a48831128c09a13fee34",
+    "src/memory_graph/v25rerun/fusion.py": "a2289e9ff2a313fac4e18cec3dd9546a8ecf0c86c45c01f4c61f861f9c9fe462",
+    "src/memory_graph/v25rerun/pipeline.py": "88e0dadc8450f94cb52d9bc37283e7b3bf98342dec58f0043f3e578eb4e35106",
+    "src/memory_graph/v25rerun/reid.py": "e23dff2924011bc2fbb4efe9c8306d4fea8f428e0c2d57d8b2ad572ab7f6905b",
+    "src/memory_graph/v25rerun/sam_route.py": "fb853b400889884d0913c80896acc227e26543ea4dd41876faa8900a2f89bfb2",
+    "src/memory_graph/v25rerun/__init__.py": "a2ed6a31fe30c77301371a85f90a2c1adc4d8cf9c8247f54c99eb5c9ba360893"
+  },
+  "fresh_v21_required": true,
+  "pre_inference_freeze_amendment": "Candidate SAM mask outside/too sparse inside YOLO crop falls back to unmasked frozen YOLO crop; model and gates unchanged; amended before seven-video Re-ID prediction freeze."
+}

@@ -1,0 +1,4234 @@
+{
+  "task": "task2",
+  "reference_frame": "image_plane",
+  "snapshots": [
+    {
+      "frame_index": 0,
+      "timestamp": 0.0,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0001",
+          "object_entity_id": "entity_0005",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0003",
+          "object_entity_id": "entity_0010",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0004",
+          "object_entity_id": "entity_0006",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0005",
+          "object_entity_id": "entity_0009",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0005",
+          "object_entity_id": "entity_0013",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0007",
+          "object_entity_id": "entity_0008",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0007",
+          "object_entity_id": "entity_0009",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0007",
+          "object_entity_id": "entity_0011",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0008",
+          "object_entity_id": "entity_0009",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0008",
+          "object_entity_id": "entity_0011",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0009",
+          "object_entity_id": "entity_0011",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0009",
+          "object_entity_id": "entity_0013",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0010",
+          "object_entity_id": "entity_0012",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013"
+      ],
+      "unobserved_remembered_entities": []
+    },
+    {
+      "frame_index": 78,
+      "timestamp": 2.6009848484848486,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0016",
+          "object_entity_id": "entity_0020",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0017",
+          "object_entity_id": "phone_01",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0017",
+          "object_entity_id": "entity_0020",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "phone_01",
+          "object_entity_id": "entity_0019",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0001",
+        "entity_0016",
+        "entity_0017",
+        "phone_01",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0018"
+      ]
+    },
+    {
+      "frame_index": 144,
+      "timestamp": 4.801818181818182,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0039",
+          "object_entity_id": "entity_0041",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "phone_01",
+        "entity_0019",
+        "entity_0020",
+        "entity_0022",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "entity_0021",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038"
+      ]
+    },
+    {
+      "frame_index": 288,
+      "timestamp": 9.603636363636364,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "phone_01",
+          "object_entity_id": "entity_0053",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0044",
+          "object_entity_id": "entity_0045",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0044",
+          "object_entity_id": "entity_0052",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0045",
+          "object_entity_id": "entity_0052",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0048",
+          "object_entity_id": "entity_0049",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "phone_01",
+        "entity_0044",
+        "entity_0045",
+        "entity_0048",
+        "entity_0049",
+        "entity_0051",
+        "entity_0052",
+        "entity_0053"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0046",
+        "entity_0047",
+        "entity_0050",
+        "entity_0054"
+      ]
+    },
+    {
+      "frame_index": 306,
+      "timestamp": 10.203863636363636,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0055",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0056",
+          "semantic_label": "remote",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "phone_01",
+          "object_entity_id": "entity_0055",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0044",
+          "object_entity_id": "entity_0052",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0044",
+          "object_entity_id": "entity_0056",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0048",
+          "object_entity_id": "entity_0049",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "phone_01",
+        "entity_0044",
+        "entity_0048",
+        "entity_0049",
+        "entity_0052",
+        "entity_0055",
+        "entity_0056"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0045",
+        "entity_0046",
+        "entity_0047",
+        "entity_0050",
+        "entity_0051",
+        "entity_0053",
+        "entity_0054"
+      ]
+    },
+    {
+      "frame_index": 312,
+      "timestamp": 10.403939393939394,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "CONFLICT",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0055",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0056",
+          "semantic_label": "remote",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0057",
+          "semantic_label": "refrigerator",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0048",
+          "object_entity_id": "entity_0049",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0049",
+          "object_entity_id": "entity_0057",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0044",
+        "entity_0048",
+        "entity_0049",
+        "entity_0052",
+        "entity_0055",
+        "entity_0057"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0045",
+        "entity_0046",
+        "entity_0047",
+        "entity_0050",
+        "entity_0051",
+        "entity_0053",
+        "entity_0054",
+        "entity_0056"
+      ]
+    },
+    {
+      "frame_index": 528,
+      "timestamp": 17.606666666666666,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0055",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0056",
+          "semantic_label": "remote",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0057",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0058",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0059",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0060",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0061",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0062",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0063",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0064",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0065",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0066",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0067",
+          "semantic_label": "bottle",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0068",
+          "semantic_label": "teddy bear",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0069",
+          "semantic_label": "cake",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0070",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "candidate_phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_02",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_03",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0071",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "candidate_phone_02",
+          "object_entity_id": "candidate_phone_03",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0070",
+        "candidate_phone_01",
+        "candidate_phone_02",
+        "candidate_phone_03",
+        "entity_0071"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "phone_01",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0044",
+        "entity_0045",
+        "entity_0046",
+        "entity_0047",
+        "entity_0048",
+        "entity_0049",
+        "entity_0050",
+        "entity_0051",
+        "entity_0052",
+        "entity_0053",
+        "entity_0054",
+        "entity_0055",
+        "entity_0056",
+        "entity_0057",
+        "entity_0058",
+        "entity_0059",
+        "entity_0060",
+        "entity_0061",
+        "entity_0062",
+        "entity_0063",
+        "entity_0064",
+        "entity_0065",
+        "entity_0066",
+        "entity_0067",
+        "entity_0068",
+        "entity_0069"
+      ]
+    },
+    {
+      "frame_index": 594,
+      "timestamp": 19.8075,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0055",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0056",
+          "semantic_label": "remote",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0057",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0058",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0059",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0060",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0061",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0062",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0063",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0064",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0065",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0066",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0067",
+          "semantic_label": "bottle",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0068",
+          "semantic_label": "teddy bear",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0069",
+          "semantic_label": "cake",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0070",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "candidate_phone_01",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_02",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_03",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_raw",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0071",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0072",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0073",
+          "semantic_label": "bottle",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0074",
+          "semantic_label": "laptop",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0075",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0076",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0070",
+          "object_entity_id": "entity_0076",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "candidate_phone_01",
+          "object_entity_id": "entity_0072",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "candidate_phone_02",
+          "object_entity_id": "candidate_phone_03",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "candidate_phone_02",
+          "object_entity_id": "entity_0073",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0071",
+          "object_entity_id": "entity_0073",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0071",
+          "object_entity_id": "entity_0075",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0073",
+          "object_entity_id": "entity_0075",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0074",
+          "object_entity_id": "entity_0076",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0068",
+        "entity_0070",
+        "candidate_phone_01",
+        "candidate_phone_02",
+        "candidate_phone_03",
+        "entity_0071",
+        "entity_0072",
+        "entity_0073",
+        "entity_0074",
+        "entity_0075",
+        "entity_0076"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "phone_01",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0044",
+        "entity_0045",
+        "entity_0046",
+        "entity_0047",
+        "entity_0048",
+        "entity_0049",
+        "entity_0050",
+        "entity_0051",
+        "entity_0052",
+        "entity_0053",
+        "entity_0054",
+        "entity_0055",
+        "entity_0056",
+        "entity_0057",
+        "entity_0058",
+        "entity_0059",
+        "entity_0060",
+        "entity_0061",
+        "entity_0062",
+        "entity_0063",
+        "entity_0064",
+        "entity_0065",
+        "entity_0066",
+        "entity_0067",
+        "entity_0069"
+      ]
+    },
+    {
+      "frame_index": 660,
+      "timestamp": 22.008333333333333,
+      "nodes": [
+        {
+          "entity_id": "entity_0001",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0002",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0003",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0004",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0005",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0006",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0007",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0008",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0009",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0010",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0011",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0012",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0013",
+          "semantic_label": "clock",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0014",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0015",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0016",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0017",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0018",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "phone_01",
+          "semantic_label": "cell phone",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0019",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0020",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0021",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0022",
+          "semantic_label": "backpack",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0023",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0024",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0025",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0026",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0027",
+          "semantic_label": "book",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0028",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0029",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0030",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0031",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0032",
+          "semantic_label": "tv",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0033",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0034",
+          "semantic_label": "mouse",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0035",
+          "semantic_label": "handbag",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0036",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0037",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0038",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0039",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0040",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0041",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0042",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0043",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0044",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0045",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0046",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0047",
+          "semantic_label": "cup",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0048",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0049",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0050",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0051",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0052",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0053",
+          "semantic_label": "table",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0054",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0055",
+          "semantic_label": "person",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0056",
+          "semantic_label": "remote",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0057",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0058",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0059",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0060",
+          "semantic_label": "microwave",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0061",
+          "semantic_label": "sports ball",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0062",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0063",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0064",
+          "semantic_label": "refrigerator",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0065",
+          "semantic_label": "chair",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "entity_0066",
+          "semantic_label": "potted plant",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0067",
+          "semantic_label": "bottle",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0068",
+          "semantic_label": "teddy bear",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0069",
+          "semantic_label": "cake",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0070",
+          "semantic_label": "microwave",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": true
+        },
+        {
+          "entity_id": "candidate_phone_01",
+          "semantic_label": "cell phone",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_02",
+          "semantic_label": "cell phone",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "candidate_phone_03",
+          "semantic_label": "cell phone",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0071",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0072",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0073",
+          "semantic_label": "bottle",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0074",
+          "semantic_label": "laptop",
+          "state": "UNOBSERVED",
+          "current_evidence_source": null,
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0075",
+          "semantic_label": "potted plant",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        },
+        {
+          "entity_id": "entity_0076",
+          "semantic_label": "person",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": false
+        },
+        {
+          "entity_id": "entity_0077",
+          "semantic_label": "remote",
+          "state": "VISIBLE_TRUSTED",
+          "current_evidence_source": "yolo_track",
+          "anchor_candidate": "unknown"
+        }
+      ],
+      "edges": [
+        {
+          "subject_entity_id": "entity_0070",
+          "object_entity_id": "entity_0076",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "candidate_phone_02",
+          "object_entity_id": "entity_0073",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0071",
+          "object_entity_id": "entity_0073",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0071",
+          "object_entity_id": "entity_0075",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        },
+        {
+          "subject_entity_id": "entity_0073",
+          "object_entity_id": "entity_0075",
+          "predicate": "IMAGE_NEAR",
+          "reference_frame": "image_plane"
+        }
+      ],
+      "active_visible_entities": [
+        "entity_0068",
+        "entity_0070",
+        "candidate_phone_02",
+        "entity_0071",
+        "entity_0072",
+        "entity_0073",
+        "entity_0075",
+        "entity_0076",
+        "entity_0077"
+      ],
+      "unobserved_remembered_entities": [
+        "entity_0001",
+        "entity_0002",
+        "entity_0003",
+        "entity_0004",
+        "entity_0005",
+        "entity_0006",
+        "entity_0007",
+        "entity_0008",
+        "entity_0009",
+        "entity_0010",
+        "entity_0011",
+        "entity_0012",
+        "entity_0013",
+        "entity_0014",
+        "entity_0015",
+        "entity_0016",
+        "entity_0017",
+        "entity_0018",
+        "phone_01",
+        "entity_0019",
+        "entity_0020",
+        "entity_0021",
+        "entity_0022",
+        "entity_0023",
+        "entity_0024",
+        "entity_0025",
+        "entity_0026",
+        "entity_0027",
+        "entity_0028",
+        "entity_0029",
+        "entity_0030",
+        "entity_0031",
+        "entity_0032",
+        "entity_0033",
+        "entity_0034",
+        "entity_0035",
+        "entity_0036",
+        "entity_0037",
+        "entity_0038",
+        "entity_0039",
+        "entity_0040",
+        "entity_0041",
+        "entity_0042",
+        "entity_0043",
+        "entity_0044",
+        "entity_0045",
+        "entity_0046",
+        "entity_0047",
+        "entity_0048",
+        "entity_0049",
+        "entity_0050",
+        "entity_0051",
+        "entity_0052",
+        "entity_0053",
+        "entity_0054",
+        "entity_0055",
+        "entity_0056",
+        "entity_0057",
+        "entity_0058",
+        "entity_0059",
+        "entity_0060",
+        "entity_0061",
+        "entity_0062",
+        "entity_0063",
+        "entity_0064",
+        "entity_0065",
+        "entity_0066",
+        "entity_0067",
+        "entity_0069",
+        "candidate_phone_01",
+        "candidate_phone_03",
+        "entity_0074"
+      ]
+    }
+  ]
+}

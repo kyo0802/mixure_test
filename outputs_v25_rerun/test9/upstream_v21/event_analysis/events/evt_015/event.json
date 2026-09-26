@@ -1,0 +1,69 @@
+{
+  "event_id": "evt_015",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 7.001458333333334,
+  "peak_time": 9.802041666666668,
+  "end_time": 10.001875,
+  "involved_track_ids": [
+    31,
+    32,
+    34,
+    36
+  ],
+  "signals": [
+    "appearance",
+    "disappearance_candidate",
+    "proximity_change",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "from_nearest_track": 34,
+      "to_nearest_track": 36,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "last_visible": 9.001875,
+      "next_visible_or_video_end": 10.402166666666666,
+      "absence_seconds": 1.400291666666666,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "distance_change": 0.23437266565794712,
+      "direction": "approaching",
+      "image_relative": true
+    },
+    {
+      "from_nearest_track": 31,
+      "to_nearest_track": 34,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "persistence_observations": 17,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 24,
+      "not_semantic_identity": true
+    },
+    {
+      "last_visible": 8.001666666666667,
+      "next_visible_or_video_end": 40.00833333333333,
+      "absence_seconds": 32.00666666666667,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "persistence_observations": 6,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 30,
+      "not_semantic_identity": true
+    }
+  ],
+  "confidence": 0.871225893497467,
+  "priority": 5.071225893497467,
+  "selected": true,
+  "skip_reason": null
+}

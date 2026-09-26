@@ -1,0 +1,65 @@
+{
+  "task": "task1",
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "upstream_v23_registry_sha256": "fcd9682ad4ed4e8a52400fd130ff1872b68347407cd819408272762b2bba63d1",
+  "query_entity_id": "phone_01",
+  "attempts": [
+    {
+      "candidate_entity_id": "entity_0067",
+      "source_id": "track:70",
+      "candidate_frame": 798,
+      "candidate_time": 26.612378490175804,
+      "query_entity_id": "phone_01",
+      "query_last_trusted_frame": 396,
+      "query_last_trusted_time": 13.20614270941055,
+      "gap_seconds": 13.406235780765254,
+      "semantic_compatible": true,
+      "appearance": {
+        "matrix": [
+          [
+            0.3642275631427765,
+            0.3625984787940979
+          ]
+        ],
+        "max_similarity": 0.3642275631427765,
+        "mean_top2": 0.3634130209684372,
+        "best_candidate_view": 0,
+        "best_prototype_frame": 240
+      },
+      "temporal_evidence": {
+        "forward_after_unobserved": true,
+        "pixel_motion_extrapolation_used": false
+      },
+      "coexistence_frames": [],
+      "graph_context": {
+        "query_last_visible_context": {
+          "frame_index": 408,
+          "neighbor_entity_ids": []
+        },
+        "candidate_context": null,
+        "shared_image_plane_neighbor_ids": [],
+        "match_sufficient": false,
+        "world_fixed": false
+      },
+      "hard_contradictions": [],
+      "candidate_quality": "trusted_yolo_crop_without_mask",
+      "embedding_cache_key": "cbce96812fa3e474bfe92aaa39728c32beb2200798e36509d6f7c1a319d89c25",
+      "match_threshold": 0.6,
+      "uniqueness_margin_required": 0.1,
+      "best_vs_second_margin": null,
+      "best_candidate_similarity": 0.3642275631427765,
+      "second_candidate_similarity": null,
+      "decision": "AMBIGUOUS",
+      "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+      "sam_reinitialization_authorized": false
+    }
+  ],
+  "registry_update": {
+    "merge_executed": false,
+    "query_entity_id": "phone_01",
+    "sam_reinitialization_authorized": false,
+    "sam_reinitialization_executed": false
+  },
+  "post_reid_registry": null,
+  "gt_accessed": false
+}

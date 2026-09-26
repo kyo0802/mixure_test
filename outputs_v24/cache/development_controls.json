@@ -1,0 +1,48 @@
+{
+  "model": "torchvision MobileNetV3 Small ImageNet-1K features+avgpool",
+  "weights_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+  "device": "cuda",
+  "task2_short_gap_positive": {
+    "query_track": 22,
+    "candidate_track": 43,
+    "query_frames": [
+      90,
+      114
+    ],
+    "candidate_frames": [
+      210,
+      216
+    ],
+    "matrix": [
+      [
+        0.7113164067268372,
+        0.6114263534545898
+      ],
+      [
+        0.7000989317893982,
+        0.592311441898346
+      ]
+    ],
+    "max_similarity": 0.7113164067268372,
+    "mean_top2": 0.7057076692581177,
+    "best_candidate_view": 0,
+    "best_prototype_frame": 90
+  },
+  "task1_later_desk_negative": {
+    "query_track": 17,
+    "candidate_track": 70,
+    "candidate_frame": 798,
+    "candidate_embedding_cache_key": "cbce96812fa3e474bfe92aaa39728c32beb2200798e36509d6f7c1a319d89c25",
+    "matrix": [
+      [
+        0.3642275631427765,
+        0.3625984787940979
+      ]
+    ],
+    "max_similarity": 0.3642275631427765,
+    "mean_top2": 0.3634130209684372,
+    "best_candidate_view": 0,
+    "best_prototype_frame": 240
+  },
+  "heldout_task2_late_candidates_accessed": false
+}

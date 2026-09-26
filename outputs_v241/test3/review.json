@@ -1,0 +1,88 @@
+{
+  "task": "test3",
+  "scenario_evaluation_only": "smartphone placed inside box",
+  "target_initialization_correct_on_review": true,
+  "initial_source": {
+    "track_id": 39,
+    "frame_index": 216,
+    "timestamp": 7.201231822070145,
+    "sam_target_id": "phone_track39",
+    "persistent_entity_id": "phone_01"
+  },
+  "last_trusted_observation": {
+    "frame_index": 438,
+    "timestamp": 14.602497861420018
+  },
+  "final_registry_state": "UNOBSERVED",
+  "unobserved_seen": true,
+  "reviewed_visible_samples": [
+    {
+      "frame_index": 216,
+      "timestamp_approx_seconds": 7.2,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 39,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": true
+    },
+    {
+      "frame_index": 420,
+      "timestamp_approx_seconds": 14.0,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 54,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": false
+    },
+    {
+      "frame_index": 450,
+      "timestamp_approx_seconds": 15.0,
+      "target_visually_reviewable": true,
+      "target_local_track_id": null,
+      "target_raw_yolo_hit": false,
+      "target_local_observation_hit": false,
+      "detection_class": "DETECTION_MISS",
+      "sam_mask_any_target_hypothesis": false
+    }
+  ],
+  "sam": {
+    "initial_span": [
+      216,
+      396
+    ],
+    "initial_masks": 31,
+    "initial_loss_events": 0,
+    "possible_mask_drift_flags": 0,
+    "rejected_guard_conflicts": 0,
+    "reinitializations_executed": 1,
+    "reinitialization_same_identity": false
+  },
+  "late_candidate_first_frame": 786,
+  "late_candidate_review": "fixed candidate at f786 is a distinct landline",
+  "late_target_review": "phone visible in hand at f450, then enters box; final interior not directly visible",
+  "reid_attempts": [
+    {
+      "candidate_entity_id": "candidate_phone_01",
+      "similarity": 0.46632280945777893,
+      "best_vs_second_margin": null,
+      "decision": "AMBIGUOUS",
+      "semantic_compatible": true,
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      }
+    }
+  ],
+  "true_reviewed_reid_match": false,
+  "false_reid_match": false,
+  "missed_reid_opportunity": false,
+  "identity_fragmentation": false,
+  "false_merge_reviewed": false,
+  "exact_final_location_directly_visible": false,
+  "failure_attribution": "FINAL_STATE_NOT_VISUALLY_VERIFIABLE",
+  "spatial_diagnostic": "IDENTITY_OK_FINAL_LOCATION_UNCERTAIN",
+  "gt_used_for_inference": false
+}

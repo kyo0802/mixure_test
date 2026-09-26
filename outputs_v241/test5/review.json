@@ -1,0 +1,78 @@
+{
+  "task": "test5",
+  "scenario_evaluation_only": "smartphone beside box; placement itself not captured",
+  "target_initialization_correct_on_review": false,
+  "initial_source": {
+    "track_id": 13,
+    "frame_index": 0,
+    "timestamp": 0.0,
+    "sam_target_id": "phone_track13",
+    "persistent_entity_id": "phone_01"
+  },
+  "last_trusted_observation": {
+    "frame_index": 30,
+    "timestamp": 1.000046511627907
+  },
+  "final_registry_state": "UNOBSERVED",
+  "unobserved_seen": true,
+  "reviewed_visible_samples": [
+    {
+      "frame_index": 288,
+      "timestamp_approx_seconds": 9.6,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 35,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": true
+    },
+    {
+      "frame_index": 366,
+      "timestamp_approx_seconds": 12.2,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 38,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": true
+    }
+  ],
+  "sam": {
+    "initial_span": [
+      0,
+      180
+    ],
+    "initial_masks": 6,
+    "initial_loss_events": 25,
+    "possible_mask_drift_flags": 0,
+    "rejected_guard_conflicts": 0,
+    "reinitializations_executed": 1,
+    "reinitialization_same_identity": false
+  },
+  "late_candidate_first_frame": 288,
+  "late_candidate_review": "f288 candidate is gray phone; f0 seed is visually different white multi-camera phone",
+  "late_target_review": "target gray phone visible at f288 and f366; exact final placement not filmed",
+  "reid_attempts": [
+    {
+      "candidate_entity_id": "candidate_phone_01",
+      "similarity": 0.3975815773010254,
+      "best_vs_second_margin": null,
+      "decision": "AMBIGUOUS",
+      "semantic_compatible": true,
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      }
+    }
+  ],
+  "true_reviewed_reid_match": false,
+  "false_reid_match": false,
+  "missed_reid_opportunity": false,
+  "identity_fragmentation": false,
+  "false_merge_reviewed": false,
+  "exact_final_location_directly_visible": false,
+  "failure_attribution": "FUSION_LIMITED",
+  "spatial_diagnostic": "IDENTITY_OK_FINAL_LOCATION_UNCERTAIN",
+  "gt_used_for_inference": false
+}

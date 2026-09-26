@@ -1,0 +1,46 @@
+{
+  "schema": "v241-generalization-review-1",
+  "prediction_manifest_sha256_before_gt_review": "0ed8de03e35d6fa869a13f0137532ca6d6eebfc143e0b72606965970280d87a0",
+  "videos_evaluated": 7,
+  "target_initializations_reviewed_correct": 6,
+  "persistent_target_id_retained_while_unobserved": 6,
+  "videos_with_later_visible_target_requiring_reid": 5,
+  "reid_attempts": 8,
+  "reid_decision_counts": {
+    "AMBIGUOUS": 8
+  },
+  "true_reviewed_reid_matches": 0,
+  "false_reid_matches": 0,
+  "selected_distractor_candidates_safely_unmerged": 7,
+  "missed_reid_opportunity_videos": [
+    "test4",
+    "test6",
+    "test7",
+    "test8",
+    "test9"
+  ],
+  "identity_fragmentation_videos": [
+    "test4",
+    "test7",
+    "test8"
+  ],
+  "reviewed_false_merges": 0,
+  "accepted_sam_drift": 0,
+  "rejected_sam_guard_conflicts": 1,
+  "sam_initial_loss_events": 40,
+  "reviewed_visible_target_samples": 20,
+  "raw_yolo_target_hits": 16,
+  "local_target_hits": 16,
+  "visibility_conditioned_raw_detection_coverage": 0.8,
+  "raw_to_local_retention_on_reviewed_target_hits": 1.0,
+  "sam_supported_reviewed_samples": 9,
+  "failure_attribution_counts": {
+    "FINAL_STATE_NOT_VISUALLY_VERIFIABLE": 1,
+    "MIXED": 2,
+    "FUSION_LIMITED": 3,
+    "DETECTION_LIMITED": 1
+  },
+  "generalization_result_classification": "IDENTITY_PIPELINE_HAS_MULTIPLE_UPSTREAM_FAILURES",
+  "next_architecture_decision": "IMPROVE_FUSION_FIRST",
+  "scope": "Seven designed videos; sparse non-random manual samples. The V2.4 task1/task2 hardcoded seed/window routing required a fixed V2.4.1 adapter. No population accuracy estimate."
+}

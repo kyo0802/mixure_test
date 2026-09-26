@@ -1,0 +1,88 @@
+{
+  "task": "test6",
+  "scenario_evaluation_only": "smartphone near microwave beside doll",
+  "target_initialization_correct_on_review": true,
+  "initial_source": {
+    "track_id": 31,
+    "frame_index": 192,
+    "timestamp": 6.402900302114804,
+    "sam_target_id": "phone_track31",
+    "persistent_entity_id": "phone_01"
+  },
+  "last_trusted_observation": {
+    "frame_index": 384,
+    "timestamp": 12.805800604229608
+  },
+  "final_registry_state": "UNOBSERVED",
+  "unobserved_seen": true,
+  "reviewed_visible_samples": [
+    {
+      "frame_index": 192,
+      "timestamp_approx_seconds": 6.4,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 31,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": true
+    },
+    {
+      "frame_index": 384,
+      "timestamp_approx_seconds": 12.8,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 37,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": false
+    },
+    {
+      "frame_index": 630,
+      "timestamp_approx_seconds": 21.0,
+      "target_visually_reviewable": true,
+      "target_local_track_id": null,
+      "target_raw_yolo_hit": false,
+      "target_local_observation_hit": false,
+      "detection_class": "DETECTION_MISS",
+      "sam_mask_any_target_hypothesis": true
+    }
+  ],
+  "sam": {
+    "initial_span": [
+      192,
+      372
+    ],
+    "initial_masks": 31,
+    "initial_loss_events": 0,
+    "possible_mask_drift_flags": 0,
+    "rejected_guard_conflicts": 0,
+    "reinitializations_executed": 1,
+    "reinitialization_same_identity": false
+  },
+  "late_candidate_first_frame": 594,
+  "late_candidate_review": "fixed candidate at f594 is a distinct landline",
+  "late_target_review": "target visible in hand at f630 with no corresponding raw/local YOLO box",
+  "reid_attempts": [
+    {
+      "candidate_entity_id": "candidate_phone_01",
+      "similarity": 0.42474883794784546,
+      "best_vs_second_margin": null,
+      "decision": "AMBIGUOUS",
+      "semantic_compatible": true,
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      }
+    }
+  ],
+  "true_reviewed_reid_match": false,
+  "false_reid_match": false,
+  "missed_reid_opportunity": true,
+  "identity_fragmentation": false,
+  "false_merge_reviewed": false,
+  "exact_final_location_directly_visible": false,
+  "failure_attribution": "DETECTION_LIMITED",
+  "spatial_diagnostic": "ANCHOR_CONTEXT_COULD_HELP",
+  "gt_used_for_inference": false
+}

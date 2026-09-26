@@ -1,0 +1,76 @@
+{
+  "decision": "BOUND",
+  "bound_target": {
+    "entity_id": "phone_01",
+    "source_track_id": 29,
+    "frame_index": 210,
+    "timestamp": 7.002127659574468,
+    "bbox": [
+      514.8986206054688,
+      530.0082397460938,
+      744.48876953125,
+      679.2870483398438
+    ],
+    "source_kind": "observation"
+  },
+  "policy": {
+    "minimum_observations": 3,
+    "minimum_span_seconds": 0.4,
+    "minimum_mean_confidence": 0.5,
+    "tie_quality_margin": 0.1,
+    "no_future_frames_or_gt": true
+  },
+  "candidate_initial_tracks": [
+    {
+      "frame_index": 186,
+      "track_id": 29,
+      "semantic": "cell phone",
+      "observations_seen": 1,
+      "duration_seconds_seen": 0.0,
+      "mean_detector_confidence": 0.3569963872432709,
+      "quality": 0.3569963872432709,
+      "ready": false
+    },
+    {
+      "frame_index": 192,
+      "track_id": 29,
+      "semantic": "cell phone",
+      "observations_seen": 1,
+      "duration_seconds_seen": 0.0,
+      "mean_detector_confidence": 0.3569963872432709,
+      "quality": 0.3569963872432709,
+      "ready": false
+    },
+    {
+      "frame_index": 198,
+      "track_id": 29,
+      "semantic": "cell phone",
+      "observations_seen": 1,
+      "duration_seconds_seen": 0.0,
+      "mean_detector_confidence": 0.3569963872432709,
+      "quality": 0.3569963872432709,
+      "ready": false
+    },
+    {
+      "frame_index": 204,
+      "track_id": 29,
+      "semantic": "cell phone",
+      "observations_seen": 2,
+      "duration_seconds_seen": 0.6001823708206686,
+      "mean_detector_confidence": 0.5537991970777512,
+      "quality": 0.5537991970777512,
+      "ready": false
+    },
+    {
+      "frame_index": 210,
+      "track_id": 29,
+      "semantic": "cell phone",
+      "observations_seen": 3,
+      "duration_seconds_seen": 0.8002431610942251,
+      "mean_detector_confidence": 0.5547935664653778,
+      "quality": 0.5547935664653778,
+      "ready": true
+    }
+  ],
+  "selection_evidence": "first mature local phone track; ambiguous if simultaneous quality tie"
+}

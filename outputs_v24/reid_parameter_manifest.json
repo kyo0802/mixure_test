@@ -1,0 +1,23 @@
+{
+  "schema": "v24-reid-parameters-1",
+  "frozen_before_task2_late_candidate_inference": true,
+  "embedding_model": "torchvision MobileNetV3 Small ImageNet-1K features+avgpool",
+  "torchvision_version": "0.25.0+cu128",
+  "checkpoint_path": "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth",
+  "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+  "crop_preprocessing": "Original RGB pixels; YOLO bbox with 5% padding; trusted SAM mask where available, outside pixels neutral RGB 128; Resize shortest side to 256, CenterCrop 224, ImageNet mean/std; same transform for all candidates.",
+  "prototype_selection": "Only V2.3 trusted YOLO local observations with confidence >= 0.5, accepted SAM mask, no V2.2 drift flag, and YOLO/SAM bbox IoU >= 0.5; at most two highest-confidence frames per local track, four total; never from CONFLICT/AMBIGUOUS/SAM-only.",
+  "prototype_limit": 4,
+  "candidate_views": "One frozen YOLO-seeded SAM mask at first late candidate frame 528 for each of all three candidates; no GT selection.",
+  "similarity_metric": "L2-normalized penultimate pooled feature cosine; maximum over trusted prototypes; all per-prototype scores recorded.",
+  "minimum_match_similarity": 0.60,
+  "minimum_uniqueness_margin": 0.10,
+  "minimum_evidence_prototypes": 2,
+  "semantic_gate": "Phone-like classes compatible; incompatible known classes REJECT.",
+  "contradiction_gates": "Reliable same-frame distinct current observations of query and candidate REJECT; known semantic contradiction REJECT; stale memory alone is not coexistence.",
+  "temporal_rule": "Candidate first seen strictly after query last trusted observation; no long-gap pixel-position extrapolation.",
+  "context_rule": "V2.3 image-plane graph neighborhood is recorded if available, never sufficient alone for MATCH; no world-fixed anchors.",
+  "candidate_quality_rule": "First candidate SAM mask must be nonempty and originate from a frozen YOLO phone detection; otherwise AMBIGUOUS.",
+  "weak_appearance_rule": "Below 0.60 remains AMBIGUOUS unless independent contradiction exists; appearance alone never forces NEW_ENTITY or REJECT.",
+  "threshold_rationale": "Allowed controls only: task2 track22-to-track43 positive max cosine 0.7113 and task1 original-phone-to-later-desk negative 0.3642. Threshold 0.60 sits between them; margin 0.10 is a conservative prespecified separation. No task2 late candidate similarity or identity was inspected."
+}

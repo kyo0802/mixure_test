@@ -1,0 +1,34 @@
+{
+  "schema": "v241-frozen-baseline-1",
+  "source_version": "V2.4",
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "reid_match_threshold": 0.6,
+  "reid_uniqueness_margin": 0.1,
+  "component_sha256": {
+    "configs/v2_gpu_7b.yaml": "c165bc1f4ff2036fa2a678973b0ea9f6af25d0a5be8b72c7f0add811e60e3f23",
+    "configs/default.yaml": "3ad7da0a7d810df72d06ca2e7b9c4b140da0cfd1f1f7f802fd22fa9cf1e57319",
+    "yolo11s.pt": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    ".models/sam2.1_hiera_small.pt": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "outputs_v24/reid_parameter_manifest.json": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+    "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "src/memory_graph/perception/detector.py": "3fca468dd8d5c301b942bc85f4cf46725f9806507c560aefcee87da953518c41",
+    "src/memory_graph/perception/tracker.py": "c6cf272f9c2431d5a3f3eab51f3a39f8398d98ec2808bd301d07e1e729fd32c8",
+    "src/memory_graph/v21/pipeline.py": "1750ea1b94dbe8af41d0c0f3b488c02c79d10fdbd2b04ec052b2ff84df35c23d",
+    "src/memory_graph/v21/resolver.py": "223c25722cc6a49ddf7145ec3376fb624b8cda02c3f374b573080a7dd350b96d",
+    "src/memory_graph/v22/sam_tracking.py": "894e96ada6ed1ab178ad918774dab264377cfed60c5fdd0bc962ff3e685e97ba",
+    "src/memory_graph/v23/fusion.py": "adaa2e9b9053f9c184e51ea952ed447b48beca8e8c380881faf33d8956161900",
+    "src/memory_graph/v24/appearance.py": "612fb6e1e83d10275aa1f02686bc67af1bc99135f6d92187cbc8e3aeced2bd54",
+    "src/memory_graph/v24/reid.py": "6102b2f577437d817914a238159974264de229a2109dc5b79ba2003639f8824b"
+  },
+  "videos_sha256": {
+    "test3.mp4": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+    "test4.mp4": "c86204ba5b31f174c3a6f71f4f5eee71dc044985e62831395310c23efb880e47",
+    "test5.mp4": "51a05f460afa1f7f40394db4df3b86b32fbecb417bea8e295d9e635ddedf5214",
+    "test6.mp4": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+    "test7.mp4": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "test8.mp4": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+    "test9.mp4": "29ac3d80e79207c6e0b1fa0f2bbd62bb22cd9aa62f9fcd1dceba0649fbee5e12"
+  },
+  "no_gt_in_inference": true,
+  "extension_constraint": "Existing V2.2/V2.3/V2.4 runners hardcode task1/task2 and fixed frame seeds; V2.4.1 may adapt input routing and predeclare a GT-free generic seed policy, but frozen model/gates stay unchanged."
+}

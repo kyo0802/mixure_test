@@ -1,0 +1,121 @@
+{
+  "decision": "NO_SAFE_MATCH",
+  "reason": "frozen V2.4 gates",
+  "attempts": [
+    {
+      "candidate_entity_id": "candidate_phone_01",
+      "source_id": "late_candidate_1",
+      "candidate_frame": 822,
+      "candidate_time": 27.405708333333333,
+      "query_entity_id": "phone_01",
+      "query_last_trusted_frame": 618,
+      "query_last_trusted_time": 20.60429166666667,
+      "gap_seconds": 6.801416666666665,
+      "semantic_compatible": true,
+      "appearance": {
+        "matrix": [
+          [
+            0.3323461711406708,
+            0.3323461711406708
+          ]
+        ],
+        "max_similarity": 0.3323461711406708,
+        "mean_top2": 0.3323461711406708,
+        "best_candidate_view": 0,
+        "best_prototype_frame": 534
+      },
+      "temporal_evidence": {
+        "forward_after_unobserved": true,
+        "pixel_motion_extrapolation_used": false
+      },
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      },
+      "hard_contradictions": [],
+      "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+      "embedding_cache_key": "d53c296c94c849e285c1f07af5d2fac3d01fab10722bef32b09973bfaaaaa1d3",
+      "match_threshold": 0.6,
+      "uniqueness_margin_required": 0.1,
+      "best_vs_second_margin": 0.0688660740852356,
+      "best_candidate_similarity": 0.40121224522590637,
+      "second_candidate_similarity": 0.3323461711406708,
+      "decision": "AMBIGUOUS",
+      "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+      "sam_reinitialization_authorized": false
+    },
+    {
+      "candidate_entity_id": "candidate_phone_02",
+      "source_id": "late_candidate_2",
+      "candidate_frame": 822,
+      "candidate_time": 27.405708333333333,
+      "query_entity_id": "phone_01",
+      "query_last_trusted_frame": 618,
+      "query_last_trusted_time": 20.60429166666667,
+      "gap_seconds": 6.801416666666665,
+      "semantic_compatible": true,
+      "appearance": {
+        "matrix": [
+          [
+            0.40121224522590637,
+            0.40121224522590637
+          ]
+        ],
+        "max_similarity": 0.40121224522590637,
+        "mean_top2": 0.40121224522590637,
+        "best_candidate_view": 0,
+        "best_prototype_frame": 534
+      },
+      "temporal_evidence": {
+        "forward_after_unobserved": true,
+        "pixel_motion_extrapolation_used": false
+      },
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      },
+      "hard_contradictions": [],
+      "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+      "embedding_cache_key": "084d30e5ec5d6adea06b4fcaa6c66729bc36ac91fb0fc08683789fcc69a7462e",
+      "match_threshold": 0.6,
+      "uniqueness_margin_required": 0.1,
+      "best_vs_second_margin": 0.0688660740852356,
+      "best_candidate_similarity": 0.40121224522590637,
+      "second_candidate_similarity": 0.3323461711406708,
+      "decision": "AMBIGUOUS",
+      "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+      "sam_reinitialization_authorized": false
+    }
+  ],
+  "appearance_bank": {
+    "entity_id": "phone_01",
+    "max_prototypes": 4,
+    "prototypes": [
+      {
+        "entity_id": "phone_01",
+        "frame_index": 534,
+        "timestamp": 17.803708333333333,
+        "source": "track:53",
+        "crop_reference": "test9:frame534:track:53",
+        "mask_used": true,
+        "embedding_cache_key": "a5e8b949c32d431d1b215702229d7a91733cedf3ac260765fbd5e3b95456accd",
+        "trust_reason": "YOLO local observation agrees with accepted SAM mask"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 534,
+        "timestamp": 17.803708333333333,
+        "source": "track:53",
+        "crop_reference": "test9:frame534:track:53",
+        "mask_used": true,
+        "embedding_cache_key": "a5e8b949c32d431d1b215702229d7a91733cedf3ac260765fbd5e3b95456accd",
+        "trust_reason": "YOLO local observation agrees with accepted SAM mask"
+      }
+    ]
+  },
+  "registry_update": null,
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "gt_accessed": false
+}

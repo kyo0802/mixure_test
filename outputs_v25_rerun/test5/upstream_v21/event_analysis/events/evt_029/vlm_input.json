@@ -1,0 +1,177 @@
+{
+  "tracks": [
+    {
+      "track_id": 50,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.6795541443386857,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.0,
+          "visible": true,
+          "bbox": [
+            846.5167846679688,
+            260.5525817871094,
+            1110.3719482421875,
+            576.52685546875
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.0,
+          "visible": true,
+          "bbox": [
+            723.9033203125,
+            306.02630615234375,
+            1024.5032958984375,
+            703.8231811523438
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.8,
+          "visible": true,
+          "bbox": [
+            776.8695068359375,
+            377.3525390625,
+            1279.789794921875,
+            716.1651611328125
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 68,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.565855473279953,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.0,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.0,
+          "visible": true,
+          "bbox": [
+            367.149658203125,
+            332.5859375,
+            599.4721069335938,
+            510.29833984375
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.8,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 47,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.7922588538150398,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.0,
+          "visible": true,
+          "bbox": [
+            601.1162109375,
+            263.46746826171875,
+            763.0008544921875,
+            375.63031005859375
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.0,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.8,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 69,
+      "detector_hypothesis": "potted plant",
+      "detector_confidence": 0.5071600576241811,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.0,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.0,
+          "visible": true,
+          "bbox": [
+            1000.6956787109375,
+            96.863037109375,
+            1111.5540771484375,
+            581.9920654296875
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.8,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_029",
+    "event_type": "interaction_candidate",
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "relation_change"
+    ],
+    "start_time": 21.0,
+    "peak_time": 22.0,
+    "end_time": 24.0,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 21.0,
+        "visible_ids": [
+          47,
+          50
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 22.0,
+        "visible_ids": [
+          50,
+          68,
+          69
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 22.8,
+        "visible_ids": [
+          50
+        ]
+      }
+    ]
+  }
+}

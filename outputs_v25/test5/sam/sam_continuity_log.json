@@ -1,0 +1,2531 @@
+{
+  "status": "COMPLETE",
+  "task": "test5",
+  "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+  "config": "configs/sam2.1/sam2.1_hiera_s.yaml",
+  "step_frames": 6,
+  "frozen_input_sha256": {
+    "detections.json": "937957b35e1e4ba9b17cc8929648600165854a890d6a408504756b36619cd84f",
+    "track_timelines.json": "d6a2c38d67c845e0f33298b0081189919f481343eacabc3b33040252ecbf927e",
+    "video_metadata.json": "739a1ad42f6adb770609dfdb93026f7d24611e7c1099f659d2ae13beb9f9b6c7"
+  },
+  "target_binding": {
+    "entity_id": "phone_01",
+    "source_track_id": 13,
+    "frame_index": 12,
+    "timestamp": 0.4000186046511628,
+    "bbox": [
+      1167.71240234375,
+      400.79742431640625,
+      1204.4617919921875,
+      434.4439697265625
+    ],
+    "source_kind": "observation"
+  },
+  "segments": [
+    {
+      "segment": "target_full",
+      "frames": [
+        12,
+        18,
+        24,
+        30,
+        36,
+        42,
+        48,
+        54,
+        60,
+        66,
+        72,
+        78,
+        84,
+        90,
+        96,
+        102,
+        108,
+        114,
+        120,
+        126,
+        132,
+        138,
+        144,
+        150,
+        156,
+        162,
+        168,
+        174,
+        180,
+        186,
+        192,
+        198,
+        204,
+        210,
+        216,
+        222,
+        228,
+        234,
+        240,
+        246,
+        252,
+        258,
+        264,
+        270,
+        276,
+        282,
+        288,
+        294,
+        300,
+        306,
+        312,
+        318,
+        324,
+        330,
+        336,
+        342,
+        348,
+        354,
+        360,
+        366,
+        372,
+        378,
+        384,
+        390,
+        396,
+        402,
+        408,
+        414,
+        420,
+        426,
+        432,
+        438,
+        444,
+        450,
+        456,
+        462,
+        468,
+        474,
+        480,
+        486,
+        492,
+        498,
+        504,
+        510,
+        516,
+        522,
+        528,
+        534,
+        540,
+        546,
+        552,
+        558,
+        564,
+        570,
+        576,
+        582,
+        588,
+        594,
+        600,
+        606,
+        612,
+        618,
+        624,
+        630,
+        636,
+        642,
+        648,
+        654,
+        660,
+        666,
+        672,
+        678,
+        684,
+        690,
+        696,
+        702,
+        708,
+        714,
+        720,
+        726,
+        732,
+        738,
+        744,
+        750,
+        756,
+        762,
+        768,
+        774,
+        780,
+        786,
+        792,
+        798,
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846,
+        852,
+        858,
+        864,
+        870,
+        876,
+        882,
+        888,
+        894,
+        900,
+        906,
+        912,
+        918,
+        924,
+        930,
+        936,
+        942,
+        948,
+        954,
+        960,
+        966,
+        972,
+        978,
+        984,
+        990,
+        996,
+        1002,
+        1008,
+        1014,
+        1020,
+        1026,
+        1032,
+        1038,
+        1044,
+        1050,
+        1056,
+        1062,
+        1068,
+        1074
+      ],
+      "seeds": [
+        "phone_target"
+      ],
+      "events": [
+        {
+          "type": "INIT",
+          "frame_index": 12,
+          "timestamp": 0.4000186046511628,
+          "segment": "target_full",
+          "object_id": "phone_target",
+          "frozen_yolo_detection": {
+            "frame_index": 12,
+            "timestamp": 0.4000186046511628,
+            "class_id": 67,
+            "class_name": "cell phone",
+            "confidence": 0.6948909759521484,
+            "bbox": [
+              1167.71240234375,
+              400.79742431640625,
+              1204.4617919921875,
+              434.4439697265625
+            ],
+            "center": [
+              1186.0870971679688,
+              417.6206970214844
+            ]
+          },
+          "mode": "YOLO_REINITIALIZED_PROPAGATION_CANDIDATE"
+        },
+        {
+          "type": "PROPAGATE",
+          "frame_index": 12,
+          "object_id": "phone_target",
+          "possible_mask_drift": false
+        },
+        {
+          "type": "LOST",
+          "frame_index": 18,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 24,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 30,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 36,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 42,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 48,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 54,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 60,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 66,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 72,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 78,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 84,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 90,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 96,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 102,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 108,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 114,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 120,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 126,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 132,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 138,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 144,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 150,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 156,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 162,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 168,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 174,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 180,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 186,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 192,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 198,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 204,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 210,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 216,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 222,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 228,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 234,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 240,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 246,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 252,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 258,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 264,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 270,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 276,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 282,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 288,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 294,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 300,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 306,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 312,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 318,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 324,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 330,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 336,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 342,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 348,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 354,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 360,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 366,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 372,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 378,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 384,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 390,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 396,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 402,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 408,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 414,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 420,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 426,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 432,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 438,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 444,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 450,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 456,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 462,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 468,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 474,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 480,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 486,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 492,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 498,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 504,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 510,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 516,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 522,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 528,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 534,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 540,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 546,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 552,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 558,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 564,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 570,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 576,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 582,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 588,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 594,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 600,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 606,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 612,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 618,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 624,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 630,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 636,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 642,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 648,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 654,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 660,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 666,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 672,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 678,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 684,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 690,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 696,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 702,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 708,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 714,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 720,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 726,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 732,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 738,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 744,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 750,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 756,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 762,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 768,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 774,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 780,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 786,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 792,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 798,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 804,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 810,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 816,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 822,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 828,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 834,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 840,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 846,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 852,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 858,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 864,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 870,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 876,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 882,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 888,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 894,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 900,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 906,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 912,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 918,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 924,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 930,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 936,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 942,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 948,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 954,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 960,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 966,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 972,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 978,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 984,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 990,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 996,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1002,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1008,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1014,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1020,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1026,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1032,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1038,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1044,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1050,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1056,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1062,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1068,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "LOST",
+          "frame_index": 1074,
+          "object_id": "phone_target",
+          "reason": "empty_mask"
+        },
+        {
+          "type": "TERMINATE",
+          "frame_index": 1074,
+          "object_id": "phone_target",
+          "reason": "evaluation_window_end"
+        }
+      ],
+      "observations": [
+        {
+          "frame_index": 12,
+          "timestamp": 0.4000186046511628,
+          "bbox": [
+            1167,
+            402,
+            1203,
+            435
+          ],
+          "center": [
+            1184.866935483871,
+            417.9959677419355
+          ],
+          "mask_area": 992,
+          "source": "sam2.1_propagation",
+          "segment": "target_full",
+          "object_id": "phone_target",
+          "confidence": null,
+          "diagnostics": {
+            "mask_area_ratio": null,
+            "bbox_area_ratio": null,
+            "centroid_displacement": null,
+            "max_yolo_iou": 0.8946949248068836,
+            "possible_mask_drift": false,
+            "reasons": []
+          }
+        }
+      ],
+      "masks_rle": {
+        "12:phone_target": {
+          "shape": [
+            720,
+            1280
+          ],
+          "starts": [
+            515741,
+            517011,
+            517018,
+            518290,
+            519569,
+            520847,
+            522127,
+            523407,
+            524687,
+            525967,
+            527247,
+            528527,
+            529807,
+            531088,
+            532368,
+            533648,
+            534928,
+            536208,
+            537488,
+            538768,
+            540048,
+            541328,
+            542609,
+            543890,
+            545170,
+            546451,
+            547731,
+            549012,
+            550292,
+            551572,
+            552852,
+            554137,
+            555423,
+            556706
+          ],
+          "lengths": [
+            4,
+            6,
+            15,
+            24,
+            27,
+            32,
+            32,
+            32,
+            33,
+            34,
+            34,
+            34,
+            35,
+            35,
+            35,
+            35,
+            34,
+            35,
+            35,
+            35,
+            35,
+            34,
+            33,
+            32,
+            33,
+            32,
+            32,
+            31,
+            31,
+            31,
+            31,
+            26,
+            15,
+            10
+          ]
+        }
+      },
+      "compute": {
+        "frames_processed": 178,
+        "wall_seconds": 8.688000000081956,
+        "effective_fps": 20.488029465736748,
+        "peak_gpu_bytes": 725815296
+      }
+    }
+  ],
+  "events": [
+    {
+      "type": "INIT",
+      "frame_index": 12,
+      "timestamp": 0.4000186046511628,
+      "segment": "target_full",
+      "object_id": "phone_target",
+      "frozen_yolo_detection": {
+        "frame_index": 12,
+        "timestamp": 0.4000186046511628,
+        "class_id": 67,
+        "class_name": "cell phone",
+        "confidence": 0.6948909759521484,
+        "bbox": [
+          1167.71240234375,
+          400.79742431640625,
+          1204.4617919921875,
+          434.4439697265625
+        ],
+        "center": [
+          1186.0870971679688,
+          417.6206970214844
+        ]
+      },
+      "mode": "YOLO_REINITIALIZED_PROPAGATION_CANDIDATE"
+    },
+    {
+      "type": "PROPAGATE",
+      "frame_index": 12,
+      "object_id": "phone_target",
+      "possible_mask_drift": false
+    },
+    {
+      "type": "LOST",
+      "frame_index": 18,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 24,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 30,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 36,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 42,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 48,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 54,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 60,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 66,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 72,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 78,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 84,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 90,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 96,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 102,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 108,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 114,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 120,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 126,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 132,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 138,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 144,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 150,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 156,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 162,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 168,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 174,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 180,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 186,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 192,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 198,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 204,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 210,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 216,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 222,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 228,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 234,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 240,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 246,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 252,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 258,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 264,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 270,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 276,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 282,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 288,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 294,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 300,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 306,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 312,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 318,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 324,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 330,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 336,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 342,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 348,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 354,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 360,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 366,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 372,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 378,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 384,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 390,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 396,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 402,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 408,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 414,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 420,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 426,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 432,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 438,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 444,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 450,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 456,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 462,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 468,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 474,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 480,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 486,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 492,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 498,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 504,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 510,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 516,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 522,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 528,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 534,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 540,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 546,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 552,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 558,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 564,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 570,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 576,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 582,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 588,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 594,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 600,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 606,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 612,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 618,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 624,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 630,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 636,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 642,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 648,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 654,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 660,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 666,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 672,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 678,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 684,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 690,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 696,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 702,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 708,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 714,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 720,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 726,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 732,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 738,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 744,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 750,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 756,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 762,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 768,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 774,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 780,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 786,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 792,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 798,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 804,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 810,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 816,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 822,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 828,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 834,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 840,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 846,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 852,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 858,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 864,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 870,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 876,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 882,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 888,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 894,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 900,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 906,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 912,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 918,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 924,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 930,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 936,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 942,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 948,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 954,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 960,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 966,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 972,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 978,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 984,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 990,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 996,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1002,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1008,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1014,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1020,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1026,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1032,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1038,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1044,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1050,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1056,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1062,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1068,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "LOST",
+      "frame_index": 1074,
+      "object_id": "phone_target",
+      "reason": "empty_mask"
+    },
+    {
+      "type": "TERMINATE",
+      "frame_index": 1074,
+      "object_id": "phone_target",
+      "reason": "evaluation_window_end"
+    }
+  ],
+  "drift_guard": "unchanged V2.3 sam_guard applied downstream"
+}

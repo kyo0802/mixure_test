@@ -1,0 +1,150 @@
+{
+  "event_id": "evt_049",
+  "analysis_status": "skipped_events_only",
+  "entities": [
+    {
+      "track_id": 62,
+      "entity_id": "track_0062",
+      "detector_class": "teddy bear",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 22.6102416918429,
+      "last_seen": 27.612507552870092,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.6571583895697696,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 64,
+      "entity_id": "track_0064",
+      "detector_class": "microwave",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 22.810332326283987,
+      "last_seen": 26.411963746223567,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.7340504671092491,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 66,
+      "entity_id": "track_0066",
+      "detector_class": "chair",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 23.210513595166162,
+      "last_seen": 25.811691842900302,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.6593375477163949,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 70,
+      "entity_id": "track_0070",
+      "detector_class": "potted plant",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 25.411510574018127,
+      "last_seen": 27.212326283987917,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.341088633014615,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 78,
+      "entity_id": "track_0078",
+      "detector_class": "cake",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 28.012688821752267,
+      "last_seen": 28.412870090634442,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.3431167137368328,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 79,
+      "entity_id": "track_0079",
+      "detector_class": "potted plant",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 28.212779456193353,
+      "last_seen": 28.212779456193353,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.22555092055794845,
+      "admission_status": "unknown",
+      "evidence": []
+    }
+  ],
+  "relations": [
+    {
+      "subject_track_id": 70,
+      "predicate": "NEAR",
+      "object_track_id": 62,
+      "confidence": 0.7499674260616302,
+      "temporal_phase": "persistent",
+      "start_time": 25.811691842900302,
+      "end_time": 27.212326283987917,
+      "observed_times": [
+        25.811691842900302,
+        27.212326283987917
+      ],
+      "event_ids": [
+        "evt_049"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 70,
+      "predicate": "LEFT_OF",
+      "object_track_id": 62,
+      "confidence": 0.7499674260616302,
+      "temporal_phase": "persistent",
+      "start_time": 25.811691842900302,
+      "end_time": 27.212326283987917,
+      "observed_times": [
+        25.811691842900302,
+        27.212326283987917
+      ],
+      "event_ids": [
+        "evt_049"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    }
+  ],
+  "rejected_relations": [],
+  "notes": [
+    "No VLM analysis: entity semantics are unknown; edges are separately identified 2D geometry only"
+  ]
+}

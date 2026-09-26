@@ -1,0 +1,101 @@
+{
+  "result_classification": "SAFE_LONG_GAP_REID_SUCCESS",
+  "next_architecture_decision": "PROCEED_TO_SPATIAL_MEMORY_GRAPH",
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "prediction_sha256_before_gt_review": {
+    "task1": "1e3bfbbf24a2f3a37acacdd5b29ac67270ebe2479a1597c3dcbc3ecad794531b",
+    "task2": "638bcf8bfd4957458bda14f86d169df44e91b6f0d997aeab3ea3cf6dd894af99"
+  },
+  "development_controls": {
+    "model": "torchvision MobileNetV3 Small ImageNet-1K features+avgpool",
+    "weights_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "device": "cuda",
+    "task2_short_gap_positive": {
+      "query_track": 22,
+      "candidate_track": 43,
+      "query_frames": [
+        90,
+        114
+      ],
+      "candidate_frames": [
+        210,
+        216
+      ],
+      "matrix": [
+        [
+          0.7113164067268372,
+          0.6114263534545898
+        ],
+        [
+          0.7000989317893982,
+          0.592311441898346
+        ]
+      ],
+      "max_similarity": 0.7113164067268372,
+      "mean_top2": 0.7057076692581177,
+      "best_candidate_view": 0,
+      "best_prototype_frame": 90
+    },
+    "task1_later_desk_negative": {
+      "query_track": 17,
+      "candidate_track": 70,
+      "candidate_frame": 798,
+      "candidate_embedding_cache_key": "cbce96812fa3e474bfe92aaa39728c32beb2200798e36509d6f7c1a319d89c25",
+      "matrix": [
+        [
+          0.3642275631427765,
+          0.3625984787940979
+        ]
+      ],
+      "max_similarity": 0.3642275631427765,
+      "mean_top2": 0.3634130209684372,
+      "best_candidate_view": 0,
+      "best_prototype_frame": 240
+    },
+    "heldout_task2_late_candidates_accessed": false
+  },
+  "reid_attempts": 4,
+  "decision_counts": {
+    "AMBIGUOUS": 3,
+    "MATCH": 1
+  },
+  "task1_negative_safe_no_merge": true,
+  "task2_reviewed_original_candidate": "candidate_phone_01",
+  "task2_candidate_decisions": {
+    "candidate_phone_01": "MATCH",
+    "candidate_phone_02": "AMBIGUOUS",
+    "candidate_phone_03": "AMBIGUOUS"
+  },
+  "true_reviewed_reidentifications": 1,
+  "wrong_candidate_matches": [],
+  "false_merges_into_phone_01": 0,
+  "unresolved_duplicate_count": 0,
+  "appearance_memory_poisoning": false,
+  "desk_phone_pair_similarity": 0.8285390734672546,
+  "desk_phone_pair_coexistence_frames": [
+    528,
+    534,
+    540,
+    546,
+    552,
+    558,
+    564,
+    576,
+    582,
+    588,
+    594,
+    600,
+    606,
+    612,
+    618,
+    630,
+    636,
+    642
+  ],
+  "sam_reinitialization_authorized": true,
+  "sam_reinitialization_executed": false,
+  "new_yolo_calls": 0,
+  "new_sam_propagation_calls": 0,
+  "new_vlm_calls": 0,
+  "scope": "Single task2 long-gap challenge; sparse non-random reviewed GT, no population accuracy claim."
+}

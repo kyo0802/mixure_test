@@ -1,0 +1,90 @@
+{
+  "task": "test9",
+  "scenario_evaluation_only": "early basketball occlusion; later between HomePad and alcohol bottle",
+  "target_initialization_correct_on_review": true,
+  "initial_source": {
+    "track_id": 53,
+    "frame_index": 534,
+    "timestamp": 17.803708333333333,
+    "sam_target_id": "phone_track53",
+    "persistent_entity_id": "phone_01"
+  },
+  "last_trusted_observation": {
+    "frame_index": 618,
+    "timestamp": 20.60429166666667
+  },
+  "final_registry_state": "UNOBSERVED",
+  "unobserved_seen": true,
+  "reviewed_visible_samples": [
+    {
+      "frame_index": 534,
+      "timestamp_approx_seconds": 17.8,
+      "target_visually_reviewable": true,
+      "target_local_track_id": 53,
+      "target_raw_yolo_hit": true,
+      "target_local_observation_hit": true,
+      "detection_class": "DETECTION_OK",
+      "sam_mask_any_target_hypothesis": true
+    },
+    {
+      "frame_index": 810,
+      "timestamp_approx_seconds": 27.0,
+      "target_visually_reviewable": true,
+      "target_local_track_id": null,
+      "target_raw_yolo_hit": false,
+      "target_local_observation_hit": false,
+      "detection_class": "DETECTION_MISS",
+      "sam_mask_any_target_hypothesis": false
+    }
+  ],
+  "sam": {
+    "initial_span": [
+      534,
+      714
+    ],
+    "initial_masks": 16,
+    "initial_loss_events": 15,
+    "possible_mask_drift_flags": 0,
+    "rejected_guard_conflicts": 1,
+    "reinitializations_executed": 1,
+    "reinitialization_same_identity": false
+  },
+  "late_candidate_first_frame": 822,
+  "late_candidate_review": "two fixed candidates at f822 are distinct landline handsets, both left ambiguous",
+  "late_target_review": "target visibly held at f810 but no matching raw/local phone box; SAM lost after f624 and f606 expansion was rejected",
+  "reid_attempts": [
+    {
+      "candidate_entity_id": "candidate_phone_01",
+      "similarity": 0.3323461711406708,
+      "best_vs_second_margin": 0.0688660740852356,
+      "decision": "AMBIGUOUS",
+      "semantic_compatible": true,
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      }
+    },
+    {
+      "candidate_entity_id": "candidate_phone_02",
+      "similarity": 0.40121224522590637,
+      "best_vs_second_margin": 0.0688660740852356,
+      "decision": "AMBIGUOUS",
+      "semantic_compatible": true,
+      "coexistence_frames": [],
+      "graph_context": {
+        "match_sufficient": false,
+        "world_fixed": false
+      }
+    }
+  ],
+  "true_reviewed_reid_match": false,
+  "false_reid_match": false,
+  "missed_reid_opportunity": true,
+  "identity_fragmentation": false,
+  "false_merge_reviewed": false,
+  "exact_final_location_directly_visible": false,
+  "failure_attribution": "MIXED",
+  "spatial_diagnostic": "CAMERA_MOTION_SPATIAL_CONTEXT_LOST",
+  "gt_used_for_inference": false
+}

@@ -1,0 +1,86 @@
+{
+  "event_id": "evt_028",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 10.800502325581396,
+  "peak_time": 13.800641860465117,
+  "end_time": 14.000613953488374,
+  "involved_track_ids": [
+    29,
+    31,
+    32,
+    34,
+    36,
+    39,
+    41
+  ],
+  "signals": [
+    "appearance",
+    "disappearance_candidate",
+    "motion_coupling_candidate",
+    "proximity_change",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "distance_change": -0.12109476742316844,
+      "direction": "separating",
+      "image_relative": true
+    },
+    {
+      "cosine_similarity": 0.9819745706532228,
+      "support": 3,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "from_nearest_track": 29,
+      "to_nearest_track": 39,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "last_visible": 12.400576744186047,
+      "next_visible_or_video_end": 35.835,
+      "absence_seconds": 23.434423255813954,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "from_nearest_track": 36,
+      "to_nearest_track": 32,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "last_visible": 11.200520930232559,
+      "next_visible_or_video_end": 35.835,
+      "absence_seconds": 24.634479069767444,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "distance_change": -0.12291073974030775,
+      "direction": "separating",
+      "image_relative": true
+    },
+    {
+      "from_nearest_track": 31,
+      "to_nearest_track": 29,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "last_visible": 10.800502325581396,
+      "next_visible_or_video_end": 11.800548837209304,
+      "absence_seconds": 1.0000465116279074,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "persistence_observations": 25,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 26,
+      "not_semantic_identity": true
+    }
+  ],
+  "confidence": 0.7354077100753784,
+  "priority": 5.116347825527191,
+  "selected": true,
+  "skip_reason": null
+}

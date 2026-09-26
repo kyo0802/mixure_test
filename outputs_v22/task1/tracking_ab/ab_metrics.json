@@ -1,0 +1,382 @@
+{
+  "task": "task1",
+  "target": "original_smartphone",
+  "reviewed_visible_samples": 8,
+  "raw_detection_present_samples": 6,
+  "branch_a": {
+    "local_observation_hits": 3,
+    "visibility_conditioned_local_coverage": 0.375,
+    "raw_to_local_retention": 0.5,
+    "reviewed_fragments_lower_bound": 1,
+    "reviewed_track_ids": [
+      17
+    ],
+    "confirmed_id_switches": "NOT_MEASURABLE_FROM_CURRENT_GT"
+  },
+  "branch_b": {
+    "sam_observation_hits": 8,
+    "visibility_conditioned_local_coverage": 1.0,
+    "raw_to_local_retention": 1.0,
+    "reviewed_fragments_lower_bound": 1,
+    "reviewed_object_ids": [
+      "phone_track17"
+    ],
+    "confirmed_id_switches": "NOT_MEASURABLE_FROM_CURRENT_GT",
+    "possible_drift_frames_all_propagated": 2,
+    "possible_drift_reviewed_frames": [],
+    "confirmed_drift_events": 0,
+    "confirmed_drift_frames": [],
+    "false_identity_continuations": 0,
+    "reinitializations": 0,
+    "late_yolo_candidate_initializations": 0,
+    "late_candidate_reviewed_hits": 0,
+    "initial_window_hits": 8,
+    "initial_window_visible_samples": 8
+  },
+  "comparison": {
+    "coverage_delta": 0.625,
+    "raw_to_local_retention_delta": 0.5,
+    "continuity_interpretation": "Late candidates are independent YOLO-seeded hypotheses, not a continuous link from initial track.",
+    "drift_interpretation": "Automatic flags require visual review; raw mask existence alone is not a hit."
+  },
+  "sample_rows": [
+    {
+      "frame_index": 270,
+      "timestamp": 9.004188210961738,
+      "visibility": "VISIBLE",
+      "gt_box": [
+        465,
+        530,
+        740,
+        720
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 17,
+      "a_iou": 0.9658787149745953,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.9404784688995216,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.9404784688995216,
+          "bbox": [
+            468,
+            536,
+            738,
+            718
+          ],
+          "mask_area": 27551,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 300,
+      "timestamp": 10.004653567735264,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        504,
+        540,
+        680,
+        680
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 17,
+      "a_iou": 0.8867729025247337,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.5696829590488771,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.5696829590488771,
+          "bbox": [
+            505,
+            542,
+            792,
+            688
+          ],
+          "mask_area": 9420,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 348,
+      "timestamp": 11.605398138572907,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        510,
+        500,
+        640,
+        598
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 17,
+      "a_iou": 0.9793024795225862,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.37274280136652027,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.37274280136652027,
+          "bbox": [
+            509,
+            504,
+            727,
+            652
+          ],
+          "mask_area": 7626,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 360,
+      "timestamp": 12.005584281282317,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        510,
+        190,
+        685,
+        310
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.5052801973329222,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.5052801973329222,
+          "bbox": [
+            514,
+            195,
+            746,
+            357
+          ],
+          "mask_area": 11735,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 372,
+      "timestamp": 12.405770423991727,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        515,
+        0,
+        715,
+        88
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.9586374695863747,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.9586374695863747,
+          "bbox": [
+            514,
+            0,
+            712,
+            90
+          ],
+          "mask_area": 12696,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 384,
+      "timestamp": 12.805956566701138,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        590,
+        10,
+        798,
+        126
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.9200928381962865,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.9200928381962865,
+          "bbox": [
+            592,
+            12,
+            792,
+            123
+          ],
+          "mask_area": 14269,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 396,
+      "timestamp": 13.20614270941055,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        665,
+        94,
+        850,
+        198
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.8831600831600832,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.8831600831600832,
+          "bbox": [
+            667,
+            99,
+            844,
+            195
+          ],
+          "mask_area": 10809,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 408,
+      "timestamp": 13.60632885211996,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        778,
+        198,
+        972,
+        280
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track17",
+      "b_segment": "initial",
+      "b_iou": 0.5178480453758109,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track17",
+          "segment": "initial",
+          "iou": 0.5178480453758109,
+          "bbox": [
+            779,
+            201,
+            1013,
+            324
+          ],
+          "mask_area": 8360,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 420,
+      "timestamp": 14.00651499482937,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 432,
+      "timestamp": 14.40670113753878,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 480,
+      "timestamp": 16.007445708376423,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 720,
+      "timestamp": 24.011168562564634,
+      "visibility": "OUT_OF_VIEW",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    }
+  ],
+  "compute": {
+    "frames_processed": 31,
+    "sam_propagation_wall_seconds": 1.5160000000614673,
+    "peak_gpu_bytes_max_segment": 725591040,
+    "speed_comparison": "A/B SPEED COMPARISON NOT VALID"
+  }
+}

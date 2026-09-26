@@ -1,0 +1,970 @@
+{
+  "task": "task2",
+  "target": "original_smartphone",
+  "reviewed_visible_samples": 17,
+  "raw_detection_present_samples": 11,
+  "branch_a": {
+    "local_observation_hits": 6,
+    "visibility_conditioned_local_coverage": 0.35294117647058826,
+    "raw_to_local_retention": 0.5454545454545454,
+    "reviewed_fragments_lower_bound": 2,
+    "reviewed_track_ids": [
+      22,
+      43
+    ],
+    "confirmed_id_switches": "NOT_MEASURABLE_FROM_CURRENT_GT"
+  },
+  "branch_b": {
+    "sam_observation_hits": 16,
+    "visibility_conditioned_local_coverage": 0.9411764705882353,
+    "raw_to_local_retention": 0.9090909090909091,
+    "reviewed_fragments_lower_bound": 2,
+    "reviewed_object_ids": [
+      "late_candidate_1",
+      "phone_track22"
+    ],
+    "confirmed_id_switches": "NOT_MEASURABLE_FROM_CURRENT_GT",
+    "possible_drift_frames_all_propagated": 2,
+    "possible_drift_reviewed_frames": [],
+    "confirmed_drift_events": 1,
+    "confirmed_drift_frames": [
+      312
+    ],
+    "false_identity_continuations": 1,
+    "reinitializations": 0,
+    "late_yolo_candidate_initializations": 3,
+    "late_candidate_reviewed_hits": 8,
+    "initial_window_hits": 8,
+    "initial_window_visible_samples": 9
+  },
+  "comparison": {
+    "coverage_delta": 0.5882352941176471,
+    "raw_to_local_retention_delta": 0.36363636363636365,
+    "continuity_interpretation": "Late candidates are independent YOLO-seeded hypotheses, not a continuous link from initial track.",
+    "drift_interpretation": "Automatic flags require visual review; raw mask existence alone is not a hit."
+  },
+  "sample_rows": [
+    {
+      "frame_index": 90,
+      "timestamp": 3.0011363636363635,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        508,
+        468,
+        606,
+        573
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 22,
+      "a_iou": 0.8800580570957577,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.8495626822157435,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.8495626822157435,
+          "bbox": [
+            511,
+            473,
+            604,
+            567
+          ],
+          "mask_area": 6017,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 120,
+      "timestamp": 4.001515151515151,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        505,
+        630,
+        620,
+        720
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 22,
+      "a_iou": 0.8353000286540043,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.8771014492753623,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.8771014492753623,
+          "bbox": [
+            510,
+            631,
+            612,
+            720
+          ],
+          "mask_area": 6817,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 150,
+      "timestamp": 5.0018939393939394,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        415,
+        394,
+        558,
+        565
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 43,
+      "a_iou": 0.9439745076998847,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.9450402144772118,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.9450402144772118,
+          "bbox": [
+            417,
+            394,
+            559,
+            559
+          ],
+          "mask_area": 13461,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 180,
+      "timestamp": 6.002272727272727,
+      "visibility": "VISIBLE",
+      "gt_box": [
+        525,
+        393,
+        683,
+        523
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 43,
+      "a_iou": 0.954788497254524,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.9446932814021421,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.9446932814021421,
+          "bbox": [
+            527,
+            394,
+            681,
+            520
+          ],
+          "mask_area": 11297,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 240,
+      "timestamp": 8.003030303030302,
+      "visibility": "VISIBLE",
+      "gt_box": [
+        549,
+        462,
+        688,
+        574
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 43,
+      "a_iou": 0.952459963725194,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.9512687791945461,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.9512687791945461,
+          "bbox": [
+            550,
+            460,
+            687,
+            572
+          ],
+          "mask_area": 9047,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 288,
+      "timestamp": 9.603636363636364,
+      "visibility": "VISIBLE",
+      "gt_box": [
+        575,
+        465,
+        713,
+        581
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": 43,
+      "a_iou": 0.9930589583593359,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.9756371814092953,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.9756371814092953,
+          "bbox": [
+            576,
+            466,
+            713,
+            580
+          ],
+          "mask_area": 9267,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 300,
+      "timestamp": 10.003787878787879,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        595,
+        467,
+        656,
+        540
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.8884766477520734,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.8884766477520734,
+          "bbox": [
+            594,
+            466,
+            654,
+            536
+          ],
+          "mask_area": 3058,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 306,
+      "timestamp": 10.203863636363636,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        610,
+        466,
+        692,
+        541
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "phone_track22",
+      "b_segment": "initial",
+      "b_iou": 0.8745437956204379,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.8745437956204379,
+          "bbox": [
+            611,
+            466,
+            698,
+            537
+          ],
+          "mask_area": 3173,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 312,
+      "timestamp": 10.403939393939394,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        630,
+        482,
+        698,
+        548
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "phone_track22",
+          "segment": "initial",
+          "iou": 0.25221292591245303,
+          "bbox": [
+            633,
+            484,
+            751,
+            621
+          ],
+          "mask_area": 4922,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 528,
+      "timestamp": 17.606666666666666,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        837,
+        83,
+        1029,
+        216
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.9497180451127819,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.9497180451127819,
+          "bbox": [
+            839,
+            85,
+            1027,
+            214
+          ],
+          "mask_area": 19523,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            302,
+            235,
+            333,
+            331
+          ],
+          "mask_area": 2504,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            358,
+            236,
+            393,
+            328
+          ],
+          "mask_area": 2326,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 540,
+      "timestamp": 18.006818181818183,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        958,
+        25,
+        1165,
+        165
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.9552463847577274,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.9552463847577274,
+          "bbox": [
+            959,
+            24,
+            1161,
+            163
+          ],
+          "mask_area": 22947,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            331,
+            238,
+            364,
+            329
+          ],
+          "mask_area": 2564,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            388,
+            237,
+            421,
+            331
+          ],
+          "mask_area": 2327,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 552,
+      "timestamp": 18.406969696969696,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        942,
+        95,
+        1065,
+        208
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.9023561876459351,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.9023561876459351,
+          "bbox": [
+            944,
+            99,
+            1061,
+            210
+          ],
+          "mask_area": 10990,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            342,
+            241,
+            374,
+            334
+          ],
+          "mask_area": 2487,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            397,
+            239,
+            430,
+            331
+          ],
+          "mask_area": 2234,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 558,
+      "timestamp": 18.607045454545453,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        956,
+        82,
+        1055,
+        203
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.9460869565217391,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.9460869565217391,
+          "bbox": [
+            957,
+            84,
+            1053,
+            204
+          ],
+          "mask_area": 9296,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            347,
+            238,
+            378,
+            327
+          ],
+          "mask_area": 2399,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            404,
+            236,
+            435,
+            329
+          ],
+          "mask_area": 2292,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 564,
+      "timestamp": 18.80712121212121,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        964,
+        83,
+        1045,
+        205
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.8682170542635659,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.8682170542635659,
+          "bbox": [
+            964,
+            76,
+            1045,
+            195
+          ],
+          "mask_area": 7793,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            347,
+            233,
+            379,
+            330
+          ],
+          "mask_area": 2492,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            404,
+            231,
+            434,
+            324
+          ],
+          "mask_area": 2283,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 576,
+      "timestamp": 19.207272727272727,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        970,
+        89,
+        1047,
+        208
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.7495033978044956,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.7495033978044956,
+          "bbox": [
+            972,
+            101,
+            1039,
+            214
+          ],
+          "mask_area": 5932,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            346,
+            227,
+            378,
+            322
+          ],
+          "mask_area": 2540,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            402,
+            226,
+            435,
+            320
+          ],
+          "mask_area": 2449,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 588,
+      "timestamp": 19.60742424242424,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        972,
+        68,
+        1105,
+        202
+      ],
+      "scored": true,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.8930769230769231,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.8930769230769231,
+          "bbox": [
+            974,
+            73,
+            1100,
+            205
+          ],
+          "mask_area": 8270,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            347,
+            222,
+            380,
+            319
+          ],
+          "mask_area": 2532,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            404,
+            220,
+            435,
+            314
+          ],
+          "mask_area": 2319,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 594,
+      "timestamp": 19.8075,
+      "visibility": "PARTIALLY_VISIBLE",
+      "gt_box": [
+        970,
+        86,
+        1074,
+        148
+      ],
+      "scored": true,
+      "raw_present": true,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": "late_candidate_1",
+      "b_segment": "late_candidates",
+      "b_iou": 0.45032482966249404,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": 0.45032482966249404,
+          "bbox": [
+            970,
+            90,
+            1068,
+            211
+          ],
+          "mask_area": 6573,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            348,
+            220,
+            381,
+            313
+          ],
+          "mask_area": 2512,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": 0.0,
+          "bbox": [
+            405,
+            218,
+            436,
+            312
+          ],
+          "mask_area": 2268,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 360,
+      "timestamp": 12.004545454545454,
+      "visibility": "OUT_OF_VIEW",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 492,
+      "timestamp": 16.40621212121212,
+      "visibility": "OUT_OF_VIEW",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 600,
+      "timestamp": 20.007575757575758,
+      "visibility": "UNCERTAIN",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": [
+        {
+          "object_id": "late_candidate_1",
+          "segment": "late_candidates",
+          "iou": null,
+          "bbox": [
+            961,
+            108,
+            1052,
+            226
+          ],
+          "mask_area": 1869,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_2",
+          "segment": "late_candidates",
+          "iou": null,
+          "bbox": [
+            347,
+            218,
+            381,
+            314
+          ],
+          "mask_area": 2520,
+          "possible_mask_drift": false
+        },
+        {
+          "object_id": "late_candidate_3",
+          "segment": "late_candidates",
+          "iou": null,
+          "bbox": [
+            403,
+            217,
+            435,
+            311
+          ],
+          "mask_area": 2383,
+          "possible_mask_drift": false
+        }
+      ]
+    },
+    {
+      "frame_index": 612,
+      "timestamp": 20.40772727272727,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 624,
+      "timestamp": 20.80787878787879,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    },
+    {
+      "frame_index": 660,
+      "timestamp": 22.008333333333333,
+      "visibility": "OCCLUDED",
+      "gt_box": null,
+      "scored": false,
+      "raw_present": false,
+      "a_track_id": null,
+      "a_iou": null,
+      "b_object_id": null,
+      "b_segment": null,
+      "b_iou": null,
+      "b_possible_drift": false,
+      "all_sam": []
+    }
+  ],
+  "compute": {
+    "frames_processed": 54,
+    "sam_propagation_wall_seconds": 3.344000000040978,
+    "peak_gpu_bytes_max_segment": 733771264,
+    "speed_comparison": "A/B SPEED COMPARISON NOT VALID"
+  }
+}

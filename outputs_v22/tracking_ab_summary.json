@@ -1,0 +1,11 @@
+{
+  "experiment": "V2.2 official SAM 2.1 smartphone temporal propagation A/B",
+  "tracking_ab_result": "SAM_IMPROVES_COVERAGE_BUT_DRIFTS",
+  "architecture_recommendation": "SAM21_NEEDS_MORE_CONTROLLED_TESTING",
+  "task1": {"reviewed_visible_samples": 8, "a_hits": 3, "b_hits": 8, "raw_present_samples": 6, "a_raw_retained": 3, "b_raw_retained": 6, "confirmed_drift_events": 0},
+  "task2": {"reviewed_visible_samples": 17, "a_hits": 6, "b_hits_candidate_inclusive": 16, "initial_window_a_hits": 6, "initial_window_b_hits": 8, "initial_window_visible_samples": 9, "late_window_a_hits": 0, "late_window_b_candidate_hits": 8, "late_window_visible_samples": 8, "raw_present_samples": 11, "a_raw_retained": 6, "b_raw_retained_candidate_inclusive": 10, "confirmed_drift_events": 1, "confirmed_drift_frames": [312], "verified_same_identity_reinitializations": 0, "late_independent_yolo_candidate_initializations": 3},
+  "phase2_executed": false,
+  "new_vlm_calls": 0,
+  "tests": "70 passed",
+  "limits": "Sparse non-random GT; task2 late candidate-inclusive coverage is not verified automatic identity recovery."
+}

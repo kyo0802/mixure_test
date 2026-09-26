@@ -1,0 +1,157 @@
+{
+  "tracks": [
+    {
+      "track_id": 64,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.7508058270270174,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.40366124893071,
+          "visible": true,
+          "bbox": [
+            687.0641479492188,
+            164.68182373046875,
+            905.8522338867188,
+            408.495849609375
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.00376390076989,
+          "visible": true,
+          "bbox": [
+            820.6817626953125,
+            249.17147827148438,
+            1068.1181640625,
+            537.836181640625
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.803900769888795,
+          "visible": true,
+          "bbox": [
+            838.6513671875,
+            260.91357421875,
+            1102.632568359375,
+            577.3641357421875
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 57,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.7988755643367768,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.40366124893071,
+          "visible": true,
+          "bbox": [
+            446.4767761230469,
+            154.9920654296875,
+            617.4207153320312,
+            254.9698944091797
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.00376390076989,
+          "visible": true,
+          "bbox": [
+            605.458984375,
+            228.8433837890625,
+            761.3958740234375,
+            333.2292175292969
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.803900769888795,
+          "visible": true,
+          "bbox": [
+            591.7631225585938,
+            267.2963562011719,
+            752.6820678710938,
+            378.4847412109375
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 76,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.5996542513370514,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 21.40366124893071,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 22.00376390076989,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 22.803900769888795,
+          "visible": true,
+          "bbox": [
+            1087.2176513671875,
+            517.3952026367188,
+            1279.165283203125,
+            713.1556396484375
+          ]
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_049",
+    "event_type": "interaction_candidate",
+    "signals": [
+      "disappearance_candidate",
+      "motion_coupling_candidate"
+    ],
+    "start_time": 19.403319076133446,
+    "peak_time": 22.00376390076989,
+    "end_time": 22.00376390076989,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 21.40366124893071,
+        "visible_ids": [
+          57,
+          64
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 22.00376390076989,
+        "visible_ids": [
+          57,
+          64
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 22.803900769888795,
+        "visible_ids": [
+          57,
+          64,
+          76
+        ]
+      }
+    ]
+  }
+}
