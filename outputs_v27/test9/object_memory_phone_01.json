@@ -1,0 +1,69 @@
+{
+  "schema": "v27_object_memory_1",
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_frame": 618,
+    "last_seen_time": 20.60429166666667,
+    "last_trusted_snapshot": "G001",
+    "last_trusted_relations": [],
+    "last_trusted_anchors": [],
+    "visibility_assessment": "OUT_OF_VIEW_CANDIDATE",
+    "possible_occluders": []
+  },
+  "entities": {
+    "phone_01": {
+      "entity_id": "phone_01",
+      "label": "target phone",
+      "admission_reason": "query target"
+    }
+  },
+  "episodes": [],
+  "events": [
+    {
+      "event_id": "EV0001",
+      "event_type": "TARGET_APPEARED",
+      "frame": 546,
+      "time": 18.203791666666667,
+      "details": {
+        "observation": "outputs_v26/test9/entity_registry.json#phone_01/observation_history/0"
+      }
+    },
+    {
+      "event_id": "EV0002",
+      "event_type": "TARGET_DISAPPEARED",
+      "frame": 630,
+      "time": 21.004375,
+      "details": {
+        "last_seen": 20.60429166666667,
+        "evidence": "frozen upstream UNOBSERVED; no physical movement inferred"
+      }
+    }
+  ],
+  "lifecycle": [
+    {
+      "frame": 546,
+      "time": 18.203791666666667,
+      "event": "TARGET_APPEARED",
+      "details": {
+        "observation": "outputs_v26/test9/entity_registry.json#phone_01/observation_history/0"
+      }
+    },
+    {
+      "frame": 630,
+      "time": 21.004375,
+      "event": "TARGET_DISAPPEARED",
+      "details": {
+        "last_seen": 20.60429166666667,
+        "evidence": "frozen upstream UNOBSERVED; no physical movement inferred"
+      }
+    }
+  ],
+  "last_trusted_memory": {
+    "frame": 618,
+    "time": 20.60429166666667,
+    "snapshot": "G001",
+    "relations": []
+  },
+  "interpretation": "Historical anchor-relative evidence, not a current-world location assertion"
+}

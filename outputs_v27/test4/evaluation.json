@@ -1,0 +1,41 @@
+{
+  "task": "test4",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "basketball / blind spot",
+  "qualitative_verdict": "PARTIAL_ANCHOR_ALIGNMENT",
+  "review": "球類 anchor 與敘述部分一致；沒有證據確認盲區位置或 BEHIND。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 30,
+    "UNKNOWN": 43,
+    "AMBIGUOUS": 23
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 480,
+      "remembered_relations": 1,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 108,
+  "memory_entities": 2,
+  "snapshots": 3,
+  "last_trusted_anchors": [
+    "entity_0041"
+  ],
+  "search_candidates": 1,
+  "search_priority_rules": [
+    2
+  ],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

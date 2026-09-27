@@ -1,0 +1,4997 @@
+{
+  "schema": "v262_prediction_1",
+  "task": "test7",
+  "model": "sam21",
+  "video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+  "label_blind": true,
+  "windows": {
+    "target_full": {
+      "frames": [
+        210,
+        216,
+        222,
+        228,
+        234,
+        240,
+        246,
+        252,
+        258,
+        264,
+        270,
+        276,
+        282,
+        288,
+        294,
+        300,
+        306,
+        312,
+        318,
+        324,
+        330,
+        336,
+        342,
+        348,
+        354,
+        360,
+        366,
+        372,
+        378,
+        384,
+        390,
+        396,
+        402,
+        408,
+        414,
+        420,
+        426,
+        432,
+        438,
+        444,
+        450,
+        456,
+        462,
+        468,
+        474,
+        480,
+        486,
+        492,
+        498,
+        504,
+        510,
+        516,
+        522,
+        528,
+        534,
+        540,
+        546,
+        552,
+        558,
+        564,
+        570,
+        576,
+        582,
+        588,
+        594,
+        600,
+        606,
+        612,
+        618,
+        624,
+        630,
+        636,
+        642,
+        648,
+        654,
+        660,
+        666,
+        672,
+        678,
+        684,
+        690,
+        696,
+        702,
+        708,
+        714,
+        720,
+        726,
+        732,
+        738,
+        744,
+        750,
+        756,
+        762,
+        768,
+        774,
+        780,
+        786,
+        792,
+        798,
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846,
+        852,
+        858,
+        864,
+        870,
+        876,
+        882,
+        888,
+        894,
+        900,
+        906,
+        912,
+        918,
+        924,
+        930,
+        936,
+        942,
+        948,
+        954,
+        960,
+        966,
+        972,
+        978,
+        984,
+        990,
+        996,
+        1002,
+        1008,
+        1014,
+        1020,
+        1026,
+        1032,
+        1038,
+        1044,
+        1050,
+        1056,
+        1062,
+        1068,
+        1074,
+        1080,
+        1086,
+        1092,
+        1098,
+        1104,
+        1110,
+        1116,
+        1122,
+        1128,
+        1134,
+        1140,
+        1146,
+        1152,
+        1158,
+        1164,
+        1170,
+        1176,
+        1182,
+        1188,
+        1194,
+        1200,
+        1206,
+        1212,
+        1218,
+        1224,
+        1230,
+        1236,
+        1242,
+        1248,
+        1254,
+        1260,
+        1266,
+        1272,
+        1278,
+        1284,
+        1290,
+        1296,
+        1302,
+        1308,
+        1314
+      ],
+      "initialization_frame": 210,
+      "frozen_box_xyxy": [
+        514.8986206054688,
+        530.0082397460938,
+        744.48876953125,
+        679.2870483398438
+      ],
+      "authorization": "FROZEN_TARGET_BINDING",
+      "source_detection": {
+        "frame_index": 210,
+        "timestamp": 7.002127659574468,
+        "class_id": 67,
+        "class_name": "cell phone",
+        "confidence": 0.5567823052406311,
+        "bbox": [
+          514.8986206054688,
+          530.0082397460938,
+          744.48876953125,
+          679.2870483398438
+        ],
+        "center": [
+          629.6936950683594,
+          604.6476440429688
+        ]
+      },
+      "timing_seconds": {
+        "session": 6.38668780005537,
+        "prompt": 0.41840109997428954,
+        "propagation": 9.347536699962802,
+        "total_window": 16.218929499969818
+      },
+      "sam3_prompt_ids": null,
+      "sam3_selected_id": null,
+      "sam3_point": null,
+      "peak_allocated_bytes": 726415360,
+      "peak_reserved_bytes": 864026624,
+      "observations": [
+        {
+          "frame_index": 210,
+          "timestamp": 7.002127659574468,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000210.png",
+          "bbox": [
+            516,
+            532,
+            745,
+            678
+          ],
+          "area": 17034,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              514.8986206054688,
+              530.0082397460938,
+              744.48876953125,
+              679.2870483398438
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 216,
+          "timestamp": 7.202188449848024,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000216.png",
+          "bbox": [
+            509,
+            532,
+            735,
+            675
+          ],
+          "area": 16480,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              508.9012145996094,
+              529.6353759765625,
+              735.0469970703125,
+              675.6976928710938
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 222,
+          "timestamp": 7.40224924012158,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000222.png",
+          "bbox": [
+            502,
+            531,
+            728,
+            672
+          ],
+          "area": 16381,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              501.34735107421875,
+              529.2269897460938,
+              730.10546875,
+              673.8331298828125
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 228,
+          "timestamp": 7.602310030395136,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000228.png",
+          "bbox": [
+            502,
+            533,
+            728,
+            675
+          ],
+          "area": 16463,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              501.47821044921875,
+              530.656005859375,
+              730.15673828125,
+              675.178466796875
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 234,
+          "timestamp": 7.802370820668693,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000234.png",
+          "bbox": [
+            501,
+            534,
+            729,
+            677
+          ],
+          "area": 16804,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 240,
+          "timestamp": 8.00243161094225,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000240.png",
+          "bbox": [
+            497,
+            537,
+            727,
+            682
+          ],
+          "area": 17156,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 246,
+          "timestamp": 8.202492401215805,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000246.png",
+          "bbox": [
+            493,
+            538,
+            723,
+            685
+          ],
+          "area": 17334,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 252,
+          "timestamp": 8.40255319148936,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000252.png",
+          "bbox": [
+            490,
+            540,
+            721,
+            686
+          ],
+          "area": 17414,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              490.6197204589844,
+              537.044921875,
+              721.331298828125,
+              687.030029296875
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 258,
+          "timestamp": 8.602613981762918,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000258.png",
+          "bbox": [
+            491,
+            542,
+            723,
+            691
+          ],
+          "area": 17683,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 264,
+          "timestamp": 8.802674772036474,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000264.png",
+          "bbox": [
+            494,
+            543,
+            726,
+            694
+          ],
+          "area": 17888,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 270,
+          "timestamp": 9.00273556231003,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000270.png",
+          "bbox": [
+            493,
+            544,
+            726,
+            697
+          ],
+          "area": 18196,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 276,
+          "timestamp": 9.202796352583587,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000276.png",
+          "bbox": [
+            491,
+            544,
+            725,
+            697
+          ],
+          "area": 18242,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 282,
+          "timestamp": 9.402857142857142,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000282.png",
+          "bbox": [
+            492,
+            544,
+            726,
+            697
+          ],
+          "area": 18323,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 288,
+          "timestamp": 9.6029179331307,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000288.png",
+          "bbox": [
+            495,
+            544,
+            732,
+            700
+          ],
+          "area": 18703,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 294,
+          "timestamp": 9.802978723404255,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000294.png",
+          "bbox": [
+            497,
+            546,
+            737,
+            708
+          ],
+          "area": 19494,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 300,
+          "timestamp": 10.00303951367781,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000300.png",
+          "bbox": [
+            503,
+            549,
+            745,
+            713
+          ],
+          "area": 19998,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 306,
+          "timestamp": 10.203100303951368,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000306.png",
+          "bbox": [
+            503,
+            546,
+            743,
+            676
+          ],
+          "area": 8369,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 312,
+          "timestamp": 10.403161094224924,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000312.png",
+          "bbox": [
+            505,
+            540,
+            602,
+            652
+          ],
+          "area": 5958,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 318,
+          "timestamp": 10.60322188449848,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000318.png",
+          "bbox": [
+            507,
+            539,
+            622,
+            660
+          ],
+          "area": 8110,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              506.4478759765625,
+              537.3081665039062,
+              625.50048828125,
+              663.6864013671875
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 324,
+          "timestamp": 10.803282674772037,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000324.png",
+          "bbox": [
+            507,
+            539,
+            633,
+            665
+          ],
+          "area": 9432,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              506.411865234375,
+              536.4752197265625,
+              634.6727294921875,
+              665.7607421875
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 330,
+          "timestamp": 11.003343465045592,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000330.png",
+          "bbox": [
+            507,
+            537,
+            636,
+            662
+          ],
+          "area": 9748,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              505.4031982421875,
+              536.3465576171875,
+              638.3662109375,
+              664.2557373046875
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 336,
+          "timestamp": 11.203404255319148,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000336.png",
+          "bbox": [
+            508,
+            536,
+            638,
+            660
+          ],
+          "area": 9551,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              507.6463317871094,
+              534.1832275390625,
+              641.3204956054688,
+              661.6596069335938
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 342,
+          "timestamp": 11.403465045592705,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000342.png",
+          "bbox": [
+            511,
+            535,
+            637,
+            654
+          ],
+          "area": 8759,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              509.8467712402344,
+              533.94677734375,
+              640.9799194335938,
+              654.783203125
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 348,
+          "timestamp": 11.603525835866261,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000348.png",
+          "bbox": [
+            512,
+            535,
+            638,
+            644
+          ],
+          "area": 8641,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              510.8192138671875,
+              532.7689819335938,
+              639.3953857421875,
+              644.4755249023438
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 354,
+          "timestamp": 11.803586626139817,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000354.png",
+          "bbox": [
+            514,
+            535,
+            650,
+            636
+          ],
+          "area": 9191,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              512.8517456054688,
+              533.418701171875,
+              651.52880859375,
+              637.083740234375
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 360,
+          "timestamp": 12.003647416413374,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000360.png",
+          "bbox": [
+            512,
+            534,
+            647,
+            630
+          ],
+          "area": 8929,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              511.1163024902344,
+              532.833251953125,
+              648.404541015625,
+              632.9761962890625
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 366,
+          "timestamp": 12.20370820668693,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000366.png",
+          "bbox": [
+            508,
+            536,
+            702,
+            696
+          ],
+          "area": 8645,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              507.670654296875,
+              534.213623046875,
+              643.627197265625,
+              630.1476440429688
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 372,
+          "timestamp": 12.403768996960485,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000372.png",
+          "bbox": [
+            504,
+            532,
+            703,
+            696
+          ],
+          "area": 9450,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              503.8703308105469,
+              529.9476928710938,
+              643.9010009765625,
+              628.4574584960938
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 378,
+          "timestamp": 12.603829787234043,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000378.png",
+          "bbox": [
+            507,
+            531,
+            702,
+            697
+          ],
+          "area": 9462,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              506.882568359375,
+              528.43896484375,
+              644.3060913085938,
+              626.7745971679688
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 384,
+          "timestamp": 12.803890577507598,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000384.png",
+          "bbox": [
+            506,
+            520,
+            690,
+            693
+          ],
+          "area": 9122,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              505.188720703125,
+              518.0382080078125,
+              633.8756103515625,
+              624.418212890625
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 390,
+          "timestamp": 13.003951367781154,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000390.png",
+          "bbox": [
+            493,
+            489,
+            637,
+            608
+          ],
+          "area": 11454,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              492.04193115234375,
+              486.98968505859375,
+              639.0028686523438,
+              610.4628295898438
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 396,
+          "timestamp": 13.204012158054711,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000396.png",
+          "bbox": [
+            510,
+            440,
+            688,
+            675
+          ],
+          "area": 9892,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              509.79656982421875,
+              438.877685546875,
+              672.4127807617188,
+              570.3826904296875
+            ],
+            [
+              509.8570251464844,
+              438.74945068359375,
+              693.2950439453125,
+              678.494140625
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 402,
+          "timestamp": 13.404072948328267,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000402.png",
+          "bbox": [
+            613,
+            359,
+            738,
+            645
+          ],
+          "area": 22749,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              611.137451171875,
+              359.12054443359375,
+              739.8809814453125,
+              644.4974975585938
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 408,
+          "timestamp": 13.604133738601822,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000408.png",
+          "bbox": [
+            649,
+            386,
+            779,
+            654
+          ],
+          "area": 29310,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              648.0709838867188,
+              385.8880310058594,
+              776.1759643554688,
+              660.634765625
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 414,
+          "timestamp": 13.80419452887538,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000414.png",
+          "bbox": [
+            639,
+            393,
+            775,
+            679
+          ],
+          "area": 32718,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              636.646484375,
+              392.4634704589844,
+              774.3151245117188,
+              686.3148803710938
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 420,
+          "timestamp": 14.004255319148935,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000420.png",
+          "bbox": [
+            633,
+            423,
+            770,
+            720
+          ],
+          "area": 29989,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [
+            [
+              629.413330078125,
+              426.6172790527344,
+              756.1456298828125,
+              713.63330078125
+            ]
+          ],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 426,
+          "timestamp": 14.204316109422491,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000426.png",
+          "bbox": [
+            663,
+            474,
+            825,
+            720
+          ],
+          "area": 29143,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 432,
+          "timestamp": 14.404376899696048,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000432.png",
+          "bbox": [
+            775,
+            629,
+            1004,
+            720
+          ],
+          "area": 17774,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": true,
+          "rejection_reason": null,
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": false
+        },
+        {
+          "frame_index": 438,
+          "timestamp": 14.604437689969604,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000438.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 444,
+          "timestamp": 14.80449848024316,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000444.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 450,
+          "timestamp": 15.004559270516717,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000450.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 456,
+          "timestamp": 15.204620060790273,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000456.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 462,
+          "timestamp": 15.404680851063828,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000462.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 468,
+          "timestamp": 15.604741641337386,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000468.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 474,
+          "timestamp": 15.804802431610941,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000474.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 480,
+          "timestamp": 16.0048632218845,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000480.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 486,
+          "timestamp": 16.204924012158052,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000486.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 492,
+          "timestamp": 16.40498480243161,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000492.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 498,
+          "timestamp": 16.605045592705167,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000498.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 504,
+          "timestamp": 16.80510638297872,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000504.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 510,
+          "timestamp": 17.00516717325228,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000510.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 516,
+          "timestamp": 17.205227963525836,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000516.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 522,
+          "timestamp": 17.40528875379939,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000522.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 528,
+          "timestamp": 17.605349544072947,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000528.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 534,
+          "timestamp": 17.805410334346504,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000534.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 540,
+          "timestamp": 18.00547112462006,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000540.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 546,
+          "timestamp": 18.205531914893616,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000546.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 552,
+          "timestamp": 18.405592705167173,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000552.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 558,
+          "timestamp": 18.605653495440727,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000558.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 564,
+          "timestamp": 18.805714285714284,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000564.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 570,
+          "timestamp": 19.00577507598784,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000570.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 576,
+          "timestamp": 19.2058358662614,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000576.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 582,
+          "timestamp": 19.405896656534953,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000582.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 588,
+          "timestamp": 19.60595744680851,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000588.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 594,
+          "timestamp": 19.806018237082068,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000594.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 600,
+          "timestamp": 20.00607902735562,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000600.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 606,
+          "timestamp": 20.20613981762918,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000606.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 612,
+          "timestamp": 20.406200607902736,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000612.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 618,
+          "timestamp": 20.60626139817629,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000618.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 624,
+          "timestamp": 20.806322188449847,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000624.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 630,
+          "timestamp": 21.006382978723405,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000630.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 636,
+          "timestamp": 21.20644376899696,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000636.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              64.04125213623047,
+              37.51130676269531,
+              126.40355682373047,
+              200.78366088867188
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 642,
+          "timestamp": 21.406504559270516,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000642.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              118.10211181640625,
+              6.505030632019043,
+              188.11761474609375,
+              165.35113525390625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 648,
+          "timestamp": 21.606565349544073,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000648.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              148.88735961914062,
+              42.54351806640625,
+              226.12127685546875,
+              186.75634765625
+            ],
+            [
+              40.54182052612305,
+              4.6095991134643555,
+              105.07780456542969,
+              156.2498779296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 654,
+          "timestamp": 21.806626139817627,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000654.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              220.310546875,
+              93.84765625,
+              292.63104248046875,
+              217.16073608398438
+            ],
+            [
+              134.87791442871094,
+              64.6776123046875,
+              192.8119354248047,
+              142.6467742919922
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 660,
+          "timestamp": 22.006686930091185,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000660.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              236.09408569335938,
+              113.0279769897461,
+              279.649658203125,
+              176.996826171875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 666,
+          "timestamp": 22.206747720364742,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000666.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 672,
+          "timestamp": 22.406808510638296,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000672.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 678,
+          "timestamp": 22.606869300911853,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000678.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 684,
+          "timestamp": 22.80693009118541,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000684.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              312.91131591796875,
+              311.79974365234375,
+              342.03564453125,
+              360.01446533203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 690,
+          "timestamp": 23.006990881458965,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000690.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              288.5776062011719,
+              337.914794921875,
+              320.62677001953125,
+              429.28533935546875
+            ],
+            [
+              339.4532165527344,
+              333.0782470703125,
+              381.60369873046875,
+              429.0363464355469
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 696,
+          "timestamp": 23.207051671732522,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000696.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              323.0984802246094,
+              360.94744873046875,
+              367.0274353027344,
+              455.58709716796875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 702,
+          "timestamp": 23.40711246200608,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000702.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              945.9951171875,
+              1.0716960430145264,
+              1200.5491943359375,
+              310.39105224609375
+            ],
+            [
+              258.2120056152344,
+              382.69873046875,
+              293.39862060546875,
+              482.18115234375
+            ],
+            [
+              309.77337646484375,
+              376.539794921875,
+              354.482177734375,
+              476.49945068359375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 708,
+          "timestamp": 23.607173252279633,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000708.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              298.4082946777344,
+              386.36328125,
+              343.8743591308594,
+              489.7366638183594
+            ],
+            [
+              248.0785369873047,
+              393.43023681640625,
+              281.3719482421875,
+              485.25299072265625
+            ],
+            [
+              847.9962768554688,
+              0.04583740234375,
+              1051.6082763671875,
+              327.267578125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 714,
+          "timestamp": 23.80723404255319,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000714.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              833.89794921875,
+              48.3336181640625,
+              1001.6144409179688,
+              344.1860046386719
+            ],
+            [
+              288.5783386230469,
+              388.3387145996094,
+              333.5721435546875,
+              492.50653076171875
+            ],
+            [
+              236.79525756835938,
+              395.4297790527344,
+              270.6673278808594,
+              486.97357177734375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 720,
+          "timestamp": 24.007294832826748,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000720.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              815.5729370117188,
+              80.60694885253906,
+              980.7269287109375,
+              368.43212890625
+            ],
+            [
+              284.0091552734375,
+              384.85894775390625,
+              326.34796142578125,
+              489.59039306640625
+            ],
+            [
+              229.4185791015625,
+              392.2142028808594,
+              263.7589111328125,
+              496.3965759277344
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 726,
+          "timestamp": 24.2073556231003,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000726.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              279.9371337890625,
+              378.4383544921875,
+              324.9979248046875,
+              483.62628173828125
+            ],
+            [
+              825.08642578125,
+              76.47624206542969,
+              1027.033935546875,
+              371.3426513671875
+            ],
+            [
+              227.31698608398438,
+              385.7781982421875,
+              262.5545654296875,
+              487.4025573730469
+            ],
+            [
+              213.074462890625,
+              386.009765625,
+              262.5936279296875,
+              492.14178466796875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 732,
+          "timestamp": 24.40741641337386,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000732.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              280.66412353515625,
+              373.89703369140625,
+              325.4081726074219,
+              480.3058776855469
+            ],
+            [
+              226.7495574951172,
+              381.5606384277344,
+              262.73492431640625,
+              480.902099609375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 738,
+          "timestamp": 24.607477203647417,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000738.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              286.4581298828125,
+              369.373779296875,
+              329.4056701660156,
+              473.8125915527344
+            ],
+            [
+              232.5917205810547,
+              377.010498046875,
+              266.433837890625,
+              478.4248962402344
+            ],
+            [
+              218.355712890625,
+              376.8477478027344,
+              266.61181640625,
+              483.30535888671875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 744,
+          "timestamp": 24.80753799392097,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000744.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              291.9599609375,
+              364.19427490234375,
+              335.02581787109375,
+              467.83148193359375
+            ],
+            [
+              878.03125,
+              205.76864624023438,
+              1095.1287841796875,
+              376.59429931640625
+            ],
+            [
+              238.7366943359375,
+              372.2342224121094,
+              273.2750244140625,
+              469.5144958496094
+            ],
+            [
+              834.5465698242188,
+              174.2275390625,
+              1096.9320068359375,
+              375.892822265625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 750,
+          "timestamp": 25.007598784194528,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000750.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              293.8510437011719,
+              356.8187255859375,
+              337.2186279296875,
+              459.74395751953125
+            ],
+            [
+              831.8392333984375,
+              154.04397583007812,
+              1105.3226318359375,
+              348.23883056640625
+            ],
+            [
+              240.7051239013672,
+              364.7391052246094,
+              275.43572998046875,
+              463.9749450683594
+            ],
+            [
+              228.8363037109375,
+              364.4716796875,
+              275.9097900390625,
+              470.01531982421875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 756,
+          "timestamp": 25.207659574468085,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000756.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              298.1560974121094,
+              351.36126708984375,
+              341.07635498046875,
+              455.2073669433594
+            ],
+            [
+              244.92526245117188,
+              358.5249938964844,
+              279.3359069824219,
+              460.378662109375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 762,
+          "timestamp": 25.40772036474164,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000762.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              302.3143310546875,
+              346.14111328125,
+              344.836669921875,
+              447.509521484375
+            ],
+            [
+              248.5780487060547,
+              353.62890625,
+              283.8851013183594,
+              455.95550537109375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 768,
+          "timestamp": 25.607781155015196,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000768.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              307.7119140625,
+              337.193359375,
+              350.2128601074219,
+              441.9412536621094
+            ],
+            [
+              254.30111694335938,
+              344.436767578125,
+              288.333251953125,
+              443.4292907714844
+            ],
+            [
+              241.54611206054688,
+              344.5594177246094,
+              289.0084228515625,
+              449.5323181152344
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 774,
+          "timestamp": 25.807841945288754,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000774.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              312.087158203125,
+              332.6989440917969,
+              353.12420654296875,
+              435.64776611328125
+            ],
+            [
+              249.9171142578125,
+              339.2181091308594,
+              292.88360595703125,
+              443.1268005371094
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 780,
+          "timestamp": 26.007902735562308,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000780.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              315.62738037109375,
+              326.1199645996094,
+              358.67156982421875,
+              430.09326171875
+            ],
+            [
+              260.8975524902344,
+              332.6247863769531,
+              297.7878112792969,
+              437.897216796875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 786,
+          "timestamp": 26.207963525835865,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000786.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              321.4090270996094,
+              320.2708435058594,
+              364.2471618652344,
+              422.61614990234375
+            ],
+            [
+              259.67474365234375,
+              326.623046875,
+              303.2254333496094,
+              431.80047607421875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 792,
+          "timestamp": 26.408024316109422,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000792.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              327.0403137207031,
+              315.6913146972656,
+              369.5967712402344,
+              419.76947021484375
+            ],
+            [
+              272.59423828125,
+              322.1773681640625,
+              307.5279846191406,
+              424.1732177734375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 798,
+          "timestamp": 26.608085106382976,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000798.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              327.2978210449219,
+              311.69842529296875,
+              370.54425048828125,
+              414.296875
+            ],
+            [
+              273.19805908203125,
+              317.69317626953125,
+              308.3867492675781,
+              415.74383544921875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 804,
+          "timestamp": 26.808145896656534,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000804.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              329.3321533203125,
+              307.6573181152344,
+              372.5640563964844,
+              410.00823974609375
+            ],
+            [
+              276.9255065917969,
+              313.60565185546875,
+              311.5928955078125,
+              414.07568359375
+            ],
+            [
+              263.5953063964844,
+              313.429931640625,
+              312.654296875,
+              417.7935485839844
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 810,
+          "timestamp": 27.00820668693009,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000810.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              332.17266845703125,
+              303.8753356933594,
+              375.81793212890625,
+              407.40716552734375
+            ],
+            [
+              280.57550048828125,
+              309.93768310546875,
+              315.2054443359375,
+              410.046875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 816,
+          "timestamp": 27.208267477203645,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000816.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              338.86474609375,
+              300.68560791015625,
+              379.08880615234375,
+              401.3699951171875
+            ],
+            [
+              283.2926025390625,
+              304.7852478027344,
+              317.9725341796875,
+              403.0122985839844
+            ],
+            [
+              272.8077392578125,
+              305.59295654296875,
+              319.1219482421875,
+              410.190185546875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 822,
+          "timestamp": 27.408328267477202,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000822.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              342.6033630371094,
+              297.52398681640625,
+              384.1092224121094,
+              399.3575134277344
+            ],
+            [
+              289.01953125,
+              302.234375,
+              323.4908142089844,
+              400.65032958984375
+            ],
+            [
+              277.9047546386719,
+              302.29150390625,
+              324.7614440917969,
+              406.36474609375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 828,
+          "timestamp": 27.60838905775076,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000828.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              346.04559326171875,
+              290.70721435546875,
+              388.38055419921875,
+              394.07421875
+            ],
+            [
+              282.3025817871094,
+              296.20831298828125,
+              328.21795654296875,
+              400.53033447265625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 834,
+          "timestamp": 27.808449848024313,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000834.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              347.59246826171875,
+              287.91412353515625,
+              389.4261169433594,
+              391.6474304199219
+            ],
+            [
+              283.7117919921875,
+              292.7601013183594,
+              328.5143737792969,
+              397.1829528808594
+            ],
+            [
+              969.7057495117188,
+              158.52828979492188,
+              1199.65625,
+              290.6468200683594
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 840,
+          "timestamp": 28.00851063829787,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000840.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              347.54156494140625,
+              283.4251708984375,
+              390.69830322265625,
+              385.83648681640625
+            ],
+            [
+              294.83154296875,
+              288.66961669921875,
+              328.4207458496094,
+              389.44921875
+            ],
+            [
+              977.3829956054688,
+              145.54440307617188,
+              1183.383056640625,
+              266.9292907714844
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 846,
+          "timestamp": 28.208571428571428,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000846.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              347.4522705078125,
+              281.58001708984375,
+              390.25347900390625,
+              383.0003356933594
+            ],
+            [
+              976.60107421875,
+              139.9199981689453,
+              1171.459228515625,
+              262.39862060546875
+            ],
+            [
+              294.97027587890625,
+              286.08441162109375,
+              327.9691162109375,
+              360.0378112792969
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 852,
+          "timestamp": 28.408632218844982,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000852.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              346.264892578125,
+              279.109619140625,
+              387.7920837402344,
+              381.96356201171875
+            ],
+            [
+              974.5819702148438,
+              125.49730682373047,
+              1167.177490234375,
+              268.6258239746094
+            ],
+            [
+              292.3728942871094,
+              283.6797790527344,
+              326.63348388671875,
+              387.88677978515625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 858,
+          "timestamp": 28.60869300911854,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000858.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              973.7984619140625,
+              110.07500457763672,
+              1164.0762939453125,
+              260.68829345703125
+            ],
+            [
+              343.65118408203125,
+              276.4867858886719,
+              387.0986022949219,
+              379.2445983886719
+            ],
+            [
+              291.806884765625,
+              280.75335693359375,
+              325.8592224121094,
+              382.0003356933594
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 864,
+          "timestamp": 28.808753799392097,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000864.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              969.1017456054688,
+              101.21996307373047,
+              1162.767333984375,
+              257.62860107421875
+            ],
+            [
+              343.7896423339844,
+              274.42596435546875,
+              388.01654052734375,
+              378.2939453125
+            ],
+            [
+              284.8011169433594,
+              278.9637451171875,
+              326.8853454589844,
+              382.4710388183594
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 870,
+          "timestamp": 29.00881458966565,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000870.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              951.7327880859375,
+              99.51026916503906,
+              1139.281982421875,
+              245.4889373779297
+            ],
+            [
+              344.51409912109375,
+              272.3815612792969,
+              387.1226501464844,
+              376.8250732421875
+            ],
+            [
+              291.21575927734375,
+              277.41925048828125,
+              326.09527587890625,
+              376.9523620605469
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 876,
+          "timestamp": 29.208875379939208,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000876.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              340.3376770019531,
+              270.0643005371094,
+              385.34661865234375,
+              374.1630554199219
+            ],
+            [
+              948.1347045898438,
+              113.4105453491211,
+              1086.2584228515625,
+              244.01756286621094
+            ],
+            [
+              286.52911376953125,
+              275.6255798339844,
+              323.6365966796875,
+              378.71630859375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 882,
+          "timestamp": 29.408936170212765,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000882.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              339.97265625,
+              269.39385986328125,
+              383.7498474121094,
+              373.5895690917969
+            ],
+            [
+              285.1575622558594,
+              274.8053894042969,
+              323.1666259765625,
+              378.4716796875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 888,
+          "timestamp": 29.60899696048632,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000888.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              951.11474609375,
+              105.06420135498047,
+              1079.13818359375,
+              248.9276580810547
+            ],
+            [
+              336.7934265136719,
+              267.6744384765625,
+              380.2864990234375,
+              371.5413513183594
+            ],
+            [
+              278.45904541015625,
+              273.44146728515625,
+              318.39263916015625,
+              378.283203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 894,
+          "timestamp": 29.809057750759877,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000894.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              333.0522766113281,
+              269.76885986328125,
+              375.7820739746094,
+              372.6911315917969
+            ],
+            [
+              273.864501953125,
+              274.9864196777344,
+              314.61956787109375,
+              379.30938720703125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 900,
+          "timestamp": 30.009118541033434,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000900.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              328.9678955078125,
+              269.7170104980469,
+              372.5072021484375,
+              372.759521484375
+            ],
+            [
+              275.9732360839844,
+              274.023193359375,
+              312.2509765625,
+              373.923583984375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 906,
+          "timestamp": 30.209179331306988,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000906.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              928.09716796875,
+              130.1538543701172,
+              1028.116943359375,
+              271.42626953125
+            ],
+            [
+              326.36346435546875,
+              270.9139404296875,
+              369.5745544433594,
+              376.35260009765625
+            ],
+            [
+              270.799072265625,
+              275.459716796875,
+              307.11175537109375,
+              377.19451904296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 912,
+          "timestamp": 30.409240121580545,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000912.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              931.5578002929688,
+              132.69024658203125,
+              1043.453369140625,
+              271.7605285644531
+            ],
+            [
+              322.7822265625,
+              270.4613952636719,
+              367.34375,
+              376.49066162109375
+            ],
+            [
+              268.6114196777344,
+              275.2301940917969,
+              305.018798828125,
+              376.3416442871094
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 918,
+          "timestamp": 30.609300911854103,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000918.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              926.193359375,
+              131.10235595703125,
+              1037.7210693359375,
+              273.3060302734375
+            ],
+            [
+              320.510009765625,
+              270.7539978027344,
+              364.2891540527344,
+              376.7530212402344
+            ],
+            [
+              262.67913818359375,
+              275.63690185546875,
+              300.89935302734375,
+              380.1997985839844
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 924,
+          "timestamp": 30.809361702127656,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000924.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              310.5918884277344,
+              271.4437255859375,
+              356.19915771484375,
+              377.3633728027344
+            ],
+            [
+              251.7817840576172,
+              276.23150634765625,
+              292.8090515136719,
+              381.3986511230469
+            ],
+            [
+              881.6725463867188,
+              124.41997528076172,
+              989.859375,
+              263.53302001953125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 930,
+          "timestamp": 31.009422492401214,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000930.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              306.7924499511719,
+              279.02978515625,
+              351.3973083496094,
+              383.00933837890625
+            ],
+            [
+              240.55099487304688,
+              283.1171875,
+              286.64971923828125,
+              389.031494140625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 936,
+          "timestamp": 31.20948328267477,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000936.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              302.59588623046875,
+              286.053955078125,
+              349.3899841308594,
+              391.334228515625
+            ],
+            [
+              241.7509002685547,
+              289.24688720703125,
+              284.60107421875,
+              396.36151123046875
+            ],
+            [
+              879.9232177734375,
+              197.74227905273438,
+              928.455078125,
+              259.0113220214844
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 942,
+          "timestamp": 31.409544072948325,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000942.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              306.3406677246094,
+              289.3544921875,
+              351.61920166015625,
+              392.1494140625
+            ],
+            [
+              252.35324096679688,
+              292.30035400390625,
+              286.5023193359375,
+              396.8905029296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 948,
+          "timestamp": 31.609604863221882,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000948.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              309.39031982421875,
+              289.971435546875,
+              354.44598388671875,
+              392.63421630859375
+            ],
+            [
+              240.9425048828125,
+              293.0640563964844,
+              290.1063232421875,
+              398.92156982421875
+            ],
+            [
+              255.479248046875,
+              292.9505615234375,
+              289.76416015625,
+              396.0041198730469
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 954,
+          "timestamp": 31.80966565349544,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000954.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              308.9166259765625,
+              290.40447998046875,
+              354.7996826171875,
+              392.89129638671875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 960,
+          "timestamp": 32.009726443769,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000960.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              309.1874694824219,
+              291.13421630859375,
+              354.5428466796875,
+              393.303466796875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 966,
+          "timestamp": 32.20978723404255,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000966.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              308.2115173339844,
+              291.320556640625,
+              354.38299560546875,
+              394.041748046875
+            ],
+            [
+              240.81112670898438,
+              294.49114990234375,
+              290.47552490234375,
+              400.61376953125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 972,
+          "timestamp": 32.409848024316105,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000972.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              308.62689208984375,
+              290.4324035644531,
+              354.34527587890625,
+              392.1490173339844
+            ],
+            [
+              242.47555541992188,
+              293.6549072265625,
+              290.04156494140625,
+              399.17462158203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 978,
+          "timestamp": 32.609908814589666,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000978.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              308.9369812011719,
+              291.1358337402344,
+              355.0147705078125,
+              393.1055603027344
+            ],
+            [
+              242.8787078857422,
+              294.505859375,
+              291.1307373046875,
+              399.77001953125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 984,
+          "timestamp": 32.80996960486322,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000984.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              310.50238037109375,
+              290.5685729980469,
+              356.19036865234375,
+              393.6862487792969
+            ],
+            [
+              252.1083221435547,
+              294.19842529296875,
+              293.0603942871094,
+              399.2315368652344
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 990,
+          "timestamp": 33.01003039513677,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000990.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              313.289794921875,
+              290.4165954589844,
+              358.41815185546875,
+              393.52972412109375
+            ],
+            [
+              256.93792724609375,
+              294.28826904296875,
+              294.472412109375,
+              398.2942810058594
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 996,
+          "timestamp": 33.210091185410334,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/000996.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              317.59014892578125,
+              290.0308532714844,
+              363.3938903808594,
+              394.05511474609375
+            ],
+            [
+              263.1385192871094,
+              293.5280456542969,
+              299.0357360839844,
+              393.8367919921875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1002,
+          "timestamp": 33.41015197568389,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001002.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              320.2420654296875,
+              290.8902282714844,
+              366.0475769042969,
+              395.8396911621094
+            ],
+            [
+              266.186279296875,
+              294.5078125,
+              301.8968200683594,
+              397.44451904296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1008,
+          "timestamp": 33.61021276595744,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001008.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              324.43115234375,
+              292.1563415527344,
+              370.58642578125,
+              395.50701904296875
+            ],
+            [
+              271.8670959472656,
+              294.9864196777344,
+              307.13702392578125,
+              395.0733337402344
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1014,
+          "timestamp": 33.810273556231,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001014.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              331.30267333984375,
+              295.82818603515625,
+              375.53466796875,
+              398.57818603515625
+            ],
+            [
+              263.1683349609375,
+              298.42352294921875,
+              313.55206298828125,
+              401.93701171875
+            ],
+            [
+              277.4853515625,
+              298.3903503417969,
+              313.41796875,
+              396.9805908203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1020,
+          "timestamp": 34.01033434650456,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001020.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              334.69427490234375,
+              297.1045837402344,
+              380.79339599609375,
+              400.311767578125
+            ],
+            [
+              276.691650390625,
+              299.6872253417969,
+              317.55413818359375,
+              402.9998779296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1026,
+          "timestamp": 34.21039513677811,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001026.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              339.5438537597656,
+              299.3564147949219,
+              385.4468688964844,
+              402.1156921386719
+            ],
+            [
+              287.9102783203125,
+              301.94873046875,
+              320.99029541015625,
+              396.683837890625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1032,
+          "timestamp": 34.41045592705167,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001032.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              338.6865539550781,
+              302.6103210449219,
+              385.9866638183594,
+              405.2743835449219
+            ],
+            [
+              287.7895202636719,
+              305.1788635253906,
+              321.25213623046875,
+              400.1103515625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1038,
+          "timestamp": 34.610516717325225,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001038.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              335.80072021484375,
+              305.4371337890625,
+              383.72210693359375,
+              408.99017333984375
+            ],
+            [
+              285.8976745605469,
+              307.5389099121094,
+              318.20672607421875,
+              405.77337646484375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1044,
+          "timestamp": 34.81057750759878,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001044.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              332.5276794433594,
+              309.7784118652344,
+              378.49755859375,
+              411.52557373046875
+            ],
+            [
+              280.68829345703125,
+              311.49163818359375,
+              315.30328369140625,
+              408.506103515625
+            ],
+            [
+              265.4577941894531,
+              311.18353271484375,
+              315.04296875,
+              413.0146484375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1050,
+          "timestamp": 35.01063829787234,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001050.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              325.22027587890625,
+              309.65887451171875,
+              372.75689697265625,
+              411.3304138183594
+            ],
+            [
+              272.7906188964844,
+              311.0722351074219,
+              307.9713134765625,
+              411.0582275390625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1056,
+          "timestamp": 35.210699088145894,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001056.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              261.9506530761719,
+              308.98162841796875,
+              296.7550048828125,
+              405.9920349121094
+            ],
+            [
+              314.38482666015625,
+              307.4033203125,
+              362.9562683105469,
+              410.84661865234375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1062,
+          "timestamp": 35.41075987841945,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001062.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              312.2797546386719,
+              296.016845703125,
+              360.769775390625,
+              395.4847106933594
+            ],
+            [
+              257.87176513671875,
+              297.7088317871094,
+              294.7020263671875,
+              397.265869140625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1068,
+          "timestamp": 35.61082066869301,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001068.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              318.072265625,
+              296.31866455078125,
+              365.1917419433594,
+              392.08074951171875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1074,
+          "timestamp": 35.81088145896656,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001074.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              322.14703369140625,
+              295.1570739746094,
+              368.0299987792969,
+              388.449462890625
+            ],
+            [
+              272.56488037109375,
+              296.7402648925781,
+              305.38189697265625,
+              391.2942810058594
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1080,
+          "timestamp": 36.01094224924012,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001080.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              323.9778137207031,
+              292.582275390625,
+              370.3501892089844,
+              383.3389587402344
+            ],
+            [
+              276.24468994140625,
+              295.1819763183594,
+              307.6559753417969,
+              384.02923583984375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1086,
+          "timestamp": 36.21100303951368,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001086.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              277.1098327636719,
+              293.25421142578125,
+              307.44781494140625,
+              379.28668212890625
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1092,
+          "timestamp": 36.41106382978723,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001092.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1098,
+          "timestamp": 36.611124620060785,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001098.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              272.84906005859375,
+              290.06573486328125,
+              305.12548828125,
+              383.4439697265625
+            ],
+            [
+              326.3056335449219,
+              288.481201171875,
+              368.21978759765625,
+              380.96270751953125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1104,
+          "timestamp": 36.811185410334346,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001104.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              267.31787109375,
+              288.96978759765625,
+              299.58905029296875,
+              379.5841979980469
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1110,
+          "timestamp": 37.0112462006079,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001110.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              314.0937194824219,
+              288.4781494140625,
+              356.25494384765625,
+              381.26202392578125
+            ],
+            [
+              259.17327880859375,
+              289.6838073730469,
+              292.37396240234375,
+              380.3605651855469
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1116,
+          "timestamp": 37.211306990881454,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001116.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1122,
+          "timestamp": 37.411367781155015,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001122.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              290.6826171875,
+              288.5036315917969,
+              334.7696838378906,
+              383.83526611328125
+            ],
+            [
+              234.75607299804688,
+              289.1535339355469,
+              268.7042236328125,
+              381.86181640625
+            ],
+            [
+              220.5784912109375,
+              289.591796875,
+              268.6559753417969,
+              386.76690673828125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1128,
+          "timestamp": 37.61142857142857,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001128.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              284.6448669433594,
+              286.9097595214844,
+              326.721923828125,
+              382.83831787109375
+            ],
+            [
+              223.9365692138672,
+              288.56414794921875,
+              258.1528015136719,
+              382.976318359375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1134,
+          "timestamp": 37.81148936170212,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001134.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              269.138427734375,
+              297.25506591796875,
+              311.3701171875,
+              397.19720458984375
+            ],
+            [
+              196.66537475585938,
+              298.30609130859375,
+              241.38070678710938,
+              401.00048828125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1140,
+          "timestamp": 38.01155015197568,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001140.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              240.8081512451172,
+              291.0174560546875,
+              286.5722351074219,
+              395.26837158203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1146,
+          "timestamp": 38.21161094224924,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001146.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              220.0148162841797,
+              275.2731628417969,
+              270.3345642089844,
+              384.617431640625
+            ],
+            [
+              147.49639892578125,
+              275.71160888671875,
+              188.99143981933594,
+              379.669677734375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1152,
+          "timestamp": 38.4116717325228,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001152.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              211.2056884765625,
+              260.7917175292969,
+              265.6878662109375,
+              380.86297607421875
+            ],
+            [
+              128.79454040527344,
+              259.9627380371094,
+              175.95872497558594,
+              373.10382080078125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1158,
+          "timestamp": 38.61173252279635,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001158.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              204.3961639404297,
+              264.81195068359375,
+              261.63079833984375,
+              393.44879150390625
+            ],
+            [
+              112.3017807006836,
+              262.50518798828125,
+              163.43594360351562,
+              387.8983154296875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1164,
+          "timestamp": 38.811793313069906,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001164.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              229.41195678710938,
+              304.18536376953125,
+              279.19476318359375,
+              436.45068359375
+            ],
+            [
+              134.10684204101562,
+              299.8152770996094,
+              186.05224609375,
+              427.024658203125
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1170,
+          "timestamp": 39.01185410334347,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001170.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              263.7624206542969,
+              315.87646484375,
+              307.065185546875,
+              434.6258239746094
+            ],
+            [
+              171.7845916748047,
+              310.56634521484375,
+              224.41220092773438,
+              437.9208984375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1176,
+          "timestamp": 39.21191489361702,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001176.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              309.23004150390625,
+              292.67645263671875,
+              344.8770446777344,
+              401.11419677734375
+            ],
+            [
+              224.630615234375,
+              286.32440185546875,
+              272.68463134765625,
+              398.46917724609375
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1182,
+          "timestamp": 39.411975683890574,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001182.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [
+            [
+              359.6631774902344,
+              268.1669921875,
+              392.811767578125,
+              373.59246826171875
+            ]
+          ],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1188,
+          "timestamp": 39.612036474164135,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001188.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1194,
+          "timestamp": 39.81209726443769,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001194.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1200,
+          "timestamp": 40.01215805471124,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001200.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1206,
+          "timestamp": 40.212218844984804,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001206.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1212,
+          "timestamp": 40.41227963525836,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001212.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1218,
+          "timestamp": 40.61234042553191,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001218.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1224,
+          "timestamp": 40.81240121580547,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001224.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1230,
+          "timestamp": 41.012462006079026,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001230.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1236,
+          "timestamp": 41.21252279635258,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001236.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1242,
+          "timestamp": 41.41258358662614,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001242.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1248,
+          "timestamp": 41.612644376899695,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001248.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1254,
+          "timestamp": 41.81270516717325,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001254.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1260,
+          "timestamp": 42.01276595744681,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001260.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1266,
+          "timestamp": 42.212826747720364,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001266.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1272,
+          "timestamp": 42.41288753799392,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001272.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1278,
+          "timestamp": 42.61294832826748,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001278.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1284,
+          "timestamp": 42.81300911854103,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001284.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1290,
+          "timestamp": 43.013069908814586,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001290.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1296,
+          "timestamp": 43.21313069908815,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001296.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1302,
+          "timestamp": 43.4131914893617,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001302.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1308,
+          "timestamp": 43.613252279635255,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001308.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        },
+        {
+          "frame_index": 1314,
+          "timestamp": 43.813313069908816,
+          "source_model": "sam21",
+          "source_object_id": "1",
+          "target_persistent_entity": "phone_01",
+          "mask": "outputs_v262/test7/predictions/target_full/sam21/001314.png",
+          "bbox": null,
+          "area": 0,
+          "confidence_if_available": null,
+          "initialization_frame": 210,
+          "initialized_from": "frozen_yolo_detection",
+          "accepted_by_guard": false,
+          "rejection_reason": "EMPTY_OR_LOST",
+          "yolo_phone_boxes": [],
+          "possible_mask_drift": null
+        }
+      ]
+    }
+  },
+  "status": "COMPLETE",
+  "model_build_seconds": 1.191562099964358
+}

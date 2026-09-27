@@ -1,0 +1,55 @@
+{
+  "schema": "v262_stage_a_1",
+  "decision": "PASS",
+  "checks": {
+    "official_sam3_checkpoint_loaded": true,
+    "matched_frozen_frames_and_box": true,
+    "actual_attention_path_executed": true,
+    "propagation_reliable": true,
+    "selected_target_masks_sufficient": true,
+    "propagation_runtime_practical": true,
+    "peak_memory_practical": true
+  },
+  "criteria": {
+    "minimum_selected_nonempty_frames": 6,
+    "maximum_propagation_seconds": 30.0,
+    "maximum_reserved_gib": 14.0
+  },
+  "same_frames": [
+    804,
+    810,
+    816,
+    822,
+    828,
+    834,
+    840,
+    846
+  ],
+  "same_frozen_box": [
+    529.4222412109375,
+    466.48236083984375,
+    660.66015625,
+    594.860107421875
+  ],
+  "sam21": {
+    "nonempty_frames": 8,
+    "propagation_seconds": 1.0391233999980614,
+    "peak_allocated_bytes": 726415360,
+    "peak_reserved_bytes": 861929472
+  },
+  "sam3": {
+    "nonempty_frames_any_id": 8,
+    "selected_id": 2,
+    "selected_id_nonempty_frames": 8,
+    "prompt_object_ids": [
+      0,
+      1,
+      2
+    ],
+    "propagation_seconds": 1.4377164000179619,
+    "peak_allocated_bytes": 6012385792,
+    "peak_reserved_bytes": 6274678784,
+    "attention_backend": "PYTORCH_MEM_EFFICIENT_SDPA"
+  },
+  "quality_claim": "No physical-target correctness conclusion from Stage A; box may produce multiple SAM-local objects."
+}

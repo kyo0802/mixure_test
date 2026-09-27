@@ -1,0 +1,40 @@
+{
+  "task": "test7",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "doll",
+  "qualitative_verdict": "OLDER_CONTEXT_ONLY",
+  "review": "只有已結束的球類 context；PROVISIONAL_MATCH 未獲授權，無法寫入玩偶附近的記憶。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 31,
+    "UNKNOWN": 38,
+    "PROVISIONAL_MATCH": 1,
+    "AMBIGUOUS": 194
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 438,
+      "remembered_relations": 0,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 83,
+  "memory_entities": 2,
+  "snapshots": 6,
+  "last_trusted_anchors": [],
+  "search_candidates": 1,
+  "search_priority_rules": [
+    3
+  ],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

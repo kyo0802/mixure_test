@@ -1,0 +1,110 @@
+{
+  "schema": "v262_physical_review_1",
+  "task": "test7",
+  "proposal_method": "Frozen V2.6 reviewed identity plus mask/bbox IoU; post-freeze visual confirmation required",
+  "visually_confirmed": true,
+  "reviewed_frames": [
+    {
+      "frame_index": 210,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "CORRECT_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen target phone on table; masks align."
+    },
+    {
+      "frame_index": 576,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    },
+    {
+      "frame_index": 636,
+      "source_candidate_label": "DISTRACTOR",
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Visible landline is frozen PROVISIONAL_MATCH distractor; all target masks empty."
+    },
+    {
+      "frame_index": 708,
+      "source_candidate_label": "TARGET",
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": [
+        847.9962768554688,
+        0.04583740234375,
+        1051.6082763671875,
+        327.267578125
+      ],
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen reviewed target smartphone in hand; point mask recovers it."
+    },
+    {
+      "frame_index": 834,
+      "source_candidate_label": "TARGET",
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": [
+        969.7057495117188,
+        158.52828979492188,
+        1199.65625,
+        290.6468200683594
+      ],
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen reviewed target smartphone in hand; point mask continues it."
+    },
+    {
+      "frame_index": 948,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "DRIFT_TO_OTHER_OBJECT"
+      },
+      "note": "Point mask on hand/toy edge after target leaves; guard accepted."
+    },
+    {
+      "frame_index": 1314,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    }
+  ],
+  "review_basis": "Saved full-frame four-column panels; candidate zooms for reviewed V2.6 candidates"
+}

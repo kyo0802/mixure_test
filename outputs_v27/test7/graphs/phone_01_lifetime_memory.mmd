@@ -1,0 +1,13 @@
+flowchart LR
+  target["phone_01<br/>UNOBSERVED"]:::target
+  o0["sports ball<br/>entity_0024"]
+  r0(["ANCHOR CONTEXT<br/>(image-relative)<br/>7.00-7.60s<br/>ENDED"]):::historical
+  target --> r0
+  r0 --> o0
+  r1(["ANCHOR CONTEXT<br/>(image-relative)<br/>11.00-13.20s<br/>ENDED"]):::historical
+  target --> r1
+  r1 --> o0
+  classDef target stroke-width:4px
+  classDef last stroke-width:3px
+  classDef historical stroke-dasharray:6 4,opacity:0.55
+  classDef current stroke-width:1.5px

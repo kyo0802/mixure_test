@@ -1,0 +1,385 @@
+{
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_frame": 462,
+    "last_seen_time": 15.402634730538923,
+    "last_trusted_snapshot": "G002",
+    "last_trusted_relations": [
+      "R0001"
+    ],
+    "last_trusted_anchors": [
+      "entity_0041"
+    ],
+    "visibility_assessment": "OUT_OF_VIEW_CANDIDATE",
+    "possible_occluders": []
+  },
+  "snapshots": [
+    {
+      "snapshot_id": "G001",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "target": {
+        "entity_id": "phone_01",
+        "state": "VISIBLE_TRUSTED",
+        "last_seen_frame": 216,
+        "last_seen_time": 7.201231822070145,
+        "last_trusted_snapshot": "G001",
+        "last_trusted_relations": [],
+        "last_trusted_anchors": [],
+        "visibility_assessment": "VISIBLE",
+        "possible_occluders": []
+      },
+      "entities": {
+        "phone_01": {
+          "entity_id": "phone_01",
+          "label": "target phone",
+          "admission_reason": "query target"
+        }
+      },
+      "relations": [],
+      "trigger_events": [
+        {
+          "event_id": "EV0001",
+          "event_type": "TARGET_APPEARED",
+          "frame": 216,
+          "time": 7.201231822070145,
+          "details": {
+            "observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0"
+          }
+        }
+      ],
+      "meaning": "Current trusted image evidence"
+    },
+    {
+      "snapshot_id": "G002",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "target": {
+        "entity_id": "phone_01",
+        "state": "VISIBLE_TRUSTED",
+        "last_seen_frame": 444,
+        "last_seen_time": 14.802532078699743,
+        "last_trusted_snapshot": "G002",
+        "last_trusted_relations": [
+          "R0001"
+        ],
+        "last_trusted_anchors": [
+          "entity_0041"
+        ],
+        "visibility_assessment": "VISIBLE",
+        "possible_occluders": []
+      },
+      "entities": {
+        "entity_0041": {
+          "entity_id": "entity_0041",
+          "label": "sports ball",
+          "admission_reason": "stable, close, useful image localization anchor",
+          "identity_scope": "upstream persistent entity; no new cross-track merge"
+        },
+        "phone_01": {
+          "entity_id": "phone_01",
+          "label": "target phone",
+          "admission_reason": "query target"
+        }
+      },
+      "relations": [
+        {
+          "episode_id": "R0001",
+          "subject": "phone_01",
+          "relation": "ANCHOR_CONTEXT",
+          "object": "entity_0041",
+          "kind": "CONTEXT",
+          "start_frame": 432,
+          "end_frame": 444,
+          "start_time": 14.40246364414029,
+          "last_confirmed_time": 14.802532078699743,
+          "status": "ACTIVE",
+          "evidence_level": "TRUSTED_IMAGE_CONTEXT",
+          "support_frames": [
+            432,
+            438,
+            444
+          ],
+          "evidence": [
+            {
+              "frame": 432,
+              "time": 14.40246364414029,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_BELOW",
+                "IMAGE_NEAR",
+                "IMAGE_OVERLAP"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.0,
+                "target_overlap_fraction": 0.02852188626212924,
+                "center_distance_fraction": 0.1921378440356599,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            },
+            {
+              "frame": 438,
+              "time": 14.602497861420018,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_ABOVE",
+                "IMAGE_NEAR"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.02681365514001926,
+                "target_overlap_fraction": 0.0,
+                "center_distance_fraction": 0.23427262889309078,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            },
+            {
+              "frame": 444,
+              "time": 14.802532078699743,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_ABOVE",
+                "IMAGE_NEAR"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.05708052737539826,
+                "target_overlap_fraction": 0.0,
+                "center_distance_fraction": 0.29219201726638766,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            }
+          ],
+          "source": [
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59"
+          ],
+          "graph_snapshot_ids": [
+            "G002"
+          ],
+          "ended_at_frame": null
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0002",
+          "event_type": "IMPORTANT_RELATION_STARTED",
+          "frame": 444,
+          "time": 14.802532078699743,
+          "details": {
+            "episode": "R0001"
+          }
+        },
+        {
+          "event_id": "EV0003",
+          "event_type": "IMPORTANT_ANCHOR_CHANGED",
+          "frame": 444,
+          "time": 14.802532078699743,
+          "details": {
+            "anchor": "entity_0041"
+          }
+        }
+      ],
+      "meaning": "Current trusted image evidence"
+    },
+    {
+      "snapshot_id": "G003",
+      "frame": 480,
+      "time": 16.0027373823781,
+      "target": {
+        "entity_id": "phone_01",
+        "state": "UNOBSERVED",
+        "last_seen_frame": 462,
+        "last_seen_time": 15.402634730538923,
+        "last_trusted_snapshot": "G002",
+        "last_trusted_relations": [
+          "R0001"
+        ],
+        "last_trusted_anchors": [
+          "entity_0041"
+        ],
+        "visibility_assessment": "OUT_OF_VIEW_CANDIDATE",
+        "possible_occluders": []
+      },
+      "entities": {
+        "entity_0041": {
+          "entity_id": "entity_0041",
+          "label": "sports ball",
+          "admission_reason": "stable, close, useful image localization anchor",
+          "identity_scope": "upstream persistent entity; no new cross-track merge"
+        },
+        "phone_01": {
+          "entity_id": "phone_01",
+          "label": "target phone",
+          "admission_reason": "query target"
+        }
+      },
+      "relations": [
+        {
+          "episode_id": "R0001",
+          "subject": "phone_01",
+          "relation": "ANCHOR_CONTEXT",
+          "object": "entity_0041",
+          "kind": "CONTEXT",
+          "start_frame": 432,
+          "end_frame": 444,
+          "start_time": 14.40246364414029,
+          "last_confirmed_time": 14.802532078699743,
+          "status": "LAST_TRUSTED",
+          "evidence_level": "TRUSTED_IMAGE_CONTEXT",
+          "support_frames": [
+            432,
+            438,
+            444
+          ],
+          "evidence": [
+            {
+              "frame": 432,
+              "time": 14.40246364414029,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_BELOW",
+                "IMAGE_NEAR",
+                "IMAGE_OVERLAP"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.0,
+                "target_overlap_fraction": 0.02852188626212924,
+                "center_distance_fraction": 0.1921378440356599,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            },
+            {
+              "frame": 438,
+              "time": 14.602497861420018,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_ABOVE",
+                "IMAGE_NEAR"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.02681365514001926,
+                "target_overlap_fraction": 0.0,
+                "center_distance_fraction": 0.23427262889309078,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            },
+            {
+              "frame": 444,
+              "time": 14.802532078699743,
+              "source_refs": [
+                "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+                "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+              ],
+              "image_relations": [
+                "IMAGE_RIGHT_OF",
+                "IMAGE_ABOVE",
+                "IMAGE_NEAR"
+              ],
+              "metrics": {
+                "box_gap_fraction": 0.05708052737539826,
+                "target_overlap_fraction": 0.0,
+                "center_distance_fraction": 0.29219201726638766,
+                "physical_verification": false
+              },
+              "physical_verification": false
+            }
+          ],
+          "source": [
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59"
+          ],
+          "graph_snapshot_ids": [
+            "G002",
+            "G003"
+          ],
+          "ended_at_frame": null
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0004",
+          "event_type": "TARGET_DISAPPEARED",
+          "frame": 480,
+          "time": 16.0027373823781,
+          "details": {
+            "last_seen": 15.402634730538923,
+            "evidence": "frozen upstream UNOBSERVED; no physical movement inferred"
+          }
+        }
+      ],
+      "meaning": "Remembered state"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV0001",
+      "event_type": "TARGET_APPEARED",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "details": {
+        "observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0"
+      }
+    },
+    {
+      "event_id": "EV0002",
+      "event_type": "IMPORTANT_RELATION_STARTED",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "details": {
+        "episode": "R0001"
+      }
+    },
+    {
+      "event_id": "EV0003",
+      "event_type": "IMPORTANT_ANCHOR_CHANGED",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "details": {
+        "anchor": "entity_0041"
+      }
+    },
+    {
+      "event_id": "EV0004",
+      "event_type": "TARGET_DISAPPEARED",
+      "frame": 480,
+      "time": 16.0027373823781,
+      "details": {
+        "last_seen": 15.402634730538923,
+        "evidence": "frozen upstream UNOBSERVED; no physical movement inferred"
+      }
+    }
+  ]
+}

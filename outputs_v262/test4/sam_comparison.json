@@ -1,0 +1,148 @@
+{
+  "schema": "v262_sam_comparison_1",
+  "task": "test4",
+  "metrics": {
+    "sam21": {
+      "reviewed_target_visible_frames": 2,
+      "correct_target_masks": 0,
+      "correct_target_coverage": 0.0,
+      "partial_target_masks": 1,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 1,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 159,
+      "all_frame_nonempty_masks": 44,
+      "all_frame_guard_accepted": 43,
+      "propagation_seconds": 8.07636030006688,
+      "effective_sampled_fps": 19.687086025456704,
+      "peak_reserved_bytes": 864026624
+    },
+    "sam3": {
+      "reviewed_target_visible_frames": 2,
+      "correct_target_masks": 0,
+      "correct_target_coverage": 0.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 2,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 159,
+      "all_frame_nonempty_masks": 0,
+      "all_frame_guard_accepted": 0,
+      "propagation_seconds": 26.754176300019026,
+      "effective_sampled_fps": 5.942997392892523,
+      "peak_reserved_bytes": 7189037056
+    },
+    "sam3point": {
+      "reviewed_target_visible_frames": 2,
+      "correct_target_masks": 0,
+      "correct_target_coverage": 0.0,
+      "partial_target_masks": 1,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 1,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 159,
+      "all_frame_nonempty_masks": 59,
+      "all_frame_guard_accepted": 54,
+      "propagation_seconds": 31.758738499949686,
+      "effective_sampled_fps": 5.006496086116641,
+      "peak_reserved_bytes": 7432306688
+    }
+  },
+  "reviewed_frames": [
+    {
+      "frame_index": 216,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "PARTIAL_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "PARTIAL_TARGET"
+      },
+      "note": "Frozen phone is under hand; both masks include hand pixels."
+    },
+    {
+      "frame_index": 534,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    },
+    {
+      "frame_index": 852,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    },
+    {
+      "frame_index": 1038,
+      "source_candidate_label": "TARGET",
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": [
+        267.72076416015625,
+        475.33831787109375,
+        355.7596435546875,
+        499.332275390625
+      ],
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Frozen reviewed target phone is plainly on table; all masks empty."
+    },
+    {
+      "frame_index": 1164,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    }
+  ],
+  "prediction_freeze": "outputs_v262/prediction_manifest.json"
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "v262_sam_comparison_1",
+  "task": "test3",
+  "metrics": {
+    "sam21": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 1,
+      "correct_target_coverage": 1.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 0,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 157,
+      "all_frame_nonempty_masks": 48,
+      "all_frame_guard_accepted": 48,
+      "propagation_seconds": 7.720214599976316,
+      "effective_sampled_fps": 20.33622225999801,
+      "peak_reserved_bytes": 864026624
+    },
+    "sam3": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 0,
+      "correct_target_coverage": 0.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 1,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 157,
+      "all_frame_nonempty_masks": 0,
+      "all_frame_guard_accepted": 0,
+      "propagation_seconds": 30.01378919999115,
+      "effective_sampled_fps": 5.23092898913431,
+      "peak_reserved_bytes": 7182745600
+    },
+    "sam3point": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 1,
+      "correct_target_coverage": 1.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 0,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 157,
+      "all_frame_nonempty_masks": 48,
+      "all_frame_guard_accepted": 46,
+      "propagation_seconds": 31.38507900002878,
+      "effective_sampled_fps": 5.002377084979012,
+      "peak_reserved_bytes": 7417626624
+    }
+  },
+  "reviewed_frames": [
+    {
+      "frame_index": 228,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "CORRECT_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen target phone on table; both nonempty masks align."
+    },
+    {
+      "frame_index": 540,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    },
+    {
+      "frame_index": 852,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    },
+    {
+      "frame_index": 1164,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    }
+  ],
+  "prediction_freeze": "outputs_v262/prediction_manifest.json"
+}

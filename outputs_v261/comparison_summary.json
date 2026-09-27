@@ -1,0 +1,148 @@
+{
+  "schema": "v261_partial_comparison_1",
+  "status": "STOPPED_RUNTIME_BLOCKER",
+  "research_question_answered": false,
+  "videos_input_hash_verified": 7,
+  "videos_full_paired_ablation_completed": 0,
+  "feasibility_video": "test8.mp4",
+  "feasibility_frames": [
+    804,
+    810,
+    816,
+    822,
+    828,
+    834,
+    840,
+    846
+  ],
+  "same_frozen_target_box": true,
+  "same_gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "smoke": {
+    "sam21": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_count": 8,
+      "timing_seconds": {
+        "build": 2.670001900056377,
+        "session": 0.8398739999393001,
+        "prompt": 5.166685500065796,
+        "propagation": 0.40619889996014535
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 726415360,
+      "physical_target_correctness": null
+    },
+    "sam31_box": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_count": 3,
+      "timing_seconds": {
+        "build": 13.346243100007996,
+        "session": 0.14000370004214346,
+        "prompt": 9.787029700004496,
+        "propagation": 183.32729050004855
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 22840581120,
+      "physical_target_correctness": null
+    },
+    "sam31_deterministic_point": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        804
+      ],
+      "nonempty_mask_count": 1,
+      "timing_seconds": {
+        "build": 13.97515640000347,
+        "session": 0.13918380008544773,
+        "prompt": 13.01572110003326,
+        "propagation": 130.88385410001501
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 19615960064,
+      "physical_target_correctness": null
+    }
+  },
+  "full_ablation_metrics": {
+    "reviewed_target_visible_frames": null,
+    "correct_target_masks": null,
+    "correct_target_coverage": null,
+    "partial_target_masks": null,
+    "raw_drift_events": null,
+    "guard_rejected_drift": null,
+    "accepted_drift": null,
+    "lost_events_paired": null,
+    "yolo_gap_opportunities": null,
+    "yolo_gap_recoveries": null,
+    "post_reid_correct_continuity": null
+  },
+  "sam31_fast_attention": {
+    "torch_flash_sdpa": "NO_AVAILABLE_KERNEL",
+    "flash_attn_3": "NO_KERNEL_IMAGE_FOR_RTX_5070_TI"
+  },
+  "sam31_math_fallback": "RUNS_BUT_IMPRACTICAL_FOR_7_FULL_VIDEOS",
+  "per_video": {
+    "test3": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test4": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test5": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test6": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test7": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test8": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    },
+    "test9": {
+      "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED"
+    }
+  },
+  "prediction_manifest_sha256": "29163e4fce1e721ace006e3a824b10de9175b2d4f677a0736b82c9b7cf644bc5"
+}

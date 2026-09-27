@@ -1,0 +1,205 @@
+{
+  "schema": "v262_sam3_smoke_1",
+  "model": "SAM3",
+  "model_repository": "facebook/sam3",
+  "builder": "build_sam3_predictor(version='sam3')",
+  "checkpoint": ".models\\sam3\\sam3.pt",
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "frames": [
+    804,
+    810,
+    816,
+    822,
+    828,
+    834,
+    840,
+    846
+  ],
+  "frozen_box_xyxy": [
+    529.4222412109375,
+    466.48236083984375,
+    660.66015625,
+    594.860107421875
+  ],
+  "target_persistent_entity": "phone_01",
+  "authorization": "CONFIRMED_MATCH",
+  "primary_prompt": "normalized_xywh_box_no_text",
+  "status": "COMPLETE",
+  "timing_seconds": {
+    "build": 6.950704299961217,
+    "session": 0.1790971999289468,
+    "prompt_with_profiler": 7.416125899995677,
+    "propagation": 1.4377164000179619
+  },
+  "outputs": [
+    {
+      "frame_index": 804,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3842,
+        5243,
+        11365
+      ],
+      "selected_area": 11365
+    },
+    {
+      "frame_index": 810,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3624,
+        4931,
+        10326
+      ],
+      "selected_area": 10326
+    },
+    {
+      "frame_index": 816,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3107,
+        4427,
+        8687
+      ],
+      "selected_area": 8687
+    },
+    {
+      "frame_index": 822,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3078,
+        4362,
+        7940
+      ],
+      "selected_area": 7940
+    },
+    {
+      "frame_index": 828,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3305,
+        4715,
+        8303
+      ],
+      "selected_area": 8303
+    },
+    {
+      "frame_index": 834,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3452,
+        5673,
+        7850
+      ],
+      "selected_area": 7850
+    },
+    {
+      "frame_index": 840,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        3107,
+        4638,
+        7302
+      ],
+      "selected_area": 7302
+    },
+    {
+      "frame_index": 846,
+      "object_ids": [
+        0,
+        1,
+        2
+      ],
+      "areas": [
+        4643,
+        3824,
+        6902
+      ],
+      "selected_area": 6902
+    }
+  ],
+  "attention_ops": [
+    "_Z40fmha_cutlassF_bf16_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIN7cutlass10bfloat16_tENS1_4arch4Sm80ELb1ELi64ELi64ELi64ELb1ELb1EE6ParamsE",
+    "aten::_efficient_attention_forward",
+    "aten::_scaled_dot_product_efficient_attention",
+    "aten::scaled_dot_product_attention"
+  ],
+  "normalized_box_xywh": [
+    [
+      0.41361112594604493,
+      0.6478921678331163,
+      0.10252962112426758,
+      0.17830242580837674
+    ]
+  ],
+  "frame_size": [
+    1280,
+    720
+  ],
+  "predictor_type": "Sam3VideoPredictorMultiGPU",
+  "model_type": "Sam3VideoInferenceWithInstanceInteractivity",
+  "prompt_object_ids": [
+    0,
+    1,
+    2
+  ],
+  "prompt_boxes_xywh": [
+    [
+      0.5078125,
+      0.16527777910232544,
+      0.04218750074505806,
+      0.16388888657093048
+    ],
+    [
+      0.4437499940395355,
+      0.15555556118488312,
+      0.05078125,
+      0.16805556416511536
+    ],
+    [
+      0.4140625,
+      0.6500000357627869,
+      0.10078125447034836,
+      0.173611119389534
+    ]
+  ],
+  "prompt_scores": [],
+  "selected_object_id": 2,
+  "effective_fps": 5.564379734348202,
+  "nonempty_frames": 8,
+  "peak_allocated_bytes": 6012385792,
+  "peak_reserved_bytes": 6274678784,
+  "gpu_memory_info_bytes": [
+    9377415168,
+    17066033152
+  ],
+  "attention_backend": "PYTORCH_MEM_EFFICIENT_SDPA",
+  "nvidia_smi_used_mib": 7232
+}

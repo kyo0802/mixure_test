@@ -1,0 +1,37 @@
+{
+  "task": "test9",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "basketball occlusion; HomePad / bottle",
+  "qualitative_verdict": "NO_STABLE_CONTEXT",
+  "review": "可信 target 與 anchor 的時間支持不足，沒有穩定 episode；不猜測物理遮擋。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 79,
+    "UNKNOWN": 57,
+    "AMBIGUOUS": 26
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 630,
+      "remembered_relations": 0,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 106,
+  "memory_entities": 1,
+  "snapshots": 2,
+  "last_trusted_anchors": [],
+  "search_candidates": 0,
+  "search_priority_rules": [],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

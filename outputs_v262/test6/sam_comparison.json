@@ -1,0 +1,130 @@
+{
+  "schema": "v262_sam_comparison_1",
+  "task": "test6",
+  "metrics": {
+    "sam21": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 1,
+      "correct_target_coverage": 1.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 0,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 132,
+      "all_frame_nonempty_masks": 36,
+      "all_frame_guard_accepted": 36,
+      "propagation_seconds": 8.295448399963789,
+      "effective_sampled_fps": 15.912340555403395,
+      "peak_reserved_bytes": 864026624
+    },
+    "sam3": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 0,
+      "correct_target_coverage": 0.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 0,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 0,
+      "lost_empty_events": 1,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 132,
+      "all_frame_nonempty_masks": 0,
+      "all_frame_guard_accepted": 0,
+      "propagation_seconds": 28.05263539997395,
+      "effective_sampled_fps": 4.705440259638586,
+      "peak_reserved_bytes": 7023362048
+    },
+    "sam3point": {
+      "reviewed_target_visible_frames": 1,
+      "correct_target_masks": 1,
+      "correct_target_coverage": 1.0,
+      "partial_target_masks": 0,
+      "raw_drift_events": 1,
+      "guard_rejected_drift": 0,
+      "accepted_drift": 1,
+      "lost_empty_events": 0,
+      "not_reviewable": 0,
+      "yolo_gap_opportunities": 0,
+      "yolo_gap_recoveries": 0,
+      "yolo_gap_drifted": 0,
+      "post_reid_reviewed_target_visible": 0,
+      "post_reid_correct_continuity": 0,
+      "reinitializations": 0,
+      "sampled_frames": 132,
+      "all_frame_nonempty_masks": 65,
+      "all_frame_guard_accepted": 60,
+      "propagation_seconds": 27.329119400004856,
+      "effective_sampled_fps": 4.830012927528743,
+      "peak_reserved_bytes": 7237271552
+    }
+  },
+  "reviewed_frames": [
+    {
+      "frame_index": 204,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "CORRECT_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen target phone on table; masks align."
+    },
+    {
+      "frame_index": 468,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    },
+    {
+      "frame_index": 732,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "DRIFT_TO_OTHER_OBJECT"
+      },
+      "note": "167-pixel point mask on hand edge; no target phone visible; guard accepted."
+    },
+    {
+      "frame_index": 990,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    }
+  ],
+  "prediction_freeze": "outputs_v262/prediction_manifest.json"
+}

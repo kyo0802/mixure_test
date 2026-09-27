@@ -1,0 +1,50 @@
+{
+  "schema": "v262_environment_1",
+  "audited_utc": "2026-09-26T13:21:23.495124+00:00",
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.8",
+  "executable": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.venv_sam3\\Scripts\\python.exe",
+  "torch": "2.10.0+cu128",
+  "torchvision": "0.25.0+cu128",
+  "cuda_runtime": "12.8",
+  "numpy": "1.26.4",
+  "opencv": "4.11.0",
+  "sam3_package": "0.1.0",
+  "triton_windows": "3.6.0.post26",
+  "flash_attn_3": null,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5070 Ti",
+    "vram_mib": 16303,
+    "driver": "616.92",
+    "compute_capability": "12.0"
+  },
+  "sam3": {
+    "source_repository": "https://github.com/facebookresearch/sam3",
+    "source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+    "source_checkout": ".sam31_official (same official Meta revision, installed as isolated wheel)",
+    "checkpoint_repository": "facebook/sam3",
+    "checkpoint_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "checkpoint": ".models/sam3/sam3.pt",
+    "checkpoint_bytes": 3450062241,
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "builder": "build_sam3_predictor(version='sam3')",
+    "predictor": "Sam3VideoPredictorMultiGPU",
+    "model": "Sam3VideoInferenceWithInstanceInteractivity",
+    "attention_backend_executed": "PYTORCH_MEM_EFFICIENT_SDPA",
+    "attention_ops": [
+      "_Z40fmha_cutlassF_bf16_aligned_64x64_rf_sm80N22PyTorchMemEffAttention15AttentionKernelIN7cutlass10bfloat16_tENS1_4arch4Sm80ELb1ELi64ELi64ELi64ELb1ELb1EE6ParamsE",
+      "aten::_efficient_attention_forward",
+      "aten::_scaled_dot_product_efficient_attention",
+      "aten::scaled_dot_product_attention"
+    ]
+  },
+  "sam21": {
+    "repository": "facebookresearch/sam2",
+    "revision": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "checkpoint": ".models/sam2.1_hiera_small.pt",
+    "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "config": "configs/sam2.1/sam2.1_hiera_s.yaml"
+  },
+  "v26_environment_modified": false,
+  "v261_environment_modified": false
+}

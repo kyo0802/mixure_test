@@ -1,0 +1,36 @@
+C:\Users\smile\Desktop\test2\mixure_test_SAM\.venv_sam3\Lib\site-packages\timm\models\layers\__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+INFO 2026-09-26 20:52:35,475 3596 sam3_video_predictor.py: 120: using the following GPU IDs: [0]
+INFO 2026-09-26 20:52:35,555 3596 sam3_video_predictor.py: 136: 
+
+
+	*** START loading model on all ranks ***
+
+
+INFO 2026-09-26 20:52:35,555 3596 sam3_video_predictor.py: 138: loading model on rank=0 with world_size=1 -- this could take a while ...
+INFO 2026-09-26 20:52:40,073 3596 sam3_video_base.py: 354: setting max_num_objects=10000 and num_obj_for_compile=16
+INFO 2026-09-26 20:52:42,425 3596 sam3_video_predictor.py: 140: loading model on rank=0 with world_size=1 -- DONE locally
+INFO 2026-09-26 20:52:42,426 3596 sam3_video_predictor.py: 151: 
+
+
+	*** DONE loading model on all ranks ***
+
+
+
+frame loading (image folder) [rank=0]:   0%|          | 0/8 [00:00<?, ?it/s]
+frame loading (image folder) [rank=0]:  62%|�i�i�i�i�i�i�k   | 5/8 [00:00<00:00, 47.60it/s]
+frame loading (image folder) [rank=0]: 100%|�i�i�i�i�i�i�i�i�i�i| 8/8 [00:00<00:00, 51.59it/s]
+INFO 2026-09-26 20:52:42,605 3596 sam3_base_predictor.py: 164: started new session a4504552-3806-4bbe-b3d6-03e3e6249972
+C:\Users\smile\Desktop\test2\mixure_test_SAM\.venv_sam3\Lib\site-packages\torch\profiler\profiler.py:217: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+
+propagate_in_video:   0%|          | 0/8 [00:00<?, ?it/s]
+propagate_in_video:  25%|�i�i�m       | 2/8 [00:00<00:00,  8.24it/s]
+propagate_in_video:  38%|�i�i�i�o      | 3/8 [00:00<00:00,  6.63it/s]
+propagate_in_video:  50%|�i�i�i�i�i     | 4/8 [00:00<00:00,  5.86it/s]
+propagate_in_video:  62%|�i�i�i�i�i�i�k   | 5/8 [00:00<00:00,  5.39it/s]
+propagate_in_video:  75%|�i�i�i�i�i�i�i�m  | 6/8 [00:01<00:00,  5.02it/s]
+propagate_in_video:  88%|�i�i�i�i�i�i�i�i�o | 7/8 [00:01<00:00,  4.73it/s]
+propagate_in_video: 100%|�i�i�i�i�i�i�i�i�i�i| 8/8 [00:01<00:00,  5.47it/s]
+propagate_in_video: 100%|�i�i�i�i�i�i�i�i�i�i| 8/8 [00:01<00:00,  5.57it/s]
+INFO 2026-09-26 20:52:59,130 3596 sam3_base_predictor.py: 360: propagation ended in session a4504552-3806-4bbe-b3d6-03e3e6249972

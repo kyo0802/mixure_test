@@ -1,0 +1,61 @@
+{
+  "schema": "v262_physical_review_1",
+  "task": "test9",
+  "proposal_method": "Frozen V2.6 reviewed identity plus mask/bbox IoU; post-freeze visual confirmation required",
+  "visually_confirmed": true,
+  "reviewed_frames": [
+    {
+      "frame_index": 546,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "CORRECT_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen target smartphone on table; masks align."
+    },
+    {
+      "frame_index": 762,
+      "source_candidate_label": null,
+      "target_visible": null,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "NOT_REVIEWABLE",
+        "sam3": "NOT_REVIEWABLE",
+        "sam3point": "NOT_REVIEWABLE"
+      },
+      "note": "Small point mask under table; possible held phone cannot be identified with confidence."
+    },
+    {
+      "frame_index": 978,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "DRIFT_TO_OTHER_OBJECT",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "DRIFT_TO_OTHER_OBJECT"
+      },
+      "note": "Both masks on object at toy base; target smartphone absent; guards accepted."
+    },
+    {
+      "frame_index": 1194,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible."
+    }
+  ],
+  "review_basis": "Saved full-frame four-column panels; candidate zooms for reviewed V2.6 candidates"
+}

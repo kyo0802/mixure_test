@@ -1,0 +1,10 @@
+flowchart LR
+  target["phone_01<br/>UNOBSERVED"]:::target
+  o0["sports ball<br/>entity_0041"]
+  r0(["SEARCH 1 / rule 2<br/>ANCHOR CONTEXT<br/>(image-relative)<br/>LAST_TRUSTED"]):::last
+  target --> r0
+  r0 --> o0
+  classDef target stroke-width:4px
+  classDef last stroke-width:3px
+  classDef historical stroke-dasharray:6 4,opacity:0.55
+  classDef current stroke-width:1.5px

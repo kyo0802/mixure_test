@@ -1,0 +1,17 @@
+{
+  "schema": "v262_recommendation_1",
+  "classification": "KEEP_SAM21",
+  "prototype_model": "SAM2.1",
+  "stage_a": "PASS",
+  "stage_b": "COMPLETE_7_VIDEOS",
+  "primary_sam3_box": "0/15 correct on visually reviewed target-visible checkpoints; 0/1113 nonempty sampled masks",
+  "sam21_control": "10/15 correct; 2/15 partial; 1 accepted drift in inspected checkpoints",
+  "secondary_sam3_point": "9/15 correct; 5/15 partial; 3 accepted drifts in inspected checkpoints; useful test7 f708 and f834 continuity but lower aggregate quality and safety",
+  "next_step": "Proceed with FindMind Spatial Memory Graph using the SAM2.1 prototype; retain SAM3 point as research-only ablation. Investigate SAM3 box long-window empty output and improve point-arm identity guard before any integration.",
+  "caveats": [
+    "Quality review is sparse: 37 selected checkpoints, 15 confirmed target-visible; not dense mask ground truth.",
+    "No verified YOLO-target-absent opportunities among reviewed target-visible frames; YOLO-gap recovery unmeasured.",
+    "The box arm is one tested official visual-exemplar configuration, not a general performance claim about SAM3.",
+    "The operator had read existing V2.6 review notes before prediction freeze, although inference code did not read labels."
+  ]
+}

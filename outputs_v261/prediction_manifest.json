@@ -1,0 +1,23 @@
+{
+  "schema": "v261_partial_prediction_freeze_1",
+  "created_utc": "2026-09-26T12:23:50.942955+00:00",
+  "stage": "PARTIAL_SMOKE_FROZEN_FULL_ABLATION_STOPPED",
+  "seven_video_blind_predictions_complete": false,
+  "manual_review_started": false,
+  "review_labels_read_by_inference": false,
+  "reason": "SAM31_WINDOWS_FAST_ATTENTION_UNAVAILABLE_MATH_BACKEND_IMPRACTICAL",
+  "experiment_manifest_sha256": "a48431013dc9009c71de30ccce20f75f10bcb4fd05a823c5bfb4f0c19bd6607e",
+  "smoke_output_sha256": {
+    "smoke/sam21_eight_frame_result.json": "6ae1e2dfc4986e5bc051a5e59441a313f5fbda969c7503e7edd9c33266b84001",
+    "smoke/smoke_math_result.json": "42d4992f957b29ddbac266950713e1dc0231fa31226e48fc9856d004f9ee0c62",
+    "smoke/smoke_math_max1_capacity16_frames2.json": "448e280cd92a6c27dc909e4a34af03bafa836ab4a11933aed85a4fadecaa7168",
+    "smoke/smoke_math_max1_capacity16_frames8.json": "c485dd4e82a8b98d06ce7153b09a9c8bd3daf90a5f38f828c71f557d3e9c7fbe",
+    "smoke/smoke_point_math_max1_capacity16_frames2.json": "446a1fa4a4165c7aaeb526e93c2a69b69dd74130feeee4c16a233ad0ba157984",
+    "smoke/smoke_point_math_max1_capacity16_frames8.json": "e41336b3ae568377d04b459d6d2b652ae267ece589b006f6a375501bd2b6b3e9"
+  },
+  "inference_code_sha256": {
+    "src/memory_graph/v261/compat.py": "df4353920bc247581e37d95aad95f35448387dd3879f84984105e3ca2ef626fe",
+    "src/memory_graph/v261/smoke.py": "dc5daf669b5b2e29579f637fe6a764d2f85e2970436897c422e7a18101ec5561",
+    "src/memory_graph/v261/sam21_smoke.py": "34a9b70554482b3ae6b41c2d13b08e64732f6bdcee6ec6c95e4c1b5bfeb4ab5b"
+  }
+}

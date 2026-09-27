@@ -1,0 +1,44 @@
+{
+  "task": "test8",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "multiple phone distractors",
+  "qualitative_verdict": "IDENTITY_SAFE_BUT_CONTEXT_INCOMPLETE",
+  "review": "f804 確認更新 last seen，但單一影格不足以建立穩定新 anchor；後續不明手機不更新 memory。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 41,
+    "UNKNOWN": 39,
+    "AMBIGUOUS": 87
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 444,
+      "remembered_relations": 1,
+      "all_relations_last_trusted": true
+    },
+    {
+      "frame": 810,
+      "remembered_relations": 0,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 81,
+  "memory_entities": 2,
+  "snapshots": 5,
+  "last_trusted_anchors": [],
+  "search_candidates": 1,
+  "search_priority_rules": [
+    3
+  ],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

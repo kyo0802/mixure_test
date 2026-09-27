@@ -1,0 +1,41 @@
+{
+  "task": "test6",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "microwave / doll",
+  "qualitative_verdict": "MISSING_FINAL_CONTEXT",
+  "review": "可信 target 資料只支持先前球類 context，未建立微波爐或玩偶的最終 context。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 37,
+    "UNKNOWN": 36,
+    "AMBIGUOUS": 47
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 420,
+      "remembered_relations": 1,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 85,
+  "memory_entities": 2,
+  "snapshots": 3,
+  "last_trusted_anchors": [
+    "entity_0029"
+  ],
+  "search_candidates": 1,
+  "search_priority_rules": [
+    2
+  ],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "status": "NOT_MEASURABLE_FULL_PAIRED_ABLATION_STOPPED",
+  "video_sha256": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+  "sam21_historical_raw_observations": {
+    "target_full": {
+      "processed_sampled_frames": 150,
+      "nonempty_mask_observations": 40,
+      "lost_events": 110,
+      "possible_drift_flags": 1,
+      "propagation_seconds_historical": 7.312000000034459,
+      "physical_target_correctness": null
+    },
+    "same_identity_reinit": {
+      "processed_sampled_frames": 50,
+      "nonempty_mask_observations": 28,
+      "lost_events": 22,
+      "possible_drift_flags": 0,
+      "propagation_seconds_historical": 2.452999999979511,
+      "physical_target_correctness": null
+    }
+  },
+  "sam31_full_video": null,
+  "reviewed_physical_target_metrics": null,
+  "eight_frame_feasibility_only": {
+    "sam21": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_count": 8,
+      "timing_seconds": {
+        "build": 2.670001900056377,
+        "session": 0.8398739999393001,
+        "prompt": 5.166685500065796,
+        "propagation": 0.40619889996014535
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 726415360,
+      "physical_target_correctness": null
+    },
+    "sam31_box": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_count": 3,
+      "timing_seconds": {
+        "build": 13.346243100007996,
+        "session": 0.14000370004214346,
+        "prompt": 9.787029700004496,
+        "propagation": 183.32729050004855
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 22840581120,
+      "physical_target_correctness": null
+    },
+    "sam31_deterministic_point": {
+      "video": "test8.mp4",
+      "frames": [
+        804,
+        810,
+        816,
+        822,
+        828,
+        834,
+        840,
+        846
+      ],
+      "nonempty_mask_frames": [
+        804
+      ],
+      "nonempty_mask_count": 1,
+      "timing_seconds": {
+        "build": 13.97515640000347,
+        "session": 0.13918380008544773,
+        "prompt": 13.01572110003326,
+        "propagation": 130.88385410001501
+      },
+      "peak_torch_allocated_bytes_prompt_plus_propagation": 19615960064,
+      "physical_target_correctness": null
+    }
+  }
+}

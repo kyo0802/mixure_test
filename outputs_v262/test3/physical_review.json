@@ -1,0 +1,61 @@
+{
+  "schema": "v262_physical_review_1",
+  "task": "test3",
+  "proposal_method": "Frozen V2.6 reviewed identity plus mask/bbox IoU; post-freeze visual confirmation required",
+  "visually_confirmed": true,
+  "reviewed_frames": [
+    {
+      "frame_index": 228,
+      "source_candidate_label": null,
+      "target_visible": true,
+      "yolo_target_absent": false,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "CORRECT_TARGET",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "CORRECT_TARGET"
+      },
+      "note": "Frozen target phone on table; both nonempty masks align."
+    },
+    {
+      "frame_index": 540,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    },
+    {
+      "frame_index": 852,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    },
+    {
+      "frame_index": 1164,
+      "source_candidate_label": null,
+      "target_visible": false,
+      "yolo_target_absent": null,
+      "target_box_from_frozen_reviewed_candidate": null,
+      "model_labels": {
+        "sam21": "EMPTY_OR_LOST",
+        "sam3": "EMPTY_OR_LOST",
+        "sam3point": "EMPTY_OR_LOST"
+      },
+      "note": "Target not visible in this checkpoint."
+    }
+  ],
+  "review_basis": "Saved full-frame four-column panels; candidate zooms for reviewed V2.6 candidates"
+}

@@ -1,0 +1,297 @@
+{
+  "schema": "v27_post_freeze_evaluation_1",
+  "evaluated_utc": "2026-09-26T23:12:20.190158+00:00",
+  "prediction_manifest_sha256": "757ecdd823ec21b964ad4375c43ffa11a6a0d1487bc3c46c3a7671e0604c62c4",
+  "verified_upstream_files": 91,
+  "videos": [
+    {
+      "task": "test3",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "box",
+      "qualitative_verdict": "MISSING_FINAL_CONTEXT",
+      "review": "記憶只有較早的球類 image context，沒有支持 box 放置位置。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 37,
+        "UNKNOWN": 48,
+        "AMBIGUOUS": 43
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 498,
+          "remembered_relations": 1,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 110,
+      "memory_entities": 2,
+      "snapshots": 5,
+      "last_trusted_anchors": [
+        "entity_0051"
+      ],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        2
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test4",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "basketball / blind spot",
+      "qualitative_verdict": "PARTIAL_ANCHOR_ALIGNMENT",
+      "review": "球類 anchor 與敘述部分一致；沒有證據確認盲區位置或 BEHIND。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 30,
+        "UNKNOWN": 43,
+        "AMBIGUOUS": 23
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 480,
+          "remembered_relations": 1,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 108,
+      "memory_entities": 2,
+      "snapshots": 3,
+      "last_trusted_anchors": [
+        "entity_0041"
+      ],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        2
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test5",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "box; placement incompletely observed",
+      "qualitative_verdict": "MISSING_FINAL_CONTEXT",
+      "review": "保留球類 image context；沒有 box 位置證據，不推斷 INSIDE。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 35,
+        "UNKNOWN": 61,
+        "AMBIGUOUS": 33
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 444,
+          "remembered_relations": 1,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 101,
+      "memory_entities": 2,
+      "snapshots": 3,
+      "last_trusted_anchors": [
+        "entity_0043"
+      ],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        2
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test6",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "microwave / doll",
+      "qualitative_verdict": "MISSING_FINAL_CONTEXT",
+      "review": "可信 target 資料只支持先前球類 context，未建立微波爐或玩偶的最終 context。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 37,
+        "UNKNOWN": 36,
+        "AMBIGUOUS": 47
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 420,
+          "remembered_relations": 1,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 85,
+      "memory_entities": 2,
+      "snapshots": 3,
+      "last_trusted_anchors": [
+        "entity_0029"
+      ],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        2
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test7",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "doll",
+      "qualitative_verdict": "OLDER_CONTEXT_ONLY",
+      "review": "只有已結束的球類 context；PROVISIONAL_MATCH 未獲授權，無法寫入玩偶附近的記憶。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 31,
+        "UNKNOWN": 38,
+        "PROVISIONAL_MATCH": 1,
+        "AMBIGUOUS": 194
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 438,
+          "remembered_relations": 0,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 83,
+      "memory_entities": 2,
+      "snapshots": 6,
+      "last_trusted_anchors": [],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        3
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test8",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "multiple phone distractors",
+      "qualitative_verdict": "IDENTITY_SAFE_BUT_CONTEXT_INCOMPLETE",
+      "review": "f804 確認更新 last seen，但單一影格不足以建立穩定新 anchor；後續不明手機不更新 memory。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 41,
+        "UNKNOWN": 39,
+        "AMBIGUOUS": 87
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 444,
+          "remembered_relations": 1,
+          "all_relations_last_trusted": true
+        },
+        {
+          "frame": 810,
+          "remembered_relations": 0,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 81,
+      "memory_entities": 2,
+      "snapshots": 5,
+      "last_trusted_anchors": [],
+      "search_candidates": 1,
+      "search_priority_rules": [
+        3
+      ],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    },
+    {
+      "task": "test9",
+      "evaluation_phase": "after_prediction_freeze",
+      "narrative_used_in_inference": false,
+      "narrative": "basketball occlusion; HomePad / bottle",
+      "qualitative_verdict": "NO_STABLE_CONTEXT",
+      "review": "可信 target 與 anchor 的時間支持不足，沒有穩定 episode；不猜測物理遮擋。",
+      "not_an_accuracy_measurement": true,
+      "unauthorized_memory_updates": 0,
+      "blocked_observation_counts_by_identity": {
+        "NOT_EVALUATED": 79,
+        "UNKNOWN": 57,
+        "AMBIGUOUS": 26
+      },
+      "physical_evidence_leaks": 0,
+      "search_provenance_valid": true,
+      "episode_support_causal": true,
+      "events_ordered": true,
+      "loss_snapshot_checks": [
+        {
+          "frame": 630,
+          "remembered_relations": 0,
+          "all_relations_last_trusted": true
+        }
+      ],
+      "upstream_entities": 106,
+      "memory_entities": 1,
+      "snapshots": 2,
+      "last_trusted_anchors": [],
+      "search_candidates": 0,
+      "search_priority_rules": [],
+      "limitations": [
+        "Existing event graphs contain no verified physical relations",
+        "SAM observations marked untrusted remain observation-only",
+        "Final track aliases are not used to retroactively authorize identity"
+      ]
+    }
+  ],
+  "videos_with_last_trusted_anchor": 4,
+  "videos_with_search_fallback": 6,
+  "physical_episodes": 0,
+  "scope": "Frozen-stream memory replay; qualitative narrative review, not end-to-end model accuracy"
+}

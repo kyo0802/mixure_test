@@ -1,0 +1,397 @@
+{
+  "schema": "v262_supplementary_comparison_1",
+  "scope": "test8 only, two frozen sampled windows",
+  "provenance": {
+    "video_sha256": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "frozen_manifest_sha256": "6a6c724177befc788838ef74846297ec45bcdf9a5168fab3f3622ace09ef49da",
+    "official_source_revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+    "prompt": "smartphone",
+    "identity_merge": false,
+    "gt_used": false
+  },
+  "models": {
+    "sam3_box_existing": {
+      "sampled_frames": 200,
+      "distinct_video_frames": 150,
+      "frames_with_any_mask": 0,
+      "distinct_video_frames_with_any_mask": 0,
+      "total_candidate_ids": 0,
+      "propagation_seconds": 31.11410739994608,
+      "peak_reserved_bytes": 7142899712,
+      "source": "outputs_v262/test8/sam3_predictions.json"
+    },
+    "sam3_point_existing": {
+      "sampled_frames": 200,
+      "distinct_video_frames": 150,
+      "frames_with_any_mask": 97,
+      "distinct_video_frames_with_any_mask": 69,
+      "total_candidate_ids": 2,
+      "propagation_seconds": 38.05137740005739,
+      "peak_reserved_bytes": 7367294976,
+      "source": "outputs_v262/test8/sam3point_predictions.json"
+    },
+    "sam3_text_smartphone": {
+      "sampled_frames": 200,
+      "frames_with_any_mask": 109,
+      "total_candidate_ids": 10,
+      "candidate_id_namespace": "local to each window, never phone_01",
+      "total_candidate_observations": 141,
+      "propagation_seconds": 54.16399969998747,
+      "prompt_seconds": 11.42979939992074,
+      "peak_reserved_bytes": 7803502592,
+      "source": "outputs_v262/supplementary_sam3_concept/candidates.json",
+      "distinct_video_frames": 150,
+      "distinct_video_frames_with_any_mask": 76
+    }
+  },
+  "per_window": {
+    "target_full": {
+      "sampled_frames": 150,
+      "frames_with_any_mask": 76,
+      "prompt_candidate_ids": [
+        0
+      ],
+      "candidate_ids_in_propagation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "peak_reserved_bytes": 7803502592,
+      "propagation_seconds": 39.34315009997226
+    },
+    "same_identity_reinit": {
+      "sampled_frames": 50,
+      "frames_with_any_mask": 33,
+      "prompt_candidate_ids": [
+        0
+      ],
+      "candidate_ids_in_propagation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "peak_reserved_bytes": 7803502592,
+      "propagation_seconds": 14.820849600015208
+    }
+  },
+  "important_frame_candidates": {
+    "804": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 804,
+        "mask": "masks/same_identity_reinit/propagation/000804_id0.png",
+        "bbox": [
+          531,
+          468,
+          678,
+          720
+        ],
+        "area": 12019,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      }
+    ],
+    "840": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 840,
+        "mask": "masks/same_identity_reinit/propagation/000840_id0.png",
+        "bbox": [
+          687,
+          443,
+          814,
+          639
+        ],
+        "area": 7129,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      }
+    ],
+    "852": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 852,
+        "mask": "masks/same_identity_reinit/propagation/000852_id0.png",
+        "bbox": [
+          612,
+          449,
+          708,
+          539
+        ],
+        "area": 5731,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      }
+    ],
+    "864": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 864,
+        "mask": "masks/same_identity_reinit/propagation/000864_id0.png",
+        "bbox": [
+          632,
+          462,
+          719,
+          537
+        ],
+        "area": 4219,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      }
+    ],
+    "900": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 900,
+        "mask": "masks/same_identity_reinit/propagation/000900_id0.png",
+        "bbox": [
+          604,
+          479,
+          687,
+          572
+        ],
+        "area": 4974,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      }
+    ],
+    "924": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 924,
+        "mask": "masks/same_identity_reinit/propagation/000924_id0.png",
+        "bbox": [
+          587,
+          455,
+          757,
+          571
+        ],
+        "area": 10000,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      },
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 1,
+        "frame": 924,
+        "mask": "masks/same_identity_reinit/propagation/000924_id1.png",
+        "bbox": [
+          925,
+          483,
+          1031,
+          670
+        ],
+        "area": 11915,
+        "confidence_or_probability": 0.7229437232017517,
+        "output_stage": "propagation"
+      },
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 2,
+        "frame": 924,
+        "mask": "masks/same_identity_reinit/propagation/000924_id2.png",
+        "bbox": [
+          800,
+          435,
+          859,
+          607
+        ],
+        "area": 8758,
+        "confidence_or_probability": 0.7064220309257507,
+        "output_stage": "propagation"
+      }
+    ],
+    "942": [
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 0,
+        "frame": 942,
+        "mask": "masks/same_identity_reinit/propagation/000942_id0.png",
+        "bbox": [
+          622,
+          424,
+          791,
+          542
+        ],
+        "area": 9568,
+        "confidence_or_probability": 0.859649121761322,
+        "output_stage": "propagation"
+      },
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 1,
+        "frame": 942,
+        "mask": "masks/same_identity_reinit/propagation/000942_id1.png",
+        "bbox": [
+          951,
+          470,
+          1071,
+          654
+        ],
+        "area": 12227,
+        "confidence_or_probability": 0.7229437232017517,
+        "output_stage": "propagation"
+      },
+      {
+        "schema": "SAM3Candidate",
+        "concept": "smartphone",
+        "window": "same_identity_reinit",
+        "local_id": 2,
+        "frame": 942,
+        "mask": "masks/same_identity_reinit/propagation/000942_id2.png",
+        "bbox": [
+          828,
+          414,
+          897,
+          585
+        ],
+        "area": 8817,
+        "confidence_or_probability": 0.7064220309257507,
+        "output_stage": "propagation"
+      }
+    ]
+  },
+  "local_id_continuity": [
+    {
+      "window": "target_full",
+      "local_id": 0,
+      "first_frame": 204,
+      "last_frame": 882,
+      "frames_present": 45,
+      "longest_consecutive_sampled_run": 40,
+      "reappearance_after_gap_count": 1
+    },
+    {
+      "window": "target_full",
+      "local_id": 1,
+      "first_frame": 786,
+      "last_frame": 792,
+      "frames_present": 2,
+      "longest_consecutive_sampled_run": 2,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "target_full",
+      "local_id": 2,
+      "first_frame": 792,
+      "last_frame": 966,
+      "frames_present": 30,
+      "longest_consecutive_sampled_run": 30,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "target_full",
+      "local_id": 3,
+      "first_frame": 924,
+      "last_frame": 954,
+      "frames_present": 6,
+      "longest_consecutive_sampled_run": 6,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "target_full",
+      "local_id": 4,
+      "first_frame": 924,
+      "last_frame": 960,
+      "frames_present": 7,
+      "longest_consecutive_sampled_run": 7,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "target_full",
+      "local_id": 5,
+      "first_frame": 996,
+      "last_frame": 1020,
+      "frames_present": 5,
+      "longest_consecutive_sampled_run": 5,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "same_identity_reinit",
+      "local_id": 0,
+      "first_frame": 804,
+      "last_frame": 966,
+      "frames_present": 28,
+      "longest_consecutive_sampled_run": 28,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "same_identity_reinit",
+      "local_id": 1,
+      "first_frame": 924,
+      "last_frame": 954,
+      "frames_present": 6,
+      "longest_consecutive_sampled_run": 6,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "same_identity_reinit",
+      "local_id": 2,
+      "first_frame": 924,
+      "last_frame": 960,
+      "frames_present": 7,
+      "longest_consecutive_sampled_run": 7,
+      "reappearance_after_gap_count": 0
+    },
+    {
+      "window": "same_identity_reinit",
+      "local_id": 3,
+      "first_frame": 996,
+      "last_frame": 1020,
+      "frames_present": 5,
+      "longest_consecutive_sampled_run": 5,
+      "reappearance_after_gap_count": 0
+    }
+  ],
+  "physical_identity_review": {
+    "basis": "Visual inspection of the saved original/overlay contact sheet; no identity update was performed",
+    "scope": "Seven selected frames in the f804 session; not exhaustive candidate accuracy",
+    "important_frame_interpretation": {
+      "804": "ID 0 covers the original black smartphone and spills onto the hand; f804 is a frozen V2.6 CONFIRMED_MATCH, but the local ID remains unbound here.",
+      "840": "ID 0 continues on the original black smartphone with hand spill; nearby cordless phones are not output as separate candidates yet.",
+      "852": "ID 0 remains on the original smartphone at left; the landline distractor is visible but no separate ID is emitted.",
+      "864": "ID 0 remains on the original smartphone at left; the landline distractor is visible but no separate ID is emitted.",
+      "900": "ID 0 remains over the original smartphone partly under the hand; no separate landline ID is emitted.",
+      "924": "Three simultaneous IDs: 0 on original smartphone, 1 and 2 on the two cordless desk phones.",
+      "942": "The same three local IDs still cover their corresponding phones; no obvious switch in this inspected interval."
+    },
+    "same_identity_reinit_window_id0_continuity": "28 consecutive sampled frames, f804 through f966; visual checks support original smartphone at f804, f840, f852, f864, f900, f924 and f942. Physical identity was not verified on every intervening frame.",
+    "multi_instance_interval": "IDs 0, 1 and 2 coexist at f924 and f942; IDs 1 and 2 persist for 6 and 7 consecutive sampled frames respectively from f924.",
+    "obvious_id_switches_in_inspected_frames": 0,
+    "loss_and_new_detection": "ID 0 is absent after f966 in this window; new ID 3 appears at f996 through f1020. It is not assumed to be the same physical smartphone.",
+    "probability_interpretation": "out_probs is the SAM3 output score and stays constant along these tracks; do not interpret it as calibrated framewise physical-identity confidence."
+  },
+  "classification": "CONCEPT_DETECTION_SHOWS_USEFUL_CONTINUITY",
+  "identity_merge_performed": false
+}

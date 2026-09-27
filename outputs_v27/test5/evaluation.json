@@ -1,0 +1,41 @@
+{
+  "task": "test5",
+  "evaluation_phase": "after_prediction_freeze",
+  "narrative_used_in_inference": false,
+  "narrative": "box; placement incompletely observed",
+  "qualitative_verdict": "MISSING_FINAL_CONTEXT",
+  "review": "保留球類 image context；沒有 box 位置證據，不推斷 INSIDE。",
+  "not_an_accuracy_measurement": true,
+  "unauthorized_memory_updates": 0,
+  "blocked_observation_counts_by_identity": {
+    "NOT_EVALUATED": 35,
+    "UNKNOWN": 61,
+    "AMBIGUOUS": 33
+  },
+  "physical_evidence_leaks": 0,
+  "search_provenance_valid": true,
+  "episode_support_causal": true,
+  "events_ordered": true,
+  "loss_snapshot_checks": [
+    {
+      "frame": 444,
+      "remembered_relations": 1,
+      "all_relations_last_trusted": true
+    }
+  ],
+  "upstream_entities": 101,
+  "memory_entities": 2,
+  "snapshots": 3,
+  "last_trusted_anchors": [
+    "entity_0043"
+  ],
+  "search_candidates": 1,
+  "search_priority_rules": [
+    2
+  ],
+  "limitations": [
+    "Existing event graphs contain no verified physical relations",
+    "SAM observations marked untrusted remain observation-only",
+    "Final track aliases are not used to retroactively authorize identity"
+  ]
+}

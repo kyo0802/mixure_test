@@ -1,0 +1,62 @@
+{
+  "schema": "v261_environment_1",
+  "audited_utc": "2026-09-26T12:20:13.135258+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.8",
+  "sam31_executable": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.venv_sam31\\Scripts\\python.exe",
+  "v26_environment": {
+    "path": ".venv",
+    "python": "3.12.8",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "cuda_runtime": "12.8",
+    "numpy": "2.5.3",
+    "opencv_python": "4.14.0.94",
+    "ultralytics": "8.4.158",
+    "huggingface_hub": "0.36.2",
+    "mutated": false
+  },
+  "sam31_environment": {
+    "path": ".venv_sam31",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "cuda_runtime": "12.8",
+    "numpy": "1.26.4",
+    "opencv_python": "4.11.0",
+    "sam3": "0.1.0",
+    "timm": "1.0.30",
+    "triton_windows": "3.6.0.post26",
+    "flash_attn_3": "3.0.0",
+    "einops": "0.8.2",
+    "huggingface_hub": "2.0.0"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5070 Ti",
+    "total_mib": 16303,
+    "free_mib_at_audit": 15331,
+    "driver_version": "616.92",
+    "compute_capability": "12.0"
+  },
+  "sam21": {
+    "repository": "facebookresearch/sam2",
+    "revision": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "checkpoint": ".models/sam2.1_hiera_small.pt",
+    "checkpoint_sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+    "config": "configs/sam2.1/sam2.1_hiera_s.yaml"
+  },
+  "sam31": {
+    "repository": "facebookresearch/sam3",
+    "revision": "2345a4ad109ac29c569da749c91d84f10dc08c40",
+    "model_repository": "facebook/sam3.1",
+    "model_revision": "daa63191845a41281374e725f4c9e51c7a824460",
+    "checkpoint": ".models/sam3.1/sam3.1_multiplex.pt",
+    "checkpoint_bytes": 3502755717,
+    "checkpoint_sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+    "authenticated_head_authorized": true
+  },
+  "official_requirements": {
+    "python": ">=3.12",
+    "pytorch": ">=2.7",
+    "cuda": ">=12.6"
+  }
+}

@@ -1,0 +1,6212 @@
+{
+  "schema": "v27_observations_1",
+  "config": {
+    "target_id": "phone_01",
+    "minimum_support_frames": 3,
+    "minimum_support_seconds": 0.35,
+    "maximum_support_gap_seconds": 0.65,
+    "image_near_gap_fraction": 0.12,
+    "maximum_current_anchors": 3,
+    "relation_end_confirmed_frames": 3,
+    "physical_evidence_confidence": 0.8
+  },
+  "provenance": {
+    "input_sha256": {
+      "outputs_v26/test4/entity_registry.json": "ae5724148f525e24df2643fb447f49874d3eac65d6b723405536921f7c671856",
+      "outputs_v26/test4/identity_timeline.json": "d1df00569a28620ed9545e48ca822f74c656175be2cdec76c90c310485bc4edf",
+      "outputs_v26/test4/candidate_stream.json": "d19fa279d1d7e33ac244759711ae0e47e9cd92092a4731e4057a1193d02551ce",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/detections.json": "69f42869e977d44899e6ec480c2b0b73ae29cd897a985e69285a7e3ada8e3d1c",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/video_metadata.json": "ad8adaacc4fd0da6e0fe62494e6693483e3961951f7a82da45cd1c247d7bbf1a",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_003/scene_graph.json": "a6ea02511d98ba68c7a948b86f31391452de8ba957abec5ebe91241d8c1cee67",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_016/scene_graph.json": "acc09e16b3ec5862799e82a96f36573706dce889d5ed5e3c75e1ddbc8b0360d5",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_019/scene_graph.json": "d5c39983505ef66e6391631161b4e22392f8f142dc6d80977acb0da81fae478b",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_024/scene_graph.json": "9aaeeac229467c77d3208bbb3588c1a72e5a9bb0e5f7bc224269b6cbfe9c1571",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_031/scene_graph.json": "bece39ce22d497778b1364ce5a67d8d1d53401a993ad68667b8ca2d1963117be",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_038/scene_graph.json": "a83a347dc7936c1eed4ba2cc87a9153dc2ac84f32280cf1919f48aec7950e302",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_048/scene_graph.json": "fdee792700919b8734f56f8ff3caa6bf8400b98e1cd4ecc73c67eee68b7b1a47",
+      "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_060/scene_graph.json": "a7eb84354ea19e8a8ca018a435eaa3186250f0cf3c65c462aaca851d249ab31d"
+    },
+    "frame_size": [
+      1280,
+      720
+    ],
+    "fps": 29.994868286007527,
+    "sampled_frames": 196,
+    "upstream_entity_count": 108,
+    "existing_event_evidence": [
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_003/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_016/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_019/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_024/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_031/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_038/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_048/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test4/upstream_v21/event_analysis/events/evt_060/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      }
+    ],
+    "limitations": [
+      "Existing event graphs contain no verified physical relations",
+      "SAM observations marked untrusted remain observation-only",
+      "Final track aliases are not used to retroactively authorize identity"
+    ]
+  },
+  "target_and_candidate_observations": [
+    {
+      "entity_id": null,
+      "frame": 0,
+      "time": 0.0,
+      "bbox": [
+        1222.447998046875,
+        307.4600830078125,
+        1266.1390380859375,
+        337.2886962890625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_001",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/0",
+      "confidence": 0.4951145052909851
+    },
+    {
+      "entity_id": null,
+      "frame": 6,
+      "time": 0.20003421727972626,
+      "bbox": [
+        1234.77685546875,
+        303.43170166015625,
+        1279.060791015625,
+        338.2690124511719
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_001",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/1",
+      "confidence": 0.3431645631790161
+    },
+    {
+      "entity_id": null,
+      "frame": 12,
+      "time": 0.4000684345594525,
+      "bbox": [
+        1259.5506591796875,
+        295.7210693359375,
+        1279.48583984375,
+        335.16046142578125
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_001",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/2",
+      "confidence": 0.263225793838501
+    },
+    {
+      "entity_id": null,
+      "frame": 102,
+      "time": 3.4005816937553464,
+      "bbox": [
+        729.8033447265625,
+        146.35325622558594,
+        900.376708984375,
+        621.5748291015625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/3",
+      "confidence": 0.34751611948013306
+    },
+    {
+      "entity_id": null,
+      "frame": 108,
+      "time": 3.6006159110350726,
+      "bbox": [
+        682.1483154296875,
+        38.88151168823242,
+        852.4777221679688,
+        532.3763427734375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/4",
+      "confidence": 0.37225088477134705
+    },
+    {
+      "entity_id": null,
+      "frame": 120,
+      "time": 4.000684345594525,
+      "bbox": [
+        622.77685546875,
+        58.157310485839844,
+        810.4647216796875,
+        493.440673828125
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/5",
+      "confidence": 0.34330111742019653
+    },
+    {
+      "entity_id": null,
+      "frame": 126,
+      "time": 4.200718562874251,
+      "bbox": [
+        640.87158203125,
+        42.41015625,
+        800.4435424804688,
+        435.5809020996094
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/6",
+      "confidence": 0.8630167841911316
+    },
+    {
+      "entity_id": null,
+      "frame": 132,
+      "time": 4.400752780153978,
+      "bbox": [
+        639.27294921875,
+        9.09423828125,
+        769.0408935546875,
+        330.9397888183594
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/7",
+      "confidence": 0.463067889213562
+    },
+    {
+      "entity_id": null,
+      "frame": 132,
+      "time": 4.400752780153978,
+      "bbox": [
+        639.4623413085938,
+        8.137125968933105,
+        740.9796142578125,
+        240.8925018310547
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_002",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/8",
+      "confidence": 0.3432922661304474
+    },
+    {
+      "entity_id": null,
+      "frame": 192,
+      "time": 6.40109495295124,
+      "bbox": [
+        408.71240234375,
+        540.81005859375,
+        657.0355224609375,
+        703.6556396484375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_003",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/9",
+      "confidence": 0.2672714293003082
+    },
+    {
+      "entity_id": null,
+      "frame": 198,
+      "time": 6.6011291702309665,
+      "bbox": [
+        463.89202880859375,
+        481.447265625,
+        666.7077026367188,
+        619.296875
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_004",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/10",
+      "confidence": 0.5221369862556458
+    },
+    {
+      "entity_id": null,
+      "frame": 204,
+      "time": 6.801163387510693,
+      "bbox": [
+        477.9288024902344,
+        473.8099060058594,
+        675.2935791015625,
+        601.0277099609375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_004",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/11",
+      "confidence": 0.8131300210952759
+    },
+    {
+      "entity_id": null,
+      "frame": 210,
+      "time": 7.001197604790419,
+      "bbox": [
+        477.8379821777344,
+        477.08245849609375,
+        676.4942626953125,
+        595.075439453125
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_004",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/12",
+      "confidence": 0.6904592514038086
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "bbox": [
+        467.65863037109375,
+        498.49200439453125,
+        675.4967041015625,
+        625.9937744140625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:36",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+      "confidence": 0.8389302492141724
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "bbox": [
+        469,
+        500,
+        673,
+        623
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/1",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "bbox": [
+        467.65863037109375,
+        498.49200439453125,
+        675.4967041015625,
+        625.9937744140625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:36",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/2",
+      "confidence": 0.8389302492141724
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "bbox": [
+        467.65863037109375,
+        498.49200439453125,
+        675.4967041015625,
+        625.9937744140625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:216:468",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/3",
+      "confidence": 0.8389302492141724
+    },
+    {
+      "entity_id": null,
+      "frame": 216,
+      "time": 7.201231822070145,
+      "bbox": [
+        467.65863037109375,
+        498.49200439453125,
+        675.4967041015625,
+        625.9937744140625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/13",
+      "confidence": 0.8389302492141724
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 222,
+      "time": 7.4012660393498715,
+      "bbox": [
+        446,
+        527,
+        649,
+        658
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/4",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "bbox": [
+        438,
+        546,
+        645,
+        684
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/5",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "bbox": [
+        436.0501403808594,
+        545.4678955078125,
+        640.4185791015625,
+        680.2884521484375
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:228:436",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+      "confidence": 0.4648059606552124
+    },
+    {
+      "entity_id": null,
+      "frame": 228,
+      "time": 7.601300256629598,
+      "bbox": [
+        436.0501403808594,
+        545.4678955078125,
+        640.4185791015625,
+        680.2884521484375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/14",
+      "confidence": 0.4648059606552124
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 234,
+      "time": 7.801334473909324,
+      "bbox": [
+        460,
+        555,
+        667,
+        695
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/7",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 240,
+      "time": 8.00136869118905,
+      "bbox": [
+        492,
+        552,
+        746,
+        702
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/8",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 246,
+      "time": 8.201402908468777,
+      "bbox": [
+        529,
+        555,
+        830,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/9",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 252,
+      "time": 8.401437125748503,
+      "bbox": [
+        530,
+        563,
+        834,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/10",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 258,
+      "time": 8.60147134302823,
+      "bbox": [
+        528,
+        561,
+        835,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/11",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 264,
+      "time": 8.801505560307955,
+      "bbox": [
+        519,
+        558,
+        830,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/12",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 270,
+      "time": 9.001539777587682,
+      "bbox": [
+        533,
+        551,
+        850,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/13",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 276,
+      "time": 9.201573994867408,
+      "bbox": [
+        539,
+        545,
+        856,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/14",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 282,
+      "time": 9.401608212147135,
+      "bbox": [
+        528,
+        540,
+        843,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/15",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 288,
+      "time": 9.60164242942686,
+      "bbox": [
+        514,
+        536,
+        828,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/16",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 294,
+      "time": 9.801676646706587,
+      "bbox": [
+        504,
+        534,
+        817,
+        716
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/17",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 300,
+      "time": 10.001710863986313,
+      "bbox": [
+        492,
+        533,
+        806,
+        714
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/18",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 306,
+      "time": 10.20174508126604,
+      "bbox": [
+        489,
+        533,
+        800,
+        710
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/19",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "bbox": [
+        487,
+        538,
+        798,
+        715
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/20",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "bbox": [
+        485.06219482421875,
+        535.611083984375,
+        798.265869140625,
+        716.334716796875
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:312:485",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+      "confidence": 0.36674964427948
+    },
+    {
+      "entity_id": null,
+      "frame": 312,
+      "time": 10.401779298545765,
+      "bbox": [
+        485.06219482421875,
+        535.611083984375,
+        798.265869140625,
+        716.334716796875
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/15",
+      "confidence": 0.36674964427948
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "bbox": [
+        484,
+        535,
+        794,
+        710
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/22",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "bbox": [
+        482.0857849121094,
+        533.8361206054688,
+        793.5496826171875,
+        709.1845703125
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:318:482",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+      "confidence": 0.2845098078250885
+    },
+    {
+      "entity_id": null,
+      "frame": 318,
+      "time": 10.601813515825492,
+      "bbox": [
+        482.0857849121094,
+        533.8361206054688,
+        793.5496826171875,
+        709.1845703125
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/16",
+      "confidence": 0.2845098078250885
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 324,
+      "time": 10.801847733105218,
+      "bbox": [
+        486,
+        535,
+        799,
+        710
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/24",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 330,
+      "time": 11.001881950384945,
+      "bbox": [
+        488,
+        534,
+        800,
+        708
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/25",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 336,
+      "time": 11.20191616766467,
+      "bbox": [
+        488,
+        534,
+        799,
+        706
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/26",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 342,
+      "time": 11.401950384944397,
+      "bbox": [
+        485,
+        534,
+        797,
+        707
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/27",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 348,
+      "time": 11.601984602224123,
+      "bbox": [
+        483,
+        533,
+        797,
+        707
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/28",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "bbox": [
+        487,
+        534,
+        801,
+        706
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/29",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "bbox": [
+        484.5000915527344,
+        532.3422241210938,
+        802.084228515625,
+        706.4468994140625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:354:485",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+      "confidence": 0.43915417790412903
+    },
+    {
+      "entity_id": null,
+      "frame": 354,
+      "time": 11.80201881950385,
+      "bbox": [
+        484.5000915527344,
+        532.3422241210938,
+        802.084228515625,
+        706.4468994140625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/17",
+      "confidence": 0.43915417790412903
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "bbox": [
+        487,
+        533,
+        803,
+        707
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/31",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "bbox": [
+        485.60076904296875,
+        530.8639526367188,
+        801.4681396484375,
+        704.1281127929688
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:42",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+      "confidence": 0.40068522095680237
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "bbox": [
+        485.60076904296875,
+        530.8639526367188,
+        801.4681396484375,
+        704.1281127929688
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:360:486",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/33",
+      "confidence": 0.40068522095680237
+    },
+    {
+      "entity_id": null,
+      "frame": 360,
+      "time": 12.002053036783575,
+      "bbox": [
+        485.60076904296875,
+        530.8639526367188,
+        801.4681396484375,
+        704.1281127929688
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/18",
+      "confidence": 0.40068522095680237
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 366,
+      "time": 12.202087254063303,
+      "bbox": [
+        479,
+        530,
+        794,
+        657
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/34",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 372,
+      "time": 12.402121471343028,
+      "bbox": [
+        477,
+        530,
+        794,
+        659
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/35",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 378,
+      "time": 12.602155688622755,
+      "bbox": [
+        478,
+        532,
+        647,
+        648
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/36",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "bbox": [
+        473,
+        527,
+        651,
+        654
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/37",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "bbox": [
+        472.31817626953125,
+        525.1636962890625,
+        652.8489379882812,
+        655.1908569335938
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:384:472",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+      "confidence": 0.2802594006061554
+    },
+    {
+      "entity_id": null,
+      "frame": 384,
+      "time": 12.80218990590248,
+      "bbox": [
+        472.31817626953125,
+        525.1636962890625,
+        652.8489379882812,
+        655.1908569335938
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/19",
+      "confidence": 0.2802594006061554
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 390,
+      "time": 13.002224123182208,
+      "bbox": [
+        461,
+        521,
+        788,
+        658
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/39",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 396,
+      "time": 13.202258340461933,
+      "bbox": [
+        451,
+        474,
+        661,
+        619
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/40",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "bbox": [
+        499,
+        401,
+        791,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/41",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "bbox": [
+        497.4300231933594,
+        399.4668884277344,
+        700.9528198242188,
+        545.749755859375
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:402:497",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+      "confidence": 0.7788519263267517
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "bbox": [
+        498.05096435546875,
+        398.08367919921875,
+        799.2591552734375,
+        718.3986206054688
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:402:498",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/43",
+      "confidence": 0.3715699017047882
+    },
+    {
+      "entity_id": null,
+      "frame": 402,
+      "time": 13.40229255774166,
+      "bbox": [
+        497.4300231933594,
+        399.4668884277344,
+        700.9528198242188,
+        545.749755859375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/20",
+      "confidence": 0.7788519263267517
+    },
+    {
+      "entity_id": null,
+      "frame": 402,
+      "time": 13.40229255774166,
+      "bbox": [
+        498.05096435546875,
+        398.08367919921875,
+        799.2591552734375,
+        718.3986206054688
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/21",
+      "confidence": 0.3715699017047882
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "bbox": [
+        588,
+        283,
+        844,
+        696
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/44",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "bbox": [
+        585.709228515625,
+        285.1133728027344,
+        853.67919921875,
+        698.8675537109375
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:408:586",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+      "confidence": 0.45626068115234375
+    },
+    {
+      "entity_id": null,
+      "frame": 408,
+      "time": 13.602326775021385,
+      "bbox": [
+        585.709228515625,
+        285.1133728027344,
+        853.67919921875,
+        698.8675537109375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/22",
+      "confidence": 0.45626068115234375
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 414,
+      "time": 13.802360992301113,
+      "bbox": [
+        624,
+        251,
+        903,
+        698
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/46",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "bbox": [
+        639,
+        255,
+        933,
+        720
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/47",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "bbox": [
+        639.694580078125,
+        253.69488525390625,
+        933.91259765625,
+        718.1744384765625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:420:640",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+      "confidence": 0.8286324143409729
+    },
+    {
+      "entity_id": null,
+      "frame": 420,
+      "time": 14.002395209580838,
+      "bbox": [
+        639.694580078125,
+        253.69488525390625,
+        933.91259765625,
+        718.1744384765625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/23",
+      "confidence": 0.8286324143409729
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "bbox": [
+        658,
+        253,
+        950,
+        710
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/49",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "bbox": [
+        658.6505126953125,
+        252.91204833984375,
+        946.122314453125,
+        702.020263671875
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:48",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+      "confidence": 0.9048541784286499
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "bbox": [
+        658.6505126953125,
+        252.91204833984375,
+        946.122314453125,
+        702.020263671875
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:426:659",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/51",
+      "confidence": 0.9048541784286499
+    },
+    {
+      "entity_id": null,
+      "frame": 426,
+      "time": 14.202429426860565,
+      "bbox": [
+        658.6505126953125,
+        252.91204833984375,
+        946.122314453125,
+        702.020263671875
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/24",
+      "confidence": 0.9048541784286499
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "bbox": [
+        694,
+        214,
+        990,
+        632
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/52",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "bbox": [
+        692.0172729492188,
+        213.8316650390625,
+        991.7765502929688,
+        631.1995849609375
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:48",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+      "confidence": 0.8862713575363159
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "bbox": [
+        692.0172729492188,
+        213.8316650390625,
+        991.7765502929688,
+        631.1995849609375
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:432:692",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/54",
+      "confidence": 0.8862713575363159
+    },
+    {
+      "entity_id": null,
+      "frame": 432,
+      "time": 14.40246364414029,
+      "bbox": [
+        692.0172729492188,
+        213.8316650390625,
+        991.7765502929688,
+        631.1995849609375
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/25",
+      "confidence": 0.8862713575363159
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "bbox": [
+        792,
+        141,
+        1086,
+        510
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/55",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "bbox": [
+        790.3676147460938,
+        140.663818359375,
+        1083.0738525390625,
+        508.59442138671875
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:48",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+      "confidence": 0.7929174900054932
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "bbox": [
+        790.3676147460938,
+        140.663818359375,
+        1083.0738525390625,
+        508.59442138671875
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:438:790",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/57",
+      "confidence": 0.7929174900054932
+    },
+    {
+      "entity_id": null,
+      "frame": 438,
+      "time": 14.602497861420018,
+      "bbox": [
+        790.3676147460938,
+        140.663818359375,
+        1083.0738525390625,
+        508.59442138671875
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/26",
+      "confidence": 0.7929174900054932
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "bbox": [
+        845,
+        0,
+        1133,
+        354
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/58",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "bbox": [
+        842.9661865234375,
+        0.9910482168197632,
+        1130.4365234375,
+        356.45269775390625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_track",
+      "source_id": "track:48",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+      "confidence": 0.5258957743644714
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "bbox": [
+        842.9661865234375,
+        0.9910482168197632,
+        1130.4365234375,
+        356.45269775390625
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:444:843",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/60",
+      "confidence": 0.5258957743644714
+    },
+    {
+      "entity_id": null,
+      "frame": 444,
+      "time": 14.802532078699743,
+      "bbox": [
+        842.9661865234375,
+        0.9910482168197632,
+        1130.4365234375,
+        356.45269775390625
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/27",
+      "confidence": 0.5258957743644714
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 450,
+      "time": 15.00256629597947,
+      "bbox": [
+        838,
+        0,
+        1076,
+        258
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/61",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 456,
+      "time": 15.202600513259195,
+      "bbox": [
+        848,
+        0,
+        986,
+        241
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/62",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "bbox": [
+        843,
+        0,
+        965,
+        272
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/63",
+      "confidence": null
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "bbox": [
+        841.8431396484375,
+        1.2934978008270264,
+        963.6435546875,
+        274.0740661621094
+      ],
+      "label": "cell phone",
+      "identity": "TRUSTED",
+      "source": "yolo_raw",
+      "source_id": "raw:462:842",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+      "confidence": 0.47440218925476074
+    },
+    {
+      "entity_id": null,
+      "frame": 462,
+      "time": 15.402634730538923,
+      "bbox": [
+        841.8431396484375,
+        1.2934978008270264,
+        963.6435546875,
+        274.0740661621094
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "None",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/28",
+      "confidence": 0.47440218925476074
+    },
+    {
+      "entity_id": null,
+      "frame": 468,
+      "time": 15.602668947818648,
+      "bbox": [
+        779.5394287109375,
+        121.419189453125,
+        842.01171875,
+        185.67919921875
+      ],
+      "label": "cell phone",
+      "identity": "NOT_EVALUATED",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_005",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/29",
+      "confidence": 0.27062419056892395
+    },
+    {
+      "entity_id": "phone_01",
+      "frame": 474,
+      "time": 15.802703165098375,
+      "bbox": [
+        724,
+        198,
+        892,
+        361
+      ],
+      "label": "cell phone",
+      "identity": "UNKNOWN",
+      "source": "sam",
+      "source_id": "phone_target",
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/65",
+      "confidence": null
+    },
+    {
+      "entity_id": null,
+      "frame": 798,
+      "time": 26.60455089820359,
+      "bbox": [
+        24.826251983642578,
+        77.32442474365234,
+        87.97066497802734,
+        230.44711303710938
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_006",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/30",
+      "confidence": 0.5108270049095154
+    },
+    {
+      "entity_id": null,
+      "frame": 804,
+      "time": 26.80458511548332,
+      "bbox": [
+        1.7017415761947632,
+        22.867919921875,
+        78.95402526855469,
+        184.9175262451172
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_006",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/31",
+      "confidence": 0.5440447330474854
+    },
+    {
+      "entity_id": null,
+      "frame": 804,
+      "time": 26.80458511548332,
+      "bbox": [
+        1.8436177968978882,
+        23.249298095703125,
+        77.88050842285156,
+        110.454345703125
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_006",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/32",
+      "confidence": 0.28663721680641174
+    },
+    {
+      "entity_id": null,
+      "frame": 804,
+      "time": 26.80458511548332,
+      "bbox": [
+        128.63735961914062,
+        39.992637634277344,
+        181.58663940429688,
+        186.05191040039062
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_007",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/33",
+      "confidence": 0.7693133354187012
+    },
+    {
+      "entity_id": null,
+      "frame": 810,
+      "time": 27.004619332763045,
+      "bbox": [
+        110.14964294433594,
+        65.1939926147461,
+        165.68032836914062,
+        192.2184295654297
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_007",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/34",
+      "confidence": 0.5622298121452332
+    },
+    {
+      "entity_id": null,
+      "frame": 810,
+      "time": 27.004619332763045,
+      "bbox": [
+        210.1551513671875,
+        78.41827392578125,
+        259.2919616699219,
+        207.76470947265625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_008",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/35",
+      "confidence": 0.6528109908103943
+    },
+    {
+      "entity_id": null,
+      "frame": 822,
+      "time": 27.404687767322496,
+      "bbox": [
+        303.4307556152344,
+        163.76193237304688,
+        343.90924072265625,
+        257.591064453125
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_009",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/36",
+      "confidence": 0.3052966892719269
+    },
+    {
+      "entity_id": null,
+      "frame": 858,
+      "time": 28.604893071000856,
+      "bbox": [
+        394.2509765625,
+        257.3533630371094,
+        428.20721435546875,
+        334.13970947265625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_010",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/37",
+      "confidence": 0.32460349798202515
+    },
+    {
+      "entity_id": null,
+      "frame": 882,
+      "time": 29.40502994011976,
+      "bbox": [
+        384.9297790527344,
+        247.08303833007812,
+        414.25775146484375,
+        323.8015441894531
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_011",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/38",
+      "confidence": 0.2617226839065552
+    },
+    {
+      "entity_id": null,
+      "frame": 918,
+      "time": 30.605235243798116,
+      "bbox": [
+        416.8837585449219,
+        246.12179565429688,
+        440.9263916015625,
+        316.2677917480469
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_012",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/39",
+      "confidence": 0.2702247202396393
+    },
+    {
+      "entity_id": null,
+      "frame": 978,
+      "time": 32.60557741659538,
+      "bbox": [
+        522.7906494140625,
+        231.19993591308594,
+        547.418212890625,
+        306.79779052734375
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_013",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/40",
+      "confidence": 0.49624213576316833
+    },
+    {
+      "entity_id": null,
+      "frame": 978,
+      "time": 32.60557741659538,
+      "bbox": [
+        567.1600341796875,
+        229.66177368164062,
+        598.9666748046875,
+        306.29791259765625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_014",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/41",
+      "confidence": 0.365878701210022
+    },
+    {
+      "entity_id": null,
+      "frame": 1002,
+      "time": 33.40571428571428,
+      "bbox": [
+        701.0267333984375,
+        301.63555908203125,
+        731.7801513671875,
+        354.4888916015625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_015",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/42",
+      "confidence": 0.3450070023536682
+    },
+    {
+      "entity_id": null,
+      "frame": 1026,
+      "time": 34.20585115483319,
+      "bbox": [
+        95.80552673339844,
+        509.3623962402344,
+        204.06382751464844,
+        537.3209838867188
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_016",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/43",
+      "confidence": 0.32741665840148926
+    },
+    {
+      "entity_id": null,
+      "frame": 1032,
+      "time": 34.40588537211292,
+      "bbox": [
+        208.8096160888672,
+        487.429443359375,
+        302.2947998046875,
+        510.4908142089844
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_017",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/44",
+      "confidence": 0.3319920003414154
+    },
+    {
+      "entity_id": null,
+      "frame": 1038,
+      "time": 34.60591958939264,
+      "bbox": [
+        267.72076416015625,
+        475.33831787109375,
+        355.7596435546875,
+        499.332275390625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_018",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/45",
+      "confidence": 0.5563725233078003
+    },
+    {
+      "entity_id": null,
+      "frame": 1044,
+      "time": 34.80595380667237,
+      "bbox": [
+        288.47186279296875,
+        475.76904296875,
+        377.25054931640625,
+        503.35809326171875
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_018",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/46",
+      "confidence": 0.40449848771095276
+    },
+    {
+      "entity_id": null,
+      "frame": 1050,
+      "time": 35.00598802395209,
+      "bbox": [
+        289.66265869140625,
+        481.290771484375,
+        379.8289794921875,
+        509.2969665527344
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_018",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/47",
+      "confidence": 0.5125699043273926
+    },
+    {
+      "entity_id": null,
+      "frame": 1062,
+      "time": 35.40605645851155,
+      "bbox": [
+        275.3873291015625,
+        490.4468688964844,
+        371.0578308105469,
+        520.8765869140625
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_018",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/48",
+      "confidence": 0.3413275182247162
+    },
+    {
+      "entity_id": null,
+      "frame": 1074,
+      "time": 35.806124893071,
+      "bbox": [
+        179.23336791992188,
+        528.7023315429688,
+        297.1586608886719,
+        569.7916870117188
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_019",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/49",
+      "confidence": 0.49729323387145996
+    },
+    {
+      "entity_id": null,
+      "frame": 1086,
+      "time": 36.20619332763045,
+      "bbox": [
+        294.162841796875,
+        257.04541015625,
+        315.65032958984375,
+        277.705078125
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_020",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/50",
+      "confidence": 0.2519480884075165
+    },
+    {
+      "entity_id": null,
+      "frame": 1092,
+      "time": 36.40622754491018,
+      "bbox": [
+        250.69940185546875,
+        257.8398742675781,
+        274.0848693847656,
+        278.09002685546875
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_021",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/51",
+      "confidence": 0.3097020387649536
+    },
+    {
+      "entity_id": null,
+      "frame": 1110,
+      "time": 37.00633019674936,
+      "bbox": [
+        48.73936080932617,
+        294.13739013671875,
+        81.21501159667969,
+        311.5446472167969
+      ],
+      "label": "cell phone",
+      "identity": "AMBIGUOUS",
+      "source": "frozen_candidate_authorization",
+      "source_id": "candidate_022",
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/52",
+      "confidence": 0.3688165247440338
+    }
+  ],
+  "relation_observations": [
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.18313149249172556,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.29671555940342703,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.18313149249172556,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.29671555940342703,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0034",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.495815393958509,
+        "center_distance_fraction": 0.12451870336988294,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0034",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.495815393958509,
+        "center_distance_fraction": 0.12451870336988294,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0034",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.495815393958509,
+        "center_distance_fraction": 0.12451870336988294,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0034",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.495815393958509,
+        "center_distance_fraction": 0.12451870336988294,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0035",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.028331258647711598,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.17258746828817947,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0035",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.028331258647711598,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.17258746828817947,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0035",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.028331258647711598,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.17258746828817947,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0036",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0036/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2697847790186664,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3804302433606149,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0036",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test4/entity_registry.json#entity_0036/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2697847790186664,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3804302433606149,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/14"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2125816278248306,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.31716502052841944,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/14"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2125816278248306,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.31716502052841944,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0034",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4772503656627212,
+        "center_distance_fraction": 0.09509315691897086,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0034",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4772503656627212,
+        "center_distance_fraction": 0.09509315691897086,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0034",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4772503656627212,
+        "center_distance_fraction": 0.09509315691897086,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0034",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0034/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4772503656627212,
+        "center_distance_fraction": 0.09509315691897086,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0035",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03928172632839468,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.18865485117212108,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0035",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03928172632839468,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.18865485117212108,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0035",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03928172632839468,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.18865485117212108,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/28"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22368978431648037,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3650332432441997,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/28"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22368978431648037,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3650332432441997,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0039",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 1.0,
+        "center_distance_fraction": 9.756257315956473e-05,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0039",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 1.0,
+        "center_distance_fraction": 9.756257315956473e-05,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0039",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 1.0,
+        "center_distance_fraction": 9.756257315956473e-05,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0039",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 1.0,
+        "center_distance_fraction": 9.756257315956473e-05,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.3089420566456482,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.451680257163647,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.3089420566456482,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.451680257163647,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/29"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22218234113140342,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3620967195566752,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/29"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22218234113140342,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3620967195566752,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0039",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9913500607642147,
+        "center_distance_fraction": 0.0008147716069047839,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0039",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9913500607642147,
+        "center_distance_fraction": 0.0008147716069047839,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0039",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9913500607642147,
+        "center_distance_fraction": 0.0008147716069047839,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0039",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9913500607642147,
+        "center_distance_fraction": 0.0008147716069047839,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30682950863060393,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.448335368762573,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30682950863060393,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.448335368762573,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/35"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22256503687840237,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3663537348341704,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/35"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22256503687840237,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.3663537348341704,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0039",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.988523346675064,
+        "center_distance_fraction": 0.0006477074284779318,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0039",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.988523346675064,
+        "center_distance_fraction": 0.0006477074284779318,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0039",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.988523346675064,
+        "center_distance_fraction": 0.0006477074284779318,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0039",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.988523346675064,
+        "center_distance_fraction": 0.0006477074284779318,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30969562708519716,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.45433485531587625,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30969562708519716,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.45433485531587625,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/36"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22123641316373163,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36562067231036127,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/36"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.22123641316373163,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36562067231036127,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0039",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9979817584221057,
+        "center_distance_fraction": 0.00039721006508949353,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0039",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9979817584221057,
+        "center_distance_fraction": 0.00039721006508949353,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0039",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9979817584221057,
+        "center_distance_fraction": 0.00039721006508949353,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0039",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0039/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9979817584221057,
+        "center_distance_fraction": 0.00039721006508949353,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30830210196617325,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4532140962404413,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30830210196617325,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4532140962404413,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/40"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.21344163306572872,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.32232934223255777,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/40"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.21344163306572872,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.32232934223255777,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.3029490136798506,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.40966407017277984,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.3029490136798506,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.40966407017277984,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0041",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03846584196917511,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.1965057526144908,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0041",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03846584196917511,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.1965057526144908,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0041",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.03846584196917511,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.1965057526144908,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0042",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0042/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2983002426224288,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4166118474832527,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0042",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0042/observation_history/3"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.2983002426224288,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4166118474832527,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5530847760645017,
+        "center_distance_fraction": 0.12684379435542315,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5530847760645017,
+        "center_distance_fraction": 0.12684379435542315,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5530847760645017,
+        "center_distance_fraction": 0.12684379435542315,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5530847760645017,
+        "center_distance_fraction": 0.12684379435542315,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0044",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0044/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9955732226681852,
+        "center_distance_fraction": 0.00022016726370066553,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0044",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0044/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9955732226681852,
+        "center_distance_fraction": 0.00022016726370066553,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0044",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0044/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9955732226681852,
+        "center_distance_fraction": 0.00022016726370066553,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0044",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+        "outputs_v26/test4/entity_registry.json#entity_0044/observation_history/2"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9955732226681852,
+        "center_distance_fraction": 0.00022016726370066553,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/43"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.12745857029627966,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.2698554855826597,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/43"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.12745857029627966,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.2698554855826597,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.23890434609337807,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36391111868336606,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.23890434609337807,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36391111868336606,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5209398307873325,
+        "center_distance_fraction": 0.14288016214487675,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5209398307873325,
+        "center_distance_fraction": 0.14288016214487675,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5209398307873325,
+        "center_distance_fraction": 0.14288016214487675,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/5"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5209398307873325,
+        "center_distance_fraction": 0.14288016214487675,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.11661942291329302,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.33855527042900496,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.11661942291329302,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.33855527042900496,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0032",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.11661942291329302,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.33855527042900496,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.24520717951696586,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.43587378698796847,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/12"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.24520717951696586,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.43587378698796847,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5493258053386487,
+        "center_distance_fraction": 0.11541109404272192,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5493258053386487,
+        "center_distance_fraction": 0.11541109404272192,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5493258053386487,
+        "center_distance_fraction": 0.11541109404272192,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.5493258053386487,
+        "center_distance_fraction": 0.11541109404272192,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/46"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.15130490378571707,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.372600184841042,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/46"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.15130490378571707,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.372600184841042,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/13"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.27185021771565465,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4690385179275746,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/13"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.27185021771565465,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4690385179275746,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7731574767720112,
+        "center_distance_fraction": 0.0794806587091259,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7731574767720112,
+        "center_distance_fraction": 0.0794806587091259,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7731574767720112,
+        "center_distance_fraction": 0.0794806587091259,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7731574767720112,
+        "center_distance_fraction": 0.0794806587091259,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/47"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.16198945429458167,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.375628916867301,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/47"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.16198945429458167,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.375628916867301,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.800082737749737,
+        "center_distance_fraction": 0.07274581357981894,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.800082737749737,
+        "center_distance_fraction": 0.07274581357981894,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.800082737749737,
+        "center_distance_fraction": 0.07274581357981894,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/9"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.800082737749737,
+        "center_distance_fraction": 0.07274581357981894,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/48"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.18319827878394254,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.38053708374596534,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/48"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.18319827878394254,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.38053708374596534,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/14"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30005741870383984,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.476174343820722,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/14"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.30005741870383984,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.476174343820722,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0041",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.02852188626212924,
+        "center_distance_fraction": 0.1921378440356599,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0041",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.02852188626212924,
+        "center_distance_fraction": 0.1921378440356599,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0041",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.02852188626212924,
+        "center_distance_fraction": 0.1921378440356599,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0041",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.02852188626212924,
+        "center_distance_fraction": 0.1921378440356599,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/10"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.8223603702518633,
+        "center_distance_fraction": 0.1037014854588627,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/10"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.8223603702518633,
+        "center_distance_fraction": 0.1037014854588627,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/10"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.8223603702518633,
+        "center_distance_fraction": 0.1037014854588627,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/10"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.8223603702518633,
+        "center_distance_fraction": 0.1037014854588627,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/49"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.24586431935414782,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.41798229848318735,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0032",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/49"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.24586431935414782,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.41798229848318735,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0040",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/15"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.36106726152788476,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.5102618471552266,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_BELOW",
+      "object": "entity_0040",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/15"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.36106726152788476,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.5102618471552266,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0041",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.02681365514001926,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.23427262889309078,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0041",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.02681365514001926,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.23427262889309078,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0041",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.02681365514001926,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.23427262889309078,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0043",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9181213634308891,
+        "center_distance_fraction": 0.0952304225429786,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0043",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9181213634308891,
+        "center_distance_fraction": 0.0952304225429786,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0043",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9181213634308891,
+        "center_distance_fraction": 0.0952304225429786,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0043",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0043/observation_history/11"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9181213634308891,
+        "center_distance_fraction": 0.0952304225429786,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0046",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4644294857399689,
+        "center_distance_fraction": 0.1408440225476933,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0046",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4644294857399689,
+        "center_distance_fraction": 0.1408440225476933,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0046",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4644294857399689,
+        "center_distance_fraction": 0.1408440225476933,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0046",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.4644294857399689,
+        "center_distance_fraction": 0.1408440225476933,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/50"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.279936005948417,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4408370965172549,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0032",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/50"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.279936005948417,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.4408370965172549,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0041",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.05708052737539826,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.29219201726638766,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0041",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.05708052737539826,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.29219201726638766,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0041",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.05708052737539826,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.29219201726638766,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0046",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9991060947816697,
+        "center_distance_fraction": 0.08760169675021276,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0046",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9991060947816697,
+        "center_distance_fraction": 0.08760169675021276,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0046",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9991060947816697,
+        "center_distance_fraction": 0.08760169675021276,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0046",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/1"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.9991060947816697,
+        "center_distance_fraction": 0.08760169675021276,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0032",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/53"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.25685763535382616,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36531146159275046,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0032",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/53"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.25685763535382616,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.36531146159275046,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_LEFT_OF",
+      "object": "entity_0046",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7366326531236137,
+        "center_distance_fraction": 0.142730427712288,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0046",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7366326531236137,
+        "center_distance_fraction": 0.142730427712288,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_NEAR",
+      "object": "entity_0046",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7366326531236137,
+        "center_distance_fraction": 0.142730427712288,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_OVERLAP",
+      "object": "entity_0046",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0046/observation_history/4"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.0,
+        "target_overlap_fraction": 0.7366326531236137,
+        "center_distance_fraction": 0.142730427712288,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_RIGHT_OF",
+      "object": "entity_0047",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0047/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.48674415188971365,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.5849873861263769,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "IMAGE_ABOVE",
+      "object": "entity_0047",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "reference_frame": "image_relative",
+      "source": [
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test4/entity_registry.json#entity_0047/observation_history/0"
+      ],
+      "metrics": {
+        "box_gap_fraction": 0.48674415188971365,
+        "target_overlap_fraction": 0.0,
+        "center_distance_fraction": 0.5849873861263769,
+        "physical_verification": false
+      },
+      "state": "OBSERVATION_ONLY"
+    }
+  ],
+  "identity_audit": [
+    {
+      "frame": 0,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/0",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 6,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/1",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 12,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/2",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 102,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/3",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 108,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/4",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 120,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/5",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 126,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/6",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 132,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/7",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 132,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/8",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/9",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 198,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/10",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/11",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/12",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/13",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/5",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/14",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/8",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/9",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/11",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/12",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/14",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/15",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/17",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/18",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/20",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/15",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/16",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/24",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/26",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/27",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/29",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/17",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/31",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/33",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/18",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/34",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/35",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/36",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/37",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/19",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/39",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/40",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/41",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/43",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/20",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/21",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/44",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/22",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/46",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/47",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/23",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/49",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/51",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/24",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/52",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/54",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/25",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/55",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/57",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/26",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/58",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/60",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/27",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 450,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/61",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 456,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/62",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/63",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true,
+      "reason": "trusted target identity"
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/28",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 468,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/29",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 474,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/65",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 798,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/30",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/31",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/32",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/33",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/34",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/35",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/36",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/37",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 882,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/38",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/39",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/40",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/41",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1002,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/42",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1026,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/43",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1032,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/44",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1038,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/45",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1044,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/46",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1050,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/47",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1062,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/48",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1074,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/49",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1086,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/50",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1092,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/51",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    },
+    {
+      "frame": 1110,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/52",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false,
+      "reason": "observation only"
+    }
+  ],
+  "node_admission_audit": [
+    {
+      "frame": 216,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 216,
+      "entity_id": "entity_0034",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 216,
+      "entity_id": "entity_0035",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 216,
+      "entity_id": "entity_0036",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 228,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 228,
+      "entity_id": "entity_0034",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 228,
+      "entity_id": "entity_0035",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 312,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 312,
+      "entity_id": "entity_0039",
+      "label": "remote",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 312,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 318,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 318,
+      "entity_id": "entity_0039",
+      "label": "remote",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 318,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 354,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 354,
+      "entity_id": "entity_0039",
+      "label": "remote",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 354,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 360,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 360,
+      "entity_id": "entity_0039",
+      "label": "remote",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 360,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0041",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0042",
+      "label": "book",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 384,
+      "entity_id": "entity_0044",
+      "label": "remote",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 402,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 402,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 402,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 408,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 408,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 408,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 420,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 420,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 420,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 426,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 426,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 432,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 432,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 432,
+      "entity_id": "entity_0041",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 432,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 438,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 438,
+      "entity_id": "entity_0040",
+      "label": "potted plant",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 438,
+      "entity_id": "entity_0041",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 438,
+      "entity_id": "entity_0043",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 438,
+      "entity_id": "entity_0046",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 444,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 444,
+      "entity_id": "entity_0041",
+      "label": "sports ball",
+      "eligible": true,
+      "reason": "useful nearby anchor or physical evidence"
+    },
+    {
+      "frame": 444,
+      "entity_id": "entity_0046",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 462,
+      "entity_id": "entity_0032",
+      "label": "microwave",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 462,
+      "entity_id": "entity_0046",
+      "label": "person",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    },
+    {
+      "frame": 462,
+      "entity_id": "entity_0047",
+      "label": "book",
+      "eligible": false,
+      "reason": "irrelevant, unsupported, or untrusted"
+    }
+  ],
+  "relation_candidates": [
+    {
+      "subject": "phone_01",
+      "relation": "ANCHOR_CONTEXT",
+      "object": "entity_0035",
+      "support_frames": [
+        216,
+        228
+      ],
+      "support_times": [
+        7.201231822070145,
+        7.601300256629598
+      ],
+      "evidence": [
+        {
+          "frame": 216,
+          "time": 7.201231822070145,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+            "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/3"
+          ],
+          "image_relations": [
+            "IMAGE_LEFT_OF",
+            "IMAGE_BELOW",
+            "IMAGE_NEAR"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.028331258647711598,
+            "target_overlap_fraction": 0.0,
+            "center_distance_fraction": 0.17258746828817947,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        },
+        {
+          "frame": 228,
+          "time": 7.601300256629598,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+            "outputs_v26/test4/entity_registry.json#entity_0035/observation_history/5"
+          ],
+          "image_relations": [
+            "IMAGE_LEFT_OF",
+            "IMAGE_BELOW",
+            "IMAGE_NEAR"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.03928172632839468,
+            "target_overlap_fraction": 0.0,
+            "center_distance_fraction": 0.18865485117212108,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        }
+      ],
+      "state": "CANDIDATE"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "ANCHOR_CONTEXT",
+      "object": "entity_0041",
+      "support_frames": [
+        432,
+        438,
+        444
+      ],
+      "support_times": [
+        14.40246364414029,
+        14.602497861420018,
+        14.802532078699743
+      ],
+      "evidence": [
+        {
+          "frame": 432,
+          "time": 14.40246364414029,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6"
+          ],
+          "image_relations": [
+            "IMAGE_RIGHT_OF",
+            "IMAGE_BELOW",
+            "IMAGE_NEAR",
+            "IMAGE_OVERLAP"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.0,
+            "target_overlap_fraction": 0.02852188626212924,
+            "center_distance_fraction": 0.1921378440356599,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        },
+        {
+          "frame": 438,
+          "time": 14.602497861420018,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7"
+          ],
+          "image_relations": [
+            "IMAGE_RIGHT_OF",
+            "IMAGE_ABOVE",
+            "IMAGE_NEAR"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.02681365514001926,
+            "target_overlap_fraction": 0.0,
+            "center_distance_fraction": 0.23427262889309078,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        },
+        {
+          "frame": 444,
+          "time": 14.802532078699743,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8"
+          ],
+          "image_relations": [
+            "IMAGE_RIGHT_OF",
+            "IMAGE_ABOVE",
+            "IMAGE_NEAR"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.05708052737539826,
+            "target_overlap_fraction": 0.0,
+            "center_distance_fraction": 0.29219201726638766,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        }
+      ],
+      "state": "PROMOTED"
+    },
+    {
+      "subject": "phone_01",
+      "relation": "ANCHOR_CONTEXT",
+      "object": "entity_0032",
+      "support_frames": [
+        408
+      ],
+      "support_times": [
+        13.602326775021385
+      ],
+      "evidence": [
+        {
+          "frame": 408,
+          "time": 13.602326775021385,
+          "source_refs": [
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+            "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44"
+          ],
+          "image_relations": [
+            "IMAGE_RIGHT_OF",
+            "IMAGE_BELOW",
+            "IMAGE_NEAR"
+          ],
+          "metrics": {
+            "box_gap_fraction": 0.11661942291329302,
+            "target_overlap_fraction": 0.0,
+            "center_distance_fraction": 0.33855527042900496,
+            "physical_verification": false
+          },
+          "physical_verification": false
+        }
+      ],
+      "state": "CANDIDATE"
+    }
+  ]
+}
