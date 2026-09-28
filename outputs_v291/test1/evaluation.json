@@ -1,0 +1,91 @@
+{
+  "task": "task1",
+  "actual_video": "test1.mp4",
+  "evaluation_after_prediction_freeze": true,
+  "prediction_manifest_sha256": "1a8cce79072de1ba13c59ef320ece9770a45f2f45abb707e42c643a71e5715d2",
+  "annotation_file": "evaluation/v21/task1_annotations.json",
+  "annotation_sha256": "e65de8610932c28fcf1cdc6a1876a798a3fb62cacca0b32d5b587270427b543e",
+  "method": "Sparse manually reviewed boxes matched class-agnostically at IoU >= 0.30; class checked only after box match; excludes occluded/out-of-view/uncertain points; not a full-video benchmark.",
+  "reviewed_visible_boxes": 10,
+  "matched_boxes": 8,
+  "box_match_rate": 0.8,
+  "matched_class_correct": 6,
+  "matched_class_total": 8,
+  "matched_class_rate": 0.75,
+  "phone": {
+    "reviewed_visible_boxes": 8,
+    "matched_boxes": 6,
+    "matched_class_correct": 6,
+    "matched_class_total": 6,
+    "detector_track_matches": {
+      "track_17": 3,
+      "matched_frames": [
+        270,
+        300,
+        348
+      ],
+      "later_box_matches_without_iou_track_assignment": [
+        360,
+        384,
+        396
+      ],
+      "missed_box_frames": [
+        372,
+        408
+      ]
+    },
+    "identity": "Initial target binding uses source local track 17; manual post-freeze review confirms track 17 is the original phone in the reviewed early fragment. No Identity Guard confirmed reacquisition; 40 rediscovery candidates remain AMBIGUOUS."
+  },
+  "basketball": {
+    "reviewed_boxes": 1,
+    "matched_boxes": 1,
+    "matched_detector_class": "cup",
+    "acceptable_class": "sports ball",
+    "class_correct": false,
+    "phone_relation": "Basketball-area context is present, but no phone-to-basketball physical relation is promoted."
+  },
+  "trash_bin": {
+    "reviewed_boxes": 1,
+    "matched_boxes": 1,
+    "matched_detector_class": "cup",
+    "acceptable_classes": [
+      "trash can",
+      "trash bin"
+    ],
+    "class_correct": false
+  },
+  "desk_phone": {
+    "manual_track_id": 70,
+    "fusion_entity_id": "entity_0057",
+    "distinct_from_phone_01": true
+  },
+  "chairs": {
+    "manual_track_ids": [
+      58,
+      60
+    ],
+    "fusion_entity_ids": [
+      "entity_0046",
+      "entity_0048"
+    ],
+    "distinct": true
+  },
+  "memory_semantic_contamination": {
+    "cup_labels_present_in_phone_memory": true,
+    "cup_labels_present_in_search_candidates": true,
+    "promoted_physical_relations": 0,
+    "assessment": "Yes: cup-like labels appear as phone_01 memory/search context. They remain unconfirmed; no physical relation was promoted."
+  },
+  "physical": {
+    "candidate": 7,
+    "uncertain": 3,
+    "promoted": 0
+  },
+  "search": {
+    "results": 18,
+    "candidate_physical_locations": 11,
+    "anchor_context_only": 7,
+    "no_context": false
+  },
+  "limits": "Sparse, non-random samples. The 8/10 box matching and 6/8 matched-class counts apply only to reviewed frames."
+}

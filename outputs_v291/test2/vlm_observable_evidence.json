@@ -1,0 +1,268 @@
+{
+  "calls": [
+    {
+      "event_id": "V291E01",
+      "anchor_id": "entity_0068",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\before_f579.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\during_f623.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\after_f669.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0068 (teddy bear); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "NO",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The teddy bear remains in the same position throughout the sequence, and there is no indication of it moving towards the anchor or crossing its boundary.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The teddy bear remains in the same position throughout the sequence, and there is no indication of it moving towards the anchor or crossing its boundary.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 4.546000000089407,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E01",
+      "anchor_id": "entity_0070",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\before_f579.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\during_f623.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E01\\after_f669.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0070 (microwave); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "NO",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The teddy bear remains in the same position on the microwave throughout the sequence.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The teddy bear remains in the same position on the microwave throughout the sequence.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 3.953999999910593,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E02",
+      "anchor_id": "entity_0068",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\before_f603.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\during_f647.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\after_f693.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0068 (teddy bear); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "YES",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The teddy bear remains on the shelf throughout the sequence, and the person's hand releases it after moving it slightly.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"YES\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The teddy bear remains on the shelf throughout the sequence, and the person's hand releases it after moving it slightly.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 11.25,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E02",
+      "anchor_id": "entity_0075",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\before_f603.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\during_f647.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E02\\after_f693.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0075 (potted plant); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "YES",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The teddy bear is initially on the shelf and then moves towards the potted plant, which remains in the same position throughout the sequence.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"YES\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The teddy bear is initially on the shelf and then moves towards the potted plant, which remains in the same position throughout the sequence.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 11.141000000061467,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E03",
+      "anchor_id": "entity_0070",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\before_f747.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\during_f791.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\after_f837.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0070 (microwave); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "NO",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The target (phone) was initially visible and then moved towards the microwave, which remained in view throughout the sequence.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The target (phone) was initially visible and then moved towards the microwave, which remained in view throughout the sequence.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 14.562999999849126,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E03",
+      "anchor_id": "entity_0071",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\before_f747.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\during_f791.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test2\\event_visuals\\V291E03\\after_f837.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor entity_0071 (potted plant); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "NO",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The target (phone) was initially visible and then moved towards the potted plant (entity_0071). It did not contact or cross the boundary of the potted plant. The potted plant remained visible throughout the sequence.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The target (phone) was initially visible and then moved towards the potted plant (entity_0071). It did not contact or cross the boundary of the potted plant. The potted plant remained visible throughout the sequence.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 15.608999999938533,
+      "relation_label_requested": false
+    }
+  ],
+  "summary": {
+    "calls": 6,
+    "valid": 6,
+    "unusable": 0,
+    "direct_relation_requested": false
+  }
+}

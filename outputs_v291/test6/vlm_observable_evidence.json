@@ -1,0 +1,96 @@
+{
+  "calls": [
+    {
+      "event_id": "V291E01",
+      "anchor_id": "event_anchor_005",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\before_f375.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\during_f419.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\after_f459.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor event_anchor_005 (chair); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "NO",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The basketball was initially on the table, then it moved slightly but did not contact the chair. The chair remained visible throughout the sequence.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The basketball was initially on the table, then it moved slightly but did not contact the chair. The chair remained visible throughout the sequence.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 15.937000000150874,
+      "relation_label_requested": false
+    },
+    {
+      "event_id": "V291E01",
+      "anchor_id": "event_anchor_006",
+      "model": {
+        "backend": "transformers",
+        "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+        "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "max_new_tokens": 220,
+        "image_longest_edge": 800,
+        "device": "cuda",
+        "dtype": "torch.bfloat16",
+        "sampling": false,
+        "quantization": "none",
+        "max_inference_seconds": 120,
+        "transformers_version": "4.57.6",
+        "torch_version": "2.10.0+cu128",
+        "processor": "Qwen2VLImageProcessorFast",
+        "grounding": "joint"
+      },
+      "images": [
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\before_f375.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\during_f419.jpg",
+        "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v291\\test6\\event_visuals\\V291E01\\after_f459.jpg"
+      ],
+      "prompt": "Inspect these BEFORE, DURING, AFTER frames. The green overlay is the known target phone_01. The magenta box is anchor event_anchor_006 (microwave); do not identify objects outside that box. Report visible observations only. Do not infer target identity, hidden objects, or a physical relation. For every yes/no field choose YES, NO, or UNCERTAIN. Return only JSON with keys: target_visible_before, target_moves_toward_anchor, target_contacts_or_crosses_anchor_boundary, target_visible_area_decreases, anchor_remains_visible, target_visible_after, hand_or_person_releases_target, target_stays_after_release, evidence_summary, uncertainty.",
+      "status": "VALID",
+      "observable_facts": {
+        "target_visible_before": "YES",
+        "target_moves_toward_anchor": "NO",
+        "target_contacts_or_crosses_anchor_boundary": "NO",
+        "target_visible_area_decreases": "NO",
+        "anchor_remains_visible": "YES",
+        "target_visible_after": "YES",
+        "hand_or_person_releases_target": "YES",
+        "target_stays_after_release": "NO",
+        "evidence_summary": "The basketball was initially on the table, then moved towards the microwave, and finally fell off the table.",
+        "uncertainty": "UNCERTAIN"
+      },
+      "raw_output": "```json\n{\n  \"target_visible_before\": \"YES\",\n  \"target_moves_toward_anchor\": \"NO\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"hand_or_person_releases_target\": \"YES\",\n  \"target_stays_after_release\": \"NO\",\n  \"evidence_summary\": \"The basketball was initially on the table, then moved towards the microwave, and finally fell off the table.\",\n  \"uncertainty\": \"UNCERTAIN\"\n}\n```",
+      "error": null,
+      "inference_seconds": 16.031999999890104,
+      "relation_label_requested": false
+    }
+  ],
+  "summary": {
+    "calls": 2,
+    "valid": 2,
+    "unusable": 0,
+    "direct_relation_requested": false
+  }
+}

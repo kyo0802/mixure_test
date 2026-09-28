@@ -1,0 +1,114 @@
+{
+  "schema": "v28_post_freeze_video_evaluation_1",
+  "task": "test3",
+  "evaluation_phase": "after_prediction_freeze",
+  "reference_labels_used_in_inference": false,
+  "expected_context": "box",
+  "verdict": "LOCAL_GRAPH_EXPANDED_BUT_FINAL_PLACEMENT_MISSING",
+  "review": "No box entity or container-entry transition was available. The graph adds chair/ball/microwave context, but INSIDE is unsupported.",
+  "not_an_accuracy_measurement": true,
+  "graph_quality": {
+    "v27_entities": 2,
+    "v28_entities": 5,
+    "hop0": 1,
+    "hop1": 3,
+    "hop2": 1,
+    "connected": true,
+    "snapshots": 6,
+    "final_nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0051",
+        "raw_label": "sports ball",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0054",
+        "raw_label": "microwave",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 2,
+        "via_primary": "entity_0051"
+      }
+    ]
+  },
+  "physical_reasoning": {
+    "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+    "candidate_count": 4,
+    "promoted_count": 0,
+    "rejected_or_uncertain_count": 8,
+    "types": {
+      "OCCLUDED_BY:REJECTED": 4,
+      "BEHIND:REJECTED": 4,
+      "NEAR:CANDIDATE": 4
+    },
+    "obvious_false_promotions": []
+  },
+  "safety": {
+    "unauthorized_memory_updates": 0,
+    "direct_image_to_physical_leaks": 0,
+    "false_identity_physical_relations": 0,
+    "disconnected_nodes": 0,
+    "irrelevant_branches_detected": 0
+  },
+  "search": {
+    "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+    "candidate_count": 6,
+    "top_result": {
+      "target": "phone_01",
+      "search_anchor": "entity_0051",
+      "anchor_label": "sports ball",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0009",
+      "source_memory": "G006",
+      "last_confirmed_time": 14.802532078699743,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [
+        {
+          "entity_id": "entity_0054",
+          "label": "microwave",
+          "relation": "IMAGE_NEAR_CONTEXT"
+        }
+      ],
+      "provenance": [
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/10",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/12",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/13",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/5",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/6",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/7",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/8",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/9",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/54",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/57",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/60",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/63",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/66",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/69",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/73",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/76"
+      ],
+      "rank": 1
+    }
+  },
+  "event_order_valid": true
+}

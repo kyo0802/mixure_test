@@ -1,0 +1,1194 @@
+{
+  "schema": "v28_observations_1",
+  "config": {
+    "target_id": "phone_01",
+    "minimum_support_frames": 3,
+    "minimum_support_seconds": 0.35,
+    "maximum_support_gap_seconds": 0.65,
+    "primary_local_distance_fraction": 0.3,
+    "primary_gap_fraction": 0.2,
+    "context_local_distance_fraction": 0.28,
+    "context_gap_fraction": 0.18,
+    "maximum_primary_anchors": 3,
+    "maximum_context_per_primary": 2,
+    "vlm_promotion_confidence": 0.8
+  },
+  "provenance": {
+    "input_sha256": {
+      "outputs_v26/test6/entity_registry.json": "f2883ae848806434e013107fc9a979345254f87760f973c33f228ad13687711c",
+      "outputs_v26/test6/identity_timeline.json": "f61baef011807e9c37d75ebea4585a1a105b57cc9b37cd6708aec5765baa6a4f",
+      "outputs_v26/test6/candidate_stream.json": "8ca21d9cfc2639845ffe5b0d813ba703338f879ba2b4569f7e58c97585fb8ddc",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/detections.json": "67608787e806e61a0d20ee3ea6bfd4fd8a4dfab0d6d98e47824cd317fff92988",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/video_metadata.json": "dc3c2affcb68faabb7568c99dda2bc1a6e2bdc268631abdb3e4883a5ceca254a",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_012/scene_graph.json": "c91f3deac0a46489e17e2f587e47d147d9788815f65f46e7a345b01dbd207a6c",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_024/scene_graph.json": "3382342708a6f5559868160b15aa930ea4907f7e7fb98d79f9eeafcb90367e19",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_025/scene_graph.json": "16442aaee551cdfe6f2e1289a95ce52f098d99abd4dac01a4098ae350263c128",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_036/scene_graph.json": "00707d418886fc8d2d66eb8a8c7ae33b99de7b67c453131390dcdc5cd6aa03bd",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_045/scene_graph.json": "5f52f1b61cd811098340db841a5e1e927664b347b3b50336459b4215e27ad640",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_046/scene_graph.json": "fd96a5d7aba01c1e13fd6e64702627a7bad044ef89269945b14ad73132b75dd6",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_047/scene_graph.json": "44b910946c6155b06405b9f68a5ce725705a9632e781af87ea6125401831168e",
+      "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_049/scene_graph.json": "57880428f5fac57dc602d5b948d15e6ebc2912188ccba82dea0f0410d60d9134"
+    },
+    "frame_size": [
+      1280,
+      720
+    ],
+    "fps": 29.986410991997584,
+    "sampled_frames": 167,
+    "upstream_entity_count": 85,
+    "existing_event_evidence": [
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_012/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_024/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_025/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_036/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_045/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_046/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_047/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test6/upstream_v21/event_analysis/events/evt_049/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      }
+    ],
+    "limitations": [
+      "Existing event graphs contain no verified physical relations",
+      "SAM observations marked untrusted remain observation-only",
+      "Final track aliases are not used to retroactively authorize identity"
+    ]
+  },
+  "identity_audit": [
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/0",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/1",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 198,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/2",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/3",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/5",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/4",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/8",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/9",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/5",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/11",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/12",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/6",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/14",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/15",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/7",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/17",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/18",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/8",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/20",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/21",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/9",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/23",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/24",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/10",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/26",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/27",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/11",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/29",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/30",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/12",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/31",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/32",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/33",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/13",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/34",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/35",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/36",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/14",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/37",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/38",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/39",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/15",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/40",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/41",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/42",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/16",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/43",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/44",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/45",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/17",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/46",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/47",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/48",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/18",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/49",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/51",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/19",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/52",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/54",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/20",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/55",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/57",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/21",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/58",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/60",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/22",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/61",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/62",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/63",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/23",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/64",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/65",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/66",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/24",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/67",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/68",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/69",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/25",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/70",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/71",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/72",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/26",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/73",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/74",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/75",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/27",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/76",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/77",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/78",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/28",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/79",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/80",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/81",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/29",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/82",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/83",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/84",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/85",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/30",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/31",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/32",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/86",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/87",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/88",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/33",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/89",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/90",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/91",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/34",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/92",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/93",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/35",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/94",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/95",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/96",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/36",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/97",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test6/entity_registry.json#phone_01/observation_history/98",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 594,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/37",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 600,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/38",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 600,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/39",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 606,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/40",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 606,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/41",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 612,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/42",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 612,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/43",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 618,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/44",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 672,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/45",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 672,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/46",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 678,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/47",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 678,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/48",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 684,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/49",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 690,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/50",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 690,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/51",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 696,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/52",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 696,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/53",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 702,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/54",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 708,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/55",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 708,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/56",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 714,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/57",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 714,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/58",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/59",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/60",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/61",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/62",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/63",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 732,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/64",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 732,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/65",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/66",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/67",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/68",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/69",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/70",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/71",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 756,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/72",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 756,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/73",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 762,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/74",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 762,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/75",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 768,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/76",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 768,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/77",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 774,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/78",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 774,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/79",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 780,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/80",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 786,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/81",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/82",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test6/candidate_stream.json#observations/83",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    }
+  ],
+  "blocked_identity_counts": {
+    "NOT_EVALUATED": 37,
+    "UNKNOWN": 36,
+    "TRUSTED": 31,
+    "AMBIGUOUS": 47
+  },
+  "observation_relations_are_physical": false
+}

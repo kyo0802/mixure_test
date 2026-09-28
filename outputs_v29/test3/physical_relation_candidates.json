@@ -1,0 +1,640 @@
+[
+  {
+    "candidate_id": "PRC0001",
+    "task": "test3",
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "anchor_label": "chair",
+    "candidate_relation": "OCCLUDED_BY",
+    "window": [
+      447,
+      537
+    ],
+    "start_frame": 475,
+    "end_frame": 495,
+    "semantic_roles": [
+      "OCCLUDER",
+      "LANDMARK"
+    ],
+    "features": {
+      "support_frames": 11,
+      "support_seconds": 0.6667807242657542,
+      "first_frame": 475,
+      "last_frame": 495,
+      "initial_distance": 0.12729466659295358,
+      "final_distance": 0.21862162613573483,
+      "distance_change": -0.09132695954278125,
+      "initial_containment": 0.12374455182869054,
+      "final_containment": 0.0,
+      "containment_trend": -0.12374455182869054,
+      "max_containment": 0.12374455182869054,
+      "initial_mask_area": 5277,
+      "final_mask_area": 620,
+      "visible_area_ratio": 0.09041855038646639,
+      "area_change_fraction": -0.8825090013265112,
+      "target_motion_px": [
+        31.312936623702353,
+        7.566372975210778,
+        10.307764064044152,
+        5.220153254455275,
+        10.012492197250394,
+        9.340770846134703,
+        10.920164833920778,
+        13.756816492197604,
+        29.920728600754362,
+        8.139410298049853
+      ],
+      "anchor_motion_px": [
+        4.213271904848935,
+        5.158138173831701,
+        4.342521814335953,
+        5.110283997244145,
+        5.5228818712404255,
+        6.004419521777054,
+        4.9562332601803565,
+        3.8049507354805474,
+        2.623394395178926,
+        2.4341570147708245
+      ],
+      "velocity_coupling": 0.8,
+      "post_anchor_frames": 21,
+      "post_anchor_without_target": 21,
+      "target_disappears_after": true,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 475,
+          "time": 15.836042201311662,
+          "area": 5277,
+          "distance": 0.12729466659295358,
+          "mask_containment": 0.12374455182869054
+        },
+        {
+          "frame": 477,
+          "time": 15.902720273738238,
+          "area": 6519,
+          "distance": 0.1507624771297398,
+          "mask_containment": 0.0013805798435342844
+        },
+        {
+          "frame": 479,
+          "time": 15.969398346164812,
+          "area": 6855,
+          "distance": 0.14154189377424536,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 481,
+          "time": 16.03607641859139,
+          "area": 6857,
+          "distance": 0.14656148683898307,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 483,
+          "time": 16.102754491017965,
+          "area": 6405,
+          "distance": 0.15276635898999225,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 485,
+          "time": 16.169432563444538,
+          "area": 6210,
+          "distance": 0.15993323662902817,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 487,
+          "time": 16.236110635871114,
+          "area": 5718,
+          "distance": 0.17061487644838585,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 489,
+          "time": 16.30278870829769,
+          "area": 3850,
+          "distance": 0.17966173908723243,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 491,
+          "time": 16.369466780724267,
+          "area": 2040,
+          "distance": 0.19101038019635383,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 493,
+          "time": 16.43614485315084,
+          "area": 992,
+          "distance": 0.21310545857768762,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 495,
+          "time": 16.502822925577416,
+          "area": 620,
+          "distance": 0.21862162613573483,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment"
+    ],
+    "vlm_verification_required": true,
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0002",
+    "task": "test3",
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "anchor_label": "chair",
+    "candidate_relation": "BEHIND",
+    "window": [
+      447,
+      537
+    ],
+    "start_frame": 475,
+    "end_frame": 495,
+    "semantic_roles": [
+      "OCCLUDER",
+      "LANDMARK"
+    ],
+    "features": {
+      "support_frames": 11,
+      "support_seconds": 0.6667807242657542,
+      "first_frame": 475,
+      "last_frame": 495,
+      "initial_distance": 0.12729466659295358,
+      "final_distance": 0.21862162613573483,
+      "distance_change": -0.09132695954278125,
+      "initial_containment": 0.12374455182869054,
+      "final_containment": 0.0,
+      "containment_trend": -0.12374455182869054,
+      "max_containment": 0.12374455182869054,
+      "initial_mask_area": 5277,
+      "final_mask_area": 620,
+      "visible_area_ratio": 0.09041855038646639,
+      "area_change_fraction": -0.8825090013265112,
+      "target_motion_px": [
+        31.312936623702353,
+        7.566372975210778,
+        10.307764064044152,
+        5.220153254455275,
+        10.012492197250394,
+        9.340770846134703,
+        10.920164833920778,
+        13.756816492197604,
+        29.920728600754362,
+        8.139410298049853
+      ],
+      "anchor_motion_px": [
+        4.213271904848935,
+        5.158138173831701,
+        4.342521814335953,
+        5.110283997244145,
+        5.5228818712404255,
+        6.004419521777054,
+        4.9562332601803565,
+        3.8049507354805474,
+        2.623394395178926,
+        2.4341570147708245
+      ],
+      "velocity_coupling": 0.8,
+      "post_anchor_frames": 21,
+      "post_anchor_without_target": 21,
+      "target_disappears_after": true,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 475,
+          "time": 15.836042201311662,
+          "area": 5277,
+          "distance": 0.12729466659295358,
+          "mask_containment": 0.12374455182869054
+        },
+        {
+          "frame": 477,
+          "time": 15.902720273738238,
+          "area": 6519,
+          "distance": 0.1507624771297398,
+          "mask_containment": 0.0013805798435342844
+        },
+        {
+          "frame": 479,
+          "time": 15.969398346164812,
+          "area": 6855,
+          "distance": 0.14154189377424536,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 481,
+          "time": 16.03607641859139,
+          "area": 6857,
+          "distance": 0.14656148683898307,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 483,
+          "time": 16.102754491017965,
+          "area": 6405,
+          "distance": 0.15276635898999225,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 485,
+          "time": 16.169432563444538,
+          "area": 6210,
+          "distance": 0.15993323662902817,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 487,
+          "time": 16.236110635871114,
+          "area": 5718,
+          "distance": 0.17061487644838585,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 489,
+          "time": 16.30278870829769,
+          "area": 3850,
+          "distance": 0.17966173908723243,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 491,
+          "time": 16.369466780724267,
+          "area": 2040,
+          "distance": 0.19101038019635383,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 493,
+          "time": 16.43614485315084,
+          "area": 992,
+          "distance": 0.21310545857768762,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 495,
+          "time": 16.502822925577416,
+          "area": 620,
+          "distance": 0.21862162613573483,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment"
+    ],
+    "vlm_verification_required": true,
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0003",
+    "task": "test3",
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "anchor_label": "chair",
+    "candidate_relation": "NEAR",
+    "window": [
+      447,
+      537
+    ],
+    "start_frame": 475,
+    "end_frame": 495,
+    "semantic_roles": [
+      "OCCLUDER",
+      "LANDMARK"
+    ],
+    "features": {
+      "support_frames": 11,
+      "support_seconds": 0.6667807242657542,
+      "first_frame": 475,
+      "last_frame": 495,
+      "initial_distance": 0.12729466659295358,
+      "final_distance": 0.21862162613573483,
+      "distance_change": -0.09132695954278125,
+      "initial_containment": 0.12374455182869054,
+      "final_containment": 0.0,
+      "containment_trend": -0.12374455182869054,
+      "max_containment": 0.12374455182869054,
+      "initial_mask_area": 5277,
+      "final_mask_area": 620,
+      "visible_area_ratio": 0.09041855038646639,
+      "area_change_fraction": -0.8825090013265112,
+      "target_motion_px": [
+        31.312936623702353,
+        7.566372975210778,
+        10.307764064044152,
+        5.220153254455275,
+        10.012492197250394,
+        9.340770846134703,
+        10.920164833920778,
+        13.756816492197604,
+        29.920728600754362,
+        8.139410298049853
+      ],
+      "anchor_motion_px": [
+        4.213271904848935,
+        5.158138173831701,
+        4.342521814335953,
+        5.110283997244145,
+        5.5228818712404255,
+        6.004419521777054,
+        4.9562332601803565,
+        3.8049507354805474,
+        2.623394395178926,
+        2.4341570147708245
+      ],
+      "velocity_coupling": 0.8,
+      "post_anchor_frames": 21,
+      "post_anchor_without_target": 21,
+      "target_disappears_after": true,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 475,
+          "time": 15.836042201311662,
+          "area": 5277,
+          "distance": 0.12729466659295358,
+          "mask_containment": 0.12374455182869054
+        },
+        {
+          "frame": 477,
+          "time": 15.902720273738238,
+          "area": 6519,
+          "distance": 0.1507624771297398,
+          "mask_containment": 0.0013805798435342844
+        },
+        {
+          "frame": 479,
+          "time": 15.969398346164812,
+          "area": 6855,
+          "distance": 0.14154189377424536,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 481,
+          "time": 16.03607641859139,
+          "area": 6857,
+          "distance": 0.14656148683898307,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 483,
+          "time": 16.102754491017965,
+          "area": 6405,
+          "distance": 0.15276635898999225,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 485,
+          "time": 16.169432563444538,
+          "area": 6210,
+          "distance": 0.15993323662902817,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 487,
+          "time": 16.236110635871114,
+          "area": 5718,
+          "distance": 0.17061487644838585,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 489,
+          "time": 16.30278870829769,
+          "area": 3850,
+          "distance": 0.17966173908723243,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 491,
+          "time": 16.369466780724267,
+          "area": 2040,
+          "distance": 0.19101038019635383,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 493,
+          "time": 16.43614485315084,
+          "area": 992,
+          "distance": 0.21310545857768762,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 495,
+          "time": 16.502822925577416,
+          "area": 620,
+          "distance": 0.21862162613573483,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment"
+    ],
+    "vlm_verification_required": false,
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0004",
+    "task": "test3",
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "anchor": "entity_0062",
+    "anchor_label": "person",
+    "candidate_relation": "HELD_BY",
+    "window": [
+      447,
+      537
+    ],
+    "start_frame": 475,
+    "end_frame": 495,
+    "semantic_roles": [
+      "INTERACTION_AGENT"
+    ],
+    "features": {
+      "support_frames": 11,
+      "support_seconds": 0.6667807242657542,
+      "first_frame": 475,
+      "last_frame": 495,
+      "initial_distance": 0.11177653511481611,
+      "final_distance": 0.07281299017668444,
+      "distance_change": 0.03896354493813167,
+      "initial_containment": 0.3318173204472238,
+      "final_containment": 0.932258064516129,
+      "containment_trend": 0.6004407440689052,
+      "max_containment": 0.9909274193548387,
+      "initial_mask_area": 5277,
+      "final_mask_area": 620,
+      "visible_area_ratio": 0.09041855038646639,
+      "area_change_fraction": -0.8825090013265112,
+      "target_motion_px": [
+        31.312936623702353,
+        7.566372975210778,
+        10.307764064044152,
+        5.220153254455275,
+        10.012492197250394,
+        9.340770846134703,
+        10.920164833920778,
+        13.756816492197604,
+        29.920728600754362,
+        8.139410298049853
+      ],
+      "anchor_motion_px": [
+        7.081169217654979,
+        12.852824964882535,
+        24.11935660838837,
+        4.540675078313937,
+        3.422979565451659,
+        2.105085872507854,
+        3.187900428590157,
+        5.963404730915459,
+        6.4497344382323085,
+        1.4641382906247011
+      ],
+      "velocity_coupling": 0.7,
+      "post_anchor_frames": 21,
+      "post_anchor_without_target": 21,
+      "target_disappears_after": true,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 475,
+          "time": 15.836042201311662,
+          "area": 5277,
+          "distance": 0.11177653511481611,
+          "mask_containment": 0.3318173204472238
+        },
+        {
+          "frame": 477,
+          "time": 15.902720273738238,
+          "area": 6519,
+          "distance": 0.10154097033829644,
+          "mask_containment": 0.40466329191593803
+        },
+        {
+          "frame": 479,
+          "time": 15.969398346164812,
+          "area": 6855,
+          "distance": 0.08998707006244591,
+          "mask_containment": 0.40014587892049597
+        },
+        {
+          "frame": 481,
+          "time": 16.03607641859139,
+          "area": 6857,
+          "distance": 0.07563043358191224,
+          "mask_containment": 0.5296777016187837
+        },
+        {
+          "frame": 483,
+          "time": 16.102754491017965,
+          "area": 6405,
+          "distance": 0.07471424525353332,
+          "mask_containment": 0.6010928961748634
+        },
+        {
+          "frame": 485,
+          "time": 16.169432563444538,
+          "area": 6210,
+          "distance": 0.07411701127372629,
+          "mask_containment": 0.6447665056360709
+        },
+        {
+          "frame": 487,
+          "time": 16.236110635871114,
+          "area": 5718,
+          "distance": 0.07150975062979661,
+          "mask_containment": 0.6551241692899615
+        },
+        {
+          "frame": 489,
+          "time": 16.30278870829769,
+          "area": 3850,
+          "distance": 0.06739947914951165,
+          "mask_containment": 0.8506493506493507
+        },
+        {
+          "frame": 491,
+          "time": 16.369466780724267,
+          "area": 2040,
+          "distance": 0.06656272250558344,
+          "mask_containment": 0.986764705882353
+        },
+        {
+          "frame": 493,
+          "time": 16.43614485315084,
+          "area": 992,
+          "distance": 0.07090092735039347,
+          "mask_containment": 0.9909274193548387
+        },
+        {
+          "frame": 495,
+          "time": 16.502822925577416,
+          "area": 620,
+          "distance": 0.07281299017668444,
+          "mask_containment": 0.932258064516129
+        }
+      ]
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target approaches anchor",
+      "target mask containment increases",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [],
+    "vlm_verification_required": true,
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  }
+]

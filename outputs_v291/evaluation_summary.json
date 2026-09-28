@@ -1,0 +1,186 @@
+{
+  "schema": "v291_postfreeze_evaluation_2",
+  "evaluation_after_prediction_freeze": true,
+  "prediction_manifest_sha256": "1a8cce79072de1ba13c59ef320ece9770a45f2f45abb707e42c643a71e5715d2",
+  "prediction_freeze_utc": "2026-09-28T00:55:05.448478+08:00",
+  "manual_reference_files": [
+    {
+      "path": "evaluation/v21/task1_annotations.json",
+      "sha256": "e65de8610932c28fcf1cdc6a1876a798a3fb62cacca0b32d5b587270427b543e"
+    },
+    {
+      "path": "evaluation/v21/task2_annotations.json",
+      "sha256": "ab9de51dae7698c4fcb4d31c2f95095bed1635d53e9d8344ef7682a8763a82c1"
+    },
+    {
+      "path": "evaluation/v21/README.md",
+      "sha256": "37bc004258922eb51b4609f59db63eefde79e58cb9d3877a381003f0069d289a"
+    }
+  ],
+  "global_note": "Manual notes were read only after prediction freeze verification. They were not used in inference. This is a sparse, non-random diagnostic evaluation, not full-video accuracy.",
+  "per_video": {
+    "task1": {
+      "task": "task1",
+      "actual_video": "test1.mp4",
+      "evaluation_after_prediction_freeze": true,
+      "prediction_manifest_sha256": "1a8cce79072de1ba13c59ef320ece9770a45f2f45abb707e42c643a71e5715d2",
+      "annotation_file": "evaluation/v21/task1_annotations.json",
+      "annotation_sha256": "e65de8610932c28fcf1cdc6a1876a798a3fb62cacca0b32d5b587270427b543e",
+      "method": "Sparse manually reviewed boxes matched class-agnostically at IoU >= 0.30; class checked only after box match; excludes occluded/out-of-view/uncertain points; not a full-video benchmark.",
+      "reviewed_visible_boxes": 10,
+      "matched_boxes": 8,
+      "box_match_rate": 0.8,
+      "matched_class_correct": 6,
+      "matched_class_total": 8,
+      "matched_class_rate": 0.75,
+      "phone": {
+        "reviewed_visible_boxes": 8,
+        "matched_boxes": 6,
+        "matched_class_correct": 6,
+        "matched_class_total": 6,
+        "detector_track_matches": {
+          "track_17": 3,
+          "matched_frames": [
+            270,
+            300,
+            348
+          ],
+          "later_box_matches_without_iou_track_assignment": [
+            360,
+            384,
+            396
+          ],
+          "missed_box_frames": [
+            372,
+            408
+          ]
+        },
+        "identity": "Initial target binding uses source local track 17; manual post-freeze review confirms track 17 is the original phone in the reviewed early fragment. No Identity Guard confirmed reacquisition; 40 rediscovery candidates remain AMBIGUOUS."
+      },
+      "basketball": {
+        "reviewed_boxes": 1,
+        "matched_boxes": 1,
+        "matched_detector_class": "cup",
+        "acceptable_class": "sports ball",
+        "class_correct": false,
+        "phone_relation": "Basketball-area context is present, but no phone-to-basketball physical relation is promoted."
+      },
+      "trash_bin": {
+        "reviewed_boxes": 1,
+        "matched_boxes": 1,
+        "matched_detector_class": "cup",
+        "acceptable_classes": [
+          "trash can",
+          "trash bin"
+        ],
+        "class_correct": false
+      },
+      "desk_phone": {
+        "manual_track_id": 70,
+        "fusion_entity_id": "entity_0057",
+        "distinct_from_phone_01": true
+      },
+      "chairs": {
+        "manual_track_ids": [
+          58,
+          60
+        ],
+        "fusion_entity_ids": [
+          "entity_0046",
+          "entity_0048"
+        ],
+        "distinct": true
+      },
+      "memory_semantic_contamination": {
+        "cup_labels_present_in_phone_memory": true,
+        "cup_labels_present_in_search_candidates": true,
+        "promoted_physical_relations": 0,
+        "assessment": "Yes: cup-like labels appear as phone_01 memory/search context. They remain unconfirmed; no physical relation was promoted."
+      },
+      "physical": {
+        "candidate": 7,
+        "uncertain": 3,
+        "promoted": 0
+      },
+      "search": {
+        "results": 18,
+        "candidate_physical_locations": 11,
+        "anchor_context_only": 7,
+        "no_context": false
+      },
+      "limits": "Sparse, non-random samples. The 8/10 box matching and 6/8 matched-class counts apply only to reviewed frames."
+    },
+    "task2": {
+      "task": "task2",
+      "actual_video": "test2.mp4",
+      "evaluation_after_prediction_freeze": true,
+      "prediction_manifest_sha256": "1a8cce79072de1ba13c59ef320ece9770a45f2f45abb707e42c643a71e5715d2",
+      "annotation_file": "evaluation/v21/task2_annotations.json",
+      "annotation_sha256": "ab9de51dae7698c4fcb4d31c2f95095bed1635d53e9d8344ef7682a8763a82c1",
+      "method": "Sparse manually reviewed boxes matched class-agnostically at IoU >= 0.30; class checked only after box match; excludes occluded/out-of-view/uncertain points; not a full-video benchmark.",
+      "reviewed_visible_boxes": 22,
+      "matched_boxes": 15,
+      "box_match_rate": 0.6818,
+      "matched_class_correct": 14,
+      "matched_class_total": 15,
+      "matched_class_rate": 0.9333,
+      "phone": {
+        "reviewed_visible_boxes": 17,
+        "matched_boxes": 11,
+        "matched_class_correct": 11,
+        "matched_class_total": 11,
+        "initial_target_binding_source_track": 22,
+        "initial_target_binding_frame": 96,
+        "manually_verified_same_phone_fragment_tracks": [
+          22,
+          43
+        ],
+        "current_fusion_entity_tracks": {
+          "track_22": "entity_0019",
+          "track_43": "entity_0031"
+        },
+        "safe_identity_merge_of_short_gap": false,
+        "identity_guard_confirmed_reacquisitions": 0,
+        "rediscovery_candidates_ambiguous": 66,
+        "assessment": "Initial phone binding is on the reviewed original-phone track. The manually verified short-gap pair (22,43) remains split across fusion entities; current Identity Guard did not authorize a merge."
+      },
+      "desk_phones": {
+        "reviewed_boxes": 2,
+        "matched_boxes": 2,
+        "matched_class_correct": 2,
+        "track_78_entity": "entity_0061",
+        "track_80_entity": "entity_0063",
+        "distinct": true,
+        "track_81_entity": "entity_0061",
+        "assessment": "The two later desk phones remain separate; track 81 stays with the left handset entity from track 78."
+      },
+      "context": {
+        "teddy_bear": "Appears in candidate/search context, unconfirmed; highest-ranked target context.",
+        "microwave": "Appears in candidate/search context, unconfirmed.",
+        "promoted_physical_relation": false,
+        "physical_relation_candidates": 29,
+        "physical_uncertain": 13
+      },
+      "other_objects": {
+        "basketball": {
+          "matched_reviewed_boxes": 1,
+          "total_reviewed_boxes": 2,
+          "class_correct_matched": 1
+        },
+        "trash_bin": {
+          "matched_reviewed_boxes": 1,
+          "matched_detector_class": "cup",
+          "class_correct": false
+        }
+      },
+      "search": {
+        "results": 27,
+        "candidate_physical_locations": 13,
+        "anchor_context_only": 14,
+        "no_context": false
+      },
+      "limits": "Sparse, non-random samples. The 15/22 box matching and 14/15 matched-class counts apply only to reviewed frames."
+    }
+  },
+  "other_videos": "test3-test9 were audited against frozen V2.8/V2.9 evidence and V2.9.1 outputs; no manual GT labels were used for their evaluation."
+}

@@ -1,0 +1,57 @@
+{
+  "event_id": "evt_023",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 9.603636363636364,
+  "peak_time": 10.403939393939394,
+  "end_time": 11.403939393939394,
+  "involved_track_ids": [
+    46,
+    47,
+    54
+  ],
+  "signals": [
+    "disappearance_candidate",
+    "motion_coupling_candidate",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "last_visible": 10.403939393939394,
+      "next_visible_or_video_end": 30.811666666666667,
+      "absence_seconds": 20.40772727272727,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "last_visible": 10.403939393939394,
+      "next_visible_or_video_end": 30.811666666666667,
+      "absence_seconds": 20.40772727272727,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "from_nearest_track": 47,
+      "to_nearest_track": 46,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "from_nearest_track": 47,
+      "to_nearest_track": 54,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "cosine_similarity": 0.9804406093869106,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "last_visible": 9.603636363636364,
+      "next_visible_or_video_end": 30.811666666666667,
+      "absence_seconds": 21.208030303030306,
+      "interpretation": "undetected, not lost or moved"
+    }
+  ],
+  "confidence": 0.7316712737083435,
+  "priority": 3.1240393601282674,
+  "selected": true,
+  "skip_reason": null
+}

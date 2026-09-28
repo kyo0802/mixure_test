@@ -1,0 +1,138 @@
+{
+  "schema": "v28_post_freeze_video_evaluation_1",
+  "task": "test7",
+  "evaluation_phase": "after_prediction_freeze",
+  "reference_labels_used_in_inference": false,
+  "expected_context": "doll",
+  "verdict": "IDENTITY_SAFETY_BLOCKS_FINAL_CONTEXT",
+  "review": "The provisional re-identification remains observation-only. No doll relation is written to phone memory; retained anchors are older image contexts.",
+  "not_an_accuracy_measurement": true,
+  "graph_quality": {
+    "v27_entities": 2,
+    "v28_entities": 6,
+    "hop0": 1,
+    "hop1": 5,
+    "hop2": 0,
+    "connected": true,
+    "snapshots": 4,
+    "final_nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0025",
+        "raw_label": "microwave",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0027",
+        "raw_label": "chair",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0031",
+        "raw_label": "chair",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      }
+    ]
+  },
+  "physical_reasoning": {
+    "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+    "candidate_count": 8,
+    "promoted_count": 0,
+    "rejected_or_uncertain_count": 14,
+    "types": {
+      "OCCLUDED_BY:REJECTED": 7,
+      "BEHIND:REJECTED": 7,
+      "NEAR:CANDIDATE": 8
+    },
+    "obvious_false_promotions": []
+  },
+  "safety": {
+    "unauthorized_memory_updates": 0,
+    "direct_image_to_physical_leaks": 0,
+    "false_identity_physical_relations": 0,
+    "disconnected_nodes": 0,
+    "irrelevant_branches_detected": 0
+  },
+  "search": {
+    "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+    "candidate_count": 10,
+    "top_result": {
+      "target": "phone_01",
+      "search_anchor": "entity_0025",
+      "anchor_label": "microwave",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0014",
+      "source_memory": "G004",
+      "last_confirmed_time": 14.004255319148935,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/24",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/25",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/26",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/27",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/28",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/29",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/30",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/31",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/32",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/33",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/34",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/35",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/36",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/37",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/38",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/39",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/40",
+        "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/41",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/29",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/31",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/34",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/37",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/40",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/43",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/46",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/49",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/52",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/55",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/58",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/61",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/64",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/67",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/70",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/72",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/75",
+        "outputs_v26/test7/entity_registry.json#phone_01/observation_history/78"
+      ],
+      "rank": 1
+    }
+  },
+  "event_order_valid": true
+}

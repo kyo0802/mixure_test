@@ -1,0 +1,41 @@
+[
+  {
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "start_frame": 555,
+    "peak_frame": 600,
+    "end_frame": 645,
+    "start_time": 18.503854166666667,
+    "end_time": 21.504479166666666,
+    "event_type": "POSSIBLE_PLACEMENT",
+    "candidate_anchors": [
+      {
+        "entity_id": "entity_0055",
+        "raw_label": "person",
+        "distance_fraction": 0.055,
+        "bbox": [
+          1018.5302124023438,
+          499.566650390625,
+          1278.9630126953125,
+          709.6610717773438
+        ],
+        "source": "outputs_v26/test9/entity_registry.json#entity_0055/observation_history/6"
+      }
+    ],
+    "cues": {
+      "motion_slowdown": true,
+      "anchor_approach": false,
+      "overlap_increase": true,
+      "visibility_loss": false,
+      "target_disappearance": true,
+      "anchor_remains_visible": true,
+      "hand_release": false
+    },
+    "evidence_strength": "HIGH",
+    "reason": "Trusted target loss with 4 independent interaction cues",
+    "provenance": [
+      "outputs_v25_rerun/test9/sam/sam_continuity_log.json#600:phone_target",
+      "outputs_v26/identity_timeline.json#600"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+flowchart TD
+    A[原始 RGB 影片] --> B[影片解碼與抽樣]
+    B --> C[YOLO11s + 分類別 ByteTrack]
+    C --> D[V2.1 品質檢查與短距離身份關聯]
+    D --> E[目標綁定 phone_01]
+    E --> F[SAM2.1 目標 mask 傳播]
+    C --> G[持續電話候選 admission]
+    G --> H[候選 SAM 支持 + MobileNetV3 外觀]
+    D --> I[YOLO / SAM EntityRegistry 融合]
+    F --> I
+    H --> J[V2.6 Identity Guard]
+    I --> J
+    J --> K[可信身份觀測與候選稽核]
+    K --> L[V2.8 目標中心局部圖與歷史記憶]
+    K --> M[V2.9 / V2.9.1 事件視窗與密集檢查]
+    M --> N[錨點復原 + VLM 可觀察事實]
+    N --> O[V2.9.1 物理候選 gate]
+    O --> L
+    L --> P[規則式搜尋排序 + 圖表 / JSON]
+    K --> Q[V2.9.1 rediscovery：整理既有候選]
+    Q -. 尚未成為主動重尋回饋 .-> J
+    J -. 重啟後結果尚未完整回流 .-> F
+    R[SAM3 / SAM3.1 獨立實驗] -. 未整合主線 .-> H

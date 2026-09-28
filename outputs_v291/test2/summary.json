@@ -1,0 +1,123 @@
+{
+  "task": "test2",
+  "raw_video_full_pipeline": true,
+  "video_sha256": "6ea954179859c6b0e6af6e1ac88c5bf1d3b296da6b7a076c113a2cca86817fe1",
+  "events": {
+    "RECONFIRM_EVENT": 3
+  },
+  "event_windows": 3,
+  "anchors": {
+    "existing": 32,
+    "event_local": 4,
+    "co_visible_frames": 61
+  },
+  "rediscovery": {
+    "CONFIRMED": 0,
+    "PROVISIONAL": 0,
+    "AMBIGUOUS": 66,
+    "REJECTED": 0
+  },
+  "rediscovery_candidates": 66,
+  "vlm": {
+    "calls": 6,
+    "valid": 6,
+    "unusable": 0,
+    "observable_facts_extracted": 60
+  },
+  "physical": {
+    "OCCLUDED_BY:CANDIDATE": 8,
+    "BEHIND:UNCERTAIN": 8,
+    "NEAR:CANDIDATE": 21,
+    "NEAR:UNCERTAIN": 5
+  },
+  "physical_promotions": 0,
+  "physical_candidates": 29,
+  "memory_episodes_added": 29,
+  "search_candidates": 27,
+  "search_top": [
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0068",
+      "anchor_label": "teddy bear",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "V291_0046",
+      "source_memory": null,
+      "last_confirmed_time": 0.0,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v291",
+        "V291E01"
+      ],
+      "rank": 1
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0068",
+      "anchor_label": "teddy bear",
+      "relation": "OCCLUDED_BY",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "V291_0045",
+      "source_memory": null,
+      "last_confirmed_time": 0.0,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v291",
+        "V291E01"
+      ],
+      "rank": 2
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0070",
+      "anchor_label": "microwave",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "V291_0047",
+      "source_memory": null,
+      "last_confirmed_time": 0.0,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v291",
+        "V291E01"
+      ],
+      "rank": 3
+    }
+  ],
+  "source_frames": 155,
+  "candidate_ids": [
+    "candidate_011",
+    "candidate_012",
+    "candidate_013",
+    "candidate_014"
+  ],
+  "identity_guard_gt_accessed": false,
+  "reconfirm_context_events": 3,
+  "pipeline_counts": {
+    "sampled_frames": 155,
+    "yolo_detections": 1511,
+    "local_tracks": 96,
+    "trusted_sam_masks": 76,
+    "persistent_entities": 94,
+    "candidate_observations": 139,
+    "identity_timeline_rows": 155
+  },
+  "search_breakdown": {
+    "promoted_physical_locations": 0,
+    "candidate_physical_locations": 13,
+    "anchor_context_only_locations": 14,
+    "no_context": false
+  }
+}

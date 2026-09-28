@@ -1,0 +1,161 @@
+[
+  {
+    "candidate_id": "PRC0001",
+    "task": "test8",
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "anchor": "entity_0035",
+    "anchor_label": "person",
+    "candidate_relation": "HELD_BY",
+    "window": [
+      387,
+      477
+    ],
+    "start_frame": 415,
+    "end_frame": 435,
+    "semantic_roles": [
+      "INTERACTION_AGENT"
+    ],
+    "features": {
+      "support_frames": 11,
+      "support_seconds": 0.6667271078875796,
+      "first_frame": 415,
+      "last_frame": 435,
+      "initial_distance": 0.08081826505766652,
+      "final_distance": 0.11481891696155859,
+      "distance_change": -0.034000651903892065,
+      "initial_containment": 0.7395780761078026,
+      "final_containment": 0.0571830985915493,
+      "containment_trend": -0.6823949775162532,
+      "max_containment": 0.7395780761078026,
+      "initial_mask_area": 9907,
+      "final_mask_area": 17750,
+      "visible_area_ratio": 0.8194829178208679,
+      "area_change_fraction": 0.791662460886242,
+      "target_motion_px": [
+        42.573465914816005,
+        2.9154759474226504,
+        1.5,
+        5.5901699437494745,
+        10.012492197250394,
+        14.317821063276353,
+        18.33712082089225,
+        28.71410803072246,
+        32.09750769140807,
+        27.3221521846285
+      ],
+      "anchor_motion_px": [
+        15.325293653953596,
+        13.637951578121996,
+        10.565332220636183,
+        5.606730648568815,
+        6.132853168095308,
+        10.398571839358649,
+        11.444914106727815,
+        18.547199114597316,
+        58.02545234014082,
+        25.416000444256287
+      ],
+      "velocity_coupling": 0.5,
+      "post_anchor_frames": 0,
+      "post_anchor_without_target": 0,
+      "target_disappears_after": false,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 415,
+          "time": 13.834587488667271,
+          "area": 9907,
+          "distance": 0.08081826505766652,
+          "mask_containment": 0.7395780761078026
+        },
+        {
+          "frame": 417,
+          "time": 13.90126019945603,
+          "area": 9572,
+          "distance": 0.12219832673510236,
+          "mask_containment": 0.625888006686168
+        },
+        {
+          "frame": 419,
+          "time": 13.967932910244787,
+          "area": 9636,
+          "distance": 0.13023141793003543,
+          "mask_containment": 0.5856164383561644
+        },
+        {
+          "frame": 421,
+          "time": 14.034605621033545,
+          "area": 9655,
+          "distance": 0.13543953070285059,
+          "mask_containment": 0.5693423096841015
+        },
+        {
+          "frame": 423,
+          "time": 14.101278331822304,
+          "area": 10221,
+          "distance": 0.13626566634401077,
+          "mask_containment": 0.5379121416691126
+        },
+        {
+          "frame": 425,
+          "time": 14.167951042611062,
+          "area": 11177,
+          "distance": 0.13336148131186285,
+          "mask_containment": 0.542542721660553
+        },
+        {
+          "frame": 427,
+          "time": 14.23462375339982,
+          "area": 12875,
+          "distance": 0.12398136373414899,
+          "mask_containment": 0.5549514563106797
+        },
+        {
+          "frame": 429,
+          "time": 14.301296464188578,
+          "area": 15565,
+          "distance": 0.11643806945225635,
+          "mask_containment": 0.5601670414391262
+        },
+        {
+          "frame": 431,
+          "time": 14.367969174977336,
+          "area": 19428,
+          "distance": 0.10042871545625905,
+          "mask_containment": 0.5715462219477043
+        },
+        {
+          "frame": 433,
+          "time": 14.434641885766093,
+          "area": 21660,
+          "distance": 0.12125198646539066,
+          "mask_containment": 0.09016620498614958
+        },
+        {
+          "frame": 435,
+          "time": 14.50131459655485,
+          "area": 17750,
+          "distance": 0.11481891696155859,
+          "mask_containment": 0.0571830985915493
+        }
+      ]
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "visibility decrease",
+      "anchor visible after target loss"
+    ],
+    "vlm_verification_required": false,
+    "provenance": [
+      "outputs_v29/test8/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test8/dense_windows/PE0001/target_masks.json"
+    ]
+  }
+]

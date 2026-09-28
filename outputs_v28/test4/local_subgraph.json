@@ -1,0 +1,1393 @@
+{
+  "schema": "v28_local_subgraph_1",
+  "target": "phone_01",
+  "nodes": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0032",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0041",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0040",
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0032"
+    }
+  ],
+  "edges": [
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0032",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0001",
+      "start_frame": 402,
+      "end_frame": 432,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0041",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0002",
+      "start_frame": 432,
+      "end_frame": 444,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "entity_0032",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "target": "entity_0040",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "C0001",
+      "start_frame": 402,
+      "end_frame": 432,
+      "status": "STABLE",
+      "physical_verification": false
+    }
+  ],
+  "primary_segments": [
+    {
+      "segment_id": "P0001",
+      "subject": "phone_01",
+      "object": "entity_0032",
+      "hop": 1,
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "end_time": 14.40246364414029,
+      "support_frames": [
+        402,
+        408,
+        420,
+        426,
+        432
+      ],
+      "support_times": [
+        13.40229255774166,
+        13.602326775021385,
+        14.002395209580838,
+        14.202429426860565,
+        14.40246364414029
+      ],
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 402,
+          "time": 13.40229255774166,
+          "target_bbox": [
+            497.4300231933594,
+            399.4668884277344,
+            700.9528198242188,
+            545.749755859375
+          ],
+          "anchor_bbox": [
+            238.54135131835938,
+            132.86398315429688,
+            426.0415954589844,
+            226.42819213867188
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/43",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.9234645365045098,
+              3.631135694697043
+            ],
+            "normalized_center_distance": 0.2698554855826597,
+            "box_gap_fraction": 0.12745857029627966,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5734524620903863,
+            "relative_size": 1.6970511743950303,
+            "target_bbox_area_fraction": 0.03230457712550863,
+            "anchor_bbox_area_fraction": 0.019035711835280786,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 408,
+          "time": 13.602326775021385,
+          "target_bbox": [
+            585.709228515625,
+            285.1133728027344,
+            853.67919921875,
+            698.8675537109375
+          ],
+          "anchor_bbox": [
+            232.95712280273438,
+            139.35316467285156,
+            422.6995544433594,
+            232.57272338867188
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.5652516775285163,
+              3.7828681388526912
+            ],
+            "normalized_center_distance": 0.33855527042900496,
+            "box_gap_fraction": 0.11661942291329302,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.7771033181084527,
+            "relative_size": 6.268404581175378,
+            "target_bbox_area_fraction": 0.12030565943605324,
+            "anchor_bbox_area_fraction": 0.019192389048617364,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 420,
+          "time": 14.002395209580838,
+          "target_bbox": [
+            639.694580078125,
+            253.69488525390625,
+            933.91259765625,
+            718.1744384765625
+          ],
+          "anchor_bbox": [
+            229.114501953125,
+            148.15151977539062,
+            417.82373046875,
+            241.47508239746094
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/46",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.9552825333493757,
+              3.6194840038174947
+            ],
+            "normalized_center_distance": 0.372600184841042,
+            "box_gap_fraction": 0.15130490378571707,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.7916984981960721,
+            "relative_size": 7.759815883321771,
+            "target_bbox_area_fraction": 0.14828369504637925,
+            "anchor_bbox_area_fraction": 0.019109176979970166,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 426,
+          "time": 14.202429426860565,
+          "target_bbox": [
+            658.6505126953125,
+            252.91204833984375,
+            946.122314453125,
+            702.020263671875
+          ],
+          "anchor_bbox": [
+            231.6304168701172,
+            152.85813903808594,
+            420.88824462890625,
+            244.86257934570312
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/47",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              3.0157589964074596,
+              3.528177725797204
+            ],
+            "normalized_center_distance": 0.375628916867301,
+            "box_gap_fraction": 0.16198945429458167,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.7627251731024848,
+            "relative_size": 7.414529742555557,
+            "target_bbox_area_fraction": 0.14008891910344473,
+            "anchor_bbox_area_fraction": 0.018893837366300785,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 432,
+          "time": 14.40246364414029,
+          "target_bbox": [
+            692.0172729492188,
+            213.8316650390625,
+            991.7765502929688,
+            631.1995849609375
+          ],
+          "anchor_bbox": [
+            233.862548828125,
+            155.51312255859375,
+            422.9714050292969,
+            248.33213806152344
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/48",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              3.215261172888427,
+              2.876592700263867
+            ],
+            "normalized_center_distance": 0.38053708374596534,
+            "box_gap_fraction": 0.18319827878394254,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.37169617492195856,
+            "target_bottom_minus_anchor_top": 0.6606756422254775,
+            "relative_size": 7.127592668306979,
+            "target_bbox_area_fraction": 0.1357529362654572,
+            "anchor_bbox_area_fraction": 0.019046113124433457,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        }
+      ],
+      "via_primary": null,
+      "status": "STABLE"
+    },
+    {
+      "segment_id": "P0002",
+      "subject": "phone_01",
+      "object": "entity_0041",
+      "hop": 1,
+      "start_frame": 432,
+      "end_frame": 444,
+      "start_time": 14.40246364414029,
+      "end_time": 14.802532078699743,
+      "support_frames": [
+        432,
+        438,
+        444
+      ],
+      "support_times": [
+        14.40246364414029,
+        14.602497861420018,
+        14.802532078699743
+      ],
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 432,
+          "time": 14.40246364414029,
+          "target_bbox": [
+            692.0172729492188,
+            213.8316650390625,
+            991.7765502929688,
+            631.1995849609375
+          ],
+          "anchor_bbox": [
+            434.10565185546875,
+            194.2550506591797,
+            704.231689453125,
+            505.975830078125
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.017343619405602122,
+            "containment_ratio": 0.02852188626212924,
+            "target_center_relative_to_anchor": [
+              1.509633293377725,
+              0.7322597318225088
+            ],
+            "normalized_center_distance": 0.1921378440356599,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.04521747186066979,
+            "y_overlap_ratio": 0.9371982374214062,
+            "target_bottom_minus_anchor_top": 0.6068674087524414,
+            "relative_size": 1.4857970661197122,
+            "target_bbox_area_fraction": 0.1357529362654572,
+            "anchor_bbox_area_fraction": 0.09136707788768743,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 438,
+          "time": 14.602497861420018,
+          "target_bbox": [
+            790.3676147460938,
+            140.663818359375,
+            1083.0738525390625,
+            508.59442138671875
+          ],
+          "anchor_bbox": [
+            436.6551208496094,
+            196.8063201904297,
+            750.9889526367188,
+            508.792724609375
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.5908742942174006,
+              0.4097063137115829
+            ],
+            "normalized_center_distance": 0.23427262889309078,
+            "box_gap_fraction": 0.02681365514001926,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.9993643850506063,
+            "target_bottom_minus_anchor_top": 0.43303902943929035,
+            "relative_size": 1.0981738406243142,
+            "target_bbox_area_fraction": 0.11685718596032126,
+            "anchor_bbox_area_fraction": 0.10641046220322248,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 444,
+          "time": 14.802532078699743,
+          "target_bbox": [
+            842.9661865234375,
+            0.9910482168197632,
+            1130.4365234375,
+            356.45269775390625
+          ],
+          "anchor_bbox": [
+            439.15325927734375,
+            203.22320556640625,
+            759.137451171875,
+            522.675048828125
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.7111723315494292,
+              -0.07669804728899288
+            ],
+            "normalized_center_distance": 0.29219201726638766,
+            "box_gap_fraction": 0.05708052737539826,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.4796638223244277,
+            "target_bottom_minus_anchor_top": 0.21281873914930555,
+            "relative_size": 0.9996589716320994,
+            "target_bbox_area_fraction": 0.11087747412375723,
+            "anchor_bbox_area_fraction": 0.11091529938728248,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": false,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        }
+      ],
+      "via_primary": null,
+      "status": "STABLE"
+    }
+  ],
+  "context_segments": [
+    {
+      "segment_id": "C0001",
+      "subject": "entity_0032",
+      "object": "entity_0040",
+      "hop": 2,
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "end_time": 14.40246364414029,
+      "support_frames": [
+        402,
+        408,
+        420,
+        432
+      ],
+      "support_times": [
+        13.40229255774166,
+        13.602326775021385,
+        14.002395209580838,
+        14.40246364414029
+      ],
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 402,
+          "time": 13.40229255774166,
+          "target_bbox": [
+            238.54135131835938,
+            132.86398315429688,
+            426.0415954589844,
+            226.42819213867188
+          ],
+          "anchor_bbox": [
+            164.96726989746094,
+            66.29421997070312,
+            259.82421875,
+            141.3129425048828
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/43",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/11",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.007345647586484256,
+            "containment_ratio": 0.010249950608701819,
+            "target_center_relative_to_anchor": [
+              1.7639635842739014,
+              1.5109810437539295
+            ],
+            "normalized_center_distance": 0.09660183110765704,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.22436803722968304,
+            "y_overlap_ratio": 0.11262467641643006,
+            "target_bottom_minus_anchor_top": 0.22240829467773438,
+            "relative_size": 2.4653170103795277,
+            "target_bbox_area_fraction": 0.019035711835280786,
+            "anchor_bbox_area_fraction": 0.007721405302091474,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 408,
+          "time": 13.602326775021385,
+          "target_bbox": [
+            232.95712280273438,
+            139.35316467285156,
+            422.6995544433594,
+            232.57272338867188
+          ],
+          "anchor_bbox": [
+            160.6105194091797,
+            70.93853759765625,
+            253.3079071044922,
+            146.58421325683594
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/12",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0059935355977743165,
+            "containment_ratio": 0.008319762444682497,
+            "target_center_relative_to_anchor": [
+              1.8039108045147536,
+              1.5205681677211265
+            ],
+            "normalized_center_distance": 0.09765762685767933,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.21953999791934706,
+            "y_overlap_ratio": 0.0955910370417437,
+            "target_bottom_minus_anchor_top": 0.2244919247097439,
+            "relative_size": 2.522434530166867,
+            "target_bbox_area_fraction": 0.019192389048617364,
+            "anchor_bbox_area_fraction": 0.007608676783911505,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 420,
+          "time": 14.002395209580838,
+          "target_bbox": [
+            229.114501953125,
+            148.15151977539062,
+            417.82373046875,
+            241.47508239746094
+          ],
+          "anchor_bbox": [
+            153.82823181152344,
+            83.76473236083984,
+            252.49266052246094,
+            156.39291381835938
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/46",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/13",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.007837101716625246,
+            "containment_ratio": 0.010940231972232256,
+            "target_center_relative_to_anchor": [
+              1.7193722866061498,
+              1.529001091546518
+            ],
+            "normalized_center_distance": 0.09643934007246846,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2369461707200291,
+            "y_overlap_ratio": 0.11347377667426754,
+            "target_bottom_minus_anchor_top": 0.2190421528286404,
+            "relative_size": 2.4576422993909666,
+            "target_bbox_area_fraction": 0.019109176979970166,
+            "anchor_bbox_area_fraction": 0.007775410190777418,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 432,
+          "time": 14.40246364414029,
+          "target_bbox": [
+            233.862548828125,
+            155.51312255859375,
+            422.9714050292969,
+            248.33213806152344
+          ],
+          "anchor_bbox": [
+            161.52206420898438,
+            91.13687133789062,
+            254.1924285888672,
+            163.87451171875
+          ],
+          "target_observation": "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/48",
+          "anchor_observation": "outputs_v26/test4/entity_registry.json#entity_0040/observation_history/14",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0070464810831150325,
+            "containment_ratio": 0.009684214974549103,
+            "target_center_relative_to_anchor": [
+              1.8009523738956685,
+              1.5230870618305183
+            ],
+            "normalized_center_distance": 0.09647085196891546,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2193784377215146,
+            "y_overlap_ratio": 0.11495271384080417,
+            "target_bottom_minus_anchor_top": 0.21832675933837892,
+            "relative_size": 2.604046568619064,
+            "target_bbox_area_fraction": 0.019046113124433457,
+            "anchor_bbox_area_fraction": 0.007314044746340187,
+            "mask_evidence_available": false
+          }
+        }
+      ],
+      "via_primary": "entity_0032",
+      "status": "STABLE"
+    }
+  ],
+  "identity_audit": [
+    {
+      "frame": 0,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/0",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 6,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/1",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 12,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/2",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 102,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/3",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 108,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/4",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 120,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/5",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 126,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/6",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 132,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/7",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 132,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/8",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/9",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 198,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/10",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/11",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/12",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/13",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/5",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/14",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/8",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/9",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/11",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/12",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/14",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/15",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/17",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/18",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/20",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/21",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/15",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/23",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/16",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/24",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/26",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/27",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/29",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/30",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/17",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/31",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/32",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/33",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/18",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/34",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/35",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/36",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/37",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/38",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/19",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/39",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/40",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/41",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/43",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/20",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/21",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/44",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/22",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/46",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/47",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/23",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/49",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/51",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/24",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/52",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/54",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/25",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/55",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/57",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/26",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/58",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/60",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 444,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/27",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 450,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/61",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 456,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/62",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/63",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/64",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/28",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 468,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/29",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 474,
+      "observation_id": "outputs_v26/test4/entity_registry.json#phone_01/observation_history/65",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 798,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/30",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/31",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/32",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/33",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/34",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/35",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/36",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/37",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 882,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/38",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/39",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/40",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/41",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1002,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/42",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1026,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/43",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1032,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/44",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1038,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/45",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1044,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/46",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1050,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/47",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1062,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/48",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1074,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/49",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1086,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/50",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1092,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/51",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1110,
+      "observation_id": "outputs_v26/test4/candidate_stream.json#observations/52",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    }
+  ],
+  "limits": {
+    "primary_per_snapshot": 3,
+    "context_per_primary": 2
+  }
+}

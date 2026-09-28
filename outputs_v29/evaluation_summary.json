@@ -1,0 +1,46 @@
+{
+  "schema": "v29_post_freeze_evaluation_1",
+  "prediction_manifest": "outputs_v29/prediction_manifest.json",
+  "freeze_verified_before_evaluation": true,
+  "evaluation_used_for_inference": false,
+  "scope": "test3-test9; qualitative review only after prediction freeze",
+  "aggregate": {
+    "historical_sam_masks_found": 326,
+    "v26_sam_fusion_accepted": 322,
+    "v29_identity_and_continuity_authorized_masks": 270,
+    "placement_windows": 7,
+    "dense_source_frames_processed": 322,
+    "identity_authorized_dense_frames": 182,
+    "identity_authorized_dense_frames_not_in_6_frame_sample": 182,
+    "known_nonperson_anchor_covisible_dense_frames": 28,
+    "vlm_calls": 5,
+    "vlm_schema_valid": 4,
+    "vlm_usable_independent_support": 0,
+    "relation_candidates": 14,
+    "physical_promotions": 0,
+    "candidate_relations": 5,
+    "uncertain_relations": 9,
+    "rejected_relations": 0,
+    "obvious_false_promotions": 0,
+    "unauthorized_memory_updates": 0,
+    "search_candidates_v28": 36,
+    "search_candidates_v29": 41,
+    "practical_search_improvement_confirmed": false,
+    "tests_passed": 102
+  },
+  "videos": [
+    {"task":"test3","trusted_masks":45,"event_peak_frame":492,"dense_frames":46,"new_authorized_dense_frames":24,"known_nonperson_anchor_covisible_frames":11,"vlm_calls":2,"decisions":{"CANDIDATE":1,"UNCERTAIN":3},"search_candidates_v28":6,"search_candidates_v29":7,"qualitative":"The box is visible, but the detector/frozen registry does not bind it as the candidate anchor. The new hypothesis is NEAR a chair; no box-entry relation is supported."},
+    {"task":"test4","trusted_masks":42,"event_peak_frame":462,"dense_frames":46,"new_authorized_dense_frames":28,"known_nonperson_anchor_covisible_frames":0,"vlm_calls":0,"decisions":{"UNCERTAIN":1},"search_candidates_v28":3,"search_candidates_v29":3,"qualitative":"The ball/behind sequence is not recovered as a reliable basketball anchor. A detector label near the event is frisbee; the only relation candidate is weak person interaction."},
+    {"task":"test5","trusted_masks":58,"event_peak_frame":438,"dense_frames":46,"new_authorized_dense_frames":24,"known_nonperson_anchor_covisible_frames":17,"vlm_calls":3,"decisions":{"CANDIDATE":4,"UNCERTAIN":3},"search_candidates_v28":8,"search_candidates_v29":12,"qualitative":"The box is visible, but the bound anchors are chair/laptop/person. Behind/occluded-by laptop remains explicitly unconfirmed; box placement is unresolved."},
+    {"task":"test6","trusted_masks":36,"event_peak_frame":414,"dense_frames":46,"new_authorized_dense_frames":23,"known_nonperson_anchor_covisible_frames":0,"vlm_calls":0,"decisions":{},"search_candidates_v28":6,"search_candidates_v29":6,"qualitative":"The suspected window has phone masks but no recovered known non-person anchor co-visible with authorized phone_01; microwave/doll placement remains unsupported."},
+    {"task":"test7","trusted_masks":38,"event_peak_frame":432,"dense_frames":46,"new_authorized_dense_frames":23,"known_nonperson_anchor_covisible_frames":0,"vlm_calls":0,"decisions":{},"search_candidates_v28":10,"search_candidates_v29":10,"qualitative":"No known doll anchor is recovered in the dense event window. Provisional phone candidates remain separate and cannot alter phone_01 memory."},
+    {"task":"test8","trusted_masks":39,"event_peak_frame":432,"dense_frames":46,"new_authorized_dense_frames":25,"known_nonperson_anchor_covisible_frames":0,"vlm_calls":0,"decisions":{"UNCERTAIN":1},"search_candidates_v28":3,"search_candidates_v29":3,"qualitative":"The generic detector selects the earlier loss near f432 and does not trigger dense reinspection around the later frozen f804 CONFIRMED_MATCH. Multiple phone candidates remain unmerged."},
+    {"task":"test9","trusted_masks":12,"event_peak_frame":600,"dense_frames":46,"new_authorized_dense_frames":35,"known_nonperson_anchor_covisible_frames":0,"vlm_calls":0,"decisions":{"UNCERTAIN":1},"search_candidates_v28":0,"search_candidates_v29":0,"first_failure":{"frame":627,"category":"DETECTION_FAILURE"},"qualitative":"After the final authorized mask at f624, dense YOLO and SAM2.1 have no phone observation at f627. Later long-gap SAM outputs are quarantined without a new identity authorization; no HomePad/bottle/basketball anchor becomes co-visible with authorized phone_01."}
+  ],
+  "main_remaining_bottlenecks": [
+    "Open or unusual placement anchors, especially boxes, are visible but unbound by closed-vocabulary YOLO/frozen persistent entities.",
+    "Event discovery focuses on loss and misses later identity reconfirmation sequences such as test8 f804.",
+    "The local VLM often returns BEHIND with nonspecific or uncertain rationale, so it cannot serve as independent physical confirmation.",
+    "test9 target detection and SAM continuity end before relevant later anchors become identity-authorized co-visible context."
+  ]
+}

@@ -1,0 +1,1176 @@
+{
+  "schema": "v28_observations_1",
+  "config": {
+    "target_id": "phone_01",
+    "minimum_support_frames": 3,
+    "minimum_support_seconds": 0.35,
+    "maximum_support_gap_seconds": 0.65,
+    "primary_local_distance_fraction": 0.3,
+    "primary_gap_fraction": 0.2,
+    "context_local_distance_fraction": 0.28,
+    "context_gap_fraction": 0.18,
+    "maximum_primary_anchors": 3,
+    "maximum_context_per_primary": 2,
+    "vlm_promotion_confidence": 0.8
+  },
+  "provenance": {
+    "input_sha256": {
+      "outputs_v26/test5/entity_registry.json": "5b3a5587f4784fe63ae76f782985052b82a4a36aae76c4d94f087a3c16a4f0a2",
+      "outputs_v26/test5/identity_timeline.json": "5849f76222d1eb2262641090423c6281186edf97dc953e0fd3f048c6015c5cbf",
+      "outputs_v26/test5/candidate_stream.json": "ad849a01b92ba9ffaae743097425fcc4f0ae0b84e659e6627acdcd84c68fb161",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/detections.json": "01c475a486b36b7d3c45e4d0332a6abd58115db51ac22dc06c6c65f4f59d5495",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/video_metadata.json": "fbc6e638e9d03249a5c70721fc4c7231211b4a3101cdf2cd4cc815d356c27d0e",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_004/scene_graph.json": "4863753c49a27574989cdd888fceb14004cd9b8ced5d1e1c9659982acac268f5",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_007/scene_graph.json": "846739148a12622677a6f4e7942ba0760042186b455efddc91a3c26b72ae5670",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_020/scene_graph.json": "97d14840b363bd0c1073fab9c37d4f84d0b5f3a7d6b0058ca622df34fd81b45c",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_023/scene_graph.json": "9172633d5753419ca53aa761d5ef620cb8e00b90e7448fe47cf06631bcd6a558",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_028/scene_graph.json": "9a95b7febaf108b00f95e4539a3562768a8c309478dd43be7de383af5b817d9f",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_029/scene_graph.json": "875fb45e62225e633afc4dbe58865288f296bb5317cd15f3f5c61896b2769bb1",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_038/scene_graph.json": "3ab2fa8dc772ba16baf846b52225e9dc9d9ff18189270635426302355e9860f7",
+      "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_039/scene_graph.json": "a10c687ecfc3b5d6eef2f3120e2214bcd48d27c81a18816a079734a8687f6645"
+    },
+    "frame_size": [
+      1280,
+      720
+    ],
+    "fps": 30.0,
+    "sampled_frames": 187,
+    "upstream_entity_count": 101,
+    "existing_event_evidence": [
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_004/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_007/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_020/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_023/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_028/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_029/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_038/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test5/upstream_v21/event_analysis/events/evt_039/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      }
+    ],
+    "limitations": [
+      "Existing event graphs contain no verified physical relations",
+      "SAM observations marked untrusted remain observation-only",
+      "Final track aliases are not used to retroactively authorize identity"
+    ]
+  },
+  "identity_audit": [
+    {
+      "frame": 72,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/0",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 78,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/1",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 84,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/2",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 90,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/3",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 96,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 96,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 96,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 96,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 96,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/4",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 102,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 108,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/5",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 114,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/6",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 120,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 126,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/8",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 132,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/9",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 138,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 144,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/11",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 150,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/12",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 156,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 156,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/14",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 156,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/5",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 162,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/15",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 162,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/16",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 162,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/6",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 168,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/17",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 168,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/18",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 168,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/7",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 174,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 174,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/20",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 174,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/21",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 174,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/8",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 180,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 180,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/23",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 180,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/24",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 180,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/9",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/26",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/27",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/10",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/29",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/30",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 192,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/11",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 198,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/31",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/32",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/33",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/34",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/35",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/36",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/37",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/38",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/39",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/12",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/40",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/41",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/13",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/42",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/43",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/14",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/44",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/45",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/46",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/47",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/48",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/15",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/49",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/51",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/16",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/52",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/54",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/17",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/55",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/57",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/18",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/58",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/60",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/19",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/61",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/62",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/63",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/20",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/64",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/65",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/66",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/21",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/67",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/68",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/69",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/22",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/70",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/71",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/72",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/23",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/73",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/75",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/24",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/76",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/77",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/78",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/25",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/79",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/80",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/81",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/26",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/82",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/83",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/84",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/27",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/85",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/86",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/87",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/28",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/88",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/89",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/29",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/90",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/91",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/30",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/92",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/93",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/31",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/94",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/95",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/32",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/96",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/97",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/98",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/33",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/99",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/100",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/101",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/102",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/103",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/104",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/34",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/105",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/106",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/107",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 438,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/108",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 462,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/109",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 468,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/110",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 474,
+      "observation_id": "outputs_v26/test5/entity_registry.json#phone_01/observation_history/111",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 732,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/35",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/36",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/37",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 774,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/38",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 780,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/39",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 780,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/40",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/41",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 816,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/42",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 816,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/43",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/44",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/45",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 828,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/46",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/47",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 852,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/48",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/49",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 870,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/50",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 882,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/51",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 888,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/52",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 894,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/53",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 912,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/54",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/55",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 936,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/56",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 936,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/57",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 942,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/58",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 942,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/59",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 948,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/60",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 954,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/61",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 954,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/62",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 960,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/63",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 960,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/64",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 966,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/65",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 966,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/66",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 972,
+      "observation_id": "outputs_v26/test5/candidate_stream.json#observations/67",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    }
+  ],
+  "blocked_identity_counts": {
+    "NOT_EVALUATED": 35,
+    "UNKNOWN": 61,
+    "TRUSTED": 20,
+    "AMBIGUOUS": 33
+  },
+  "observation_relations_are_physical": false
+}

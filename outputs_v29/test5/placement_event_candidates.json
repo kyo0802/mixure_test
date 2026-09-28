@@ -1,0 +1,65 @@
+[
+  {
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "start_frame": 393,
+    "peak_frame": 438,
+    "end_frame": 483,
+    "start_time": 13.1,
+    "end_time": 16.1,
+    "event_type": "POSSIBLE_PLACEMENT",
+    "candidate_anchors": [
+      {
+        "entity_id": "entity_0052",
+        "raw_label": "person",
+        "distance_fraction": 0.0686,
+        "bbox": [
+          1042.297607421875,
+          183.26861572265625,
+          1279.34228515625,
+          302.0350646972656
+        ],
+        "source": "outputs_v26/test5/entity_registry.json#entity_0052/observation_history/1"
+      },
+      {
+        "entity_id": "entity_0050",
+        "raw_label": "laptop",
+        "distance_fraction": 0.1548,
+        "bbox": [
+          850.2858276367188,
+          206.3406219482422,
+          1278.9422607421875,
+          581.8110961914062
+        ],
+        "source": "outputs_v26/test5/entity_registry.json#entity_0050/observation_history/3"
+      },
+      {
+        "entity_id": "entity_0048",
+        "raw_label": "chair",
+        "distance_fraction": 0.187,
+        "bbox": [
+          892.0338745117188,
+          170.14242553710938,
+          1044.2396240234375,
+          213.7325897216797
+        ],
+        "source": "outputs_v26/test5/entity_registry.json#entity_0048/observation_history/6"
+      }
+    ],
+    "cues": {
+      "motion_slowdown": true,
+      "anchor_approach": false,
+      "overlap_increase": true,
+      "visibility_loss": true,
+      "target_disappearance": true,
+      "anchor_remains_visible": true,
+      "hand_release": false
+    },
+    "evidence_strength": "HIGH",
+    "reason": "Trusted target loss with 5 independent interaction cues",
+    "provenance": [
+      "outputs_v25_rerun/test5/sam/sam_continuity_log.json#438:phone_target",
+      "outputs_v26/identity_timeline.json#438"
+    ]
+  }
+]

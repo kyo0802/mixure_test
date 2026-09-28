@@ -1,0 +1,109 @@
+---
+title: phone_01 local memory
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0068["entity_0068<br/>teddy bear<br/>Hop 1"]
+    entity_0070["entity_0070<br/>microwave<br/>Hop 1"]
+    entity_0074["entity_0074<br/>laptop<br/>Hop 1"]
+    entity_0073["entity_0073<br/>bottle<br/>Hop 1"]
+    entity_0075["entity_0075<br/>potted plant<br/>Hop 1"]
+    entity_0071["entity_0071<br/>potted plant<br/>Hop 1"]
+    event_local__V291E01__event_anchor_002["event_local::V291E01::event_anchor_002<br/>person<br/>Hop 1"]
+    event_local__V291E01__event_anchor_006["event_local::V291E01::event_anchor_006<br/>person<br/>Hop 1"]
+    entity_0081["entity_0081<br/>cup<br/>Hop 1"]
+    entity_0080["entity_0080<br/>cake<br/>Hop 1"]
+    entity_0079["entity_0079<br/>remote<br/>Hop 1"]
+    event_local__V291E02__event_anchor_003["event_local::V291E02::event_anchor_003<br/>person<br/>Hop 1"]
+    event_local__V291E02__event_anchor_002["event_local::V291E02::event_anchor_002<br/>person<br/>Hop 1"]
+    r1(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0068
+    r2(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0068
+    r3(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r3
+    r3 --> entity_0070
+    r4(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0074
+    r5(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r5
+    r5 --> entity_0074
+    r6(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r6
+    r6 --> entity_0073
+    r7(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r7
+    r7 --> entity_0075
+    r8(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r8
+    r8 --> entity_0075
+    r9(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r9
+    r9 --> entity_0071
+    r10(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r10
+    r10 --> entity_0071
+    r11(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r11
+    r11 --> event_local__V291E01__event_anchor_002
+    r12(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r12
+    r12 --> event_local__V291E01__event_anchor_006
+    r13(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r13
+    r13 --> entity_0068
+    r14(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r14
+    r14 --> entity_0068
+    r15(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r15
+    r15 --> entity_0075
+    r16(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r16
+    r16 --> entity_0075
+    r17(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r17
+    r17 --> entity_0070
+    r18(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r18
+    r18 --> entity_0073
+    r19(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r19
+    r19 --> entity_0071
+    r20(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r20
+    r20 --> entity_0071
+    r21(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r21
+    r21 --> entity_0074
+    r22(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r22
+    r22 --> entity_0074
+    r23(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r23
+    r23 --> entity_0081
+    r24(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r24
+    r24 --> entity_0080
+    r25(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r25
+    r25 --> entity_0079
+    r26(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r26
+    r26 --> event_local__V291E02__event_anchor_003
+    r27(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r27
+    r27 --> event_local__V291E02__event_anchor_002
+    r28(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r28
+    r28 --> entity_0070
+    r29(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r29
+    r29 --> entity_0068
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25,r26,r27,r28,r29 relation;

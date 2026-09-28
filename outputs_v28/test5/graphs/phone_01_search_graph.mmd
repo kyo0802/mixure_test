@@ -1,0 +1,33 @@
+---
+title: test5: prioritized search graph
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0043["entity_0043<br/>sports ball<br/>Hop 1"]
+    entity_0044["entity_0044<br/>microwave<br/>Hop 2"]
+    entity_0042["entity_0042<br/>chair<br/>Hop 1"]
+    entity_0005["entity_0005<br/>chair<br/>Hop 1"]
+    entity_0016["entity_0016<br/>chair<br/>Hop 1"]
+    r1(["SEARCH #1
+NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0043
+    r2(["IMAGE_NEAR_CONTEXT<br/>CONTEXT"])
+    entity_0043 --> r2
+    r2 --> entity_0044
+    r3(["SEARCH #2
+NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r3
+    r3 --> entity_0042
+    r4(["SEARCH #3
+NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0005
+    r5(["SEARCH #4
+NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r5
+    r5 --> entity_0016
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4,r5 relation;

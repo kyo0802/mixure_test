@@ -1,0 +1,153 @@
+[
+  {
+    "candidate_id": "PRC0001",
+    "event_id": "PE0001",
+    "candidate_relation": "OCCLUDED_BY",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "start_frame": 475,
+    "end_frame": 495,
+    "decision": "UNCERTAIN",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": true,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "VALID",
+      "support": false,
+      "rationale_substantive": true,
+      "contradiction": false
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "independent VLM verification"
+    ],
+    "final_reason": "Ordered overlap then mask visibility loss required; detector miss is insufficient",
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0002",
+    "event_id": "PE0001",
+    "candidate_relation": "BEHIND",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "start_frame": 475,
+    "end_frame": 495,
+    "decision": "UNCERTAIN",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": true,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "VALID",
+      "support": false,
+      "rationale_substantive": true,
+      "contradiction": false
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "independent VLM verification"
+    ],
+    "final_reason": "Behind placement requires stronger evidence than temporary occlusion",
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0003",
+    "event_id": "PE0001",
+    "candidate_relation": "NEAR",
+    "target": "phone_01",
+    "anchor": "entity_0059",
+    "start_frame": 475,
+    "end_frame": 495,
+    "decision": "CANDIDATE",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": true,
+    "temporal_gate": true,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "NOT_RUN",
+      "support": false,
+      "rationale_substantive": false,
+      "contradiction": false
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment"
+    ],
+    "final_reason": "2D proximity remains unconfirmed physical context",
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  },
+  {
+    "candidate_id": "PRC0004",
+    "event_id": "PE0001",
+    "candidate_relation": "HELD_BY",
+    "target": "phone_01",
+    "anchor": "entity_0062",
+    "start_frame": 475,
+    "end_frame": 495,
+    "decision": "UNCERTAIN",
+    "identity_gate": true,
+    "geometry_gate": true,
+    "mask_gate": true,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "VALID",
+      "support": false,
+      "rationale_substantive": false,
+      "contradiction": false
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "11 frame mask support",
+      "target approaches anchor",
+      "target mask containment increases",
+      "target visible mask area decreases",
+      "anchor remains after target observation ends"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "independent VLM verification"
+    ],
+    "final_reason": "Sustained contact and target/agent motion coupling required",
+    "provenance": [
+      "outputs_v29/test3/dense_windows/PE0001/dense_observations.json",
+      "outputs_v29/test3/dense_windows/PE0001/target_masks.json"
+    ]
+  }
+]

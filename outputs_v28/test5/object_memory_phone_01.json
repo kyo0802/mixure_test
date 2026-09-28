@@ -1,0 +1,699 @@
+{
+  "schema": "v28_object_memory_1",
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_frame": 414,
+    "last_seen_time": 13.8,
+    "last_trusted_snapshot": "G007",
+    "last_trusted_primary_anchors": [
+      "entity_0043"
+    ],
+    "visibility_assessment": "UNOBSERVED_UNCERTAIN"
+  },
+  "entities": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0005",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0016",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0042",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0043",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0028",
+      "raw_label": "cup",
+      "semantic_roles": [
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0016"
+    },
+    {
+      "entity_id": "entity_0031",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0005"
+    },
+    {
+      "entity_id": "entity_0044",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0043"
+    }
+  ],
+  "episodes": [
+    {
+      "episode_id": "E0001",
+      "segment_id": "P0001",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0005",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 156,
+      "end_frame": 192,
+      "start_time": 5.2,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/27",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/28",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/29",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/30",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/31",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/32",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/14",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/16",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/18",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/29"
+      ],
+      "source_snapshots": [
+        "G002",
+        "G003",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0002",
+      "segment_id": "P0002",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0016",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 156,
+      "end_frame": 192,
+      "start_time": 5.2,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/21",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/22",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/24",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/25",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/14",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/16",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/18",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/29"
+      ],
+      "source_snapshots": [
+        "G002",
+        "G003",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0003",
+      "segment_id": "P0003",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0042",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 300,
+      "end_frame": 330,
+      "start_time": 10.0,
+      "last_confirmed_time": 11.0,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/62",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/65",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/71",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74"
+      ],
+      "source_snapshots": [
+        "G004",
+        "G005",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0004",
+      "segment_id": "P0004",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0043",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 330,
+      "end_frame": 384,
+      "start_time": 11.0,
+      "last_confirmed_time": 12.8,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/5",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/6",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/7",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/8",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/9",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/77",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/80",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/83",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/86",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/89",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/91",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/93",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/95",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/97"
+      ],
+      "source_snapshots": [
+        "G005",
+        "G006",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0005",
+      "segment_id": "C0001",
+      "subject": "entity_0016",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0028",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 156,
+      "end_frame": 168,
+      "start_time": 5.2,
+      "last_confirmed_time": 5.6,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/21",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/22",
+        "outputs_v26/test5/entity_registry.json#entity_0028/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0028/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0028/observation_history/2"
+      ],
+      "source_snapshots": [
+        "G002",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0006",
+      "segment_id": "C0002",
+      "subject": "entity_0005",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0031",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 180,
+      "end_frame": 192,
+      "start_time": 6.0,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/30",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/31",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/32",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/2"
+      ],
+      "source_snapshots": [
+        "G003",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0007",
+      "segment_id": "C0003",
+      "subject": "entity_0016",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0031",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 180,
+      "end_frame": 192,
+      "start_time": 6.0,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/24",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/25",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0031/observation_history/2"
+      ],
+      "source_snapshots": [
+        "G003",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0008",
+      "segment_id": "C0004",
+      "subject": "entity_0043",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0044",
+      "kind": "IMAGE_CONTEXT",
+      "decision": "STABLE_CONTEXT",
+      "start_frame": 336,
+      "end_frame": 384,
+      "start_time": 11.2,
+      "last_confirmed_time": 12.8,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/5",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/6",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/7",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/8",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/9",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/5",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/6",
+        "outputs_v26/test5/entity_registry.json#entity_0044/observation_history/7"
+      ],
+      "source_snapshots": [
+        "G006",
+        "G007"
+      ]
+    },
+    {
+      "episode_id": "E0009",
+      "segment_id": "P0001",
+      "subject": "phone_01",
+      "relation": "NEAR",
+      "object": "entity_0005",
+      "kind": "PHYSICAL",
+      "decision": "CANDIDATE",
+      "start_frame": 156,
+      "end_frame": 192,
+      "start_time": 5.2,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/27",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/28",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/29",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/30",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/31",
+        "outputs_v26/test5/entity_registry.json#entity_0005/observation_history/32",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/14",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/16",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/18",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/29"
+      ],
+      "source_snapshots": [
+        "G002",
+        "G003",
+        "G007"
+      ],
+      "reason": "Stable multi-frame image proximity; depth is unverified"
+    },
+    {
+      "episode_id": "E0010",
+      "segment_id": "P0002",
+      "subject": "phone_01",
+      "relation": "NEAR",
+      "object": "entity_0016",
+      "kind": "PHYSICAL",
+      "decision": "CANDIDATE",
+      "start_frame": 156,
+      "end_frame": 192,
+      "start_time": 5.2,
+      "last_confirmed_time": 6.4,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/21",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/22",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/24",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/25",
+        "outputs_v26/test5/entity_registry.json#entity_0016/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/14",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/16",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/18",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/20",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/23",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/26",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/29"
+      ],
+      "source_snapshots": [
+        "G002",
+        "G003",
+        "G007"
+      ],
+      "reason": "Stable multi-frame image proximity; depth is unverified"
+    },
+    {
+      "episode_id": "E0011",
+      "segment_id": "P0003",
+      "subject": "phone_01",
+      "relation": "NEAR",
+      "object": "entity_0042",
+      "kind": "PHYSICAL",
+      "decision": "CANDIDATE",
+      "start_frame": 300,
+      "end_frame": 330,
+      "start_time": 10.0,
+      "last_confirmed_time": 11.0,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0042/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/59",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/62",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/65",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/71",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74"
+      ],
+      "source_snapshots": [
+        "G004",
+        "G005",
+        "G007"
+      ],
+      "reason": "Stable multi-frame image proximity; depth is unverified"
+    },
+    {
+      "episode_id": "E0012",
+      "segment_id": "P0004",
+      "subject": "phone_01",
+      "relation": "NEAR",
+      "object": "entity_0043",
+      "kind": "PHYSICAL",
+      "decision": "CANDIDATE",
+      "start_frame": 330,
+      "end_frame": 384,
+      "start_time": 11.0,
+      "last_confirmed_time": 12.8,
+      "status": "LAST_TRUSTED",
+      "source": [
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/5",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/6",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/7",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/8",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/9",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/77",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/80",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/83",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/86",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/89",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/91",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/93",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/95",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/97"
+      ],
+      "source_snapshots": [
+        "G005",
+        "G006",
+        "G007"
+      ],
+      "reason": "Stable multi-frame image proximity; depth is unverified"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV0001",
+      "event_type": "TARGET_APPEARED",
+      "frame": 96,
+      "time": 3.2,
+      "details": {}
+    },
+    {
+      "event_id": "EV0002",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 156,
+      "time": 5.2,
+      "details": {
+        "segment_id": "C0001",
+        "anchor": "entity_0028"
+      }
+    },
+    {
+      "event_id": "EV0003",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 156,
+      "time": 5.2,
+      "details": {
+        "segment_id": "P0001",
+        "anchor": "entity_0005"
+      }
+    },
+    {
+      "event_id": "EV0004",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 156,
+      "time": 5.2,
+      "details": {
+        "segment_id": "P0002",
+        "anchor": "entity_0016"
+      }
+    },
+    {
+      "event_id": "EV0005",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 180,
+      "time": 6.0,
+      "details": {
+        "segment_id": "C0002",
+        "anchor": "entity_0031"
+      }
+    },
+    {
+      "event_id": "EV0006",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 180,
+      "time": 6.0,
+      "details": {
+        "segment_id": "C0003",
+        "anchor": "entity_0031"
+      }
+    },
+    {
+      "event_id": "EV0007",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 192,
+      "time": 6.4,
+      "details": {
+        "candidate_id": "PRC0003",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0008",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 192,
+      "time": 6.4,
+      "details": {
+        "candidate_id": "PRC0006",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0009",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 300,
+      "time": 10.0,
+      "details": {
+        "segment_id": "P0003",
+        "anchor": "entity_0042"
+      }
+    },
+    {
+      "event_id": "EV0010",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 330,
+      "time": 11.0,
+      "details": {
+        "candidate_id": "PRC0009",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0011",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 330,
+      "time": 11.0,
+      "details": {
+        "segment_id": "P0004",
+        "anchor": "entity_0043"
+      }
+    },
+    {
+      "event_id": "EV0012",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 336,
+      "time": 11.2,
+      "details": {
+        "segment_id": "C0004",
+        "anchor": "entity_0044"
+      }
+    },
+    {
+      "event_id": "EV0013",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 384,
+      "time": 12.8,
+      "details": {
+        "candidate_id": "PRC0012",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0014",
+      "event_type": "TARGET_UNOBSERVED",
+      "frame": 444,
+      "time": 14.8,
+      "details": {}
+    }
+  ],
+  "last_trusted_local_subgraph": {
+    "nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0043",
+        "raw_label": "sports ball",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0044",
+        "raw_label": "microwave",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 2,
+        "via_primary": "entity_0043"
+      }
+    ],
+    "edges": [
+      {
+        "source": "phone_01",
+        "relation": "TRUSTED_ANCHOR_CONTEXT",
+        "target": "entity_0043",
+        "kind": "IMAGE_CONTEXT",
+        "segment_id": "P0004",
+        "status": "LAST_TRUSTED",
+        "physical_verification": false
+      },
+      {
+        "source": "entity_0043",
+        "relation": "IMAGE_NEAR_CONTEXT",
+        "target": "entity_0044",
+        "kind": "IMAGE_CONTEXT",
+        "segment_id": "C0004",
+        "status": "LAST_TRUSTED",
+        "physical_verification": false
+      },
+      {
+        "source": "phone_01",
+        "relation": "NEAR",
+        "target": "entity_0043",
+        "kind": "PHYSICAL",
+        "decision": "CANDIDATE",
+        "episode_id": "E0012",
+        "status": "LAST_TRUSTED",
+        "physical_verification": false
+      }
+    ],
+    "connected": true
+  },
+  "interpretation": "Historical target-centered local evidence; candidates are not confirmed physical truth"
+}

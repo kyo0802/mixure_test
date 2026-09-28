@@ -1,0 +1,51 @@
+Interpreter: C:\Users\smile\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+Project packages: C:\Users\smile\Desktop\test2\mixure_test_SAM\.venv\Lib\site-packages
+..................................................F.....F............... [ 24%]
+..................F...........s......................................... [ 48%]
+........................................................................ [ 72%]
+........................................................................ [ 96%]
+.........                                                                [100%]
+================================== FAILURES ===================================
+_____________ test_prediction_manifest_written_before_evaluation ______________
+
+    def test_prediction_manifest_written_before_evaluation():
+        summary = read(OUT / "generalization_summary.json")
+>       assert summary["prediction_manifest_sha256_before_gt_review"] == digest(OUT / "prediction_manifest.json")
+E       AssertionError: assert '0ed8de03e35d...65970280d87a0' == 'ed8a1183935a...be983317168a0'
+E         
+E         - ed8a1183935abf1db357570ba61ca89030e707559d2bf657551be983317168a0
+E         + 0ed8de03e35d6fa869a13f0137532ca6d6eebfc143e0b72606965970280d87a0
+
+tests\test_v241_generalization.py:52: AssertionError
+______________ test_spatial_diagnostic_does_not_modify_inference ______________
+
+    def test_spatial_diagnostic_does_not_modify_inference():
+        manifest = read(OUT / "prediction_manifest.json")
+        for task, files in manifest["videos"].items():
+>           assert digest(OUT / task / "identity_timeline.json") == files["identity_timeline.json"]
+E           AssertionError: assert 'c685c12eae41...be6bbc6e58fd4' == 'a838edca19d5...c948159fe7619'
+E             
+E             - a838edca19d5c639df54f14bb142b1980f90a1887f86e72b79cc948159fe7619
+E             + c685c12eae41cbb323d005ad29f773f7c9ca1029ed447983db1be6bbc6e58fd4
+
+tests\test_v241_generalization.py:92: AssertionError
+_____________ test_prediction_manifest_covers_all_rerun_artifacts _____________
+
+    def test_prediction_manifest_covers_all_rerun_artifacts():
+        manifest = read(OUT / "prediction_manifest.json")
+        assert manifest["stage"] == "A_BLIND_INFERENCE_COMPLETE" and not manifest["gt_read_before_freeze"]
+        for task, entry in manifest["videos"].items():
+            for name, expected in entry["predictions"].items():
+>               assert sha(OUT / task / name) == expected
+E               AssertionError: assert 'ea9338142aab...18c2222625a2f' == '94ca3e7d5a85...65210ae6a8153'
+E                 
+E                 - 94ca3e7d5a85e9b0f94318e834ad7a57d51ad544ec232eb70d465210ae6a8153
+E                 + ea9338142aabef36354cb9a83b0dfd941d873376c0c47e7ff8018c2222625a2f
+
+tests\test_v25_rerun.py:40: AssertionError
+- generated xml file: C:\Users\smile\Desktop\test2\mixure_test_SAM\docs\system_audit\2026-09-28\regression_results.xml -
+=========================== short test summary info ===========================
+FAILED tests/test_v241_generalization.py::test_prediction_manifest_written_before_evaluation
+FAILED tests/test_v241_generalization.py::test_spatial_diagnostic_does_not_modify_inference
+FAILED tests/test_v25_rerun.py::test_prediction_manifest_covers_all_rerun_artifacts
+3 failed, 293 passed, 1 skipped in 22.12s

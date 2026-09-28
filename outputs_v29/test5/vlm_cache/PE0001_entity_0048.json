@@ -1,0 +1,48 @@
+{
+  "task": "test5",
+  "event_id": "PE0001",
+  "anchor": "entity_0048",
+  "candidate_ids": [
+    "PRC0001",
+    "PRC0002"
+  ],
+  "candidate_relations": [
+    "OCCLUDED_BY",
+    "BEHIND"
+  ],
+  "model": {
+    "backend": "transformers",
+    "model": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\.models\\Qwen2.5-VL-3B-Instruct",
+    "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "max_new_tokens": 220,
+    "image_longest_edge": 800,
+    "device": "cuda",
+    "dtype": "torch.bfloat16",
+    "sampling": false,
+    "quantization": "none",
+    "max_inference_seconds": 120,
+    "transformers_version": "4.57.6",
+    "torch_version": "2.10.0+cu128",
+    "processor": "Qwen2VLImageProcessorFast",
+    "grounding": "joint"
+  },
+  "frames_used": [
+    "outputs_v29\\test5\\vlm_inputs\\PE0001_entity_0048\\before.png",
+    "outputs_v29\\test5\\vlm_inputs\\PE0001_entity_0048\\during.png",
+    "outputs_v29\\test5\\vlm_inputs\\PE0001_entity_0048\\after.png"
+  ],
+  "source_frame_indices": [
+    423,
+    443,
+    445
+  ],
+  "prompt": "You are verifying the physical relation between a KNOWN target and a KNOWN anchor across BEFORE, DURING, AFTER frames. The green box is TARGET phone_01. The purple box labelled ANCHOR entity_0048 is the only anchor to judge. Other objects are irrelevant. Choose exactly one: ON, INSIDE, BEHIND, OCCLUDED_BY, HELD_BY, NEAR, NONE, UNCERTAIN. Do not infer identity. Do not invent unseen objects. Do not infer a physical relation from proximity alone. Return only JSON with keys relation, confidence (0 to 1), temporal_evidence, visual_evidence, counterevidence, uncertainty. If the anchor is not clearly visible or target identity cannot be followed, answer UNCERTAIN.",
+  "status": "FAILED",
+  "raw_output": "```json\n[\n    {\n        \"relation\": \"BEHIND\",\n        \"confidence\": 0.9,\n        \"temporal_evidence\": \"BEFORE\",\n        \"visual_evidence\": \"BEFORE\",\n        \"counterevidence\": \"AFTER\",\n        \"uncertainty\": \"UNCERTAIN\"\n    },\n    {\n        \"relation\": \"INSIDE\",\n        \"confidence\": 0.9,\n        \"temporal_evidence\": \"DURING\",\n        \"visual_evidence\": \"DURING\",\n        \"counterevidence\": \"AFTER\",\n        \"uncertainty\": \"UNCERTAIN\"\n    }\n]\n```",
+  "structured_output": null,
+  "error": "JSONDecodeError: Extra data: line 8 column 6 (char 211)",
+  "inference_seconds": 3.922000000020489,
+  "provenance": [
+    "outputs_v29\\test5\\dense_windows\\PE0001\\placement_event_PE0001_contact_sheet.png"
+  ]
+}

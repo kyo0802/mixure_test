@@ -1,0 +1,928 @@
+{
+  "schema": "v28_temporal_memory_1",
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_frame": 402,
+    "last_seen_time": 13.40607250755287,
+    "last_trusted_snapshot": "G006",
+    "last_trusted_primary_anchors": [
+      "entity_0027",
+      "entity_0029",
+      "entity_0031"
+    ],
+    "visibility_assessment": "UNOBSERVED_UNCERTAIN"
+  },
+  "snapshots": [
+    {
+      "snapshot_id": "G001",
+      "frame": 204,
+      "time": 6.803081570996979,
+      "target_state": "VISIBLE_TRUSTED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0029",
+          "raw_label": "sports ball",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0029",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0002",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0029",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0007",
+          "status": "ACTIVE",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0001",
+          "event_type": "PRIMARY_ANCHOR_CHANGED",
+          "frame": 204,
+          "time": 6.803081570996979,
+          "details": {
+            "segment_id": "P0001",
+            "anchor": "entity_0027"
+          }
+        },
+        {
+          "event_id": "EV0002",
+          "event_type": "PRIMARY_ANCHOR_CHANGED",
+          "frame": 204,
+          "time": 6.803081570996979,
+          "details": {
+            "segment_id": "P0002",
+            "anchor": "entity_0029"
+          }
+        },
+        {
+          "event_id": "EV0003",
+          "event_type": "TARGET_APPEARED",
+          "frame": 204,
+          "time": 6.803081570996979,
+          "details": {}
+        }
+      ],
+      "meaning": "Current trusted local subgraph"
+    },
+    {
+      "snapshot_id": "G002",
+      "frame": 234,
+      "time": 7.803534743202417,
+      "target_state": "VISIBLE_TRUSTED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0029",
+          "raw_label": "sports ball",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0031",
+          "raw_label": "chair",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0031",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0003",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0029",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0002",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0029",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0007",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0031",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0008",
+          "status": "ACTIVE",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0004",
+          "event_type": "PRIMARY_ANCHOR_CHANGED",
+          "frame": 234,
+          "time": 7.803534743202417,
+          "details": {
+            "segment_id": "P0003",
+            "anchor": "entity_0031"
+          }
+        }
+      ],
+      "meaning": "Current trusted local subgraph"
+    },
+    {
+      "snapshot_id": "G003",
+      "frame": 312,
+      "time": 10.404712990936556,
+      "target_state": "VISIBLE_TRUSTED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0029",
+          "raw_label": "sports ball",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0031",
+          "raw_label": "chair",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0034",
+          "raw_label": "potted plant",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 2,
+          "via_primary": "entity_0027"
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0031",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0003",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0029",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0002",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "entity_0027",
+          "relation": "IMAGE_NEAR_CONTEXT",
+          "target": "entity_0034",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "C0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "entity_0029",
+          "relation": "IMAGE_NEAR_CONTEXT",
+          "target": "entity_0034",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "C0002",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0029",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0007",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0031",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0008",
+          "status": "ACTIVE",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0005",
+          "event_type": "IMPORTANT_CONTEXT_CHANGED",
+          "frame": 312,
+          "time": 10.404712990936556,
+          "details": {
+            "segment_id": "C0001",
+            "anchor": "entity_0034"
+          }
+        },
+        {
+          "event_id": "EV0006",
+          "event_type": "IMPORTANT_CONTEXT_CHANGED",
+          "frame": 312,
+          "time": 10.404712990936556,
+          "details": {
+            "segment_id": "C0002",
+            "anchor": "entity_0034"
+          }
+        }
+      ],
+      "meaning": "Current trusted local subgraph"
+    },
+    {
+      "snapshot_id": "G004",
+      "frame": 390,
+      "time": 13.005891238670696,
+      "target_state": "VISIBLE_TRUSTED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0029",
+          "raw_label": "sports ball",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0031",
+          "raw_label": "chair",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0031",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0003",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0029",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0002",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0029",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0007",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0031",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0008",
+          "status": "ACTIVE",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0007",
+          "event_type": "PHYSICAL_RELATION_CANDIDATE",
+          "frame": 390,
+          "time": 13.005891238670696,
+          "details": {
+            "candidate_id": "PRC0006",
+            "relation": "NEAR"
+          }
+        }
+      ],
+      "meaning": "Current trusted local subgraph"
+    },
+    {
+      "snapshot_id": "G005",
+      "frame": 402,
+      "time": 13.40607250755287,
+      "target_state": "VISIBLE_TRUSTED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0031",
+          "raw_label": "chair",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0031",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0003",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "ACTIVE",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0031",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0008",
+          "status": "ACTIVE",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0008",
+          "event_type": "PHYSICAL_RELATION_CANDIDATE",
+          "frame": 402,
+          "time": 13.40607250755287,
+          "details": {
+            "candidate_id": "PRC0003",
+            "relation": "NEAR"
+          }
+        },
+        {
+          "event_id": "EV0009",
+          "event_type": "PHYSICAL_RELATION_CANDIDATE",
+          "frame": 402,
+          "time": 13.40607250755287,
+          "details": {
+            "candidate_id": "PRC0009",
+            "relation": "NEAR"
+          }
+        }
+      ],
+      "meaning": "Current trusted local subgraph"
+    },
+    {
+      "snapshot_id": "G006",
+      "frame": 420,
+      "time": 14.006344410876133,
+      "target_state": "UNOBSERVED",
+      "nodes": [
+        {
+          "entity_id": "phone_01",
+          "raw_label": "cell phone",
+          "semantic_roles": [
+            "TARGET"
+          ],
+          "hop": 0,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0027",
+          "raw_label": "microwave",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0029",
+          "raw_label": "sports ball",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        },
+        {
+          "entity_id": "entity_0031",
+          "raw_label": "chair",
+          "semantic_roles": [
+            "OCCLUDER",
+            "LANDMARK"
+          ],
+          "hop": 1,
+          "via_primary": null
+        }
+      ],
+      "edges": [
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0027",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0001",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0031",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0003",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "target": "entity_0029",
+          "kind": "IMAGE_CONTEXT",
+          "segment_id": "P0002",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0027",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0006",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0029",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0007",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        },
+        {
+          "source": "phone_01",
+          "relation": "NEAR",
+          "target": "entity_0031",
+          "kind": "PHYSICAL",
+          "decision": "CANDIDATE",
+          "episode_id": "E0008",
+          "status": "LAST_TRUSTED",
+          "physical_verification": false
+        }
+      ],
+      "trigger_events": [
+        {
+          "event_id": "EV0010",
+          "event_type": "TARGET_UNOBSERVED",
+          "frame": 420,
+          "time": 14.006344410876133,
+          "details": {}
+        }
+      ],
+      "meaning": "Remembered last trusted local subgraph"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV0001",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 204,
+      "time": 6.803081570996979,
+      "details": {
+        "segment_id": "P0001",
+        "anchor": "entity_0027"
+      }
+    },
+    {
+      "event_id": "EV0002",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 204,
+      "time": 6.803081570996979,
+      "details": {
+        "segment_id": "P0002",
+        "anchor": "entity_0029"
+      }
+    },
+    {
+      "event_id": "EV0003",
+      "event_type": "TARGET_APPEARED",
+      "frame": 204,
+      "time": 6.803081570996979,
+      "details": {}
+    },
+    {
+      "event_id": "EV0004",
+      "event_type": "PRIMARY_ANCHOR_CHANGED",
+      "frame": 234,
+      "time": 7.803534743202417,
+      "details": {
+        "segment_id": "P0003",
+        "anchor": "entity_0031"
+      }
+    },
+    {
+      "event_id": "EV0005",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 312,
+      "time": 10.404712990936556,
+      "details": {
+        "segment_id": "C0001",
+        "anchor": "entity_0034"
+      }
+    },
+    {
+      "event_id": "EV0006",
+      "event_type": "IMPORTANT_CONTEXT_CHANGED",
+      "frame": 312,
+      "time": 10.404712990936556,
+      "details": {
+        "segment_id": "C0002",
+        "anchor": "entity_0034"
+      }
+    },
+    {
+      "event_id": "EV0007",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 390,
+      "time": 13.005891238670696,
+      "details": {
+        "candidate_id": "PRC0006",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0008",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 402,
+      "time": 13.40607250755287,
+      "details": {
+        "candidate_id": "PRC0003",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0009",
+      "event_type": "PHYSICAL_RELATION_CANDIDATE",
+      "frame": 402,
+      "time": 13.40607250755287,
+      "details": {
+        "candidate_id": "PRC0009",
+        "relation": "NEAR"
+      }
+    },
+    {
+      "event_id": "EV0010",
+      "event_type": "TARGET_UNOBSERVED",
+      "frame": 420,
+      "time": 14.006344410876133,
+      "details": {}
+    },
+    {
+      "event_id": "V291_0011",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0009",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_006",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0012",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0010",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_005",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0013",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0011",
+        "relation": "OCCLUDED_BY",
+        "anchor": "event_local::V291E01::event_anchor_008",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0014",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0012",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_008",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0015",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0013",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_007",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0016",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0014",
+        "relation": "OCCLUDED_BY",
+        "anchor": "event_local::V291E01::event_anchor_009",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0017",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0015",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_009",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    },
+    {
+      "event_id": "V291_0018",
+      "event_type": "V291_PHYSICAL_CANDIDATE",
+      "frame": 465,
+      "time": 0.0,
+      "details": {
+        "episode_id": "V291_0016",
+        "relation": "NEAR",
+        "anchor": "event_local::V291E01::event_anchor_012",
+        "anchor_scope": "EVENT_LOCAL_ANCHOR"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "v28_evidence_availability_1",
+  "task": "test3",
+  "trusted_target_frames": 23,
+  "trusted_target_frame_indices": [
+    228,
+    234,
+    240,
+    276,
+    294,
+    330,
+    336,
+    342,
+    348,
+    360,
+    366,
+    378,
+    384,
+    390,
+    396,
+    402,
+    408,
+    414,
+    420,
+    426,
+    438,
+    444,
+    468
+  ],
+  "candidate_primary_anchors": [
+    {
+      "entity_id": "entity_0020",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 3,
+      "max_continuous_support_seconds": 0.4000684345594525,
+      "segment_id": "P0001"
+    },
+    {
+      "entity_id": "entity_0051",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 4,
+      "max_continuous_support_seconds": 0.6001026518391779,
+      "segment_id": "P0002"
+    },
+    {
+      "entity_id": "entity_0053",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 5,
+      "max_continuous_support_seconds": 1.2002053036783575,
+      "segment_id": "P0003"
+    },
+    {
+      "entity_id": "entity_0051",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 8,
+      "max_continuous_support_seconds": 1.60027373823781,
+      "segment_id": "P0004"
+    }
+  ],
+  "target_anchor_co_visible_frames": 20,
+  "max_continuous_support_seconds": 1.60027373823781,
+  "trusted_target_observations_in_registry": 41,
+  "trusted_mask_references": 0,
+  "mask_evidence_exists": false,
+  "placement_transition_evidence_exists": false,
+  "placement_transition_candidates": [],
+  "vlm_candidate_verification_available": false,
+  "physical_reasoning_evaluable": true,
+  "status": "EVALUABLE_CONTEXT_ONLY",
+  "reasons": [
+    "stable context exists but no relation-specific placement/interaction transition pattern",
+    "no trusted target mask references in frozen registry",
+    "no cached candidate-scoped VLM verification"
+  ]
+}

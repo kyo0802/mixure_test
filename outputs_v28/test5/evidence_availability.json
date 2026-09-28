@@ -1,0 +1,99 @@
+{
+  "schema": "v28_evidence_availability_1",
+  "task": "test5",
+  "trusted_target_frames": 31,
+  "trusted_target_frame_indices": [
+    96,
+    156,
+    162,
+    168,
+    174,
+    180,
+    186,
+    192,
+    240,
+    246,
+    252,
+    276,
+    282,
+    288,
+    294,
+    300,
+    306,
+    312,
+    318,
+    324,
+    330,
+    336,
+    342,
+    348,
+    354,
+    360,
+    366,
+    372,
+    378,
+    384,
+    414
+  ],
+  "candidate_primary_anchors": [
+    {
+      "entity_id": "entity_0005",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 7,
+      "max_continuous_support_seconds": 1.2000000000000002,
+      "segment_id": "P0001"
+    },
+    {
+      "entity_id": "entity_0016",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 7,
+      "max_continuous_support_seconds": 1.2000000000000002,
+      "segment_id": "P0002"
+    },
+    {
+      "entity_id": "entity_0042",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 5,
+      "max_continuous_support_seconds": 1.0,
+      "segment_id": "P0003"
+    },
+    {
+      "entity_id": "entity_0043",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 10,
+      "max_continuous_support_seconds": 1.8000000000000007,
+      "segment_id": "P0004"
+    }
+  ],
+  "target_anchor_co_visible_frames": 29,
+  "max_continuous_support_seconds": 1.8000000000000007,
+  "trusted_target_observations_in_registry": 51,
+  "trusted_mask_references": 0,
+  "mask_evidence_exists": false,
+  "placement_transition_evidence_exists": false,
+  "placement_transition_candidates": [],
+  "vlm_candidate_verification_available": false,
+  "physical_reasoning_evaluable": true,
+  "status": "EVALUABLE_CONTEXT_ONLY",
+  "reasons": [
+    "stable context exists but no relation-specific placement/interaction transition pattern",
+    "no trusted target mask references in frozen registry",
+    "no cached candidate-scoped VLM verification"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "v28_post_freeze_video_evaluation_1",
+  "task": "test9",
+  "evaluation_phase": "after_prediction_freeze",
+  "reference_labels_used_in_inference": false,
+  "expected_context": "basketball / HomePad / bottle",
+  "verdict": "INSUFFICIENT_COVISIBILITY",
+  "review": "Only three trusted sampled target frames and no stable target-anchor segment are available, so no local graph or physical relation is created.",
+  "not_an_accuracy_measurement": true,
+  "graph_quality": {
+    "v27_entities": 1,
+    "v28_entities": 1,
+    "hop0": 1,
+    "hop1": 0,
+    "hop2": 0,
+    "connected": true,
+    "snapshots": 2,
+    "final_nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      }
+    ]
+  },
+  "physical_reasoning": {
+    "evidence_status": "INSUFFICIENT_EVIDENCE",
+    "candidate_count": 0,
+    "promoted_count": 0,
+    "rejected_or_uncertain_count": 0,
+    "types": {},
+    "obvious_false_promotions": []
+  },
+  "safety": {
+    "unauthorized_memory_updates": 0,
+    "direct_image_to_physical_leaks": 0,
+    "false_identity_physical_relations": 0,
+    "disconnected_nodes": 0,
+    "irrelevant_branches_detected": 0
+  },
+  "search": {
+    "category": "NO_USEFUL_CONTEXT",
+    "candidate_count": 0,
+    "top_result": null
+  },
+  "event_order_valid": true
+}

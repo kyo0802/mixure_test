@@ -1,0 +1,871 @@
+{
+  "schema": "v28_post_freeze_evaluation_summary_1",
+  "evaluated_utc": "2026-09-27T10:00:33.438057+00:00",
+  "prediction_manifest_sha256": "81a0dd5308d22e57e02beb730cfa829ca6efd49c0739c0401db2dc2379e41730",
+  "videos": [
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test3",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "box",
+      "verdict": "LOCAL_GRAPH_EXPANDED_BUT_FINAL_PLACEMENT_MISSING",
+      "review": "No box entity or container-entry transition was available. The graph adds chair/ball/microwave context, but INSIDE is unsupported.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 5,
+        "hop0": 1,
+        "hop1": 3,
+        "hop2": 1,
+        "connected": true,
+        "snapshots": 6,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0051",
+            "raw_label": "sports ball",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0054",
+            "raw_label": "microwave",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 2,
+            "via_primary": "entity_0051"
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 4,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 8,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 4,
+          "BEHIND:REJECTED": 4,
+          "NEAR:CANDIDATE": 4
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+        "candidate_count": 6,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0051",
+          "anchor_label": "sports ball",
+          "relation": "NEAR",
+          "priority_rule": 3,
+          "confirmed": false,
+          "status": "LAST_TRUSTED",
+          "source_episode": "E0009",
+          "source_memory": "G006",
+          "last_confirmed_time": 14.802532078699743,
+          "reason": "Possible physical relation; unconfirmed",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [
+            {
+              "entity_id": "entity_0054",
+              "label": "microwave",
+              "relation": "IMAGE_NEAR_CONTEXT"
+            }
+          ],
+          "provenance": [
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/10",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/12",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/13",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/5",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/6",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/7",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/8",
+            "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/9",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/54",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/57",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/60",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/63",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/66",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/69",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/73",
+            "outputs_v26/test3/entity_registry.json#phone_01/observation_history/76"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test4",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "basketball / blind spot",
+      "verdict": "BASKETBALL_CONTEXT_ONLY",
+      "review": "A sports-ball primary anchor and potted-plant Hop2 context are retained. NEAR is candidate-only; BEHIND is rejected because overlap/visibility-loss placement evidence is absent.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 4,
+        "hop0": 1,
+        "hop1": 2,
+        "hop2": 1,
+        "connected": true,
+        "snapshots": 5,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0032",
+            "raw_label": "microwave",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0041",
+            "raw_label": "sports ball",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0040",
+            "raw_label": "potted plant",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 2,
+            "via_primary": "entity_0032"
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 1,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 5,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 2,
+          "BEHIND:REJECTED": 2,
+          "NEAR:REJECTED": 1,
+          "NEAR:CANDIDATE": 1
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+        "candidate_count": 3,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0041",
+          "anchor_label": "sports ball",
+          "relation": "NEAR",
+          "priority_rule": 3,
+          "confirmed": false,
+          "status": "LAST_TRUSTED",
+          "source_episode": "E0004",
+          "source_memory": "G005",
+          "last_confirmed_time": 14.802532078699743,
+          "reason": "Possible physical relation; unconfirmed",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [],
+          "provenance": [
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+            "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test5",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "box; final placement incomplete",
+      "verdict": "UNCERTAINTY_CORRECTLY_RETAINED",
+      "review": "No box or entry transition is present. The final local graph is ball→microwave context, so INSIDE is not invented.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 8,
+        "hop0": 1,
+        "hop1": 4,
+        "hop2": 3,
+        "connected": true,
+        "snapshots": 7,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0043",
+            "raw_label": "sports ball",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0044",
+            "raw_label": "microwave",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 2,
+            "via_primary": "entity_0043"
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 4,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 8,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 4,
+          "BEHIND:REJECTED": 4,
+          "NEAR:CANDIDATE": 4
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+        "candidate_count": 8,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0043",
+          "anchor_label": "sports ball",
+          "relation": "NEAR",
+          "priority_rule": 3,
+          "confirmed": false,
+          "status": "LAST_TRUSTED",
+          "source_episode": "E0012",
+          "source_memory": "G007",
+          "last_confirmed_time": 12.8,
+          "reason": "Possible physical relation; unconfirmed",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [
+            {
+              "entity_id": "entity_0044",
+              "label": "microwave",
+              "relation": "IMAGE_NEAR_CONTEXT"
+            }
+          ],
+          "provenance": [
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/0",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/1",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/2",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/3",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/4",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/5",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/6",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/7",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/8",
+            "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/9",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/77",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/80",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/83",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/86",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/89",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/91",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/93",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/95",
+            "outputs_v26/test5/entity_registry.json#phone_01/observation_history/97"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test6",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "microwave / doll",
+      "verdict": "MICROWAVE_CONTEXT_WITHOUT_PLACEMENT",
+      "review": "Microwave is a primary anchor and the local graph is richer, but no stable doll node or physical placement transition supports ON/INSIDE/BEHIND.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 5,
+        "hop0": 1,
+        "hop1": 3,
+        "hop2": 1,
+        "connected": true,
+        "snapshots": 6,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0027",
+            "raw_label": "microwave",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0029",
+            "raw_label": "sports ball",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0031",
+            "raw_label": "chair",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 3,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 6,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 3,
+          "BEHIND:REJECTED": 3,
+          "NEAR:CANDIDATE": 3
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+        "candidate_count": 6,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0027",
+          "anchor_label": "microwave",
+          "relation": "NEAR",
+          "priority_rule": 3,
+          "confirmed": false,
+          "status": "LAST_TRUSTED",
+          "source_episode": "E0006",
+          "source_memory": "G006",
+          "last_confirmed_time": 13.40607250755287,
+          "reason": "Possible physical relation; unconfirmed",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [],
+          "provenance": [
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/11",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/12",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/13",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/14",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/15",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/16",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/17",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/18",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/19",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/20",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/21",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/22",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/23",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/24",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/25",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/26",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/27",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/28",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/29",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/30",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/31",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/32",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/33",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/34",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/36",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/37",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/38",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/39",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/40",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/42",
+            "outputs_v26/test6/entity_registry.json#entity_0027/observation_history/44",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/0",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/11",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/14",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/17",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/20",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/23",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/26",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/29",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/32",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/35",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/38",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/41",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/44",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/47",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/5",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/50",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/59",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/62",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/65",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/68",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/71",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/75",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/77",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/8",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/80",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/84",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/87",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/93",
+            "outputs_v26/test6/entity_registry.json#phone_01/observation_history/96"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test7",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "doll",
+      "verdict": "IDENTITY_SAFETY_BLOCKS_FINAL_CONTEXT",
+      "review": "The provisional re-identification remains observation-only. No doll relation is written to phone memory; retained anchors are older image contexts.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 6,
+        "hop0": 1,
+        "hop1": 5,
+        "hop2": 0,
+        "connected": true,
+        "snapshots": 4,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0025",
+            "raw_label": "microwave",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0027",
+            "raw_label": "chair",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          },
+          {
+            "entity_id": "entity_0031",
+            "raw_label": "chair",
+            "semantic_roles": [
+              "OCCLUDER",
+              "LANDMARK"
+            ],
+            "hop": 1,
+            "via_primary": null
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 8,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 14,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 7,
+          "BEHIND:REJECTED": 7,
+          "NEAR:CANDIDATE": 8
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+        "candidate_count": 10,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0025",
+          "anchor_label": "microwave",
+          "relation": "NEAR",
+          "priority_rule": 3,
+          "confirmed": false,
+          "status": "LAST_TRUSTED",
+          "source_episode": "E0014",
+          "source_memory": "G004",
+          "last_confirmed_time": 14.004255319148935,
+          "reason": "Possible physical relation; unconfirmed",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [],
+          "provenance": [
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/24",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/25",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/26",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/27",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/28",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/29",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/30",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/31",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/32",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/33",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/34",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/35",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/36",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/37",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/38",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/39",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/40",
+            "outputs_v26/test7/entity_registry.json#entity_0025/observation_history/41",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/29",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/31",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/34",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/37",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/40",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/43",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/46",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/49",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/52",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/55",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/58",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/61",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/64",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/67",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/70",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/72",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/75",
+            "outputs_v26/test7/entity_registry.json#phone_01/observation_history/78"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test8",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "multiple phone distractors after f804",
+      "verdict": "IDENTITY_SAFE_RECONFIRMATION_WITHOUT_NEW_CONTEXT",
+      "review": "The sole f804 CONFIRMED_MATCH updates last-seen state, but one trusted frame cannot form a new segment. Other phones do not update phone_01; pre-f804 context is STALE.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 2,
+        "v28_entities": 5,
+        "hop0": 1,
+        "hop1": 3,
+        "hop2": 1,
+        "connected": true,
+        "snapshots": 6,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+        "candidate_count": 2,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 7,
+        "types": {
+          "OCCLUDED_BY:REJECTED": 3,
+          "BEHIND:REJECTED": 3,
+          "NEAR:CANDIDATE": 2,
+          "NEAR:REJECTED": 1
+        },
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "IMAGE_CONTEXT_ONLY",
+        "candidate_count": 3,
+        "top_result": {
+          "target": "phone_01",
+          "search_anchor": "entity_0028",
+          "anchor_label": "sports ball",
+          "relation": "TRUSTED_ANCHOR_CONTEXT",
+          "priority_rule": 5,
+          "confirmed": false,
+          "status": "STALE",
+          "source_episode": "E0001",
+          "source_memory": "G003",
+          "last_confirmed_time": 14.20128739800544,
+          "reason": "Recent ended or stale stable context",
+          "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+          "context_anchors": [],
+          "provenance": [
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/10",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/11",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/12",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/13",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/14",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/15",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/16",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/17",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/18",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/19",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/20",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/21",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/22",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/23",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/24",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/25",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/26",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/27",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/28",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/29",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/3",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/30",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/31",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/32",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/33",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/34",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/35",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/36",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/38",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/39",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/4",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/40",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/5",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/6",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/7",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/8",
+            "outputs_v26/test8/entity_registry.json#entity_0028/observation_history/9",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/0",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/101",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/105",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/108",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/11",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/111",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/14",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/17",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/20",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/23",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/26",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/29",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/32",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/35",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/38",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/41",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/44",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/47",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/5",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/50",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/53",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/56",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/59",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/62",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/65",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/68",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/71",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/74",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/77",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/8",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/80",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/83",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/86",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/89",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/92",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/95",
+            "outputs_v26/test8/entity_registry.json#phone_01/observation_history/98"
+          ],
+          "rank": 1
+        }
+      },
+      "event_order_valid": true
+    },
+    {
+      "schema": "v28_post_freeze_video_evaluation_1",
+      "task": "test9",
+      "evaluation_phase": "after_prediction_freeze",
+      "reference_labels_used_in_inference": false,
+      "expected_context": "basketball / HomePad / bottle",
+      "verdict": "INSUFFICIENT_COVISIBILITY",
+      "review": "Only three trusted sampled target frames and no stable target-anchor segment are available, so no local graph or physical relation is created.",
+      "not_an_accuracy_measurement": true,
+      "graph_quality": {
+        "v27_entities": 1,
+        "v28_entities": 1,
+        "hop0": 1,
+        "hop1": 0,
+        "hop2": 0,
+        "connected": true,
+        "snapshots": 2,
+        "final_nodes": [
+          {
+            "entity_id": "phone_01",
+            "raw_label": "cell phone",
+            "semantic_roles": [
+              "TARGET"
+            ],
+            "hop": 0,
+            "via_primary": null
+          }
+        ]
+      },
+      "physical_reasoning": {
+        "evidence_status": "INSUFFICIENT_EVIDENCE",
+        "candidate_count": 0,
+        "promoted_count": 0,
+        "rejected_or_uncertain_count": 0,
+        "types": {},
+        "obvious_false_promotions": []
+      },
+      "safety": {
+        "unauthorized_memory_updates": 0,
+        "direct_image_to_physical_leaks": 0,
+        "false_identity_physical_relations": 0,
+        "disconnected_nodes": 0,
+        "irrelevant_branches_detected": 0
+      },
+      "search": {
+        "category": "NO_USEFUL_CONTEXT",
+        "candidate_count": 0,
+        "top_result": null
+      },
+      "event_order_valid": true
+    }
+  ],
+  "decision_counts": {
+    "OCCLUDED_BY:REJECTED": 23,
+    "BEHIND:REJECTED": 23,
+    "NEAR:CANDIDATE": 22,
+    "NEAR:REJECTED": 2
+  },
+  "search_categories": {
+    "CANDIDATE_PHYSICAL_HYPOTHESIS": 5,
+    "IMAGE_CONTEXT_ONLY": 1,
+    "NO_USEFUL_CONTEXT": 1
+  },
+  "totals": {
+    "v27_entities": 13,
+    "v28_entities": 34,
+    "hop1": 20,
+    "hop2": 7,
+    "candidates": 22,
+    "promotions": 0,
+    "obvious_false_promotions": 0,
+    "unauthorized_updates": 0,
+    "disconnected_nodes": 0
+  },
+  "scope": "Frozen-stream qualitative comparison; no full ground-truth trajectory or accuracy claim"
+}

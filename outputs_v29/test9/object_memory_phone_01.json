@@ -1,0 +1,56 @@
+{
+  "schema": "v29_lifetime_memory_1",
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_frame": 618,
+    "last_seen_time": 20.60429166666667,
+    "last_trusted_snapshot": "G002",
+    "last_trusted_primary_anchors": [],
+    "visibility_assessment": "UNOBSERVED_UNCERTAIN"
+  },
+  "entities": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    }
+  ],
+  "episodes": [],
+  "events": [
+    {
+      "event_id": "EV0001",
+      "event_type": "TARGET_APPEARED",
+      "frame": 546,
+      "time": 18.203791666666667,
+      "details": {}
+    },
+    {
+      "event_id": "EV0002",
+      "event_type": "TARGET_UNOBSERVED",
+      "frame": 630,
+      "time": 21.004375,
+      "details": {}
+    }
+  ],
+  "last_trusted_local_subgraph": {
+    "nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      }
+    ],
+    "edges": [],
+    "connected": true
+  },
+  "interpretation": "Historical target-centered local evidence; candidates are not confirmed physical truth"
+}

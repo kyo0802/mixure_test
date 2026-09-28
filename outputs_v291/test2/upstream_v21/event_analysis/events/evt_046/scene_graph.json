@@ -1,0 +1,288 @@
+{
+  "event_id": "evt_046",
+  "analysis_status": "skipped_events_only",
+  "entities": [
+    {
+      "track_id": 70,
+      "entity_id": "track_0070",
+      "detector_class": "teddy bear",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 15.205757575757575,
+      "last_seen": 26.209924242424243,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.7123151773194886,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 72,
+      "entity_id": "track_0072",
+      "detector_class": "microwave",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 17.006439393939395,
+      "last_seen": 26.009848484848483,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.9310018866245191,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 74,
+      "entity_id": "track_0074",
+      "detector_class": "person",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 17.806742424242422,
+      "last_seen": 24.209166666666665,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.7185322936657039,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 75,
+      "entity_id": "track_0075",
+      "detector_class": "bottle",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 17.806742424242422,
+      "last_seen": 25.809772727272726,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.5724330340672639,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 79,
+      "entity_id": "track_0079",
+      "detector_class": "person",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 19.207272727272727,
+      "last_seen": 26.209924242424243,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.6822118376516142,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 85,
+      "entity_id": "track_0085",
+      "detector_class": "cell phone",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 24.209166666666665,
+      "last_seen": 25.809772727272726,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.31467428066812786,
+      "admission_status": "unknown",
+      "evidence": []
+    }
+  ],
+  "relations": [
+    {
+      "subject_track_id": 72,
+      "predicate": "NEAR",
+      "object_track_id": 70,
+      "confidence": 0.7442156076431274,
+      "temporal_phase": "persistent",
+      "start_time": 24.209166666666665,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.209166666666665,
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 72,
+      "predicate": "OVERLAPPING",
+      "object_track_id": 70,
+      "confidence": 0.7442156076431274,
+      "temporal_phase": "persistent",
+      "start_time": 24.209166666666665,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.209166666666665,
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 72,
+      "predicate": "RIGHT_OF",
+      "object_track_id": 70,
+      "confidence": 0.7564390897750854,
+      "temporal_phase": "persistent",
+      "start_time": 24.209166666666665,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.209166666666665,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 72,
+      "predicate": "BELOW",
+      "object_track_id": 70,
+      "confidence": 0.7442156076431274,
+      "temporal_phase": "persistent",
+      "start_time": 24.209166666666665,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.209166666666665,
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 70,
+      "predicate": "NEAR",
+      "object_track_id": 72,
+      "confidence": 0.7568281292915344,
+      "temporal_phase": "persistent",
+      "start_time": 24.80939393939394,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 70,
+      "predicate": "OVERLAPPING",
+      "object_track_id": 72,
+      "confidence": 0.7568281292915344,
+      "temporal_phase": "persistent",
+      "start_time": 24.80939393939394,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 70,
+      "predicate": "ABOVE",
+      "object_track_id": 72,
+      "confidence": 0.7568281292915344,
+      "temporal_phase": "persistent",
+      "start_time": 24.80939393939394,
+      "end_time": 25.809772727272726,
+      "observed_times": [
+        24.80939393939394,
+        25.809772727272726
+      ],
+      "event_ids": [
+        "evt_046"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 2,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    }
+  ],
+  "rejected_relations": [],
+  "notes": [
+    "No VLM analysis: entity semantics are unknown; edges are separately identified 2D geometry only"
+  ]
+}

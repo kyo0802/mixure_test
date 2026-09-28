@@ -1,0 +1,61 @@
+---
+title: phone_01 lifetime memory
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0027["entity_0027<br/>microwave<br/>Hop 1"]
+    entity_0029["entity_0029<br/>sports ball<br/>Hop 1"]
+    entity_0031["entity_0031<br/>chair<br/>Hop 1"]
+    entity_0034["entity_0034<br/>potted plant<br/>Hop 2"]
+    event_local__V291E01__event_anchor_006["event_local::V291E01::event_anchor_006<br/>microwave<br/>Hop 1"]
+    event_local__V291E01__event_anchor_005["event_local::V291E01::event_anchor_005<br/>chair<br/>Hop 1"]
+    event_local__V291E01__event_anchor_008["event_local::V291E01::event_anchor_008<br/>potted plant<br/>Hop 1"]
+    event_local__V291E01__event_anchor_007["event_local::V291E01::event_anchor_007<br/>person<br/>Hop 1"]
+    event_local__V291E01__event_anchor_009["event_local::V291E01::event_anchor_009<br/>sports ball<br/>Hop 1"]
+    event_local__V291E01__event_anchor_012["event_local::V291E01::event_anchor_012<br/>dining table<br/>Hop 1"]
+    r1(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0027
+    r2(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0031
+    r3(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r3
+    r3 --> entity_0029
+    r4(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0027
+    r5(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r5
+    r5 --> entity_0029
+    r6(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r6
+    r6 --> entity_0031
+    r7(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r7
+    r7 --> event_local__V291E01__event_anchor_006
+    r8(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r8
+    r8 --> event_local__V291E01__event_anchor_005
+    r9(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r9
+    r9 --> event_local__V291E01__event_anchor_008
+    r10(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r10
+    r10 --> event_local__V291E01__event_anchor_008
+    r11(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r11
+    r11 --> event_local__V291E01__event_anchor_007
+    r12(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r12
+    r12 --> event_local__V291E01__event_anchor_009
+    r13(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r13
+    r13 --> event_local__V291E01__event_anchor_009
+    r14(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r14
+    r14 --> event_local__V291E01__event_anchor_012
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14 relation;

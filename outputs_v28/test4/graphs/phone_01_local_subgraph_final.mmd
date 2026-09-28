@@ -1,0 +1,24 @@
+---
+title: test4: final last-trusted local subgraph
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0032["entity_0032<br/>microwave<br/>Hop 1"]
+    entity_0041["entity_0041<br/>sports ball<br/>Hop 1"]
+    entity_0040["entity_0040<br/>potted plant<br/>Hop 2"]
+    r1(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0041
+    r2(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0032
+    r3(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0032 --> r3
+    r3 --> entity_0040
+    r4(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0041
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4 relation;

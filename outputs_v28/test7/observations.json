@@ -1,0 +1,1945 @@
+{
+  "schema": "v28_observations_1",
+  "config": {
+    "target_id": "phone_01",
+    "minimum_support_frames": 3,
+    "minimum_support_seconds": 0.35,
+    "maximum_support_gap_seconds": 0.65,
+    "primary_local_distance_fraction": 0.3,
+    "primary_gap_fraction": 0.2,
+    "context_local_distance_fraction": 0.28,
+    "context_gap_fraction": 0.18,
+    "maximum_primary_anchors": 3,
+    "maximum_context_per_primary": 2,
+    "vlm_promotion_confidence": 0.8
+  },
+  "provenance": {
+    "input_sha256": {
+      "outputs_v26/test7/entity_registry.json": "4de35cd95a4d80a2e42d8fe3a24d7af6f03fad8a1f9f348d5abaa1c1fa13b088",
+      "outputs_v26/test7/identity_timeline.json": "6f0ca5b3993f2247bdcb28f3fb8da52c58d397cc5755fe0d186f2ba1e996c917",
+      "outputs_v26/test7/candidate_stream.json": "6d9d152f45ff97c76a1e45d21a0e89bebb4ceadd33d03aac4f471f69c134ad00",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/detections.json": "67861c31a0b6721e3626798df7bb165dd3b5cada5cdd27851a79d1b0cc5759aa",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/video_metadata.json": "3580f68d37088edc033670ba099f4e7227cc425605e57f188dfa5cf799d3374f",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_002/scene_graph.json": "865dc7f783b3c27877266a6e12a9485a791b8f24360e7315dda1e90c7098660f",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_021/scene_graph.json": "9eae2cf652b037049c14c79c3d927af96dff6e302ede64ca7fa7b8a0f4d33098",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_023/scene_graph.json": "5d096f8fb02351fc821b0960e323ed985f6383c6190852c1b8a97376ac513a18",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_027/scene_graph.json": "35c15f656cf2a0c3253791d354512ba0608a92760351aa88f8fc24e00410a40c",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_029/scene_graph.json": "56d87a3daf493d9ebd19327423049c52e87e26041f52272a28f98e48789a045c",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_034/scene_graph.json": "48827db1a8adb2284ac6471621601e794daf98f6508dac73cd4d92770e255a12",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_036/scene_graph.json": "ba8ebe68abd765bf8561b53b7eb13e611ba12c5b60d62b1cccc88e5b47e2a427",
+      "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_038/scene_graph.json": "77b025de0c79e4017f530dfc53558fbe96d931c5089623d4659989c01082d778"
+    },
+    "frame_size": [
+      1280,
+      720
+    ],
+    "fps": 29.990884229717413,
+    "sampled_frames": 221,
+    "upstream_entity_count": 83,
+    "existing_event_evidence": [
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_002/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_021/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_023/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_027/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_029/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_034/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_036/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      },
+      {
+        "path": "outputs_v25_rerun/test7/upstream_v21/event_analysis/events/evt_038/scene_graph.json",
+        "analysis_status": "skipped_events_only",
+        "physical_relations_available": 0
+      }
+    ],
+    "limitations": [
+      "Existing event graphs contain no verified physical relations",
+      "SAM observations marked untrusted remain observation-only",
+      "Final track aliases are not used to retroactively authorize identity"
+    ]
+  },
+  "identity_audit": [
+    {
+      "frame": 84,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/0",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 90,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/1",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 150,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/2",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 162,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/3",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 180,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/4",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 186,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/5",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/6",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/7",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/5",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/8",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/8",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/9",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/9",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/11",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/12",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/10",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/14",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/15",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/17",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 252,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/11",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/18",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/20",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/21",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/23",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/24",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/26",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/27",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/29",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 318,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/12",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/30",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/31",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/32",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/13",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/33",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/34",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/35",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/14",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/36",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/37",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/38",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/15",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/39",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/40",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/41",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/16",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/42",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/43",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/44",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 348,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/17",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/45",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/46",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/47",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/18",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/48",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/49",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/19",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/51",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/52",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/20",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/54",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/55",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/21",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/57",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/58",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/22",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/60",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/61",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/62",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/23",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/63",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/64",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/65",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/24",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/66",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/67",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/68",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/25",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 396,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/26",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/69",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/70",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 402,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/27",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/71",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/72",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/73",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 408,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/28",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/74",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/75",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/76",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 414,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/29",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/77",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/78",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/79",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 420,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/30",
+      "identity": "NOT_EVALUATED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 426,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/80",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 432,
+      "observation_id": "outputs_v26/test7/entity_registry.json#phone_01/observation_history/81",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 636,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/31",
+      "identity": "PROVISIONAL_MATCH",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 642,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/32",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 648,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/33",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 648,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/34",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 654,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/35",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 654,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/36",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 660,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/37",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 684,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/38",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 690,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/39",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 690,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/40",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 696,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/41",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 702,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/42",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 702,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/43",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 702,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/44",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 708,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/45",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 708,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/46",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 708,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/47",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 714,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/48",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 714,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/49",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 714,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/50",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/51",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/52",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 720,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/53",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/54",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/55",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/56",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 726,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/57",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 732,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/58",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 732,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/59",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/60",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/61",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 738,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/62",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/63",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/64",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/65",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 744,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/66",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/67",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/68",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/69",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 750,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/70",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 756,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/71",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 756,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/72",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 762,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/73",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 762,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/74",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 768,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/75",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 768,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/76",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 768,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/77",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 774,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/78",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 774,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/79",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 780,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/80",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 780,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/81",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 786,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/82",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 786,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/83",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 792,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/84",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 792,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/85",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 798,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/86",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 798,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/87",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/88",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/89",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 804,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/90",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/91",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 810,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/92",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 816,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/93",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 816,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/94",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 816,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/95",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/96",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/97",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 822,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/98",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 828,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/99",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 828,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/100",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/101",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/102",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 834,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/103",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 840,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/104",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 840,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/105",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 840,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/106",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 846,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/107",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 846,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/108",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 846,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/109",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 852,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/110",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 852,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/111",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 852,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/112",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/113",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/114",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 858,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/115",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 864,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/116",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 864,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/117",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 864,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/118",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 870,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/119",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 870,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/120",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 870,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/121",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 876,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/122",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 876,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/123",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 876,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/124",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 882,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/125",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 882,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/126",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 888,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/127",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 888,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/128",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 888,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/129",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 894,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/130",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 894,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/131",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 900,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/132",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 900,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/133",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 906,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/134",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 906,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/135",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 906,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/136",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 912,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/137",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 912,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/138",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 912,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/139",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/140",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/141",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 918,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/142",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 924,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/143",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 924,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/144",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 924,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/145",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 930,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/146",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 930,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/147",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 936,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/148",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 936,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/149",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 936,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/150",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 942,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/151",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 942,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/152",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 948,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/153",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 948,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/154",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 948,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/155",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 954,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/156",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 960,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/157",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 966,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/158",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 966,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/159",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 972,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/160",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 972,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/161",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/162",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 978,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/163",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 984,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/164",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 984,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/165",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 990,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/166",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 990,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/167",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 996,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/168",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 996,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/169",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1002,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/170",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1002,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/171",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1008,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/172",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1008,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/173",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1014,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/174",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1014,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/175",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1014,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/176",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1020,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/177",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1020,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/178",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1026,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/179",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1026,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/180",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1032,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/181",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1032,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/182",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1038,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/183",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1038,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/184",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1044,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/185",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1044,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/186",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1044,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/187",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1050,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/188",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1050,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/189",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1056,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/190",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1056,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/191",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1062,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/192",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1062,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/193",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1068,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/194",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1074,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/195",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1074,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/196",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1080,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/197",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1080,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/198",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1086,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/199",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1098,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/200",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1098,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/201",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1104,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/202",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1110,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/203",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1110,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/204",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1122,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/205",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1122,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/206",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1122,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/207",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1128,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/208",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1128,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/209",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1134,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/210",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1134,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/211",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1140,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/212",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1146,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/213",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1146,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/214",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1152,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/215",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1152,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/216",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1158,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/217",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1158,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/218",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1164,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/219",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1164,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/220",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1170,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/221",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1170,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/222",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1176,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/223",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1176,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/224",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 1182,
+      "observation_id": "outputs_v26/test7/candidate_stream.json#observations/225",
+      "identity": "AMBIGUOUS",
+      "memory_update_authorized": false
+    }
+  ],
+  "blocked_identity_counts": {
+    "NOT_EVALUATED": 31,
+    "UNKNOWN": 38,
+    "TRUSTED": 21,
+    "PROVISIONAL_MATCH": 1,
+    "AMBIGUOUS": 194
+  },
+  "observation_relations_are_physical": false
+}

@@ -1,0 +1,52 @@
+---
+title: test5: phone_01 lifetime local memory
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0005["entity_0005<br/>chair<br/>Hop 1"]
+    entity_0016["entity_0016<br/>chair<br/>Hop 1"]
+    entity_0042["entity_0042<br/>chair<br/>Hop 1"]
+    entity_0043["entity_0043<br/>sports ball<br/>Hop 1"]
+    entity_0028["entity_0028<br/>cup<br/>Hop 2"]
+    entity_0031["entity_0031<br/>chair<br/>Hop 2"]
+    entity_0044["entity_0044<br/>microwave<br/>Hop 2"]
+    r1(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0005
+    r2(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0016
+    r3(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r3
+    r3 --> entity_0042
+    r4(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0043
+    r5(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0016 --> r5
+    r5 --> entity_0028
+    r6(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0005 --> r6
+    r6 --> entity_0031
+    r7(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0016 --> r7
+    r7 --> entity_0031
+    r8(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0043 --> r8
+    r8 --> entity_0044
+    r9(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r9
+    r9 --> entity_0005
+    r10(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r10
+    r10 --> entity_0016
+    r11(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r11
+    r11 --> entity_0042
+    r12(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r12
+    r12 --> entity_0043
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12 relation;

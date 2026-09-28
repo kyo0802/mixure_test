@@ -1,0 +1,163 @@
+---
+title: phone_01 lifetime memory
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0032["entity_0032<br/>microwave<br/>Hop 1"]
+    entity_0041["entity_0041<br/>sports ball<br/>Hop 1"]
+    entity_0040["entity_0040<br/>potted plant<br/>Hop 2"]
+    entity_0046["entity_0046<br/>person<br/>Hop 1"]
+    event_local__V291E01__event_anchor_002["event_local::V291E01::event_anchor_002<br/>microwave<br/>Hop 1"]
+    event_local__V291E01__event_anchor_006["event_local::V291E01::event_anchor_006<br/>sports ball<br/>Hop 1"]
+    event_local__V291E01__event_anchor_015["event_local::V291E01::event_anchor_015<br/>potted plant<br/>Hop 1"]
+    event_local__V291E01__event_anchor_001["event_local::V291E01::event_anchor_001<br/>book<br/>Hop 1"]
+    event_local__V291E01__event_anchor_004["event_local::V291E01::event_anchor_004<br/>potted plant<br/>Hop 1"]
+    event_local__V291E01__event_anchor_007["event_local::V291E01::event_anchor_007<br/>tv<br/>Hop 1"]
+    event_local__V291E01__event_anchor_011["event_local::V291E01::event_anchor_011<br/>book<br/>Hop 1"]
+    event_local__V291E02__event_anchor_002["event_local::V291E02::event_anchor_002<br/>microwave<br/>Hop 1"]
+    event_local__V291E02__event_anchor_006["event_local::V291E02::event_anchor_006<br/>sports ball<br/>Hop 1"]
+    event_local__V291E02__event_anchor_015["event_local::V291E02::event_anchor_015<br/>potted plant<br/>Hop 1"]
+    event_local__V291E02__event_anchor_001["event_local::V291E02::event_anchor_001<br/>book<br/>Hop 1"]
+    event_local__V291E02__event_anchor_004["event_local::V291E02::event_anchor_004<br/>potted plant<br/>Hop 1"]
+    event_local__V291E02__event_anchor_007["event_local::V291E02::event_anchor_007<br/>tv<br/>Hop 1"]
+    event_local__V291E02__event_anchor_011["event_local::V291E02::event_anchor_011<br/>book<br/>Hop 1"]
+    event_local__V291E03__event_anchor_002["event_local::V291E03::event_anchor_002<br/>microwave<br/>Hop 1"]
+    event_local__V291E03__event_anchor_006["event_local::V291E03::event_anchor_006<br/>sports ball<br/>Hop 1"]
+    event_local__V291E03__event_anchor_015["event_local::V291E03::event_anchor_015<br/>potted plant<br/>Hop 1"]
+    event_local__V291E03__event_anchor_001["event_local::V291E03::event_anchor_001<br/>book<br/>Hop 1"]
+    event_local__V291E03__event_anchor_004["event_local::V291E03::event_anchor_004<br/>potted plant<br/>Hop 1"]
+    event_local__V291E03__event_anchor_007["event_local::V291E03::event_anchor_007<br/>tv<br/>Hop 1"]
+    event_local__V291E03__event_anchor_011["event_local::V291E03::event_anchor_011<br/>book<br/>Hop 1"]
+    r1(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0041
+    r2(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0032
+    r3(["IMAGE_NEAR_CONTEXT<br/>LAST_TRUSTED"])
+    entity_0032 --> r3
+    r3 --> entity_0040
+    r4(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r4
+    r4 --> entity_0041
+    r5(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r5
+    r5 --> entity_0046
+    r6(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r6
+    r6 --> event_local__V291E01__event_anchor_002
+    r7(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r7
+    r7 --> event_local__V291E01__event_anchor_006
+    r8(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r8
+    r8 --> event_local__V291E01__event_anchor_006
+    r9(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r9
+    r9 --> event_local__V291E01__event_anchor_015
+    r10(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r10
+    r10 --> event_local__V291E01__event_anchor_015
+    r11(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r11
+    r11 --> event_local__V291E01__event_anchor_001
+    r12(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r12
+    r12 --> event_local__V291E01__event_anchor_001
+    r13(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r13
+    r13 --> event_local__V291E01__event_anchor_004
+    r14(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r14
+    r14 --> event_local__V291E01__event_anchor_007
+    r15(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r15
+    r15 --> event_local__V291E01__event_anchor_007
+    r16(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r16
+    r16 --> event_local__V291E01__event_anchor_011
+    r17(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r17
+    r17 --> event_local__V291E01__event_anchor_011
+    r18(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r18
+    r18 --> entity_0046
+    r19(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r19
+    r19 --> event_local__V291E02__event_anchor_002
+    r20(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r20
+    r20 --> event_local__V291E02__event_anchor_006
+    r21(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r21
+    r21 --> event_local__V291E02__event_anchor_006
+    r22(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r22
+    r22 --> event_local__V291E02__event_anchor_015
+    r23(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r23
+    r23 --> event_local__V291E02__event_anchor_015
+    r24(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r24
+    r24 --> event_local__V291E02__event_anchor_001
+    r25(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r25
+    r25 --> event_local__V291E02__event_anchor_001
+    r26(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r26
+    r26 --> event_local__V291E02__event_anchor_004
+    r27(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r27
+    r27 --> event_local__V291E02__event_anchor_007
+    r28(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r28
+    r28 --> event_local__V291E02__event_anchor_007
+    r29(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r29
+    r29 --> event_local__V291E02__event_anchor_011
+    r30(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r30
+    r30 --> event_local__V291E02__event_anchor_011
+    r31(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r31
+    r31 --> entity_0046
+    r32(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r32
+    r32 --> event_local__V291E03__event_anchor_002
+    r33(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r33
+    r33 --> event_local__V291E03__event_anchor_006
+    r34(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r34
+    r34 --> event_local__V291E03__event_anchor_006
+    r35(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r35
+    r35 --> event_local__V291E03__event_anchor_015
+    r36(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r36
+    r36 --> event_local__V291E03__event_anchor_015
+    r37(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r37
+    r37 --> event_local__V291E03__event_anchor_001
+    r38(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r38
+    r38 --> event_local__V291E03__event_anchor_001
+    r39(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r39
+    r39 --> event_local__V291E03__event_anchor_004
+    r40(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r40
+    r40 --> event_local__V291E03__event_anchor_007
+    r41(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r41
+    r41 --> event_local__V291E03__event_anchor_007
+    r42(["OCCLUDED_BY<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r42
+    r42 --> event_local__V291E03__event_anchor_011
+    r43(["NEAR<br/>CANDIDATE<br/>LAST_TRUSTED"])
+    phone_01 --> r43
+    r43 --> event_local__V291E03__event_anchor_011
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20,r21,r22,r23,r24,r25,r26,r27,r28,r29,r30,r31,r32,r33,r34,r35,r36,r37,r38,r39,r40,r41,r42,r43 relation;

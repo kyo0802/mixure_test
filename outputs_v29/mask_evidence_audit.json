@@ -1,0 +1,133 @@
+{
+  "schema": "v29_mask_audit_1",
+  "videos": [
+    {
+      "task": "test3",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test3/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 48,
+      "accepted_sam_masks": 48,
+      "rejected_sam_masks": 0,
+      "identity_authorized_masks": 45,
+      "trusted_phone_01_masks_available": 45,
+      "rejection_counts": {
+        "TRUSTED": 45,
+        "SAM_CONTINUITY_GAP_NOT_REAUTHORIZED": 3
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test4",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test4/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 44,
+      "accepted_sam_masks": 43,
+      "rejected_sam_masks": 1,
+      "identity_authorized_masks": 42,
+      "trusted_phone_01_masks_available": 42,
+      "rejection_counts": {
+        "TRUSTED": 42,
+        "MASK_REJECTED_BY_FUSION;IDENTITY_NOT_AUTHORIZED_AT_FRAME": 1,
+        "SAM_CONTINUITY_GAP_NOT_REAUTHORIZED": 1
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test5",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test5/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 61,
+      "accepted_sam_masks": 61,
+      "rejected_sam_masks": 0,
+      "identity_authorized_masks": 58,
+      "trusted_phone_01_masks_available": 58,
+      "rejection_counts": {
+        "TRUSTED": 58,
+        "SAM_CONTINUITY_GAP_NOT_REAUTHORIZED": 3
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test6",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test6/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 36,
+      "accepted_sam_masks": 36,
+      "rejected_sam_masks": 0,
+      "identity_authorized_masks": 36,
+      "trusted_phone_01_masks_available": 36,
+      "rejection_counts": {
+        "TRUSTED": 36
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test7",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test7/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 38,
+      "accepted_sam_masks": 38,
+      "rejected_sam_masks": 0,
+      "identity_authorized_masks": 38,
+      "trusted_phone_01_masks_available": 38,
+      "rejection_counts": {
+        "TRUSTED": 38
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test8",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test8/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 40,
+      "accepted_sam_masks": 39,
+      "rejected_sam_masks": 1,
+      "identity_authorized_masks": 39,
+      "trusted_phone_01_masks_available": 39,
+      "rejection_counts": {
+        "TRUSTED": 39,
+        "MASK_REJECTED_DRIFT;MASK_REJECTED_BY_FUSION;IDENTITY_NOT_AUTHORIZED_AT_FRAME": 1
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    },
+    {
+      "task": "test9",
+      "status": "MASK_EXISTS_BUT_NOT_CONNECTED",
+      "existing_sam_mask_files": [
+        "outputs_v25_rerun/test9/sam/sam_continuity_log.json"
+      ],
+      "sam_observations": 59,
+      "accepted_sam_masks": 57,
+      "rejected_sam_masks": 2,
+      "identity_authorized_masks": 12,
+      "trusted_phone_01_masks_available": 12,
+      "rejection_counts": {
+        "TRUSTED": 12,
+        "MASK_REJECTED_BY_FUSION;IDENTITY_NOT_AUTHORIZED_AT_FRAME": 1,
+        "SAM_CONTINUITY_GAP_NOT_REAUTHORIZED": 45,
+        "MASK_REJECTED_DRIFT;MASK_REJECTED_BY_FUSION;IDENTITY_NOT_AUTHORIZED_AT_FRAME;SAM_CONTINUITY_GAP_NOT_REAUTHORIZED": 1
+      },
+      "missing_link": "V2.6 SAM observation_history has mask_ref but trusted=False; V2.8 only counts trusted registry observations",
+      "new_sam_propagation_required_for_existing_frames": false
+    }
+  ],
+  "finding": "Frozen SAM2.1 RLE and mask_ref exist; V2.8 did not admit V2.6 SAM history because trusted=False. V2.9 independently joins accepted fusion and contemporaneous identity state."
+}

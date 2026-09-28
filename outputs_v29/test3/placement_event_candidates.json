@@ -1,0 +1,53 @@
+[
+  {
+    "event_id": "PE0001",
+    "target": "phone_01",
+    "start_frame": 447,
+    "peak_frame": 492,
+    "end_frame": 537,
+    "start_time": 14.902549187339606,
+    "end_time": 17.9030624465355,
+    "event_type": "POSSIBLE_PLACEMENT",
+    "candidate_anchors": [
+      {
+        "entity_id": "entity_0062",
+        "raw_label": "person",
+        "distance_fraction": 0.069,
+        "bbox": [
+          1044.3612060546875,
+          184.6644744873047,
+          1279.5135498046875,
+          303.95501708984375
+        ],
+        "source": "outputs_v26/test3/entity_registry.json#entity_0062/observation_history/2"
+      },
+      {
+        "entity_id": "entity_0059",
+        "raw_label": "chair",
+        "distance_fraction": 0.2074,
+        "bbox": [
+          893.928955078125,
+          168.75657653808594,
+          1045.7120361328125,
+          210.79283142089844
+        ],
+        "source": "outputs_v26/test3/entity_registry.json#entity_0059/observation_history/5"
+      }
+    ],
+    "cues": {
+      "motion_slowdown": true,
+      "anchor_approach": false,
+      "overlap_increase": true,
+      "visibility_loss": true,
+      "target_disappearance": true,
+      "anchor_remains_visible": true,
+      "hand_release": false
+    },
+    "evidence_strength": "HIGH",
+    "reason": "Trusted target loss with 5 independent interaction cues",
+    "provenance": [
+      "outputs_v25_rerun/test3/sam/sam_continuity_log.json#492:phone_target",
+      "outputs_v26/identity_timeline.json#492"
+    ]
+  }
+]

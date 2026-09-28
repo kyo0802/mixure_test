@@ -1,0 +1,91 @@
+{
+  "target": "phone_01",
+  "state": "UNOBSERVED",
+  "last_seen_time": 15.402634730538923,
+  "candidates": [
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0041",
+      "anchor_label": "sports ball",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0004",
+      "source_memory": "G005",
+      "last_confirmed_time": 14.802532078699743,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59"
+      ],
+      "rank": 1
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0041",
+      "anchor_label": "sports ball",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "priority_rule": 4,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0002",
+      "source_memory": "G005",
+      "last_confirmed_time": 14.802532078699743,
+      "reason": "Last trusted image-relative anchor context",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/6",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/7",
+        "outputs_v26/test4/entity_registry.json#entity_0041/observation_history/8",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/56",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/59"
+      ],
+      "rank": 2
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0032",
+      "anchor_label": "microwave",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "priority_rule": 4,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0001",
+      "source_memory": "G005",
+      "last_confirmed_time": 14.40246364414029,
+      "reason": "Last trusted image-relative anchor context",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [
+        {
+          "entity_id": "entity_0040",
+          "label": "potted plant",
+          "relation": "IMAGE_NEAR_CONTEXT"
+        }
+      ],
+      "provenance": [
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/43",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/44",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/46",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/47",
+        "outputs_v26/test4/entity_registry.json#entity_0032/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/42",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/45",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/48",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/50",
+        "outputs_v26/test4/entity_registry.json#phone_01/observation_history/53"
+      ],
+      "rank": 3
+    }
+  ],
+  "reason": "Deterministic graph priority rules; no weighted score",
+  "uncertainty": "Candidate is not a verified current location"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "v291_regression_summary_1",
+  "test7_provisional_memory_contamination": false,
+  "test8_distinct_phone_identity_source": "frozen V2.6 Identity Guard",
+  "historical_freezes_verified": true,
+  "test9_rediscovery_candidates": 93,
+  "test_results": {
+    "v291_focused": "22 passed, 0 failed",
+    "full_suite": {
+      "passed": 293,
+      "failed": 3,
+      "skipped": 1
+    },
+    "failures": [
+      "tests/test_v241_generalization.py::test_prediction_manifest_written_before_evaluation",
+      "tests/test_v241_generalization.py::test_spatial_diagnostic_does_not_modify_inference",
+      "tests/test_v25_rerun.py::test_prediction_manifest_covers_all_rerun_artifacts"
+    ],
+    "failure_note": "Same three frozen-artifact hash failures were reproduced before V2.9.1 outputs were created; V2.7/V2.8/V2.9 freeze verification passed."
+  }
+}

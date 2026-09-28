@@ -1,0 +1,118 @@
+{
+  "schema": "v28_post_freeze_video_evaluation_1",
+  "task": "test5",
+  "evaluation_phase": "after_prediction_freeze",
+  "reference_labels_used_in_inference": false,
+  "expected_context": "box; final placement incomplete",
+  "verdict": "UNCERTAINTY_CORRECTLY_RETAINED",
+  "review": "No box or entry transition is present. The final local graph is ball→microwave context, so INSIDE is not invented.",
+  "not_an_accuracy_measurement": true,
+  "graph_quality": {
+    "v27_entities": 2,
+    "v28_entities": 8,
+    "hop0": 1,
+    "hop1": 4,
+    "hop2": 3,
+    "connected": true,
+    "snapshots": 7,
+    "final_nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0043",
+        "raw_label": "sports ball",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 1,
+        "via_primary": null
+      },
+      {
+        "entity_id": "entity_0044",
+        "raw_label": "microwave",
+        "semantic_roles": [
+          "OCCLUDER",
+          "LANDMARK"
+        ],
+        "hop": 2,
+        "via_primary": "entity_0043"
+      }
+    ]
+  },
+  "physical_reasoning": {
+    "evidence_status": "EVALUABLE_CONTEXT_ONLY",
+    "candidate_count": 4,
+    "promoted_count": 0,
+    "rejected_or_uncertain_count": 8,
+    "types": {
+      "OCCLUDED_BY:REJECTED": 4,
+      "BEHIND:REJECTED": 4,
+      "NEAR:CANDIDATE": 4
+    },
+    "obvious_false_promotions": []
+  },
+  "safety": {
+    "unauthorized_memory_updates": 0,
+    "direct_image_to_physical_leaks": 0,
+    "false_identity_physical_relations": 0,
+    "disconnected_nodes": 0,
+    "irrelevant_branches_detected": 0
+  },
+  "search": {
+    "category": "CANDIDATE_PHYSICAL_HYPOTHESIS",
+    "candidate_count": 8,
+    "top_result": {
+      "target": "phone_01",
+      "search_anchor": "entity_0043",
+      "anchor_label": "sports ball",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0012",
+      "source_memory": "G007",
+      "last_confirmed_time": 12.8,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [
+        {
+          "entity_id": "entity_0044",
+          "label": "microwave",
+          "relation": "IMAGE_NEAR_CONTEXT"
+        }
+      ],
+      "provenance": [
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/0",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/1",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/2",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/3",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/4",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/5",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/6",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/7",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/8",
+        "outputs_v26/test5/entity_registry.json#entity_0043/observation_history/9",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/74",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/77",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/80",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/83",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/86",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/89",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/91",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/93",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/95",
+        "outputs_v26/test5/entity_registry.json#phone_01/observation_history/97"
+      ],
+      "rank": 1
+    }
+  },
+  "event_order_valid": true
+}

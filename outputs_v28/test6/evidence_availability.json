@@ -1,0 +1,89 @@
+{
+  "schema": "v28_evidence_availability_1",
+  "task": "test6",
+  "trusted_target_frames": 32,
+  "trusted_target_frame_indices": [
+    204,
+    210,
+    216,
+    222,
+    228,
+    234,
+    240,
+    246,
+    252,
+    258,
+    264,
+    270,
+    276,
+    282,
+    288,
+    294,
+    300,
+    306,
+    312,
+    318,
+    324,
+    330,
+    336,
+    342,
+    354,
+    360,
+    366,
+    372,
+    378,
+    384,
+    390,
+    402
+  ],
+  "candidate_primary_anchors": [
+    {
+      "entity_id": "entity_0027",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 31,
+      "max_continuous_support_seconds": 6.602990936555892,
+      "segment_id": "P0001"
+    },
+    {
+      "entity_id": "entity_0029",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 31,
+      "max_continuous_support_seconds": 6.2028096676737166,
+      "segment_id": "P0002"
+    },
+    {
+      "entity_id": "entity_0031",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "co_visible_frames": 27,
+      "max_continuous_support_seconds": 5.602537764350454,
+      "segment_id": "P0003"
+    }
+  ],
+  "target_anchor_co_visible_frames": 89,
+  "max_continuous_support_seconds": 6.602990936555892,
+  "trusted_target_observations_in_registry": 63,
+  "trusted_mask_references": 0,
+  "mask_evidence_exists": false,
+  "placement_transition_evidence_exists": false,
+  "placement_transition_candidates": [],
+  "vlm_candidate_verification_available": false,
+  "physical_reasoning_evaluable": true,
+  "status": "EVALUABLE_CONTEXT_ONLY",
+  "reasons": [
+    "stable context exists but no relation-specific placement/interaction transition pattern",
+    "no trusted target mask references in frozen registry",
+    "no cached candidate-scoped VLM verification"
+  ]
+}

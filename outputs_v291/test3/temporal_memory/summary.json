@@ -1,0 +1,168 @@
+{
+  "task": "test3",
+  "raw_video_full_pipeline": false,
+  "video_sha256": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+  "events": {
+    "OCCLUSION_EVENT": 1,
+    "RECONFIRM_EVENT": 1,
+    "SECOND_LOSS_EVENT": 1
+  },
+  "event_windows": 3,
+  "anchors": {
+    "existing": 6,
+    "event_local": 30,
+    "co_visible_frames": 72
+  },
+  "rediscovery": {
+    "CONFIRMED": 0,
+    "PROVISIONAL": 0,
+    "AMBIGUOUS": 43,
+    "REJECTED": 0
+  },
+  "rediscovery_candidates": 43,
+  "vlm": {
+    "calls": 6,
+    "valid": 6,
+    "unusable": 0,
+    "observable_facts_extracted": 60
+  },
+  "physical": {
+    "NEAR:CANDIDATE": 33,
+    "OCCLUDED_BY:CANDIDATE": 6,
+    "BEHIND:UNCERTAIN": 6
+  },
+  "physical_promotions": 0,
+  "physical_candidates": 39,
+  "memory_episodes_added": 39,
+  "search_candidates": 40,
+  "search_top": [
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0051",
+      "anchor_label": "sports ball",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0009",
+      "source_memory": "G006",
+      "last_confirmed_time": 14.802532078699743,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [
+        {
+          "entity_id": "entity_0054",
+          "label": "microwave",
+          "relation": "IMAGE_NEAR_CONTEXT"
+        }
+      ],
+      "provenance": [
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/10",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/12",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/13",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/5",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/6",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/7",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/8",
+        "outputs_v26/test3/entity_registry.json#entity_0051/observation_history/9",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/54",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/57",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/60",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/63",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/66",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/69",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/73",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/76"
+      ],
+      "rank": 1
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0053",
+      "anchor_label": "chair",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0008",
+      "source_memory": "G006",
+      "last_confirmed_time": 12.602155688622755,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v26/test3/entity_registry.json#entity_0053/observation_history/0",
+        "outputs_v26/test3/entity_registry.json#entity_0053/observation_history/1",
+        "outputs_v26/test3/entity_registry.json#entity_0053/observation_history/3",
+        "outputs_v26/test3/entity_registry.json#entity_0053/observation_history/4",
+        "outputs_v26/test3/entity_registry.json#entity_0053/observation_history/6",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/32",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/35",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/39",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/41",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/45"
+      ],
+      "rank": 2
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0020",
+      "anchor_label": "chair",
+      "relation": "NEAR",
+      "priority_rule": 3,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "E0006",
+      "source_memory": "G006",
+      "last_confirmed_time": 8.00136869118905,
+      "reason": "Possible physical relation; unconfirmed",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v26/test3/entity_registry.json#entity_0020/observation_history/23",
+        "outputs_v26/test3/entity_registry.json#entity_0020/observation_history/24",
+        "outputs_v26/test3/entity_registry.json#entity_0020/observation_history/25",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/0",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/5",
+        "outputs_v26/test3/entity_registry.json#phone_01/observation_history/8"
+      ],
+      "rank": 3
+    }
+  ],
+  "source_frames": 196,
+  "candidate_ids": [
+    "candidate_008",
+    "candidate_009",
+    "candidate_010",
+    "candidate_011",
+    "candidate_012",
+    "candidate_013",
+    "candidate_014",
+    "candidate_015",
+    "candidate_016",
+    "candidate_017",
+    "candidate_018",
+    "candidate_019",
+    "candidate_020",
+    "candidate_021",
+    "candidate_022",
+    "candidate_023"
+  ],
+  "identity_guard_gt_accessed": false,
+  "reconfirm_context_events": 1,
+  "pipeline_counts": {
+    "sampled_frames": 196,
+    "yolo_detections": 1805,
+    "local_tracks": 114,
+    "trusted_sam_masks": 45,
+    "persistent_entities": 110,
+    "candidate_observations": 80,
+    "identity_timeline_rows": 196
+  },
+  "search_breakdown": {
+    "promoted_physical_locations": 0,
+    "candidate_physical_locations": 37,
+    "anchor_context_only_locations": 3,
+    "no_context": false
+  }
+}
