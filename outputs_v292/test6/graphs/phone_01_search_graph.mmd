@@ -1,0 +1,17 @@
+---
+title: phone_01 search graph
+---
+flowchart LR
+    phone_01["phone_01<br/>cell phone<br/>Hop 0"]
+    entity_0027["entity_0027<br/>microwave<br/>Hop 1"]
+    entity_0031["entity_0031<br/>chair<br/>Hop 1"]
+    r1(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r1
+    r1 --> entity_0027
+    r2(["TRUSTED_ANCHOR_CONTEXT<br/>LAST_TRUSTED"])
+    phone_01 --> r2
+    r2 --> entity_0031
+    classDef target stroke-width:4px,font-weight:bold;
+    classDef relation stroke-dasharray: 4 2;
+    class phone_01 target;
+    class r1,r2 relation;

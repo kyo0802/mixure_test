@@ -1,0 +1,110 @@
+{
+  "video_id": "test6",
+  "raw_video_path": "test6.mp4",
+  "video_sha256": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+  "pipeline_version": "2.9.2",
+  "canonical_config_sha256": "3a8600b58392e9501b9098c46948c74f0df98f6e4ccc3466b214f62539990761",
+  "model_configuration": {
+    "yolo": {
+      "path": ".models/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+    },
+    "sam": {
+      "path": ".models/sam2.1_hiera_small.pt",
+      "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38"
+    },
+    "appearance": {
+      "path": "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth",
+      "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f"
+    }
+  },
+  "identity_policy_version": "V292_IDENTITY_AUTH_1",
+  "vlm_prompt_version": "V292_PAIR_OBSERVABLE_FACTS_1",
+  "physical_gate_version": "V29_RELATION_GATE_1",
+  "memory_schema_version": "V292_AUTHORITATIVE_EVENT_STORE_1",
+  "source_git_identifier": "0b22359a01e134d13746678f3b2ba8039ba027e2",
+  "start_utc": "2026-09-29T09:49:23.095877+00:00",
+  "end_utc": "2026-09-29T09:50:20.795870+00:00",
+  "status": "COMPLETE",
+  "failure_stage": null,
+  "artifact_manifest": "outputs_v292/test6/artifact_manifest.json",
+  "stages": [
+    {
+      "stage": "fresh_yolo_tracking",
+      "status": "COMPLETE",
+      "raw_hash": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+      "details": {
+        "status": "complete",
+        "video_sha256": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+        "local_tracks": 86,
+        "usable_tracks": 71,
+        "persistent_entities": 71,
+        "matches": 0,
+        "ambiguous": 4,
+        "context_vlm": {
+          "attempted": 0,
+          "valid": 0,
+          "failed": 0,
+          "cache_hits": 0
+        },
+        "observation_relations": 93,
+        "physical_candidates": 0,
+        "promoted_relations": 0,
+        "v2_counterfactual_admission_loss": 25,
+        "model": {
+          "backend": "disabled"
+        },
+        "elapsed_seconds": 24.405999999959022,
+        "inference_order": [
+          "perception",
+          "quality",
+          "persistent_identity",
+          "events_vlm",
+          "graphs"
+        ],
+        "gt_used": false
+      }
+    },
+    {
+      "stage": "binding_sam_fusion_candidate_admission",
+      "status": "COMPLETE",
+      "binding": "BOUND",
+      "sam_target_status": "COMPLETE",
+      "candidate_count": 22
+    },
+    {
+      "stage": "appearance_and_identity_guard",
+      "status": "COMPLETE",
+      "guard_decision": null,
+      "identity_confirmations": 0
+    },
+    {
+      "stage": "unified_mask_authorization",
+      "status": "COMPLETE",
+      "mask_refs": 83,
+      "trusted": 32
+    },
+    {
+      "stage": "events_dense_anchors_vlm_physical",
+      "status": "COMPLETE",
+      "events": 3,
+      "dense_windows": 3,
+      "anchors": 36,
+      "vlm_pair_requests": 6,
+      "physical_decisions": 0
+    },
+    {
+      "stage": "authoritative_memory_search_visualization",
+      "status": "COMPLETE",
+      "memory_episodes": 5,
+      "search_candidates": 3,
+      "memory_validation_errors": [],
+      "annotated_video": {
+        "status": "COMPLETE",
+        "path": "annotated_pipeline.mp4",
+        "sampled_frames": 167
+      }
+    }
+  ],
+  "elapsed_seconds": 56.937000000150874
+}

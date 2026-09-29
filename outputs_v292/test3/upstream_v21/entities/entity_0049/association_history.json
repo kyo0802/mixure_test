@@ -1,0 +1,58 @@
+[
+  {
+    "track_id": 60,
+    "entity_id": "entity_0049",
+    "decision": "NEW_ENTITY",
+    "candidates": [
+      {
+        "previous_track_id": 56,
+        "track_id": 60,
+        "temporal_gap": 1.8003079555175354,
+        "temporal_compatible": true,
+        "semantic_compatibility": false,
+        "appearance_similarity": 0.018123419270657186,
+        "center_distance": 0.28137987576429063,
+        "motion_prediction_error": 0.2229814637489801,
+        "bbox_area_ratio": 0.6281763739222551,
+        "context_jaccard": 0.0,
+        "stable_anchor_context": null,
+        "interaction_continuity": null,
+        "score": 0.09966348186953543,
+        "eligible": false,
+        "semantic_note": "Detector hypotheses only; equality never suffices for association.",
+        "entity_id": "entity_0045",
+        "temporal_overlap": false,
+        "quality_veto": false
+      }
+    ],
+    "reason": "no forced merge; independent hypothesis"
+  },
+  {
+    "track_id": 70,
+    "entity_id": "entity_0049",
+    "decision": "MATCH",
+    "candidates": [
+      {
+        "previous_track_id": 60,
+        "track_id": 70,
+        "temporal_gap": 1.0001710863986304,
+        "temporal_compatible": true,
+        "semantic_compatibility": true,
+        "appearance_similarity": 0.9922425610347319,
+        "center_distance": 0.016976727315346652,
+        "motion_prediction_error": 0.01425868725425375,
+        "bbox_area_ratio": 0.9700931232449537,
+        "context_jaccard": 0.5,
+        "stable_anchor_context": null,
+        "interaction_continuity": null,
+        "score": 0.9340540761331008,
+        "eligible": true,
+        "semantic_note": "Detector hypotheses only; equality never suffices for association.",
+        "entity_id": "entity_0049",
+        "temporal_overlap": false,
+        "quality_veto": false
+      }
+    ],
+    "reason": "multi-cue gated match"
+  }
+]

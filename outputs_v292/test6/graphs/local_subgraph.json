@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0027",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0031",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0027",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0001",
+      "status": "LAST_TRUSTED",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0031",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0003",
+      "status": "LAST_TRUSTED",
+      "physical_verification": false
+    }
+  ],
+  "connected": true,
+  "schema": "v292_sparse_local_subgraph_1",
+  "target": "phone_01"
+}

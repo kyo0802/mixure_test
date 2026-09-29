@@ -1,0 +1,5357 @@
+{
+  "schema": "v28_local_subgraph_1",
+  "target": "phone_01",
+  "nodes": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0027",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0029",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0031",
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0034",
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0027"
+    }
+  ],
+  "edges": [
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0027",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0001",
+      "start_frame": 204,
+      "end_frame": 402,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0029",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0002",
+      "start_frame": 204,
+      "end_frame": 390,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0031",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0003",
+      "start_frame": 234,
+      "end_frame": 402,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "entity_0027",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "target": "entity_0034",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "C0001",
+      "start_frame": 312,
+      "end_frame": 342,
+      "status": "STABLE",
+      "physical_verification": false
+    },
+    {
+      "source": "entity_0029",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "target": "entity_0034",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "C0002",
+      "start_frame": 312,
+      "end_frame": 342,
+      "status": "STABLE",
+      "physical_verification": false
+    }
+  ],
+  "primary_segments": [
+    {
+      "segment_id": "P0001",
+      "subject": "phone_01",
+      "object": "entity_0027",
+      "hop": 1,
+      "start_frame": 204,
+      "end_frame": 402,
+      "start_time": 6.803081570996979,
+      "end_time": 13.40607250755287,
+      "support_frames": [
+        204,
+        210,
+        216,
+        222,
+        228,
+        234,
+        240,
+        246,
+        252,
+        258,
+        264,
+        270,
+        276,
+        282,
+        288,
+        294,
+        300,
+        306,
+        312,
+        318,
+        324,
+        330,
+        336,
+        342,
+        354,
+        360,
+        366,
+        372,
+        378,
+        390,
+        402
+      ],
+      "support_times": [
+        6.803081570996979,
+        7.003172205438067,
+        7.203262839879154,
+        7.403353474320242,
+        7.603444108761329,
+        7.803534743202417,
+        8.003625377643505,
+        8.203716012084593,
+        8.40380664652568,
+        8.603897280966768,
+        8.803987915407856,
+        9.004078549848943,
+        9.20416918429003,
+        9.404259818731118,
+        9.604350453172206,
+        9.804441087613293,
+        10.00453172205438,
+        10.204622356495468,
+        10.404712990936556,
+        10.604803625377643,
+        10.804894259818731,
+        11.004984894259819,
+        11.205075528700906,
+        11.405166163141994,
+        11.805347432024169,
+        12.005438066465256,
+        12.205528700906344,
+        12.405619335347431,
+        12.60570996978852,
+        13.005891238670696,
+        13.40607250755287
+      ],
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 204,
+          "time": 6.803081570996979,
+          "target_bbox": [
+            558.1239013671875,
+            520.0301513671875,
+            792.5629272460938,
+            639.0787963867188
+          ],
+          "anchor_bbox": [
+            306.8069763183594,
+            220.10440063476562,
+            469.82269287109375,
+            304.1881408691406
+          ],
+          "target_observation": "test6:phone_01:204:0",
+          "anchor_observation": "test6:entity_0027:204:11",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.260741760252684,
+              4.2749058526685
+            ],
+            "normalized_center_distance": 0.2913927954020195,
+            "box_gap_fraction": 0.1587940178782665,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5819088829888238,
+            "relative_size": 2.036164520603684,
+            "target_bbox_area_fraction": 0.030283906652107867,
+            "anchor_bbox_area_fraction": 0.014873015586741126,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 210,
+          "time": 7.003172205438067,
+          "target_bbox": [
+            531.88037109375,
+            523.9114379882812,
+            772.3916015625,
+            647.8970947265625
+          ],
+          "anchor_bbox": [
+            286.57373046875,
+            215.43319702148438,
+            453.9390563964844,
+            299.87353515625
+          ],
+          "target_observation": "test6:phone_01:210:5",
+          "anchor_observation": "test6:entity_0027:210:12",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.1842173928978506,
+              4.387370746250101
+            ],
+            "normalized_center_distance": 0.29461408395618827,
+            "box_gap_fraction": 0.16151956920491967,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.600644302368164,
+            "relative_size": 2.110043242339856,
+            "target_bbox_area_fraction": 0.03235670883528655,
+            "anchor_bbox_area_fraction": 0.01533461882961496,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 216,
+          "time": 7.203262839879154,
+          "target_bbox": [
+            517.9774780273438,
+            538.3453369140625,
+            759.5082397460938,
+            667.46923828125
+          ],
+          "anchor_bbox": [
+            271.87213134765625,
+            212.79324340820312,
+            445.15777587890625,
+            299.7665100097656
+          ],
+          "target_observation": "test6:phone_01:216:8",
+          "anchor_observation": "test6:entity_0027:216:13",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.1171443747199827,
+              4.485447763812571
+            ],
+            "normalized_center_distance": 0.3035080508049701,
+            "box_gap_fraction": 0.1698513566037719,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6314944373236762,
+            "relative_size": 2.069334614787165,
+            "target_bbox_area_fraction": 0.03384048855611278,
+            "anchor_bbox_area_fraction": 0.0163533187500434,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 222,
+          "time": 7.403353474320242,
+          "target_bbox": [
+            492.5718688964844,
+            534.3558349609375,
+            730.92822265625,
+            659.7457885742188
+          ],
+          "anchor_bbox": [
+            255.32015991210938,
+            207.3141326904297,
+            429.5223083496094,
+            295.197998046875
+          ],
+          "target_observation": "test6:phone_01:222:11",
+          "anchor_observation": "test6:entity_0027:222:14",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.046070551145569,
+              4.434678396272491
+            ],
+            "normalized_center_distance": 0.29845051088241575,
+            "box_gap_fraction": 0.1684109794357654,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6283772998385959,
+            "relative_size": 1.9522112808712724,
+            "target_bbox_area_fraction": 0.032430004493671734,
+            "anchor_bbox_area_fraction": 0.016611933765282933,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 228,
+          "time": 7.603444108761329,
+          "target_bbox": [
+            481.5712890625,
+            546.683837890625,
+            720.1451416015625,
+            674.3021850585938
+          ],
+          "anchor_bbox": [
+            248.1824188232422,
+            217.00930786132812,
+            423.48699951171875,
+            302.3681945800781
+          ],
+          "target_observation": "test6:phone_01:228:14",
+          "anchor_observation": "test6:entity_0027:228:15",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0117888256183587,
+              4.609756742842434
+            ],
+            "normalized_center_distance": 0.29937271200568644,
+            "box_gap_fraction": 0.17099583721265993,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6351289961073133,
+            "relative_size": 2.0346698643872823,
+            "target_bbox_area_fraction": 0.03303645913468952,
+            "anchor_bbox_area_fraction": 0.01623676632407296,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 234,
+          "time": 7.803534743202417,
+          "target_bbox": [
+            477.501708984375,
+            548.9874877929688,
+            714.5562744140625,
+            675.2880249023438
+          ],
+          "anchor_bbox": [
+            243.21630859375,
+            219.874267578125,
+            419.73333740234375,
+            306.00189208984375
+          ],
+          "target_observation": "test6:phone_01:234:17",
+          "anchor_observation": "test6:entity_0027:234:16",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.9987458744733415,
+              4.554444534995376
+            ],
+            "normalized_center_distance": 0.29830856807524286,
+            "box_gap_fraction": 0.1700649864801783,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6325191073947483,
+            "relative_size": 1.9693569657376948,
+            "target_bbox_area_fraction": 0.03248710822265517,
+            "anchor_bbox_area_fraction": 0.016496302492568147,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 240,
+          "time": 8.003625377643505,
+          "target_bbox": [
+            479.89495849609375,
+            547.9913940429688,
+            709.5328369140625,
+            668.0202026367188
+          ],
+          "anchor_bbox": [
+            241.100830078125,
+            225.108642578125,
+            416.13604736328125,
+            310.115478515625
+          ],
+          "target_observation": "test6:phone_01:240:20",
+          "anchor_observation": "test6:entity_0027:240:17",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0202395444276178,
+              4.504310171516537
+            ],
+            "normalized_center_distance": 0.2941966898719123,
+            "box_gap_fraction": 0.16769148165504763,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6151549445258246,
+            "relative_size": 1.852463807255386,
+            "target_bbox_area_fraction": 0.029907943744037765,
+            "anchor_bbox_area_fraction": 0.016144954426045945,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 246,
+          "time": 8.203716012084593,
+          "target_bbox": [
+            481.3860778808594,
+            547.0755615234375,
+            706.4440307617188,
+            662.7499389648438
+          ],
+          "anchor_bbox": [
+            240.1329803466797,
+            227.4573211669922,
+            416.302490234375,
+            313.4191589355469
+          ],
+          "target_observation": "test6:phone_01:246:23",
+          "anchor_observation": "test6:entity_0027:246:18",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0081912823628714,
+              4.390965094224914
+            ],
+            "normalized_center_distance": 0.29086316922347993,
+            "box_gap_fraction": 0.16515771710268376,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6045730802747938,
+            "relative_size": 1.7190760795156663,
+            "target_bbox_area_fraction": 0.028248088745367567,
+            "anchor_bbox_area_fraction": 0.01643213414575939,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 252,
+          "time": 8.40380664652568,
+          "target_bbox": [
+            482.569091796875,
+            548.6173095703125,
+            707.402587890625,
+            664.1552124023438
+          ],
+          "anchor_bbox": [
+            236.9185791015625,
+            229.3074951171875,
+            412.0665283203125,
+            315.12298583984375
+          ],
+          "target_observation": "test6:phone_01:252:26",
+          "anchor_observation": "test6:entity_0027:252:19",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0443702728998643,
+              4.3940640867254
+            ],
+            "normalized_center_distance": 0.292744933455196,
+            "box_gap_fraction": 0.16608018349948322,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6039551628960503,
+            "relative_size": 1.7282825581452688,
+            "target_bbox_area_fraction": 0.028186621771989547,
+            "anchor_bbox_area_fraction": 0.016309035602510753,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 258,
+          "time": 8.603897280966768,
+          "target_bbox": [
+            481.358642578125,
+            549.1336059570312,
+            706.85888671875,
+            664.8318481445312
+          ],
+          "anchor_bbox": [
+            235.4150848388672,
+            229.1031951904297,
+            410.87921142578125,
+            315.8897399902344
+          ],
+          "target_observation": "test6:phone_01:258:29",
+          "anchor_observation": "test6:entity_0027:258:20",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.044256491550686,
+              4.354125777584845
+            ],
+            "normalized_center_distance": 0.2931124350315685,
+            "box_gap_fraction": 0.16591237278347937,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6051786846584744,
+            "relative_size": 1.7132985206725262,
+            "target_bbox_area_fraction": 0.02830944212231164,
+            "anchor_bbox_area_fraction": 0.0165233564266426,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 264,
+          "time": 8.803987915407856,
+          "target_bbox": [
+            479.154296875,
+            551.6575927734375,
+            704.9869995117188,
+            666.2078857421875
+          ],
+          "anchor_bbox": [
+            232.3438720703125,
+            229.68978881835938,
+            407.03302001953125,
+            316.39306640625
+          ],
+          "target_observation": "test6:phone_01:264:32",
+          "anchor_observation": "test6:entity_0027:264:21",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0592393995053295,
+              4.374032458634757
+            ],
+            "normalized_center_distance": 0.294464758996209,
+            "box_gap_fraction": 0.16755418421130958,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6062751346164279,
+            "relative_size": 1.7079753342054604,
+            "target_bbox_area_fraction": 0.028069880912500796,
+            "anchor_bbox_area_fraction": 0.016434593843569018,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 270,
+          "time": 9.004078549848943,
+          "target_bbox": [
+            474.8977966308594,
+            551.7056274414062,
+            701.89453125,
+            667.521240234375
+          ],
+          "anchor_bbox": [
+            230.73886108398438,
+            230.4541015625,
+            403.63983154296875,
+            316.7505798339844
+          ],
+          "target_observation": "test6:phone_01:270:35",
+          "anchor_observation": "test6:entity_0027:270:22",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0685673533642133,
+              4.393682568164305
+            ],
+            "normalized_center_distance": 0.29402478044114716,
+            "box_gap_fraction": 0.16718116492846968,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6070376925998264,
+            "relative_size": 1.7619606931990912,
+            "target_bbox_area_fraction": 0.028526221703470786,
+            "anchor_bbox_area_fraction": 0.016190044314596686,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 276,
+          "time": 9.20416918429003,
+          "target_bbox": [
+            472.361572265625,
+            550.6746826171875,
+            700.119384765625,
+            666.8131713867188
+          ],
+          "anchor_bbox": [
+            226.8236541748047,
+            229.0410614013672,
+            403.50872802734375,
+            316.13970947265625
+          ],
+          "target_observation": "test6:phone_01:276:38",
+          "anchor_observation": "test6:entity_0027:276:23",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0342229057831376,
+              4.359457626596044
+            ],
+            "normalized_center_distance": 0.29404360824175346,
+            "box_gap_fraction": 0.16643875212861145,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6080168194240994,
+            "relative_size": 1.7188507862618578,
+            "target_bbox_area_fraction": 0.02870165814800809,
+            "anchor_bbox_area_fraction": 0.01669816739033422,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 282,
+          "time": 9.404259818731118,
+          "target_bbox": [
+            471.16790771484375,
+            550.697021484375,
+            700.0478515625,
+            666.9266967773438
+          ],
+          "anchor_bbox": [
+            225.61532592773438,
+            228.60586547851562,
+            404.1276550292969,
+            315.75860595703125
+          ],
+          "target_observation": "test6:phone_01:282:41",
+          "anchor_observation": "test6:entity_0027:282:24",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0166257172417708,
+              4.3625248221089485
+            ],
+            "normalized_center_distance": 0.29415177537771464,
+            "box_gap_fraction": 0.16635946142473254,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6087789323594835,
+            "relative_size": 1.7099188443761566,
+            "target_bbox_area_fraction": 0.02886571349228082,
+            "anchor_bbox_area_fraction": 0.016881335384552786,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 288,
+          "time": 9.604350453172206,
+          "target_bbox": [
+            471.973876953125,
+            549.768798828125,
+            700.8162841796875,
+            666.654296875
+          ],
+          "anchor_bbox": [
+            225.0220184326172,
+            227.30035400390625,
+            404.32696533203125,
+            315.3502502441406
+          ],
+          "target_observation": "test6:phone_01:288:44",
+          "anchor_observation": "test6:entity_0027:288:25",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.015410441165971,
+              4.326083392629815
+            ],
+            "normalized_center_distance": 0.29470822850041856,
+            "box_gap_fraction": 0.16613314785791558,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6102138095431857,
+            "relative_size": 1.6942442449482131,
+            "target_bbox_area_fraction": 0.029023826760983664,
+            "anchor_bbox_area_fraction": 0.01713083981103965,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 294,
+          "time": 9.804441087613293,
+          "target_bbox": [
+            472.48944091796875,
+            548.4827880859375,
+            701.4124755859375,
+            663.9620361328125
+          ],
+          "anchor_bbox": [
+            224.5044403076172,
+            227.12899780273438,
+            403.6224060058594,
+            314.1776123046875
+          ],
+          "target_observation": "test6:phone_01:294:47",
+          "anchor_observation": "test6:entity_0027:294:26",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.023507337923573,
+              4.3549620689038635
+            ],
+            "normalized_center_distance": 0.29451135819511903,
+            "box_gap_fraction": 0.16629134530766812,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6067125532362196,
+            "relative_size": 1.6954790599578982,
+            "target_bbox_area_fraction": 0.028684743819515763,
+            "anchor_bbox_area_fraction": 0.016918371035634056,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 300,
+          "time": 10.00453172205438,
+          "target_bbox": [
+            472.19085693359375,
+            545.946044921875,
+            700.334716796875,
+            659.994873046875
+          ],
+          "anchor_bbox": [
+            223.4742431640625,
+            225.365478515625,
+            401.75677490234375,
+            312.37939453125
+          ],
+          "target_observation": "test6:phone_01:300:50",
+          "anchor_observation": "test6:entity_0027:300:27",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0349079641394447,
+              4.339592995687538
+            ],
+            "normalized_center_distance": 0.294062409853597,
+            "box_gap_fraction": 0.166113861405313,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6036519368489583,
+            "relative_size": 1.6772666240740586,
+            "target_bbox_area_fraction": 0.02823300766202414,
+            "anchor_bbox_area_fraction": 0.01683274874536437,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 306,
+          "time": 10.204622356495468,
+          "target_bbox": [
+            473.50360107421875,
+            544.596435546875,
+            700.725830078125,
+            659.4140014648438
+          ],
+          "anchor_bbox": [
+            223.80014038085938,
+            225.343994140625,
+            401.6429443359375,
+            311.3003845214844
+          ],
+          "target_observation": "test6:phone_01:306:53",
+          "anchor_observation": "test6:entity_0027:306:28",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0428972503553378,
+              4.3820037427852325
+            ],
+            "normalized_center_distance": 0.29416618307029135,
+            "box_gap_fraction": 0.16622081386748272,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6028750101725261,
+            "relative_size": 1.7066508642006903,
+            "target_bbox_area_fraction": 0.028308488776783634,
+            "anchor_bbox_area_fraction": 0.016587158727418984,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 312,
+          "time": 10.404712990936556,
+          "target_bbox": [
+            471.8333435058594,
+            543.47314453125,
+            698.2554931640625,
+            657.9967651367188
+          ],
+          "anchor_bbox": [
+            224.30075073242188,
+            223.54693603515625,
+            403.9300231933594,
+            310.0870666503906
+          ],
+          "target_observation": "test6:phone_01:312:56",
+          "anchor_observation": "test6:entity_0027:312:29",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.008267709712998,
+              4.358533042616284
+            ],
+            "normalized_center_distance": 0.2927978679566416,
+            "box_gap_fraction": 0.16550648684987615,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6034025404188368,
+            "relative_size": 1.6680893960846608,
+            "target_bbox_area_fraction": 0.028136593277051564,
+            "anchor_bbox_area_fraction": 0.016867557184341422,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 318,
+          "time": 10.604803625377643,
+          "target_bbox": [
+            471.59246826171875,
+            542.4200439453125,
+            698.9671630859375,
+            657.9866943359375
+          ],
+          "anchor_bbox": [
+            223.8128662109375,
+            221.75778198242188,
+            405.55938720703125,
+            308.2989501953125
+          ],
+          "target_observation": "test6:phone_01:318:59",
+          "anchor_observation": "test6:entity_0027:318:30",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.9888520973155772,
+              4.373012231903663
+            ],
+            "normalized_center_distance": 0.29331955739364735,
+            "box_gap_fraction": 0.16563688557133832,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6058734893798828,
+            "relative_size": 1.6706512316872868,
+            "target_bbox_area_fraction": 0.02851229585983674,
+            "anchor_bbox_area_fraction": 0.017066575787359598,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 324,
+          "time": 10.804894259818731,
+          "target_bbox": [
+            473.85101318359375,
+            541.5923461914062,
+            700.29736328125,
+            657.6800537109375
+          ],
+          "anchor_bbox": [
+            227.13925170898438,
+            219.14474487304688,
+            404.1591491699219,
+            305.9629821777344
+          ],
+          "target_observation": "test6:phone_01:324:62",
+          "anchor_observation": "test6:entity_0027:324:31",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0333021410932823,
+              4.382621288921071
+            ],
+            "normalized_center_distance": 0.29468589115809934,
+            "box_gap_fraction": 0.1673150373528954,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6090768178304037,
+            "relative_size": 1.710482011023021,
+            "target_bbox_area_fraction": 0.028523912390410258,
+            "anchor_bbox_area_fraction": 0.016675949940771616,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 330,
+          "time": 11.004984894259819,
+          "target_bbox": [
+            474.9365234375,
+            540.3602294921875,
+            702.2236328125,
+            657.1965942382812
+          ],
+          "anchor_bbox": [
+            231.1028289794922,
+            216.98898315429688,
+            408.84454345703125,
+            303.86590576171875
+          ],
+          "target_observation": "test6:phone_01:330:65",
+          "anchor_observation": "test6:entity_0027:330:32",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0112175141119257,
+              4.394601204236501
+            ],
+            "normalized_center_distance": 0.29416207989196375,
+            "box_gap_fraction": 0.16720354841230106,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6113994598388672,
+            "relative_size": 1.7197251690538695,
+            "target_bbox_area_fraction": 0.02881445270510287,
+            "anchor_bbox_area_fraction": 0.016755266029487455,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 336,
+          "time": 11.205075528700906,
+          "target_bbox": [
+            481.0274353027344,
+            543.306396484375,
+            706.269287109375,
+            661.9320068359375
+          ],
+          "anchor_bbox": [
+            236.15451049804688,
+            215.309814453125,
+            413.024658203125,
+            301.4315185546875
+          ],
+          "target_observation": "test6:phone_01:336:68",
+          "anchor_observation": "test6:entity_0027:336:33",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.0212220962471883,
+              4.497233203261758
+            ],
+            "normalized_center_distance": 0.29750732429968024,
+            "box_gap_fraction": 0.17108246839356725,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.620308600531684,
+            "relative_size": 1.7541244255331114,
+            "target_bbox_area_fraction": 0.02899246109730787,
+            "anchor_bbox_area_fraction": 0.016528166802361535,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 342,
+          "time": 11.405166163141994,
+          "target_bbox": [
+            488.79290771484375,
+            538.3779907226562,
+            633.6783447265625,
+            641.7620239257812
+          ],
+          "anchor_bbox": [
+            241.333251953125,
+            210.24630737304688,
+            418.17437744140625,
+            297.7930908203125
+          ],
+          "target_observation": "test6:phone_01:342:71",
+          "anchor_observation": "test6:entity_0027:342:34",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.8089817817223581,
+              4.338522616081733
+            ],
+            "normalized_center_distance": 0.2778561208431812,
+            "box_gap_fraction": 0.1707301137334651,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5993273841010199,
+            "relative_size": 0.9675083932875123,
+            "target_bbox_area_fraction": 0.016253082498555563,
+            "anchor_bbox_area_fraction": 0.016798905943677608,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 354,
+          "time": 11.805347432024169,
+          "target_bbox": [
+            498.01483154296875,
+            523.6044921875,
+            634.7298583984375,
+            606.7867431640625
+          ],
+          "anchor_bbox": [
+            257.1025695800781,
+            198.31613159179688,
+            429.52752685546875,
+            284.53497314453125
+          ],
+          "target_observation": "test6:phone_01:354:75",
+          "anchor_observation": "test6:entity_0027:354:36",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.7936485545805936,
+              4.255212427779935
+            ],
+            "normalized_center_distance": 0.26771578558407977,
+            "box_gap_fraction": 0.1693348966763169,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.567320293850369,
+            "relative_size": 0.7649703639240824,
+            "target_bbox_area_fraction": 0.012339695829165673,
+            "anchor_bbox_area_fraction": 0.01613094625766482,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 360,
+          "time": 12.005438066465256,
+          "target_bbox": [
+            496.052978515625,
+            528.49560546875,
+            634.321044921875,
+            615.5204467773438
+          ],
+          "anchor_bbox": [
+            258.6151428222656,
+            191.5391082763672,
+            428.71234130859375,
+            280.85302734375
+          ],
+          "target_observation": "test6:phone_01:360:77",
+          "anchor_observation": "test6:entity_0027:360:37",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.8023334400838216,
+              4.259906202969721
+            ],
+            "normalized_center_distance": 0.2739308783009862,
+            "box_gap_fraction": 0.17474760296005365,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5888629701402452,
+            "relative_size": 0.7920431134150875,
+            "target_bbox_area_fraction": 0.01305637645079211,
+            "anchor_bbox_area_fraction": 0.01648442645312116,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 366,
+          "time": 12.205528700906344,
+          "target_bbox": [
+            493.43157958984375,
+            535.4150390625,
+            645.3746337890625,
+            629.5955810546875
+          ],
+          "anchor_bbox": [
+            256.5337829589844,
+            189.1658935546875,
+            429.783447265625,
+            278.9027099609375
+          ],
+          "target_observation": "test6:phone_01:366:80",
+          "anchor_observation": "test6:entity_0027:366:38",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.8058870415858954,
+              4.383255750050331
+            ],
+            "normalized_center_distance": 0.2829038610240734,
+            "box_gap_fraction": 0.17996050780690068,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6117078993055556,
+            "relative_size": 0.920447404659781,
+            "target_bbox_area_fraction": 0.015527429683627109,
+            "anchor_bbox_area_fraction": 0.016869437194367898,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 372,
+          "time": 12.405619335347431,
+          "target_bbox": [
+            497.0430603027344,
+            541.1285400390625,
+            717.4579467773438,
+            682.077880859375
+          ],
+          "anchor_bbox": [
+            256.483642578125,
+            185.4675750732422,
+            429.7930603027344,
+            276.47955322265625
+          ],
+          "target_observation": "test6:phone_01:372:84",
+          "anchor_observation": "test6:entity_0027:372:39",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.023934218735225,
+              4.682192872199647
+            ],
+            "normalized_center_distance": 0.31546013191900857,
+            "box_gap_fraction": 0.1859314318985275,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6897365358140733,
+            "relative_size": 1.9696236704072534,
+            "target_bbox_area_fraction": 0.033710213710481995,
+            "anchor_bbox_area_fraction": 0.017115053102256753,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 378,
+          "time": 12.60570996978852,
+          "target_bbox": [
+            496.3130798339844,
+            541.3890991210938,
+            641.9420166015625,
+            643.2828979492188
+          ],
+          "anchor_bbox": [
+            252.615478515625,
+            179.6046142578125,
+            427.12933349609375,
+            270.92584228515625
+          ],
+          "target_observation": "test6:phone_01:378:87",
+          "anchor_observation": "test6:entity_0027:378:40",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              1.8136787462380672,
+              4.519555783390935
+            ],
+            "normalized_center_distance": 0.29468812933399313,
+            "box_gap_fraction": 0.19009305376862942,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6439976162380643,
+            "relative_size": 0.9310945352063811,
+            "target_bbox_area_fraction": 0.01610100432568288,
+            "anchor_bbox_area_fraction": 0.017292555929472857,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 390,
+          "time": 13.005891238670696,
+          "target_bbox": [
+            537.3053588867188,
+            511.8164978027344,
+            742.3939208984375,
+            617.121337890625
+          ],
+          "anchor_bbox": [
+            252.3679656982422,
+            168.1842041015625,
+            429.9320983886719,
+            260.9919128417969
+          ],
+          "target_observation": "test6:phone_01:390:93",
+          "anchor_observation": "test6:entity_0027:390:42",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.1822068923676294,
+              4.26995471738565
+            ],
+            "normalized_center_distance": 0.3132506351857449,
+            "box_gap_fraction": 0.1857821772469242,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6235237969292535,
+            "relative_size": 1.3105405939661525,
+            "target_bbox_area_fraction": 0.023434047554795445,
+            "anchor_bbox_area_fraction": 0.017881206932992326,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 402,
+          "time": 13.40607250755287,
+          "target_bbox": [
+            522.063720703125,
+            476.30242919921875,
+            790.2032470703125,
+            714.16943359375
+          ],
+          "anchor_bbox": [
+            234.62985229492188,
+            163.10000610351562,
+            418.5768737792969,
+            255.63711547851562
+          ],
+          "target_observation": "test6:phone_01:402:96",
+          "anchor_observation": "test6:entity_0027:402:44",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "microwave",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              2.2914403733772915,
+              4.669866264589797
+            ],
+            "normalized_center_distance": 0.34551742705473465,
+            "box_gap_fraction": 0.16595799717869875,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.7653742048475477,
+            "relative_size": 3.7470229410017573,
+            "target_bbox_area_fraction": 0.06920740657197409,
+            "anchor_bbox_area_fraction": 0.0184699714044109,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        }
+      ],
+      "via_primary": null,
+      "status": "STABLE"
+    },
+    {
+      "segment_id": "P0002",
+      "subject": "phone_01",
+      "object": "entity_0029",
+      "hop": 1,
+      "start_frame": 204,
+      "end_frame": 390,
+      "start_time": 6.803081570996979,
+      "end_time": 13.005891238670696,
+      "support_frames": [
+        204,
+        210,
+        216,
+        222,
+        228,
+        234,
+        240,
+        246,
+        252,
+        258,
+        264,
+        270,
+        276,
+        282,
+        288,
+        294,
+        300,
+        306,
+        312,
+        318,
+        324,
+        330,
+        336,
+        342,
+        354,
+        360,
+        366,
+        372,
+        378,
+        384,
+        390
+      ],
+      "support_times": [
+        6.803081570996979,
+        7.003172205438067,
+        7.203262839879154,
+        7.403353474320242,
+        7.603444108761329,
+        7.803534743202417,
+        8.003625377643505,
+        8.203716012084593,
+        8.40380664652568,
+        8.603897280966768,
+        8.803987915407856,
+        9.004078549848943,
+        9.20416918429003,
+        9.404259818731118,
+        9.604350453172206,
+        9.804441087613293,
+        10.00453172205438,
+        10.204622356495468,
+        10.404712990936556,
+        10.604803625377643,
+        10.804894259818731,
+        11.004984894259819,
+        11.205075528700906,
+        11.405166163141994,
+        11.805347432024169,
+        12.005438066465256,
+        12.205528700906344,
+        12.405619335347431,
+        12.60570996978852,
+        12.805800604229608,
+        13.005891238670696
+      ],
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 204,
+          "time": 6.803081570996979,
+          "target_bbox": [
+            558.1239013671875,
+            520.0301513671875,
+            792.5629272460938,
+            639.0787963867188
+          ],
+          "anchor_bbox": [
+            522.36572265625,
+            249.25987243652344,
+            779.51953125,
+            509.1797790527344
+          ],
+          "target_observation": "test6:phone_01:204:0",
+          "anchor_observation": "test6:entity_0029:204:7",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5948879096403501,
+              1.2707553097429036
+            ],
+            "normalized_center_distance": 0.13741967181813078,
+            "box_gap_fraction": 0.007388218029664704,
+            "x_overlap_ratio": 0.9443633757340768,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.541415172153049,
+            "relative_size": 0.4175628583016048,
+            "target_bbox_area_fraction": 0.030283906652107867,
+            "anchor_bbox_area_fraction": 0.07252538402310166,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 210,
+          "time": 7.003172205438067,
+          "target_bbox": [
+            531.88037109375,
+            523.9114379882812,
+            772.3916015625,
+            647.8970947265625
+          ],
+          "anchor_bbox": [
+            497.819091796875,
+            246.3340301513672,
+            762.1239624023438,
+            511.17535400390625
+          ],
+          "target_observation": "test6:phone_01:210:5",
+          "anchor_observation": "test6:entity_0029:210:8",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5838594429899886,
+              1.282164849754051
+            ],
+            "normalized_center_distance": 0.141857068693233,
+            "box_gap_fraction": 0.00867223378089454,
+            "x_overlap_ratio": 0.9573091071874487,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5577264785766601,
+            "relative_size": 0.4260061712761102,
+            "target_bbox_area_fraction": 0.03235670883528655,
+            "anchor_bbox_area_fraction": 0.07595361526890883,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 216,
+          "time": 7.203262839879154,
+          "target_bbox": [
+            517.9774780273438,
+            538.3453369140625,
+            759.5082397460938,
+            667.46923828125
+          ],
+          "anchor_bbox": [
+            482.74774169921875,
+            257.241943359375,
+            749.21923828125,
+            526.0595092773438
+          ],
+          "target_observation": "test6:phone_01:216:8",
+          "anchor_observation": "test6:entity_0029:216:9",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5854101440056951,
+              1.2858733507904876
+            ],
+            "normalized_center_distance": 0.14468085522410654,
+            "box_gap_fraction": 0.00836564595429123,
+            "x_overlap_ratio": 0.9574008652495173,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5697601318359375,
+            "relative_size": 0.4353822155192025,
+            "target_bbox_area_fraction": 0.03384048855611278,
+            "anchor_bbox_area_fraction": 0.07772593218066404,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 222,
+          "time": 7.403353474320242,
+          "target_bbox": [
+            492.5718688964844,
+            534.3558349609375,
+            730.92822265625,
+            659.7457885742188
+          ],
+          "anchor_bbox": [
+            461.238525390625,
+            256.229248046875,
+            723.9818115234375,
+            519.5557861328125
+          ],
+          "target_observation": "test6:phone_01:222:11",
+          "anchor_observation": "test6:entity_0029:222:10",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5728463040903775,
+              1.294292501614383
+            ],
+            "normalized_center_distance": 0.1430147905347922,
+            "box_gap_fraction": 0.010077625395970784,
+            "x_overlap_ratio": 0.9708570339189966,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5604396396213107,
+            "relative_size": 0.43197958015014437,
+            "target_bbox_area_fraction": 0.032430004493671734,
+            "anchor_bbox_area_fraction": 0.07507300341002217,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 228,
+          "time": 7.603444108761329,
+          "target_bbox": [
+            481.5712890625,
+            546.683837890625,
+            720.1451416015625,
+            674.3021850585938
+          ],
+          "anchor_bbox": [
+            450.9078063964844,
+            270.18536376953125,
+            714.272216796875,
+            533.1151123046875
+          ],
+          "target_observation": "test6:phone_01:228:14",
+          "anchor_observation": "test6:entity_0029:228:11",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5693647395545153,
+              1.2942911541999809
+            ],
+            "normalized_center_distance": 0.14274789607753233,
+            "box_gap_fraction": 0.009239194758327414,
+            "x_overlap_ratio": 0.975383200035612,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5612733629014757,
+            "relative_size": 0.4396824659627796,
+            "target_bbox_area_fraction": 0.03303645913468952,
+            "anchor_bbox_area_fraction": 0.07513708572014366,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 234,
+          "time": 7.803534743202417,
+          "target_bbox": [
+            477.501708984375,
+            548.9874877929688,
+            714.5562744140625,
+            675.2880249023438
+          ],
+          "anchor_bbox": [
+            448.82464599609375,
+            273.28570556640625,
+            709.2603759765625,
+            537.2325439453125
+          ],
+          "target_observation": "test6:phone_01:234:17",
+          "anchor_observation": "test6:entity_0029:234:12",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5652233113872837,
+              1.2837890116903554
+            ],
+            "normalized_center_distance": 0.14134151655763244,
+            "box_gap_fraction": 0.008004157420226494,
+            "x_overlap_ratio": 0.9776595804940496,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5583365546332465,
+            "relative_size": 0.4355484683074527,
+            "target_bbox_area_fraction": 0.03248710822265517,
+            "anchor_bbox_area_fraction": 0.07458896216281169,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 240,
+          "time": 8.003625377643505,
+          "target_bbox": [
+            479.89495849609375,
+            547.9913940429688,
+            709.5328369140625,
+            668.0202026367188
+          ],
+          "anchor_bbox": [
+            450.01416015625,
+            279.1294250488281,
+            702.6968994140625,
+            537.1282958984375
+          ],
+          "target_observation": "test6:phone_01:240:20",
+          "anchor_observation": "test6:entity_0029:240:13",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5726538265884114,
+              1.2747202040381083
+            ],
+            "normalized_center_distance": 0.13667275422934588,
+            "box_gap_fraction": 0.0073968832813722804,
+            "x_overlap_ratio": 0.9702316641004767,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5401260799831814,
+            "relative_size": 0.4228006434796727,
+            "target_bbox_area_fraction": 0.029907943744037765,
+            "anchor_bbox_area_fraction": 0.07073769684429458,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 246,
+          "time": 8.203716012084593,
+          "target_bbox": [
+            481.3860778808594,
+            547.0755615234375,
+            706.4440307617188,
+            662.7499389648438
+          ],
+          "anchor_bbox": [
+            450.95556640625,
+            284.11566162109375,
+            701.7655029296875,
+            536.2265625
+          ],
+          "target_observation": "test6:phone_01:246:23",
+          "anchor_observation": "test6:entity_0029:246:14",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5699913244931581,
+              1.272444338997987
+            ],
+            "normalized_center_distance": 0.13314081853659201,
+            "box_gap_fraction": 0.00738728293055957,
+            "x_overlap_ratio": 0.9792118973262502,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5258809407552083,
+            "relative_size": 0.41171356144776033,
+            "target_bbox_area_fraction": 0.028248088745367567,
+            "anchor_bbox_area_fraction": 0.06861102327073038,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 252,
+          "time": 8.40380664652568,
+          "target_bbox": [
+            482.569091796875,
+            548.6173095703125,
+            707.402587890625,
+            664.1552124023438
+          ],
+          "anchor_bbox": [
+            451.44720458984375,
+            285.859619140625,
+            701.5091552734375,
+            538.201904296875
+          ],
+          "target_observation": "test6:phone_01:252:26",
+          "anchor_observation": "test6:entity_0029:252:15",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5740122991983188,
+              1.2702058303357024
+            ],
+            "normalized_center_distance": 0.13293890684784554,
+            "box_gap_fraction": 0.007092040973098556,
+            "x_overlap_ratio": 0.9737875684914401,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5254105461968316,
+            "relative_size": 0.41166869966289277,
+            "target_bbox_area_fraction": 0.028186621771989547,
+            "anchor_bbox_area_fraction": 0.06846918843980852,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 258,
+          "time": 8.603897280966768,
+          "target_bbox": [
+            481.358642578125,
+            549.1336059570312,
+            706.85888671875,
+            664.8318481445312
+          ],
+          "anchor_bbox": [
+            450.123046875,
+            286.0352783203125,
+            700.1142578125,
+            538.7015380859375
+          ],
+          "target_observation": "test6:phone_01:258:29",
+          "anchor_observation": "test6:entity_0029:258:16",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5759631197971804,
+              1.2702426078898776
+            ],
+            "normalized_center_distance": 0.13314585166708884,
+            "box_gap_fraction": 0.00710338684224085,
+            "x_overlap_ratio": 0.9700903698266333,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5261063469780816,
+            "relative_size": 0.41304920003639,
+            "target_bbox_area_fraction": 0.02830944212231164,
+            "anchor_bbox_area_fraction": 0.06853769991521,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 264,
+          "time": 8.803987915407856,
+          "target_bbox": [
+            479.154296875,
+            551.6575927734375,
+            704.9869995117188,
+            666.2078857421875
+          ],
+          "anchor_bbox": [
+            448.52142333984375,
+            287.03118896484375,
+            698.6688842773438,
+            539.3946533203125
+          ],
+          "target_observation": "test6:phone_01:264:32",
+          "anchor_observation": "test6:entity_0029:264:17",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.573858412615996,
+              1.2755473583115484
+            ],
+            "normalized_center_distance": 0.13386168188661712,
+            "box_gap_fraction": 0.008350060969205663,
+            "x_overlap_ratio": 0.9720230278404872,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5266343010796442,
+            "relative_size": 0.4097891510995355,
+            "target_bbox_area_fraction": 0.028069880912500796,
+            "anchor_bbox_area_fraction": 0.06849835052290776,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 270,
+          "time": 9.004078549848943,
+          "target_bbox": [
+            474.8977966308594,
+            551.7056274414062,
+            701.89453125,
+            667.521240234375
+          ],
+          "anchor_bbox": [
+            445.0771484375,
+            286.53692626953125,
+            695.7845458984375,
+            539.8564453125
+          ],
+          "target_observation": "test6:phone_01:270:35",
+          "anchor_observation": "test6:entity_0029:270:18",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5716585029177693,
+              1.2753715496892217
+            ],
+            "normalized_center_distance": 0.13430205393595163,
+            "box_gap_fraction": 0.008068325998818808,
+            "x_overlap_ratio": 0.9730833777771564,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5291448805067275,
+            "relative_size": 0.4139528870648339,
+            "target_bbox_area_fraction": 0.028526221703470786,
+            "anchor_bbox_area_fraction": 0.06891175927226464,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 276,
+          "time": 9.20416918429003,
+          "target_bbox": [
+            472.361572265625,
+            550.6746826171875,
+            700.119384765625,
+            666.8131713867188
+          ],
+          "anchor_bbox": [
+            442.96771240234375,
+            285.73504638671875,
+            693.9970092773438,
+            539.1532592773438
+          ],
+          "target_observation": "test6:phone_01:276:38",
+          "anchor_observation": "test6:entity_0029:276:19",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5707412158534783,
+              1.2746079965240882
+            ],
+            "normalized_center_distance": 0.13420995070833783,
+            "box_gap_fraction": 0.007845149012393464,
+            "x_overlap_ratio": 0.9731189221520942,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5292751736111111,
+            "relative_size": 0.41580261849674144,
+            "target_bbox_area_fraction": 0.02870165814800809,
+            "anchor_bbox_area_fraction": 0.06902712217583838,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 282,
+          "time": 9.404259818731118,
+          "target_bbox": [
+            471.16790771484375,
+            550.697021484375,
+            700.0478515625,
+            666.9266967773438
+          ],
+          "anchor_bbox": [
+            442.196533203125,
+            285.21624755859375,
+            693.817138671875,
+            539.0448608398438
+          ],
+          "target_observation": "test6:phone_01:282:41",
+          "anchor_observation": "test6:entity_0029:282:20",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5699507246967412,
+              1.274858682751072
+            ],
+            "normalized_center_distance": 0.13445911201778157,
+            "box_gap_fraction": 0.007934170447202233,
+            "x_overlap_ratio": 0.972777374959633,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5301534016927083,
+            "relative_size": 0.41652203599905646,
+            "target_bbox_area_fraction": 0.02886571349228082,
+            "anchor_bbox_area_fraction": 0.06930176796779658,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 288,
+          "time": 9.604350453172206,
+          "target_bbox": [
+            471.973876953125,
+            549.768798828125,
+            700.8162841796875,
+            666.654296875
+          ],
+          "anchor_bbox": [
+            442.72894287109375,
+            284.32891845703125,
+            694.7557983398438,
+            538.82470703125
+          ],
+          "target_observation": "test6:phone_01:288:44",
+          "anchor_observation": "test6:entity_0029:288:21",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5700429719210076,
+              1.272644357728054
+            ],
+            "normalized_center_distance": 0.134430669097549,
+            "box_gap_fraction": 0.007452033348595079,
+            "x_overlap_ratio": 0.9735167711557777,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5310074700249566,
+            "relative_size": 0.41703232419667563,
+            "target_bbox_area_fraction": 0.029023826760983664,
+            "anchor_bbox_area_fraction": 0.0695961082078995,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 294,
+          "time": 9.804441087613293,
+          "target_bbox": [
+            472.48944091796875,
+            548.4827880859375,
+            701.4124755859375,
+            663.9620361328125
+          ],
+          "anchor_bbox": [
+            443.22137451171875,
+            283.3841247558594,
+            694.8668823242188,
+            537.3971557617188
+          ],
+          "target_observation": "test6:phone_01:294:47",
+          "anchor_observation": "test6:entity_0029:294:22",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5711589489104915,
+              1.2709516754912809
+            ],
+            "normalized_center_distance": 0.13390176125681028,
+            "box_gap_fraction": 0.0075484108963642365,
+            "x_overlap_ratio": 0.971407013404254,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5285804324679905,
+            "relative_size": 0.4135692714565293,
+            "target_bbox_area_fraction": 0.028684743819515763,
+            "anchor_bbox_area_fraction": 0.06935898239850455,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 300,
+          "time": 10.00453172205438,
+          "target_bbox": [
+            472.19085693359375,
+            545.946044921875,
+            700.334716796875,
+            659.994873046875
+          ],
+          "anchor_bbox": [
+            443.0799255371094,
+            281.0079040527344,
+            694.1784057617188,
+            533.5841674804688
+          ],
+          "target_observation": "test6:phone_01:300:50",
+          "anchor_observation": "test6:entity_0029:300:23",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5702259177357303,
+              1.2747142212108884
+            ],
+            "normalized_center_distance": 0.13377823979237813,
+            "box_gap_fraction": 0.008417429664735547,
+            "x_overlap_ratio": 0.9730156619650184,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5263707902696397,
+            "relative_size": 0.4102636068723125,
+            "target_bbox_area_fraction": 0.02823300766202414,
+            "anchor_bbox_area_fraction": 0.06881674900989007,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 306,
+          "time": 10.204622356495468,
+          "target_bbox": [
+            473.50360107421875,
+            544.596435546875,
+            700.725830078125,
+            659.4140014648438
+          ],
+          "anchor_bbox": [
+            443.7232360839844,
+            280.8232727050781,
+            694.2496337890625,
+            532.8654174804688
+          ],
+          "target_observation": "test6:phone_01:306:53",
+          "anchor_observation": "test6:entity_0029:306:24",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5723607604057326,
+              1.274318412450446
+            ],
+            "normalized_center_distance": 0.13346070079422528,
+            "box_gap_fraction": 0.007987865915817046,
+            "x_overlap_ratio": 0.9714984034904826,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5258204566107856,
+            "relative_size": 0.4131735305917726,
+            "target_bbox_area_fraction": 0.028308488776783634,
+            "anchor_bbox_area_fraction": 0.06851476844665841,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 312,
+          "time": 10.404712990936556,
+          "target_bbox": [
+            471.8333435058594,
+            543.47314453125,
+            698.2554931640625,
+            657.9967651367188
+          ],
+          "anchor_bbox": [
+            442.71142578125,
+            278.82177734375,
+            693.0301513671875,
+            531.85107421875
+          ],
+          "target_observation": "test6:phone_01:312:56",
+          "anchor_observation": "test6:entity_0029:312:25",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5686070517518925,
+              1.272236778372996
+            ],
+            "normalized_center_distance": 0.13356335030140828,
+            "box_gap_fraction": 0.00791368138680974,
+            "x_overlap_ratio": 0.9769221261932062,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5266319274902344,
+            "relative_size": 0.4094018785516413,
+            "target_bbox_area_fraction": 0.028136593277051564,
+            "anchor_bbox_area_fraction": 0.06872609714589392,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 318,
+          "time": 10.604803625377643,
+          "target_bbox": [
+            471.59246826171875,
+            542.4200439453125,
+            698.9671630859375,
+            657.9866943359375
+          ],
+          "anchor_bbox": [
+            443.05975341796875,
+            277.2955627441406,
+            694.7877807617188,
+            531.43017578125
+          ],
+          "target_observation": "test6:phone_01:318:59",
+          "anchor_observation": "test6:entity_0029:318:26",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.564975079479923,
+              1.270617184087917
+            ],
+            "normalized_center_distance": 0.13381566047850493,
+            "box_gap_fraction": 0.0074832033187662165,
+            "x_overlap_ratio": 0.9816189645578204,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5287376827663846,
+            "relative_size": 0.4107515988790178,
+            "target_bbox_area_fraction": 0.02851229585983674,
+            "anchor_bbox_area_fraction": 0.06941493578515494,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 324,
+          "time": 10.804894259818731,
+          "target_bbox": [
+            473.85101318359375,
+            541.5923461914062,
+            700.29736328125,
+            657.6800537109375
+          ],
+          "anchor_bbox": [
+            444.64935302734375,
+            276.6072692871094,
+            697.0245361328125,
+            530.6332397460938
+          ],
+          "target_observation": "test6:phone_01:324:62",
+          "anchor_observation": "test6:entity_0029:324:27",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5643377191550492,
+              1.271637423844502
+            ],
+            "normalized_center_distance": 0.13392800792433618,
+            "box_gap_fraction": 0.007462257098811213,
+            "x_overlap_ratio": 0.9855470086092089,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5292677561442057,
+            "relative_size": 0.4100405371036713,
+            "target_bbox_area_fraction": 0.028523912390410258,
+            "anchor_bbox_area_fraction": 0.06956364019979447,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 330,
+          "time": 11.004984894259819,
+          "target_bbox": [
+            474.9365234375,
+            540.3602294921875,
+            702.2236328125,
+            657.1965942382812
+          ],
+          "anchor_bbox": [
+            447.4590759277344,
+            275.3076171875,
+            698.852783203125,
+            529.6813354492188
+          ],
+          "target_observation": "test6:phone_01:330:65",
+          "anchor_observation": "test6:entity_0029:330:28",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5613545530902007,
+              1.2716360671542466
+            ],
+            "normalized_center_distance": 0.13406535680928502,
+            "box_gap_fraction": 0.007271455321403623,
+            "x_overlap_ratio": 0.985169200230298,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5304013570149739,
+            "relative_size": 0.41526583345625606,
+            "target_bbox_area_fraction": 0.02881445270510287,
+            "anchor_bbox_area_fraction": 0.06938796882295921,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 336,
+          "time": 11.205075528700906,
+          "target_bbox": [
+            481.0274353027344,
+            543.306396484375,
+            706.269287109375,
+            661.9320068359375
+          ],
+          "anchor_bbox": [
+            453.910400390625,
+            277.5133972167969,
+            704.1219482421875,
+            532.589111328125
+          ],
+          "target_observation": "test6:phone_01:336:68",
+          "anchor_observation": "test6:entity_0029:336:29",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5584792629088764,
+              1.274546287466107
+            ],
+            "normalized_center_distance": 0.1348960933929734,
+            "box_gap_fraction": 0.00729759653638715,
+            "x_overlap_ratio": 0.9904665192105112,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5339147355821398,
+            "relative_size": 0.41864999316804025,
+            "target_bbox_area_fraction": 0.02899246109730787,
+            "anchor_bbox_area_fraction": 0.06925226697823139,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 342,
+          "time": 11.405166163141994,
+          "target_bbox": [
+            488.79290771484375,
+            538.3779907226562,
+            633.6783447265625,
+            641.7620239257812
+          ],
+          "anchor_bbox": [
+            462.48974609375,
+            275.646240234375,
+            711.5283203125,
+            528.3380126953125
+          ],
+          "target_observation": "test6:phone_01:342:71",
+          "anchor_observation": "test6:entity_0029:342:30",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.396508374000796,
+              1.244297604261924
+            ],
+            "normalized_center_distance": 0.12926255573846543,
+            "box_gap_fraction": 0.006836405657735001,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.508494144015842,
+            "relative_size": 0.23802385400992676,
+            "target_bbox_area_fraction": 0.016253082498555563,
+            "anchor_bbox_area_fraction": 0.06828341876137226,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 354,
+          "time": 11.805347432024169,
+          "target_bbox": [
+            498.01483154296875,
+            523.6044921875,
+            634.7298583984375,
+            606.7867431640625
+          ],
+          "anchor_bbox": [
+            473.4834899902344,
+            266.27099609375,
+            720.3527221679688,
+            514.6790771484375
+          ],
+          "target_observation": "test6:phone_01:354:75",
+          "anchor_observation": "test6:entity_0029:354:32",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.3762674439461662,
+              1.203361099658519
+            ],
+            "normalized_center_distance": 0.12077489392534947,
+            "box_gap_fraction": 0.006077479224008147,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.47293853759765625,
+            "relative_size": 0.18544461831486247,
+            "target_bbox_area_fraction": 0.012339695829165673,
+            "anchor_bbox_area_fraction": 0.06654113740963011,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 360,
+          "time": 12.005438066465256,
+          "target_bbox": [
+            496.052978515625,
+            528.49560546875,
+            634.321044921875,
+            615.5204467773438
+          ],
+          "anchor_bbox": [
+            473.03759765625,
+            265.80181884765625,
+            724.966552734375,
+            518.5367431640625
+          ],
+          "target_observation": "test6:phone_01:360:77",
+          "anchor_observation": "test6:entity_0029:360:33",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.36577539899660916,
+              1.211570613375309
+            ],
+            "normalized_center_distance": 0.12460142829243633,
+            "box_gap_fraction": 0.0067811724705917455,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.48572031656901044,
+            "relative_size": 0.1889825848771016,
+            "target_bbox_area_fraction": 0.01305637645079211,
+            "anchor_bbox_area_fraction": 0.06908772286760116,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 366,
+          "time": 12.205528700906344,
+          "target_bbox": [
+            493.43157958984375,
+            535.4150390625,
+            645.3746337890625,
+            629.5955810546875
+          ],
+          "anchor_bbox": [
+            470.59521484375,
+            270.30322265625,
+            725.3383178710938,
+            524.3837890625
+          ],
+          "target_observation": "test6:phone_01:366:80",
+          "anchor_observation": "test6:entity_0029:366:34",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.3878726869205846,
+              1.2287523277288477
+            ],
+            "normalized_center_distance": 0.12757143004778473,
+            "box_gap_fraction": 0.007511380971800925,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.4990171644422743,
+            "relative_size": 0.22108951843993557,
+            "target_bbox_area_fraction": 0.015527429683627109,
+            "anchor_bbox_area_fraction": 0.0702314148277704,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 372,
+          "time": 12.405619335347431,
+          "target_bbox": [
+            497.0430603027344,
+            541.1285400390625,
+            717.4579467773438,
+            682.077880859375
+          ],
+          "anchor_bbox": [
+            473.1299743652344,
+            271.2177734375,
+            731.277099609375,
+            528.8572998046875
+          ],
+          "target_observation": "test6:phone_01:372:84",
+          "anchor_observation": "test6:entity_0029:372:35",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.5195507369991482,
+              1.3211693167243364
+            ],
+            "normalized_center_distance": 0.14409994209319948,
+            "box_gap_fraction": 0.008355713123796696,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5706390380859375,
+            "relative_size": 0.46711540134358476,
+            "target_bbox_area_fraction": 0.033710213710481995,
+            "anchor_bbox_area_fraction": 0.07216677851665736,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 378,
+          "time": 12.60570996978852,
+          "target_bbox": [
+            496.3130798339844,
+            541.3890991210938,
+            641.9420166015625,
+            643.2828979492188
+          ],
+          "anchor_bbox": [
+            470.025146484375,
+            260.615234375,
+            735.3988037109375,
+            525.2349853515625
+          ],
+          "target_observation": "test6:phone_01:378:87",
+          "anchor_observation": "test6:entity_0029:378:36",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.3734447600003864,
+              1.2535752260969246
+            ],
+            "normalized_center_distance": 0.1376947909582862,
+            "box_gap_fraction": 0.010999633113633028,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5314828660753038,
+            "relative_size": 0.21130772129012407,
+            "target_bbox_area_fraction": 0.01610100432568288,
+            "anchor_bbox_area_fraction": 0.07619695213870728,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 384,
+          "time": 12.805800604229608,
+          "target_bbox": [
+            512.3404541015625,
+            545.8800659179688,
+            672.9535522460938,
+            641.0153198242188
+          ],
+          "anchor_bbox": [
+            472.2222595214844,
+            251.91751098632812,
+            747.244140625,
+            523.18896484375
+          ],
+          "target_observation": "test6:phone_01:384:90",
+          "anchor_observation": "test6:entity_0029:384:37",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.43787331818524294,
+              1.258997867369676
+            ],
+            "normalized_center_distance": 0.14067922990972584,
+            "box_gap_fraction": 0.015450787973991909,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5404136233859592,
+            "relative_size": 0.2048099718565514,
+            "target_bbox_area_fraction": 0.016579826250704678,
+            "anchor_bbox_area_fraction": 0.08095224124300532,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 390,
+          "time": 13.005891238670696,
+          "target_bbox": [
+            537.3053588867188,
+            511.8164978027344,
+            742.3939208984375,
+            617.121337890625
+          ],
+          "anchor_bbox": [
+            479.7293395996094,
+            246.46771240234375,
+            759.74755859375,
+            523.9117431640625
+          ],
+          "target_observation": "test6:phone_01:390:93",
+          "anchor_observation": "test6:entity_0029:390:38",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "sports ball",
+          "geometry": {
+            "bbox_iou": 0.025624512913771054,
+            "containment_ratio": 0.11485934883176371,
+            "target_center_relative_to_anchor": [
+              0.5718210081763261,
+              1.1461814643164894
+            ],
+            "normalized_center_distance": 0.12284018347250536,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.11485934883176371,
+            "target_bottom_minus_anchor_top": 0.5147967020670573,
+            "relative_size": 0.277989311939647,
+            "target_bbox_area_fraction": 0.023434047554795445,
+            "anchor_bbox_area_fraction": 0.08429837604649745,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": false,
+          "reappeared_consistently": false
+        }
+      ],
+      "via_primary": null,
+      "status": "STABLE"
+    },
+    {
+      "segment_id": "P0003",
+      "subject": "phone_01",
+      "object": "entity_0031",
+      "hop": 1,
+      "start_frame": 234,
+      "end_frame": 402,
+      "start_time": 7.803534743202417,
+      "end_time": 13.40607250755287,
+      "support_frames": [
+        234,
+        240,
+        246,
+        252,
+        258,
+        264,
+        270,
+        276,
+        282,
+        288,
+        294,
+        300,
+        306,
+        312,
+        318,
+        324,
+        330,
+        336,
+        342,
+        354,
+        360,
+        366,
+        372,
+        378,
+        384,
+        390,
+        402
+      ],
+      "support_times": [
+        7.803534743202417,
+        8.003625377643505,
+        8.203716012084593,
+        8.40380664652568,
+        8.603897280966768,
+        8.803987915407856,
+        9.004078549848943,
+        9.20416918429003,
+        9.404259818731118,
+        9.604350453172206,
+        9.804441087613293,
+        10.00453172205438,
+        10.204622356495468,
+        10.404712990936556,
+        10.604803625377643,
+        10.804894259818731,
+        11.004984894259819,
+        11.205075528700906,
+        11.405166163141994,
+        11.805347432024169,
+        12.005438066465256,
+        12.205528700906344,
+        12.405619335347431,
+        12.60570996978852,
+        12.805800604229608,
+        13.005891238670696,
+        13.40607250755287
+      ],
+      "raw_label": "chair",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 234,
+          "time": 7.803534743202417,
+          "target_bbox": [
+            477.501708984375,
+            548.9874877929688,
+            714.5562744140625,
+            675.2880249023438
+          ],
+          "anchor_bbox": [
+            586.7841186523438,
+            219.8267822265625,
+            669.5167236328125,
+            298.3795166015625
+          ],
+          "target_observation": "test6:phone_01:234:17",
+          "anchor_observation": "test6:entity_0031:234:0",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.11174401010408774,
+              4.994237021059698
+            ],
+            "normalized_center_distance": 0.24138073778215197,
+            "box_gap_fraction": 0.17064357585847145,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6325850592719184,
+            "relative_size": 4.606971387798799,
+            "target_bbox_area_fraction": 0.03248710822265517,
+            "anchor_bbox_area_fraction": 0.0070517278029324695,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 240,
+          "time": 8.003625377643505,
+          "target_bbox": [
+            479.89495849609375,
+            547.9913940429688,
+            709.5328369140625,
+            668.0202026367188
+          ],
+          "anchor_bbox": [
+            581.9668579101562,
+            224.7342987060547,
+            664.767333984375,
+            302.464111328125
+          ],
+          "target_observation": "test6:phone_01:240:20",
+          "anchor_observation": "test6:entity_0031:240:1",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.15394887081924483,
+              4.930817233502045
+            ],
+            "normalized_center_distance": 0.23532297878896227,
+            "box_gap_fraction": 0.16718404164915704,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6156748665703667,
+            "relative_size": 4.282610392356452,
+            "target_bbox_area_fraction": 0.029907943744037765,
+            "anchor_bbox_area_fraction": 0.006983578005932334,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 246,
+          "time": 8.203716012084593,
+          "target_bbox": [
+            481.3860778808594,
+            547.0755615234375,
+            706.4440307617188,
+            662.7499389648438
+          ],
+          "anchor_bbox": [
+            580.3033447265625,
+            228.3067626953125,
+            662.3405151367188,
+            304.7223815917969
+          ],
+          "target_observation": "test6:phone_01:246:23",
+          "anchor_observation": "test6:entity_0031:246:2",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.1659212467552565,
+              4.928390203303771
+            ],
+            "normalized_center_distance": 0.23117601849364716,
+            "box_gap_fraction": 0.16502273669747047,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6033933003743489,
+            "relative_size": 4.152778120392749,
+            "target_bbox_area_fraction": 0.028248088745367567,
+            "anchor_bbox_area_fraction": 0.006802214788854649,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 252,
+          "time": 8.40380664652568,
+          "target_bbox": [
+            482.569091796875,
+            548.6173095703125,
+            707.402587890625,
+            664.1552124023438
+          ],
+          "anchor_bbox": [
+            577.899658203125,
+            229.6934051513672,
+            661.100830078125,
+            305.4473876953125
+          ],
+          "target_observation": "test6:phone_01:252:26",
+          "anchor_observation": "test6:entity_0031:252:3",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.2053598676025259,
+              4.972581548652433
+            ],
+            "normalized_center_distance": 0.2313090349876373,
+            "box_gap_fraction": 0.1655788713052639,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6034191767374675,
+            "relative_size": 4.121455177658179,
+            "target_bbox_area_fraction": 0.028186621771989547,
+            "anchor_bbox_area_fraction": 0.006838997528053975,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 258,
+          "time": 8.603897280966768,
+          "target_bbox": [
+            481.358642578125,
+            549.1336059570312,
+            706.85888671875,
+            664.8318481445312
+          ],
+          "anchor_bbox": [
+            577.481689453125,
+            230.92987060546875,
+            659.3417358398438,
+            305.4758605957031
+          ],
+          "target_observation": "test6:phone_01:258:29",
+          "anchor_observation": "test6:entity_0031:258:4",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.20311587800431705,
+              5.044575254746444
+            ],
+            "normalized_center_distance": 0.23127423664555363,
+            "box_gap_fraction": 0.16591103928738765,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6026416354709201,
+            "relative_size": 4.2754073948483295,
+            "target_bbox_area_fraction": 0.02830944212231164,
+            "anchor_bbox_area_fraction": 0.006621460718906747,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 264,
+          "time": 8.803987915407856,
+          "target_bbox": [
+            479.154296875,
+            551.6575927734375,
+            704.9869995117188,
+            666.2078857421875
+          ],
+          "anchor_bbox": [
+            576.4036865234375,
+            230.9260711669922,
+            657.3605346679688,
+            306.507568359375
+          ],
+          "target_observation": "test6:phone_01:264:32",
+          "anchor_observation": "test6:entity_0031:264:5",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.19352237678462783,
+              5.001312254091154
+            ],
+            "normalized_center_distance": 0.23227450751173204,
+            "box_gap_fraction": 0.16692715953498663,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6045580757988824,
+            "relative_size": 4.227795322915613,
+            "target_bbox_area_fraction": 0.028069880912500796,
+            "anchor_bbox_area_fraction": 0.006639366092382867,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 270,
+          "time": 9.004078549848943,
+          "target_bbox": [
+            474.8977966308594,
+            551.7056274414062,
+            701.89453125,
+            667.521240234375
+          ],
+          "anchor_bbox": [
+            574.4910888671875,
+            230.870361328125,
+            655.8092041015625,
+            306.25506591796875
+          ],
+          "target_observation": "test6:phone_01:270:35",
+          "anchor_observation": "test6:entity_0031:270:6",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.17099603247277673,
+              5.024136853363647
+            ],
+            "normalized_center_distance": 0.23294114499431345,
+            "box_gap_fraction": 0.1671318007791502,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6064595540364583,
+            "relative_size": 4.288606286051675,
+            "target_bbox_area_fraction": 0.028526221703470786,
+            "anchor_bbox_area_fraction": 0.006651629877111797,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 276,
+          "time": 9.20416918429003,
+          "target_bbox": [
+            472.361572265625,
+            550.6746826171875,
+            700.119384765625,
+            666.8131713867188
+          ],
+          "anchor_bbox": [
+            572.7037353515625,
+            231.7255096435547,
+            653.9057006835938,
+            305.8555603027344
+          ],
+          "target_observation": "test6:phone_01:276:38",
+          "anchor_observation": "test6:entity_0031:276:7",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.166704624804478,
+              5.085905297593526
+            ],
+            "normalized_center_distance": 0.23221292003609822,
+            "box_gap_fraction": 0.16670184221060952,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6042884190877279,
+            "relative_size": 4.394289001764269,
+            "target_bbox_area_fraction": 0.02870165814800809,
+            "anchor_bbox_area_fraction": 0.006531581818238313,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 282,
+          "time": 9.404259818731118,
+          "target_bbox": [
+            471.16790771484375,
+            550.697021484375,
+            700.0478515625,
+            666.9266967773438
+          ],
+          "anchor_bbox": [
+            571.2073974609375,
+            231.69161987304688,
+            652.9235229492188,
+            305.4158935546875
+          ],
+          "target_observation": "test6:phone_01:282:41",
+          "anchor_observation": "test6:entity_0031:282:8",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.17622570932832002,
+              5.1152791397621575
+            ],
+            "normalized_center_distance": 0.23238736047139508,
+            "box_gap_fraction": 0.16701643032955676,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.604493162367079,
+            "relative_size": 4.415770496320641,
+            "target_bbox_area_fraction": 0.02886571349228082,
+            "anchor_bbox_area_fraction": 0.006536959635092596,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 288,
+          "time": 9.604350453172206,
+          "target_bbox": [
+            471.973876953125,
+            549.768798828125,
+            700.8162841796875,
+            666.654296875
+          ],
+          "anchor_bbox": [
+            571.2808837890625,
+            230.5576171875,
+            652.509765625,
+            303.6978759765625
+          ],
+          "target_observation": "test6:phone_01:288:44",
+          "anchor_observation": "test6:entity_0031:288:9",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.18606924576249537,
+              5.163420760558444
+            ],
+            "normalized_center_distance": 0.23289839946854804,
+            "box_gap_fraction": 0.16755421621490946,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6056898328993056,
+            "relative_size": 4.502255855962246,
+            "target_bbox_area_fraction": 0.029023826760983664,
+            "anchor_bbox_area_fraction": 0.006446507637398706,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 294,
+          "time": 9.804441087613293,
+          "target_bbox": [
+            472.48944091796875,
+            548.4827880859375,
+            701.4124755859375,
+            663.9620361328125
+          ],
+          "anchor_bbox": [
+            571.1571655273438,
+            229.72036743164062,
+            652.2987670898438,
+            302.5310363769531
+          ],
+          "target_observation": "test6:phone_01:294:47",
+          "anchor_observation": "test6:entity_0031:294:10",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.19464482362286223,
+              5.170973569279002
+            ],
+            "normalized_center_distance": 0.23219184495932182,
+            "box_gap_fraction": 0.16747307039256393,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6031134287516277,
+            "relative_size": 4.474606457414606,
+            "target_bbox_area_fraction": 0.028684743819515763,
+            "anchor_bbox_area_fraction": 0.006410562379622004,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 300,
+          "time": 10.00453172205438,
+          "target_bbox": [
+            472.19085693359375,
+            545.946044921875,
+            700.334716796875,
+            659.994873046875
+          ],
+          "anchor_bbox": [
+            570.4510498046875,
+            228.9746551513672,
+            651.5328979492188,
+            300.3311767578125
+          ],
+          "target_observation": "test6:phone_01:300:50",
+          "anchor_observation": "test6:entity_0031:300:11",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.19500957886852674,
+              5.241228067361771
+            ],
+            "normalized_center_distance": 0.2309812202253609,
+            "box_gap_fraction": 0.16724368019208447,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5986391915215387,
+            "relative_size": 4.497201028907233,
+            "target_bbox_area_fraction": 0.02823300766202414,
+            "anchor_bbox_area_fraction": 0.006277906520199395,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 306,
+          "time": 10.204622356495468,
+          "target_bbox": [
+            473.50360107421875,
+            544.596435546875,
+            700.725830078125,
+            659.4140014648438
+          ],
+          "anchor_bbox": [
+            570.3956909179688,
+            228.36825561523438,
+            651.9569091796875,
+            300.63922119140625
+          ],
+          "target_observation": "test6:phone_01:306:53",
+          "anchor_observation": "test6:entity_0031:306:12",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.2049874317050301,
+              5.169945633240786
+            ],
+            "normalized_center_distance": 0.23039425726152352,
+            "box_gap_fraction": 0.16611495323224723,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5986746470133464,
+            "relative_size": 4.4260018424679854,
+            "target_bbox_area_fraction": 0.028308488776783634,
+            "anchor_bbox_area_fraction": 0.006395950517950648,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 312,
+          "time": 10.404712990936556,
+          "target_bbox": [
+            471.8333435058594,
+            543.47314453125,
+            698.2554931640625,
+            657.9967651367188
+          ],
+          "anchor_bbox": [
+            570.7284545898438,
+            228.69747924804688,
+            651.9537353515625,
+            300.51177978515625
+          ],
+          "target_observation": "test6:phone_01:312:56",
+          "anchor_observation": "test6:entity_0031:312:13",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.17625009862525784,
+              5.180548620586934
+            ],
+            "normalized_center_distance": 0.22957667184777675,
+            "box_gap_fraction": 0.1654368609211642,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.596249008178711,
+            "relative_size": 4.4454100069663305,
+            "target_bbox_area_fraction": 0.028136593277051564,
+            "anchor_bbox_area_fraction": 0.006329358424298132,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 318,
+          "time": 10.604803625377643,
+          "target_bbox": [
+            471.59246826171875,
+            542.4200439453125,
+            698.9671630859375,
+            657.9866943359375
+          ],
+          "anchor_bbox": [
+            571.817138671875,
+            227.01217651367188,
+            654.1109619140625,
+            298.6897888183594
+          ],
+          "target_observation": "test6:phone_01:318:59",
+          "anchor_observation": "test6:entity_0031:318:14",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.16359280042601732,
+              5.206523775381781
+            ],
+            "normalized_center_distance": 0.23048162053567006,
+            "box_gap_fraction": 0.16596041252013874,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5985757191975911,
+            "relative_size": 4.454755632887725,
+            "target_bbox_area_fraction": 0.02851229585983674,
+            "anchor_bbox_area_fraction": 0.006400417488524302,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 324,
+          "time": 10.804894259818731,
+          "target_bbox": [
+            473.85101318359375,
+            541.5923461914062,
+            700.29736328125,
+            657.6800537109375
+          ],
+          "anchor_bbox": [
+            574.8851928710938,
+            226.11148071289062,
+            655.8917236328125,
+            298.3836669921875
+          ],
+          "target_observation": "test6:phone_01:324:62",
+          "anchor_observation": "test6:entity_0031:324:15",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.1504692923732549,
+              5.1683052425561025
+            ],
+            "normalized_center_distance": 0.23054169424903045,
+            "box_gap_fraction": 0.1656052618800088,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5994007958306207,
+            "relative_size": 4.4901446720172045,
+            "target_bbox_area_fraction": 0.028523912390410258,
+            "anchor_bbox_area_fraction": 0.006352559766764898,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 330,
+          "time": 11.004984894259819,
+          "target_bbox": [
+            474.9365234375,
+            540.3602294921875,
+            702.2236328125,
+            657.1965942382812
+          ],
+          "anchor_bbox": [
+            576.6234130859375,
+            225.25558471679688,
+            659.049560546875,
+            296.41558837890625
+          ],
+          "target_observation": "test6:phone_01:330:65",
+          "anchor_observation": "test6:entity_0031:330:16",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.14505912756299658,
+              5.249055760621434
+            ],
+            "normalized_center_distance": 0.2309721851881492,
+            "box_gap_fraction": 0.16610639188044024,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5999180687798394,
+            "relative_size": 4.527431391134004,
+            "target_bbox_area_fraction": 0.02881445270510287,
+            "anchor_bbox_area_fraction": 0.006364415098929991,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 336,
+          "time": 11.205075528700906,
+          "target_bbox": [
+            481.0274353027344,
+            543.306396484375,
+            706.269287109375,
+            661.9320068359375
+          ],
+          "anchor_bbox": [
+            579.0509643554688,
+            224.1008758544922,
+            663.1705322265625,
+            298.6026611328125
+          ],
+          "target_observation": "test6:phone_01:336:68",
+          "anchor_observation": "test6:entity_0031:336:17",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.17353152447187123,
+              5.080661146462637
+            ],
+            "normalized_center_distance": 0.23312645299152854,
+            "box_gap_fraction": 0.16662327310579816,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6080987930297852,
+            "relative_size": 4.263476134854062,
+            "target_bbox_area_fraction": 0.02899246109730787,
+            "anchor_bbox_area_fraction": 0.0068001931241724375,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 342,
+          "time": 11.405166163141994,
+          "target_bbox": [
+            488.79290771484375,
+            538.3779907226562,
+            633.6783447265625,
+            641.7620239257812
+          ],
+          "anchor_bbox": [
+            581.1832885742188,
+            221.9773406982422,
+            667.9105224609375,
+            293.18115234375
+          ],
+          "target_observation": "test6:phone_01:342:71",
+          "anchor_observation": "test6:entity_0031:342:18",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.2300045955526592,
+              5.1695640741614595
+            ],
+            "normalized_center_distance": 0.23046690942479114,
+            "box_gap_fraction": 0.16695903602448164,
+            "x_overlap_ratio": 0.6052891784939396,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5830342822604709,
+            "relative_size": 2.4256015871825953,
+            "target_bbox_area_fraction": 0.016253082498555563,
+            "anchor_bbox_area_fraction": 0.006700639785379584,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 354,
+          "time": 11.805347432024169,
+          "target_bbox": [
+            498.01483154296875,
+            523.6044921875,
+            634.7298583984375,
+            606.7867431640625
+          ],
+          "anchor_bbox": [
+            593.7672119140625,
+            212.67575073242188,
+            679.0172119140625,
+            283.7615966796875
+          ],
+          "target_observation": "test6:phone_01:354:75",
+          "anchor_observation": "test6:entity_0031:354:20",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.3213474128253299,
+              4.9590725445523
+            ],
+            "normalized_center_distance": 0.2210386998093444,
+            "box_gap_fraction": 0.16331343787322564,
+            "x_overlap_ratio": 0.48050025201612906,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5473763783772786,
+            "relative_size": 1.876589996587878,
+            "target_bbox_area_fraction": 0.012339695829165673,
+            "anchor_bbox_area_fraction": 0.00657559501628081,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 360,
+          "time": 12.005438066465256,
+          "target_bbox": [
+            496.052978515625,
+            528.49560546875,
+            634.321044921875,
+            615.5204467773438
+          ],
+          "anchor_bbox": [
+            596.19580078125,
+            209.22177124023438,
+            682.3656005859375,
+            282.98138427734375
+          ],
+          "target_observation": "test6:phone_01:360:77",
+          "anchor_observation": "test6:entity_0031:360:21",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.35985680752171334,
+              4.918494552029309
+            ],
+            "normalized_center_distance": 0.2275784582707077,
+            "box_gap_fraction": 0.1671751478176682,
+            "x_overlap_ratio": 0.4424432252023295,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5643037160237631,
+            "relative_size": 1.8931778558697718,
+            "target_bbox_area_fraction": 0.01305637645079211,
+            "anchor_bbox_area_fraction": 0.006896539810198495,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 366,
+          "time": 12.205528700906344,
+          "target_bbox": [
+            493.43157958984375,
+            535.4150390625,
+            645.3746337890625,
+            629.5955810546875
+          ],
+          "anchor_bbox": [
+            593.8740234375,
+            206.9884033203125,
+            681.8043823242188,
+            284.7741394042969
+          ],
+          "target_observation": "test6:phone_01:366:80",
+          "anchor_observation": "test6:entity_0031:366:22",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.27829883851120085,
+              4.827580551951581
+            ],
+            "normalized_center_distance": 0.23390239709324945,
+            "box_gap_fraction": 0.17066599745701455,
+            "x_overlap_ratio": 0.5856977158243044,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5869544135199652,
+            "relative_size": 2.092200134966758,
+            "target_bbox_area_fraction": 0.015527429683627109,
+            "anchor_bbox_area_fraction": 0.007421579524883176,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 372,
+          "time": 12.405619335347431,
+          "target_bbox": [
+            497.0430603027344,
+            541.1285400390625,
+            717.4579467773438,
+            682.077880859375
+          ],
+          "anchor_bbox": [
+            595.7037963867188,
+            205.28802490234375,
+            683.0911865234375,
+            284.5434875488281
+          ],
+          "target_observation": "test6:phone_01:372:84",
+          "anchor_observation": "test6:entity_0031:372:23",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.13213241790669494,
+              5.126652119352664
+            ],
+            "normalized_center_distance": 0.2506419039573972,
+            "box_gap_fraction": 0.1747134804236771,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6622081332736545,
+            "relative_size": 4.4856563336615105,
+            "target_bbox_area_fraction": 0.033710213710481995,
+            "anchor_bbox_area_fraction": 0.007515112884933236,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 378,
+          "time": 12.60570996978852,
+          "target_bbox": [
+            496.3130798339844,
+            541.3890991210938,
+            641.9420166015625,
+            643.2828979492188
+          ],
+          "anchor_bbox": [
+            593.5814819335938,
+            199.86465454101562,
+            683.8369140625,
+            273.4004211425781
+          ],
+          "target_observation": "test6:phone_01:378:87",
+          "anchor_observation": "test6:entity_0031:378:24",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.2709414063952879,
+              5.337149011047385
+            ],
+            "normalized_center_distance": 0.24679563427287415,
+            "box_gap_fraction": 0.18247841871283016,
+            "x_overlap_ratio": 0.5358185488370206,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6158586714002822,
+            "relative_size": 2.2357511284660028,
+            "target_bbox_area_fraction": 0.01610100432568288,
+            "anchor_bbox_area_fraction": 0.0072016084977803985,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 384,
+          "time": 12.805800604229608,
+          "target_bbox": [
+            512.3404541015625,
+            545.8800659179688,
+            672.9535522460938,
+            641.0153198242188
+          ],
+          "anchor_bbox": [
+            593.4228515625,
+            190.84939575195312,
+            684.4057006835938,
+            263.787353515625
+          ],
+          "target_observation": "test6:phone_01:384:90",
+          "anchor_observation": "test6:entity_0031:384:25",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              -0.00852741364077595,
+              5.5197363548841
+            ],
+            "normalized_center_distance": 0.25128687542098627,
+            "box_gap_fraction": 0.19208211510233886,
+            "x_overlap_ratio": 0.8741284918187411,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.6252304501003689,
+            "relative_size": 2.3025512710356097,
+            "target_bbox_area_fraction": 0.016579826250704678,
+            "anchor_bbox_area_fraction": 0.007200632819458406,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 390,
+          "time": 13.005891238670696,
+          "target_bbox": [
+            537.3053588867188,
+            511.8164978027344,
+            742.3939208984375,
+            617.121337890625
+          ],
+          "anchor_bbox": [
+            597.78076171875,
+            187.59188842773438,
+            688.5955810546875,
+            257.1595153808594
+          ],
+          "target_observation": "test6:phone_01:390:93",
+          "anchor_observation": "test6:entity_0031:390:26",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.4632380318702072,
+              5.417419652288655
+            ],
+            "normalized_center_distance": 0.23294865356484049,
+            "box_gap_fraction": 0.17340062206004891,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5965686798095703,
+            "relative_size": 3.4184234611056996,
+            "target_bbox_area_fraction": 0.023434047554795445,
+            "anchor_bbox_area_fraction": 0.006855220782745164,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        },
+        {
+          "frame": 402,
+          "time": 13.40607250755287,
+          "target_bbox": [
+            522.063720703125,
+            476.30242919921875,
+            790.2032470703125,
+            714.16943359375
+          ],
+          "anchor_bbox": [
+            586.14013671875,
+            180.8367156982422,
+            676.6424560546875,
+            248.7579345703125
+          ],
+          "target_observation": "test6:phone_01:402:96",
+          "anchor_observation": "test6:entity_0031:402:28",
+          "target_identity": "TRUSTED",
+          "anchor_identity": "TRUSTED",
+          "raw_label": "chair",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              0.773387330640212,
+              6.101174604636639
+            ],
+            "normalized_center_distance": 0.25959490827546694,
+            "box_gap_fraction": 0.1549392305671274,
+            "x_overlap_ratio": 1.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.7407398859659831,
+            "relative_size": 10.375997564418356,
+            "target_bbox_area_fraction": 0.06920740657197409,
+            "anchor_bbox_area_fraction": 0.006669952083383477,
+            "mask_evidence_available": false
+          },
+          "target_mask_ref": null,
+          "anchor_remains_visible": true,
+          "interaction_evidence": false,
+          "target_disappears_after": true,
+          "remains_unobserved": true,
+          "reappeared_consistently": false
+        }
+      ],
+      "via_primary": null,
+      "status": "STABLE"
+    }
+  ],
+  "context_segments": [
+    {
+      "segment_id": "C0001",
+      "subject": "entity_0027",
+      "object": "entity_0034",
+      "hop": 2,
+      "start_frame": 312,
+      "end_frame": 342,
+      "start_time": 10.404712990936556,
+      "end_time": 11.405166163141994,
+      "support_frames": [
+        312,
+        318,
+        324,
+        330,
+        336,
+        342
+      ],
+      "support_times": [
+        10.404712990936556,
+        10.604803625377643,
+        10.804894259818731,
+        11.004984894259819,
+        11.205075528700906,
+        11.405166163141994
+      ],
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 312,
+          "time": 10.404712990936556,
+          "target_bbox": [
+            224.30075073242188,
+            223.54693603515625,
+            403.9300231933594,
+            310.0870666503906
+          ],
+          "anchor_bbox": [
+            155.66513061523438,
+            160.9307098388672,
+            249.490234375,
+            263.5824890136719
+          ],
+          "target_observation": "test6:entity_0027:312:29",
+          "anchor_observation": "test6:entity_0034:312:0",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.04172772910531667,
+            "containment_ratio": 0.06487396455686233,
+            "target_center_relative_to_anchor": [
+              1.6887831720747148,
+              1.0315095593578905
+            ],
+            "normalized_center_distance": 0.08454773908924652,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2684727501828776,
+            "y_overlap_ratio": 0.46262413395835383,
+            "target_bottom_minus_anchor_top": 0.20716160668267145,
+            "relative_size": 1.6140207838640477,
+            "target_bbox_area_fraction": 0.016867557184341422,
+            "anchor_bbox_area_fraction": 0.010450644349175996,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 318,
+          "time": 10.604803625377643,
+          "target_bbox": [
+            223.8128662109375,
+            221.75778198242188,
+            405.55938720703125,
+            308.2989501953125
+          ],
+          "anchor_bbox": [
+            154.34396362304688,
+            157.2901153564453,
+            251.93234252929688,
+            265.078125
+          ],
+          "target_observation": "test6:entity_0027:318:30",
+          "anchor_observation": "test6:entity_0034:318:1",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.048668836778141815,
+            "containment_ratio": 0.07744800861327586,
+            "target_center_relative_to_anchor": [
+              1.6430456667383833,
+              0.9995383632066557
+            ],
+            "normalized_center_distance": 0.08434089798611866,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.28814369736967194,
+            "y_overlap_ratio": 0.5005749738784483,
+            "target_bottom_minus_anchor_top": 0.20973449283176,
+            "relative_size": 1.4952723529049523,
+            "target_bbox_area_fraction": 0.017066575787359598,
+            "anchor_bbox_area_fraction": 0.011413690458599983,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 324,
+          "time": 10.804894259818731,
+          "target_bbox": [
+            227.13925170898438,
+            219.14474487304688,
+            404.1591491699219,
+            305.9629821777344
+          ],
+          "anchor_bbox": [
+            161.0979461669922,
+            156.85693359375,
+            252.95797729492188,
+            251.36898803710938
+          ],
+          "target_observation": "test6:entity_0027:324:31",
+          "anchor_observation": "test6:entity_0034:324:2",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.035833098454233714,
+            "containment_ratio": 0.05413579001225794,
+            "target_center_relative_to_anchor": [
+              1.6824646407666002,
+              1.118343374865312
+            ],
+            "normalized_center_distance": 0.08398766768698403,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2810659355207579,
+            "y_overlap_ratio": 0.3711690557707585,
+            "target_bottom_minus_anchor_top": 0.20709173414442275,
+            "relative_size": 1.7701874478365174,
+            "target_bbox_area_fraction": 0.016675949940771616,
+            "anchor_bbox_area_fraction": 0.009420442993849368,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 330,
+          "time": 11.004984894259819,
+          "target_bbox": [
+            231.1028289794922,
+            216.98898315429688,
+            408.84454345703125,
+            303.86590576171875
+          ],
+          "anchor_bbox": [
+            161.970947265625,
+            154.9637908935547,
+            254.6180419921875,
+            245.1905975341797
+          ],
+          "target_observation": "test6:entity_0027:330:32",
+          "anchor_observation": "test6:entity_0034:330:3",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.028661703140509708,
+            "containment_ratio": 0.042946630261974164,
+            "target_center_relative_to_anchor": [
+              1.7054257278003597,
+              1.1688727274203194
+            ],
+            "normalized_center_distance": 0.08643747241187694,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2538148992377778,
+            "y_overlap_ratio": 0.32461571535308453,
+            "target_bottom_minus_anchor_top": 0.2068084928724501,
+            "relative_size": 1.8472530907364457,
+            "target_bbox_area_fraction": 0.016755266029487455,
+            "anchor_bbox_area_fraction": 0.009070368382931014,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 336,
+          "time": 11.205075528700906,
+          "target_bbox": [
+            236.15451049804688,
+            215.309814453125,
+            413.024658203125,
+            301.4315185546875
+          ],
+          "anchor_bbox": [
+            167.9136962890625,
+            152.46267700195312,
+            260.43597412109375,
+            232.95779418945312
+          ],
+          "target_observation": "test6:entity_0027:336:33",
+          "anchor_observation": "test6:entity_0034:336:4",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.019258032050640868,
+            "containment_ratio": 0.02813213576105302,
+            "target_center_relative_to_anchor": [
+              1.6933855470566699,
+              1.3157070043796328
+            ],
+            "normalized_center_distance": 0.0874727305321862,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2624391032301263,
+            "y_overlap_ratio": 0.21924286034915744,
+            "target_bottom_minus_anchor_top": 0.2069011688232422,
+            "relative_size": 2.0452730695014596,
+            "target_bbox_area_fraction": 0.016528166802361535,
+            "anchor_bbox_area_fraction": 0.008081154076110882,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 342,
+          "time": 11.405166163141994,
+          "target_bbox": [
+            241.333251953125,
+            210.24630737304688,
+            418.17437744140625,
+            297.7930908203125
+          ],
+          "anchor_bbox": [
+            173.3104705810547,
+            147.66416931152344,
+            265.1372985839844,
+            233.32363891601562
+          ],
+          "target_observation": "test6:entity_0027:342:34",
+          "anchor_observation": "test6:entity_0034:342:5",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.02409530814253062,
+            "containment_ratio": 0.03548239425965725,
+            "target_center_relative_to_anchor": [
+              1.7036779720978676,
+              1.2416085492499793
+            ],
+            "normalized_center_distance": 0.08680679222428994,
+            "box_gap_fraction": 0.0,
+            "x_overlap_ratio": 0.2592275824892908,
+            "y_overlap_ratio": 0.2694078267063951,
+            "target_bottom_minus_anchor_top": 0.20851239098442925,
+            "relative_size": 1.9682420275735706,
+            "target_bbox_area_fraction": 0.016798905943677608,
+            "anchor_bbox_area_fraction": 0.008534979798387465,
+            "mask_evidence_available": false
+          }
+        }
+      ],
+      "via_primary": "entity_0027",
+      "status": "STABLE"
+    },
+    {
+      "segment_id": "C0002",
+      "subject": "entity_0029",
+      "object": "entity_0034",
+      "hop": 2,
+      "start_frame": 312,
+      "end_frame": 342,
+      "start_time": 10.404712990936556,
+      "end_time": 11.405166163141994,
+      "support_frames": [
+        312,
+        318,
+        324,
+        330,
+        336,
+        342
+      ],
+      "support_times": [
+        10.404712990936556,
+        10.604803625377643,
+        10.804894259818731,
+        11.004984894259819,
+        11.205075528700906,
+        11.405166163141994
+      ],
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "observations": [
+        {
+          "frame": 312,
+          "time": 10.404712990936556,
+          "target_bbox": [
+            442.71142578125,
+            278.82177734375,
+            693.0301513671875,
+            531.85107421875
+          ],
+          "anchor_bbox": [
+            155.66513061523438,
+            160.9307098388672,
+            249.490234375,
+            263.5824890136719
+          ],
+          "target_observation": "test6:entity_0029:312:25",
+          "anchor_observation": "test6:entity_0034:312:0",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.393340816487833,
+              2.3809204078790174
+            ],
+            "normalized_center_distance": 0.2813428157878752,
+            "box_gap_fraction": 0.13197643169319107,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5151671727498373,
+            "relative_size": 6.576254520738023,
+            "target_bbox_area_fraction": 0.06872609714589392,
+            "anchor_bbox_area_fraction": 0.010450644349175996,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 318,
+          "time": 10.604803625377643,
+          "target_bbox": [
+            443.05975341796875,
+            277.2955627441406,
+            694.7877807617188,
+            531.43017578125
+          ],
+          "anchor_bbox": [
+            154.34396362304688,
+            157.2901153564453,
+            251.93234252929688,
+            265.078125
+          ],
+          "target_observation": "test6:entity_0029:318:26",
+          "anchor_observation": "test6:entity_0034:318:1",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.248249721056134,
+              2.2922100029799
+            ],
+            "normalized_center_distance": 0.28167079839255554,
+            "box_gap_fraction": 0.130407787751678,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5196389728122287,
+            "relative_size": 6.081725804369629,
+            "target_bbox_area_fraction": 0.06941493578515494,
+            "anchor_bbox_area_fraction": 0.011413690458599983,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 324,
+          "time": 10.804894259818731,
+          "target_bbox": [
+            444.64935302734375,
+            276.6072692871094,
+            697.0245361328125,
+            530.6332397460938
+          ],
+          "anchor_bbox": [
+            161.0979461669922,
+            156.85693359375,
+            252.95797729492188,
+            251.36898803710938
+          ],
+          "target_observation": "test6:entity_0029:324:27",
+          "anchor_observation": "test6:entity_0034:324:2",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.4604709293257185,
+              2.610919023781624
+            ],
+            "normalized_center_distance": 0.28252791300225005,
+            "box_gap_fraction": 0.13165263304459734,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5191337585449218,
+            "relative_size": 7.384327918040876,
+            "target_bbox_area_fraction": 0.06956364019979447,
+            "anchor_bbox_area_fraction": 0.009420442993849368,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 330,
+          "time": 11.004984894259819,
+          "target_bbox": [
+            447.4590759277344,
+            275.3076171875,
+            698.852783203125,
+            529.6813354492188
+          ],
+          "anchor_bbox": [
+            161.970947265625,
+            154.9637908935547,
+            254.6180419921875,
+            245.1905975341797
+          ],
+          "target_observation": "test6:entity_0029:330:28",
+          "anchor_observation": "test6:entity_0034:330:3",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.438185390630662,
+              2.743427309920475
+            ],
+            "normalized_center_distance": 0.28411243079134885,
+            "box_gap_fraction": 0.1329007210348412,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.520441034105089,
+            "relative_size": 7.649961489274934,
+            "target_bbox_area_fraction": 0.06938796882295921,
+            "anchor_bbox_area_fraction": 0.009070368382931014,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 336,
+          "time": 11.205075528700906,
+          "target_bbox": [
+            453.910400390625,
+            277.5133972167969,
+            704.1219482421875,
+            532.589111328125
+          ],
+          "anchor_bbox": [
+            167.9136962890625,
+            152.46267700195312,
+            260.43597412109375,
+            232.95779418945312
+          ],
+          "target_observation": "test6:entity_0029:336:29",
+          "anchor_observation": "test6:entity_0034:336:4",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.443280987673867,
+              3.137936636357019
+            ],
+            "normalized_center_distance": 0.28743944573977254,
+            "box_gap_fraction": 0.13518854871737254,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.527953381008572,
+            "relative_size": 8.569601114641733,
+            "target_bbox_area_fraction": 0.06925226697823139,
+            "anchor_bbox_area_fraction": 0.008081154076110882,
+            "mask_evidence_available": false
+          }
+        },
+        {
+          "frame": 342,
+          "time": 11.405166163141994,
+          "target_bbox": [
+            462.48974609375,
+            275.646240234375,
+            711.5283203125,
+            528.3380126953125
+          ],
+          "anchor_bbox": [
+            173.3104705810547,
+            147.66416931152344,
+            265.1372985839844,
+            233.32363891601562
+          ],
+          "target_observation": "test6:entity_0029:342:30",
+          "anchor_observation": "test6:entity_0034:342:5",
+          "raw_label": "potted plant",
+          "geometry": {
+            "bbox_iou": 0.0,
+            "containment_ratio": 0.0,
+            "target_center_relative_to_anchor": [
+              4.505203671076076,
+              2.9690582760739246
+            ],
+            "normalized_center_distance": 0.28888713040119324,
+            "box_gap_fraction": 0.13743623946617992,
+            "x_overlap_ratio": 0.0,
+            "y_overlap_ratio": 0.0,
+            "target_bottom_minus_anchor_top": 0.5287136713663737,
+            "relative_size": 8.000419494170709,
+            "target_bbox_area_fraction": 0.06828341876137226,
+            "anchor_bbox_area_fraction": 0.008534979798387465,
+            "mask_evidence_available": false
+          }
+        }
+      ],
+      "via_primary": "entity_0029",
+      "status": "STABLE"
+    }
+  ],
+  "identity_audit": [
+    {
+      "frame": 204,
+      "observation_id": "test6:phone_01:204:0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 204,
+      "observation_id": "test6:phone_01:204:1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "test6:phone_01:204:2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 204,
+      "observation_id": "test6:phone_01:204:3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "test6:phone_01:210:4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 210,
+      "observation_id": "test6:phone_01:210:5",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 210,
+      "observation_id": "test6:phone_01:210:6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "test6:phone_01:216:7",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 216,
+      "observation_id": "test6:phone_01:216:8",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 216,
+      "observation_id": "test6:phone_01:216:9",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "test6:phone_01:222:10",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 222,
+      "observation_id": "test6:phone_01:222:11",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 222,
+      "observation_id": "test6:phone_01:222:12",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "test6:phone_01:228:13",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 228,
+      "observation_id": "test6:phone_01:228:14",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 228,
+      "observation_id": "test6:phone_01:228:15",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "test6:phone_01:234:16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 234,
+      "observation_id": "test6:phone_01:234:17",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 234,
+      "observation_id": "test6:phone_01:234:18",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "test6:phone_01:240:19",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 240,
+      "observation_id": "test6:phone_01:240:20",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 240,
+      "observation_id": "test6:phone_01:240:21",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "test6:phone_01:246:22",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 246,
+      "observation_id": "test6:phone_01:246:23",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 246,
+      "observation_id": "test6:phone_01:246:24",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "test6:phone_01:252:25",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 252,
+      "observation_id": "test6:phone_01:252:26",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 252,
+      "observation_id": "test6:phone_01:252:27",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "test6:phone_01:258:28",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 258,
+      "observation_id": "test6:phone_01:258:29",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 258,
+      "observation_id": "test6:phone_01:258:30",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "test6:phone_01:264:31",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 264,
+      "observation_id": "test6:phone_01:264:32",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 264,
+      "observation_id": "test6:phone_01:264:33",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "test6:phone_01:270:34",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 270,
+      "observation_id": "test6:phone_01:270:35",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 270,
+      "observation_id": "test6:phone_01:270:36",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "test6:phone_01:276:37",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 276,
+      "observation_id": "test6:phone_01:276:38",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 276,
+      "observation_id": "test6:phone_01:276:39",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "test6:phone_01:282:40",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 282,
+      "observation_id": "test6:phone_01:282:41",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 282,
+      "observation_id": "test6:phone_01:282:42",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "test6:phone_01:288:43",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 288,
+      "observation_id": "test6:phone_01:288:44",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 288,
+      "observation_id": "test6:phone_01:288:45",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "test6:phone_01:294:46",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 294,
+      "observation_id": "test6:phone_01:294:47",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 294,
+      "observation_id": "test6:phone_01:294:48",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "test6:phone_01:300:49",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 300,
+      "observation_id": "test6:phone_01:300:50",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 300,
+      "observation_id": "test6:phone_01:300:51",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "test6:phone_01:306:52",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 306,
+      "observation_id": "test6:phone_01:306:53",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 306,
+      "observation_id": "test6:phone_01:306:54",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "test6:phone_01:312:55",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 312,
+      "observation_id": "test6:phone_01:312:56",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 312,
+      "observation_id": "test6:phone_01:312:57",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "test6:phone_01:318:58",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 318,
+      "observation_id": "test6:phone_01:318:59",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 318,
+      "observation_id": "test6:phone_01:318:60",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "test6:phone_01:324:61",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 324,
+      "observation_id": "test6:phone_01:324:62",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 324,
+      "observation_id": "test6:phone_01:324:63",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "test6:phone_01:330:64",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 330,
+      "observation_id": "test6:phone_01:330:65",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 330,
+      "observation_id": "test6:phone_01:330:66",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "test6:phone_01:336:67",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 336,
+      "observation_id": "test6:phone_01:336:68",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 336,
+      "observation_id": "test6:phone_01:336:69",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "test6:phone_01:342:70",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 342,
+      "observation_id": "test6:phone_01:342:71",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 342,
+      "observation_id": "test6:phone_01:342:72",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "test6:phone_01:354:74",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 354,
+      "observation_id": "test6:phone_01:354:75",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "test6:phone_01:360:76",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 360,
+      "observation_id": "test6:phone_01:360:77",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 360,
+      "observation_id": "test6:phone_01:360:78",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "test6:phone_01:366:79",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 366,
+      "observation_id": "test6:phone_01:366:80",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 366,
+      "observation_id": "test6:phone_01:366:81",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "test6:phone_01:372:82",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "test6:phone_01:372:83",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 372,
+      "observation_id": "test6:phone_01:372:84",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 372,
+      "observation_id": "test6:phone_01:372:85",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "test6:phone_01:378:86",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 378,
+      "observation_id": "test6:phone_01:378:87",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 378,
+      "observation_id": "test6:phone_01:378:88",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "test6:phone_01:384:89",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 384,
+      "observation_id": "test6:phone_01:384:90",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 384,
+      "observation_id": "test6:phone_01:384:91",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "test6:phone_01:390:92",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 390,
+      "observation_id": "test6:phone_01:390:93",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 402,
+      "observation_id": "test6:phone_01:402:95",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 402,
+      "observation_id": "test6:phone_01:402:96",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    }
+  ],
+  "limits": {
+    "primary_per_snapshot": 3,
+    "context_per_primary": 2
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "tracks": [
+    {
+      "track_id": 20,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.7714196123458721,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            296.105712890625,
+            67.5230941772461,
+            566.9478759765625,
+            190.07632446289062
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": true,
+          "bbox": [
+            374.373779296875,
+            32.53746795654297,
+            599.8626708984375,
+            119.18276977539062
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": true,
+          "bbox": [
+            341.35723876953125,
+            22.38063621520996,
+            595.4898681640625,
+            116.70165252685547
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 11,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.7319205861266066,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            599.9989013671875,
+            0.0,
+            792.9324951171875,
+            151.71682739257812
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": true,
+          "bbox": [
+            631.7555541992188,
+            0.0,
+            808.7518310546875,
+            95.90922546386719
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": true,
+          "bbox": [
+            624.0108032226562,
+            0.0,
+            801.7366943359375,
+            93.97320556640625
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 23,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.6269473433494568,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            143.35858154296875,
+            11.376505851745605,
+            364.476806640625,
+            204.4457244873047
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 25,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.500097700140693,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            789.8327026367188,
+            0.0,
+            931.4339599609375,
+            129.41189575195312
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 12,
+      "detector_hypothesis": "table",
+      "detector_confidence": 0.5611643026272456,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            471.943359375,
+            15.213216781616211,
+            1278.27880859375,
+            698.6790771484375
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": true,
+          "bbox": [
+            427.4974060058594,
+            37.592613220214844,
+            1277.2259521484375,
+            700.0372924804688
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 27,
+      "detector_hypothesis": "laptop",
+      "detector_confidence": 0.5195102612177531,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.001026518391788,
+          "visible": true,
+          "bbox": [
+            677.34716796875,
+            135.32015991210938,
+            1127.0330810546875,
+            493.3385009765625
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.4012660393498715,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 8.201402908468777,
+          "visible": true,
+          "bbox": [
+            712.8922729492188,
+            49.173667907714844,
+            1118.98876953125,
+            356.33673095703125
+          ]
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_014",
+    "event_type": "interaction_candidate",
+    "signals": [
+      "disappearance_candidate",
+      "motion_coupling_candidate",
+      "relation_change"
+    ],
+    "start_time": 6.201060735671514,
+    "peak_time": 7.4012660393498715,
+    "end_time": 7.4012660393498715,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 6.001026518391788,
+        "visible_ids": [
+          11,
+          12,
+          20,
+          23,
+          25,
+          27
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 7.4012660393498715,
+        "visible_ids": [
+          11,
+          12,
+          20
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 8.201402908468777,
+        "visible_ids": [
+          11,
+          20,
+          27
+        ]
+      }
+    ]
+  }
+}

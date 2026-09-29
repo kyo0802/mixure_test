@@ -1,0 +1,13 @@
+pipeline_version: "2.9.2"
+video_ids: [test1, test2, test3, test4, test5, test6, test7, test8, test9]
+sampling_fps: 5
+dense_sampling: {max_fps: 15.0, policy: "native_rate_capped_at_15fps"}
+yolo: {model: "yolo11s.pt", checkpoint: "yolo11s.pt", confidence: 0.25, image_size: 960, device: 0}
+tracking: {implementation: "V2.1 local ByteTrack", source_config: "configs/default.yaml"}
+sam: {model: "SAM2.1", checkpoint: ".models/sam2.1_hiera_small.pt", config: "configs/sam2.1/sam2.1_hiera_s.yaml", step_frames: 6, trust_policy: "V292_UNIFIED_MASK_AUTHORIZATION_1"}
+appearance: {model: "MobileNetV3 Small", checkpoint: "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth", bank: "fresh target evidence only"}
+identity: {guard: "V2.6 Identity Guard", policy_version: "V292_IDENTITY_AUTH_1", appearance_threshold: 0.60, uniqueness_margin: 0.10}
+events: {policy_version: "V292_MULTI_EVENT_1", max_events: 3, window_seconds_each_side: 1.5}
+vlm: {model: ".models/Qwen2.5-VL-3B-Instruct", prompt_version: "V292_PAIR_OBSERVABLE_FACTS_1", max_pairs_per_event: 2, local_files_only: true}
+physical_gate: {version: "V29_RELATION_GATE_1", relations: [NEAR, ON, INSIDE, BEHIND, OCCLUDED_BY, HELD_BY]}
+memory: {schema_version: "V292_AUTHORITATIVE_EVENT_STORE_1", search_planner: "V2.8_FIVE_RULE_PRIORITY"}

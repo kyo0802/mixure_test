@@ -1,0 +1,3205 @@
+{
+  "video_id": "test4",
+  "episodes": [
+    {
+      "episode_id": "ME0001",
+      "memory_event_id": "CTX-E0001",
+      "video_id": "test4",
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "last_confirmed_time": 14.40246364414029,
+      "last_supported_frame": 432,
+      "last_supported_time": 14.40246364414029,
+      "source_event_id": "CTX-E0001",
+      "supporting_observation_ids": [
+        "test4:entity_0032:402:43",
+        "test4:entity_0032:408:44",
+        "test4:entity_0032:420:46",
+        "test4:entity_0032:426:47",
+        "test4:entity_0032:432:48",
+        "test4:phone_01:402:42",
+        "test4:phone_01:408:45",
+        "test4:phone_01:420:48",
+        "test4:phone_01:426:50",
+        "test4:phone_01:432:53"
+      ],
+      "status": "STALE",
+      "decision": "STABLE_CONTEXT",
+      "kind": "IMAGE_CONTEXT",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0032",
+      "source": [
+        "outputs_v292/test4/identity/entity_registry.json#P0001"
+      ],
+      "source_snapshots": [],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#P0001"
+      ]
+    },
+    {
+      "episode_id": "ME0002",
+      "memory_event_id": "CTX-E0003",
+      "video_id": "test4",
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "last_confirmed_time": 14.40246364414029,
+      "last_supported_frame": 432,
+      "last_supported_time": 14.40246364414029,
+      "source_event_id": "CTX-E0003",
+      "supporting_observation_ids": [
+        "test4:entity_0032:402:43",
+        "test4:entity_0032:408:44",
+        "test4:entity_0032:420:46",
+        "test4:entity_0032:432:48",
+        "test4:entity_0040:402:11",
+        "test4:entity_0040:408:12",
+        "test4:entity_0040:420:13",
+        "test4:entity_0040:432:14"
+      ],
+      "status": "STALE",
+      "decision": "STABLE_CONTEXT",
+      "kind": "IMAGE_CONTEXT",
+      "subject": "entity_0032",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0040",
+      "source": [
+        "outputs_v292/test4/identity/entity_registry.json#C0001"
+      ],
+      "source_snapshots": [],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#C0001"
+      ]
+    },
+    {
+      "episode_id": "ME0003",
+      "memory_event_id": "CTX-E0002",
+      "video_id": "test4",
+      "start_frame": 432,
+      "end_frame": 444,
+      "start_time": 14.40246364414029,
+      "last_confirmed_time": 14.802532078699743,
+      "last_supported_frame": 444,
+      "last_supported_time": 14.802532078699743,
+      "source_event_id": "CTX-E0002",
+      "supporting_observation_ids": [
+        "test4:entity_0041:432:6",
+        "test4:entity_0041:438:7",
+        "test4:entity_0041:444:8",
+        "test4:phone_01:432:53",
+        "test4:phone_01:438:56",
+        "test4:phone_01:444:59"
+      ],
+      "status": "STALE",
+      "decision": "STABLE_CONTEXT",
+      "kind": "IMAGE_CONTEXT",
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0041",
+      "source": [
+        "outputs_v292/test4/identity/entity_registry.json#P0002"
+      ],
+      "source_snapshots": [],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#P0002"
+      ]
+    }
+  ],
+  "schema": "v292_lifetime_memory_1",
+  "target": {
+    "entity_id": "phone_01",
+    "state": "UNOBSERVED",
+    "last_seen_time": 15.402634730538923
+  },
+  "entities": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0032",
+      "raw_label": "microwave",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0041",
+      "raw_label": "sports ball",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0040",
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 2,
+      "via_primary": "entity_0032"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "STATE-0000000",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 0,
+      "time": 0.0,
+      "end_frame": 0,
+      "end_time": 0.0,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000000",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000006",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 6,
+      "time": 0.20003421727972626,
+      "end_frame": 6,
+      "end_time": 0.20003421727972626,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000006",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000012",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 12,
+      "time": 0.4000684345594525,
+      "end_frame": 12,
+      "end_time": 0.4000684345594525,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000012",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000018",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 18,
+      "time": 0.6001026518391788,
+      "end_frame": 18,
+      "end_time": 0.6001026518391788,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000018",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000024",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 24,
+      "time": 0.800136869118905,
+      "end_frame": 24,
+      "end_time": 0.800136869118905,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000024",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000030",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 30,
+      "time": 1.0001710863986313,
+      "end_frame": 30,
+      "end_time": 1.0001710863986313,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000030",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000036",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 36,
+      "time": 1.2002053036783575,
+      "end_frame": 36,
+      "end_time": 1.2002053036783575,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000036",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000042",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 42,
+      "time": 1.4002395209580838,
+      "end_frame": 42,
+      "end_time": 1.4002395209580838,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000042",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000048",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 48,
+      "time": 1.60027373823781,
+      "end_frame": 48,
+      "end_time": 1.60027373823781,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000048",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000054",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 54,
+      "time": 1.8003079555175363,
+      "end_frame": 54,
+      "end_time": 1.8003079555175363,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000054",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000060",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 60,
+      "time": 2.0003421727972626,
+      "end_frame": 60,
+      "end_time": 2.0003421727972626,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000060",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000066",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 66,
+      "time": 2.200376390076989,
+      "end_frame": 66,
+      "end_time": 2.200376390076989,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000066",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000072",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 72,
+      "time": 2.400410607356715,
+      "end_frame": 72,
+      "end_time": 2.400410607356715,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000072",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000078",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 78,
+      "time": 2.6004448246364413,
+      "end_frame": 78,
+      "end_time": 2.6004448246364413,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000078",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000084",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 84,
+      "time": 2.8004790419161676,
+      "end_frame": 84,
+      "end_time": 2.8004790419161676,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000084",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000090",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 90,
+      "time": 3.000513259195894,
+      "end_frame": 90,
+      "end_time": 3.000513259195894,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000090",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000096",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 96,
+      "time": 3.20054747647562,
+      "end_frame": 96,
+      "end_time": 3.20054747647562,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000096",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000102",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 102,
+      "time": 3.4005816937553464,
+      "end_frame": 102,
+      "end_time": 3.4005816937553464,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000102",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000108",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 108,
+      "time": 3.6006159110350726,
+      "end_frame": 108,
+      "end_time": 3.6006159110350726,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000108",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000114",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 114,
+      "time": 3.800650128314799,
+      "end_frame": 114,
+      "end_time": 3.800650128314799,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000114",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000120",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 120,
+      "time": 4.000684345594525,
+      "end_frame": 120,
+      "end_time": 4.000684345594525,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000120",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000126",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 126,
+      "time": 4.200718562874251,
+      "end_frame": 126,
+      "end_time": 4.200718562874251,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000126",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000132",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 132,
+      "time": 4.400752780153978,
+      "end_frame": 132,
+      "end_time": 4.400752780153978,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000132",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000138",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 138,
+      "time": 4.600786997433704,
+      "end_frame": 138,
+      "end_time": 4.600786997433704,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000138",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000144",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 144,
+      "time": 4.80082121471343,
+      "end_frame": 144,
+      "end_time": 4.80082121471343,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000144",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000150",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 150,
+      "time": 5.000855431993156,
+      "end_frame": 150,
+      "end_time": 5.000855431993156,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000150",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000156",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 156,
+      "time": 5.200889649272883,
+      "end_frame": 156,
+      "end_time": 5.200889649272883,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000156",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000162",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 162,
+      "time": 5.400923866552609,
+      "end_frame": 162,
+      "end_time": 5.400923866552609,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000162",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000168",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 168,
+      "time": 5.600958083832335,
+      "end_frame": 168,
+      "end_time": 5.600958083832335,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000168",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000174",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 174,
+      "time": 5.800992301112061,
+      "end_frame": 174,
+      "end_time": 5.800992301112061,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000174",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000180",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 180,
+      "time": 6.001026518391788,
+      "end_frame": 180,
+      "end_time": 6.001026518391788,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000180",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000186",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 186,
+      "time": 6.201060735671514,
+      "end_frame": 186,
+      "end_time": 6.201060735671514,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000186",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000192",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 192,
+      "time": 6.40109495295124,
+      "end_frame": 192,
+      "end_time": 6.40109495295124,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000192",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000198",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 198,
+      "time": 6.6011291702309665,
+      "end_frame": 198,
+      "end_time": 6.6011291702309665,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000198",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000204",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 204,
+      "time": 6.801163387510693,
+      "end_frame": 204,
+      "end_time": 6.801163387510693,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000204",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000210",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 210,
+      "time": 7.001197604790419,
+      "end_frame": 210,
+      "end_time": 7.001197604790419,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000210",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000216",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 216,
+      "time": 7.201231822070145,
+      "end_frame": 216,
+      "end_time": 7.201231822070145,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000216",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000222",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 222,
+      "time": 7.4012660393498715,
+      "end_frame": 222,
+      "end_time": 7.4012660393498715,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000222",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000228",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 228,
+      "time": 7.601300256629598,
+      "end_frame": 228,
+      "end_time": 7.601300256629598,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000228",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000234",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 234,
+      "time": 7.801334473909324,
+      "end_frame": 234,
+      "end_time": 7.801334473909324,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000234",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000240",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 240,
+      "time": 8.00136869118905,
+      "end_frame": 240,
+      "end_time": 8.00136869118905,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000240",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000246",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 246,
+      "time": 8.201402908468777,
+      "end_frame": 246,
+      "end_time": 8.201402908468777,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000246",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000252",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 252,
+      "time": 8.401437125748503,
+      "end_frame": 252,
+      "end_time": 8.401437125748503,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000252",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000258",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 258,
+      "time": 8.60147134302823,
+      "end_frame": 258,
+      "end_time": 8.60147134302823,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000258",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000264",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 264,
+      "time": 8.801505560307955,
+      "end_frame": 264,
+      "end_time": 8.801505560307955,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000264",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000270",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 270,
+      "time": 9.001539777587682,
+      "end_frame": 270,
+      "end_time": 9.001539777587682,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000270",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000276",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 276,
+      "time": 9.201573994867408,
+      "end_frame": 276,
+      "end_time": 9.201573994867408,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000276",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000282",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 282,
+      "time": 9.401608212147135,
+      "end_frame": 282,
+      "end_time": 9.401608212147135,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000282",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000288",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 288,
+      "time": 9.60164242942686,
+      "end_frame": 288,
+      "end_time": 9.60164242942686,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000288",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000294",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 294,
+      "time": 9.801676646706587,
+      "end_frame": 294,
+      "end_time": 9.801676646706587,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000294",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000300",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 300,
+      "time": 10.001710863986313,
+      "end_frame": 300,
+      "end_time": 10.001710863986313,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000300",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000306",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 306,
+      "time": 10.20174508126604,
+      "end_frame": 306,
+      "end_time": 10.20174508126604,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000306",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000312",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 312,
+      "time": 10.401779298545765,
+      "end_frame": 312,
+      "end_time": 10.401779298545765,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000312",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000318",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 318,
+      "time": 10.601813515825492,
+      "end_frame": 318,
+      "end_time": 10.601813515825492,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000318",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000324",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 324,
+      "time": 10.801847733105218,
+      "end_frame": 324,
+      "end_time": 10.801847733105218,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000324",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000330",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 330,
+      "time": 11.001881950384945,
+      "end_frame": 330,
+      "end_time": 11.001881950384945,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000330",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000336",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 336,
+      "time": 11.20191616766467,
+      "end_frame": 336,
+      "end_time": 11.20191616766467,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000336",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000342",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 342,
+      "time": 11.401950384944397,
+      "end_frame": 342,
+      "end_time": 11.401950384944397,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000342",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000348",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 348,
+      "time": 11.601984602224123,
+      "end_frame": 348,
+      "end_time": 11.601984602224123,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000348",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000354",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 354,
+      "time": 11.80201881950385,
+      "end_frame": 354,
+      "end_time": 11.80201881950385,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000354",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000360",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 360,
+      "time": 12.002053036783575,
+      "end_frame": 360,
+      "end_time": 12.002053036783575,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000360",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000366",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 366,
+      "time": 12.202087254063303,
+      "end_frame": 366,
+      "end_time": 12.202087254063303,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000366",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000372",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 372,
+      "time": 12.402121471343028,
+      "end_frame": 372,
+      "end_time": 12.402121471343028,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000372",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000378",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 378,
+      "time": 12.602155688622755,
+      "end_frame": 378,
+      "end_time": 12.602155688622755,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000378",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000384",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 384,
+      "time": 12.80218990590248,
+      "end_frame": 384,
+      "end_time": 12.80218990590248,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000384",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000390",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 390,
+      "time": 13.002224123182208,
+      "end_frame": 390,
+      "end_time": 13.002224123182208,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000390",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000396",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 396,
+      "time": 13.202258340461933,
+      "end_frame": 396,
+      "end_time": 13.202258340461933,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000396",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000402",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 402,
+      "time": 13.40229255774166,
+      "end_frame": 402,
+      "end_time": 13.40229255774166,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000402",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000408",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 408,
+      "time": 13.602326775021385,
+      "end_frame": 408,
+      "end_time": 13.602326775021385,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000408",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000414",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 414,
+      "time": 13.802360992301113,
+      "end_frame": 414,
+      "end_time": 13.802360992301113,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000414",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000420",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 420,
+      "time": 14.002395209580838,
+      "end_frame": 420,
+      "end_time": 14.002395209580838,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000420",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000426",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 426,
+      "time": 14.202429426860565,
+      "end_frame": 426,
+      "end_time": 14.202429426860565,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000426",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "CTX-E0001",
+      "event_type": "IMAGE_CONTEXT_RELATION",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "end_time": 14.40246364414029,
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0032",
+      "decision": "STABLE_CONTEXT",
+      "status": "STALE",
+      "trusted": true,
+      "supporting_observation_ids": [
+        "test4:entity_0032:402:43",
+        "test4:entity_0032:408:44",
+        "test4:entity_0032:420:46",
+        "test4:entity_0032:426:47",
+        "test4:entity_0032:432:48",
+        "test4:phone_01:402:42",
+        "test4:phone_01:408:45",
+        "test4:phone_01:420:48",
+        "test4:phone_01:426:50",
+        "test4:phone_01:432:53"
+      ],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#P0001"
+      ],
+      "video_id": "test4"
+    },
+    {
+      "event_id": "CTX-E0003",
+      "event_type": "IMAGE_CONTEXT_RELATION",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "start_frame": 402,
+      "end_frame": 432,
+      "start_time": 13.40229255774166,
+      "end_time": 14.40246364414029,
+      "subject": "entity_0032",
+      "relation": "IMAGE_NEAR_CONTEXT",
+      "object": "entity_0040",
+      "decision": "STABLE_CONTEXT",
+      "status": "STALE",
+      "trusted": true,
+      "supporting_observation_ids": [
+        "test4:entity_0032:402:43",
+        "test4:entity_0032:408:44",
+        "test4:entity_0032:420:46",
+        "test4:entity_0032:432:48",
+        "test4:entity_0040:402:11",
+        "test4:entity_0040:408:12",
+        "test4:entity_0040:420:13",
+        "test4:entity_0040:432:14"
+      ],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#C0001"
+      ],
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000432",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 432,
+      "time": 14.40246364414029,
+      "end_frame": 432,
+      "end_time": 14.40246364414029,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000432",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000438",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 438,
+      "time": 14.602497861420018,
+      "end_frame": 438,
+      "end_time": 14.602497861420018,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000438",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "CTX-E0002",
+      "event_type": "IMAGE_CONTEXT_RELATION",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "start_frame": 432,
+      "end_frame": 444,
+      "start_time": 14.40246364414029,
+      "end_time": 14.802532078699743,
+      "subject": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "object": "entity_0041",
+      "decision": "STABLE_CONTEXT",
+      "status": "STALE",
+      "trusted": true,
+      "supporting_observation_ids": [
+        "test4:entity_0041:432:6",
+        "test4:entity_0041:438:7",
+        "test4:entity_0041:444:8",
+        "test4:phone_01:432:53",
+        "test4:phone_01:438:56",
+        "test4:phone_01:444:59"
+      ],
+      "provenance": [
+        "outputs_v292/test4/identity/entity_registry.json#P0002"
+      ],
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000444",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 444,
+      "time": 14.802532078699743,
+      "end_frame": 444,
+      "end_time": 14.802532078699743,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000444",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000450",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 450,
+      "time": 15.00256629597947,
+      "end_frame": 450,
+      "end_time": 15.00256629597947,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000450",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000456",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 456,
+      "time": 15.202600513259195,
+      "end_frame": 456,
+      "end_time": 15.202600513259195,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000456",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000462",
+      "event_type": "IDENTITY_VISIBLE",
+      "frame": 462,
+      "time": 15.402634730538923,
+      "end_frame": 462,
+      "end_time": 15.402634730538923,
+      "status": "VISIBLE",
+      "trusted": true,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000462",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000468",
+      "event_type": "IDENTITY_OBSERVED",
+      "frame": 468,
+      "time": 15.602668947818648,
+      "end_frame": 468,
+      "end_time": 15.602668947818648,
+      "status": "OBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000468",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000474",
+      "event_type": "IDENTITY_PROPAGATION_RESUMED",
+      "frame": 474,
+      "time": 15.802703165098375,
+      "end_frame": 474,
+      "end_time": 15.802703165098375,
+      "status": "PROPAGATION_RESUMED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000474",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000480",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 480,
+      "time": 16.0027373823781,
+      "end_frame": 480,
+      "end_time": 16.0027373823781,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000480",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000486",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 486,
+      "time": 16.202771599657826,
+      "end_frame": 486,
+      "end_time": 16.202771599657826,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000486",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000492",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 492,
+      "time": 16.402805816937555,
+      "end_frame": 492,
+      "end_time": 16.402805816937555,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000492",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000498",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 498,
+      "time": 16.60284003421728,
+      "end_frame": 498,
+      "end_time": 16.60284003421728,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000498",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000504",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 504,
+      "time": 16.802874251497006,
+      "end_frame": 504,
+      "end_time": 16.802874251497006,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000504",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000510",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 510,
+      "time": 17.00290846877673,
+      "end_frame": 510,
+      "end_time": 17.00290846877673,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000510",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000516",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 516,
+      "time": 17.20294268605646,
+      "end_frame": 516,
+      "end_time": 17.20294268605646,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000516",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000522",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 522,
+      "time": 17.402976903336185,
+      "end_frame": 522,
+      "end_time": 17.402976903336185,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000522",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000528",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 528,
+      "time": 17.60301112061591,
+      "end_frame": 528,
+      "end_time": 17.60301112061591,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000528",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000534",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 534,
+      "time": 17.803045337895636,
+      "end_frame": 534,
+      "end_time": 17.803045337895636,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000534",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000540",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 540,
+      "time": 18.003079555175365,
+      "end_frame": 540,
+      "end_time": 18.003079555175365,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000540",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000546",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 546,
+      "time": 18.20311377245509,
+      "end_frame": 546,
+      "end_time": 18.20311377245509,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000546",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000552",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 552,
+      "time": 18.403147989734816,
+      "end_frame": 552,
+      "end_time": 18.403147989734816,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000552",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000558",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 558,
+      "time": 18.60318220701454,
+      "end_frame": 558,
+      "end_time": 18.60318220701454,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000558",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000564",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 564,
+      "time": 18.80321642429427,
+      "end_frame": 564,
+      "end_time": 18.80321642429427,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000564",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000570",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 570,
+      "time": 19.003250641573995,
+      "end_frame": 570,
+      "end_time": 19.003250641573995,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000570",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000576",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 576,
+      "time": 19.20328485885372,
+      "end_frame": 576,
+      "end_time": 19.20328485885372,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000576",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000582",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 582,
+      "time": 19.403319076133446,
+      "end_frame": 582,
+      "end_time": 19.403319076133446,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000582",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000588",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 588,
+      "time": 19.603353293413175,
+      "end_frame": 588,
+      "end_time": 19.603353293413175,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000588",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000594",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 594,
+      "time": 19.8033875106929,
+      "end_frame": 594,
+      "end_time": 19.8033875106929,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000594",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000600",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 600,
+      "time": 20.003421727972626,
+      "end_frame": 600,
+      "end_time": 20.003421727972626,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000600",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000606",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 606,
+      "time": 20.20345594525235,
+      "end_frame": 606,
+      "end_time": 20.20345594525235,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000606",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000612",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 612,
+      "time": 20.40349016253208,
+      "end_frame": 612,
+      "end_time": 20.40349016253208,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000612",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000618",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 618,
+      "time": 20.603524379811805,
+      "end_frame": 618,
+      "end_time": 20.603524379811805,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000618",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000624",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 624,
+      "time": 20.80355859709153,
+      "end_frame": 624,
+      "end_time": 20.80355859709153,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000624",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000630",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 630,
+      "time": 21.003592814371256,
+      "end_frame": 630,
+      "end_time": 21.003592814371256,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000630",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000636",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 636,
+      "time": 21.203627031650985,
+      "end_frame": 636,
+      "end_time": 21.203627031650985,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000636",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000642",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 642,
+      "time": 21.40366124893071,
+      "end_frame": 642,
+      "end_time": 21.40366124893071,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000642",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000648",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 648,
+      "time": 21.603695466210436,
+      "end_frame": 648,
+      "end_time": 21.603695466210436,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000648",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000654",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 654,
+      "time": 21.80372968349016,
+      "end_frame": 654,
+      "end_time": 21.80372968349016,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000654",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000660",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 660,
+      "time": 22.00376390076989,
+      "end_frame": 660,
+      "end_time": 22.00376390076989,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000660",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000666",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 666,
+      "time": 22.203798118049615,
+      "end_frame": 666,
+      "end_time": 22.203798118049615,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000666",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000672",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 672,
+      "time": 22.40383233532934,
+      "end_frame": 672,
+      "end_time": 22.40383233532934,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000672",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000678",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 678,
+      "time": 22.603866552609066,
+      "end_frame": 678,
+      "end_time": 22.603866552609066,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000678",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000684",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 684,
+      "time": 22.803900769888795,
+      "end_frame": 684,
+      "end_time": 22.803900769888795,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000684",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000690",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 690,
+      "time": 23.00393498716852,
+      "end_frame": 690,
+      "end_time": 23.00393498716852,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000690",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000696",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 696,
+      "time": 23.203969204448246,
+      "end_frame": 696,
+      "end_time": 23.203969204448246,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000696",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000702",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 702,
+      "time": 23.40400342172797,
+      "end_frame": 702,
+      "end_time": 23.40400342172797,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000702",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000708",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 708,
+      "time": 23.6040376390077,
+      "end_frame": 708,
+      "end_time": 23.6040376390077,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000708",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000714",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 714,
+      "time": 23.804071856287425,
+      "end_frame": 714,
+      "end_time": 23.804071856287425,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000714",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000720",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 720,
+      "time": 24.00410607356715,
+      "end_frame": 720,
+      "end_time": 24.00410607356715,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000720",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000726",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 726,
+      "time": 24.204140290846876,
+      "end_frame": 726,
+      "end_time": 24.204140290846876,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000726",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000732",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 732,
+      "time": 24.404174508126605,
+      "end_frame": 732,
+      "end_time": 24.404174508126605,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000732",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000738",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 738,
+      "time": 24.60420872540633,
+      "end_frame": 738,
+      "end_time": 24.60420872540633,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000738",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000744",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 744,
+      "time": 24.804242942686056,
+      "end_frame": 744,
+      "end_time": 24.804242942686056,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000744",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000750",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 750,
+      "time": 25.00427715996578,
+      "end_frame": 750,
+      "end_time": 25.00427715996578,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000750",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000756",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 756,
+      "time": 25.20431137724551,
+      "end_frame": 756,
+      "end_time": 25.20431137724551,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000756",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000762",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 762,
+      "time": 25.404345594525235,
+      "end_frame": 762,
+      "end_time": 25.404345594525235,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000762",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000768",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 768,
+      "time": 25.60437981180496,
+      "end_frame": 768,
+      "end_time": 25.60437981180496,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000768",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000774",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 774,
+      "time": 25.804414029084686,
+      "end_frame": 774,
+      "end_time": 25.804414029084686,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000774",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000780",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 780,
+      "time": 26.004448246364415,
+      "end_frame": 780,
+      "end_time": 26.004448246364415,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000780",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000786",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 786,
+      "time": 26.20448246364414,
+      "end_frame": 786,
+      "end_time": 26.20448246364414,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000786",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000792",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 792,
+      "time": 26.404516680923866,
+      "end_frame": 792,
+      "end_time": 26.404516680923866,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000792",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000798",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 798,
+      "time": 26.60455089820359,
+      "end_frame": 798,
+      "end_time": 26.60455089820359,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000798",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000804",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 804,
+      "time": 26.80458511548332,
+      "end_frame": 804,
+      "end_time": 26.80458511548332,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000804",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000810",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 810,
+      "time": 27.004619332763045,
+      "end_frame": 810,
+      "end_time": 27.004619332763045,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000810",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000816",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 816,
+      "time": 27.20465355004277,
+      "end_frame": 816,
+      "end_time": 27.20465355004277,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000816",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000822",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 822,
+      "time": 27.404687767322496,
+      "end_frame": 822,
+      "end_time": 27.404687767322496,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000822",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000828",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 828,
+      "time": 27.604721984602225,
+      "end_frame": 828,
+      "end_time": 27.604721984602225,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000828",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000834",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 834,
+      "time": 27.80475620188195,
+      "end_frame": 834,
+      "end_time": 27.80475620188195,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000834",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000840",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 840,
+      "time": 28.004790419161676,
+      "end_frame": 840,
+      "end_time": 28.004790419161676,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000840",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000846",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 846,
+      "time": 28.2048246364414,
+      "end_frame": 846,
+      "end_time": 28.2048246364414,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000846",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000852",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 852,
+      "time": 28.40485885372113,
+      "end_frame": 852,
+      "end_time": 28.40485885372113,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000852",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000858",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 858,
+      "time": 28.604893071000856,
+      "end_frame": 858,
+      "end_time": 28.604893071000856,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000858",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000864",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 864,
+      "time": 28.80492728828058,
+      "end_frame": 864,
+      "end_time": 28.80492728828058,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000864",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000870",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 870,
+      "time": 29.004961505560306,
+      "end_frame": 870,
+      "end_time": 29.004961505560306,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000870",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000876",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 876,
+      "time": 29.204995722840035,
+      "end_frame": 876,
+      "end_time": 29.204995722840035,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000876",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000882",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 882,
+      "time": 29.40502994011976,
+      "end_frame": 882,
+      "end_time": 29.40502994011976,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000882",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000888",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 888,
+      "time": 29.605064157399486,
+      "end_frame": 888,
+      "end_time": 29.605064157399486,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000888",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000894",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 894,
+      "time": 29.80509837467921,
+      "end_frame": 894,
+      "end_time": 29.80509837467921,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000894",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000900",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 900,
+      "time": 30.00513259195894,
+      "end_frame": 900,
+      "end_time": 30.00513259195894,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000900",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000906",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 906,
+      "time": 30.205166809238666,
+      "end_frame": 906,
+      "end_time": 30.205166809238666,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000906",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000912",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 912,
+      "time": 30.40520102651839,
+      "end_frame": 912,
+      "end_time": 30.40520102651839,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000912",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000918",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 918,
+      "time": 30.605235243798116,
+      "end_frame": 918,
+      "end_time": 30.605235243798116,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000918",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000924",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 924,
+      "time": 30.805269461077845,
+      "end_frame": 924,
+      "end_time": 30.805269461077845,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000924",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000930",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 930,
+      "time": 31.00530367835757,
+      "end_frame": 930,
+      "end_time": 31.00530367835757,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000930",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000936",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 936,
+      "time": 31.205337895637296,
+      "end_frame": 936,
+      "end_time": 31.205337895637296,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000936",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000942",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 942,
+      "time": 31.40537211291702,
+      "end_frame": 942,
+      "end_time": 31.40537211291702,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000942",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000948",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 948,
+      "time": 31.60540633019675,
+      "end_frame": 948,
+      "end_time": 31.60540633019675,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000948",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000954",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 954,
+      "time": 31.805440547476476,
+      "end_frame": 954,
+      "end_time": 31.805440547476476,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000954",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000960",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 960,
+      "time": 32.0054747647562,
+      "end_frame": 960,
+      "end_time": 32.0054747647562,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000960",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000966",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 966,
+      "time": 32.20550898203593,
+      "end_frame": 966,
+      "end_time": 32.20550898203593,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000966",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000972",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 972,
+      "time": 32.40554319931565,
+      "end_frame": 972,
+      "end_time": 32.40554319931565,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000972",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000978",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 978,
+      "time": 32.60557741659538,
+      "end_frame": 978,
+      "end_time": 32.60557741659538,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000978",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000984",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 984,
+      "time": 32.80561163387511,
+      "end_frame": 984,
+      "end_time": 32.80561163387511,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000984",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000990",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 990,
+      "time": 33.00564585115483,
+      "end_frame": 990,
+      "end_time": 33.00564585115483,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000990",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0000996",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 996,
+      "time": 33.20568006843456,
+      "end_frame": 996,
+      "end_time": 33.20568006843456,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0000996",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001002",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1002,
+      "time": 33.40571428571428,
+      "end_frame": 1002,
+      "end_time": 33.40571428571428,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001002",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001008",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1008,
+      "time": 33.60574850299401,
+      "end_frame": 1008,
+      "end_time": 33.60574850299401,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001008",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001014",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1014,
+      "time": 33.80578272027374,
+      "end_frame": 1014,
+      "end_time": 33.80578272027374,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001014",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001020",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1020,
+      "time": 34.00581693755346,
+      "end_frame": 1020,
+      "end_time": 34.00581693755346,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001020",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001026",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1026,
+      "time": 34.20585115483319,
+      "end_frame": 1026,
+      "end_time": 34.20585115483319,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001026",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001032",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1032,
+      "time": 34.40588537211292,
+      "end_frame": 1032,
+      "end_time": 34.40588537211292,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001032",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001038",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1038,
+      "time": 34.60591958939264,
+      "end_frame": 1038,
+      "end_time": 34.60591958939264,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001038",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001044",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1044,
+      "time": 34.80595380667237,
+      "end_frame": 1044,
+      "end_time": 34.80595380667237,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001044",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001050",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1050,
+      "time": 35.00598802395209,
+      "end_frame": 1050,
+      "end_time": 35.00598802395209,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001050",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001056",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1056,
+      "time": 35.20602224123182,
+      "end_frame": 1056,
+      "end_time": 35.20602224123182,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001056",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001062",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1062,
+      "time": 35.40605645851155,
+      "end_frame": 1062,
+      "end_time": 35.40605645851155,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001062",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001068",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1068,
+      "time": 35.60609067579127,
+      "end_frame": 1068,
+      "end_time": 35.60609067579127,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001068",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001074",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1074,
+      "time": 35.806124893071,
+      "end_frame": 1074,
+      "end_time": 35.806124893071,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001074",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001080",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1080,
+      "time": 36.00615911035073,
+      "end_frame": 1080,
+      "end_time": 36.00615911035073,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001080",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001086",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1086,
+      "time": 36.20619332763045,
+      "end_frame": 1086,
+      "end_time": 36.20619332763045,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001086",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001092",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1092,
+      "time": 36.40622754491018,
+      "end_frame": 1092,
+      "end_time": 36.40622754491018,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001092",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001098",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1098,
+      "time": 36.6062617621899,
+      "end_frame": 1098,
+      "end_time": 36.6062617621899,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001098",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001104",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1104,
+      "time": 36.80629597946963,
+      "end_frame": 1104,
+      "end_time": 36.80629597946963,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001104",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001110",
+      "event_type": "IDENTITY_AMBIGUOUS",
+      "frame": 1110,
+      "time": 37.00633019674936,
+      "end_frame": 1110,
+      "end_time": 37.00633019674936,
+      "status": "AMBIGUOUS",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001110",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001116",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1116,
+      "time": 37.20636441402908,
+      "end_frame": 1116,
+      "end_time": 37.20636441402908,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001116",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001122",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1122,
+      "time": 37.40639863130881,
+      "end_frame": 1122,
+      "end_time": 37.40639863130881,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001122",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001128",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1128,
+      "time": 37.60643284858854,
+      "end_frame": 1128,
+      "end_time": 37.60643284858854,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001128",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001134",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1134,
+      "time": 37.80646706586826,
+      "end_frame": 1134,
+      "end_time": 37.80646706586826,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001134",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001140",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1140,
+      "time": 38.00650128314799,
+      "end_frame": 1140,
+      "end_time": 38.00650128314799,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001140",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001146",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1146,
+      "time": 38.20653550042771,
+      "end_frame": 1146,
+      "end_time": 38.20653550042771,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001146",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001152",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1152,
+      "time": 38.40656971770744,
+      "end_frame": 1152,
+      "end_time": 38.40656971770744,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001152",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001158",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1158,
+      "time": 38.60660393498717,
+      "end_frame": 1158,
+      "end_time": 38.60660393498717,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001158",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001164",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1164,
+      "time": 38.80663815226689,
+      "end_frame": 1164,
+      "end_time": 38.80663815226689,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001164",
+      "video_id": "test4"
+    },
+    {
+      "event_id": "STATE-0001168",
+      "event_type": "IDENTITY_UNOBSERVED",
+      "frame": 1168,
+      "time": 38.939994297120045,
+      "end_frame": 1168,
+      "end_time": 38.939994297120045,
+      "status": "UNOBSERVED",
+      "trusted": false,
+      "provenance": [
+        "fresh_v2.6_identity_timeline"
+      ],
+      "source_event_id": "ID-0001168",
+      "video_id": "test4"
+    }
+  ],
+  "last_trusted_local_subgraph": {
+    "nodes": [
+      {
+        "entity_id": "phone_01",
+        "raw_label": "cell phone",
+        "semantic_roles": [
+          "TARGET"
+        ],
+        "hop": 0,
+        "via_primary": null
+      }
+    ],
+    "edges": [],
+    "connected": true
+  },
+  "interpretation": "Canonical event store; candidates remain explicitly unconfirmed"
+}

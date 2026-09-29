@@ -1,0 +1,93 @@
+{
+  "event_id": "evt_017",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 8.804095139607032,
+  "peak_time": 10.60493278179938,
+  "end_time": 12.605398138572907,
+  "involved_track_ids": [
+    17,
+    24,
+    25,
+    32,
+    35,
+    37,
+    40
+  ],
+  "signals": [
+    "appearance",
+    "disappearance_candidate",
+    "motion_coupling_candidate",
+    "proximity_change",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "last_visible": 11.605398138572907,
+      "next_visible_or_video_end": 32.248333333333335,
+      "absence_seconds": 20.642935194760426,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "last_visible": 11.605398138572907,
+      "next_visible_or_video_end": 32.248333333333335,
+      "absence_seconds": 20.642935194760426,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "last_visible": 11.405305067218201,
+      "next_visible_or_video_end": 13.406235780765254,
+      "absence_seconds": 2.000930713547053,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "last_visible": 11.405305067218201,
+      "next_visible_or_video_end": 32.248333333333335,
+      "absence_seconds": 20.843028266115134,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "from_nearest_track": 25,
+      "to_nearest_track": 40,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "from_nearest_track": 25,
+      "to_nearest_track": 37,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "cosine_similarity": 0.9932438314221204,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "distance_change": -0.1412831625244863,
+      "direction": "separating",
+      "image_relative": true
+    },
+    {
+      "persistence_observations": 10,
+      "not_semantic_identity": true
+    },
+    {
+      "from_nearest_track": 32,
+      "to_nearest_track": 40,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "persistence_observations": 24,
+      "not_semantic_identity": true
+    },
+    {
+      "last_visible": 8.804095139607032,
+      "next_visible_or_video_end": 32.248333333333335,
+      "absence_seconds": 23.444238193726303,
+      "interpretation": "undetected, not lost or moved"
+    }
+  ],
+  "confidence": 0.8607611349400353,
+  "priority": 5.416498160362243,
+  "selected": true,
+  "skip_reason": null
+}

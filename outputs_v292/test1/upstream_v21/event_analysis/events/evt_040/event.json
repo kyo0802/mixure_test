@@ -1,0 +1,51 @@
+{
+  "event_id": "evt_040",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 23.41088934850052,
+  "peak_time": 25.41182006204757,
+  "end_time": 25.41182006204757,
+  "involved_track_ids": [
+    68,
+    69,
+    70,
+    71
+  ],
+  "signals": [
+    "appearance",
+    "motion_coupling_candidate",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "from_nearest_track": 69,
+      "to_nearest_track": 71,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "persistence_observations": 17,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 20,
+      "not_semantic_identity": true
+    },
+    {
+      "cosine_similarity": 0.9933674314486234,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "persistence_observations": 13,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 13,
+      "not_semantic_identity": true
+    }
+  ],
+  "confidence": 0.9189723204163944,
+  "priority": 3.3277709757343974,
+  "selected": true,
+  "skip_reason": null
+}

@@ -1,0 +1,162 @@
+{
+  "$defs": {
+    "VLMEntity": {
+      "additionalProperties": false,
+      "properties": {
+        "track_id": {
+          "minimum": 1,
+          "title": "Track Id",
+          "type": "integer"
+        },
+        "semantic_class": {
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Semantic Class",
+          "type": "string"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "attributes": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Attributes",
+          "type": "object"
+        }
+      },
+      "required": [
+        "track_id",
+        "semantic_class",
+        "confidence"
+      ],
+      "title": "VLMEntity",
+      "type": "object"
+    },
+    "VLMRelation": {
+      "additionalProperties": false,
+      "properties": {
+        "subject_track_id": {
+          "minimum": 1,
+          "title": "Subject Track Id",
+          "type": "integer"
+        },
+        "predicate": {
+          "enum": [
+            "LEFT_OF",
+            "RIGHT_OF",
+            "ABOVE",
+            "BELOW",
+            "NEAR",
+            "OVERLAPPING",
+            "ON",
+            "INSIDE",
+            "HOLDING",
+            "PICKING_UP",
+            "PUTTING_DOWN",
+            "CARRYING",
+            "TOUCHING",
+            "VISIBLE",
+            "PARTIALLY_OCCLUDED",
+            "UNKNOWN"
+          ],
+          "title": "Predicate",
+          "type": "string"
+        },
+        "object_track_id": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Object Track Id"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "temporal_phase": {
+          "enum": [
+            "before",
+            "during",
+            "after",
+            "persistent",
+            "transition"
+          ],
+          "title": "Temporal Phase",
+          "type": "string"
+        },
+        "explanation": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Explanation"
+        }
+      },
+      "required": [
+        "subject_track_id",
+        "predicate",
+        "confidence",
+        "temporal_phase"
+      ],
+      "title": "VLMRelation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "event_id": {
+      "title": "Event Id",
+      "type": "string"
+    },
+    "entities": {
+      "items": {
+        "$ref": "#/$defs/VLMEntity"
+      },
+      "title": "Entities",
+      "type": "array"
+    },
+    "relations": {
+      "items": {
+        "$ref": "#/$defs/VLMRelation"
+      },
+      "title": "Relations",
+      "type": "array"
+    },
+    "summary": {
+      "anyOf": [
+        {
+          "maxLength": 1000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Summary"
+    }
+  },
+  "required": [
+    "event_id"
+  ],
+  "title": "VLMSceneGraphResult",
+  "type": "object"
+}

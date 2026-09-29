@@ -1,0 +1,4922 @@
+{
+  "schema": "v29_dense_window_1",
+  "task": "test2",
+  "event_id": "test2-V292E01",
+  "source_video": "test2.mp4",
+  "sampling": {
+    "native_fps": 29.988640666414238,
+    "processed_frames": 46,
+    "start_frame": 309,
+    "end_frame": 399,
+    "requested_start_frame": 309,
+    "requested_end_frame": 399,
+    "requested_interval_fully_covered": true
+  },
+  "seed": "segmentation/masks/target_full/f000324.png",
+  "sam_status": "PROPAGATED",
+  "rows": [
+    {
+      "frame": 309,
+      "time": 10.303901515151514,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            303.33782958984375,
+            215.94284057617188,
+            471.564697265625,
+            395.13995361328125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            628.9013671875,
+            465.54632568359375,
+            951.9752807617188,
+            712.302490234375
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            220.6949920654297,
+            80.65492248535156,
+            332.873779296875,
+            164.77452087402344
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 6,
+      "provenance": {
+        "video_frame": 309,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            303.33782958984375,
+            215.94284057617188,
+            471.564697265625,
+            395.13995361328125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            628.9013671875,
+            465.54632568359375,
+            951.9752807617188,
+            712.302490234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            220.6949920654297,
+            80.65492248535156,
+            332.873779296875,
+            164.77452087402344
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 311,
+      "time": 10.370593434343434,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.21377058327198029,
+          "bbox": [
+            629.1290893554688,
+            479.9781494140625,
+            688.1590576171875,
+            540.4373779296875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.21377058327198029,
+          "bbox": [
+            629.1290893554688,
+            479.9781494140625,
+            688.1590576171875,
+            540.4373779296875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            307.32965087890625,
+            212.2953338623047,
+            474.93255615234375,
+            393.130615234375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            641.7589721679688,
+            462.970703125,
+            978.8748779296875,
+            712.16357421875
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            225.47897338867188,
+            75.5094223022461,
+            342.24517822265625,
+            159.24545288085938
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 311,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            307.32965087890625,
+            212.2953338623047,
+            474.93255615234375,
+            393.130615234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            641.7589721679688,
+            462.970703125,
+            978.8748779296875,
+            712.16357421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            225.47897338867188,
+            75.5094223022461,
+            342.24517822265625,
+            159.24545288085938
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 313,
+      "time": 10.437285353535353,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.35192179679870605,
+          "bbox": [
+            637.021484375,
+            488.29345703125,
+            702.8828125,
+            550.9655151367188
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.35192179679870605,
+          "bbox": [
+            637.021484375,
+            488.29345703125,
+            702.8828125,
+            550.9655151367188
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            310.4421081542969,
+            208.41171264648438,
+            479.4112548828125,
+            390.5799255371094
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            649.6080322265625,
+            462.4666442871094,
+            992.7313842773438,
+            711.4308471679688
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            228.97640991210938,
+            69.96844482421875,
+            342.14984130859375,
+            152.09165954589844
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 6,
+      "provenance": {
+        "video_frame": 313,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            310.4421081542969,
+            208.41171264648438,
+            479.4112548828125,
+            390.5799255371094
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            649.6080322265625,
+            462.4666442871094,
+            992.7313842773438,
+            711.4308471679688
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            228.97640991210938,
+            69.96844482421875,
+            342.14984130859375,
+            152.09165954589844
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 315,
+      "time": 10.503977272727273,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.222589373588562,
+          "bbox": [
+            643.4459838867188,
+            496.7552185058594,
+            791.3414916992188,
+            646.0094604492188
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2142043262720108,
+          "bbox": [
+            644.1588745117188,
+            496.675048828125,
+            718.2015991210938,
+            560.4482421875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.222589373588562,
+          "bbox": [
+            643.4459838867188,
+            496.7552185058594,
+            791.3414916992188,
+            646.0094604492188
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2142043262720108,
+          "bbox": [
+            644.1588745117188,
+            496.675048828125,
+            718.2015991210938,
+            560.4482421875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            315.7586975097656,
+            202.9833984375,
+            485.804931640625,
+            385.7608337402344
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            650.5623779296875,
+            468.164794921875,
+            1008.1818237304688,
+            711.8961181640625
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            234.0520477294922,
+            64.69596862792969,
+            349.6192626953125,
+            150.036376953125
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 315,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            315.7586975097656,
+            202.9833984375,
+            485.804931640625,
+            385.7608337402344
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            650.5623779296875,
+            468.164794921875,
+            1008.1818237304688,
+            711.8961181640625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            234.0520477294922,
+            64.69596862792969,
+            349.6192626953125,
+            150.036376953125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 317,
+      "time": 10.570669191919192,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.20138557255268097,
+          "bbox": [
+            689.7560424804688,
+            605.9445190429688,
+            793.35986328125,
+            667.73486328125
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.20138557255268097,
+          "bbox": [
+            689.7560424804688,
+            605.9445190429688,
+            793.35986328125,
+            667.73486328125
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            320.6507568359375,
+            198.1832275390625,
+            491.4240417480469,
+            382.6099548339844
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            649.883544921875,
+            468.6851501464844,
+            991.902587890625,
+            711.552734375
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            239.37936401367188,
+            56.20890808105469,
+            353.33148193359375,
+            143.6363983154297
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 317,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            320.6507568359375,
+            198.1832275390625,
+            491.4240417480469,
+            382.6099548339844
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            649.883544921875,
+            468.6851501464844,
+            991.902587890625,
+            711.552734375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            239.37936401367188,
+            56.20890808105469,
+            353.33148193359375,
+            143.6363983154297
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 319,
+      "time": 10.637361111111112,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            325.60015869140625,
+            191.8960418701172,
+            495.93206787109375,
+            379.10931396484375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            645.4595947265625,
+            469.31640625,
+            987.5385131835938,
+            711.543212890625
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            241.058837890625,
+            42.85935592651367,
+            358.22796630859375,
+            122.65690612792969
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 319,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            325.60015869140625,
+            191.8960418701172,
+            495.93206787109375,
+            379.10931396484375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            645.4595947265625,
+            469.31640625,
+            987.5385131835938,
+            711.543212890625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            241.058837890625,
+            42.85935592651367,
+            358.22796630859375,
+            122.65690612792969
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 321,
+      "time": 10.70405303030303,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16521725058555603,
+          "bbox": [
+            618.857421875,
+            510.507080078125,
+            717.962158203125,
+            594.6871337890625
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16521725058555603,
+          "bbox": [
+            618.857421875,
+            510.507080078125,
+            717.962158203125,
+            594.6871337890625
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            333.2940673828125,
+            187.1741180419922,
+            506.53985595703125,
+            375.35162353515625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            636.7811279296875,
+            479.8609313964844,
+            1278.8031005859375,
+            714.3405151367188
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            248.38900756835938,
+            34.8881950378418,
+            369.2996520996094,
+            124.42683410644531
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 321,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            333.2940673828125,
+            187.1741180419922,
+            506.53985595703125,
+            375.35162353515625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            636.7811279296875,
+            479.8609313964844,
+            1278.8031005859375,
+            714.3405151367188
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            248.38900756835938,
+            34.8881950378418,
+            369.2996520996094,
+            124.42683410644531
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 323,
+      "time": 10.770744949494949,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.33572718501091003,
+          "bbox": [
+            598.3487548828125,
+            530.503662109375,
+            720.7938232421875,
+            606.8339233398438
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.32838889956474304,
+          "bbox": [
+            598.1826171875,
+            529.3944091796875,
+            728.0462646484375,
+            708.9725341796875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.33572718501091003,
+          "bbox": [
+            598.3487548828125,
+            530.503662109375,
+            720.7938232421875,
+            606.8339233398438
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.32838889956474304,
+          "bbox": [
+            598.1826171875,
+            529.3944091796875,
+            728.0462646484375,
+            708.9725341796875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": {
+        "frame": 323,
+        "bbox": [
+          600,
+          532,
+          788,
+          720
+        ],
+        "area": 9678,
+        "center": [
+          674.9141351518908,
+          619.6473444926638
+        ],
+        "trusted": true,
+        "identity_authorization": "FROZEN_SHORT_CONTINUITY",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": null,
+          "bbox_area_ratio": null,
+          "centroid_displacement": null,
+          "max_yolo_iou": 0.6293932055668116,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            347.6128845214844,
+            185.791748046875,
+            521.759521484375,
+            373.973876953125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            622.390625,
+            524.416748046875,
+            924.4202880859375,
+            716.1754150390625
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            269.1890869140625,
+            44.039886474609375,
+            385.7809753417969,
+            120.19932556152344
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 323,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            347.6128845214844,
+            185.791748046875,
+            521.759521484375,
+            373.973876953125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            622.390625,
+            524.416748046875,
+            924.4202880859375,
+            716.1754150390625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0048",
+          "anchor_key": "test2::test2-V292E01::entity_0048",
+          "bbox": [
+            269.1890869140625,
+            44.039886474609375,
+            385.7809753417969,
+            120.19932556152344
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0048",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 325,
+      "time": 10.837436868686869,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.5530090928077698,
+          "bbox": [
+            592.7376708984375,
+            552.5526733398438,
+            727.6417846679688,
+            717.8643798828125
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.1855691373348236,
+          "bbox": [
+            591.3969116210938,
+            551.6982421875,
+            650.5355224609375,
+            627.3668823242188
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.5530090928077698,
+          "bbox": [
+            592.7376708984375,
+            552.5526733398438,
+            727.6417846679688,
+            717.8643798828125
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.1855691373348236,
+          "bbox": [
+            591.3969116210938,
+            551.6982421875,
+            650.5355224609375,
+            627.3668823242188
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": {
+        "frame": 325,
+        "bbox": [
+          592,
+          553,
+          734,
+          720
+        ],
+        "area": 4101,
+        "center": [
+          660.7715191416728,
+          649.033650329188
+        ],
+        "trusted": true,
+        "identity_authorization": "FROZEN_SHORT_CONTINUITY",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 0.4237445753254805,
+          "bbox_area_ratio": 0.670948392937981,
+          "centroid_displacement": 32.61239884354129,
+          "max_yolo_iou": 0.935499250617856,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            372.4951171875,
+            188.1888885498047,
+            544.5941162109375,
+            377.2427978515625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            621.1854248046875,
+            405.3306579589844,
+            1279.0106201171875,
+            715.837646484375
+          ],
+          "label": "person",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 325,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            372.4951171875,
+            188.1888885498047,
+            544.5941162109375,
+            377.2427978515625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            621.1854248046875,
+            405.3306579589844,
+            1279.0106201171875,
+            715.837646484375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 327,
+      "time": 10.904128787878788,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.7831355929374695,
+          "bbox": [
+            592.4376220703125,
+            583.17236328125,
+            712.7291259765625,
+            720.0
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.7831355929374695,
+          "bbox": [
+            592.4376220703125,
+            583.17236328125,
+            712.7291259765625,
+            720.0
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": {
+        "frame": 327,
+        "bbox": [
+          592,
+          584,
+          719,
+          720
+        ],
+        "area": 6740,
+        "center": [
+          637.0784866468842,
+          664.6290801186943
+        ],
+        "trusted": true,
+        "identity_authorization": "FROZEN_SHORT_CONTINUITY",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 1.6435015849792733,
+          "bbox_area_ratio": 0.7283461246521042,
+          "centroid_displacement": 28.36507040566842,
+          "max_yolo_iou": 0.9417488544311085,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            400.09051513671875,
+            195.5498504638672,
+            569.7529296875,
+            381.87396240234375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            618.6444702148438,
+            493.0091247558594,
+            1275.3116455078125,
+            716.9146728515625
+          ],
+          "label": "person",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 327,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            400.09051513671875,
+            195.5498504638672,
+            569.7529296875,
+            381.87396240234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0055",
+          "anchor_key": "test2::test2-V292E01::entity_0055",
+          "bbox": [
+            618.6444702148438,
+            493.0091247558594,
+            1275.3116455078125,
+            716.9146728515625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0055",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 329,
+      "time": 10.970820707070708,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.22224417328834534,
+          "bbox": [
+            579.0192260742188,
+            617.5224609375,
+            663.0363159179688,
+            718.9208984375
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.22224417328834534,
+          "bbox": [
+            579.0192260742188,
+            617.5224609375,
+            663.0363159179688,
+            718.9208984375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": {
+        "frame": 329,
+        "bbox": [
+          579,
+          618,
+          673,
+          720
+        ],
+        "area": 5876,
+        "center": [
+          615.6928182437032,
+          676.996255956433
+        ],
+        "trusted": true,
+        "identity_authorization": "FROZEN_SHORT_CONTINUITY",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 0.8718100890207715,
+          "bbox_area_ratio": 0.5551181102362205,
+          "centroid_displacement": 24.704126198923984,
+          "max_yolo_iou": 0.8806577941432856,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            420.087158203125,
+            199.6066131591797,
+            588.0692138671875,
+            386.7452087402344
+          ],
+          "label": "refrigerator",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 329,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0057",
+          "anchor_key": "test2::test2-V292E01::entity_0057",
+          "bbox": [
+            420.087158203125,
+            199.6066131591797,
+            588.0692138671875,
+            386.7452087402344
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0057",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 331,
+      "time": 11.037512626262625,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": {
+        "frame": 331,
+        "bbox": [
+          576,
+          679,
+          638,
+          720
+        ],
+        "area": 1696,
+        "center": [
+          605.1420990566038,
+          702.8997641509434
+        ],
+        "trusted": true,
+        "identity_authorization": "FROZEN_SHORT_CONTINUITY",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 0.28863172226004086,
+          "bbox_area_ratio": 0.26512307050479766,
+          "centroid_displacement": 27.969794639004707,
+          "max_yolo_iou": null,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 331,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 333,
+      "time": 11.104204545454545,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 333,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 335,
+      "time": 11.170896464646464,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 335,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 337,
+      "time": 11.237588383838384,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            803.7244873046875,
+            336.5289001464844,
+            1026.447509765625,
+            465.160888671875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            143.3492431640625,
+            243.20046997070312,
+            486.74871826171875,
+            661.333740234375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 337,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            803.7244873046875,
+            336.5289001464844,
+            1026.447509765625,
+            465.160888671875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            143.3492431640625,
+            243.20046997070312,
+            486.74871826171875,
+            661.333740234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 339,
+      "time": 11.304280303030303,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            788.9310302734375,
+            341.04010009765625,
+            1061.052734375,
+            550.301513671875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            572.9496459960938,
+            154.09600830078125,
+            732.033935546875,
+            258.7745361328125
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            93.45890808105469,
+            79.72273254394531,
+            246.5271453857422,
+            277.75103759765625
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            194.91357421875,
+            220.52621459960938,
+            515.5299072265625,
+            657.2308959960938
+          ],
+          "label": "refrigerator",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 339,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            788.9310302734375,
+            341.04010009765625,
+            1061.052734375,
+            550.301513671875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            572.9496459960938,
+            154.09600830078125,
+            732.033935546875,
+            258.7745361328125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            93.45890808105469,
+            79.72273254394531,
+            246.5271453857422,
+            277.75103759765625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            194.91357421875,
+            220.52621459960938,
+            515.5299072265625,
+            657.2308959960938
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 341,
+      "time": 11.370972222222221,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            811.1522216796875,
+            344.90057373046875,
+            1100.33935546875,
+            703.1025390625
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            766.2091674804688,
+            195.8037567138672,
+            1004.8714599609375,
+            477.360595703125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            595.0216064453125,
+            152.0665740966797,
+            754.883544921875,
+            260.61920166015625
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            135.32369995117188,
+            56.02903366088867,
+            274.813232421875,
+            279.1682434082031
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            231.986572265625,
+            300.5634765625,
+            540.2033081054688,
+            653.7601928710938
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            543.2933349609375,
+            98.6165771484375,
+            642.4332885742188,
+            168.8527069091797
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            581.4308471679688,
+            228.7356414794922,
+            745.8861694335938,
+            407.36529541015625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            53.990379333496094,
+            531.6896362304688,
+            261.38421630859375,
+            714.7376708984375
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 8,
+      "provenance": {
+        "video_frame": 341,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            811.1522216796875,
+            344.90057373046875,
+            1100.33935546875,
+            703.1025390625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            766.2091674804688,
+            195.8037567138672,
+            1004.8714599609375,
+            477.360595703125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            595.0216064453125,
+            152.0665740966797,
+            754.883544921875,
+            260.61920166015625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            135.32369995117188,
+            56.02903366088867,
+            274.813232421875,
+            279.1682434082031
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            231.986572265625,
+            300.5634765625,
+            540.2033081054688,
+            653.7601928710938
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            543.2933349609375,
+            98.6165771484375,
+            642.4332885742188,
+            168.8527069091797
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            581.4308471679688,
+            228.7356414794922,
+            745.8861694335938,
+            407.36529541015625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            53.990379333496094,
+            531.6896362304688,
+            261.38421630859375,
+            714.7376708984375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 343,
+      "time": 11.43766414141414,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            832.6329956054688,
+            347.1382751464844,
+            1129.677978515625,
+            558.9534912109375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            781.0177612304688,
+            195.7775115966797,
+            1028.01318359375,
+            478.12322998046875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            612.3274536132812,
+            153.7705078125,
+            773.5810546875,
+            261.3877868652344
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            163.81399536132812,
+            63.093833923339844,
+            300.00360107421875,
+            281.3984375
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            258.577392578125,
+            319.8138427734375,
+            557.8051147460938,
+            652.6923828125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            559.8885498046875,
+            94.36479187011719,
+            658.8068237304688,
+            170.9401092529297
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            87.45654296875,
+            531.0353393554688,
+            286.2777099609375,
+            711.0672607421875
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 7,
+      "provenance": {
+        "video_frame": 343,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            832.6329956054688,
+            347.1382751464844,
+            1129.677978515625,
+            558.9534912109375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            781.0177612304688,
+            195.7775115966797,
+            1028.01318359375,
+            478.12322998046875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            612.3274536132812,
+            153.7705078125,
+            773.5810546875,
+            261.3877868652344
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            163.81399536132812,
+            63.093833923339844,
+            300.00360107421875,
+            281.3984375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            258.577392578125,
+            319.8138427734375,
+            557.8051147460938,
+            652.6923828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            559.8885498046875,
+            94.36479187011719,
+            658.8068237304688,
+            170.9401092529297
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            87.45654296875,
+            531.0353393554688,
+            286.2777099609375,
+            711.0672607421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 345,
+      "time": 11.50435606060606,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": {
+        "frame": 345,
+        "bbox": [
+          653,
+          704,
+          698,
+          720
+        ],
+        "area": 479,
+        "center": [
+          677.866388308977,
+          713.2567849686848
+        ],
+        "trusted": false,
+        "identity_authorization": "UNAUTHORIZED_LONG_GAP",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": null,
+          "bbox_area_ratio": null,
+          "centroid_displacement": null,
+          "max_yolo_iou": null,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            904.4990234375,
+            351.76458740234375,
+            1151.654296875,
+            519.4893798828125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            797.1705322265625,
+            195.64633178710938,
+            1046.17626953125,
+            482.24017333984375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            624.945068359375,
+            153.98532104492188,
+            785.556640625,
+            262.015625
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            181.7554168701172,
+            66.67234802246094,
+            314.6281433105469,
+            283.533447265625
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            268.968994140625,
+            255.07894897460938,
+            570.7206420898438,
+            655.051513671875
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            572.221923828125,
+            96.63555908203125,
+            674.1015625,
+            171.44107055664062
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            610.2733764648438,
+            227.0802001953125,
+            778.668701171875,
+            408.1929931640625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            109.70988464355469,
+            533.724365234375,
+            304.80438232421875,
+            714.3717651367188
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 9,
+      "provenance": {
+        "video_frame": 345,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            904.4990234375,
+            351.76458740234375,
+            1151.654296875,
+            519.4893798828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            797.1705322265625,
+            195.64633178710938,
+            1046.17626953125,
+            482.24017333984375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            624.945068359375,
+            153.98532104492188,
+            785.556640625,
+            262.015625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            181.7554168701172,
+            66.67234802246094,
+            314.6281433105469,
+            283.533447265625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            268.968994140625,
+            255.07894897460938,
+            570.7206420898438,
+            655.051513671875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            572.221923828125,
+            96.63555908203125,
+            674.1015625,
+            171.44107055664062
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            610.2733764648438,
+            227.0802001953125,
+            778.668701171875,
+            408.1929931640625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            109.70988464355469,
+            533.724365234375,
+            304.80438232421875,
+            714.3717651367188
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 347,
+      "time": 11.57104797979798,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": {
+        "frame": 347,
+        "bbox": [
+          630,
+          675,
+          705,
+          720
+        ],
+        "area": 2306,
+        "center": [
+          673.9579358196011,
+          701.9817866435386
+        ],
+        "trusted": false,
+        "identity_authorization": "UNAUTHORIZED_LONG_GAP",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 4.81419624217119,
+          "bbox_area_ratio": 4.6875,
+          "centroid_displacement": 11.933213653235136,
+          "max_yolo_iou": null,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            862.1310424804688,
+            351.25457763671875,
+            1168.289306640625,
+            702.3223876953125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            803.1533203125,
+            193.5868377685547,
+            1058.449951171875,
+            484.13226318359375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            632.267578125,
+            153.80508422851562,
+            795.4349365234375,
+            263.3235168457031
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            190.2384033203125,
+            69.74496459960938,
+            323.1178894042969,
+            287.93646240234375
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            279.2403564453125,
+            273.3265380859375,
+            579.9586181640625,
+            658.709228515625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            578.3268432617188,
+            95.07672119140625,
+            679.27099609375,
+            173.65505981445312
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            617.814208984375,
+            229.2674560546875,
+            783.988525390625,
+            409.7239990234375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            121.0332260131836,
+            540.8895874023438,
+            316.30706787109375,
+            718.375732421875
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 8,
+      "provenance": {
+        "video_frame": 347,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            862.1310424804688,
+            351.25457763671875,
+            1168.289306640625,
+            702.3223876953125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            803.1533203125,
+            193.5868377685547,
+            1058.449951171875,
+            484.13226318359375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            632.267578125,
+            153.80508422851562,
+            795.4349365234375,
+            263.3235168457031
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            190.2384033203125,
+            69.74496459960938,
+            323.1178894042969,
+            287.93646240234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            279.2403564453125,
+            273.3265380859375,
+            579.9586181640625,
+            658.709228515625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            578.3268432617188,
+            95.07672119140625,
+            679.27099609375,
+            173.65505981445312
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            617.814208984375,
+            229.2674560546875,
+            783.988525390625,
+            409.7239990234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            121.0332260131836,
+            540.8895874023438,
+            316.30706787109375,
+            718.375732421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 349,
+      "time": 11.6377398989899,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.4282279908657074,
+          "bbox": [
+            637.3736572265625,
+            666.9891357421875,
+            712.608154296875,
+            720.0
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.4282279908657074,
+          "bbox": [
+            637.3736572265625,
+            666.9891357421875,
+            712.608154296875,
+            720.0
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": {
+        "frame": 349,
+        "bbox": [
+          637,
+          667,
+          711,
+          720
+        ],
+        "area": 2847,
+        "center": [
+          679.7790656831753,
+          698.2451703547594
+        ],
+        "trusted": false,
+        "identity_authorization": "UNAUTHORIZED_LONG_GAP",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 1.2346053772766696,
+          "bbox_area_ratio": 1.162074074074074,
+          "centroid_displacement": 6.917214336578444,
+          "max_yolo_iou": 0.9735898030865053,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            924.6702880859375,
+            353.7012634277344,
+            1188.0091552734375,
+            554.504638671875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            807.6917724609375,
+            191.978759765625,
+            1068.229248046875,
+            486.5101013183594
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            635.724853515625,
+            154.7715301513672,
+            799.488037109375,
+            263.75390625
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            190.2367401123047,
+            73.51545715332031,
+            323.95721435546875,
+            294.5389099121094
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            284.42626953125,
+            297.3873291015625,
+            583.60791015625,
+            666.4569091796875
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            582.857421875,
+            90.01617431640625,
+            683.907470703125,
+            173.92381286621094
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            623.1483154296875,
+            227.4892578125,
+            788.6642456054688,
+            411.29766845703125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            121.79345703125,
+            552.4542236328125,
+            318.99505615234375,
+            719.0009155273438
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 9,
+      "provenance": {
+        "video_frame": 349,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            924.6702880859375,
+            353.7012634277344,
+            1188.0091552734375,
+            554.504638671875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            807.6917724609375,
+            191.978759765625,
+            1068.229248046875,
+            486.5101013183594
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            635.724853515625,
+            154.7715301513672,
+            799.488037109375,
+            263.75390625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            190.2367401123047,
+            73.51545715332031,
+            323.95721435546875,
+            294.5389099121094
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            284.42626953125,
+            297.3873291015625,
+            583.60791015625,
+            666.4569091796875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            582.857421875,
+            90.01617431640625,
+            683.907470703125,
+            173.92381286621094
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            623.1483154296875,
+            227.4892578125,
+            788.6642456054688,
+            411.29766845703125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            121.79345703125,
+            552.4542236328125,
+            318.99505615234375,
+            719.0009155273438
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 351,
+      "time": 11.704431818181819,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": {
+        "frame": 351,
+        "bbox": [
+          661,
+          693,
+          708,
+          720
+        ],
+        "area": 877,
+        "center": [
+          688.2862029646523,
+          708.6043329532497
+        ],
+        "trusted": false,
+        "identity_authorization": "UNAUTHORIZED_LONG_GAP",
+        "sam_status": "ACCEPT",
+        "diagnostics": {
+          "mask_area_ratio": 0.3080435546188971,
+          "bbox_area_ratio": 0.32355940846506887,
+          "centroid_displacement": 13.40461243258664,
+          "max_yolo_iou": null,
+          "possible_mask_drift": false,
+          "reasons": []
+        }
+      },
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            930.348876953125,
+            353.808837890625,
+            1195.1617431640625,
+            564.8837890625
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            807.9139404296875,
+            187.37631225585938,
+            1071.26904296875,
+            486.40032958984375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            633.497314453125,
+            152.621826171875,
+            798.94775390625,
+            263.9826354980469
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            179.342041015625,
+            76.31488037109375,
+            316.25927734375,
+            300.2250061035156
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            276.43115234375,
+            296.35052490234375,
+            584.452392578125,
+            678.0260009765625
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            579.1865234375,
+            90.6492919921875,
+            681.3563232421875,
+            174.6340789794922
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            622.7327880859375,
+            227.2352294921875,
+            787.9072265625,
+            412.7005615234375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            113.50483703613281,
+            566.5745849609375,
+            316.98443603515625,
+            719.9843139648438
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 9,
+      "provenance": {
+        "video_frame": 351,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            930.348876953125,
+            353.808837890625,
+            1195.1617431640625,
+            564.8837890625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            807.9139404296875,
+            187.37631225585938,
+            1071.26904296875,
+            486.40032958984375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            633.497314453125,
+            152.621826171875,
+            798.94775390625,
+            263.9826354980469
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            179.342041015625,
+            76.31488037109375,
+            316.25927734375,
+            300.2250061035156
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            276.43115234375,
+            296.35052490234375,
+            584.452392578125,
+            678.0260009765625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            579.1865234375,
+            90.6492919921875,
+            681.3563232421875,
+            174.6340789794922
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            622.7327880859375,
+            227.2352294921875,
+            787.9072265625,
+            412.7005615234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            113.50483703613281,
+            566.5745849609375,
+            316.98443603515625,
+            719.9843139648438
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 353,
+      "time": 11.771123737373737,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            895.1203002929688,
+            354.02996826171875,
+            1204.947021484375,
+            577.5148315429688
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            806.7499389648438,
+            185.18026733398438,
+            1071.063232421875,
+            487.8332214355469
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            628.8056640625,
+            151.59169006347656,
+            795.6676635742188,
+            264.4828796386719
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            161.3463592529297,
+            82.66465759277344,
+            304.85223388671875,
+            308.60675048828125
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            264.973388671875,
+            312.85546875,
+            581.687744140625,
+            692.76220703125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            574.3487548828125,
+            90.72408294677734,
+            676.3378295898438,
+            175.30728149414062
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            619.0038452148438,
+            227.729736328125,
+            786.0020751953125,
+            415.825439453125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            91.6822509765625,
+            588.6123046875,
+            305.6617431640625,
+            720.0
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 9,
+      "provenance": {
+        "video_frame": 353,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            895.1203002929688,
+            354.02996826171875,
+            1204.947021484375,
+            577.5148315429688
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            806.7499389648438,
+            185.18026733398438,
+            1071.063232421875,
+            487.8332214355469
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            628.8056640625,
+            151.59169006347656,
+            795.6676635742188,
+            264.4828796386719
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            161.3463592529297,
+            82.66465759277344,
+            304.85223388671875,
+            308.60675048828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            264.973388671875,
+            312.85546875,
+            581.687744140625,
+            692.76220703125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            574.3487548828125,
+            90.72408294677734,
+            676.3378295898438,
+            175.30728149414062
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            619.0038452148438,
+            227.729736328125,
+            786.0020751953125,
+            415.825439453125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            91.6822509765625,
+            588.6123046875,
+            305.6617431640625,
+            720.0
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 355,
+      "time": 11.837815656565656,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            936.5123291015625,
+            356.46441650390625,
+            1209.3145751953125,
+            585.9849853515625
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            802.9921264648438,
+            185.14501953125,
+            1068.865478515625,
+            490.549560546875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            621.8875732421875,
+            153.1981658935547,
+            788.09912109375,
+            267.51995849609375
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            135.67929077148438,
+            86.7764892578125,
+            288.2063903808594,
+            321.4721374511719
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            246.8341522216797,
+            297.041015625,
+            578.9559326171875,
+            708.670654296875
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            565.1185302734375,
+            93.2718505859375,
+            667.0678100585938,
+            177.26058959960938
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            613.3209228515625,
+            227.7039794921875,
+            781.248046875,
+            420.6683349609375
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            74.6677474975586,
+            616.7045288085938,
+            290.4754943847656,
+            720.0
+          ],
+          "label": "sports ball",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 9,
+      "provenance": {
+        "video_frame": 355,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            936.5123291015625,
+            356.46441650390625,
+            1209.3145751953125,
+            585.9849853515625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            802.9921264648438,
+            185.14501953125,
+            1068.865478515625,
+            490.549560546875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            621.8875732421875,
+            153.1981658935547,
+            788.09912109375,
+            267.51995849609375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            135.67929077148438,
+            86.7764892578125,
+            288.2063903808594,
+            321.4721374511719
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            246.8341522216797,
+            297.041015625,
+            578.9559326171875,
+            708.670654296875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            565.1185302734375,
+            93.2718505859375,
+            667.0678100585938,
+            177.26058959960938
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            613.3209228515625,
+            227.7039794921875,
+            781.248046875,
+            420.6683349609375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0061",
+          "anchor_key": "test2::test2-V292E01::entity_0061",
+          "bbox": [
+            74.6677474975586,
+            616.7045288085938,
+            290.4754943847656,
+            720.0
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0061",
+          "label": "sports ball",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 357,
+      "time": 11.904507575757576,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            934.9866943359375,
+            361.37298583984375,
+            1209.48779296875,
+            598.449951171875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            796.0119018554688,
+            186.3522186279297,
+            1060.968994140625,
+            495.27239990234375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            608.9068603515625,
+            156.39300537109375,
+            778.3119506835938,
+            271.878173828125
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            100.30302429199219,
+            92.68998718261719,
+            263.76702880859375,
+            338.2257080078125
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            218.937255859375,
+            289.13214111328125,
+            568.2814331054688,
+            711.1951904296875
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            550.31982421875,
+            94.47056579589844,
+            654.6544189453125,
+            181.84967041015625
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            604.5330810546875,
+            232.3806610107422,
+            771.1068115234375,
+            426.93780517578125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 8,
+      "provenance": {
+        "video_frame": 357,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            934.9866943359375,
+            361.37298583984375,
+            1209.48779296875,
+            598.449951171875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            796.0119018554688,
+            186.3522186279297,
+            1060.968994140625,
+            495.27239990234375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            608.9068603515625,
+            156.39300537109375,
+            778.3119506835938,
+            271.878173828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            100.30302429199219,
+            92.68998718261719,
+            263.76702880859375,
+            338.2257080078125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0058",
+          "anchor_key": "test2::test2-V292E01::entity_0058",
+          "bbox": [
+            218.937255859375,
+            289.13214111328125,
+            568.2814331054688,
+            711.1951904296875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0058",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            550.31982421875,
+            94.47056579589844,
+            654.6544189453125,
+            181.84967041015625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            604.5330810546875,
+            232.3806610107422,
+            771.1068115234375,
+            426.93780517578125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 359,
+      "time": 11.971199494949495,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            903.4990234375,
+            367.9178161621094,
+            1206.659912109375,
+            707.4296264648438
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            783.7852783203125,
+            189.3335418701172,
+            1048.80908203125,
+            501.8321533203125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            594.1651611328125,
+            161.553466796875,
+            765.99658203125,
+            279.846435546875
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            532.6044921875,
+            101.00486755371094,
+            641.35791015625,
+            188.22251892089844
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            593.2486572265625,
+            238.2078094482422,
+            757.1134643554688,
+            437.81378173828125
+          ],
+          "label": "refrigerator",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            53.164573669433594,
+            101.48452758789062,
+            231.88131713867188,
+            358.045166015625
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 7,
+      "provenance": {
+        "video_frame": 359,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            903.4990234375,
+            367.9178161621094,
+            1206.659912109375,
+            707.4296264648438
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            783.7852783203125,
+            189.3335418701172,
+            1048.80908203125,
+            501.8321533203125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            594.1651611328125,
+            161.553466796875,
+            765.99658203125,
+            279.846435546875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0063",
+          "anchor_key": "test2::test2-V292E01::entity_0063",
+          "bbox": [
+            532.6044921875,
+            101.00486755371094,
+            641.35791015625,
+            188.22251892089844
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0063",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0064",
+          "anchor_key": "test2::test2-V292E01::entity_0064",
+          "bbox": [
+            593.2486572265625,
+            238.2078094482422,
+            757.1134643554688,
+            437.81378173828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0064",
+          "label": "refrigerator",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            53.164573669433594,
+            101.48452758789062,
+            231.88131713867188,
+            358.045166015625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 361,
+      "time": 12.037891414141415,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            859.6307373046875,
+            376.10589599609375,
+            1201.501953125,
+            704.5490112304688
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            770.49462890625,
+            193.54779052734375,
+            1034.8060302734375,
+            511.615966796875
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            577.72119140625,
+            167.29193115234375,
+            747.9183349609375,
+            288.3369445800781
+          ],
+          "label": "microwave",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            3.0139975547790527,
+            116.48371887207031,
+            194.3319549560547,
+            386.21575927734375
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 361,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            859.6307373046875,
+            376.10589599609375,
+            1201.501953125,
+            704.5490112304688
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            770.49462890625,
+            193.54779052734375,
+            1034.8060302734375,
+            511.615966796875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test2::test2-V292E01::entity_0060",
+          "bbox": [
+            577.72119140625,
+            167.29193115234375,
+            747.9183349609375,
+            288.3369445800781
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0060",
+          "label": "microwave",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            3.0139975547790527,
+            116.48371887207031,
+            194.3319549560547,
+            386.21575927734375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 363,
+      "time": 12.104583333333332,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            882.02685546875,
+            384.468017578125,
+            1196.6063232421875,
+            701.3165283203125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            756.510009765625,
+            198.0914306640625,
+            1019.8453369140625,
+            520.8352661132812
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            0.2145487517118454,
+            209.0676727294922,
+            148.59005737304688,
+            413.8127136230469
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 363,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            882.02685546875,
+            384.468017578125,
+            1196.6063232421875,
+            701.3165283203125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            756.510009765625,
+            198.0914306640625,
+            1019.8453369140625,
+            520.8352661132812
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            0.2145487517118454,
+            209.0676727294922,
+            148.59005737304688,
+            413.8127136230469
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 365,
+      "time": 12.171275252525252,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            852.552734375,
+            396.0865173339844,
+            1184.38134765625,
+            703.218017578125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            740.5531005859375,
+            204.85281372070312,
+            1003.0797729492188,
+            529.897705078125
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 365,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            852.552734375,
+            396.0865173339844,
+            1184.38134765625,
+            703.218017578125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            740.5531005859375,
+            204.85281372070312,
+            1003.0797729492188,
+            529.897705078125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 367,
+      "time": 12.237967171717171,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            836.3165893554688,
+            405.63299560546875,
+            1178.5458984375,
+            711.413330078125
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            726.1376342773438,
+            209.0353240966797,
+            985.5543212890625,
+            541.283203125
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 367,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            836.3165893554688,
+            405.63299560546875,
+            1178.5458984375,
+            711.413330078125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            726.1376342773438,
+            209.0353240966797,
+            985.5543212890625,
+            541.283203125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 369,
+      "time": 12.304659090909091,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            878.0778198242188,
+            415.2859802246094,
+            1170.7362060546875,
+            716.099609375
+          ],
+          "label": "chair",
+          "visible": true
+        },
+        {
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            710.3841552734375,
+            214.54055786132812,
+            969.8307495117188,
+            549.025390625
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 369,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            878.0778198242188,
+            415.2859802246094,
+            1170.7362060546875,
+            716.099609375
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0059",
+          "anchor_key": "test2::test2-V292E01::entity_0059",
+          "bbox": [
+            710.3841552734375,
+            214.54055786132812,
+            969.8307495117188,
+            549.025390625
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0059",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 371,
+      "time": 12.37135101010101,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            819.6561889648438,
+            424.8392028808594,
+            1161.20166015625,
+            717.6215209960938
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 371,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            819.6561889648438,
+            424.8392028808594,
+            1161.20166015625,
+            717.6215209960938
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 373,
+      "time": 12.438042929292928,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            856.98828125,
+            435.12957763671875,
+            1156.416259765625,
+            713.7607421875
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 373,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            856.98828125,
+            435.12957763671875,
+            1156.416259765625,
+            713.7607421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 375,
+      "time": 12.504734848484848,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            827.76416015625,
+            446.298095703125,
+            1150.4588623046875,
+            716.229736328125
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 375,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            827.76416015625,
+            446.298095703125,
+            1150.4588623046875,
+            716.229736328125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 377,
+      "time": 12.571426767676767,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            835.50927734375,
+            455.03582763671875,
+            1143.6844482421875,
+            716.2557373046875
+          ],
+          "label": "chair",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 377,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0065",
+          "anchor_key": "test2::test2-V292E01::entity_0065",
+          "bbox": [
+            835.50927734375,
+            455.03582763671875,
+            1143.6844482421875,
+            716.2557373046875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0065",
+          "label": "chair",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 379,
+      "time": 12.638118686868687,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 379,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 381,
+      "time": 12.704810606060606,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 381,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 383,
+      "time": 12.771502525252526,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            154.81039428710938,
+            160.6968231201172,
+            340.21533203125,
+            299.1221923828125
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 383,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            154.81039428710938,
+            160.6968231201172,
+            340.21533203125,
+            299.1221923828125
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 385,
+      "time": 12.838194444444444,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            115.66976165771484,
+            168.74752807617188,
+            309.32574462890625,
+            326.8455505371094
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 385,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0062",
+          "anchor_key": "test2::test2-V292E01::entity_0062",
+          "bbox": [
+            115.66976165771484,
+            168.74752807617188,
+            309.32574462890625,
+            326.8455505371094
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0062",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 387,
+      "time": 12.904886363636363,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 387,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 389,
+      "time": 12.971578282828283,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            28.04262351989746,
+            178.3238525390625,
+            253.61595153808594,
+            386.56707763671875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 389,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            28.04262351989746,
+            178.3238525390625,
+            253.61595153808594,
+            386.56707763671875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 391,
+      "time": 13.038270202020202,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            2.84161376953125,
+            182.1147918701172,
+            230.62808227539062,
+            377.43328857421875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 391,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            2.84161376953125,
+            182.1147918701172,
+            230.62808227539062,
+            377.43328857421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 393,
+      "time": 13.104962121212122,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            9.76995849609375,
+            185.8872528076172,
+            214.37408447265625,
+            364.41424560546875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 393,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            9.76995849609375,
+            185.8872528076172,
+            214.37408447265625,
+            364.41424560546875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 395,
+      "time": 13.17165404040404,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            15.76531982421875,
+            198.3878173828125,
+            204.76446533203125,
+            364.217529296875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 395,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            15.76531982421875,
+            198.3878173828125,
+            204.76446533203125,
+            364.217529296875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 397,
+      "time": 13.238345959595959,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            4.46929931640625,
+            208.216796875,
+            199.60906982421875,
+            393.75701904296875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 397,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            4.46929931640625,
+            208.216796875,
+            199.60906982421875,
+            393.75701904296875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 399,
+      "time": 13.305037878787878,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            0.31524658203125,
+            217.7860107421875,
+            190.93565368652344,
+            418.40594482421875
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 399,
+        "seed_mask": "segmentation/masks/target_full/f000324.png"
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0066",
+          "anchor_key": "test2::test2-V292E01::entity_0066",
+          "bbox": [
+            0.31524658203125,
+            217.7860107421875,
+            190.93565368652344,
+            418.40594482421875
+          ],
+          "entity_id": "test2::test2-V292E01::entity_0066",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 4.609999999869615,
+  "peak_vram_bytes": 1389155840,
+  "signature": "63aebb11c863563a60bf12f44e9f3f46987d2a857a48c06449bc65381af239a8"
+}

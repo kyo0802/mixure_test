@@ -1,0 +1,66 @@
+{
+  "target": "phone_01",
+  "state": "UNOBSERVED",
+  "last_seen_time": 13.40607250755287,
+  "candidates": [
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0027",
+      "anchor_label": "microwave",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "priority_rule": 4,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "ME0004",
+      "source_memory": null,
+      "last_confirmed_time": 13.40607250755287,
+      "reason": "Last trusted image-relative anchor context",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v292/test6/identity/entity_registry.json#P0001"
+      ],
+      "rank": 1
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0031",
+      "anchor_label": "chair",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "priority_rule": 4,
+      "confirmed": false,
+      "status": "LAST_TRUSTED",
+      "source_episode": "ME0005",
+      "source_memory": null,
+      "last_confirmed_time": 13.40607250755287,
+      "reason": "Last trusted image-relative anchor context",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v292/test6/identity/entity_registry.json#P0003"
+      ],
+      "rank": 2
+    },
+    {
+      "target": "phone_01",
+      "search_anchor": "entity_0029",
+      "anchor_label": "sports ball",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "priority_rule": 5,
+      "confirmed": false,
+      "status": "STALE",
+      "source_episode": "ME0003",
+      "source_memory": null,
+      "last_confirmed_time": 13.005891238670696,
+      "reason": "Recent ended or stale stable context",
+      "uncertainty": "Possible/unconfirmed; image geometry or temporal pattern is not physical proof",
+      "context_anchors": [],
+      "provenance": [
+        "outputs_v292/test6/identity/entity_registry.json#P0002"
+      ],
+      "rank": 3
+    }
+  ],
+  "reason": "Deterministic graph priority rules; no weighted score",
+  "uncertainty": "Candidate is not a verified current location"
+}

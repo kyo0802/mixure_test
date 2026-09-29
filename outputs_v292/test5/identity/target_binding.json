@@ -1,0 +1,66 @@
+{
+  "decision": "BOUND",
+  "bound_target": {
+    "entity_id": "phone_01",
+    "source_track_id": 21,
+    "frame_index": 96,
+    "timestamp": 3.2,
+    "bbox": [
+      644.2444458007812,
+      608.3494873046875,
+      769.73828125,
+      720.0
+    ],
+    "source_kind": "observation"
+  },
+  "policy": {
+    "minimum_observations": 3,
+    "minimum_span_seconds": 0.4,
+    "minimum_mean_confidence": 0.5,
+    "tie_quality_margin": 0.1,
+    "no_future_frames_or_gt": true
+  },
+  "candidate_initial_tracks": [
+    {
+      "frame_index": 78,
+      "track_id": 21,
+      "semantic": "cell phone",
+      "observations_seen": 1,
+      "duration_seconds_seen": 0.0,
+      "mean_detector_confidence": 0.5113096237182617,
+      "quality": 0.5113096237182617,
+      "ready": false
+    },
+    {
+      "frame_index": 84,
+      "track_id": 21,
+      "semantic": "cell phone",
+      "observations_seen": 2,
+      "duration_seconds_seen": 0.19999999999999973,
+      "mean_detector_confidence": 0.5745688080787659,
+      "quality": 0.5745688080787659,
+      "ready": false
+    },
+    {
+      "frame_index": 90,
+      "track_id": 21,
+      "semantic": "cell phone",
+      "observations_seen": 3,
+      "duration_seconds_seen": 0.3999999999999999,
+      "mean_detector_confidence": 0.523568739493688,
+      "quality": 0.523568739493688,
+      "ready": false
+    },
+    {
+      "frame_index": 96,
+      "track_id": 21,
+      "semantic": "cell phone",
+      "observations_seen": 4,
+      "duration_seconds_seen": 0.6000000000000001,
+      "mean_detector_confidence": 0.5271265730261803,
+      "quality": 0.5271265730261803,
+      "ready": true
+    }
+  ],
+  "selection_evidence": "first mature local phone track; ambiguous if simultaneous quality tie"
+}

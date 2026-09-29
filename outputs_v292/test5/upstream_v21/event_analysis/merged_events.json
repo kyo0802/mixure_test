@@ -1,0 +1,1717 @@
+[
+  {
+    "event_id": "evt_001",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 0.0,
+    "peak_time": 0.0,
+    "end_time": 0.8,
+    "involved_track_ids": [
+      11
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7155857582887014,
+    "priority": 1.3355857582887014,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_002",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 0.0,
+    "peak_time": 0.8,
+    "end_time": 2.0,
+    "involved_track_ids": [
+      2,
+      3
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "motion_coupling_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 1.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 36.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 1.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 36.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.9966330815148366,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      },
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7550894121328989,
+    "priority": 2.6680780053138733,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_003",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 1.6,
+    "peak_time": 2.6,
+    "end_time": 2.6,
+    "involved_track_ids": [
+      11
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 1.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 35.63333333333333,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.7155857582887014,
+    "priority": 1.3355857582887014,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_004",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 0.0,
+    "peak_time": 3.0,
+    "end_time": 4.0,
+    "involved_track_ids": [
+      5,
+      10,
+      12,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "motion_coupling_candidate",
+      "proximity_change",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "from_nearest_track": 18,
+        "to_nearest_track": 24,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "cosine_similarity": 0.879112178122936,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 10,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9869775052490095,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9588728118468809,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.983601424866224,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9999732349348026,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9937063578073566,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9846052681287437,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 11,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9833000657777718,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 22,
+        "not_semantic_identity": true
+      },
+      {
+        "last_visible": 2.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 34.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.981003873261734,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "last_visible": 2.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 35.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.9854064964412559,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9991311121701129,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "from_nearest_track": 10,
+        "to_nearest_track": 18,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "cosine_similarity": 0.9994939644815273,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 19,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9006411229355613,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "last_visible": 0.8,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 36.43333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "distance_change": -0.129861685031471,
+        "direction": "separating",
+        "image_relative": true
+      },
+      {
+        "distance_change": -0.12815839950713426,
+        "direction": "separating",
+        "image_relative": true
+      },
+      {
+        "cosine_similarity": 0.9549134495338498,
+        "support": 3,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9889724005548081,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 5,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9004144967119236,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 43,
+        "not_semantic_identity": true
+      },
+      {
+        "persistence_observations": 13,
+        "not_semantic_identity": true
+      },
+      {
+        "persistence_observations": 7,
+        "not_semantic_identity": true
+      },
+      {
+        "persistence_observations": 27,
+        "not_semantic_identity": true
+      },
+      {
+        "persistence_observations": 10,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.8622163534164429,
+    "priority": 4.457334792613983,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_005",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 4.8,
+    "peak_time": 5.8,
+    "end_time": 5.8,
+    "involved_track_ids": [
+      22
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 4.8,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 32.43333333333334,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.6716579109430313,
+    "priority": 1.3316579109430313,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_006",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 5.0,
+    "peak_time": 6.0,
+    "end_time": 6.0,
+    "involved_track_ids": [
+      17
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 5.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 32.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.6580702489928195,
+    "priority": 1.6780702489928194,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_007",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 3.4,
+    "peak_time": 7.4,
+    "end_time": 7.4,
+    "involved_track_ids": [
+      5,
+      16,
+      18,
+      19,
+      20,
+      24,
+      33,
+      36
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "motion_coupling_candidate",
+      "proximity_change",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "from_nearest_track": 16,
+        "to_nearest_track": 36,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 6.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 30.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.927464951020095,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "from_nearest_track": 24,
+        "to_nearest_track": 5,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "distance_change": -0.13191236366379389,
+        "direction": "separating",
+        "image_relative": true
+      },
+      {
+        "cosine_similarity": 0.9363821761507313,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 9,
+        "not_semantic_identity": true
+      },
+      {
+        "distance_change": -0.12072963935741962,
+        "direction": "separating",
+        "image_relative": true
+      },
+      {
+        "from_nearest_track": 20,
+        "to_nearest_track": 16,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 4.8,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 32.43333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 4.8,
+        "next_visible_or_video_end": 6.2,
+        "absence_seconds": 1.4000000000000004,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 4.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 32.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.9907448168256933,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "from_nearest_track": 18,
+        "to_nearest_track": 20,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 3.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 33.63333333333333,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.9989622469387579,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9995164838011924,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9865103664239903,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 8,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.991123322526413,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      }
+    ],
+    "confidence": 0.8483490943908691,
+    "priority": 4.437785243988037,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_008",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 6.8,
+    "peak_time": 7.8,
+    "end_time": 9.4,
+    "involved_track_ids": [
+      5,
+      36
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "motion_coupling_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 8.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 28.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 8.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 29.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "cosine_similarity": 0.9569864280396264,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "persistence_observations": 8,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7660796269774437,
+    "priority": 3.498650281429291,
+    "selected": false,
+    "skip_reason": "near-duplicate selected window"
+  },
+  {
+    "event_id": "evt_009",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 7.6,
+    "peak_time": 8.6,
+    "end_time": 8.6,
+    "involved_track_ids": [
+      33
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 7.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 29.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.6782652801937528,
+    "priority": 1.2982652801937526,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_010",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 6.4,
+    "peak_time": 8.6,
+    "end_time": 8.6,
+    "involved_track_ids": [
+      35
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 7.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 29.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "persistence_observations": 5,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5363643407821655,
+    "priority": 1.4763643407821654,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_011",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 8.2,
+    "peak_time": 9.2,
+    "end_time": 9.2,
+    "involved_track_ids": [
+      19
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 8.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 29.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.5104738555171273,
+    "priority": 1.8104738555171274,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_012",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 9.4,
+    "peak_time": 9.4,
+    "end_time": 10.200000000000001,
+    "involved_track_ids": [
+      44
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 18,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.563346697224511,
+    "priority": 1.5433466972245111,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_013",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 11.0,
+    "peak_time": 11.0,
+    "end_time": 11.8,
+    "involved_track_ids": [
+      46
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 37,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5478107888956327,
+    "priority": 1.8478107888956328,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_014",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 11.2,
+    "peak_time": 11.2,
+    "end_time": 12.0,
+    "involved_track_ids": [
+      47
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 49,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7922588538150398,
+    "priority": 2.0922588538150397,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_015",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 11.6,
+    "peak_time": 11.6,
+    "end_time": 12.4,
+    "involved_track_ids": [
+      48
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 9,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7381864786148071,
+    "priority": 1.358186478614807,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_016",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 13.4,
+    "peak_time": 13.4,
+    "end_time": 14.200000000000001,
+    "involved_track_ids": [
+      51
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 28,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5565243384667805,
+    "priority": 1.8565243384667804,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_017",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 13.6,
+    "peak_time": 13.6,
+    "end_time": 14.4,
+    "involved_track_ids": [
+      52
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 22,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5250049450180747,
+    "priority": 1.8250049450180748,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_018",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 12.8,
+    "peak_time": 13.8,
+    "end_time": 13.8,
+    "involved_track_ids": [
+      44
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 12.8,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 24.433333333333334,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.563346697224511,
+    "priority": 1.5433466972245111,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_019",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 13.2,
+    "peak_time": 14.2,
+    "end_time": 14.2,
+    "involved_track_ids": [
+      48
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 13.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 24.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.7381864786148071,
+    "priority": 1.358186478614807,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_020",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 13.0,
+    "peak_time": 14.2,
+    "end_time": 14.2,
+    "involved_track_ids": [
+      46,
+      47,
+      50
+    ],
+    "signals": [
+      "appearance",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "from_nearest_track": 46,
+        "to_nearest_track": 50,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "persistence_observations": 49,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7536193132400513,
+    "priority": 3.153619313240051,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_021",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 14.4,
+    "peak_time": 14.4,
+    "end_time": 15.200000000000001,
+    "involved_track_ids": [
+      55
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 20,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.8521987289190293,
+    "priority": 1.912198728919029,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_022",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 15.6,
+    "peak_time": 15.6,
+    "end_time": 16.4,
+    "involved_track_ids": [
+      57
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5352819164594015,
+    "priority": 1.3152819164594016,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_023",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 16.0,
+    "peak_time": 18.0,
+    "end_time": 19.8,
+    "involved_track_ids": [
+      44,
+      46,
+      47,
+      50,
+      51,
+      52,
+      55,
+      58,
+      59,
+      61
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "motion_coupling_candidate",
+      "proximity_change",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 18.8,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 18.433333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 61,
+        "to_nearest_track": 50,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 18.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 18.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "distance_change": 0.12408211609953508,
+        "direction": "approaching",
+        "image_relative": true
+      },
+      {
+        "last_visible": 18.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 19.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 58,
+        "to_nearest_track": 52,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 17.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 20.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 44,
+        "to_nearest_track": 58,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "persistence_observations": 7,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9920175693443481,
+        "support": 4,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "from_nearest_track": 50,
+        "to_nearest_track": 61,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9983370402303872,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "from_nearest_track": 59,
+        "to_nearest_track": 51,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 17.2,
+        "next_visible_or_video_end": 19.2,
+        "absence_seconds": 2.0,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 51,
+        "to_nearest_track": 59,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      },
+      {
+        "cosine_similarity": 0.9723402148097107,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      },
+      {
+        "cosine_similarity": 0.9882118036493522,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      }
+    ],
+    "confidence": 0.9143604636192322,
+    "priority": 5.294919633865357,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_024",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 18.0,
+    "peak_time": 19.0,
+    "end_time": 19.0,
+    "involved_track_ids": [
+      57
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 18.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 19.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.5352819164594015,
+    "priority": 1.3152819164594016,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_025",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 19.2,
+    "peak_time": 20.2,
+    "end_time": 20.2,
+    "involved_track_ids": [
+      46
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 19.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 18.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.5478107888956327,
+    "priority": 1.8478107888956328,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_026",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 19.2,
+    "peak_time": 20.2,
+    "end_time": 20.2,
+    "involved_track_ids": [
+      59
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 19.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 18.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.4614487787087758,
+    "priority": 1.321448778708776,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_027",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 19.4,
+    "peak_time": 20.4,
+    "end_time": 20.4,
+    "involved_track_ids": [
+      52
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 19.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 17.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.5250049450180747,
+    "priority": 1.8250049450180748,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_028",
+    "event_type": "motion_coupling_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 19.6,
+    "peak_time": 20.4,
+    "end_time": 20.4,
+    "involved_track_ids": [
+      47,
+      50
+    ],
+    "signals": [
+      "motion_coupling_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "cosine_similarity": 0.9985293240279752,
+        "support": 5,
+        "camera_motion_can_explain_signal": true
+      }
+    ],
+    "confidence": 0.9026708006858826,
+    "priority": 2.9026708006858826,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_029",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 21.0,
+    "peak_time": 22.0,
+    "end_time": 24.0,
+    "involved_track_ids": [
+      47,
+      50,
+      68
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 23.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 14.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 22.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 15.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 47,
+        "to_nearest_track": 68,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 21.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 16.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "persistence_observations": 5,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.9622209072113037,
+    "priority": 3.7622209072113035,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_030",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 23.0,
+    "peak_time": 25.0,
+    "end_time": 25.0,
+    "involved_track_ids": [
+      71
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 24.0,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 13.233333333333334,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "persistence_observations": 6,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5090433756510416,
+    "priority": 1.4090433756510419,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_031",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 25.2,
+    "peak_time": 25.2,
+    "end_time": 26.0,
+    "involved_track_ids": [
+      74
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 8,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.45858505740761757,
+    "priority": 1.1985850574076173,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_032",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 25.2,
+    "peak_time": 25.2,
+    "end_time": 26.0,
+    "involved_track_ids": [
+      75
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 31,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7705562864580462,
+    "priority": 2.070556286458046,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_033",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 25.4,
+    "peak_time": 25.4,
+    "end_time": 26.2,
+    "involved_track_ids": [
+      76
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 32,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7819467112421989,
+    "priority": 2.0819467112421988,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_034",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 25.8,
+    "peak_time": 25.8,
+    "end_time": 26.6,
+    "involved_track_ids": [
+      77
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 26,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.8446838305546687,
+    "priority": 2.1446838305546687,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_035",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 25.8,
+    "peak_time": 25.8,
+    "end_time": 26.6,
+    "involved_track_ids": [
+      78
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 25,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7397430968284607,
+    "priority": 1.999743096828461,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_036",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 26.2,
+    "peak_time": 26.2,
+    "end_time": 27.0,
+    "involved_track_ids": [
+      81
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 27,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.7678042981359694,
+    "priority": 2.0678042981359694,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_037",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 28.2,
+    "peak_time": 28.2,
+    "end_time": 29.0,
+    "involved_track_ids": [
+      86
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 11,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.4277921969240362,
+    "priority": 1.1277921969240363,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_038",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 26.8,
+    "peak_time": 28.8,
+    "end_time": 28.8,
+    "involved_track_ids": [
+      74,
+      75,
+      82
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "from_nearest_track": 74,
+        "to_nearest_track": 82,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 27.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 9.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "persistence_observations": 9,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.5880802936024137,
+    "priority": 3.885434348583221,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_039",
+    "event_type": "interaction_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 29.4,
+    "peak_time": 30.8,
+    "end_time": 32.4,
+    "involved_track_ids": [
+      75,
+      82,
+      87
+    ],
+    "signals": [
+      "appearance",
+      "disappearance_candidate",
+      "relation_change"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 31.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 5.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 31.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 6.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "from_nearest_track": 82,
+        "to_nearest_track": 87,
+        "meaning": "persistent nearest image-neighbor change"
+      },
+      {
+        "last_visible": 29.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 7.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "persistence_observations": 7,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.8156003952026367,
+    "priority": 4.26893372853597,
+    "selected": true,
+    "skip_reason": null
+  },
+  {
+    "event_id": "evt_040",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 30.2,
+    "peak_time": 31.2,
+    "end_time": 31.2,
+    "involved_track_ids": [
+      86
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 30.2,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 7.033333333333335,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.4277921969240362,
+    "priority": 1.1277921969240363,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_041",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 30.6,
+    "peak_time": 31.6,
+    "end_time": 31.6,
+    "involved_track_ids": [
+      77
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 30.6,
+        "next_visible_or_video_end": 32.6,
+        "absence_seconds": 2.0,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.8446838305546687,
+    "priority": 2.1446838305546687,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_042",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 30.6,
+    "peak_time": 31.6,
+    "end_time": 31.6,
+    "involved_track_ids": [
+      78
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 30.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 6.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.7397430968284607,
+    "priority": 1.999743096828461,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_043",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 31.4,
+    "peak_time": 32.4,
+    "end_time": 32.4,
+    "involved_track_ids": [
+      81
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 31.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 5.833333333333336,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.7678042981359694,
+    "priority": 2.0678042981359694,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_044",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 31.4,
+    "peak_time": 33.6,
+    "end_time": 33.6,
+    "involved_track_ids": [
+      76
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 32.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 4.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      },
+      {
+        "last_visible": 31.4,
+        "next_visible_or_video_end": 32.6,
+        "absence_seconds": 1.2000000000000028,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.7819467112421989,
+    "priority": 2.0819467112421988,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_045",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 32.6,
+    "peak_time": 33.6,
+    "end_time": 33.6,
+    "involved_track_ids": [
+      77
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 32.6,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 4.633333333333333,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.8446838305546687,
+    "priority": 2.1446838305546687,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_046",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 33.6,
+    "peak_time": 33.6,
+    "end_time": 34.4,
+    "involved_track_ids": [
+      95
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 10,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.8508366107940674,
+    "priority": 1.510836610794067,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_047",
+    "event_type": "appearance",
+    "episode_id": "ep_0001",
+    "start_time": 35.8,
+    "peak_time": 35.8,
+    "end_time": 36.599999999999994,
+    "involved_track_ids": [
+      102
+    ],
+    "signals": [
+      "appearance"
+    ],
+    "signal_evidence": [
+      {
+        "persistence_observations": 4,
+        "not_semantic_identity": true
+      }
+    ],
+    "confidence": 0.6508050039410591,
+    "priority": 1.11080500394106,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  },
+  {
+    "event_id": "evt_048",
+    "event_type": "disappearance_candidate",
+    "episode_id": "ep_0001",
+    "start_time": 35.4,
+    "peak_time": 36.4,
+    "end_time": 36.4,
+    "involved_track_ids": [
+      95
+    ],
+    "signals": [
+      "disappearance_candidate"
+    ],
+    "signal_evidence": [
+      {
+        "last_visible": 35.4,
+        "next_visible_or_video_end": 37.233333333333334,
+        "absence_seconds": 1.8333333333333357,
+        "interpretation": "undetected, not lost or moved"
+      }
+    ],
+    "confidence": 0.8508366107940674,
+    "priority": 1.510836610794067,
+    "selected": false,
+    "skip_reason": "max_vlm_events budget"
+  }
+]

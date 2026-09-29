@@ -1,0 +1,123 @@
+{
+  "pipeline_version": "2.9.2",
+  "video_ids": [
+    "test1",
+    "test2",
+    "test3",
+    "test4",
+    "test5",
+    "test6",
+    "test7",
+    "test8",
+    "test9"
+  ],
+  "sampling_fps": 5,
+  "dense_sampling": {
+    "max_fps": 15.0,
+    "policy": "native_rate_capped_at_15fps"
+  },
+  "yolo": {
+    "model": "yolo11s.pt",
+    "checkpoint": "yolo11s.pt",
+    "confidence": 0.25,
+    "image_size": 960,
+    "device": 0
+  },
+  "tracking": {
+    "implementation": "V2.1 local ByteTrack",
+    "source_config": "configs/default.yaml"
+  },
+  "sam": {
+    "model": "SAM2.1",
+    "checkpoint": ".models/sam2.1_hiera_small.pt",
+    "config": "configs/sam2.1/sam2.1_hiera_s.yaml",
+    "step_frames": 6,
+    "trust_policy": "V292_UNIFIED_MASK_AUTHORIZATION_1"
+  },
+  "appearance": {
+    "model": "MobileNetV3 Small",
+    "checkpoint": "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth",
+    "bank": "fresh target evidence only"
+  },
+  "identity": {
+    "guard": "V2.6 Identity Guard",
+    "policy_version": "V292_IDENTITY_AUTH_1",
+    "appearance_threshold": 0.6,
+    "uniqueness_margin": 0.1
+  },
+  "events": {
+    "policy_version": "V292_MULTI_EVENT_1",
+    "max_events": 3,
+    "window_seconds_each_side": 1.5
+  },
+  "vlm": {
+    "model": ".models/Qwen2.5-VL-3B-Instruct",
+    "prompt_version": "V292_PAIR_OBSERVABLE_FACTS_1",
+    "max_pairs_per_event": 2,
+    "local_files_only": true
+  },
+  "physical_gate": {
+    "version": "V29_RELATION_GATE_1",
+    "relations": [
+      "NEAR",
+      true,
+      "INSIDE",
+      "BEHIND",
+      "OCCLUDED_BY",
+      "HELD_BY"
+    ]
+  },
+  "memory": {
+    "schema_version": "V292_AUTHORITATIVE_EVENT_STORE_1",
+    "search_planner": "V2.8_FIVE_RULE_PRIORITY"
+  },
+  "model_identifiers": {
+    "yolo": {
+      "path": ".models/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+    },
+    "sam": {
+      "path": ".models/sam2.1_hiera_small.pt",
+      "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38"
+    },
+    "appearance": {
+      "path": "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth",
+      "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f"
+    }
+  },
+  "source_config_sha256": "3ad7da0a7d810df72d06ca2e7b9c4b140da0cfd1f1f7f802fd22fa9cf1e57319",
+  "canonical_config_file_sha256": "eb4f1d23f98caed0dc4010a9b68d30fbd6734b483ad910b584a07be875081949",
+  "source_code_sha256": {
+    "src/memory_graph/v292/__init__.py": "12538bc31f43e56df54c66db03fb3f2034252457a60608ba99845d47d4ac1e5a",
+    "src/memory_graph/v292/contracts.py": "c3294dcd68a9fb163cde9a822dcdda5644657b96ae80fd6cc18e594f99d95d55",
+    "src/memory_graph/v292/events.py": "723f73e08fc94c2ea1475c2edf12d06b4dbff63341a266535466f2edae28ffa4",
+    "src/memory_graph/v292/finalize.py": "d0dc64206cea1d0bb9e72419acf0c28d2d553f53aecafc39f80c99543a8d1117",
+    "src/memory_graph/v292/masks.py": "d368c0f982121202ce2a9e9f661fbdfd7380682357d0a950b465121b087acf50",
+    "src/memory_graph/v292/memory.py": "cc341ed35d4fe6d189ab52b669d3be74eccc1ce03de7ebfd1f0b2bf34ac4fbf7",
+    "src/memory_graph/v292/physical.py": "b31e9b206bd33313b6a13789fc043475c9eb5e3bddf929897abb2c0757e04c5b",
+    "src/memory_graph/v292/pipeline.py": "e514110013f075c1dd0233a9c10e3718a947eb1cd72d191cf061a720f973932e",
+    "src/memory_graph/v292/validator.py": "c26c129042549ca858b61b87e7681bbcfd07b91b34385a7184ba2f9afc9bc9c5",
+    "src/memory_graph/v292/vlm_pairs.py": "4335a05f2de6d8cbcff0ae69432b990e33552a44f5007ae340077cdeaf521a3c",
+    "src/memory_graph/v21/pipeline.py": "1750ea1b94dbe8af41d0c0f3b488c02c79d10fdbd2b04ec052b2ff84df35c23d",
+    "src/memory_graph/v25rerun/pipeline.py": "379c892e102a174839b0377544ae7b98f2716c9c34e6e1b3ccf56360b725aafa",
+    "src/memory_graph/v25rerun/fusion.py": "dd2e8b344ae3c76703be6eb042f805ff29c8d7954bf362c4f961daa7e948c5b8",
+    "src/memory_graph/v25rerun/sam_route.py": "c5fa44560073a8f04ebdd284d494f6683ec40aeb01ff5d13db87dc5908da8a23",
+    "src/memory_graph/v25rerun/reid.py": "b3100af0cf1149ca9eb0ca7422322a70da2bbf5780b273a5f8521d359b625276",
+    "src/memory_graph/v26/pipeline.py": "bf740e963d4a863bca94761c2cb38343b0e50bbf908d2950a078625374930de3",
+    "src/memory_graph/v26/authorization.py": "c85e230ce17fdcc4a523a4afbc4552709fbb2896fd5a8e81510accab77fc672f",
+    "src/memory_graph/v29/dense_reinspection.py": "6f941c00447f9f0d7cb6face8ebc36a22ad16f29779870ba955fab084e382f4e",
+    "src/memory_graph/v29/physical_gate.py": "7a9da0257ac771e512d77bf228d30f1ef1eba2d8a7d893c24fc49d937100ffc7",
+    "src/memory_graph/v29/physical_candidates.py": "ccd9a05ae26af8ffbd3c949331b396197cee9325b5c772ff5278222fd0512a5c",
+    "src/memory_graph/v28/local_subgraph.py": "6cbb0dc7902e9820b499158746a2128c0ed6bb865d27839ebf3107b6695eaa18",
+    "src/memory_graph/v28/memory.py": "7d6ba8ae920f7f293fde4b27ed6f354c80b455a1c8750d70836821b57c1cf983",
+    "src/memory_graph/v28/search_planner.py": "56af2bb44133a8f23cc76657824f55f64e1ee0db47c0a57a9fb8a68c9c37177b",
+    "scripts/run_v292.py": "f322fd92fa94104244ba6883a2bf18847d44d759dcc23e823f93854eb6819229"
+  },
+  "policy_versions": {
+    "identity": "V292_IDENTITY_AUTH_1",
+    "vlm_prompt": "V292_PAIR_OBSERVABLE_FACTS_1",
+    "physical_gate": "V29_RELATION_GATE_1",
+    "memory_schema": "V292_AUTHORITATIVE_EVENT_STORE_1"
+  },
+  "canonical_config_sha256": "3a8600b58392e9501b9098c46948c74f0df98f6e4ccc3466b214f62539990761"
+}

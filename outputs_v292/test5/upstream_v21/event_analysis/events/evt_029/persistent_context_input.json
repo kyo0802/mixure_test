@@ -1,0 +1,112 @@
+{
+  "event_id": "evt_029",
+  "frames": [
+    {
+      "phase": "before",
+      "timestamp": 21.0,
+      "visible_entity_ids": [
+        "entity_0035",
+        "entity_0038"
+      ],
+      "drawn_track_to_entity": {
+        "47": "entity_0035",
+        "50": "entity_0038"
+      }
+    },
+    {
+      "phase": "during",
+      "timestamp": 22.0,
+      "visible_entity_ids": [
+        "entity_0038",
+        "entity_0051",
+        "entity_0052"
+      ],
+      "drawn_track_to_entity": {
+        "50": "entity_0038",
+        "68": "entity_0051",
+        "69": "entity_0052"
+      }
+    },
+    {
+      "phase": "after",
+      "timestamp": 22.8,
+      "visible_entity_ids": [
+        "entity_0038"
+      ],
+      "drawn_track_to_entity": {
+        "50": "entity_0038"
+      }
+    }
+  ],
+  "historical_references": [
+    {
+      "entity_id": "entity_0035",
+      "local_track_id": 47,
+      "last_confirmed_seen": 21.0,
+      "last_confirmed_frame": 630,
+      "last_confirmed_bbox": [
+        601.1162109375,
+        263.46746826171875,
+        763.0008544921875,
+        375.63031005859375
+      ],
+      "historical_crop": "last_confirmed_entity_0035.jpg",
+      "historical_crop_max_edge": 384,
+      "required_before_visible_context": true,
+      "phase_visibility": {
+        "before": "VISIBLE",
+        "during": "UNOBSERVED",
+        "after": "UNOBSERVED"
+      },
+      "current_bbox_when_unobserved": null
+    },
+    {
+      "entity_id": "entity_0052",
+      "local_track_id": 69,
+      "last_confirmed_seen": 22.0,
+      "last_confirmed_frame": 660,
+      "last_confirmed_bbox": [
+        1000.6956787109375,
+        96.863037109375,
+        1111.5540771484375,
+        581.9920654296875
+      ],
+      "historical_crop": "last_confirmed_entity_0052.jpg",
+      "historical_crop_max_edge": 384,
+      "required_before_visible_context": false,
+      "phase_visibility": {
+        "before": "UNOBSERVED",
+        "during": "VISIBLE",
+        "after": "UNOBSERVED"
+      },
+      "current_bbox_when_unobserved": null
+    },
+    {
+      "entity_id": "entity_0051",
+      "local_track_id": 68,
+      "last_confirmed_seen": 22.0,
+      "last_confirmed_frame": 660,
+      "last_confirmed_bbox": [
+        367.149658203125,
+        332.5859375,
+        599.4721069335938,
+        510.29833984375
+      ],
+      "historical_crop": "last_confirmed_entity_0051.jpg",
+      "historical_crop_max_edge": 384,
+      "required_before_visible_context": false,
+      "phase_visibility": {
+        "before": "UNOBSERVED",
+        "during": "VISIBLE",
+        "after": "UNOBSERVED"
+      },
+      "current_bbox_when_unobserved": null
+    }
+  ],
+  "allowed_entity_ids": [
+    "entity_0035",
+    "entity_0038",
+    "entity_0051",
+    "entity_0052"
+  ]
+}

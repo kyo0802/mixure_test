@@ -1,0 +1,134 @@
+{
+  "task": "test7",
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "attempts": [
+    {
+      "frame_index": 636,
+      "timestamp": 21.20644376899696,
+      "query_last_trusted_frame": 420,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202188449848024,
+            "source": "track:29",
+            "crop_reference": "test7:frame216:track:29",
+            "mask_used": true,
+            "embedding_cache_key": "81e767cee9c224f8eb2839e1e4e0fe592e28877c6d255e0fa4b694505830ee06",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 336,
+            "timestamp": 11.203404255319148,
+            "source": "track:32",
+            "crop_reference": "test7:frame336:track:32",
+            "mask_used": true,
+            "embedding_cache_key": "806d3e372908b3e1b1898a5457bce36396e4b9975265051e9b88b2f17f166dfb",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 408,
+            "timestamp": 13.604133738601822,
+            "source": "track:34",
+            "crop_reference": "test7:frame408:track:34",
+            "mask_used": true,
+            "embedding_cache_key": "ceb689ecd212b24cb5d15c71f784657a13b061c5039aef8fdd496890d4b0a7d3",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_004",
+          "source_id": "sam_candidate_004",
+          "candidate_frame": 636,
+          "candidate_time": 21.20644376899696,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 420,
+          "query_last_trusted_time": 14.004255319148935,
+          "gap_seconds": 7.202188449848023,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.269097238779068,
+                0.2928304970264435,
+                0.6110749244689941
+              ]
+            ],
+            "max_similarity": 0.6110749244689941,
+            "mean_top2": 0.4519527107477188,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 408
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "6358e94368be20a8796b1c320a2bb6a0b9c7a370af4b1620e7492c341672d053",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": null,
+          "best_candidate_similarity": 0.6110749244689941,
+          "second_candidate_similarity": null,
+          "decision": "MATCH",
+          "reason": "semantic/temporal gates pass; appearance clears threshold and competitor margin",
+          "sam_reinitialization_authorized": true
+        }
+      ],
+      "decision": "MATCH"
+    }
+  ],
+  "decision": "MATCH",
+  "match_candidate_id": "candidate_004",
+  "appearance_bank_last_attempt": {
+    "entity_id": "phone_01",
+    "max_prototypes": 4,
+    "prototypes": [
+      {
+        "entity_id": "phone_01",
+        "frame_index": 216,
+        "timestamp": 7.202188449848024,
+        "source": "track:29",
+        "crop_reference": "test7:frame216:track:29",
+        "mask_used": true,
+        "embedding_cache_key": "81e767cee9c224f8eb2839e1e4e0fe592e28877c6d255e0fa4b694505830ee06",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 336,
+        "timestamp": 11.203404255319148,
+        "source": "track:32",
+        "crop_reference": "test7:frame336:track:32",
+        "mask_used": true,
+        "embedding_cache_key": "806d3e372908b3e1b1898a5457bce36396e4b9975265051e9b88b2f17f166dfb",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 408,
+        "timestamp": 13.604133738601822,
+        "source": "track:34",
+        "crop_reference": "test7:frame408:track:34",
+        "mask_used": true,
+        "embedding_cache_key": "ceb689ecd212b24cb5d15c71f784657a13b061c5039aef8fdd496890d4b0a7d3",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      }
+    ]
+  },
+  "sam_reinitialization_status": "EXECUTED",
+  "gt_accessed": false
+}

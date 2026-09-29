@@ -1,0 +1,4802 @@
+{
+  "schema": "v29_dense_window_1",
+  "task": "test6",
+  "event_id": "test6-V292E03",
+  "source_video": "test6.mp4",
+  "sampling": {
+    "native_fps": 29.986410991997584,
+    "processed_frames": 46,
+    "start_frame": 795,
+    "end_frame": 885,
+    "requested_start_frame": 795,
+    "requested_end_frame": 885,
+    "requested_interval_fully_covered": true
+  },
+  "seed": null,
+  "sam_status": "NO_TRUSTED_SEED",
+  "rows": [
+    {
+      "frame": 795,
+      "time": 26.512009063444108,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2181103527545929,
+          "bbox": [
+            521.3449096679688,
+            311.2024841308594,
+            553.4489135742188,
+            389.9424743652344
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.15574190020561218,
+          "bbox": [
+            568.0932006835938,
+            309.7794189453125,
+            604.3321533203125,
+            389.1890563964844
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.15259668231010437,
+          "bbox": [
+            528.7272338867188,
+            311.1867370605469,
+            553.5729370117188,
+            379.8533935546875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2181103527545929,
+          "bbox": [
+            521.3449096679688,
+            311.2024841308594,
+            553.4489135742188,
+            389.9424743652344
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.15574190020561218,
+          "bbox": [
+            568.0932006835938,
+            309.7794189453125,
+            604.3321533203125,
+            389.1890563964844
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.15259668231010437,
+          "bbox": [
+            528.7272338867188,
+            311.1867370605469,
+            553.5729370117188,
+            379.8533935546875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            740.7528076171875,
+            431.78955078125,
+            1116.5155029296875,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            239.8799285888672,
+            33.3355712890625,
+            364.30206298828125,
+            93.70858001708984
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            610.505859375,
+            358.0364685058594,
+            1216.0218505859375,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            159.43226623535156,
+            418.634521484375,
+            373.2655944824219,
+            488.48675537109375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 795,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            740.7528076171875,
+            431.78955078125,
+            1116.5155029296875,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            239.8799285888672,
+            33.3355712890625,
+            364.30206298828125,
+            93.70858001708984
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            610.505859375,
+            358.0364685058594,
+            1216.0218505859375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            159.43226623535156,
+            418.634521484375,
+            373.2655944824219,
+            488.48675537109375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 797,
+      "time": 26.57870594159114,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            752.7352905273438,
+            430.99853515625,
+            1145.609619140625,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            253.790771484375,
+            34.605472564697266,
+            376.2811279296875,
+            92.52716064453125
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            620.4847412109375,
+            352.9351501464844,
+            1251.9993896484375,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            177.7051239013672,
+            416.3147888183594,
+            387.6774597167969,
+            483.2715759277344
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 797,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            752.7352905273438,
+            430.99853515625,
+            1145.609619140625,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            253.790771484375,
+            34.605472564697266,
+            376.2811279296875,
+            92.52716064453125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            620.4847412109375,
+            352.9351501464844,
+            1251.9993896484375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            177.7051239013672,
+            416.3147888183594,
+            387.6774597167969,
+            483.2715759277344
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 799,
+      "time": 26.645402819738166,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.22766345739364624,
+          "bbox": [
+            549.9932250976562,
+            307.4255065917969,
+            573.44873046875,
+            348.0406494140625
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.22766345739364624,
+          "bbox": [
+            549.9932250976562,
+            307.4255065917969,
+            573.44873046875,
+            348.0406494140625
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            762.4677734375,
+            431.46429443359375,
+            1158.0654296875,
+            719.9698486328125
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            358.1524353027344,
+            298.8868408203125,
+            413.2139587402344,
+            374.043212890625
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            168.20779418945312,
+            365.678466796875,
+            201.77325439453125,
+            487.72021484375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            265.84588623046875,
+            33.89411926269531,
+            384.66571044921875,
+            91.00300598144531
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            633.235595703125,
+            352.05975341796875,
+            1259.923095703125,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            191.21530151367188,
+            412.8338317871094,
+            396.69580078125,
+            481.6722106933594
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 799,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            762.4677734375,
+            431.46429443359375,
+            1158.0654296875,
+            719.9698486328125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            358.1524353027344,
+            298.8868408203125,
+            413.2139587402344,
+            374.043212890625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            168.20779418945312,
+            365.678466796875,
+            201.77325439453125,
+            487.72021484375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            265.84588623046875,
+            33.89411926269531,
+            384.66571044921875,
+            91.00300598144531
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            633.235595703125,
+            352.05975341796875,
+            1259.923095703125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            191.21530151367188,
+            412.8338317871094,
+            396.69580078125,
+            481.6722106933594
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 801,
+      "time": 26.712099697885197,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            767.6732177734375,
+            428.65838623046875,
+            1176.419677734375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            780.0946044921875,
+            168.6099090576172,
+            1176.4666748046875,
+            416.7169189453125
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            366.32080078125,
+            296.8038330078125,
+            416.21697998046875,
+            371.3133544921875
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            177.18505859375,
+            361.68939208984375,
+            210.62911987304688,
+            478.08392333984375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            274.88824462890625,
+            31.884033203125,
+            392.1492614746094,
+            88.42236328125
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            643.1149291992188,
+            356.5882263183594,
+            1256.7210693359375,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            200.40377807617188,
+            409.36126708984375,
+            398.1984558105469,
+            478.8433532714844
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 801,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            767.6732177734375,
+            428.65838623046875,
+            1176.419677734375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            780.0946044921875,
+            168.6099090576172,
+            1176.4666748046875,
+            416.7169189453125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            366.32080078125,
+            296.8038330078125,
+            416.21697998046875,
+            371.3133544921875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            177.18505859375,
+            361.68939208984375,
+            210.62911987304688,
+            478.08392333984375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            274.88824462890625,
+            31.884033203125,
+            392.1492614746094,
+            88.42236328125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            643.1149291992188,
+            356.5882263183594,
+            1256.7210693359375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            200.40377807617188,
+            409.36126708984375,
+            398.1984558105469,
+            478.8433532714844
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 803,
+      "time": 26.778796576032224,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16068127751350403,
+          "bbox": [
+            597.8353881835938,
+            301.6268005371094,
+            634.554443359375,
+            380.48291015625
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16068127751350403,
+          "bbox": [
+            597.8353881835938,
+            301.6268005371094,
+            634.554443359375,
+            380.48291015625
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            770.2907104492188,
+            429.52679443359375,
+            1181.2406005859375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.2958984375,
+            169.2826385498047,
+            1184.756591796875,
+            414.61053466796875
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            371.6971130371094,
+            293.9936218261719,
+            419.4637145996094,
+            367.4630126953125
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            183.11676025390625,
+            356.59881591796875,
+            217.39085388183594,
+            476.5931091308594
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            279.3467712402344,
+            27.64546012878418,
+            397.2816162109375,
+            85.46821594238281
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.0445556640625,
+            349.6171875,
+            1239.9033203125,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            206.4466552734375,
+            407.22283935546875,
+            403.9085693359375,
+            475.15447998046875
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 803,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            770.2907104492188,
+            429.52679443359375,
+            1181.2406005859375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.2958984375,
+            169.2826385498047,
+            1184.756591796875,
+            414.61053466796875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            371.6971130371094,
+            293.9936218261719,
+            419.4637145996094,
+            367.4630126953125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            183.11676025390625,
+            356.59881591796875,
+            217.39085388183594,
+            476.5931091308594
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            279.3467712402344,
+            27.64546012878418,
+            397.2816162109375,
+            85.46821594238281
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.0445556640625,
+            349.6171875,
+            1239.9033203125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            206.4466552734375,
+            407.22283935546875,
+            403.9085693359375,
+            475.15447998046875
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 805,
+      "time": 26.845493454179255,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.6004638671875,
+            424.37469482421875,
+            1181.21240234375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.53515625,
+            165.00973510742188,
+            1186.2259521484375,
+            411.43975830078125
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            373.3743591308594,
+            288.7437438964844,
+            425.92205810546875,
+            362.9163513183594
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            185.25889587402344,
+            350.9234313964844,
+            219.22637939453125,
+            473.132080078125
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            280.68975830078125,
+            21.807525634765625,
+            398.7208251953125,
+            79.55242156982422
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.107421875,
+            344.9287109375,
+            1259.871826171875,
+            720.0
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            204.8678436279297,
+            401.6171875,
+            405.6509704589844,
+            464.8728942871094
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 805,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.6004638671875,
+            424.37469482421875,
+            1181.21240234375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.53515625,
+            165.00973510742188,
+            1186.2259521484375,
+            411.43975830078125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            373.3743591308594,
+            288.7437438964844,
+            425.92205810546875,
+            362.9163513183594
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            185.25889587402344,
+            350.9234313964844,
+            219.22637939453125,
+            473.132080078125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            280.68975830078125,
+            21.807525634765625,
+            398.7208251953125,
+            79.55242156982422
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.107421875,
+            344.9287109375,
+            1259.871826171875,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            204.8678436279297,
+            401.6171875,
+            405.6509704589844,
+            464.8728942871094
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 807,
+      "time": 26.912190332326283,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16801954805850983,
+          "bbox": [
+            552.36328125,
+            292.9410400390625,
+            584.060546875,
+            371.5147399902344
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16801954805850983,
+          "bbox": [
+            552.36328125,
+            292.9410400390625,
+            584.060546875,
+            371.5147399902344
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.6090698242188,
+            422.01776123046875,
+            1177.6917724609375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            784.7781982421875,
+            157.60189819335938,
+            1187.3880615234375,
+            407.6985778808594
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            371.82763671875,
+            281.87139892578125,
+            426.1209411621094,
+            358.1824645996094
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            181.9268035888672,
+            346.24285888671875,
+            218.33761596679688,
+            464.84686279296875
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            279.07415771484375,
+            13.873138427734375,
+            398.52545166015625,
+            72.81985473632812
+          ],
+          "label": "book",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            641.9293823242188,
+            343.82080078125,
+            1269.8671875,
+            718.7211303710938
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            203.5597381591797,
+            394.12152099609375,
+            410.675537109375,
+            460.726318359375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 807,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.6090698242188,
+            422.01776123046875,
+            1177.6917724609375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            784.7781982421875,
+            157.60189819335938,
+            1187.3880615234375,
+            407.6985778808594
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            371.82763671875,
+            281.87139892578125,
+            426.1209411621094,
+            358.1824645996094
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            181.9268035888672,
+            346.24285888671875,
+            218.33761596679688,
+            464.84686279296875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0069",
+          "anchor_key": "test6::test6-V292E03::entity_0069",
+          "bbox": [
+            279.07415771484375,
+            13.873138427734375,
+            398.52545166015625,
+            72.81985473632812
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0069",
+          "label": "book",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            641.9293823242188,
+            343.82080078125,
+            1269.8671875,
+            718.7211303710938
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            203.5597381591797,
+            394.12152099609375,
+            410.675537109375,
+            460.726318359375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 809,
+      "time": 26.978887210473314,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.20047636330127716,
+          "bbox": [
+            554.437255859375,
+            286.99591064453125,
+            583.2108764648438,
+            365.8055419921875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.20047636330127716,
+          "bbox": [
+            554.437255859375,
+            286.99591064453125,
+            583.2108764648438,
+            365.8055419921875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.3720092773438,
+            418.711669921875,
+            1179.7178955078125,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.1424560546875,
+            151.2584686279297,
+            1191.505126953125,
+            404.9044189453125
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            367.7626647949219,
+            275.957275390625,
+            423.7653503417969,
+            351.1259460449219
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            178.1178436279297,
+            339.16448974609375,
+            213.1735076904297,
+            454.59027099609375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.49755859375,
+            341.4495544433594,
+            1257.655029296875,
+            718.201171875
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            203.552734375,
+            398.1866149902344,
+            411.91302490234375,
+            459.71917724609375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 809,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            769.3720092773438,
+            418.711669921875,
+            1179.7178955078125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            785.1424560546875,
+            151.2584686279297,
+            1191.505126953125,
+            404.9044189453125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            367.7626647949219,
+            275.957275390625,
+            423.7653503417969,
+            351.1259460449219
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            178.1178436279297,
+            339.16448974609375,
+            213.1735076904297,
+            454.59027099609375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            644.49755859375,
+            341.4495544433594,
+            1257.655029296875,
+            718.201171875
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            203.552734375,
+            398.1866149902344,
+            411.91302490234375,
+            459.71917724609375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 811,
+      "time": 27.04558408862034,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            763.5576171875,
+            413.19970703125,
+            1188.0150146484375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            786.4227294921875,
+            141.18972778320312,
+            1200.72216796875,
+            399.1398620605469
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            363.72991943359375,
+            267.14593505859375,
+            418.7486267089844,
+            344.2017517089844
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            170.2454833984375,
+            329.71490478515625,
+            211.01803588867188,
+            455.4715576171875
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            638.8740844726562,
+            331.8673400878906,
+            1261.737060546875,
+            718.4201049804688
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            190.95858764648438,
+            383.777587890625,
+            401.6250915527344,
+            451.75775146484375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 811,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            763.5576171875,
+            413.19970703125,
+            1188.0150146484375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            786.4227294921875,
+            141.18972778320312,
+            1200.72216796875,
+            399.1398620605469
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            363.72991943359375,
+            267.14593505859375,
+            418.7486267089844,
+            344.2017517089844
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            170.2454833984375,
+            329.71490478515625,
+            211.01803588867188,
+            455.4715576171875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            638.8740844726562,
+            331.8673400878906,
+            1261.737060546875,
+            718.4201049804688
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            190.95858764648438,
+            383.777587890625,
+            401.6250915527344,
+            451.75775146484375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 813,
+      "time": 27.112280966767372,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2918597459793091,
+          "bbox": [
+            552.7499389648438,
+            271.16064453125,
+            577.4418334960938,
+            347.72186279296875
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.19262966513633728,
+          "bbox": [
+            591.93505859375,
+            270.88568115234375,
+            628.76123046875,
+            350.9036560058594
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2918597459793091,
+          "bbox": [
+            552.7499389648438,
+            271.16064453125,
+            577.4418334960938,
+            347.72186279296875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.19262966513633728,
+          "bbox": [
+            591.93505859375,
+            270.88568115234375,
+            628.76123046875,
+            350.9036560058594
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            763.68505859375,
+            402.4141540527344,
+            1210.76318359375,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            790.3310546875,
+            131.107177734375,
+            1219.0511474609375,
+            390.5107116699219
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            356.042724609375,
+            256.7736511230469,
+            415.01336669921875,
+            334.8444519042969
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            160.2115936279297,
+            319.37701416015625,
+            196.8406219482422,
+            446.6026611328125
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            417.33538818359375,
+            229.4405517578125,
+            453.39794921875,
+            338.5955505371094
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            641.619873046875,
+            324.7342224121094,
+            1262.4140625,
+            719.7139892578125
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            182.58395385742188,
+            374.79296875,
+            396.2198486328125,
+            440.05224609375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 813,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            763.68505859375,
+            402.4141540527344,
+            1210.76318359375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            790.3310546875,
+            131.107177734375,
+            1219.0511474609375,
+            390.5107116699219
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            356.042724609375,
+            256.7736511230469,
+            415.01336669921875,
+            334.8444519042969
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0072",
+          "anchor_key": "test6::test6-V292E03::entity_0072",
+          "bbox": [
+            160.2115936279297,
+            319.37701416015625,
+            196.8406219482422,
+            446.6026611328125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0072",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            417.33538818359375,
+            229.4405517578125,
+            453.39794921875,
+            338.5955505371094
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            641.619873046875,
+            324.7342224121094,
+            1262.4140625,
+            719.7139892578125
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            182.58395385742188,
+            374.79296875,
+            396.2198486328125,
+            440.05224609375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 815,
+      "time": 27.1789778449144,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.37404170632362366,
+          "bbox": [
+            547.7188720703125,
+            260.4883728027344,
+            573.467529296875,
+            339.277099609375
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.37404170632362366,
+          "bbox": [
+            547.7188720703125,
+            260.4883728027344,
+            573.467529296875,
+            339.277099609375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            795.3348388671875,
+            115.140869140625,
+            1250.319580078125,
+            383.72259521484375
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            410.44598388671875,
+            218.1337127685547,
+            448.785888671875,
+            328.13189697265625
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0068",
+          "anchor_key": "test6::test6-V292E03::entity_0068",
+          "bbox": [
+            347.14111328125,
+            245.735107421875,
+            407.5198669433594,
+            324.78021240234375
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            640.6222534179688,
+            314.5958557128906,
+            1274.5223388671875,
+            714.8912963867188
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            168.1370849609375,
+            365.6077575683594,
+            380.98583984375,
+            431.736328125
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 815,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            795.3348388671875,
+            115.140869140625,
+            1250.319580078125,
+            383.72259521484375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            410.44598388671875,
+            218.1337127685547,
+            448.785888671875,
+            328.13189697265625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0068",
+          "anchor_key": "test6::test6-V292E03::entity_0068",
+          "bbox": [
+            347.14111328125,
+            245.735107421875,
+            407.5198669433594,
+            324.78021240234375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0068",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            640.6222534179688,
+            314.5958557128906,
+            1274.5223388671875,
+            714.8912963867188
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            168.1370849609375,
+            365.6077575683594,
+            380.98583984375,
+            431.736328125
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 817,
+      "time": 27.24567472306143,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.30390968918800354,
+          "bbox": [
+            542.6656494140625,
+            250.547119140625,
+            569.140625,
+            330.7893981933594
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.18635649979114532,
+          "bbox": [
+            586.3131103515625,
+            250.893310546875,
+            623.2543334960938,
+            333.82763671875
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.30390968918800354,
+          "bbox": [
+            542.6656494140625,
+            250.547119140625,
+            569.140625,
+            330.7893981933594
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.18635649979114532,
+          "bbox": [
+            586.3131103515625,
+            250.893310546875,
+            623.2543334960938,
+            333.82763671875
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            758.2884521484375,
+            328.4369201660156,
+            1278.799560546875,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            804.4264526367188,
+            93.67642211914062,
+            1278.397705078125,
+            380.0218200683594
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            399.4720458984375,
+            206.63491821289062,
+            438.9821472167969,
+            320.12054443359375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0068",
+          "anchor_key": "test6::test6-V292E03::entity_0068",
+          "bbox": [
+            336.9693298339844,
+            235.9144744873047,
+            393.5730895996094,
+            316.588623046875
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            635.733154296875,
+            300.6763000488281,
+            1276.967041015625,
+            715.8092651367188
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            149.7132568359375,
+            356.7183532714844,
+            381.78289794921875,
+            426.98626708984375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 817,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            758.2884521484375,
+            328.4369201660156,
+            1278.799560546875,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            804.4264526367188,
+            93.67642211914062,
+            1278.397705078125,
+            380.0218200683594
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            399.4720458984375,
+            206.63491821289062,
+            438.9821472167969,
+            320.12054443359375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0068",
+          "anchor_key": "test6::test6-V292E03::entity_0068",
+          "bbox": [
+            336.9693298339844,
+            235.9144744873047,
+            393.5730895996094,
+            316.588623046875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0068",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            635.733154296875,
+            300.6763000488281,
+            1276.967041015625,
+            715.8092651367188
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            149.7132568359375,
+            356.7183532714844,
+            381.78289794921875,
+            426.98626708984375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 819,
+      "time": 27.312371601208458,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.21616776287555695,
+          "bbox": [
+            528.45166015625,
+            241.26365661621094,
+            556.134521484375,
+            326.35736083984375
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.21616776287555695,
+          "bbox": [
+            528.45166015625,
+            241.26365661621094,
+            556.134521484375,
+            326.35736083984375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            745.9933471679688,
+            332.6311950683594,
+            1278.88330078125,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            802.7318115234375,
+            80.6512451171875,
+            1279.4603271484375,
+            378.86346435546875
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            631.197509765625,
+            301.81463623046875,
+            1276.660400390625,
+            719.6095581054688
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            118.16280364990234,
+            350.60760498046875,
+            356.8235778808594,
+            421.47406005859375
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 819,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            745.9933471679688,
+            332.6311950683594,
+            1278.88330078125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            802.7318115234375,
+            80.6512451171875,
+            1279.4603271484375,
+            378.86346435546875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            631.197509765625,
+            301.81463623046875,
+            1276.660400390625,
+            719.6095581054688
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            118.16280364990234,
+            350.60760498046875,
+            356.8235778808594,
+            421.47406005859375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 821,
+      "time": 27.37906847935549,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            735.5768432617188,
+            322.1783142089844,
+            1278.5555419921875,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            794.8995971679688,
+            56.108856201171875,
+            1278.90966796875,
+            374.71295166015625
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            610.5003051757812,
+            296.060791015625,
+            1279.0765380859375,
+            719.0225830078125
+          ],
+          "label": "dining table",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            69.62333679199219,
+            340.37255859375,
+            332.6336364746094,
+            419.4482421875
+          ],
+          "label": "book",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 821,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            735.5768432617188,
+            322.1783142089844,
+            1278.5555419921875,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            794.8995971679688,
+            56.108856201171875,
+            1278.90966796875,
+            374.71295166015625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            610.5003051757812,
+            296.060791015625,
+            1279.0765380859375,
+            719.0225830078125
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        },
+        {
+          "anchor_id": "event_anchor_001",
+          "anchor_key": "test6::test6-V292E03::event_anchor_001",
+          "bbox": [
+            69.62333679199219,
+            340.37255859375,
+            332.6336364746094,
+            419.4482421875
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_001",
+          "label": "book",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 823,
+      "time": 27.445765357502516,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.32875245809555054,
+          "bbox": [
+            483.2165222167969,
+            217.69808959960938,
+            511.4172058105469,
+            309.38714599609375
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.25428900122642517,
+          "bbox": [
+            484.26611328125,
+            218.1620330810547,
+            511.3943786621094,
+            265.9837341308594
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.32875245809555054,
+          "bbox": [
+            483.2165222167969,
+            217.69808959960938,
+            511.4172058105469,
+            309.38714599609375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.25428900122642517,
+          "bbox": [
+            484.26611328125,
+            218.1620330810547,
+            511.3943786621094,
+            265.9837341308594
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            722.0612182617188,
+            327.44140625,
+            1280.0,
+            720.0
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            786.2501831054688,
+            35.800865173339844,
+            1279.07080078125,
+            371.6578369140625
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            592.59765625,
+            284.144287109375,
+            1277.1253662109375,
+            718.4932861328125
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 823,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            722.0612182617188,
+            327.44140625,
+            1280.0,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            786.2501831054688,
+            35.800865173339844,
+            1279.07080078125,
+            371.6578369140625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            592.59765625,
+            284.144287109375,
+            1277.1253662109375,
+            718.4932861328125
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 825,
+      "time": 27.512462235649547,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.1899731159210205,
+          "bbox": [
+            453.97430419921875,
+            205.33848571777344,
+            483.5779724121094,
+            257.3420715332031
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.1899731159210205,
+          "bbox": [
+            453.97430419921875,
+            205.33848571777344,
+            483.5779724121094,
+            257.3420715332031
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            699.9010620117188,
+            337.4692687988281,
+            1277.7874755859375,
+            714.5792846679688
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            775.3148193359375,
+            1.5669353008270264,
+            1279.191650390625,
+            362.4754638671875
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            554.8187255859375,
+            265.8994140625,
+            1280.0,
+            717.3800659179688
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 825,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            699.9010620117188,
+            337.4692687988281,
+            1277.7874755859375,
+            714.5792846679688
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            775.3148193359375,
+            1.5669353008270264,
+            1279.191650390625,
+            362.4754638671875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            554.8187255859375,
+            265.8994140625,
+            1280.0,
+            717.3800659179688
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 827,
+      "time": 27.579159113796575,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            854.6888427734375,
+            381.68548583984375,
+            1278.37939453125,
+            710.2902221679688
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            757.9593505859375,
+            0.0,
+            1278.816162109375,
+            358.521240234375
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            106.63427734375,
+            169.859375,
+            228.16036987304688
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            406.0705261230469,
+            192.3348846435547,
+            464.68585205078125,
+            296.50726318359375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            534.0875854492188,
+            258.2454528808594,
+            1277.019287109375,
+            718.05078125
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 827,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            854.6888427734375,
+            381.68548583984375,
+            1278.37939453125,
+            710.2902221679688
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            757.9593505859375,
+            0.0,
+            1278.816162109375,
+            358.521240234375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            106.63427734375,
+            169.859375,
+            228.16036987304688
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0071",
+          "anchor_key": "test6::test6-V292E03::entity_0071",
+          "bbox": [
+            406.0705261230469,
+            192.3348846435547,
+            464.68585205078125,
+            296.50726318359375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0071",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            534.0875854492188,
+            258.2454528808594,
+            1277.019287109375,
+            718.05078125
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 829,
+      "time": 27.645855991943606,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            651.8729248046875,
+            328.10028076171875,
+            1270.6566162109375,
+            712.9158935546875
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            744.7355346679688,
+            0.0,
+            1279.14501953125,
+            359.9739685058594
+          ],
+          "label": "teddy bear",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            505.55743408203125,
+            250.6456756591797,
+            1280.0,
+            719.227294921875
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 829,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            651.8729248046875,
+            328.10028076171875,
+            1270.6566162109375,
+            712.9158935546875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0060",
+          "anchor_key": "test6::test6-V292E03::entity_0060",
+          "bbox": [
+            744.7355346679688,
+            0.0,
+            1279.14501953125,
+            359.9739685058594
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0060",
+          "label": "teddy bear",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            505.55743408203125,
+            250.6456756591797,
+            1280.0,
+            719.227294921875
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 831,
+      "time": 27.712552870090637,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            639.76806640625,
+            257.012939453125,
+            1244.997802734375,
+            712.87060546875
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.1825358122587204,
+            80.31068420410156,
+            140.82968139648438,
+            258.2154541015625
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            476.5882263183594,
+            256.4617919921875,
+            1274.7698974609375,
+            707.1737060546875
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 831,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            639.76806640625,
+            257.012939453125,
+            1244.997802734375,
+            712.87060546875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.1825358122587204,
+            80.31068420410156,
+            140.82968139648438,
+            258.2154541015625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            476.5882263183594,
+            256.4617919921875,
+            1274.7698974609375,
+            707.1737060546875
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 833,
+      "time": 27.779249748237664,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2769799530506134,
+          "bbox": [
+            330.1023864746094,
+            170.4050750732422,
+            367.48773193359375,
+            232.00875854492188
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2769799530506134,
+          "bbox": [
+            330.1023864746094,
+            170.4050750732422,
+            367.48773193359375,
+            232.00875854492188
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            623.2216796875,
+            422.34246826171875,
+            1206.9764404296875,
+            713.4542846679688
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            725.188720703125,
+            1.6389974355697632,
+            1279.2540283203125,
+            465.26751708984375
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            95.02293395996094,
+            97.245361328125,
+            258.87139892578125
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            98.72801208496094,
+            96.5260009765625,
+            182.4263153076172,
+            266.247802734375
+          ],
+          "label": "bottle",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            461.6103515625,
+            273.965576171875,
+            1257.0732421875,
+            697.144287109375
+          ],
+          "label": "dining table",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 5,
+      "provenance": {
+        "video_frame": 833,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            623.2216796875,
+            422.34246826171875,
+            1206.9764404296875,
+            713.4542846679688
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            725.188720703125,
+            1.6389974355697632,
+            1279.2540283203125,
+            465.26751708984375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            95.02293395996094,
+            97.245361328125,
+            258.87139892578125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            98.72801208496094,
+            96.5260009765625,
+            182.4263153076172,
+            266.247802734375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "event_anchor_005",
+          "anchor_key": "test6::test6-V292E03::event_anchor_005",
+          "bbox": [
+            461.6103515625,
+            273.965576171875,
+            1257.0732421875,
+            697.144287109375
+          ],
+          "entity_id": "test6::test6-V292E03::event_anchor_005",
+          "label": "dining table",
+          "visible": true,
+          "scope": "EVENT_LOCAL_ANCHOR"
+        }
+      ]
+    },
+    {
+      "frame": 835,
+      "time": 27.845946626384695,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.4570697247982025,
+          "bbox": [
+            385.49920654296875,
+            188.551513671875,
+            437.06591796875,
+            307.2901306152344
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.31238967180252075,
+          "bbox": [
+            300.00396728515625,
+            183.46875,
+            358.22589111328125,
+            304.3538818359375
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.19034689664840698,
+          "bbox": [
+            319.60693359375,
+            183.4471893310547,
+            358.196533203125,
+            290.4368591308594
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.4570697247982025,
+          "bbox": [
+            385.49920654296875,
+            188.551513671875,
+            437.06591796875,
+            307.2901306152344
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.31238967180252075,
+          "bbox": [
+            300.00396728515625,
+            183.46875,
+            358.22589111328125,
+            304.3538818359375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.19034689664840698,
+          "bbox": [
+            319.60693359375,
+            183.4471893310547,
+            358.196533203125,
+            290.4368591308594
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            619.2412109375,
+            490.097412109375,
+            1177.049560546875,
+            717.4766845703125
+          ],
+          "label": "person",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            722.82958984375,
+            31.267822265625,
+            1279.445556640625,
+            558.18994140625
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2923075556755066,
+            145.22109985351562,
+            89.51353454589844,
+            273.0867614746094
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            81.11250305175781,
+            105.15472412109375,
+            167.511962890625,
+            277.8783264160156
+          ],
+          "label": "bottle",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 4,
+      "provenance": {
+        "video_frame": 835,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0070",
+          "anchor_key": "test6::test6-V292E03::entity_0070",
+          "bbox": [
+            619.2412109375,
+            490.097412109375,
+            1177.049560546875,
+            717.4766845703125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0070",
+          "label": "person",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            722.82958984375,
+            31.267822265625,
+            1279.445556640625,
+            558.18994140625
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2923075556755066,
+            145.22109985351562,
+            89.51353454589844,
+            273.0867614746094
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            81.11250305175781,
+            105.15472412109375,
+            167.511962890625,
+            277.8783264160156
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 837,
+      "time": 27.912643504531722,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.24404756724834442,
+          "bbox": [
+            391.7215270996094,
+            213.2946014404297,
+            436.27490234375,
+            329.6104431152344
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2141980677843094,
+          "bbox": [
+            299.644287109375,
+            206.86279296875,
+            358.268310546875,
+            327.755859375
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.24404756724834442,
+          "bbox": [
+            391.7215270996094,
+            213.2946014404297,
+            436.27490234375,
+            329.6104431152344
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2141980677843094,
+          "bbox": [
+            299.644287109375,
+            206.86279296875,
+            358.268310546875,
+            327.755859375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            726.68505859375,
+            122.72518157958984,
+            1279.056884765625,
+            662.8339233398438
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2378641813993454,
+            165.00039672851562,
+            84.80122375488281,
+            292.82977294921875
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            77.37373352050781,
+            126.18563079833984,
+            164.27395629882812,
+            298.35186767578125
+          ],
+          "label": "bottle",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 837,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            726.68505859375,
+            122.72518157958984,
+            1279.056884765625,
+            662.8339233398438
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2378641813993454,
+            165.00039672851562,
+            84.80122375488281,
+            292.82977294921875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            77.37373352050781,
+            126.18563079833984,
+            164.27395629882812,
+            298.35186767578125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 839,
+      "time": 27.979340382678753,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2017775923013687,
+          "bbox": [
+            326.5107116699219,
+            232.8520965576172,
+            363.8791198730469,
+            294.47296142578125
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2017775923013687,
+          "bbox": [
+            326.5107116699219,
+            232.8520965576172,
+            363.8791198730469,
+            294.47296142578125
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            727.6822509765625,
+            168.887939453125,
+            1280.0,
+            698.5167236328125
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2413330078125,
+            187.79150390625,
+            85.67692565917969,
+            314.10369873046875
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            87.26983642578125,
+            153.21371459960938,
+            172.86167907714844,
+            320.0955505371094
+          ],
+          "label": "bottle",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 839,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            727.6822509765625,
+            168.887939453125,
+            1280.0,
+            698.5167236328125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.2413330078125,
+            187.79150390625,
+            85.67692565917969,
+            314.10369873046875
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            87.26983642578125,
+            153.21371459960938,
+            172.86167907714844,
+            320.0955505371094
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 841,
+      "time": 28.04603726082578,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.23194094002246857,
+          "bbox": [
+            328.6046142578125,
+            257.76507568359375,
+            379.7904968261719,
+            374.5411071777344
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16555410623550415,
+          "bbox": [
+            410.69384765625,
+            265.992431640625,
+            453.083984375,
+            382.82330322265625
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.23194094002246857,
+          "bbox": [
+            328.6046142578125,
+            257.76507568359375,
+            379.7904968261719,
+            374.5411071777344
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.16555410623550415,
+          "bbox": [
+            410.69384765625,
+            265.992431640625,
+            453.083984375,
+            382.82330322265625
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            731.8665771484375,
+            239.22705078125,
+            1278.8841552734375,
+            703.1798095703125
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.95745849609375,
+            210.921630859375,
+            117.60813903808594,
+            333.887939453125
+          ],
+          "label": "potted plant",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            108.08689880371094,
+            179.0870819091797,
+            191.41831970214844,
+            339.84423828125
+          ],
+          "label": "bottle",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 841,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            731.8665771484375,
+            239.22705078125,
+            1278.8841552734375,
+            703.1798095703125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.95745849609375,
+            210.921630859375,
+            117.60813903808594,
+            333.887939453125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0075",
+          "anchor_key": "test6::test6-V292E03::entity_0075",
+          "bbox": [
+            108.08689880371094,
+            179.0870819091797,
+            191.41831970214844,
+            339.84423828125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0075",
+          "label": "bottle",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 843,
+      "time": 28.11273413897281,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.29730674624443054,
+          "bbox": [
+            427.696044921875,
+            290.71246337890625,
+            469.2696228027344,
+            399.82220458984375
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.18371815979480743,
+          "bbox": [
+            356.1750183105469,
+            281.26727294921875,
+            395.62481689453125,
+            394.4287109375
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.29730674624443054,
+          "bbox": [
+            427.696044921875,
+            290.71246337890625,
+            469.2696228027344,
+            399.82220458984375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.18371815979480743,
+          "bbox": [
+            356.1750183105469,
+            281.26727294921875,
+            395.62481689453125,
+            394.4287109375
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            735.3094482421875,
+            295.06146240234375,
+            1275.069580078125,
+            720.0
+          ],
+          "label": "cake",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 843,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            735.3094482421875,
+            295.06146240234375,
+            1275.069580078125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 845,
+      "time": 28.17943101711984,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            745.17724609375,
+            328.5204162597656,
+            1266.044189453125,
+            720.0
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            114.2760009765625,
+            86.67887878417969,
+            346.2540283203125
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 3,
+      "provenance": {
+        "video_frame": 845,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            745.17724609375,
+            328.5204162597656,
+            1266.044189453125,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.0,
+            114.2760009765625,
+            86.67887878417969,
+            346.2540283203125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 847,
+      "time": 28.24612789526687,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            757.8377685546875,
+            359.73211669921875,
+            1252.59130859375,
+            720.0
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.3123576045036316,
+            116.349609375,
+            129.8319549560547,
+            354.1257019042969
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 847,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            757.8377685546875,
+            359.73211669921875,
+            1252.59130859375,
+            720.0
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.3123576045036316,
+            116.349609375,
+            129.8319549560547,
+            354.1257019042969
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 849,
+      "time": 28.312824773413897,
+      "yolo_phone_detections": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2984761893749237,
+          "bbox": [
+            440.48388671875,
+            317.88922119140625,
+            470.126953125,
+            417.1442565917969
+          ]
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.29230934381484985,
+          "bbox": [
+            494.300537109375,
+            328.6095886230469,
+            536.4750366210938,
+            434.0548095703125
+          ]
+        }
+      ],
+      "phone_candidates": [
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.2984761893749237,
+          "bbox": [
+            440.48388671875,
+            317.88922119140625,
+            470.126953125,
+            417.1442565917969
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        },
+        {
+          "label": "cell phone",
+          "class_id": 67,
+          "confidence": 0.29230934381484985,
+          "bbox": [
+            494.300537109375,
+            328.6095886230469,
+            536.4750366210938,
+            434.0548095703125
+          ],
+          "entity_id": null,
+          "identity": "CANDIDATE_ONLY"
+        }
+      ],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            779.3665771484375,
+            385.8995056152344,
+            1260.9095458984375,
+            718.4618530273438
+          ],
+          "label": "cake",
+          "visible": true
+        },
+        {
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.116943359375,
+            133.118408203125,
+            173.5399627685547,
+            358.07464599609375
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 2,
+      "provenance": {
+        "video_frame": 849,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            779.3665771484375,
+            385.8995056152344,
+            1260.9095458984375,
+            718.4618530273438
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        },
+        {
+          "anchor_id": "entity_0077",
+          "anchor_key": "test6::test6-V292E03::entity_0077",
+          "bbox": [
+            0.116943359375,
+            133.118408203125,
+            173.5399627685547,
+            358.07464599609375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0077",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 851,
+      "time": 28.37952165156093,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            806.0355224609375,
+            409.92498779296875,
+            1279.844482421875,
+            718.4339599609375
+          ],
+          "label": "cake",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 851,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            806.0355224609375,
+            409.92498779296875,
+            1279.844482421875,
+            718.4339599609375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 853,
+      "time": 28.446218529707956,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            841.2049560546875,
+            435.05072021484375,
+            1280.0,
+            719.06689453125
+          ],
+          "label": "cake",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 853,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0076",
+          "anchor_key": "test6::test6-V292E03::entity_0076",
+          "bbox": [
+            841.2049560546875,
+            435.05072021484375,
+            1280.0,
+            719.06689453125
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0076",
+          "label": "cake",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 855,
+      "time": 28.512915407854987,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 855,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 857,
+      "time": 28.579612286002014,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [
+        {
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            358.158935546875,
+            297.50640869140625,
+            426.61077880859375,
+            376.17425537109375
+          ],
+          "label": "potted plant",
+          "visible": true
+        }
+      ],
+      "known_anchor_count": 1,
+      "provenance": {
+        "video_frame": 857,
+        "seed_mask": null
+      },
+      "recovered_anchors": [
+        {
+          "anchor_id": "entity_0073",
+          "anchor_key": "test6::test6-V292E03::entity_0073",
+          "bbox": [
+            358.158935546875,
+            297.50640869140625,
+            426.61077880859375,
+            376.17425537109375
+          ],
+          "entity_id": "test6::test6-V292E03::entity_0073",
+          "label": "potted plant",
+          "visible": true,
+          "scope": "PERSISTENT"
+        }
+      ]
+    },
+    {
+      "frame": 859,
+      "time": 28.646309164149045,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 859,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 861,
+      "time": 28.713006042296072,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 861,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 863,
+      "time": 28.779702920443103,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 863,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 865,
+      "time": 28.84639979859013,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 865,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 867,
+      "time": 28.91309667673716,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 867,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 869,
+      "time": 28.97979355488419,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 869,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 871,
+      "time": 29.04649043303122,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 871,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 873,
+      "time": 29.113187311178248,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 873,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 875,
+      "time": 29.17988418932528,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 875,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 877,
+      "time": 29.246581067472306,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 877,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 879,
+      "time": 29.313277945619337,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 879,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 881,
+      "time": 29.379974823766364,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 881,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 883,
+      "time": 29.446671701913395,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 883,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    },
+    {
+      "frame": 885,
+      "time": 29.513368580060423,
+      "yolo_phone_detections": [],
+      "phone_candidates": [],
+      "sam_phone": null,
+      "identity_authorized": false,
+      "phone_01_state": "UNOBSERVED",
+      "anchors": [],
+      "known_anchor_count": 0,
+      "provenance": {
+        "video_frame": 885,
+        "seed_mask": null
+      },
+      "recovered_anchors": []
+    }
+  ],
+  "runtime_seconds": 1.452999999979511,
+  "peak_vram_bytes": 1389156352,
+  "signature": "678a7e2ae758caadf7f3d55475ea31250d8bb8abf676dd081a95ed31e618cab6"
+}

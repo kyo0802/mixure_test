@@ -1,0 +1,78 @@
+[
+  {
+    "track_id": 61,
+    "entity_id": "entity_0056",
+    "decision": "NEW_ENTITY",
+    "candidates": [
+      {
+        "previous_track_id": 49,
+        "track_id": 61,
+        "temporal_gap": 1.6004863221884484,
+        "temporal_compatible": true,
+        "semantic_compatibility": false,
+        "appearance_similarity": 0.28649633980857214,
+        "center_distance": 0.44532995861192093,
+        "motion_prediction_error": 0.49259850896035057,
+        "bbox_area_ratio": 0.04479028948057655,
+        "context_jaccard": 0.0,
+        "stable_anchor_context": null,
+        "interaction_continuity": null,
+        "score": 0.09266744536465812,
+        "eligible": false,
+        "semantic_note": "Detector hypotheses only; equality never suffices for association.",
+        "entity_id": "entity_0046",
+        "temporal_overlap": false,
+        "quality_veto": false
+      },
+      {
+        "previous_track_id": 51,
+        "track_id": 61,
+        "temporal_gap": 1.8005471124620058,
+        "temporal_compatible": true,
+        "semantic_compatibility": false,
+        "appearance_similarity": 0.1625683470944966,
+        "center_distance": 0.2983796484373515,
+        "motion_prediction_error": 0.12644089027551839,
+        "bbox_area_ratio": 0.18506345266359098,
+        "context_jaccard": 0.0,
+        "stable_anchor_context": null,
+        "interaction_continuity": null,
+        "score": 0.07653002202788763,
+        "eligible": false,
+        "semantic_note": "Detector hypotheses only; equality never suffices for association.",
+        "entity_id": "entity_0048",
+        "temporal_overlap": false,
+        "quality_veto": false
+      }
+    ],
+    "reason": "no forced merge; independent hypothesis"
+  },
+  {
+    "track_id": 71,
+    "entity_id": "entity_0056",
+    "decision": "MATCH",
+    "candidates": [
+      {
+        "previous_track_id": 61,
+        "track_id": 71,
+        "temporal_gap": 1.600486322188452,
+        "temporal_compatible": true,
+        "semantic_compatibility": true,
+        "appearance_similarity": 0.9651152152645852,
+        "center_distance": 0.012574691983254328,
+        "motion_prediction_error": 0.041076016124970756,
+        "bbox_area_ratio": 0.6918824056875845,
+        "context_jaccard": 1.0,
+        "stable_anchor_context": null,
+        "interaction_continuity": null,
+        "score": 0.8486596235924487,
+        "eligible": true,
+        "semantic_note": "Detector hypotheses only; equality never suffices for association.",
+        "entity_id": "entity_0056",
+        "temporal_overlap": false,
+        "quality_veto": false
+      }
+    ],
+    "reason": "multi-cue gated match"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0061",
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0064",
+      "raw_label": "bottle",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    },
+    {
+      "entity_id": "entity_0066",
+      "raw_label": "potted plant",
+      "semantic_roles": [
+        "OCCLUDER",
+        "LANDMARK"
+      ],
+      "hop": 1,
+      "via_primary": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0061",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0007",
+      "status": "LAST_TRUSTED",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0064",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0005",
+      "status": "LAST_TRUSTED",
+      "physical_verification": false
+    },
+    {
+      "source": "phone_01",
+      "relation": "TRUSTED_ANCHOR_CONTEXT",
+      "target": "entity_0066",
+      "kind": "IMAGE_CONTEXT",
+      "segment_id": "P0004",
+      "status": "LAST_TRUSTED",
+      "physical_verification": false
+    }
+  ],
+  "connected": true,
+  "schema": "v292_sparse_local_subgraph_1",
+  "target": "phone_01"
+}

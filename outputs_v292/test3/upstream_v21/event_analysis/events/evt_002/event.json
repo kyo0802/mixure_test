@@ -1,0 +1,93 @@
+{
+  "event_id": "evt_002",
+  "event_type": "interaction_candidate",
+  "episode_id": "ep_0001",
+  "start_time": 0.0,
+  "peak_time": 0.800136869118905,
+  "end_time": 2.0003421727972626,
+  "involved_track_ids": [
+    2,
+    4,
+    9,
+    12,
+    14,
+    15
+  ],
+  "signals": [
+    "appearance",
+    "disappearance_candidate",
+    "motion_coupling_candidate",
+    "relation_change"
+  ],
+  "signal_evidence": [
+    {
+      "cosine_similarity": 0.9510253665680108,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "from_nearest_track": 9,
+      "to_nearest_track": 12,
+      "meaning": "persistent nearest image-neighbor change"
+    },
+    {
+      "last_visible": 0.800136869118905,
+      "next_visible_or_video_end": 38.97333333333333,
+      "absence_seconds": 38.17319646421443,
+      "interpretation": "undetected, not lost or moved"
+    },
+    {
+      "persistence_observations": 5,
+      "not_semantic_identity": true
+    },
+    {
+      "cosine_similarity": 0.9948940407243526,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "cosine_similarity": 0.990007836231723,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "cosine_similarity": 0.9991845629286021,
+      "support": 5,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "cosine_similarity": 0.9999910209477115,
+      "support": 3,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "persistence_observations": 13,
+      "not_semantic_identity": true
+    },
+    {
+      "cosine_similarity": 0.9499640809790554,
+      "support": 4,
+      "camera_motion_can_explain_signal": true
+    },
+    {
+      "persistence_observations": 14,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 30,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 11,
+      "not_semantic_identity": true
+    },
+    {
+      "persistence_observations": 14,
+      "not_semantic_identity": true
+    }
+  ],
+  "confidence": 0.8858901262283325,
+  "priority": 4.045897674560547,
+  "selected": true,
+  "skip_reason": null
+}

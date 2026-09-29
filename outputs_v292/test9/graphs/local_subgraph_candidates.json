@@ -1,0 +1,78 @@
+{
+  "schema": "v28_local_subgraph_1",
+  "target": "phone_01",
+  "nodes": [
+    {
+      "entity_id": "phone_01",
+      "raw_label": "cell phone",
+      "semantic_roles": [
+        "TARGET"
+      ],
+      "hop": 0,
+      "via_primary": null
+    }
+  ],
+  "edges": [],
+  "primary_segments": [],
+  "context_segments": [],
+  "identity_audit": [
+    {
+      "frame": 546,
+      "observation_id": "test9:phone_01:546:0",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 546,
+      "observation_id": "test9:phone_01:546:1",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 546,
+      "observation_id": "test9:phone_01:546:2",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 546,
+      "observation_id": "test9:phone_01:546:3",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 552,
+      "observation_id": "test9:phone_01:552:4",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 552,
+      "observation_id": "test9:phone_01:552:5",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    },
+    {
+      "frame": 552,
+      "observation_id": "test9:phone_01:552:6",
+      "identity": "TRUSTED",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 618,
+      "observation_id": "test9:phone_01:618:16",
+      "identity": "UNKNOWN",
+      "memory_update_authorized": false
+    },
+    {
+      "frame": 618,
+      "observation_id": "test9:phone_01:618:17",
+      "identity": "TRUSTED",
+      "memory_update_authorized": true
+    }
+  ],
+  "limits": {
+    "primary_per_snapshot": 3,
+    "context_per_primary": 2
+  }
+}

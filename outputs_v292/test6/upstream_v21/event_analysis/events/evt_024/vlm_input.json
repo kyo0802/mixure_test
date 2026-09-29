@@ -1,0 +1,200 @@
+{
+  "tracks": [
+    {
+      "track_id": 29,
+      "detector_hypothesis": "sports ball",
+      "detector_confidence": 0.5905791154274573,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.402900302114804,
+          "visible": true,
+          "bbox": [
+            524.0048217773438,
+            226.58099365234375,
+            778.933837890625,
+            485.40716552734375
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.203262839879154,
+          "visible": true,
+          "bbox": [
+            482.74774169921875,
+            257.241943359375,
+            749.21923828125,
+            526.0595092773438
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 7.803534743202417,
+          "visible": true,
+          "bbox": [
+            448.82464599609375,
+            273.28570556640625,
+            709.2603759765625,
+            537.2325439453125
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 31,
+      "detector_hypothesis": "cell phone",
+      "detector_confidence": 0.6109029696537898,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.402900302114804,
+          "visible": true,
+          "bbox": [
+            558.169921875,
+            493.88055419921875,
+            792.4158935546875,
+            606.5400390625
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.203262839879154,
+          "visible": true,
+          "bbox": [
+            517.9774780273438,
+            538.3453369140625,
+            759.5082397460938,
+            667.46923828125
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 7.803534743202417,
+          "visible": true,
+          "bbox": [
+            477.501708984375,
+            548.9874877929688,
+            714.5562744140625,
+            675.2880249023438
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 27,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.8507575477872577,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.402900302114804,
+          "visible": true,
+          "bbox": [
+            307.32794189453125,
+            207.3017578125,
+            471.6822509765625,
+            291.2662048339844
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.203262839879154,
+          "visible": true,
+          "bbox": [
+            271.87213134765625,
+            212.79324340820312,
+            445.15777587890625,
+            299.7665100097656
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 7.803534743202417,
+          "visible": true,
+          "bbox": [
+            243.21630859375,
+            219.874267578125,
+            419.73333740234375,
+            306.00189208984375
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 32,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.5703706214825313,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 6.402900302114804,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 7.203262839879154,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 7.803534743202417,
+          "visible": true,
+          "bbox": [
+            586.7841186523438,
+            219.8267822265625,
+            669.5167236328125,
+            298.3795166015625
+          ]
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_024",
+    "event_type": "interaction_candidate",
+    "signals": [
+      "appearance",
+      "motion_coupling_candidate"
+    ],
+    "start_time": 6.402900302114804,
+    "peak_time": 7.203262839879154,
+    "end_time": 7.203262839879154,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 6.402900302114804,
+        "visible_ids": [
+          27,
+          29,
+          31
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 7.203262839879154,
+        "visible_ids": [
+          27,
+          29,
+          31
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 7.803534743202417,
+        "visible_ids": [
+          27,
+          29,
+          31,
+          32
+        ]
+      }
+    ]
+  }
+}

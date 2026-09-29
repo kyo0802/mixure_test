@@ -1,0 +1,320 @@
+{
+  "event_id": "evt_012",
+  "analysis_status": "skipped_events_only",
+  "entities": [
+    {
+      "track_id": 1,
+      "entity_id": "track_0001",
+      "detector_class": "chair",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 0.0,
+      "last_seen": 5.00226586102719,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.8066663877910223,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 10,
+      "entity_id": "track_0010",
+      "detector_class": "table",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 0.0,
+      "last_seen": 3.001359516616314,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.7542943421665373,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 11,
+      "entity_id": "track_0011",
+      "detector_class": "refrigerator",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 0.0,
+      "last_seen": 3.8017220543806647,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.6585922872100093,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 15,
+      "entity_id": "track_0015",
+      "detector_class": "tv",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 0.8003625377643505,
+      "last_seen": 3.601631419939577,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.7059831919456081,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 18,
+      "entity_id": "track_0018",
+      "detector_class": "sports ball",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 2.0009063444108763,
+      "last_seen": 3.601631419939577,
+      "attributes": {},
+      "is_anchor": false,
+      "anchor_score": 0.39998346663106626,
+      "admission_status": "unknown",
+      "evidence": []
+    },
+    {
+      "track_id": 19,
+      "entity_id": "track_0019",
+      "detector_class": "chair",
+      "semantic_class": "unknown",
+      "semantic_confidence": 0.0,
+      "first_seen": 2.0009063444108763,
+      "last_seen": 4.802175226586103,
+      "attributes": {},
+      "is_anchor": true,
+      "anchor_score": 0.6547686863065211,
+      "admission_status": "unknown",
+      "evidence": []
+    }
+  ],
+  "relations": [
+    {
+      "subject_track_id": 1,
+      "predicate": "NEAR",
+      "object_track_id": 19,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 1,
+      "predicate": "OVERLAPPING",
+      "object_track_id": 19,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 1,
+      "predicate": "LEFT_OF",
+      "object_track_id": 19,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 1,
+      "predicate": "ABOVE",
+      "object_track_id": 19,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 19,
+      "predicate": "NEAR",
+      "object_track_id": 1,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 19,
+      "predicate": "OVERLAPPING",
+      "object_track_id": 1,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 19,
+      "predicate": "RIGHT_OF",
+      "object_track_id": 1,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    },
+    {
+      "subject_track_id": 19,
+      "predicate": "BELOW",
+      "object_track_id": 1,
+      "confidence": 0.790456235408783,
+      "temporal_phase": "persistent",
+      "start_time": 2.8012688821752265,
+      "end_time": 4.602084592145015,
+      "observed_times": [
+        2.8012688821752265,
+        3.601631419939577,
+        4.602084592145015
+      ],
+      "event_ids": [
+        "evt_012"
+      ],
+      "evidence": {
+        "vlm": false,
+        "tracking": true,
+        "geometry": "supports",
+        "details": {
+          "support_frames": 3,
+          "physical_verification": false
+        }
+      },
+      "reference_frame": "image_relative",
+      "interval_meaning": "sparse visual support span, not continuous verified state"
+    }
+  ],
+  "rejected_relations": [],
+  "notes": [
+    "No VLM analysis: entity semantics are unknown; edges are separately identified 2D geometry only"
+  ]
+}

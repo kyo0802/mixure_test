@@ -1,0 +1,244 @@
+{
+  "tracks": [
+    {
+      "track_id": 52,
+      "detector_hypothesis": "person",
+      "detector_confidence": 0.7123977450224069,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": true,
+          "bbox": [
+            865.8834838867188,
+            424.8775329589844,
+            1278.2998046875,
+            712.5399780273438
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": true,
+          "bbox": [
+            772.77587890625,
+            120.141845703125,
+            1279.198486328125,
+            711.4539794921875
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 32,
+      "detector_hypothesis": "microwave",
+      "detector_confidence": 0.7727850484220605,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": true,
+          "bbox": [
+            231.0872802734375,
+            142.42926025390625,
+            439.29681396484375,
+            246.98985290527344
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": true,
+          "bbox": [
+            205.02255249023438,
+            155.79071044921875,
+            408.00555419921875,
+            254.76300048828125
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": true,
+          "bbox": [
+            181.8179168701172,
+            114.73912048339844,
+            389.73651123046875,
+            214.25390625
+          ]
+        }
+      ]
+    },
+    {
+      "track_id": 51,
+      "detector_hypothesis": "frisbee",
+      "detector_confidence": 0.47011139563151766,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": true,
+          "bbox": [
+            410.75970458984375,
+            244.9364471435547,
+            798.4556884765625,
+            631.5828857421875
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 56,
+      "detector_hypothesis": "sports ball",
+      "detector_confidence": 0.39785092217581614,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": true,
+          "bbox": [
+            410.98388671875,
+            244.0322265625,
+            799.3854370117188,
+            633.4342041015625
+          ]
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 54,
+      "detector_hypothesis": "book",
+      "detector_confidence": 0.4815233588218689,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": true,
+          "bbox": [
+            962.7101440429688,
+            219.633056640625,
+            1279.4207763671875,
+            630.2567749023438
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "track_id": 53,
+      "detector_hypothesis": "chair",
+      "detector_confidence": 0.7468216270208359,
+      "observations": [
+        {
+          "phase": "before",
+          "timestamp": 17.60301112061591,
+          "visible": true,
+          "bbox": [
+            885.5812377929688,
+            201.8343505859375,
+            1012.48046875,
+            317.50958251953125
+          ]
+        },
+        {
+          "phase": "during",
+          "timestamp": 18.60318220701454,
+          "visible": false,
+          "bbox": null
+        },
+        {
+          "phase": "after",
+          "timestamp": 19.8033875106929,
+          "visible": false,
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "event": {
+    "event_id": "evt_031",
+    "event_type": "interaction_candidate",
+    "signals": [
+      "disappearance_candidate",
+      "proximity_change"
+    ],
+    "start_time": 17.60301112061591,
+    "peak_time": 18.60318220701454,
+    "end_time": 19.80321642429427,
+    "bbox_coordinate_system": "original video pixels; images may be resized; match the drawn numeric IDs",
+    "original_image_size": {
+      "width": 1280,
+      "height": 720
+    },
+    "frames": [
+      {
+        "phase": "before",
+        "timestamp": 17.60301112061591,
+        "visible_ids": [
+          32,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "phase": "during",
+        "timestamp": 18.60318220701454,
+        "visible_ids": [
+          32,
+          51,
+          52,
+          56
+        ]
+      },
+      {
+        "phase": "after",
+        "timestamp": 19.8033875106929,
+        "visible_ids": [
+          32
+        ]
+      }
+    ]
+  }
+}

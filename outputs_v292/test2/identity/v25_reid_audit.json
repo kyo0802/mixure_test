@@ -1,0 +1,1577 @@
+{
+  "task": "test2",
+  "parameter_manifest_sha256": "83be58f427c2c7723d026eb52504f7c3f89afd7497595861885a0ca302b404ba",
+  "attempts": [
+    {
+      "frame_index": 498,
+      "timestamp": 16.606287878787878,
+      "query_last_trusted_frame": 348,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_004",
+          "source_id": "sam_candidate_004",
+          "candidate_frame": 498,
+          "candidate_time": 16.606287878787878,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.0018939393939394,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.39435577392578125,
+                0.4672744870185852,
+                0.29852086305618286,
+                0.28344640135765076
+              ]
+            ],
+            "max_similarity": 0.4672744870185852,
+            "mean_top2": 0.4308151304721832,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "dbe73f2416eaacf68b6921a9f304209b87eea341735f5ebae2556090915ba387",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": null,
+          "best_candidate_similarity": 0.4672744870185852,
+          "second_candidate_similarity": null,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 510,
+      "timestamp": 17.006439393939395,
+      "query_last_trusted_frame": 348,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_004",
+          "source_id": "sam_candidate_004",
+          "candidate_frame": 498,
+          "candidate_time": 16.606287878787878,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.0018939393939394,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.39435577392578125,
+                0.4672744870185852,
+                0.29852086305618286,
+                0.28344640135765076
+              ]
+            ],
+            "max_similarity": 0.4672744870185852,
+            "mean_top2": 0.4308151304721832,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "dbe73f2416eaacf68b6921a9f304209b87eea341735f5ebae2556090915ba387",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_005",
+          "source_id": "sam_candidate_005",
+          "candidate_frame": 510,
+          "candidate_time": 17.006439393939395,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.402045454545457,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5068274736404419,
+                0.5200340747833252,
+                0.4755510091781616,
+                0.47245389223098755
+              ]
+            ],
+            "max_similarity": 0.5200340747833252,
+            "mean_top2": 0.5134307742118835,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "5ed62a035e84225499bfe9628f2371782b5821dc86df0a7569d0d783d60eee4d",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_006",
+          "source_id": "sam_candidate_006",
+          "candidate_frame": 510,
+          "candidate_time": 17.006439393939395,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.402045454545457,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.49914807081222534,
+                0.5157907009124756,
+                0.3829024136066437,
+                0.37476229667663574
+              ]
+            ],
+            "max_similarity": 0.5157907009124756,
+            "mean_top2": 0.5074693858623505,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "fc02a0a9c96714a07130007a92c402749d085e5ccb1a0fb44a9a64c43ad5ade8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 516,
+      "timestamp": 17.206515151515152,
+      "query_last_trusted_frame": 348,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_004",
+          "source_id": "sam_candidate_004",
+          "candidate_frame": 498,
+          "candidate_time": 16.606287878787878,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.0018939393939394,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.39435577392578125,
+                0.4672744870185852,
+                0.29852086305618286,
+                0.28344640135765076
+              ]
+            ],
+            "max_similarity": 0.4672744870185852,
+            "mean_top2": 0.4308151304721832,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "dbe73f2416eaacf68b6921a9f304209b87eea341735f5ebae2556090915ba387",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_005",
+          "source_id": "sam_candidate_005",
+          "candidate_frame": 510,
+          "candidate_time": 17.006439393939395,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.402045454545457,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5068274736404419,
+                0.5200340747833252,
+                0.4755510091781616,
+                0.47245389223098755
+              ]
+            ],
+            "max_similarity": 0.5200340747833252,
+            "mean_top2": 0.5134307742118835,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "5ed62a035e84225499bfe9628f2371782b5821dc86df0a7569d0d783d60eee4d",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_006",
+          "source_id": "sam_candidate_006",
+          "candidate_frame": 510,
+          "candidate_time": 17.006439393939395,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.402045454545457,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.49914807081222534,
+                0.5157907009124756,
+                0.3829024136066437,
+                0.37476229667663574
+              ]
+            ],
+            "max_similarity": 0.5157907009124756,
+            "mean_top2": 0.5074693858623505,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "fc02a0a9c96714a07130007a92c402749d085e5ccb1a0fb44a9a64c43ad5ade8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_007",
+          "source_id": "sam_candidate_007",
+          "candidate_frame": 516,
+          "candidate_time": 17.206515151515152,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.602121212121213,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.476062536239624,
+                0.4316783547401428,
+                0.46458643674850464,
+                0.4657585322856903
+              ]
+            ],
+            "max_similarity": 0.476062536239624,
+            "mean_top2": 0.47091053426265717,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "5ab1e192cf7b0bc4937ac20054ae1a62b0ffac33c6b47482c74276cc4acc0c1e",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_008",
+          "source_id": "sam_candidate_008",
+          "candidate_frame": 516,
+          "candidate_time": 17.206515151515152,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 348,
+          "query_last_trusted_time": 11.604393939393939,
+          "gap_seconds": 5.602121212121213,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.4155242443084717,
+                0.4365169107913971,
+                0.2855464220046997,
+                0.27948448061943054
+              ]
+            ],
+            "max_similarity": 0.4365169107913971,
+            "mean_top2": 0.4260205775499344,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 114
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "yolo_without_safe_sam_seed",
+          "embedding_cache_key": "a9479de7c3ae8848a100e9b48f8758e535db46a3b62acb494164eec14d6d34cf",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.004243373870849609,
+          "best_candidate_similarity": 0.5200340747833252,
+          "second_candidate_similarity": 0.5157907009124756,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 612,
+      "timestamp": 20.40772727272727,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 612,
+          "candidate_time": 20.40772727272727,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.6002272727272704,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.46391499042510986,
+                0.3977627158164978,
+                0.3873962163925171,
+                0.38641682267189026
+              ]
+            ],
+            "max_similarity": 0.46391499042510986,
+            "mean_top2": 0.43083885312080383,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "ce7c1c8f67c63981dc8261ef97e005e29bd777e53a2342d43e5c90d0e1719623",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.028211653232574463,
+          "best_candidate_similarity": 0.4921266436576843,
+          "second_candidate_similarity": 0.46391499042510986,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 612,
+          "candidate_time": 20.40772727272727,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.6002272727272704,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.4921266436576843,
+                0.4535512626171112,
+                0.4279332756996155,
+                0.42680680751800537
+              ]
+            ],
+            "max_similarity": 0.4921266436576843,
+            "mean_top2": 0.47283895313739777,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "100da0f2d86b230ead80dcebcf1db03d300a94fdb38213f15241ccd787573a71",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.028211653232574463,
+          "best_candidate_similarity": 0.4921266436576843,
+          "second_candidate_similarity": 0.46391499042510986,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 618,
+      "timestamp": 20.607803030303028,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 618,
+          "candidate_time": 20.607803030303028,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.8003030303030272,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.4636247754096985,
+                0.41055917739868164,
+                0.40074172616004944,
+                0.39952558279037476
+              ]
+            ],
+            "max_similarity": 0.4636247754096985,
+            "mean_top2": 0.43709197640419006,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "de0ef42f7ff6225100c7d33ccad8ce2cee88f1311b80f9aaddff54f88a65444a",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.04304325580596924,
+          "best_candidate_similarity": 0.5066680312156677,
+          "second_candidate_similarity": 0.4636247754096985,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 618,
+          "candidate_time": 20.607803030303028,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.8003030303030272,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5066680312156677,
+                0.4545409083366394,
+                0.43242740631103516,
+                0.4299391508102417
+              ]
+            ],
+            "max_similarity": 0.5066680312156677,
+            "mean_top2": 0.48060446977615356,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "8f0d0f95b14e88c9b305e785923892fd4be9b7da885270165d5b87c43eba10fa",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.04304325580596924,
+          "best_candidate_similarity": 0.5066680312156677,
+          "second_candidate_similarity": 0.4636247754096985,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 630,
+      "timestamp": 21.007954545454545,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 630,
+          "candidate_time": 21.007954545454545,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.2004545454545443,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.45648133754730225,
+                0.4085758328437805,
+                0.3909531235694885,
+                0.38749316334724426
+              ]
+            ],
+            "max_similarity": 0.45648133754730225,
+            "mean_top2": 0.4325285851955414,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "39024bcd6d59c3d7c63dc987f8403d18df9b5243b42b468ad35b4e951fc3cae8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.0501866340637207,
+          "best_candidate_similarity": 0.506667971611023,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 618,
+          "candidate_time": 20.607803030303028,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.8003030303030272,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.506667971611023,
+                0.45454084873199463,
+                0.4324273467063904,
+                0.4299390912055969
+              ]
+            ],
+            "max_similarity": 0.506667971611023,
+            "mean_top2": 0.4806044101715088,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "8f0d0f95b14e88c9b305e785923892fd4be9b7da885270165d5b87c43eba10fa",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.0501866340637207,
+          "best_candidate_similarity": 0.506667971611023,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 636,
+      "timestamp": 21.208030303030302,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 630,
+          "candidate_time": 21.007954545454545,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.2004545454545443,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.45648133754730225,
+                0.4085758328437805,
+                0.3909531235694885,
+                0.38749316334724426
+              ]
+            ],
+            "max_similarity": 0.45648133754730225,
+            "mean_top2": 0.4325285851955414,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "39024bcd6d59c3d7c63dc987f8403d18df9b5243b42b468ad35b4e951fc3cae8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.0501866340637207,
+          "best_candidate_similarity": 0.506667971611023,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 618,
+          "candidate_time": 20.607803030303028,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 0.8003030303030272,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.506667971611023,
+                0.45454084873199463,
+                0.4324273467063904,
+                0.4299390912055969
+              ]
+            ],
+            "max_similarity": 0.506667971611023,
+            "mean_top2": 0.4806044101715088,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "8f0d0f95b14e88c9b305e785923892fd4be9b7da885270165d5b87c43eba10fa",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.0501866340637207,
+          "best_candidate_similarity": 0.506667971611023,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 642,
+      "timestamp": 21.40810606060606,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 630,
+          "candidate_time": 21.007954545454545,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.2004545454545443,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.45648133754730225,
+                0.4085758328437805,
+                0.3909531235694885,
+                0.38749316334724426
+              ]
+            ],
+            "max_similarity": 0.45648133754730225,
+            "mean_top2": 0.4325285851955414,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "39024bcd6d59c3d7c63dc987f8403d18df9b5243b42b468ad35b4e951fc3cae8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.06862127780914307,
+          "best_candidate_similarity": 0.5251026153564453,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 642,
+          "candidate_time": 21.40810606060606,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.600606060606058,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5251026153564453,
+                0.4519077241420746,
+                0.4691573977470398,
+                0.46438103914260864
+              ]
+            ],
+            "max_similarity": 0.5251026153564453,
+            "mean_top2": 0.49713000655174255,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "e47302c520b5ae2dc7aa2e854a0458bed320f493a997075952e01db2c67cf3e5",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.06862127780914307,
+          "best_candidate_similarity": 0.5251026153564453,
+          "second_candidate_similarity": 0.45648133754730225,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    },
+    {
+      "frame_index": 786,
+      "timestamp": 26.209924242424243,
+      "query_last_trusted_frame": 594,
+      "bank_prototypes": {
+        "entity_id": "phone_01",
+        "max_prototypes": 4,
+        "prototypes": [
+          {
+            "entity_id": "phone_01",
+            "frame_index": 108,
+            "timestamp": 3.601363636363636,
+            "source": "track:22",
+            "crop_reference": "test2:frame108:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 114,
+            "timestamp": 3.801439393939394,
+            "source": "track:22",
+            "crop_reference": "test2:frame114:track:22",
+            "mask_used": true,
+            "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 210,
+            "timestamp": 7.002651515151515,
+            "source": "track:43",
+            "crop_reference": "test2:frame210:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          },
+          {
+            "entity_id": "phone_01",
+            "frame_index": 216,
+            "timestamp": 7.202727272727272,
+            "source": "track:43",
+            "crop_reference": "test2:frame216:track:43",
+            "mask_used": true,
+            "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+            "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+          }
+        ]
+      },
+      "candidate_decisions": [
+        {
+          "candidate_entity_id": "candidate_011",
+          "source_id": "sam_candidate_011",
+          "candidate_frame": 630,
+          "candidate_time": 21.007954545454545,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.2004545454545443,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.45648133754730225,
+                0.4085758328437805,
+                0.3909531235694885,
+                0.38749316334724426
+              ]
+            ],
+            "max_similarity": 0.45648133754730225,
+            "mean_top2": 0.4325285851955414,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "39024bcd6d59c3d7c63dc987f8403d18df9b5243b42b468ad35b4e951fc3cae8",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.01182401180267334,
+          "best_candidate_similarity": 0.5369266271591187,
+          "second_candidate_similarity": 0.5251026153564453,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_012",
+          "source_id": "sam_candidate_012",
+          "candidate_frame": 642,
+          "candidate_time": 21.40810606060606,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 1.600606060606058,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5251026153564453,
+                0.4519077241420746,
+                0.4691573977470398,
+                0.46438103914260864
+              ]
+            ],
+            "max_similarity": 0.5251026153564453,
+            "mean_top2": 0.49713000655174255,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "e47302c520b5ae2dc7aa2e854a0458bed320f493a997075952e01db2c67cf3e5",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.01182401180267334,
+          "best_candidate_similarity": 0.5369266271591187,
+          "second_candidate_similarity": 0.5251026153564453,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_013",
+          "source_id": "sam_candidate_013",
+          "candidate_frame": 786,
+          "candidate_time": 26.209924242424243,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 6.402424242424242,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.475691556930542,
+                0.4527812898159027,
+                0.39393067359924316,
+                0.38433846831321716
+              ]
+            ],
+            "max_similarity": 0.475691556930542,
+            "mean_top2": 0.46423642337322235,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "e3bf055e8e5513ee9a71228880d0d9f39ff5371678913243860d9bf94c8b60b9",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.01182401180267334,
+          "best_candidate_similarity": 0.5369266271591187,
+          "second_candidate_similarity": 0.5251026153564453,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        },
+        {
+          "candidate_entity_id": "candidate_014",
+          "source_id": "sam_candidate_014",
+          "candidate_frame": 786,
+          "candidate_time": 26.209924242424243,
+          "query_entity_id": "phone_01",
+          "query_last_trusted_frame": 594,
+          "query_last_trusted_time": 19.8075,
+          "gap_seconds": 6.402424242424242,
+          "semantic_compatible": true,
+          "appearance": {
+            "matrix": [
+              [
+                0.5369266271591187,
+                0.5020179748535156,
+                0.43600165843963623,
+                0.4386640787124634
+              ]
+            ],
+            "max_similarity": 0.5369266271591187,
+            "mean_top2": 0.5194723010063171,
+            "best_candidate_view": 0,
+            "best_prototype_frame": 108
+          },
+          "temporal_evidence": {
+            "forward_after_unobserved": true,
+            "pixel_motion_extrapolation_used": false
+          },
+          "coexistence_frames": [],
+          "graph_context": {
+            "match_sufficient": false,
+            "world_fixed": false
+          },
+          "hard_contradictions": [],
+          "candidate_quality": "frozen_yolo_seed_and_nonempty_sam_mask",
+          "embedding_cache_key": "b0947f06c1c9a021c6d5f268e5199fa604532a1cfdb227ce234cf6c42a50dc91",
+          "match_threshold": 0.6,
+          "uniqueness_margin_required": 0.1,
+          "best_vs_second_margin": 0.01182401180267334,
+          "best_candidate_similarity": 0.5369266271591187,
+          "second_candidate_similarity": 0.5251026153564453,
+          "decision": "AMBIGUOUS",
+          "reason": "appearance or candidate uniqueness insufficient; keep provisional hypothesis",
+          "sam_reinitialization_authorized": false
+        }
+      ],
+      "decision": "NO_SAFE_MATCH"
+    }
+  ],
+  "decision": "NO_SAFE_MATCH",
+  "match_candidate_id": null,
+  "appearance_bank_last_attempt": {
+    "entity_id": "phone_01",
+    "max_prototypes": 4,
+    "prototypes": [
+      {
+        "entity_id": "phone_01",
+        "frame_index": 108,
+        "timestamp": 3.601363636363636,
+        "source": "track:22",
+        "crop_reference": "test2:frame108:track:22",
+        "mask_used": true,
+        "embedding_cache_key": "0278cffa0b682d824e27c7dd62575adfbc3d8b0d598eef455fe40dae25d7af9a",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 114,
+        "timestamp": 3.801439393939394,
+        "source": "track:22",
+        "crop_reference": "test2:frame114:track:22",
+        "mask_used": true,
+        "embedding_cache_key": "2a8a0861a1823c2430ea38520d81bb4c12a8313d2414105ff41ee0503a481513",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 210,
+        "timestamp": 7.002651515151515,
+        "source": "track:43",
+        "crop_reference": "test2:frame210:track:43",
+        "mask_used": true,
+        "embedding_cache_key": "824fe23c3b69014a6f520c4db1baa795b6420b2576b85e24bf11574712129818",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      },
+      {
+        "entity_id": "phone_01",
+        "frame_index": 216,
+        "timestamp": 7.202727272727272,
+        "source": "track:43",
+        "crop_reference": "test2:frame216:track:43",
+        "mask_used": true,
+        "embedding_cache_key": "ab7813ca7d5987d686b51d0120e2e46a740ac3a978eb5a0ebec7f8ce1905b4ea",
+        "trust_reason": "V2.3 accepted SAM and confident local YOLO agree"
+      }
+    ]
+  },
+  "sam_reinitialization_status": "NONE_AUTHORIZED",
+  "gt_accessed": false
+}
