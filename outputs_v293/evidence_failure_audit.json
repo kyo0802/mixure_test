@@ -1,0 +1,2299 @@
+{
+  "schema": "v293_baseline_audit_1",
+  "upstream_frozen_hashes_valid": true,
+  "taxonomy": [
+    "DENSE_MASK_ARTIFACT_LOST",
+    "TRUSTED_REINIT_SEED_OMITTED",
+    "WINDOW_HAS_NO_TRUSTED_TARGET",
+    "NO_TARGET_BEFORE",
+    "NO_ANCHOR_BEFORE",
+    "NO_TARGET_DURING",
+    "NO_ANCHOR_DURING",
+    "NO_TRANSITION_EVIDENCE",
+    "NO_ANCHOR_AFTER",
+    "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+    "TARGET_CONTINUITY_BROKEN",
+    "MASK_UNAVAILABLE",
+    "MASK_UNTRUSTWORTHY",
+    "ANCHOR_NOT_AUTHORIZED",
+    "PAIR_NEVER_COVISIBLE",
+    "SCENE_BREAK",
+    "WINDOW_COVERAGE_INSUFFICIENT",
+    "ANCHOR_EVIDENCE_MISSING",
+    "OTHER"
+  ],
+  "total_requests": 54,
+  "primary_counts": {
+    "DENSE_MASK_ARTIFACT_LOST": 6,
+    "WINDOW_HAS_NO_TRUSTED_TARGET": 44,
+    "TRUSTED_REINIT_SEED_OMITTED": 4
+  },
+  "secondary_counts": {
+    "NO_TARGET_BEFORE": 54,
+    "NO_TARGET_DURING": 54,
+    "NO_ANCHOR_DURING": 23,
+    "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE": 54,
+    "NO_ANCHOR_AFTER": 26,
+    "MASK_UNAVAILABLE": 54,
+    "PAIR_NEVER_COVISIBLE": 54,
+    "NO_ANCHOR_BEFORE": 1
+  },
+  "per_video": {
+    "test1": {
+      "DENSE_MASK_ARTIFACT_LOST": 2,
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 4
+    },
+    "test2": {
+      "DENSE_MASK_ARTIFACT_LOST": 4,
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 2
+    },
+    "test3": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    },
+    "test4": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    },
+    "test5": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    },
+    "test6": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    },
+    "test7": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    },
+    "test8": {
+      "TRUSTED_REINIT_SEED_OMITTED": 4,
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 2
+    },
+    "test9": {
+      "WINDOW_HAS_NO_TRUSTED_TARGET": 6
+    }
+  },
+  "requests": [
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E01",
+      "anchor_id": "test1::test1-V292E01::entity_0024",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 5,
+          "latent_trusted_sam": 16
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [
+        377,
+        379,
+        381,
+        383,
+        385,
+        387,
+        389,
+        391,
+        393,
+        395,
+        397,
+        399,
+        401,
+        403,
+        405,
+        407
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 4,
+      "dense_seed": "segmentation/masks/target_full/f000378.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E01"
+    },
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E01",
+      "anchor_id": "test1::test1-V292E01::entity_0026",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 14,
+          "latent_trusted_sam": 16
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [
+        377,
+        379,
+        381,
+        383,
+        385,
+        387,
+        389,
+        391,
+        393,
+        395,
+        397,
+        399,
+        401,
+        403,
+        405,
+        407
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 4,
+      "dense_seed": "segmentation/masks/target_full/f000378.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E01"
+    },
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E02",
+      "anchor_id": "test1::test1-V292E02::entity_0026",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 15,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E02"
+    },
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E02",
+      "anchor_id": "test1::test1-V292E02::entity_0037",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 11,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E02"
+    },
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E03",
+      "anchor_id": "test1::test1-V292E03::entity_0065",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E03"
+    },
+    {
+      "video_id": "test1",
+      "event_id": "test1-V292E03",
+      "anchor_id": "test1::test1-V292E03::entity_0066",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test1\\events\\dense\\test1-V292E03"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E01",
+      "anchor_id": "test2::test2-V292E01::entity_0048",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 5
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [
+        323,
+        325,
+        327,
+        329,
+        331
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 1,
+      "dense_seed": "segmentation/masks/target_full/f000324.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E01"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E01",
+      "anchor_id": "test2::test2-V292E01::entity_0055",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 10,
+          "latent_trusted_sam": 5
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [
+        323,
+        325,
+        327,
+        329,
+        331
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 1,
+      "dense_seed": "segmentation/masks/target_full/f000324.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E01"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E02",
+      "anchor_id": "test2::test2-V292E02::entity_0068",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 5,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 19,
+          "latent_trusted_sam": 7
+        }
+      },
+      "latent_trusted_sam_frames": [
+        527,
+        529,
+        531,
+        533,
+        535,
+        537,
+        539
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 1,
+      "dense_seed": "segmentation/masks/target_full/f000528.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E02"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E02",
+      "anchor_id": "test2::test2-V292E02::entity_0069",
+      "primary_failure_reason": "DENSE_MASK_ARTIFACT_LOST",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 7
+        }
+      },
+      "latent_trusted_sam_frames": [
+        527,
+        529,
+        531,
+        533,
+        535,
+        537,
+        539
+      ],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 1,
+      "dense_seed": "segmentation/masks/target_full/f000528.png",
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E02"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E03",
+      "anchor_id": "test2::test2-V292E03::entity_0068",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E03"
+    },
+    {
+      "video_id": "test2",
+      "event_id": "test2-V292E03",
+      "anchor_id": "test2::test2-V292E03::entity_0070",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 12,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test2\\events\\dense\\test2-V292E03"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E01",
+      "anchor_id": "test3::test3-V292E01::entity_0082",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 15,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E01"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E01",
+      "anchor_id": "test3::test3-V292E01::entity_0083",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 11,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E01"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E02",
+      "anchor_id": "test3::test3-V292E02::entity_0082",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E02"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E02",
+      "anchor_id": "test3::test3-V292E02::entity_0083",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 14,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E02"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E03",
+      "anchor_id": "test3::test3-V292E03::entity_0083",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 1,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E03"
+    },
+    {
+      "video_id": "test3",
+      "event_id": "test3-V292E03",
+      "anchor_id": "test3::test3-V292E03::entity_0086",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 7,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test3\\events\\dense\\test3-V292E03"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E01",
+      "anchor_id": "test4::test4-V292E01::entity_0092",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E01"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E01",
+      "anchor_id": "test4::test4-V292E01::entity_0093",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E01"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E02",
+      "anchor_id": "test4::test4-V292E02::entity_0092",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 12,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E02"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E02",
+      "anchor_id": "test4::test4-V292E02::entity_0093",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 16,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E02"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E03",
+      "anchor_id": "test4::test4-V292E03::entity_0092",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 11,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 9,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E03"
+    },
+    {
+      "video_id": "test4",
+      "event_id": "test4-V292E03",
+      "anchor_id": "test4::test4-V292E03::entity_0095",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 1,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test4\\events\\dense\\test4-V292E03"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E01",
+      "anchor_id": "test5::test5-V292E01::entity_0072",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 18,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E01"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E01",
+      "anchor_id": "test5::test5-V292E01::entity_0073",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 13,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E01"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E02",
+      "anchor_id": "test5::test5-V292E02::entity_0072",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 14,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E02"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E02",
+      "anchor_id": "test5::test5-V292E02::entity_0073",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 7,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E02"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E03",
+      "anchor_id": "test5::test5-V292E03::entity_0073",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E03"
+    },
+    {
+      "video_id": "test5",
+      "event_id": "test5-V292E03",
+      "anchor_id": "test5::test5-V292E03::entity_0078",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 9,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test5\\events\\dense\\test5-V292E03"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E01",
+      "anchor_id": "test6::test6-V292E01::entity_0052",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E01"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E01",
+      "anchor_id": "test6::test6-V292E01::entity_0053",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_ANCHOR_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E01"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E02",
+      "anchor_id": "test6::test6-V292E02::entity_0058",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 10,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E02"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E02",
+      "anchor_id": "test6::test6-V292E02::entity_0059",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E02"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E03",
+      "anchor_id": "test6::test6-V292E03::entity_0060",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 15,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E03"
+    },
+    {
+      "video_id": "test6",
+      "event_id": "test6-V292E03",
+      "anchor_id": "test6::test6-V292E03::entity_0068",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test6\\events\\dense\\test6-V292E03"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E01",
+      "anchor_id": "test7::test7-V292E01::entity_0047",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 13,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E01"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E01",
+      "anchor_id": "test7::test7-V292E01::entity_0050",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 9,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E01"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E02",
+      "anchor_id": "test7::test7-V292E02::entity_0047",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 21,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 15,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E02"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E02",
+      "anchor_id": "test7::test7-V292E02::entity_0050",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E02"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E03",
+      "anchor_id": "test7::test7-V292E03::entity_0047",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 1,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E03"
+    },
+    {
+      "video_id": "test7",
+      "event_id": "test7-V292E03",
+      "anchor_id": "test7::test7-V292E03::entity_0064",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test7\\events\\dense\\test7-V292E03"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E01",
+      "anchor_id": "test8::test8-V292E01::entity_0049",
+      "primary_failure_reason": "TRUSTED_REINIT_SEED_OMITTED",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 10,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 8,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E01"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E01",
+      "anchor_id": "test8::test8-V292E01::entity_0050",
+      "primary_failure_reason": "TRUSTED_REINIT_SEED_OMITTED",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 13,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 8,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E01"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E02",
+      "anchor_id": "test8::test8-V292E02::entity_0076",
+      "primary_failure_reason": "TRUSTED_REINIT_SEED_OMITTED",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 5,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 3,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 2,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E02"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E02",
+      "anchor_id": "test8::test8-V292E02::entity_0077",
+      "primary_failure_reason": "TRUSTED_REINIT_SEED_OMITTED",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 2,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E02"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E03",
+      "anchor_id": "test8::test8-V292E03::entity_0076",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 13,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E03"
+    },
+    {
+      "video_id": "test8",
+      "event_id": "test8-V292E03",
+      "anchor_id": "test8::test8-V292E03::entity_0077",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 12,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test8\\events\\dense\\test8-V292E03"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E01",
+      "anchor_id": "test9::test9-V292E01::entity_0086",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 2,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E01"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E01",
+      "anchor_id": "test9::test9-V292E01::entity_0089",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 7,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E01"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E02",
+      "anchor_id": "test9::test9-V292E02::entity_0093",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 6,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E02"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E02",
+      "anchor_id": "test9::test9-V292E02::entity_0094",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 10,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 7,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E02"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E03",
+      "anchor_id": "test9::test9-V292E03::entity_0094",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 19,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 4,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 15,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E03"
+    },
+    {
+      "video_id": "test9",
+      "event_id": "test9-V292E03",
+      "anchor_id": "test9::test9-V292E03::entity_0095",
+      "primary_failure_reason": "WINDOW_HAS_NO_TRUSTED_TARGET",
+      "secondary_reasons": [
+        "NO_TARGET_BEFORE",
+        "NO_TARGET_DURING",
+        "NO_ANCHOR_DURING",
+        "TARGET_AFTER_REQUIRED_BUT_NOT_VISIBLE",
+        "NO_ANCHOR_AFTER",
+        "MASK_UNAVAILABLE",
+        "PAIR_NEVER_COVISIBLE"
+      ],
+      "phase_counts": {
+        "BEFORE": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 8,
+          "latent_trusted_sam": 0
+        },
+        "DURING": {
+          "rows": 4,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        },
+        "AFTER": {
+          "rows": 21,
+          "target_usable": 0,
+          "anchor_present": 0,
+          "latent_trusted_sam": 0
+        }
+      },
+      "latent_trusted_sam_frames": [],
+      "persisted_rle_count": 0,
+      "frozen_trusted_masks_in_window": 0,
+      "dense_seed": null,
+      "scene_continuity": "NOT_MEASURED_IN_V292",
+      "provenance": "outputs_v292\\test9\\events\\dense\\test9-V292E03"
+    }
+  ],
+  "code_findings": [
+    "V292 _authorize_dense_rows reads video_root/target_masks.json instead of events/dense/event/target_masks.json, then overwrites the event RLE with an empty mapping.",
+    "V292 accepted_masks includes only target_full; authorized reinitialized masks are omitted.",
+    "V292 pair rows discard all non-authorized target frames before anchor/AFTER assessment.",
+    "V292 fixed peak +/-3 phase partition and both-visible requirement hide independent anchor coverage."
+  ]
+}

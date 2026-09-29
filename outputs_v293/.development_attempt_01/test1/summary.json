@@ -1,0 +1,48 @@
+{
+  "video_id": "test1",
+  "pair_requests_total": 6,
+  "pair_evidence_eligible": 2,
+  "recomputed_intervals": 1,
+  "prepare_seconds": 41.57799999997951,
+  "rejections": {
+    "NO_TARGET_BEFORE": 4
+  },
+  "funnel": {
+    "pair_requests_total": 6,
+    "before_target_usable": 2,
+    "before_anchor_usable": 6,
+    "during_target_usable": 2,
+    "during_anchor_usable": 6,
+    "transition_evidence_usable": 2,
+    "after_anchor_usable": 2,
+    "pair_evidence_eligible": 2,
+    "vlm_called": 2,
+    "vlm_schema_valid": 2,
+    "vlm_grounding_valid": 2,
+    "physical_gate_called": 3,
+    "physical_rejected": 2,
+    "physical_candidate": 1,
+    "physical_promoted": 0,
+    "physical_uncertain": 0
+  },
+  "rejection_counts": {
+    "NO_TARGET_BEFORE": 4
+  },
+  "first_failing_stage": null,
+  "vlm_and_gate_seconds": 92.20299999997951,
+  "relation_breakdown": {
+    "BEHIND": {
+      "REJECTED": 1
+    },
+    "NEAR": {
+      "CANDIDATE": 1
+    },
+    "OCCLUDED_BY": {
+      "REJECTED": 1
+    }
+  },
+  "vlm_status_counts": {
+    "VLM_GROUNDING_VALID": 2,
+    "VLM_NOT_CALLED": 4
+  }
+}

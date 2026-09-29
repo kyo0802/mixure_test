@@ -1,0 +1,340 @@
+[
+  {
+    "candidate_id": "test2-V292E02:entity_0073:OCCLUDED_BY",
+    "event_id": "test2-V292E02",
+    "candidate_relation": "OCCLUDED_BY",
+    "target": "phone_01",
+    "anchor": "test2::test2-V292E02::entity_0073",
+    "start_frame": 531,
+    "end_frame": 539,
+    "decision": "REJECTED",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": false,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "VALID",
+      "support": false,
+      "rationale_substantive": true,
+      "contradiction": true
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "5 frame mask support"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "visibility decrease",
+      "anchor visible after target loss",
+      "independent VLM verification"
+    ],
+    "final_reason": "Candidate-scoped VLM reports no physical relation or is uncertain",
+    "provenance": [
+      "outputs_v293/test2/pair_evidence_packs.json#test2::test2-V292E02::entity_0073",
+      "outputs_v293/test2/events/test2-V292E02/observation_rows.json"
+    ],
+    "features": {
+      "support_frames": 5,
+      "support_seconds": 0.26676767676767454,
+      "first_frame": 531,
+      "last_frame": 539,
+      "initial_distance": 0.6334842196666314,
+      "final_distance": 0.7239721781792315,
+      "distance_change": -0.09048795851260016,
+      "initial_containment": 0.0,
+      "final_containment": 0.0,
+      "containment_trend": 0.0,
+      "max_containment": 0.0,
+      "initial_mask_area": 18122,
+      "final_mask_area": 23346,
+      "visible_area_ratio": 1.0,
+      "area_change_fraction": 0.2882684030460214,
+      "target_motion_px": [
+        22.638462845343543,
+        35.131894341182345,
+        41.96724913548659,
+        30.004166377354995
+      ],
+      "anchor_motion_px": [
+        8.219242956643132,
+        4.890388982340782,
+        2.941404475257314,
+        6.508475826893594
+      ],
+      "velocity_coupling": 0.0,
+      "post_anchor_frames": 0,
+      "post_anchor_without_target": 0,
+      "target_disappears_after": false,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 531,
+          "time": 17.706704545454546,
+          "area": 18122,
+          "distance": 0.6334842196666314,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 533,
+          "time": 17.773396464646463,
+          "area": 18985,
+          "distance": 0.6463416277977395,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 535,
+          "time": 17.840088383838385,
+          "area": 20730,
+          "distance": 0.6730079730334811,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 537,
+          "time": 17.906780303030303,
+          "area": 22391,
+          "distance": 0.7056959491073315,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 539,
+          "time": 17.97347222222222,
+          "area": 23346,
+          "distance": 0.7239721781792315,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "grounding_status": "VLM_GROUNDING_VALID",
+    "observation_authorized": true,
+    "identity_write_authorized": false,
+    "legacy_feature_boolean_scope": "identity_authorized adapter field means usable observation geometry only; never persisted as identity"
+  },
+  {
+    "candidate_id": "test2-V292E02:entity_0073:BEHIND",
+    "event_id": "test2-V292E02",
+    "candidate_relation": "BEHIND",
+    "target": "phone_01",
+    "anchor": "test2::test2-V292E02::entity_0073",
+    "start_frame": 531,
+    "end_frame": 539,
+    "decision": "REJECTED",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": false,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "VALID",
+      "support": false,
+      "rationale_substantive": true,
+      "contradiction": true
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "5 frame mask support"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "visibility decrease",
+      "anchor visible after target loss",
+      "independent VLM verification"
+    ],
+    "final_reason": "Candidate-scoped VLM reports no physical relation or is uncertain",
+    "provenance": [
+      "outputs_v293/test2/pair_evidence_packs.json#test2::test2-V292E02::entity_0073",
+      "outputs_v293/test2/events/test2-V292E02/observation_rows.json"
+    ],
+    "features": {
+      "support_frames": 5,
+      "support_seconds": 0.26676767676767454,
+      "first_frame": 531,
+      "last_frame": 539,
+      "initial_distance": 0.6334842196666314,
+      "final_distance": 0.7239721781792315,
+      "distance_change": -0.09048795851260016,
+      "initial_containment": 0.0,
+      "final_containment": 0.0,
+      "containment_trend": 0.0,
+      "max_containment": 0.0,
+      "initial_mask_area": 18122,
+      "final_mask_area": 23346,
+      "visible_area_ratio": 1.0,
+      "area_change_fraction": 0.2882684030460214,
+      "target_motion_px": [
+        22.638462845343543,
+        35.131894341182345,
+        41.96724913548659,
+        30.004166377354995
+      ],
+      "anchor_motion_px": [
+        8.219242956643132,
+        4.890388982340782,
+        2.941404475257314,
+        6.508475826893594
+      ],
+      "velocity_coupling": 0.0,
+      "post_anchor_frames": 0,
+      "post_anchor_without_target": 0,
+      "target_disappears_after": false,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 531,
+          "time": 17.706704545454546,
+          "area": 18122,
+          "distance": 0.6334842196666314,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 533,
+          "time": 17.773396464646463,
+          "area": 18985,
+          "distance": 0.6463416277977395,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 535,
+          "time": 17.840088383838385,
+          "area": 20730,
+          "distance": 0.6730079730334811,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 537,
+          "time": 17.906780303030303,
+          "area": 22391,
+          "distance": 0.7056959491073315,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 539,
+          "time": 17.97347222222222,
+          "area": 23346,
+          "distance": 0.7239721781792315,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "grounding_status": "VLM_GROUNDING_VALID",
+    "observation_authorized": true,
+    "identity_write_authorized": false,
+    "legacy_feature_boolean_scope": "identity_authorized adapter field means usable observation geometry only; never persisted as identity"
+  },
+  {
+    "candidate_id": "test2-V292E02:entity_0073:NEAR",
+    "event_id": "test2-V292E02",
+    "candidate_relation": "NEAR",
+    "target": "phone_01",
+    "anchor": "test2::test2-V292E02::entity_0073",
+    "start_frame": 531,
+    "end_frame": 539,
+    "decision": "UNCERTAIN",
+    "identity_gate": true,
+    "geometry_gate": false,
+    "mask_gate": false,
+    "temporal_gate": false,
+    "semantic_gate": true,
+    "vlm_gate": {
+      "status": "NOT_REQUIRED",
+      "support": false,
+      "rationale_substantive": false,
+      "contradiction": false
+    },
+    "positive_evidence": [
+      "trusted target and known anchor co-visible in dense window",
+      "5 frame mask support"
+    ],
+    "negative_evidence": [],
+    "missing_evidence": [
+      "clear approach transition",
+      "increasing mask containment",
+      "visibility decrease",
+      "anchor visible after target loss"
+    ],
+    "final_reason": "2D proximity remains unconfirmed physical context",
+    "provenance": [
+      "outputs_v293/test2/pair_evidence_packs.json#test2::test2-V292E02::entity_0073",
+      "outputs_v293/test2/events/test2-V292E02/observation_rows.json"
+    ],
+    "features": {
+      "support_frames": 5,
+      "support_seconds": 0.26676767676767454,
+      "first_frame": 531,
+      "last_frame": 539,
+      "initial_distance": 0.6334842196666314,
+      "final_distance": 0.7239721781792315,
+      "distance_change": -0.09048795851260016,
+      "initial_containment": 0.0,
+      "final_containment": 0.0,
+      "containment_trend": 0.0,
+      "max_containment": 0.0,
+      "initial_mask_area": 18122,
+      "final_mask_area": 23346,
+      "visible_area_ratio": 1.0,
+      "area_change_fraction": 0.2882684030460214,
+      "target_motion_px": [
+        22.638462845343543,
+        35.131894341182345,
+        41.96724913548659,
+        30.004166377354995
+      ],
+      "anchor_motion_px": [
+        8.219242956643132,
+        4.890388982340782,
+        2.941404475257314,
+        6.508475826893594
+      ],
+      "velocity_coupling": 0.0,
+      "post_anchor_frames": 0,
+      "post_anchor_without_target": 0,
+      "target_disappears_after": false,
+      "mask_available": true,
+      "sampled": [
+        {
+          "frame": 531,
+          "time": 17.706704545454546,
+          "area": 18122,
+          "distance": 0.6334842196666314,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 533,
+          "time": 17.773396464646463,
+          "area": 18985,
+          "distance": 0.6463416277977395,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 535,
+          "time": 17.840088383838385,
+          "area": 20730,
+          "distance": 0.6730079730334811,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 537,
+          "time": 17.906780303030303,
+          "area": 22391,
+          "distance": 0.7056959491073315,
+          "mask_containment": 0.0
+        },
+        {
+          "frame": 539,
+          "time": 17.97347222222222,
+          "area": 23346,
+          "distance": 0.7239721781792315,
+          "mask_containment": 0.0
+        }
+      ]
+    },
+    "grounding_status": "VLM_GROUNDING_VALID",
+    "observation_authorized": true,
+    "identity_write_authorized": false,
+    "legacy_feature_boolean_scope": "identity_authorized adapter field means usable observation geometry only; never persisted as identity"
+  }
+]

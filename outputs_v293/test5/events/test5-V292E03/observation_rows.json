@@ -1,0 +1,6869 @@
+[
+  {
+    "frame": 933,
+    "time": 31.1,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40939509868621826,
+        "bbox": [
+          357.5028076171875,
+          229.5914764404297,
+          390.4527587890625,
+          318.7308044433594
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.2121676504611969,
+        "bbox": [
+          358.5558776855469,
+          229.836669921875,
+          389.9163818359375,
+          285.9707946777344
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40939509868621826,
+        "bbox": [
+          357.5028076171875,
+          229.5914764404297,
+          390.4527587890625,
+          318.7308044433594
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.2121676504611969,
+        "bbox": [
+          358.5558776855469,
+          229.836669921875,
+          389.9163818359375,
+          285.9707946777344
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.5694580078125,
+          100.03294372558594,
+          1019.7235107421875,
+          652.9102783203125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          659.730224609375,
+          90.02894592285156,
+          1029.44921875,
+          339.9853210449219
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          585.8594970703125,
+          95.163818359375,
+          675.1900634765625,
+          305.2838134765625
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 6,
+    "provenance": {
+      "video_frame": 933,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.5694580078125,
+          100.03294372558594,
+          1019.7235107421875,
+          652.9102783203125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          659.730224609375,
+          90.02894592285156,
+          1029.44921875,
+          339.9853210449219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          585.8594970703125,
+          95.163818359375,
+          675.1900634765625,
+          305.2838134765625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.0,
+      "histogram_correlation": 1.0,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 935,
+    "time": 31.166666666666668,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6105416417121887,
+        "bbox": [
+          352.3992614746094,
+          222.3048095703125,
+          384.01483154296875,
+          316.04119873046875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.20157445967197418,
+        "bbox": [
+          416.2024841308594,
+          221.357421875,
+          448.71307373046875,
+          317.7591247558594
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6105416417121887,
+        "bbox": [
+          352.3992614746094,
+          222.3048095703125,
+          384.01483154296875,
+          316.04119873046875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.20157445967197418,
+        "bbox": [
+          416.2024841308594,
+          221.357421875,
+          448.71307373046875,
+          317.7591247558594
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          681.1248168945312,
+          343.15472412109375,
+          996.5701904296875,
+          648.3038330078125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          665.1112670898438,
+          78.66677856445312,
+          1050.624267578125,
+          333.49884033203125
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          587.4224243164062,
+          81.35771942138672,
+          678.762451171875,
+          301.0627136230469
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 5,
+    "provenance": {
+      "video_frame": 935,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          681.1248168945312,
+          343.15472412109375,
+          996.5701904296875,
+          648.3038330078125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          665.1112670898438,
+          78.66677856445312,
+          1050.624267578125,
+          333.49884033203125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          587.4224243164062,
+          81.35771942138672,
+          678.762451171875,
+          301.0627136230469
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.06781556372549019,
+      "histogram_correlation": 0.9730943030945611,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 937,
+    "time": 31.233333333333334,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.34765997529029846,
+        "bbox": [
+          343.4414978027344,
+          214.3402099609375,
+          377.26800537109375,
+          309.841064453125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.25822147727012634,
+        "bbox": [
+          407.17816162109375,
+          212.62139892578125,
+          442.0196228027344,
+          310.44512939453125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.34765997529029846,
+        "bbox": [
+          343.4414978027344,
+          214.3402099609375,
+          377.26800537109375,
+          309.841064453125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.25822147727012634,
+        "bbox": [
+          407.17816162109375,
+          212.62139892578125,
+          442.0196228027344,
+          310.44512939453125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          679.4847412109375,
+          61.20212936401367,
+          1107.6214599609375,
+          655.73681640625
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          669.6871337890625,
+          52.374359130859375,
+          1083.161865234375,
+          325.4463806152344
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.3391215205192566,
+          153.55072021484375,
+          136.73497009277344,
+          311.88232421875
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          588.282470703125,
+          69.25509643554688,
+          682.2068481445312,
+          291.7420654296875
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 8,
+    "provenance": {
+      "video_frame": 937,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          679.4847412109375,
+          61.20212936401367,
+          1107.6214599609375,
+          655.73681640625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          669.6871337890625,
+          52.374359130859375,
+          1083.161865234375,
+          325.4463806152344
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.3391215205192566,
+          153.55072021484375,
+          136.73497009277344,
+          311.88232421875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          588.282470703125,
+          69.25509643554688,
+          682.2068481445312,
+          291.7420654296875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07292007080610022,
+      "histogram_correlation": 0.9769355454195715,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 939,
+    "time": 31.3,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.26560282707214355,
+        "bbox": [
+          336.40130615234375,
+          208.7555389404297,
+          371.26458740234375,
+          309.017578125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.19185706973075867,
+        "bbox": [
+          336.844482421875,
+          208.9390106201172,
+          371.29534912109375,
+          262.12506103515625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.17105253040790558,
+        "bbox": [
+          403.7481384277344,
+          207.67388916015625,
+          439.411376953125,
+          308.9404296875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.26560282707214355,
+        "bbox": [
+          336.40130615234375,
+          208.7555389404297,
+          371.26458740234375,
+          309.017578125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.19185706973075867,
+        "bbox": [
+          336.844482421875,
+          208.9390106201172,
+          371.29534912109375,
+          262.12506103515625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.17105253040790558,
+        "bbox": [
+          403.7481384277344,
+          207.67388916015625,
+          439.411376953125,
+          308.9404296875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.9613037109375,
+          40.48734664916992,
+          1144.6614990234375,
+          663.87060546875
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          681.5847778320312,
+          29.347423553466797,
+          1125.9910888671875,
+          322.9212341308594
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          4.1432294845581055,
+          196.68643188476562,
+          125.63652801513672,
+          309.9322509765625
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 8,
+    "provenance": {
+      "video_frame": 939,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.9613037109375,
+          40.48734664916992,
+          1144.6614990234375,
+          663.87060546875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          681.5847778320312,
+          29.347423553466797,
+          1125.9910888671875,
+          322.9212341308594
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          4.1432294845581055,
+          196.68643188476562,
+          125.63652801513672,
+          309.9322509765625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07365706699346405,
+      "histogram_correlation": 0.9714614775205631,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 941,
+    "time": 31.366666666666667,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.20606885850429535,
+        "bbox": [
+          331.160888671875,
+          205.12950134277344,
+          366.0494079589844,
+          261.81195068359375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.18166451156139374,
+        "bbox": [
+          331.4789733886719,
+          205.04534912109375,
+          366.56109619140625,
+          309.06768798828125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15246982872486115,
+        "bbox": [
+          401.0420837402344,
+          204.3197479248047,
+          436.09564208984375,
+          303.78564453125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.20606885850429535,
+        "bbox": [
+          331.160888671875,
+          205.12950134277344,
+          366.0494079589844,
+          261.81195068359375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.18166451156139374,
+        "bbox": [
+          331.4789733886719,
+          205.04534912109375,
+          366.56109619140625,
+          309.06768798828125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15246982872486115,
+        "bbox": [
+          401.0420837402344,
+          204.3197479248047,
+          436.09564208984375,
+          303.78564453125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          683.2238159179688,
+          284.31048583984375,
+          1027.8133544921875,
+          682.540283203125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          695.2077026367188,
+          17.88330078125,
+          1167.746826171875,
+          326.52685546875
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 5,
+    "provenance": {
+      "video_frame": 941,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          683.2238159179688,
+          284.31048583984375,
+          1027.8133544921875,
+          682.540283203125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          695.2077026367188,
+          17.88330078125,
+          1167.746826171875,
+          326.52685546875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07540168845315905,
+      "histogram_correlation": 0.9635600722199777,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 943,
+    "time": 31.433333333333334,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.4726133942604065,
+        "bbox": [
+          394.53167724609375,
+          201.1257781982422,
+          429.9888610839844,
+          308.16656494140625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40346744656562805,
+        "bbox": [
+          321.1610107421875,
+          202.7334442138672,
+          359.3764343261719,
+          309.5142822265625
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.4726133942604065,
+        "bbox": [
+          394.53167724609375,
+          201.1257781982422,
+          429.9888610839844,
+          308.16656494140625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40346744656562805,
+        "bbox": [
+          321.1610107421875,
+          202.7334442138672,
+          359.3764343261719,
+          309.5142822265625
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          682.5848388671875,
+          334.3374938964844,
+          1026.82763671875,
+          700.5106201171875
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          701.4578857421875,
+          1.89703369140625,
+          1210.71142578125,
+          332.8551025390625
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 943,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          682.5848388671875,
+          334.3374938964844,
+          1026.82763671875,
+          700.5106201171875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          701.4578857421875,
+          1.89703369140625,
+          1210.71142578125,
+          332.8551025390625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07520935457516341,
+      "histogram_correlation": 0.9554127487135391,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 945,
+    "time": 31.5,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6069177985191345,
+        "bbox": [
+          385.078125,
+          202.5709228515625,
+          421.5301208496094,
+          309.7853698730469
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.36807000637054443,
+        "bbox": [
+          308.774658203125,
+          204.11996459960938,
+          349.179443359375,
+          311.15948486328125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6069177985191345,
+        "bbox": [
+          385.078125,
+          202.5709228515625,
+          421.5301208496094,
+          309.7853698730469
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.36807000637054443,
+        "bbox": [
+          308.774658203125,
+          204.11996459960938,
+          349.179443359375,
+          311.15948486328125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.2420043945312,
+          45.46689987182617,
+          1023.86474609375,
+          716.1719970703125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          705.32470703125,
+          1.3351644277572632,
+          1255.8436279296875,
+          356.85101318359375
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 945,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          680.2420043945312,
+          45.46689987182617,
+          1023.86474609375,
+          716.1719970703125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          705.32470703125,
+          1.3351644277572632,
+          1255.8436279296875,
+          356.85101318359375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.086551947167756,
+      "histogram_correlation": 0.9570977083079227,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 947,
+    "time": 31.566666666666666,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.4440194368362427,
+        "bbox": [
+          375.78900146484375,
+          206.0458984375,
+          412.0264587402344,
+          316.77288818359375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.26083528995513916,
+        "bbox": [
+          297.61846923828125,
+          207.13804626464844,
+          338.04150390625,
+          266.6826477050781
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.21199201047420502,
+        "bbox": [
+          296.8891296386719,
+          207.290283203125,
+          338.2265319824219,
+          318.64764404296875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.4440194368362427,
+        "bbox": [
+          375.78900146484375,
+          206.0458984375,
+          412.0264587402344,
+          316.77288818359375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.26083528995513916,
+        "bbox": [
+          297.61846923828125,
+          207.13804626464844,
+          338.04150390625,
+          266.6826477050781
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.21199201047420502,
+        "bbox": [
+          296.8891296386719,
+          207.290283203125,
+          338.2265319824219,
+          318.64764404296875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          673.245849609375,
+          293.1673278808594,
+          1125.322265625,
+          713.15283203125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          704.8336791992188,
+          17.2127685546875,
+          1272.949951171875,
+          394.9472351074219
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 947,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          673.245849609375,
+          293.1673278808594,
+          1125.322265625,
+          713.15283203125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          704.8336791992188,
+          17.2127685546875,
+          1272.949951171875,
+          394.9472351074219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.09081563180827887,
+      "histogram_correlation": 0.9466776698775771,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 949,
+    "time": 31.633333333333333,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6686529517173767,
+        "bbox": [
+          365.04266357421875,
+          215.0057373046875,
+          401.91455078125,
+          326.61602783203125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5731091499328613,
+        "bbox": [
+          284.2403564453125,
+          214.6365203857422,
+          327.5377197265625,
+          330.9095153808594
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6686529517173767,
+        "bbox": [
+          365.04266357421875,
+          215.0057373046875,
+          401.91455078125,
+          326.61602783203125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5731091499328613,
+        "bbox": [
+          284.2403564453125,
+          214.6365203857422,
+          327.5377197265625,
+          330.9095153808594
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          674.7166748046875,
+          33.554443359375,
+          1262.0369873046875,
+          710.8505859375
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 2,
+    "provenance": {
+      "video_frame": 949,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          674.7166748046875,
+          33.554443359375,
+          1262.0369873046875,
+          710.8505859375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10268586601307189,
+      "histogram_correlation": 0.9478248890792431,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 951,
+    "time": 31.7,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.296050101518631,
+        "bbox": [
+          359.55291748046875,
+          230.08016967773438,
+          396.2290954589844,
+          348.8056640625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.17823916673660278,
+        "bbox": [
+          277.3216552734375,
+          230.58587646484375,
+          318.9976806640625,
+          291.90203857421875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15024712681770325,
+        "bbox": [
+          274.453125,
+          230.3345947265625,
+          318.9212341308594,
+          348.3205261230469
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.296050101518631,
+        "bbox": [
+          359.55291748046875,
+          230.08016967773438,
+          396.2290954589844,
+          348.8056640625
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.17823916673660278,
+        "bbox": [
+          277.3216552734375,
+          230.58587646484375,
+          318.9976806640625,
+          291.90203857421875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15024712681770325,
+        "bbox": [
+          274.453125,
+          230.3345947265625,
+          318.9212341308594,
+          348.3205261230469
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          670.12158203125,
+          389.1407165527344,
+          1035.1649169921875,
+          711.4876708984375
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          690.2381591796875,
+          79.42037200927734,
+          1245.3359375,
+          510.9174499511719
+        ],
+        "label": "teddy bear",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "teddy bear",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 2,
+    "provenance": {
+      "video_frame": 951,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0084",
+        "anchor_key": "test5::test5-V292E03::entity_0084",
+        "bbox": [
+          670.12158203125,
+          389.1407165527344,
+          1035.1649169921875,
+          711.4876708984375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0084",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0078",
+        "anchor_key": "test5::test5-V292E03::entity_0078",
+        "bbox": [
+          690.2381591796875,
+          79.42037200927734,
+          1245.3359375,
+          510.9174499511719
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0078",
+        "label": "teddy bear",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.108244825708061,
+      "histogram_correlation": 0.9463176108790005,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 953,
+    "time": 31.766666666666666,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.341251403093338,
+        "bbox": [
+          347.87939453125,
+          248.058837890625,
+          387.15203857421875,
+          365.20062255859375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.2380564957857132,
+        "bbox": [
+          262.03204345703125,
+          247.77401733398438,
+          310.20050048828125,
+          367.65625
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.341251403093338,
+        "bbox": [
+          347.87939453125,
+          248.058837890625,
+          387.15203857421875,
+          365.20062255859375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.2380564957857132,
+        "bbox": [
+          262.03204345703125,
+          247.77401733398438,
+          310.20050048828125,
+          367.65625
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          597.5382690429688,
+          120.07015228271484,
+          676.470947265625,
+          304.1518249511719
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 1,
+    "provenance": {
+      "video_frame": 953,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          597.5382690429688,
+          120.07015228271484,
+          676.470947265625,
+          304.1518249511719
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11822065631808279,
+      "histogram_correlation": 0.9218049183073509,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 955,
+    "time": 31.833333333333332,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6999362707138062,
+        "bbox": [
+          340.93243408203125,
+          268.20709228515625,
+          377.94970703125,
+          382.6636657714844
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.47144708037376404,
+        "bbox": [
+          257.671875,
+          267.0024108886719,
+          305.03857421875,
+          383.23846435546875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6999362707138062,
+        "bbox": [
+          340.93243408203125,
+          268.20709228515625,
+          377.94970703125,
+          382.6636657714844
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.47144708037376404,
+        "bbox": [
+          257.671875,
+          267.0024108886719,
+          305.03857421875,
+          383.23846435546875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          656.708740234375,
+          171.8984375,
+          1147.4375,
+          633.177734375
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          585.9354248046875,
+          198.2151336669922,
+          661.6447143554688,
+          344.22491455078125
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 2,
+    "provenance": {
+      "video_frame": 955,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          656.708740234375,
+          171.8984375,
+          1147.4375,
+          633.177734375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          585.9354248046875,
+          198.2151336669922,
+          661.6447143554688,
+          344.22491455078125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11584116285403051,
+      "histogram_correlation": 0.9653237406208183,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 957,
+    "time": 31.9,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7543386220932007,
+        "bbox": [
+          259.837890625,
+          285.9703674316406,
+          305.7361755371094,
+          397.5657653808594
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6686112880706787,
+        "bbox": [
+          341.6689453125,
+          287.06573486328125,
+          377.3233337402344,
+          397.3979187011719
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7543386220932007,
+        "bbox": [
+          259.837890625,
+          285.9703674316406,
+          305.7361755371094,
+          397.5657653808594
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6686112880706787,
+        "bbox": [
+          341.6689453125,
+          287.06573486328125,
+          377.3233337402344,
+          397.3979187011719
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          647.21728515625,
+          213.40611267089844,
+          1105.2744140625,
+          679.3434448242188
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          569.625,
+          197.0228271484375,
+          654.4669799804688,
+          381.0447998046875
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 2,
+    "provenance": {
+      "video_frame": 957,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          647.21728515625,
+          213.40611267089844,
+          1105.2744140625,
+          679.3434448242188
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0086",
+        "anchor_key": "test5::test5-V292E03::entity_0086",
+        "bbox": [
+          569.625,
+          197.0228271484375,
+          654.4669799804688,
+          381.0447998046875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0086",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10241183278867103,
+      "histogram_correlation": 0.9705255767797598,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 959,
+    "time": 31.966666666666665,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7492196559906006,
+        "bbox": [
+          344.4651794433594,
+          303.05584716796875,
+          379.1189880371094,
+          411.27020263671875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6919522881507874,
+        "bbox": [
+          263.8450622558594,
+          301.36651611328125,
+          311.482177734375,
+          415.63446044921875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7492196559906006,
+        "bbox": [
+          344.4651794433594,
+          303.05584716796875,
+          379.1189880371094,
+          411.27020263671875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6919522881507874,
+        "bbox": [
+          263.8450622558594,
+          301.36651611328125,
+          311.482177734375,
+          415.63446044921875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          640.8841552734375,
+          246.25595092773438,
+          1075.30224609375,
+          705.9002685546875
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          590.9811401367188,
+          16.06642723083496,
+          751.2630615234375,
+          248.0108642578125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          562.492431640625,
+          229.748291015625,
+          649.63525390625,
+          411.3023376464844
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 959,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          640.8841552734375,
+          246.25595092773438,
+          1075.30224609375,
+          705.9002685546875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          590.9811401367188,
+          16.06642723083496,
+          751.2630615234375,
+          248.0108642578125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          562.492431640625,
+          229.748291015625,
+          649.63525390625,
+          411.3023376464844
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.08847698801742919,
+      "histogram_correlation": 0.9798862961735059,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 961,
+    "time": 32.03333333333333,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7109899520874023,
+        "bbox": [
+          269.44842529296875,
+          314.17535400390625,
+          315.29559326171875,
+          425.30316162109375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.68535315990448,
+        "bbox": [
+          347.75848388671875,
+          315.83251953125,
+          382.42791748046875,
+          424.09423828125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.7109899520874023,
+        "bbox": [
+          269.44842529296875,
+          314.17535400390625,
+          315.29559326171875,
+          425.30316162109375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.68535315990448,
+        "bbox": [
+          347.75848388671875,
+          315.83251953125,
+          382.42791748046875,
+          424.09423828125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          637.17529296875,
+          275.0234375,
+          1050.634033203125,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          591.4644775390625,
+          3.58917236328125,
+          755.6712646484375,
+          272.74267578125
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          560.5482788085938,
+          256.1027526855469,
+          646.2694702148438,
+          435.0888366699219
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 961,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          637.17529296875,
+          275.0234375,
+          1050.634033203125,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          591.4644775390625,
+          3.58917236328125,
+          755.6712646484375,
+          272.74267578125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          560.5482788085938,
+          256.1027526855469,
+          646.2694702148438,
+          435.0888366699219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07448767701525055,
+      "histogram_correlation": 0.9783396625519729,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 963,
+    "time": 32.1,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6186947226524353,
+        "bbox": [
+          275.57952880859375,
+          323.6839294433594,
+          322.5867614746094,
+          434.31951904296875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5945425033569336,
+        "bbox": [
+          353.45086669921875,
+          325.81732177734375,
+          387.2481384277344,
+          433.682861328125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.6186947226524353,
+        "bbox": [
+          275.57952880859375,
+          323.6839294433594,
+          322.5867614746094,
+          434.31951904296875
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5945425033569336,
+        "bbox": [
+          353.45086669921875,
+          325.81732177734375,
+          387.2481384277344,
+          433.682861328125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          634.6799926757812,
+          297.49517822265625,
+          1038.7376708984375,
+          719.9298095703125
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          595.998291015625,
+          0.8304850459098816,
+          760.8417358398438,
+          289.1006164550781
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          563.6239624023438,
+          276.67633056640625,
+          646.3726806640625,
+          455.79302978515625
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 963,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          634.6799926757812,
+          297.49517822265625,
+          1038.7376708984375,
+          719.9298095703125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          595.998291015625,
+          0.8304850459098816,
+          760.8417358398438,
+          289.1006164550781
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          563.6239624023438,
+          276.67633056640625,
+          646.3726806640625,
+          455.79302978515625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.06501225490196079,
+      "histogram_correlation": 0.9861452967641876,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 965,
+    "time": 32.166666666666664,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3470282256603241,
+        "bbox": [
+          363.8027038574219,
+          333.467529296875,
+          397.36407470703125,
+          439.3008728027344
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.34691932797431946,
+        "bbox": [
+          288.2025146484375,
+          331.61376953125,
+          334.239501953125,
+          440.36737060546875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3470282256603241,
+        "bbox": [
+          363.8027038574219,
+          333.467529296875,
+          397.36407470703125,
+          439.3008728027344
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.34691932797431946,
+        "bbox": [
+          288.2025146484375,
+          331.61376953125,
+          334.239501953125,
+          440.36737060546875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          637.5143432617188,
+          316.1225891113281,
+          1033.235595703125,
+          718.5744018554688
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          602.213623046875,
+          0.9915975332260132,
+          764.74609375,
+          296.0534362792969
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          578.7514038085938,
+          293.1116027832031,
+          651.392333984375,
+          472.175537109375
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 965,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          637.5143432617188,
+          316.1225891113281,
+          1033.235595703125,
+          718.5744018554688
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          602.213623046875,
+          0.9915975332260132,
+          764.74609375,
+          296.0534362792969
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          578.7514038085938,
+          293.1116027832031,
+          651.392333984375,
+          472.175537109375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.0773301334422658,
+      "histogram_correlation": 0.9808338303878585,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 967,
+    "time": 32.233333333333334,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5627604126930237,
+        "bbox": [
+          377.0916442871094,
+          339.33587646484375,
+          409.69921875,
+          440.0703125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3922576904296875,
+        "bbox": [
+          303.4891052246094,
+          335.270751953125,
+          346.77215576171875,
+          444.7410583496094
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.5627604126930237,
+        "bbox": [
+          377.0916442871094,
+          339.33587646484375,
+          409.69921875,
+          440.0703125
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3922576904296875,
+        "bbox": [
+          303.4891052246094,
+          335.270751953125,
+          346.77215576171875,
+          444.7410583496094
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          643.84765625,
+          331.290771484375,
+          1032.0111083984375,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          614.0285034179688,
+          1.49334716796875,
+          777.9313354492188,
+          303.1483459472656
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          578.0803833007812,
+          306.20587158203125,
+          658.630615234375,
+          483.73992919921875
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 967,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          643.84765625,
+          331.290771484375,
+          1032.0111083984375,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          614.0285034179688,
+          1.49334716796875,
+          777.9313354492188,
+          303.1483459472656
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          578.0803833007812,
+          306.20587158203125,
+          658.630615234375,
+          483.73992919921875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.07718205337690631,
+      "histogram_correlation": 0.9881401304765122,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 969,
+    "time": 32.3,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3829607367515564,
+        "bbox": [
+          321.7655944824219,
+          337.13336181640625,
+          363.8969421386719,
+          440.6977233886719
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3549906015396118,
+        "bbox": [
+          389.86077880859375,
+          340.017822265625,
+          423.9500427246094,
+          443.826416015625
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3829607367515564,
+        "bbox": [
+          321.7655944824219,
+          337.13336181640625,
+          363.8969421386719,
+          440.6977233886719
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3549906015396118,
+        "bbox": [
+          389.86077880859375,
+          340.017822265625,
+          423.9500427246094,
+          443.826416015625
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          656.628173828125,
+          340.7239685058594,
+          1042.3876953125,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          626.3082885742188,
+          1.6579793691635132,
+          792.3802490234375,
+          294.6761474609375
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          602.8327026367188,
+          314.06427001953125,
+          670.6741943359375,
+          485.3641357421875
+        ],
+        "label": "bottle",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "bottle",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 969,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          656.628173828125,
+          340.7239685058594,
+          1042.3876953125,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          626.3082885742188,
+          1.6579793691635132,
+          792.3802490234375,
+          294.6761474609375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0089",
+        "anchor_key": "test5::test5-V292E03::entity_0089",
+        "bbox": [
+          602.8327026367188,
+          314.06427001953125,
+          670.6741943359375,
+          485.3641357421875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0089",
+        "label": "bottle",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.08683108660130719,
+      "histogram_correlation": 0.9834021429468129,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 971,
+    "time": 32.36666666666667,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40551748871803284,
+        "bbox": [
+          342.1325378417969,
+          333.4427795410156,
+          382.22247314453125,
+          435.17572021484375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.37453171610832214,
+        "bbox": [
+          410.0865173339844,
+          337.49407958984375,
+          442.7207946777344,
+          439.5015563964844
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.40551748871803284,
+        "bbox": [
+          342.1325378417969,
+          333.4427795410156,
+          382.22247314453125,
+          435.17572021484375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.37453171610832214,
+        "bbox": [
+          410.0865173339844,
+          337.49407958984375,
+          442.7207946777344,
+          439.5015563964844
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          671.4960327148438,
+          343.9288024902344,
+          1059.6710205078125,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 1,
+    "provenance": {
+      "video_frame": 971,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          671.4960327148438,
+          343.9288024902344,
+          1059.6710205078125,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.09672521786492376,
+      "histogram_correlation": 0.9857893859849457,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 973,
+    "time": 32.43333333333333,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3717848062515259,
+        "bbox": [
+          428.9395446777344,
+          334.3541564941406,
+          463.308837890625,
+          437.79345703125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.3717848062515259,
+        "bbox": [
+          428.9395446777344,
+          334.3541564941406,
+          463.308837890625,
+          437.79345703125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          688.200927734375,
+          347.8926696777344,
+          1080.6085205078125,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          658.519287109375,
+          1.5918477773666382,
+          833.0655517578125,
+          335.8566589355469
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          684.9552612304688,
+          253.48471069335938,
+          856.8405151367188,
+          469.4952087402344
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 973,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          688.200927734375,
+          347.8926696777344,
+          1080.6085205078125,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          658.519287109375,
+          1.5918477773666382,
+          833.0655517578125,
+          335.8566589355469
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          684.9552612304688,
+          253.48471069335938,
+          856.8405151367188,
+          469.4952087402344
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10947031590413944,
+      "histogram_correlation": 0.9883633693953232,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 975,
+    "time": 32.5,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.25656068325042725,
+        "bbox": [
+          453.6040954589844,
+          333.28515625,
+          486.30731201171875,
+          432.19281005859375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15509635210037231,
+        "bbox": [
+          389.377197265625,
+          327.18756103515625,
+          431.0181579589844,
+          427.57257080078125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.25656068325042725,
+        "bbox": [
+          453.6040954589844,
+          333.28515625,
+          486.30731201171875,
+          432.19281005859375
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15509635210037231,
+        "bbox": [
+          389.377197265625,
+          327.18756103515625,
+          431.0181579589844,
+          427.57257080078125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          708.0192260742188,
+          353.06658935546875,
+          1115.6907958984375,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          594.4581298828125,
+          2.0727031230926514,
+          868.9848022460938,
+          343.1659851074219
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          703.5721435546875,
+          254.8255615234375,
+          889.38525390625,
+          471.5092468261719
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.1793721616268158,
+          177.87118530273438,
+          118.70958709716797,
+          401.7364196777344
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 975,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          708.0192260742188,
+          353.06658935546875,
+          1115.6907958984375,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          594.4581298828125,
+          2.0727031230926514,
+          868.9848022460938,
+          343.1659851074219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          703.5721435546875,
+          254.8255615234375,
+          889.38525390625,
+          471.5092468261719
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.1793721616268158,
+          177.87118530273438,
+          118.70958709716797,
+          401.7364196777344
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.12624761710239651,
+      "histogram_correlation": 0.9751968130077554,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 977,
+    "time": 32.56666666666667,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.31835949420928955,
+        "bbox": [
+          479.43841552734375,
+          328.8988952636719,
+          512.4805908203125,
+          429.3529968261719
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.1642361283302307,
+        "bbox": [
+          416.7275390625,
+          323.17425537109375,
+          455.51141357421875,
+          419.69793701171875
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.31835949420928955,
+        "bbox": [
+          479.43841552734375,
+          328.8988952636719,
+          512.4805908203125,
+          429.3529968261719
+        ]
+      },
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.1642361283302307,
+        "bbox": [
+          416.7275390625,
+          323.17425537109375,
+          455.51141357421875,
+          419.69793701171875
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          730.18603515625,
+          354.89178466796875,
+          1153.2987060546875,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          639.67138671875,
+          2.0868327617645264,
+          890.5604248046875,
+          351.512451171875
+        ],
+        "label": "person",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "person",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          730.422607421875,
+          255.06651306152344,
+          924.9325561523438,
+          470.5401306152344
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.01788330078125,
+          173.62814331054688,
+          159.40518188476562,
+          390.5068054199219
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 5,
+    "provenance": {
+      "video_frame": 977,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          730.18603515625,
+          354.89178466796875,
+          1153.2987060546875,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0088",
+        "anchor_key": "test5::test5-V292E03::entity_0088",
+        "bbox": [
+          639.67138671875,
+          2.0868327617645264,
+          890.5604248046875,
+          351.512451171875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0088",
+        "label": "person",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          730.422607421875,
+          255.06651306152344,
+          924.9325561523438,
+          470.5401306152344
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          0.01788330078125,
+          173.62814331054688,
+          159.40518188476562,
+          390.5068054199219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.13759361383442267,
+      "histogram_correlation": 0.9601920906691981,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 979,
+    "time": 32.63333333333333,
+    "yolo_phone_detections": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15093941986560822,
+        "bbox": [
+          452.0777282714844,
+          318.6726989746094,
+          486.4497985839844,
+          415.23828125
+        ]
+      }
+    ],
+    "phone_candidates": [
+      {
+        "label": "cell phone",
+        "class_id": 67,
+        "confidence": 0.15093941986560822,
+        "bbox": [
+          452.0777282714844,
+          318.6726989746094,
+          486.4497985839844,
+          415.23828125
+        ]
+      }
+    ],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          760.2853393554688,
+          364.4375,
+          1205.1424560546875,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          765.5224609375,
+          257.6268005371094,
+          990.3509521484375,
+          474.21112060546875
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          15.75152587890625,
+          169.6359100341797,
+          202.7357177734375,
+          378.76513671875
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 979,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          760.2853393554688,
+          364.4375,
+          1205.1424560546875,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          765.5224609375,
+          257.6268005371094,
+          990.3509521484375,
+          474.21112060546875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          15.75152587890625,
+          169.6359100341797,
+          202.7357177734375,
+          378.76513671875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.15628404139433552,
+      "histogram_correlation": 0.9623699800176038,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "UNTRUSTED_OBSERVATION",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 981,
+    "time": 32.7,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          797.1310424804688,
+          370.98553466796875,
+          1271.937255859375,
+          720.0
+        ],
+        "label": "cake",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "cake",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          802.8865966796875,
+          263.083251953125,
+          1025.87841796875,
+          472.02630615234375
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          76.0338363647461,
+          164.67892456054688,
+          248.6798553466797,
+          367.3358154296875
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 981,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0090",
+        "anchor_key": "test5::test5-V292E03::entity_0090",
+        "bbox": [
+          797.1310424804688,
+          370.98553466796875,
+          1271.937255859375,
+          720.0
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0090",
+        "label": "cake",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          802.8865966796875,
+          263.083251953125,
+          1025.87841796875,
+          472.02630615234375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0073",
+        "anchor_key": "test5::test5-V292E03::entity_0073",
+        "bbox": [
+          76.0338363647461,
+          164.67892456054688,
+          248.6798553466797,
+          367.3358154296875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0073",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.16967762799564268,
+      "histogram_correlation": 0.9634367462102679,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 983,
+    "time": 32.766666666666666,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          832.9705810546875,
+          269.058349609375,
+          1091.863525390625,
+          483.02728271484375
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 1,
+    "provenance": {
+      "video_frame": 983,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          832.9705810546875,
+          269.058349609375,
+          1091.863525390625,
+          483.02728271484375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.18100149782135075,
+      "histogram_correlation": 0.9431341120270073,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 985,
+    "time": 32.833333333333336,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 985,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.19058074618736384,
+      "histogram_correlation": 0.909403754800838,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 987,
+    "time": 32.9,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 987,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.1901858660130719,
+      "histogram_correlation": 0.9095663938102048,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 989,
+    "time": 32.96666666666667,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 989,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.1916853894335512,
+      "histogram_correlation": 0.9282074735723385,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 991,
+    "time": 33.03333333333333,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 991,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.18480902777777777,
+      "histogram_correlation": 0.8945450550539652,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 993,
+    "time": 33.1,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 993,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.17510042211328974,
+      "histogram_correlation": 0.947134446434976,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 995,
+    "time": 33.166666666666664,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 995,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.16940699891067537,
+      "histogram_correlation": 0.9505578881707922,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 997,
+    "time": 33.233333333333334,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 997,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.16154513888888888,
+      "histogram_correlation": 0.9552479192215447,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 999,
+    "time": 33.3,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 999,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.15574448529411763,
+      "histogram_correlation": 0.9534865188910949,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1001,
+    "time": 33.36666666666667,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          373.098388671875,
+          292.9451599121094,
+          514.1437377929688,
+          537.2604370117188
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 1,
+    "provenance": {
+      "video_frame": 1001,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          373.098388671875,
+          292.9451599121094,
+          514.1437377929688,
+          537.2604370117188
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.13395969498910676,
+      "histogram_correlation": 0.9870262462187958,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1003,
+    "time": 33.43333333333333,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [],
+    "known_anchor_count": 0,
+    "provenance": {
+      "video_frame": 1003,
+      "seed_mask": null
+    },
+    "recovered_anchors": [],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.14432019335511984,
+      "histogram_correlation": 0.9660379353662985,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1005,
+    "time": 33.5,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          9.26648998260498,
+          304.13201904296875,
+          144.56463623046875,
+          459.7464294433594
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          374.3966979980469,
+          328.3876953125,
+          498.3495788574219,
+          470.842529296875
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 1005,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          9.26648998260498,
+          304.13201904296875,
+          144.56463623046875,
+          459.7464294433594
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          374.3966979980469,
+          328.3876953125,
+          498.3495788574219,
+          470.842529296875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.13487881263616558,
+      "histogram_correlation": 0.9434007698160365,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1007,
+    "time": 33.56666666666667,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          54.10600280761719,
+          299.9093017578125,
+          178.9749755859375,
+          452.5811767578125
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          402.2217712402344,
+          266.31707763671875,
+          523.716552734375,
+          476.17767333984375
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 1007,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          54.10600280761719,
+          299.9093017578125,
+          178.9749755859375,
+          452.5811767578125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          402.2217712402344,
+          266.31707763671875,
+          523.716552734375,
+          476.17767333984375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.12194138071895425,
+      "histogram_correlation": 0.9609246615566,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1009,
+    "time": 33.63333333333333,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0844930037856102,
+          296.298583984375,
+          203.1025848388672,
+          448.9175720214844
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          10.9676513671875,
+          146.31903076171875,
+          133.69561767578125,
+          241.10369873046875
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          427.81884765625,
+          335.1171875,
+          546.84228515625,
+          477.08416748046875
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 6,
+    "provenance": {
+      "video_frame": 1009,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0844930037856102,
+          296.298583984375,
+          203.1025848388672,
+          448.9175720214844
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          10.9676513671875,
+          146.31903076171875,
+          133.69561767578125,
+          241.10369873046875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          427.81884765625,
+          335.1171875,
+          546.84228515625,
+          477.08416748046875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11859681372549019,
+      "histogram_correlation": 0.9796526588316415,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1011,
+    "time": 33.7,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.2618001401424408,
+          356.014404296875,
+          137.67124938964844,
+          449.8814392089844
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          753.472412109375,
+          208.4059295654297,
+          910.907470703125,
+          397.0116882324219
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.31402587890625,
+          151.82455444335938,
+          77.61177062988281,
+          248.85787963867188
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          450.3045654296875,
+          339.7840270996094,
+          568.9885864257812,
+          481.8660583496094
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 5,
+    "provenance": {
+      "video_frame": 1011,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.2618001401424408,
+          356.014404296875,
+          137.67124938964844,
+          449.8814392089844
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          753.472412109375,
+          208.4059295654297,
+          910.907470703125,
+          397.0116882324219
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.31402587890625,
+          151.82455444335938,
+          77.61177062988281,
+          248.85787963867188
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          450.3045654296875,
+          339.7840270996094,
+          568.9885864257812,
+          481.8660583496094
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.1103366693899782,
+      "histogram_correlation": 0.9728367509999781,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1013,
+    "time": 33.766666666666666,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.9210001826286316,
+          356.310791015625,
+          216.74713134765625,
+          666.3355712890625
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          786.382080078125,
+          216.81527709960938,
+          954.081787109375,
+          414.355224609375
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.0731404647231102,
+          149.86314392089844,
+          109.11576843261719,
+          247.06341552734375
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          470.648681640625,
+          277.3872375488281,
+          598.2621459960938,
+          488.1253356933594
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          522.6520385742188,
+          324.47601318359375,
+          688.087158203125,
+          587.1044311523438
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 7,
+    "provenance": {
+      "video_frame": 1013,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.9210001826286316,
+          356.310791015625,
+          216.74713134765625,
+          666.3355712890625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          786.382080078125,
+          216.81527709960938,
+          954.081787109375,
+          414.355224609375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.0731404647231102,
+          149.86314392089844,
+          109.11576843261719,
+          247.06341552734375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0092",
+        "anchor_key": "test5::test5-V292E03::entity_0092",
+        "bbox": [
+          470.648681640625,
+          277.3872375488281,
+          598.2621459960938,
+          488.1253356933594
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0092",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          522.6520385742188,
+          324.47601318359375,
+          688.087158203125,
+          587.1044311523438
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11455950435729848,
+      "histogram_correlation": 0.9432698482635441,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1015,
+    "time": 33.833333333333336,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.61749267578125,
+          355.52105712890625,
+          185.34402465820312,
+          459.4500732421875
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          819.851318359375,
+          226.31991577148438,
+          997.0836181640625,
+          429.428955078125
+        ],
+        "label": "potted plant",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "potted plant",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.262847900390625,
+          146.89358520507812,
+          136.93255615234375,
+          247.52769470214844
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          542.8106689453125,
+          328.71392822265625,
+          714.8930053710938,
+          600.531005859375
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 1015,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.61749267578125,
+          355.52105712890625,
+          185.34402465820312,
+          459.4500732421875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0091",
+        "anchor_key": "test5::test5-V292E03::entity_0091",
+        "bbox": [
+          819.851318359375,
+          226.31991577148438,
+          997.0836181640625,
+          429.428955078125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0091",
+        "label": "potted plant",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.262847900390625,
+          146.89358520507812,
+          136.93255615234375,
+          247.52769470214844
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          542.8106689453125,
+          328.71392822265625,
+          714.8930053710938,
+          600.531005859375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11180555555555556,
+      "histogram_correlation": 0.9493938693790371,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1017,
+    "time": 33.9,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.2662353515625,
+          261.45098876953125,
+          202.42733764648438,
+          461.4236755371094
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.0,
+          148.0698699951172,
+          159.35353088378906,
+          238.54598999023438
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          558.5831909179688,
+          322.2219543457031,
+          736.3673706054688,
+          605.6205444335938
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 1017,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.2662353515625,
+          261.45098876953125,
+          202.42733764648438,
+          461.4236755371094
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.0,
+          148.0698699951172,
+          159.35353088378906,
+          238.54598999023438
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          558.5831909179688,
+          322.2219543457031,
+          736.3673706054688,
+          605.6205444335938
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.11347698801742918,
+      "histogram_correlation": 0.9654094584682527,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1019,
+    "time": 33.96666666666667,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0,
+          356.43743896484375,
+          217.65647888183594,
+          465.399169921875
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.1859334409236908,
+          144.13577270507812,
+          178.55613708496094,
+          238.8713836669922
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          574.6690673828125,
+          446.56787109375,
+          694.7469482421875,
+          622.57421875
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 1019,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0,
+          356.43743896484375,
+          217.65647888183594,
+          465.399169921875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          0.1859334409236908,
+          144.13577270507812,
+          178.55613708496094,
+          238.8713836669922
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          574.6690673828125,
+          446.56787109375,
+          694.7469482421875,
+          622.57421875
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10924394063180828,
+      "histogram_correlation": 0.9740543600561242,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1021,
+    "time": 34.03333333333333,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0,
+          359.4112243652344,
+          224.9021453857422,
+          471.97705078125
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          8.380167961120605,
+          145.98443603515625,
+          191.346435546875,
+          239.58274841308594
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          583.2291870117188,
+          352.21624755859375,
+          776.4069213867188,
+          642.4156494140625
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 3,
+    "provenance": {
+      "video_frame": 1021,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.0,
+          359.4112243652344,
+          224.9021453857422,
+          471.97705078125
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          8.380167961120605,
+          145.98443603515625,
+          191.346435546875,
+          239.58274841308594
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          583.2291870117188,
+          352.21624755859375,
+          776.4069213867188,
+          642.4156494140625
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10565087145969498,
+      "histogram_correlation": 0.975320718780363,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  },
+  {
+    "frame": 1023,
+    "time": 34.1,
+    "yolo_phone_detections": [],
+    "phone_candidates": [],
+    "sam_phone": null,
+    "phone_01_state": "UNOBSERVED",
+    "anchors": [
+      {
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.092041015625,
+          365.0030212402344,
+          230.712158203125,
+          484.2099609375
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          17.65753173828125,
+          146.47352600097656,
+          202.80711364746094,
+          240.72872924804688
+        ],
+        "label": "tv",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "tv",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      },
+      {
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          595.8407592773438,
+          467.6095886230469,
+          726.415771484375,
+          656.2998657226562
+        ],
+        "label": "chair",
+        "visible": true,
+        "authorized": true,
+        "raw_label": "chair",
+        "confidence": null,
+        "source": "EXISTING_ENTITY",
+        "semantic_uncertainty": "Frozen V292 omitted detection confidence; not reconstructed"
+      }
+    ],
+    "known_anchor_count": 4,
+    "provenance": {
+      "video_frame": 1023,
+      "seed_mask": null
+    },
+    "recovered_anchors": [
+      {
+        "anchor_id": "entity_0094",
+        "anchor_key": "test5::test5-V292E03::entity_0094",
+        "bbox": [
+          0.092041015625,
+          365.0030212402344,
+          230.712158203125,
+          484.2099609375
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0094",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0095",
+        "anchor_key": "test5::test5-V292E03::entity_0095",
+        "bbox": [
+          17.65753173828125,
+          146.47352600097656,
+          202.80711364746094,
+          240.72872924804688
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0095",
+        "label": "tv",
+        "visible": true,
+        "scope": "PERSISTENT"
+      },
+      {
+        "anchor_id": "entity_0093",
+        "anchor_key": "test5::test5-V292E03::entity_0093",
+        "bbox": [
+          595.8407592773438,
+          467.6095886230469,
+          726.415771484375,
+          656.2998657226562
+        ],
+        "entity_id": "test5::test5-V292E03::entity_0093",
+        "label": "chair",
+        "visible": true,
+        "scope": "PERSISTENT"
+      }
+    ],
+    "scene_ok": true,
+    "view_ok": true,
+    "scene_segment": 0,
+    "scene_diagnostics": {
+      "normalized_luma_difference": 0.10331733387799565,
+      "histogram_correlation": 0.983792703064879,
+      "policy": "cut if luma difference >0.35 AND histogram correlation <0.2; fixed diagnostic, not identity threshold"
+    },
+    "image_size": [
+      1280,
+      720
+    ],
+    "target_authorization": {
+      "status": "UNAVAILABLE",
+      "geometry_usable": false,
+      "identity_write_authorized": false,
+      "checks": {
+        "trusted_origin": false,
+        "causal_short_continuity": false,
+        "continuity_unbroken": true,
+        "no_identity_conflict": true,
+        "no_drift": false,
+        "mask_quality": false,
+        "scene_continuity": false
+      },
+      "failed_checks": [
+        "trusted_origin",
+        "causal_short_continuity",
+        "no_drift",
+        "mask_quality",
+        "scene_continuity"
+      ],
+      "source_trusted_frame": null
+    },
+    "target_bbox": null,
+    "target_visible_state": "NOT_OBSERVED",
+    "mask_area": null,
+    "mask_reference": null,
+    "sam_present": false,
+    "chain_id": null,
+    "baseline_dense_identity_authorized": false
+  }
+]

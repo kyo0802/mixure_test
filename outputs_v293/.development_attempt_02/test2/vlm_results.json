@@ -1,0 +1,296 @@
+[
+  {
+    "status": "VLM_GROUNDING_VALID",
+    "schema_valid": true,
+    "grounding_valid": true,
+    "target_id": "phone_01",
+    "anchor_key": "test2::test2-V292E01::entity_0057",
+    "event_id": "test2-V292E01",
+    "evidence_frames": {
+      "BEFORE": [
+        308
+      ],
+      "DURING": [
+        310,
+        314,
+        316
+      ],
+      "AFTER": [
+        318
+      ]
+    },
+    "grounding_limit": "Automatic consistency validation; not independent human ground truth",
+    "called": true,
+    "raw_output": "```json\n{\n  \"subject_reference\": \"phone_01\",\n  \"anchor_reference\": \"test2::test2-V292E01::entity_0057\",\n  \"event_reference\": \"test2-V292E01\",\n  \"evidence_frames\": {\n    \"BEFORE\": [308],\n    \"DURING\": [310, 314, 316],\n    \"AFTER\": [318]\n  },\n  \"target_visible_before\": \"YES\",\n  \"target_visible_during\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"target_moves_toward_anchor\": \"YES\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"target_not_observed_after\": \"NO\",\n  \"target_anchor_overlap_increases\": \"NO\",\n  \"target_disappears_after_release\": \"NO\",\n  \"target_visual_description\": \"Hand holding a black smartphone on a wooden table.\",\n  \"anchor_visual_description\": \"A pink package of food items on the same table.\",\n  \"evidence_summary\": \"The hand holding the phone moves closer to the food package but does not make contact or cross the boundary between them.\",\n  \"uncertainty\": \"The hand's movement towards the food package suggests an interaction, but it does not confirm if the phone contacts the package.\"\n}\n```",
+    "observable_facts": {
+      "subject_reference": "phone_01",
+      "anchor_reference": "test2::test2-V292E01::entity_0057",
+      "event_reference": "test2-V292E01",
+      "evidence_frames": {
+        "BEFORE": [
+          308
+        ],
+        "DURING": [
+          310,
+          314,
+          316
+        ],
+        "AFTER": [
+          318
+        ]
+      },
+      "target_visible_before": "YES",
+      "target_visible_during": "YES",
+      "target_visible_after": "YES",
+      "target_moves_toward_anchor": "YES",
+      "target_contacts_or_crosses_anchor_boundary": "NO",
+      "target_visible_area_decreases": "NO",
+      "anchor_remains_visible": "YES",
+      "hand_or_person_releases_target": "NO",
+      "target_stays_after_release": "NO",
+      "target_not_observed_after": "NO",
+      "target_anchor_overlap_increases": "NO",
+      "target_disappears_after_release": "NO",
+      "target_visual_description": "Hand holding a black smartphone on a wooden table.",
+      "anchor_visual_description": "A pink package of food items on the same table.",
+      "evidence_summary": "The hand holding the phone moves closer to the food package but does not make contact or cross the boundary between them.",
+      "uncertainty": "The hand's movement towards the food package suggests an interaction, but it does not confirm if the phone contacts the package."
+    },
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is refrigerator; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test2::test2-V292E01::entity_0057\", \"event_reference\": \"test2-V292E01\", \"evidence_frames\": {\"BEFORE\": [308], \"DURING\": [310, 314, 316], \"AFTER\": [318]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "runtime_seconds": 11.390000000130385,
+    "images": [
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0057\\00_BEFORE_f308.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0057\\01_DURING_f310.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0057\\02_DURING_f314.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0057\\03_DURING_f316.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0057\\04_AFTER_f318.jpg"
+    ],
+    "anchor_id": "test2::test2-V292E01::entity_0057"
+  },
+  {
+    "status": "VLM_GROUNDING_VALID",
+    "schema_valid": true,
+    "grounding_valid": true,
+    "target_id": "phone_01",
+    "anchor_key": "test2::test2-V292E01::entity_0055",
+    "event_id": "test2-V292E01",
+    "evidence_frames": {
+      "BEFORE": [
+        308
+      ],
+      "DURING": [
+        310,
+        314,
+        316
+      ],
+      "AFTER": [
+        318
+      ]
+    },
+    "grounding_limit": "Automatic consistency validation; not independent human ground truth",
+    "called": true,
+    "raw_output": "```json\n{\n  \"subject_reference\": \"phone_01\",\n  \"anchor_reference\": \"test2::test2-V292E01::entity_0055\",\n  \"event_reference\": \"test2-V292E01\",\n  \"evidence_frames\": {\n    \"BEFORE\": [308],\n    \"DURING\": [310, 314, 316],\n    \"AFTER\": [318]\n  },\n  \"target_visible_before\": \"YES\",\n  \"target_visible_during\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"target_moves_toward_anchor\": \"YES\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"YES\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"target_not_observed_after\": \"NO\",\n  \"target_anchor_overlap_increases\": \"NO\",\n  \"target_disappears_after_release\": \"NO\",\n  \"target_visual_description\": \"Hand holding a black phone on a wooden surface.\",\n  \"anchor_visual_description\": \"Basketball lying on the same wooden surface.\",\n  \"evidence_summary\": \"The hand remains in contact with the phone throughout the sequence, indicating no release.\",\n  \"uncertainty\": \"The hand's position relative to the phone changes slightly but does not displace it.\"\n}\n```",
+    "observable_facts": {
+      "subject_reference": "phone_01",
+      "anchor_reference": "test2::test2-V292E01::entity_0055",
+      "event_reference": "test2-V292E01",
+      "evidence_frames": {
+        "BEFORE": [
+          308
+        ],
+        "DURING": [
+          310,
+          314,
+          316
+        ],
+        "AFTER": [
+          318
+        ]
+      },
+      "target_visible_before": "YES",
+      "target_visible_during": "YES",
+      "target_visible_after": "YES",
+      "target_moves_toward_anchor": "YES",
+      "target_contacts_or_crosses_anchor_boundary": "YES",
+      "target_visible_area_decreases": "NO",
+      "anchor_remains_visible": "YES",
+      "hand_or_person_releases_target": "NO",
+      "target_stays_after_release": "NO",
+      "target_not_observed_after": "NO",
+      "target_anchor_overlap_increases": "NO",
+      "target_disappears_after_release": "NO",
+      "target_visual_description": "Hand holding a black phone on a wooden surface.",
+      "anchor_visual_description": "Basketball lying on the same wooden surface.",
+      "evidence_summary": "The hand remains in contact with the phone throughout the sequence, indicating no release.",
+      "uncertainty": "The hand's position relative to the phone changes slightly but does not displace it."
+    },
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is person; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test2::test2-V292E01::entity_0055\", \"event_reference\": \"test2-V292E01\", \"evidence_frames\": {\"BEFORE\": [308], \"DURING\": [310, 314, 316], \"AFTER\": [318]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "runtime_seconds": 11.031000000191852,
+    "images": [
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0055\\00_BEFORE_f308.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0055\\01_DURING_f310.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0055\\02_DURING_f314.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0055\\03_DURING_f316.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E01__entity_0055\\04_AFTER_f318.jpg"
+    ],
+    "anchor_id": "test2::test2-V292E01::entity_0055"
+  },
+  {
+    "status": "VLM_GROUNDING_VALID",
+    "schema_valid": true,
+    "grounding_valid": true,
+    "target_id": "phone_01",
+    "anchor_key": "test2::test2-V292E02::entity_0075",
+    "event_id": "test2-V292E02",
+    "evidence_frames": {
+      "BEFORE": [
+        529
+      ],
+      "DURING": [
+        531,
+        535,
+        537
+      ],
+      "AFTER": [
+        539
+      ]
+    },
+    "grounding_limit": "Automatic consistency validation; not independent human ground truth",
+    "called": true,
+    "raw_output": "```json\n{\n  \"subject_reference\": \"phone_01\",\n  \"anchor_reference\": \"test2::test2-V292E02::entity_0075\",\n  \"event_reference\": \"test2-V292E02\",\n  \"evidence_frames\": {\n    \"BEFORE\": [529],\n    \"DURING\": [531, 535, 537],\n    \"AFTER\": [539]\n  },\n  \"target_visible_before\": \"YES\",\n  \"target_visible_during\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"target_moves_toward_anchor\": \"YES\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"target_not_observed_after\": \"NO\",\n  \"target_anchor_overlap_increases\": \"NO\",\n  \"target_disappears_after_release\": \"NO\",\n  \"target_visual_description\": \"A hand holding a black smartphone.\",\n  \"anchor_visual_description\": \"A stuffed animal toy with a surprised expression.\",\n  \"evidence_summary\": \"The hand holding the phone moves closer to the stuffed animal toy, but does not make contact or cross the boundary between them.\",\n  \"uncertainty\": \"The hand's movement towards the toy suggests an interaction, but it does not confirm if the phone contacts the toy.\"\n}\n```",
+    "observable_facts": {
+      "subject_reference": "phone_01",
+      "anchor_reference": "test2::test2-V292E02::entity_0075",
+      "event_reference": "test2-V292E02",
+      "evidence_frames": {
+        "BEFORE": [
+          529
+        ],
+        "DURING": [
+          531,
+          535,
+          537
+        ],
+        "AFTER": [
+          539
+        ]
+      },
+      "target_visible_before": "YES",
+      "target_visible_during": "YES",
+      "target_visible_after": "YES",
+      "target_moves_toward_anchor": "YES",
+      "target_contacts_or_crosses_anchor_boundary": "NO",
+      "target_visible_area_decreases": "NO",
+      "anchor_remains_visible": "YES",
+      "hand_or_person_releases_target": "NO",
+      "target_stays_after_release": "NO",
+      "target_not_observed_after": "NO",
+      "target_anchor_overlap_increases": "NO",
+      "target_disappears_after_release": "NO",
+      "target_visual_description": "A hand holding a black smartphone.",
+      "anchor_visual_description": "A stuffed animal toy with a surprised expression.",
+      "evidence_summary": "The hand holding the phone moves closer to the stuffed animal toy, but does not make contact or cross the boundary between them.",
+      "uncertainty": "The hand's movement towards the toy suggests an interaction, but it does not confirm if the phone contacts the toy."
+    },
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is potted plant; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test2::test2-V292E02::entity_0075\", \"event_reference\": \"test2-V292E02\", \"evidence_frames\": {\"BEFORE\": [529], \"DURING\": [531, 535, 537], \"AFTER\": [539]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "runtime_seconds": 12.452999999979511,
+    "images": [
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0075\\00_BEFORE_f529.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0075\\01_DURING_f531.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0075\\02_DURING_f535.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0075\\03_DURING_f537.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0075\\04_AFTER_f539.jpg"
+    ],
+    "anchor_id": "test2::test2-V292E02::entity_0075"
+  },
+  {
+    "status": "VLM_GROUNDING_VALID",
+    "schema_valid": true,
+    "grounding_valid": true,
+    "target_id": "phone_01",
+    "anchor_key": "test2::test2-V292E02::entity_0073",
+    "event_id": "test2-V292E02",
+    "evidence_frames": {
+      "BEFORE": [
+        531
+      ],
+      "DURING": [
+        533,
+        535,
+        537
+      ],
+      "AFTER": [
+        539
+      ]
+    },
+    "grounding_limit": "Automatic consistency validation; not independent human ground truth",
+    "called": true,
+    "raw_output": "```json\n{\n  \"subject_reference\": \"phone_01\",\n  \"anchor_reference\": \"test2::test2-V292E02::entity_0073\",\n  \"event_reference\": \"test2-V292E02\",\n  \"evidence_frames\": {\n    \"BEFORE\": [531],\n    \"DURING\": [533, 535, 537],\n    \"AFTER\": [539]\n  },\n  \"target_visible_before\": \"YES\",\n  \"target_visible_during\": \"YES\",\n  \"target_visible_after\": \"YES\",\n  \"target_moves_toward_anchor\": \"YES\",\n  \"target_contacts_or_crosses_anchor_boundary\": \"NO\",\n  \"target_visible_area_decreases\": \"NO\",\n  \"anchor_remains_visible\": \"YES\",\n  \"hand_or_person_releases_target\": \"NO\",\n  \"target_stays_after_release\": \"NO\",\n  \"target_not_observed_after\": \"NO\",\n  \"target_anchor_overlap_increases\": \"NO\",\n  \"target_disappears_after_release\": \"NO\",\n  \"target_visual_description\": \"A hand holding a phone with a green bounding box around it.\",\n  \"anchor_visual_description\": \"A bottle with a pink bounding box around it.\",\n  \"evidence_summary\": \"The phone is held by a hand, moving towards the bottle, but does not make contact with it. The bottle remains visible throughout the sequence.\",\n  \"uncertainty\": \"The hand's movement towards the bottle is clear, but whether the phone makes contact with the bottle is uncertain.\"\n}\n```",
+    "observable_facts": {
+      "subject_reference": "phone_01",
+      "anchor_reference": "test2::test2-V292E02::entity_0073",
+      "event_reference": "test2-V292E02",
+      "evidence_frames": {
+        "BEFORE": [
+          531
+        ],
+        "DURING": [
+          533,
+          535,
+          537
+        ],
+        "AFTER": [
+          539
+        ]
+      },
+      "target_visible_before": "YES",
+      "target_visible_during": "YES",
+      "target_visible_after": "YES",
+      "target_moves_toward_anchor": "YES",
+      "target_contacts_or_crosses_anchor_boundary": "NO",
+      "target_visible_area_decreases": "NO",
+      "anchor_remains_visible": "YES",
+      "hand_or_person_releases_target": "NO",
+      "target_stays_after_release": "NO",
+      "target_not_observed_after": "NO",
+      "target_anchor_overlap_increases": "NO",
+      "target_disappears_after_release": "NO",
+      "target_visual_description": "A hand holding a phone with a green bounding box around it.",
+      "anchor_visual_description": "A bottle with a pink bounding box around it.",
+      "evidence_summary": "The phone is held by a hand, moving towards the bottle, but does not make contact with it. The bottle remains visible throughout the sequence.",
+      "uncertainty": "The hand's movement towards the bottle is clear, but whether the phone makes contact with the bottle is uncertain."
+    },
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is bottle; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test2::test2-V292E02::entity_0073\", \"event_reference\": \"test2-V292E02\", \"evidence_frames\": {\"BEFORE\": [531], \"DURING\": [533, 535, 537], \"AFTER\": [539]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "runtime_seconds": 12.875,
+    "images": [
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0073\\00_BEFORE_f531.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0073\\01_DURING_f533.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0073\\02_DURING_f535.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0073\\03_DURING_f537.jpg",
+      "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\outputs_v293\\test2\\vlm_inputs\\test2__test2-V292E02__entity_0073\\04_AFTER_f539.jpg"
+    ],
+    "anchor_id": "test2::test2-V292E02::entity_0073"
+  },
+  {
+    "status": "VLM_NOT_CALLED",
+    "grounding_valid": false,
+    "schema_valid": false,
+    "called": false,
+    "evidence_status": "EVIDENCE_UNAVAILABLE",
+    "reason": "NO_TARGET_BEFORE",
+    "event_id": "test2-V292E03",
+    "anchor_id": "test2::test2-V292E03::entity_0068",
+    "target_id": "phone_01"
+  },
+  {
+    "status": "VLM_NOT_CALLED",
+    "grounding_valid": false,
+    "schema_valid": false,
+    "called": false,
+    "evidence_status": "EVIDENCE_UNAVAILABLE",
+    "reason": "NO_TARGET_BEFORE",
+    "event_id": "test2-V292E03",
+    "anchor_id": "test2::test2-V292E03::entity_0070",
+    "target_id": "phone_01"
+  }
+]

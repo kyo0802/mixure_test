@@ -1,0 +1,418 @@
+{
+  "videos": [
+    {
+      "video_id": "test1",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 2,
+      "recomputed_intervals": 1,
+      "prepare_seconds": 41.57799999997951,
+      "rejections": {
+        "NO_TARGET_BEFORE": 4
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 2,
+        "before_anchor_usable": 6,
+        "during_target_usable": 2,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 2,
+        "after_anchor_usable": 2,
+        "pair_evidence_eligible": 2,
+        "vlm_called": 2,
+        "vlm_schema_valid": 2,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "vlm_new_inference_calls": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 4
+      },
+      "first_failing_stage": "vlm_grounding",
+      "response_inference_seconds": 50.35899999993853,
+      "exact_input_response_reused": 2,
+      "vlm_and_gate_seconds": 0.8440000000409782,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_GROUNDING_INVALID": 2,
+        "VLM_NOT_CALLED": 4
+      }
+    },
+    {
+      "video_id": "test2",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 4,
+      "recomputed_intervals": 2,
+      "prepare_seconds": 18.04700000002049,
+      "rejections": {
+        "NO_TARGET_BEFORE": 2
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 4,
+        "before_anchor_usable": 6,
+        "during_target_usable": 4,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 4,
+        "after_anchor_usable": 4,
+        "pair_evidence_eligible": 4,
+        "vlm_called": 4,
+        "vlm_schema_valid": 4,
+        "vlm_grounding_valid": 1,
+        "physical_gate_called": 3,
+        "physical_rejected": 2,
+        "physical_uncertain": 1,
+        "vlm_new_inference_calls": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 2
+      },
+      "first_failing_stage": null,
+      "response_inference_seconds": 47.74900000030175,
+      "exact_input_response_reused": 4,
+      "vlm_and_gate_seconds": 0.5930000001098961,
+      "relation_breakdown": {
+        "BEHIND": {
+          "REJECTED": 1
+        },
+        "NEAR": {
+          "UNCERTAIN": 1
+        },
+        "OCCLUDED_BY": {
+          "REJECTED": 1
+        }
+      },
+      "vlm_status_counts": {
+        "VLM_GROUNDING_INVALID": 3,
+        "VLM_GROUNDING_VALID": 1,
+        "VLM_NOT_CALLED": 2
+      }
+    },
+    {
+      "video_id": "test3",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 3.0939999998081475,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.031999999890103936,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    },
+    {
+      "video_id": "test4",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 3.1880000000819564,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.01500000013038516,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    },
+    {
+      "video_id": "test5",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 4.047000000020489,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.015999999828636646,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    },
+    {
+      "video_id": "test6",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 3.1880000000819564,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.01600000006146729,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    },
+    {
+      "video_id": "test7",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 3.343000000109896,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.014999999897554517,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    },
+    {
+      "video_id": "test8",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 5,
+      "recomputed_intervals": 3,
+      "prepare_seconds": 24.32799999997951,
+      "rejections": {
+        "PAIR_NEVER_COVISIBLE": 1
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 6,
+        "before_anchor_usable": 6,
+        "during_target_usable": 5,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 5,
+        "after_anchor_usable": 5,
+        "pair_evidence_eligible": 5,
+        "vlm_called": 5,
+        "vlm_schema_valid": 5,
+        "vlm_grounding_valid": 4,
+        "physical_gate_called": 12,
+        "physical_rejected": 6,
+        "physical_candidate": 1,
+        "physical_uncertain": 5,
+        "vlm_new_inference_calls": 0,
+        "physical_promoted": 0
+      },
+      "rejection_counts": {
+        "PAIR_NEVER_COVISIBLE": 1
+      },
+      "first_failing_stage": null,
+      "response_inference_seconds": 81.01500000036322,
+      "exact_input_response_reused": 5,
+      "vlm_and_gate_seconds": 0.6880000000819564,
+      "relation_breakdown": {
+        "BEHIND": {
+          "REJECTED": 3,
+          "UNCERTAIN": 1
+        },
+        "NEAR": {
+          "CANDIDATE": 1,
+          "UNCERTAIN": 3
+        },
+        "OCCLUDED_BY": {
+          "REJECTED": 3,
+          "UNCERTAIN": 1
+        }
+      },
+      "vlm_status_counts": {
+        "VLM_GROUNDING_VALID": 4,
+        "VLM_GROUNDING_INVALID": 1,
+        "VLM_NOT_CALLED": 1
+      }
+    },
+    {
+      "video_id": "test9",
+      "pair_requests_total": 6,
+      "pair_evidence_eligible": 0,
+      "recomputed_intervals": 0,
+      "prepare_seconds": 2.4379999998491257,
+      "rejections": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "evidence_reselected_without_dense_rerun": true,
+      "funnel": {
+        "pair_requests_total": 6,
+        "before_target_usable": 0,
+        "before_anchor_usable": 6,
+        "during_target_usable": 0,
+        "during_anchor_usable": 6,
+        "transition_evidence_usable": 0,
+        "after_anchor_usable": 0,
+        "pair_evidence_eligible": 0,
+        "vlm_new_inference_calls": 0,
+        "vlm_called": 0,
+        "vlm_schema_valid": 0,
+        "vlm_grounding_valid": 0,
+        "physical_gate_called": 0,
+        "physical_promoted": 0,
+        "physical_candidate": 0,
+        "physical_uncertain": 0,
+        "physical_rejected": 0
+      },
+      "rejection_counts": {
+        "NO_TARGET_BEFORE": 6
+      },
+      "first_failing_stage": "evidence_eligibility",
+      "response_inference_seconds": 0,
+      "exact_input_response_reused": 0,
+      "vlm_and_gate_seconds": 0.01500000013038516,
+      "relation_breakdown": {},
+      "vlm_status_counts": {
+        "VLM_NOT_CALLED": 6
+      }
+    }
+  ],
+  "development_videos_only": [
+    "test1",
+    "test2",
+    "test3",
+    "test4",
+    "test5",
+    "test6",
+    "test7",
+    "test8",
+    "test9"
+  ],
+  "upstream_full_rerun": false,
+  "selectively_recomputed_intervals": 6,
+  "prepare_seconds": 103.25099999993108,
+  "canonical_response_inference_seconds": 179.1230000006035,
+  "response_reuse_policy": "Only identical prompt and image SHA256 responses from this V293 development run; grounding and gate re-evaluated with final contract.",
+  "runtime_note": "Canonical response times exclude discarded development attempts; response reuse is not a new inference call."
+}

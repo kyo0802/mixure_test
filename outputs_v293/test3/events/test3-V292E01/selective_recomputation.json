@@ -1,0 +1,37 @@
+{
+  "event_id": "test3-V292E01",
+  "recomputed": false,
+  "baseline_config_sha256": "3a8600b58392e9501b9098c46948c74f0df98f6e4ccc3466b214f62539990761",
+  "raw_sha256": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+  "model_identifiers": {
+    "yolo": {
+      "path": ".models/yolo11s.pt",
+      "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5"
+    },
+    "sam": {
+      "path": ".models/sam2.1_hiera_small.pt",
+      "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38"
+    },
+    "appearance": {
+      "path": "outputs_v24/cache/mobilenet_v3_small-047dcff4.pth",
+      "sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f"
+    }
+  },
+  "dense_source_sha256": "6f941c00447f9f0d7cb6face8ebc36a22ad16f29779870ba955fab084e382f4e",
+  "canonical_dense_settings": {
+    "confidence": 0.15,
+    "image_size": 960,
+    "max_fps": 15,
+    "sam_postprocessing": false
+  },
+  "max_expansion_seconds_each_side": 1.5,
+  "original_interval": [
+    909,
+    999
+  ],
+  "reason": "Reused frozen dense geometry; no valid seed within global expansion budget",
+  "actual_interval": [
+    909,
+    999
+  ]
+}

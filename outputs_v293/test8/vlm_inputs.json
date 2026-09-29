@@ -1,0 +1,79 @@
+[
+  {
+    "event_id": "test8-V292E01",
+    "anchor_id": "test8::test8-V292E01::entity_0064",
+    "images": [
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0064\\00_BEFORE_f827.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0064\\01_DURING_f829.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0064\\02_DURING_f841.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0064\\03_DURING_f851.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0064\\04_AFTER_f853.jpg"
+    ],
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is bottle; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test8::test8-V292E01::entity_0064\", \"event_reference\": \"test8-V292E01\", \"evidence_frames\": {\"BEFORE\": [827], \"DURING\": [829, 841, 851], \"AFTER\": [853]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  },
+  {
+    "event_id": "test8-V292E01",
+    "anchor_id": "test8::test8-V292E01::entity_0062",
+    "images": [
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\00_BEFORE_f807.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\01_DURING_f809.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\02_DURING_f839.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\03_DURING_f869.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\04_AFTER_f871.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E01__entity_0062\\05_AFTER_f873.jpg"
+    ],
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is person; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test8::test8-V292E01::entity_0062\", \"event_reference\": \"test8-V292E01\", \"evidence_frames\": {\"BEFORE\": [807], \"DURING\": [809, 839, 869], \"AFTER\": [871, 873]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  },
+  {
+    "event_id": "test8-V292E02",
+    "anchor_id": "test8::test8-V292E02::event_anchor_007",
+    "images": [
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_007\\00_BEFORE_f954.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_007\\01_DURING_f956.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_007\\02_DURING_f962.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_007\\03_DURING_f966.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_007\\04_AFTER_f968.jpg"
+    ],
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is potted plant; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test8::test8-V292E02::event_anchor_007\", \"event_reference\": \"test8-V292E02\", \"evidence_frames\": {\"BEFORE\": [954], \"DURING\": [956, 962, 966], \"AFTER\": [968]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  },
+  {
+    "event_id": "test8-V292E02",
+    "anchor_id": "test8::test8-V292E02::event_anchor_006",
+    "images": [
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_006\\00_BEFORE_f954.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_006\\01_DURING_f956.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_006\\02_DURING_f962.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_006\\03_DURING_f966.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E02__event_anchor_006\\04_AFTER_f968.jpg"
+    ],
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is potted plant; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test8::test8-V292E02::event_anchor_006\", \"event_reference\": \"test8-V292E02\", \"evidence_frames\": {\"BEFORE\": [954], \"DURING\": [956, 962, 966], \"AFTER\": [968]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  },
+  {
+    "event_id": "test8-V292E03",
+    "anchor_id": "test8::test8-V292E03::event_anchor_005",
+    "images": [
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E03__event_anchor_005\\00_BEFORE_f966.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E03__event_anchor_005\\01_DURING_f968.jpg",
+      "outputs_v293\\test8\\vlm_inputs\\test8__test8-V292E03__event_anchor_005\\02_AFTER_f970.jpg"
+    ],
+    "prompt": "These images are ordered in time, each labeled with phase and original frame number. GREEN identifies the phone target; MAGENTA identifies exactly one queried anchor. The anchor detector raw class is potted plant; its class may be uncertain. Describe only this highlighted pair, never another phone or another object. A missing GREEN box AFTER means target not observed with anchor visible, NOT physical absence. Return observable visual facts only; do not name a final physical relation or infer hidden objects. Choose one of YES, NO, UNCERTAIN separately for each fact from the images; do not copy schema placeholders. Fill descriptions with visible appearance of the GREEN phone and MAGENTA anchor, plus an evidence summary and uncertainty. Keep IDs and frame arrays exactly as supplied. Return only one JSON object using this schema: {\"subject_reference\": \"phone_01\", \"anchor_reference\": \"test8::test8-V292E03::event_anchor_005\", \"event_reference\": \"test8-V292E03\", \"evidence_frames\": {\"BEFORE\": [966], \"DURING\": [968], \"AFTER\": [970]}, \"target_visible_before\": \"YES|NO|UNCERTAIN\", \"target_visible_during\": \"YES|NO|UNCERTAIN\", \"target_visible_after\": \"YES|NO|UNCERTAIN\", \"target_moves_toward_anchor\": \"YES|NO|UNCERTAIN\", \"target_contacts_or_crosses_anchor_boundary\": \"YES|NO|UNCERTAIN\", \"target_visible_area_decreases\": \"YES|NO|UNCERTAIN\", \"anchor_remains_visible\": \"YES|NO|UNCERTAIN\", \"hand_or_person_releases_target\": \"YES|NO|UNCERTAIN\", \"target_stays_after_release\": \"YES|NO|UNCERTAIN\", \"target_not_observed_after\": \"YES|NO|UNCERTAIN\", \"target_anchor_overlap_increases\": \"YES|NO|UNCERTAIN\", \"target_disappears_after_release\": \"YES|NO|UNCERTAIN\", \"target_visual_description\": \"\", \"anchor_visual_description\": \"\", \"evidence_summary\": \"\", \"uncertainty\": \"\"}",
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  },
+  {
+    "event_id": "test8-V292E03",
+    "anchor_id": "test8::test8-V292E03::entity_0076",
+    "images": [],
+    "prompt": null,
+    "model": "Qwen2.5-VL-3B-Instruct",
+    "generation_max_tokens": 768
+  }
+]

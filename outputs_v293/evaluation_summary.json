@@ -1,0 +1,59 @@
+{
+  "post_freeze": true,
+  "evaluation_utc": "2026-09-29T20:58:35.268109+00:00",
+  "final_status": "V293_EVIDENCE_PIPELINE_VALID",
+  "evidence_funnel": {
+    "pair_requests_total": 54,
+    "before_target_usable": 12,
+    "before_anchor_usable": 54,
+    "during_target_usable": 11,
+    "during_anchor_usable": 54,
+    "transition_evidence_usable": 11,
+    "after_anchor_usable": 11,
+    "pair_evidence_eligible": 11,
+    "vlm_called": 11,
+    "vlm_schema_valid": 11,
+    "vlm_grounding_valid": 5,
+    "physical_gate_called": 15,
+    "vlm_new_inference_calls": 0,
+    "physical_promoted": 0,
+    "physical_candidate": 1,
+    "physical_uncertain": 6,
+    "physical_rejected": 8
+  },
+  "dominant_rejection": "NO_TARGET_BEFORE",
+  "vlm_status_counts": {
+    "VLM_GROUNDING_INVALID": 6,
+    "VLM_NOT_CALLED": 43,
+    "VLM_GROUNDING_VALID": 5
+  },
+  "per_relation": {
+    "OCCLUDED_BY": {
+      "REJECTED": 4,
+      "UNCERTAIN": 1
+    },
+    "BEHIND": {
+      "REJECTED": 4,
+      "UNCERTAIN": 1
+    },
+    "NEAR": {
+      "UNCERTAIN": 4,
+      "CANDIDATE": 1
+    }
+  },
+  "remaining_bottleneck": "全體請求仍以缺少授權目標觀測為最大覆蓋限制；已有證據的 11 個配對中，6 個 grounding-invalid，顯示 VLM 配對辨識是目前可直接量測的下游瓶頸。",
+  "recommended_next_step": "優先改善 pair-specific VLM grounding（區分查詢錨點與鄰近物件、處理 AFTER 可見性矛盾），使用已凍結開發證據評估；另行審核事件選取與可信觀測覆蓋，再處理正常 Identity Guard 的長間隔恢復。",
+  "no_new_validation_videos_used": true,
+  "identity_or_physical_thresholds_changed": false,
+  "first_failing_stage_per_video": {
+    "test1": "vlm_grounding",
+    "test2": null,
+    "test3": "evidence_eligibility",
+    "test4": "evidence_eligibility",
+    "test5": "evidence_eligibility",
+    "test6": "evidence_eligibility",
+    "test7": "evidence_eligibility",
+    "test8": null,
+    "test9": "evidence_eligibility"
+  }
+}
