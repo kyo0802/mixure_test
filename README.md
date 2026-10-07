@@ -1,3 +1,30 @@
+# FindMind — Current Pipeline
+
+## Current status (2026-10-01)
+
+Main status report: [CURRENT_PIPELINE_REPORT.md](outputs/current_development/CURRENT_PIPELINE_REPORT.md).
+
+The active development path is the deterministic adaptive Event Window Builder and clean Qwen2.5-VL-7B direct-event reasoning under `memory_graph.events` and `memory_graph.reasoning`. V293 and its actual shared identity/perception/memory dependencies remain the operational reference. Molmo and unused SAM3/VLM experiments have been removed after dependency audit.
+
+- [Event windows, dense-frame results and architecture](outputs/current_development/EVENT_WINDOW_BUILDER_REPORT.md)
+- [Cleanup counts and preserved dependencies](outputs/current_development/cleanup/CLEANUP_REPORT.md)
+- [Frozen validation handoff](outputs/current_development/VALIDATION_HANDOFF.md)
+- [Compact experiment history](outputs/current_development/ARCHIVED_EXPERIMENT_HISTORY.md)
+
+Development results: 17 selected physical windows, 9 complete / 8 incomplete, 9 successful dense Qwen calls, 346 passing tests. Window evidence improves, but all 9 model event types are STATIC and safe searchable memory remains 0. The architecture is ready for frozen held-out measurement; physical reasoning is still limited.
+
+Run from `mixure_test_SAM` with the current local environment:
+
+```powershell
+.venv/Scripts/python.exe -X utf8 -B scripts/run_current_pipeline.py verify
+.venv/Scripts/python.exe -X utf8 -B scripts/run_current_pipeline.py verify-reference
+.venv/Scripts/python.exe -X utf8 -B scripts/run_v293.py verify
+```
+
+`prepare` and `run` reject overwriting frozen development artifacts. This task uses only historically manifested development media. The handoff documents the next measurement configuration.
+
+## Original core prototype documentation
+
 # Relative Video Memory Graph
 
 An **R4DSG-inspired prototype**, not an exact reproduction of R4DSG. It converts RGB video into persistent tracked identities, heuristic scene anchors, and temporally filtered **2D image-space** relations. No previous FindMind implementation or scoring logic is used.

@@ -1,0 +1,111 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "pattern": "^PI_[0-9]{6}$"
+    },
+    "label": {
+      "enum": [
+        "SAME",
+        "DIFFERENT",
+        "AMBIGUOUS"
+      ]
+    },
+    "ambiguity_cause": {
+      "enum": [
+        "NO_DISCRIMINATIVE_FEATURE",
+        "VIEW_MISMATCH",
+        "LOW_QUALITY",
+        "CONFLICTING_EVIDENCE",
+        null
+      ]
+    },
+    "challenge_tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "distractor_present",
+          "near_identical_appearance",
+          "front_vs_back",
+          "large_viewpoint_change",
+          "different_lighting",
+          "motion_blur",
+          "partial_occlusion",
+          "poor_image_quality",
+          "none"
+        ]
+      }
+    },
+    "evidence_for_same": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "feature": {
+            "type": "string",
+            "minLength": 1
+          },
+          "q_image": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "r_image": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "feature",
+          "q_image",
+          "r_image"
+        ]
+      }
+    },
+    "evidence_for_different": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "feature": {
+            "type": "string",
+            "minLength": 1
+          },
+          "q_image": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "r_image": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "feature",
+          "q_image",
+          "r_image"
+        ]
+      }
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  },
+  "required": [
+    "item_id",
+    "label",
+    "ambiguity_cause",
+    "challenge_tags",
+    "evidence_for_same",
+    "evidence_for_different",
+    "confidence"
+  ]
+}
