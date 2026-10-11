@@ -1,0 +1,779 @@
+{
+  "phase": "PASS_I",
+  "status": "PASS_I_CLOSED_ACQUISITION_LIMITED",
+  "pilot0": {
+    "designation": "DEV_PILOT_0_DATA_QUALITY_DISCOVERY",
+    "selected": 40,
+    "usable_reviewed": 39,
+    "excluded": 1,
+    "gpt_ambiguous_usable": 28,
+    "human_ambiguous": 16,
+    "gpt_human_disagreement": 12
+  },
+  "evidence_qc": {
+    "epochs_reviewed": 120,
+    "epoch_counts": {
+      "VALID": 63,
+      "MIXED_IDENTITY": 4,
+      "NO_USABLE_TARGET": 53
+    },
+    "crop_counts": {
+      "KEEP_PRIMARY": 92,
+      "KEEP_WEAK": 52,
+      "DROP_WRONG_TARGET": 119,
+      "DROP_NOT_PHONE": 1,
+      "DROP_TOO_CORRUPTED": 0,
+      "DROP_DUPLICATE": 0
+    },
+    "original_selected_crops": 264
+  },
+  "pilot1": {
+    "selected": 40,
+    "primary_valid": 30,
+    "hard_valid": 10,
+    "human_labels": {
+      "SAME": 2,
+      "DIFFERENT": 4,
+      "AMBIGUOUS": 34
+    },
+    "human_ambiguity_causes": {
+      "NO_DISCRIMINATIVE_FEATURE": 19,
+      "VIEW_MISMATCH": 15
+    },
+    "gpt_labels": {
+      "SAME": 0,
+      "DIFFERENT": 0,
+      "AMBIGUOUS": 40
+    },
+    "gpt_human_agreement": 34,
+    "model_id": "gpt-6.1-sol",
+    "model_id_source": "artifacts/pass_i/prelabels/dev_pilot_1/transport_configuration.json"
+  },
+  "disagreement_adjudication": {
+    "cases": 6,
+    "adjudicated_labels": {
+      "SAME": 2,
+      "DIFFERENT": 4,
+      "AMBIGUOUS": 0
+    },
+    "original_decisive_sustained": 6,
+    "changed_to_ambiguous": 0,
+    "gpt_over_abstained_on_sustained_decisive": 6
+  },
+  "coverage_diagnostic": {
+    "sampling_rule": "Within each human AMBIGUOUS cause, sort item_id ascending; choose zero-based indices floor((2*i+1)*n/12), i=0..5. Six per cause, 12 pairs total; fixed before visual inspection.",
+    "n_pairs": 12,
+    "n_pair_side_epoch_appearances": 24,
+    "n_unique_epochs": 20,
+    "item_ids": [
+      "PI_100002",
+      "PI_100005",
+      "PI_100012",
+      "PI_100014",
+      "PI_100024",
+      "PI_100026",
+      "PI_100015",
+      "PI_100018",
+      "PI_100028",
+      "PI_100033",
+      "PI_100036",
+      "PI_100039"
+    ],
+    "epoch_counts": {
+      "DISTINCTIVE_VIEW_AVAILABLE_BUT_NOT_SELECTED": 0,
+      "DISTINCTIVE_VIEW_NOT_OBSERVED": 8,
+      "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED": 16,
+      "INSUFFICIENT_TO_AUDIT": 0
+    },
+    "pair_counts": {
+      "Q_MISSED_USEFUL_EVIDENCE_ONLY": 0,
+      "R_MISSED_USEFUL_EVIDENCE_ONLY": 0,
+      "BOTH_MISSED_USEFUL_EVIDENCE": 0,
+      "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE": 12,
+      "INSUFFICIENT_TO_AUDIT": 0
+    },
+    "view_coverage_per_pair_side": {
+      "selected": {
+        "front_dominant": 18,
+        "side_profile_visible": 4,
+        "back_visible": 6,
+        "repeated_near_duplicate_views": 13,
+        "distinctive_marking_visible": 4
+      },
+      "available": {
+        "front_dominant": 18,
+        "side_profile_visible": 4,
+        "back_visible": 6,
+        "distinctive_marking_visible": 4
+      }
+    },
+    "pairs": [
+      {
+        "item_id": "PI_100002",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Single Q front/edge view; R has six small similar back views.",
+        "Q": {
+          "epoch_id": "ce:test4:0005",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            108
+          ],
+          "available_frame_range": [
+            108,
+            108
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test4:0030",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 6,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            1044,
+            1062,
+            1074
+          ],
+          "available_frame_range": [
+            1032,
+            1074
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100005",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q back tag is already selected; R contains only repeated dark fronts.",
+        "Q": {
+          "epoch_id": "ce:test4:0012",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 2,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            318
+          ],
+          "available_frame_range": [
+            312,
+            318
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test4:0018",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 5,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            420,
+            432,
+            444
+          ],
+          "available_frame_range": [
+            420,
+            444
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100012",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q back tag already selected; R has one front view.",
+        "Q": {
+          "epoch_id": "ce:test7:0006",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 6,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            186,
+            204,
+            228
+          ],
+          "available_frame_range": [
+            186,
+            228
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test7:0011",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            402
+          ],
+          "available_frame_range": [
+            402,
+            402
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100014",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q back/camera/side view selected; R repeated fronts without back detail.",
+        "Q": {
+          "epoch_id": "ce:test7:0009",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            396
+          ],
+          "available_frame_range": [
+            396,
+            396
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "side_profile_visible": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1,
+            "side_profile_visible": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test7:0019",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 7,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            714,
+            726,
+            750
+          ],
+          "available_frame_range": [
+            702,
+            750
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100024",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back",
+          "large_viewpoint_change"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q has one front; R has repeated tagged backs and selected examples span that run.",
+        "Q": {
+          "epoch_id": "ce:val_5:0008",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            732
+          ],
+          "available_frame_range": [
+            732,
+            732
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_5:0019",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 18,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            1380,
+            1422,
+            1488
+          ],
+          "available_frame_range": [
+            1380,
+            1512
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100026",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "VIEW_MISMATCH",
+        "human_challenge_tags": [
+          "front_vs_back",
+          "large_viewpoint_change"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q repeats dark fronts; R tagged back is selected across the epoch.",
+        "Q": {
+          "epoch_id": "ce:val_5:0013",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 18,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            960,
+            984,
+            1020
+          ],
+          "available_frame_range": [
+            918,
+            1020
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_5:0019",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 18,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            1380,
+            1422,
+            1488
+          ],
+          "available_frame_range": [
+            1380,
+            1512
+          ],
+          "selected_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "back_visible": 1,
+            "distinctive_marking_visible": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100015",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Both epochs remain front-facing; later unselected views do not expose a distinct mark.",
+        "Q": {
+          "epoch_id": "ce:test8:0010",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 6,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            810,
+            828,
+            840
+          ],
+          "available_frame_range": [
+            804,
+            840
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test8:0026",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 8,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            918,
+            936,
+            948
+          ],
+          "available_frame_range": [
+            912,
+            954
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100018",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance",
+          "partial_occlusion",
+          "poor_image_quality"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q is a single partial front; R is repeated front view without new mark.",
+        "Q": {
+          "epoch_id": "ce:test8:0001",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            180
+          ],
+          "available_frame_range": [
+            180,
+            180
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:test8:0026",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 8,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            918,
+            936,
+            948
+          ],
+          "available_frame_range": [
+            912,
+            954
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100028",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q has one dark front; R changes reflection/angle but still shows no persistent mark.",
+        "Q": {
+          "epoch_id": "ce:val_6:0007",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            606
+          ],
+          "available_frame_range": [
+            606,
+            606
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_6:0020",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 18,
+          "selected_crop_count": 3,
+          "selected_frames": [
+            1332,
+            1362,
+            1434
+          ],
+          "available_frame_range": [
+            1332,
+            1434
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100033",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q has one dark front; R three near-identical dark fronts.",
+        "Q": {
+          "epoch_id": "ce:val_6:0007",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            606
+          ],
+          "available_frame_range": [
+            606,
+            606
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_6:0022",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 3,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            1686
+          ],
+          "available_frame_range": [
+            1680,
+            1692
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100036",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q repeats a dark front; R has two similar front/profile views, including the selected one.",
+        "Q": {
+          "epoch_id": "ce:val_7:0042",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 4,
+          "selected_crop_count": 2,
+          "selected_frames": [
+            852,
+            870
+          ],
+          "available_frame_range": [
+            852,
+            870
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_7:0089",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 2,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            1380
+          ],
+          "available_frame_range": [
+            1374,
+            1380
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          }
+        }
+      },
+      {
+        "item_id": "PI_100039",
+        "human_label": "AMBIGUOUS",
+        "human_ambiguity_cause": "NO_DISCRIMINATIVE_FEATURE",
+        "human_challenge_tags": [
+          "near_identical_appearance"
+        ],
+        "pair_classification": "NEITHER_HAD_BETTER_EVIDENCE_AVAILABLE",
+        "visual_observation": "Q is a front/edge view; R repeats the dark front already selected.",
+        "Q": {
+          "epoch_id": "ce:val_7:0039",
+          "classification": "DISTINCTIVE_VIEW_NOT_OBSERVED",
+          "available_observations": 1,
+          "selected_crop_count": 1,
+          "selected_frames": [
+            762
+          ],
+          "available_frame_range": [
+            762,
+            762
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1,
+            "side_profile_visible": 1
+          }
+        },
+        "R": {
+          "epoch_id": "ce:val_7:0042",
+          "classification": "BEST_AVAILABLE_EVIDENCE_ALREADY_SELECTED",
+          "available_observations": 4,
+          "selected_crop_count": 2,
+          "selected_frames": [
+            852,
+            870
+          ],
+          "available_frame_range": [
+            852,
+            870
+          ],
+          "selected_view_flags": {
+            "front_dominant": 1,
+            "repeated_near_duplicate_views": 1
+          },
+          "available_view_flags": {
+            "front_dominant": 1
+          }
+        }
+      }
+    ],
+    "recommendation": "EVIDENCE_ACQUISITION_IS_PRIMARY_LIMITATION",
+    "limitations": "Small descriptive sample; repeated epochs across pairs; visual view labels are conservative manual observations, not physical identity judgments.",
+    "unique_multi_observation_epochs": 13,
+    "unique_multi_observation_selector_misses": 0,
+    "rule_of_three_approximate_upper_bound": 0.23076923076923078,
+    "rule_of_three_note": "Approximate 95% rule-of-three heuristic under independent, representative observations; this small deterministic, overlapping pair sample does not establish a population miss rate.",
+    "not_observed_single_observation_pair_side_appearances": 8
+  },
+  "primary_bottleneck": "INSUFFICIENT_IDENTITY_INFORMATION",
+  "secondary_issue": "VLM_OVER_ABSTENTION_ON_SOME_HUMAN_DECIDABLE_CASES",
+  "next_phase": "PASS_T",
+  "preservation": {
+    "prompt_name": "pass_i_visual_annotator_v1",
+    "prompt_sha256": "b6057e19de893514fabba7842dbd3a91957fc17e7255c2e9bfb2a3b16dd7b53d",
+    "regression_tests": {
+      "passed": 25,
+      "failed": 0,
+      "total": 25,
+      "files": [
+        "tests/test_pass_i.py",
+        "tests/test_pass_i_pilot.py"
+      ]
+    },
+    "hash_log_path": "artifacts/pass_i/manifests/protected_before.json",
+    "hash_log_entries": 4186,
+    "closeout_hash_log_path": "C:/Users/smile/AppData/Local/Temp/findmind_pass_i_closeout/protected_hashes_before.json",
+    "closeout_hash_log_note": "Existing 74-file closeout snapshot is local temporary storage; the repository protected manifest is the durable baseline reference.",
+    "frozen_baseline_version": "V2.9.7 / V297",
+    "frozen_baseline_manifest_path": "outputs/v297_physical_identity/FROZEN_V297_POLICY_MANIFEST.json",
+    "pre_patch_commit_sha": "3e5283039a0a2218342593b5efd3eaefc9b3ed05",
+    "verification_timestamp_utc": "2026-10-07T11:30:26.490046+00:00",
+    "verification_result": "PASS",
+    "final_patch_protected_files_verified": 4580
+  }
+}

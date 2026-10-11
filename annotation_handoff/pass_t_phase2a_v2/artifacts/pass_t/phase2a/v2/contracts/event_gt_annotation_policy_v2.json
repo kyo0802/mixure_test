@@ -1,0 +1,456 @@
+{
+  "policy_id": "PASS_T_EVENT_GT_POLICY_V2",
+  "schema_version": "PASS_T_EVENT_GT_V2",
+  "human_policy": "EVENT_GT_ANNOTATION_POLICY_V2.md",
+  "response_schema": "event_gt_annotation_schema_v2.json",
+  "approval": {
+    "required": true,
+    "message_prefix": "APPROVE_PHASE2A_POLICY_V2",
+    "hash_source": "SHA256 bytes of EVENT_GT_ANNOTATION_POLICY_V2.md",
+    "hex_characters": 12,
+    "case_sensitive": true,
+    "comparison": "Exact single approval message after trimming outer whitespace; no extra words.",
+    "on_missing_or_mismatch": "STOP",
+    "frozen_file_repair": "NEVER; new policy version and receipt required"
+  },
+  "status_stage_a": "PASS_T_PHASE2A_POLICY_V2_FROZEN_AWAITING_APPROVAL",
+  "status_stage_b": "PASS_T_PHASE2A_ANNOTATION_INFRASTRUCTURE_READY",
+  "prohibited_operations": [
+    "MODEL_INFERENCE",
+    "AUTOMATIC_EVENT_LABELING",
+    "GRAPH_WRITE",
+    "GLOBAL_IDENTITY_ALIAS",
+    "MODEL_OR_TRACKER_RERUN",
+    "BUILDER_CHANGE",
+    "PROTECTED_FILE_EDIT",
+    "COMMIT",
+    "PUSH"
+  ],
+  "axes": {
+    "event_types": [
+      "PICKUP",
+      "PLACEMENT"
+    ],
+    "physical_states": [
+      "ON_SURFACE",
+      "HELD_BY_PERSON",
+      "OTHER_OBSERVED",
+      "STATE_UNKNOWN"
+    ],
+    "visibility": [
+      "VISIBLE",
+      "PARTIALLY_OCCLUDED",
+      "NOT_VISIBLE",
+      "VISIBILITY_UNKNOWN"
+    ],
+    "not_visible_reasons": [
+      "OCCLUDED_BY_OBSERVED_OBJECT",
+      "LEFT_FIELD_OF_VIEW_OBSERVED",
+      "REASON_UNKNOWN"
+    ],
+    "window_outcomes": [
+      "CONFIRMED_EVENTS",
+      "NO_CONFIRMED_EVENT",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ],
+    "temporal_status": [
+      "EXACT_OBSERVED_TRANSITION",
+      "BOUNDED_BY_BEFORE_AFTER_EVIDENCE",
+      "TIMING_UNCERTAIN"
+    ],
+    "target_dependence": [
+      "NOT_DEPENDENT",
+      "PARTIALLY_DEPENDENT",
+      "DEPENDENT",
+      "UNKNOWN"
+    ],
+    "confidence": [
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "UNKNOWN"
+    ],
+    "citation_roles": [
+      "BEFORE",
+      "TRANSITION",
+      "AFTER",
+      "STATE",
+      "COVERAGE"
+    ],
+    "citation_kinds": [
+      "CANDIDATE_OBSERVATION_BACKED",
+      "DIRECT_VISUAL_ONLY"
+    ],
+    "target_association": [
+      "SUPPORTED",
+      "AMBIGUOUS",
+      "NOT_VISIBLE",
+      "UNKNOWN"
+    ],
+    "actor_reference": [
+      "VISIBLE_PERSON_UNRESOLVED",
+      "NOT_OBSERVED",
+      null
+    ]
+  },
+  "source_authority": {
+    "frame_id_pattern": "^S[0-9]{6}$",
+    "timestamp": "NATIVE_PTS only; no derived FPS fallback",
+    "timestamp_tolerance_s": 0.000001,
+    "bounds": "intersection of conservative [lo,hi) source indices and [start_s,end_s) native times",
+    "observation_link": "exact source-frame index and selected local candidate only; do not match derived observation timestamps or interpolate",
+    "legacy_F_ids": "private verified F-to-S map, never full-rate GT citation IDs",
+    "references": "Rxxxxxx, never citable"
+  },
+  "coordinate_system": {
+    "id": "REVIEW_FRAME_PIXELS_V1",
+    "width": 1280,
+    "height": 720,
+    "origin": "TOP_LEFT",
+    "x_direction": "RIGHT",
+    "y_direction": "DOWN",
+    "full_frame_to_source_transform": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "markers_origin": "GUI_DRAWN",
+    "display_conversion": "invert actual scale and letterbox; validate raw pixel bounds",
+    "point": "0<=x<width;0<=y<height",
+    "bbox": "0<=x1<x2<=width;0<=y1<y2<=height"
+  },
+  "citations": {
+    "candidate_backed": "Nonempty verified selected observation IDs at exact authorized index; visual association still required.",
+    "direct_visual_only": "No existing selected observation at this frame, IDs empty, what/where description required; no machine association or track extension.",
+    "confirmed_association": "SUPPORTED on all event evidence and known state support",
+    "role_semantics": "BEFORE before event, AFTER after event, TRANSITION inside bracket, STATE direct support at cited frame, COVERAGE assessability only",
+    "unmodeled_observations": "free text plus frame IDs and citations; never confirmed event types"
+  },
+  "temporal_rules": {
+    "confirmed_requires": [
+      "BEFORE",
+      "AFTER"
+    ],
+    "exact_requires": "TRANSITION, equal start/end native time at a cited transition, strict earlier BEFORE and later AFTER",
+    "bounded_and_uncertain": "latest BEFORE to earliest AFTER; no interpolated midpoint; strictly ordered",
+    "multiple_events": "unique IDs and event records; sort by start,end,event ID",
+    "overlapping_uncertain_brackets": "require chronology_uncertainty=true for involved events; report, do not impose false precision",
+    "definite_contradictions": "reject contradictory opposite exact transitions at same instant/frame and incompatible observed before/after states",
+    "before_after_states": "Optional if observed. Before-state frame <= latest BEFORE; after-state frame >= earliest AFTER. Evidence includes asserted frame. Unknown/null does not establish a transition; OTHER requires description and support."
+  },
+  "outcome_rules": {
+    "confirmed_events_min": 1,
+    "other_outcomes_events_max": 0,
+    "no_event": "first frame + middle-third frame + last frame COVERAGE citations and THROUGHOUT_ASSESSABLE declaration; no unobservable target/transition gaps",
+    "target_not_observable": "No positively supported target-visible citation/state anywhere; ambiguous/limited visibility uses INSUFFICIENT_EVIDENCE",
+    "unknown_outcomes": "no invented events",
+    "confirmed_exhaustiveness": "Not implicit; only validated EXHAUSTIVE_ATTESTED confirmed-event windows are exhaustive for the two-event ontology."
+  },
+  "last_confirmed_rules": {
+    "state": "latest directly supported known physical state, not assumed final frame or persisted state; STATE_UNKNOWN can support directly visible location without asserting support",
+    "no_frame": "null timestamp/location/marker, empty state/location evidence, subsequent UNKNOWN",
+    "location": "description/GUI marker require same-frame SUPPORTED STATE evidence and frame ID in location evidence",
+    "window_end_visibility": "last authorized native frame, independent state axis",
+    "subsequent": "UNKNOWN unless strictly later supported direct in-window location; never a guaranteed current location",
+    "unknown_or_unobserved_afterward": "human declaration for the remainder of reviewed window; no extension beyond window"
+  },
+  "eligibility": {
+    "strata": [
+      "SOURCE_RESOLVED_DEV",
+      "HUMAN_SEEDED_DEV",
+      "EXCLUDED_OR_UNRESOLVED"
+    ],
+    "original_pack_count": 9,
+    "original_unique_windows": 8,
+    "original_nonoverlap_groups": 7,
+    "distinct_source_video_files": 6,
+    "eligible_unique_windows": 7,
+    "eligible_nonoverlap_groups": 7,
+    "eligible_source_video_files": 6,
+    "source_resolved_packs": 2,
+    "source_resolved_unique_windows": 1,
+    "human_seeded_eligible_windows": 6,
+    "excluded": {
+      "pack_id": "test8__W06",
+      "reason": "EVENT_DEPENDENT_SELECTION"
+    },
+    "formal_eligible": 0,
+    "automatic_binding_causality": "9/9 CAUSALITY_UNVERIFIED; never promoted",
+    "recording_session_independence": "UNKNOWN",
+    "primary_denominator": "Originally eligible, valid, uncompromised and NOT_DEPENDENT only",
+    "sensitivity_strata": [
+      "PARTIALLY_DEPENDENT",
+      "DEPENDENT",
+      "UNKNOWN"
+    ],
+    "same_source_windows_independent": false,
+    "no_negative_controls": true
+  },
+  "deduplication": {
+    "canonical_fields": [
+      "source_video_sha256",
+      "window_start_s",
+      "window_end_s",
+      "authorized_half_open_frames"
+    ],
+    "serialization": "UTF-8 JSON, sort_keys=True, separators=(',',':')",
+    "item_id": "PT2A_ plus first 16 hex SHA256 of serialized key; collision check",
+    "retain": "all original pack IDs, overlap groups, source/media/local provenance and eligibility; dedup identical media regardless of trigger"
+  },
+  "phase1c_projection": {
+    "allowed": [
+      "selected_local_candidate_id",
+      "stratum_and_eligibility_provenance",
+      "source_response_and_item_hashes",
+      "phase1c_reviewer_id_backend_only",
+      "frozen_policy_linkage"
+    ],
+    "forbidden_ui": [
+      "rationale",
+      "cited_evidence_frames",
+      "uncertainty",
+      "physical_gt",
+      "previous_answers",
+      "scores",
+      "aliases",
+      "global_identity",
+      "full_source_video_paths"
+    ],
+    "never_import": [
+      "phase1c_viewer",
+      "phase1c_responses"
+    ]
+  },
+  "references": {
+    "inherited_policy_id": "HUMAN_SEED_ELIGIBILITY_V1",
+    "allow_pre_window_seed_reference": true,
+    "max_references": 3,
+    "selection": "exact original-seed first, binding if present, last strictly pre-window; dedup ascending; verify source pixels and hash",
+    "role": "REFERENCE_PRE_WINDOW",
+    "citable": false,
+    "model_access_phase2b": "TBD"
+  },
+  "gui": {
+    "native": "Tkinter",
+    "network": false,
+    "initial_overlay": "SELECTED_CANDIDATE_ONLY",
+    "global_off": true,
+    "other_candidates_default_hidden": true,
+    "other_candidates_opt_in_logged": true,
+    "detector_scores_area_ranking_visible": false,
+    "event_answer_prefill": false,
+    "copy_detector_box_to_location": false,
+    "round2_answers_visible": false
+  },
+  "storage": {
+    "exclusive_create": true,
+    "immutable": true,
+    "duplicate_key": [
+      "annotation_item_id",
+      "review_round"
+    ],
+    "duplicate_action": "reject; do not choose first/newest",
+    "submitted_via": "human_event_gt_review_viewer",
+    "timestamps": "real backend UTC at save, automatically recorded",
+    "hashes": [
+      "policy_MD",
+      "policy_JSON",
+      "schema",
+      "item",
+      "source_video",
+      "authorized_visual_manifest",
+      "phase1c_response_if_applicable"
+    ],
+    "human_attestation_required": true,
+    "invalid_or_leaked_records": "preserve separately and exclude, never silently repair"
+  },
+  "repeat_review": {
+    "optional": true,
+    "rounds": [
+      1,
+      2
+    ],
+    "round1_relabel_of": null,
+    "round2_relabel_of": "validated round1 response SHA256",
+    "recommended_delay_days": 7,
+    "short_delay_action": "FLAG_NOT_REJECT",
+    "subset_seed": "PASS_T_PHASE2A_REPEAT_V1|",
+    "subset_rule": "sort SHA256(seed + item_id), ties by item_id; first max(1,ceil(N/4)) if N>0 else zero; frozen before responses",
+    "n7_subset_size": 2,
+    "display_round1_answers": false,
+    "agreement": "descriptive only, no reliability/power claim"
+  },
+  "sampling": {
+    "candidate_stride_frames": "user-supplied positive integers only; no default chosen",
+    "without_strides": "SAMPLING_NOT_REQUESTED",
+    "without_events": "NO_CONFIRMED_EVENTS",
+    "index_grid": "authorized full-rate positions j, window-relative; j%k==o for every o in range(k)",
+    "evidence_spans": "inclusive earliest..latest cited BEFORE and AFTER positional envelopes",
+    "result": "per offset both-role hits, misses, all-offset boolean",
+    "short_interval": "end_position-start_position < k; native PTS duration also reported",
+    "limitation": "Envelope intersection is not visual informativeness, model accuracy, or GT-guided model frame selection"
+  },
+  "future_model_contract": {
+    "sampling_stride": "TBD",
+    "frame_count": "TBD",
+    "prompt_format": "TBD",
+    "models_parameters": "TBD",
+    "model_pre_window_references": "TBD in Phase2b preregistration; disclose human use"
+  },
+  "semantic_validation_required": [
+    "manifest membership and local ID",
+    "native PTS and half-open bounds",
+    "citation observation membership/role/association",
+    "event chronology and physical-state consistency",
+    "no-event continuous assessability",
+    "last state and marker geometry",
+    "pre-window non-citable",
+    "immutable duplicate/round linkage",
+    "same-reviewer and dependence strata",
+    "source/overlap/session accounting",
+    "allowed paths/fields and leakage attestations",
+    "policy/hash compatibility",
+    "protected preservation"
+  ],
+  "limits": [
+    "single annotator likely same as Phase1c",
+    "identity/event circularity self-declared, not independently verified",
+    "causality unverified",
+    "recording-session independence unknown",
+    "event-expected sampling with no negative controls",
+    "minimal event ontology and unmodeled gaps",
+    "human visual correctness/authorship not cryptographically proven"
+  ],
+  "revision": {
+    "derived_from_policy_id": "PASS_T_EVENT_GT_POLICY_V1",
+    "v1_policy_md_sha256": "f443a54675fd3481448da64e1f7afb60d0f94f6ed29f29d428ce21ffd467e614",
+    "v1_schema_sha256": "5c0c8b798faaa88fb21660d5535045f69f80bf947c6b6d01dbb716134b4a464d",
+    "v1_receipt_sha256": "a7656166045734dd3b5147872e779a2d713d1e89097367b58c58c8d6545c5d79",
+    "v1_preserved_and_unapproved": true,
+    "automatic_response_migration": false,
+    "changes": "Version/approval metadata plus confirmed-only event-list completeness and dependent evaluation/enforcement specifications. All other V1 behavior unchanged."
+  },
+  "event_list_exhaustiveness": {
+    "applies_to": "CONFIRMED_EVENTS_ONLY",
+    "values": [
+      "EXHAUSTIVE_ATTESTED",
+      "NOT_ATTESTED",
+      "UNKNOWN"
+    ],
+    "required_for_confirmed": true,
+    "other_outcomes_fields_absent": [
+      "event_list_exhaustiveness",
+      "event_list_exhaustiveness_attestation"
+    ],
+    "exhaustive_attestation": {
+      "field": "event_list_exhaustiveness_attestation",
+      "required_explicit_true": [
+        "entire_authorized_window_reviewed",
+        "all_confirmable_target_pickup_and_placement_annotated",
+        "no_unresolved_gap_could_conceal_additional_target_events",
+        "scope_limited_to_pickup_placement_ontology"
+      ],
+      "ontology_scope": [
+        "PICKUP",
+        "PLACEMENT"
+      ],
+      "general_human_attestation_is_not_a_substitute": true
+    },
+    "exhaustive_coverage": {
+      "coverage_assessment": "THROUGHOUT_ASSESSABLE",
+      "citations": "First authorized frame, middle-third frame, last authorized frame, SUPPORTED COVERAGE with frame IDs; exact native time/kind rules unchanged.",
+      "three_citations_prove_continuity": false
+    },
+    "possible_event_in_unobservable_gap": "EXHAUSTIVE_ATTESTED_UNAVAILABLE",
+    "non_exhaustive_uncertainty": {
+      "required": true,
+      "existing_field": "uncertainty",
+      "allowed_status": [
+        "OTHER_UNCERTAINTY",
+        "TIMING_UNCERTAIN",
+        "UNKNOWN"
+      ],
+      "description": "Explicit gap, incompleteness or unknown event-list completeness; no event-specific uncertainty change."
+    },
+    "attestation_only_for_exhaustive": true,
+    "no_default_or_automatic_inference": true,
+    "strict_no_confirmed_event_semantics": "UNCHANGED; no redundant completeness or negative-attestation field",
+    "other_unknown_outcomes_no_completeness_claim": true,
+    "timing_imprecision_of_supported_event": "Not alone a hidden-event gap; no blanket rejection of bounded/timing-uncertain supported events."
+  },
+  "event_evaluation": {
+    "scope": "Two-event ontology; exploratory DEV evidence support only, not formal eligibility or scoring implementation.",
+    "full_window_metrics": [
+      "FP",
+      "FN",
+      "precision",
+      "recall",
+      "hallucination_rate"
+    ],
+    "completeness_gate": "Validated EXHAUSTIVE_ATTESTED CONFIRMED_EVENTS or validated strict NO_CONFIRMED_EVENT only.",
+    "additional_required_gates": [
+      "schema_and_semantic_valid",
+      "original_Phase1c_DEV_eligible",
+      "reliable_selected_target_association_for_window_determination",
+      "no_leakage_or_global_identity_or_unsupported_track_extension_exclusions"
+    ],
+    "primary_additional_gate": "NOT_DEPENDENT only; other dependence strata separate sensitivity analyses",
+    "non_exhaustive_unlisted_events": "UNEVALUATED; never exhaustive negatives or automatic FP/hallucination",
+    "non_exhaustive_positives": "Separately reported exploratory supported-event matching/qualitative analysis if otherwise eligible and validated.",
+    "no_full_window_metrics_for": [
+      "NOT_ATTESTED",
+      "UNKNOWN",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ],
+    "no_causality_override": true,
+    "no_Phase1c_eligibility_override": true,
+    "no_leakage_or_association_override": true,
+    "no_formal_promotion": true,
+    "scoring_and_matching_and_hallucination_denominators": "TBD in Phase2b preregistration",
+    "metrics_computed_in_phase2a": false
+  },
+  "planned_v2_enforcement": {
+    "stage_b_implemented": false,
+    "gui": "Confirmed-only three-value selector, no default; four unchecked explicit statements; coverage/assessability gate; explicit gap uncertainty; omit stale completeness fields on outcome change.",
+    "semantic_validator": "Schema plus native coverage membership, full assessability/known-gap consistency and every inherited validity/exclusion gate. No machine proof of human visual truth.",
+    "finalize_fields": [
+      "event_list_exhaustiveness (confirmed only)",
+      "completeness_basis",
+      "full_window_event_evaluation_supported",
+      "primary_full_window_metrics_eligible",
+      "event_evaluation_exclusion_reasons",
+      "supported_event_exploratory_use_allowed"
+    ],
+    "finalize_completeness_basis": [
+      "EXHAUSTIVE_ATTESTED",
+      "STRICT_NO_CONFIRMED_EVENT",
+      "NON_EXHAUSTIVE",
+      "UNKNOWN",
+      "NOT_APPLICABLE"
+    ],
+    "report": "Exhaustiveness values, exclusion reasons, original seed/dependence strata and windows/non-overlap groups/source files separately; never unlisted-event negatives.",
+    "test_specification": [
+      "enum and conditional field presence",
+      "four-part attestation each false/missing",
+      "full coverage/assessability and both citation kinds",
+      "possible gaps exclude exhaustive; timing imprecision alone does not",
+      "unchanged strict no-event and no redundant other-outcome fields",
+      "eligibility/association/leakage/dependence/causality cannot be overridden",
+      "partial positives separate; unlisted predictions not false by default",
+      "GUI no-default/unchecked controls/stale-field removal",
+      "finalize distributions and flags",
+      "V1/V2 compatibility and complete preservation"
+    ],
+    "all_other_v1_tests_required_after_approval": true
+  }
+}
+
