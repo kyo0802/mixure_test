@@ -35,7 +35,7 @@ if errorlevel 1 (
 )
 
 echo [2/4] Installing the frozen dependency versions with uv...
-"%UV_EXE%" pip sync --python ".venv\Scripts\python.exe" -r requirements.txt
+"%UV_EXE%" pip install --python ".venv\Scripts\python.exe" -r requirements.txt
 if errorlevel 1 goto failed
 
 echo [3/4] Checking Tkinter and the unchanged handoff integrity...
