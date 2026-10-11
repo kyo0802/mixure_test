@@ -1,0 +1,5 @@
+# Preserve the exact bytes required by the frozen SHA256 receipts on all platforms.
+pass_t_phase2a_v2/** -text
+# These copied frozen bytes intentionally retain their original EOF/CRLF style.
+pass_t_phase2a_v2/artifacts/pass_t/phase2a/v2/contracts/** whitespace=-blank-at-eof,cr-at-eol
+pass_t_phase2a_v2/artifacts/pass_t/phase2a/v2/stage_b/approval.json whitespace=cr-at-eol
