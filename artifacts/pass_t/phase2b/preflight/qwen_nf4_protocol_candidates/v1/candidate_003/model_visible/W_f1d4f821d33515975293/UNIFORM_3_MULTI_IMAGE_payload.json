@@ -1,0 +1,49 @@
+{
+  "schema_version": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1",
+  "request_id": "REQ_f1d4f821d33515975293",
+  "target": {
+    "opaque_id": "TARGET_A",
+    "description": "the authorized target object"
+  },
+  "ontology": {
+    "event_types": [
+      "PICKUP",
+      "PLACEMENT"
+    ],
+    "window_outcomes": [
+      "CONFIRMED_EVENTS",
+      "NO_CONFIRMED_EVENT",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ]
+  },
+  "representation": "MULTI_IMAGE",
+  "media": [
+    {
+      "media_id": "MEDIA_001",
+      "media_type": "image/png",
+      "content_sha256": "8b1fb279930d7e3ad6e2efbf613ca78ecd8d571d04f05dcf7b4d56878415b808",
+      "supplied_frame_aliases": [
+        "F0001"
+      ]
+    },
+    {
+      "media_id": "MEDIA_002",
+      "media_type": "image/png",
+      "content_sha256": "14259ecf8321fe535039f68325e4042e7c317a1452ebb7f5d677f41b146e6d7a",
+      "supplied_frame_aliases": [
+        "F0055"
+      ]
+    },
+    {
+      "media_id": "MEDIA_003",
+      "media_type": "image/png",
+      "content_sha256": "a28942a3277543684e9ee747c768e6231728af01691e19361d9efd1d8ffb22f3",
+      "supplied_frame_aliases": [
+        "F0108"
+      ]
+    }
+  ],
+  "instructions": "You are evaluating a bounded visual window for physical transitions involving TARGET_A.\n\nUse only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.\n\nSupported events:\n- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.\n- PLACEMENT: directly supported transition from held to resting/supported at an observable location.\n\nChoose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.\n\nReturn only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.\n\nNative PTS map: F0001=11.400000000s, F0055=13.200000000s, F0108=14.966666667s.",
+  "output_contract": "PASS_T_PHASE2B_PREDICTION_V1"
+}

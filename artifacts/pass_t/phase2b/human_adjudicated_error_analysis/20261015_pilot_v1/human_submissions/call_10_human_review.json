@@ -1,0 +1,81 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "review_labels_are_not_GT": true,
+  "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170",
+  "records": [
+    {
+      "call_id": 10,
+      "window": "test5 W05",
+      "representation": "MULTI_IMAGE",
+      "reviewer_id": "reviewer_0",
+      "disposition": "SUPPORTED_BY_OBSERVED_EVIDENCE",
+      "supporting_frame_aliases": [
+        "F0001",
+        "F0047",
+        "F0062",
+        "F0077"
+      ],
+      "rationale": "The sampled frames support a smartphone being picked up from the table, and the model correctly identifies the target object and event type. However, its citation of F0077 as the before-state, after-state, and exact event time is inconsistent with the observed sequence. The prediction is supported at the physical-event level, but its temporal localization and before-state citation are incorrect.",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": "IDENTIFIABLE_AND_CONSISTENT",
+          "frame_aliases": [
+            "F0001",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The manipulated object is identifiable as a smartphone, consistent with the model's description of a phone. The same object can be followed from its initial position on the table to the later hand-held state."
+        },
+        "Q2_BEFORE": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "notes": "The smartphone is visibly resting on the table in F0001 and F0016, providing direct evidence of the ON_SURFACE state before the pickup. The model's cited F0077 does not support this before-state because the phone has already been lifted by that frame."
+        },
+        "Q3_AFTER": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The smartphone is visibly held above the table in F0062 and F0077. This directly supports the HELD_BY_PERSON state after the pickup, consistent with the model's after-state claim."
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": "DIRECT_TRANSITION_VISIBLE",
+          "frame_aliases": [
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The sampled sequence shows a hand interacting with the smartphone on the table, followed by the smartphone being lifted and held above the surface. This supports a PICKUP transition rather than disappearance caused solely by occlusion. The exact moment of separation from the table is not fully resolved."
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": "CITATION_UNSUPPORTED",
+          "frame_aliases": [
+            "F0047",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The model assigns the exact PICKUP time to F0077 (13.933 s), but the smartphone is already held above the table in that frame. The transition is supported by earlier observations, particularly between the near-surface state in F0047 and the lifted state visible in F0062. F0077 supports the post-pickup state, not the exact instant of pickup."
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": "CONTRADICTION_IDENTIFIED",
+          "frame_aliases": [
+            "F0001",
+            "F0047",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The model correctly identifies the smartphone and the PICKUP event, but it cites F0077 as the before-state, after-state, and exact event time. Since the smartphone is already held above the table in F0077, that frame cannot establish the preceding ON_SURFACE state or the exact transition moment. Earlier frames provide the before-state evidence, while sampling gaps limit precise temporal localization."
+        }
+      },
+      "reviewed_at_utc": "2026-10-15T10:21:05.931Z",
+      "raw_output_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485"
+    }
+  ]
+}

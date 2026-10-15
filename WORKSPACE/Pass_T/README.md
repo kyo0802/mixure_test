@@ -1,16 +1,29 @@
 # Pass_T
 
-目前主要工作。Phase 2a 的事件政策、工具、人工回傳與複核已完成，資料僅具有限 exploratory DEV 用途。Phase 2b 基礎設施與 Qwen NF4 合成容量測試完成，等待協定決策。最新一輪 11/11 條件可生成，嚴格輸出通過 15/33；不是事件 accuracy。實際 Phase 2a 模型推論尚未執行。
+最新更新：2026-10-15。**[最新完整報告](LATEST_REPORT.md)** 固定放在本資料夾，每次完成工作都更新同一入口。
+
+目前主要工作仍在 Pass I/T 平行標註＋實作。**Phase 2b Human-Adjudicated Error Analysis 已完成**：五份人工審閱全部匯入並核對來源；3 筆 SUPPORTED_BY_OBSERVED_EVIDENCE、2 筆 WRONG_TARGET。五筆人工文字都指出時間定位問題，原始模型輸出全部仍 strict-invalid。原始 Q1/Q5 選項與文字的一致性警示已揭露，沒有自動修標註、追加推論或改 GT。詳見最新完整報告。
 
 [回到總入口](../../START_HERE.md)
 
 | 找什麼 | 開啟原檔／資料夾 |
 |---|---|
+| 最新完整報告 | [直接閱讀](LATEST_REPORT.md) |
+| 最新待批准決策 | [直接閱讀](LATEST_DECISIONS.md) |
+| 最新 Human-Adjudicated Error Analysis 與五份原始提交 | [分析資料夾](../../artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1) |
+| 歷史 PICKUP 人工審閱頁（保留初始空白表單；已完成結果看最新報告） | [開啟證據頁](../../artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/PHYSICAL_EVIDENCE_REVIEW_INDEX.html) |
+| 歷史 evidence review 完整資料 | [套件目錄](../../artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1) |
+| 本次 Real DEV 權威報告、逐 call 分析與雜湊 | [執行報告資料夾](../../artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/report_v1_20261015) |
+| 本次原始 18-call 回條與輸出 | [原始執行資料夾](../../artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f) |
+| 工程修補報告、source diff與測試 | [修補資料夾](Execution_Readiness_Repair_20261015) |
+| 歷史18call草案（現已有獨立 freeze 與 execution authorization） | [DRAFT_CONFIGURATION_CANDIDATE.json](Execution_Readiness_Repair_20261015/DRAFT_CONFIGURATION_CANDIDATE.json) |
+| 歷史V1D 8條件結果 | [RESULTS.csv](RESULTS.csv) |
+| 歷史V1D固定條件（非Protocol Freeze） | [開啟](../../artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/V1D_PREREGISTERED_CRITERIA.md) |
+| 歷史V1D原始證據與raw outputs | [封存資料夾](../../artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c) |
+| 歷史V1C closeout／Variant B | [保留原報告](../../artifacts/pass_t/phase2b/qwen_nf4_engineering_closeout/20261015_94dcf4d4/PASS_T_PHASE2B_QWEN_NF4_ENGINEERING_CLOSEOUT_REPORT.md) |
 | 事件標註目前結論 | [開啟](<../../artifacts/pass_t/phase2a/v2/reports/current_status_20261013_48a92354/PHASE2A_CURRENT_REPORT.md>) |
 | 事件標註正式政策 | [開啟](<../../artifacts/pass_t/phase2a/v2/contracts/EVENT_GT_ANNOTATION_POLICY_V2.md>) |
-| Qwen容量測試最新報告 | [開啟](<../../artifacts/pass_t/phase2b/capacity_probe/qwen_nf4/v2_20261014_owned_tree/PASS_T_PHASE2B_QWEN_NF4_BLOCKER_REMEDIATION_REPORT.md>) |
-| 下一步待決策清單 | [開啟](<../../artifacts/pass_t/phase2b/capacity_probe/qwen_nf4/v2_20261014_owned_tree/QWEN_NF4_PROTOCOL_DECISION_SHEET_V2.md>) |
-| 實驗計畫草案尚未凍結 | [開啟](<../../artifacts/pass_t/phase2b/capacity_probe/qwen_nf4/v2_20261014_owned_tree/QWEN_NF4_PILOT_PREREGISTRATION_DRAFT_V2.md>) |
+| 歷史 Qwen 容量測試（10/14） | [開啟](<../../artifacts/pass_t/phase2b/capacity_probe/qwen_nf4/v2_20261014_owned_tree/PASS_T_PHASE2B_QWEN_NF4_BLOCKER_REMEDIATION_REPORT.md>) |
 | DEV事件資料原始匯出 | [開啟](<../../artifacts/pass_t/phase2a/v2/external_returns/datasets/ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c/external_dev_gt.json>) |
 | DEV事件複核補充必須一起讀 | [開啟](<../../artifacts/pass_t/phase2a/v2/exhaustive_reviews/adjudicated_7e28b9edf80a8e4da88caa66/adjudicated_dev_view.json>) |
 | 人工標註交接說明 | [開啟](<../../docs/PASS_T_ANNOTATOR_HANDOFF.md>) |

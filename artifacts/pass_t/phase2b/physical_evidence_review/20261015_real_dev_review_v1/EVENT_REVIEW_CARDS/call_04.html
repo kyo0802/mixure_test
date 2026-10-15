@@ -1,0 +1,147 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Call 04 — test7 W05 — STORYBOARD</title><link rel="stylesheet" href="../review.css"></head><body><nav><a href="../PHYSICAL_EVIDENCE_REVIEW_INDEX.html" target="_blank">審閱首頁</a> <a href="../TEST5_W05_REPRESENTATION_COMPARISON.html" target="_blank">test5 比較</a> <a href="../TEST7_W05_REPRESENTATION_COMPARISON.html" target="_blank">test7 比較</a></nav><h1>Call 04 — test7 W05 — STORYBOARD</h1><p class="badge">OUTPUT_CONTRACT_FAILURE：STRICT_INVALID_DESCRIPTIVE_ONLY</p><p class="badge">PHYSICAL_EVIDENCE_ASSESSMENT：UNREVIEWED</p><h2>原始模型 claim</h2><blockquote>The ball is picked up from the surface in frame F0001.</blockquote><pre>{
+  &quot;window_outcome&quot;: &quot;CONFIRMED_EVENTS&quot;,
+  &quot;event&quot;: {
+    &quot;after_state&quot;: {
+      &quot;state&quot;: &quot;HELD_BY_PERSON&quot;,
+      &quot;supporting_frame_alias&quot;: &quot;F0016&quot;
+    },
+    &quot;before_state&quot;: {
+      &quot;state&quot;: &quot;ON_SURFACE&quot;,
+      &quot;supporting_frame_alias&quot;: &quot;F0001&quot;
+    },
+    &quot;cited_frame_aliases&quot;: [
+      &quot;F0001&quot;
+    ],
+    &quot;event_id&quot;: &quot;PRED_EVT_001&quot;,
+    &quot;event_type&quot;: &quot;PICKUP&quot;,
+    &quot;rationale&quot;: &quot;The ball is picked up from the surface in frame F0001.&quot;,
+    &quot;target_association_uncertainty&quot;: &quot;NONE&quot;,
+    &quot;timing&quot;: {
+      &quot;frame_alias&quot;: &quot;F0001&quot;,
+      &quot;status&quot;: &quot;EXACT_SUPPLIED_FRAME&quot;
+    },
+    &quot;timing_uncertainty&quot;: &quot;&quot;
+  },
+  &quot;window_uncertainty&quot;: &quot;&quot;,
+  &quot;window_rationale&quot;: &quot;The ball is visibly held by a person in frame F0016.&quot;,
+  &quot;window_cited_frame_aliases&quot;: [
+    &quot;F0001&quot;,
+    &quot;F0016&quot;
+  ],
+  &quot;last_directly_supported_state&quot;: {
+    &quot;state&quot;: &quot;HELD_BY_PERSON&quot;,
+    &quot;supporting_frame_alias&quot;: &quot;F0016&quot;
+  }
+}</pre><div class="warning">以上是模型原話，不是已驗證的物件身分或事件。單張持有狀態不證明何時何地拿起；首張 observation 不等於事件瞬間。</div><h2>原始驗證缺陷</h2><pre>{
+  &quot;citation_errors&quot;: [],
+  &quot;semantic_errors&quot;: [],
+  &quot;structural_errors&quot;: [
+    &quot;/events/0/timing_uncertainty:&#x27;&#x27; should be non-empty&quot;,
+    &quot;/uncertainty:&#x27;&#x27; should be non-empty&quot;
+  ],
+  &quot;valid&quot;: false
+}</pre><figure><a href="../CONTACT_SHEETS/call_04_eight_frames.png"><img class="sheet" alt="八張原始 sampled frames 的 display derivative" src="../CONTACT_SHEETS/call_04_eight_frames.png"></a><figcaption>點圖可放大。橘框為模型 event citation／timing claim，藍框為其他 window citation／state claim；這些標記不代表人工認定。保持 source aspect ratio，未裁切。</figcaption></figure><h2>個別原始影格 — 可點選原尺寸</h2><div class="grid"><div class="original cited timing"><strong>#1 F0001 · S000373</strong><br>native PTS 12.435000000s<br><span class="pill">EVENT CITE / WINDOW CITE / TIMING CLAIM / BEFORE CLAIM</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000373.png" target="_blank"><img loading="lazy" alt="F0001 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000373.png"></a></div><div class="original cited"><strong>#2 F0016 · S000388</strong><br>native PTS 12.935000000s<br><span class="pill">WINDOW CITE / AFTER CLAIM</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000388.png" target="_blank"><img loading="lazy" alt="F0016 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000388.png"></a></div><div class="original"><strong>#3 F0031 · S000403</strong><br>native PTS 13.436666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000403.png" target="_blank"><img loading="lazy" alt="F0031 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000403.png"></a></div><div class="original"><strong>#4 F0046 · S000418</strong><br>native PTS 13.936666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000418.png" target="_blank"><img loading="lazy" alt="F0046 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000418.png"></a></div><div class="original"><strong>#5 F0062 · S000434</strong><br>native PTS 14.471666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000434.png" target="_blank"><img loading="lazy" alt="F0062 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000434.png"></a></div><div class="original"><strong>#6 F0077 · S000449</strong><br>native PTS 14.971666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000449.png" target="_blank"><img loading="lazy" alt="F0077 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000449.png"></a></div><div class="original"><strong>#7 F0092 · S000464</strong><br>native PTS 15.471666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000464.png" target="_blank"><img loading="lazy" alt="F0092 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000464.png"></a></div><div class="original"><strong>#8 F0107 · S000479</strong><br>native PTS 15.973333333s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test7__W05/frames/S000479.png" target="_blank"><img loading="lazy" alt="F0107 原始影格" src="../../../../human_seed_review/items/test7__W05/frames/S000479.png"></a></div></div><h2>來源 mapping</h2><table><thead><tr><th>order</th><th>alias</th><th>window index (0)</th><th>source index</th><th>native PTS</th><th>roles</th><th>status</th><th>SHA-256</th></tr></thead><tbody><tr><td>1</td><td>F0001</td><td>0</td><td>373</td><td>12.435</td><td>EVENT CITE, WINDOW CITE, TIMING CLAIM, BEFORE CLAIM</td><td>VERIFIED</td><td><code>e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1</code></td></tr><tr><td>2</td><td>F0016</td><td>15</td><td>388</td><td>12.935</td><td>WINDOW CITE, AFTER CLAIM</td><td>VERIFIED</td><td><code>4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7</code></td></tr><tr><td>3</td><td>F0031</td><td>30</td><td>403</td><td>13.436666666666667</td><td></td><td>VERIFIED</td><td><code>5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67</code></td></tr><tr><td>4</td><td>F0046</td><td>45</td><td>418</td><td>13.936666666666667</td><td></td><td>VERIFIED</td><td><code>12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c</code></td></tr><tr><td>5</td><td>F0062</td><td>61</td><td>434</td><td>14.471666666666666</td><td></td><td>VERIFIED</td><td><code>7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1</code></td></tr><tr><td>6</td><td>F0077</td><td>76</td><td>449</td><td>14.971666666666666</td><td></td><td>VERIFIED</td><td><code>a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8</code></td></tr><tr><td>7</td><td>F0092</td><td>91</td><td>464</td><td>15.471666666666666</td><td></td><td>VERIFIED</td><td><code>9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c</code></td></tr><tr><td>8</td><td>F0107</td><td>106</td><td>479</td><td>15.973333333333333</td><td></td><td>VERIFIED</td><td><code>6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa</code></td></tr></tbody></table><h2>模型實際使用的既有 storyboard</h2><p>原圖內嵌標籤與排列保留；不是本次新製作的 contact sheet。原圖為 1440×906，3 欄×3 列，依左至右、上至下排列 8 張，第九格留白；每格上方為既有 alias／native PTS 標籤。processor resize／grid 原始記錄見下。</p><a href="../../../preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_b8a53fea6aa8b92dc94f/UNIFORM_8_STORYBOARD.png"><img class="sheet" alt="exact original model storyboard" src="../../../preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_b8a53fea6aa8b92dc94f/UNIFORM_8_STORYBOARD.png"></a><details><summary>原始 processor resize / grids / temporal metadata</summary><pre>{
+  &quot;input_image_dimensions&quot;: [
+    [
+      1440,
+      906
+    ]
+  ],
+  &quot;resized_dimensions_hw&quot;: {
+    &quot;image_grid_thw&quot;: [
+      [
+        336,
+        560
+      ]
+    ]
+  },
+  &quot;grids&quot;: {
+    &quot;image_grid_thw&quot;: [
+      [
+        1,
+        24,
+        40
+      ]
+    ]
+  },
+  &quot;processor_frame_count&quot;: 8,
+  &quot;rendered_prompt_sha256&quot;: &quot;a7c8284527934e27bb40529e90d6d87cc0af37f5b7d92bd9eb289fcaf07a92df&quot;,
+  &quot;tensor_records&quot;: {
+    &quot;attention_mask&quot;: {
+      &quot;canonical_sha256&quot;: &quot;0a1c53537dd1d736f7ca74919d03f698440781cfa44ef27fcd4e7a9252d8088d&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 2162,
+      &quot;raw_le_c_sha256&quot;: &quot;d8f055028bb9de7db5ba4230a90039be917f03b33446df202122a67dd4f408d9&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        2162
+      ],
+      &quot;strides&quot;: [
+        2162,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    },
+    &quot;image_grid_thw&quot;: {
+      &quot;canonical_sha256&quot;: &quot;82d6647f94c5ad3e38862b0d3b2aae9b27ecef1764517b09c166bdecaab6a0d2&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 3,
+      &quot;raw_le_c_sha256&quot;: &quot;1b34bb3599814e2c8754feec4e4212e74726a30a7f79d75c1643724082dfce63&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        3
+      ],
+      &quot;strides&quot;: [
+        3,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    },
+    &quot;input_ids&quot;: {
+      &quot;canonical_sha256&quot;: &quot;4645a15a00bdfd77fc0f30ea5a0428723a48ead836ec3c19110235cad7354735&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 2162,
+      &quot;raw_le_c_sha256&quot;: &quot;add5b7978276b69b69eebc1675e0dfa3cf145d1ee5cafda593894f0325372667&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        2162
+      ],
+      &quot;strides&quot;: [
+        2162,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    },
+    &quot;pixel_values&quot;: {
+      &quot;canonical_sha256&quot;: &quot;39c7b39e5625636d0c93c650dc7205c8e2bf9faa85000701c8f8079e0efb2713&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;f4&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 1128960,
+      &quot;raw_le_c_sha256&quot;: &quot;47fa91a559cce3a9f78412d3e8b6d18b44b8c1e48c1f3850766a0d1a30f8980b&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        960,
+        1176
+      ],
+      &quot;strides&quot;: [
+        1176,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.float32&quot;
+    }
+  }
+}</pre></details><section><h2>首影格 timing claim 提醒</h2><p>此 call 宣稱 F0001 發生 PICKUP。F0001 是首個 supplied observation；本套 evidence 沒有更早 sampled observation。請分開檢查 BEFORE、AFTER 及 transition，不能由 alias 排序自動判定事件時間。兩張不同 state 支持的 bracket 也不是已觀察的瞬間。</p></section><section><h2>空白人工審定表 — Q1–Q7</h2><p>這是 review labels，不是新 GT。沒有預選物理結論。請以可觀察影像為依據，不以 schema 成敗或既有非完整 GT 代替判斷。</p><form id="human-review"><label>Reviewer ID<input name="reviewer_id" autocomplete="off"></label><fieldset><legend>Q1_TARGET_IDENTITY：目標身分</legend><p>目標能否辨識？模型名詞符合影像嗎？是否模糊不清或描述了另一物件？</p><label>回答<select name="Q1_TARGET_IDENTITY"><option value="" selected>尚未回答</option><option>IDENTIFIABLE_AND_CONSISTENT</option><option>AMBIGUOUS</option><option>POSSIBLY_DIFFERENT_OBJECT</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q1_TARGET_IDENTITY_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q1_TARGET_IDENTITY_notes"></textarea></label></fieldset><fieldset><legend>Q2_BEFORE：BEFORE 證據</legend><p>事件前是否直接看見物件由所稱表面支撐？指出 alias；不要將推論當觀察。</p><label>回答<select name="Q2_BEFORE"><option value="" selected>尚未回答</option><option>DIRECTLY_OBSERVED</option><option>INFERRED_ONLY</option><option>NOT_OBSERVED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q2_BEFORE_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q2_BEFORE_notes"></textarea></label></fieldset><fieldset><legend>Q3_AFTER：AFTER 證據</legend><p>事件後是否直接看見人手持有物件？指出 alias；不要將推論當觀察。</p><label>回答<select name="Q3_AFTER"><option value="" selected>尚未回答</option><option>DIRECTLY_OBSERVED</option><option>INFERRED_ONLY</option><option>NOT_OBSERVED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q3_AFTER_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q3_AFTER_notes"></textarea></label></fieldset><fieldset><legend>Q4_PHYSICAL_TRANSITION：物理轉換</legend><p>ON_SURFACE → HELD_BY_PERSON 是否可見？有直接 manipulation 證據嗎？是否僅由消失／遮擋推論？其他解釋是什麼？</p><label>回答<select name="Q4_PHYSICAL_TRANSITION"><option value="" selected>尚未回答</option><option>DIRECT_TRANSITION_VISIBLE</option><option>BRACKETED_STATES_ONLY</option><option>DISAPPEARANCE_OR_OCCLUSION_ONLY</option><option>ALTERNATIVE_EXPLANATION</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q4_PHYSICAL_TRANSITION_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q4_PHYSICAL_TRANSITION_notes"></textarea></label></fieldset><fieldset><legend>Q5_TEMPORAL_SUPPORT：時間支持</legend><p>citation 支持轉換瞬間，還是只有某狀態？是否只有 before/after bracket？實際瞬間是否未觀察？alias 有效不代表時間主張正確。</p><label>回答<select name="Q5_TEMPORAL_SUPPORT"><option value="" selected>尚未回答</option><option>OBSERVED_TRANSITION_TIME</option><option>STATE_ONLY</option><option>BRACKET_ONLY_MOMENT_UNOBSERVED</option><option>CITATION_UNSUPPORTED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q5_TEMPORAL_SUPPORT_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q5_TEMPORAL_SUPPORT_notes"></textarea></label></fieldset><fieldset><legend>Q6_CONTRADICTIONS：矛盾與不確定</legend><p>before/after、timing 與 rationale 是否一致？指出遮擋、缺失觀察、抽樣間隙或替代解釋。</p><label>回答<select name="Q6_CONTRADICTIONS"><option value="" selected>尚未回答</option><option>NO_CONTRADICTION_IDENTIFIED</option><option>CONTRADICTION_IDENTIFIED</option><option>IMPORTANT_OBSERVATION_GAPS</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q6_CONTRADICTIONS_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q6_CONTRADICTIONS_notes"></textarea></label></fieldset><fieldset><legend>Q7：Human disposition</legend><label>判定<select name="disposition"><option value="UNREVIEWED" selected>UNREVIEWED — 尚未人工判定</option><option>SUPPORTED_BY_OBSERVED_EVIDENCE</option><option>UNSUPPORTED_BY_OBSERVED_EVIDENCE</option><option>INDETERMINATE</option><option>WRONG_TARGET</option><option>INSUFFICIENT_VISUAL_QUALITY</option></select></label><label>Supporting frame aliases<input name="supporting_frame_aliases"></label><label>總結 rationale<textarea name="rationale"></textarea></label></fieldset><button type="submit">下載本筆人工審閱 JSON</button><p id="save-status" role="status"></p></form><p class="small">本頁不向伺服器傳送資料、不自動保存。離開前請下載；每筆一個 JSON，請保存在另外的人工作業位置。下載檔案不會自動匯入 GT。</p></section><h2>追溯來源</h2><p>Protocol SHA：<code>b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d</code></p><p>Raw output SHA：<code>e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce</code></p><p><a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/raw_output.txt" target="_blank">原始 raw output</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/call_receipt.json" target="_blank">原始 call receipt</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/runtime_receipt.json" target="_blank">原始 runtime receipt</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/authorization_use.json" target="_blank">原始 execution authorization</a> | <a href="../EVIDENCE_PROVENANCE_MANIFEST.json" target="_blank">來源與衍生圖 manifest</a></p><script id="review-config" type="application/json">{"schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1", "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d", "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170", "initial": {"call_id": 4, "window": "test7 W05", "representation": "STORYBOARD", "reviewer_id": "", "disposition": "UNREVIEWED", "supporting_frame_aliases": [], "rationale": "", "question_answers": {"Q1_TARGET_IDENTITY": {"answer": null, "frame_aliases": [], "notes": ""}, "Q2_BEFORE": {"answer": null, "frame_aliases": [], "notes": ""}, "Q3_AFTER": {"answer": null, "frame_aliases": [], "notes": ""}, "Q4_PHYSICAL_TRANSITION": {"answer": null, "frame_aliases": [], "notes": ""}, "Q5_TEMPORAL_SUPPORT": {"answer": null, "frame_aliases": [], "notes": ""}, "Q6_CONTRADICTIONS": {"answer": null, "frame_aliases": [], "notes": ""}}, "reviewed_at_utc": null, "raw_output_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce"}, "aliases": ["F0001", "F0016", "F0031", "F0046", "F0062", "F0077", "F0092", "F0107"], "question_keys": ["Q1_TARGET_IDENTITY", "Q2_BEFORE", "Q3_AFTER", "Q4_PHYSICAL_TRANSITION", "Q5_TEMPORAL_SUPPORT", "Q6_CONTRADICTIONS"]}</script><script src="../review.js"></script></body></html>

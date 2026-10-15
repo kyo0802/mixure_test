@@ -1,0 +1,223 @@
+{
+  "call": {
+    "item_id": "PT2A_9d15d2a6b56b56d0",
+    "opaque_id": "W_5597d9b003977e053d70",
+    "order_key_sha256": "c35fc27f86aebbf449b6abbd13a22035147aed0b1095a53ec7fa317291855f75",
+    "proposed_call_index": 16,
+    "repeat": 1,
+    "representation": "NATIVE_VIDEO_ARRAY"
+  },
+  "classification": {
+    "authoritative_prediction": {
+      "end_visibility": "NOT_VISIBLE",
+      "events": [],
+      "last_directly_supported_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0001"
+      },
+      "rationale": "The phone is initially on the surface but disappears from view.",
+      "safety_assertions": {
+        "container_or_handover_auto_classified": false,
+        "global_identity_claimed": false,
+        "state_persisted_across_unobserved_interval": false
+      },
+      "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+      "subsequent_state": "UNKNOWN",
+      "target_id": "TARGET_A",
+      "uncertainty": "sparse_sampling",
+      "window_cited_frame_aliases": [
+        "F0001",
+        "F0016",
+        "F0031",
+        "F0046",
+        "F0062",
+        "F0077",
+        "F0092",
+        "F0107"
+      ],
+      "window_outcome": "NO_CONFIRMED_EVENT"
+    },
+    "classification": "VALID_NO_CONFIRMED_EVENT",
+    "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+    "prediction": {
+      "end_visibility": "NOT_VISIBLE",
+      "events": [],
+      "last_directly_supported_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0001"
+      },
+      "rationale": "The phone is initially on the surface but disappears from view.",
+      "safety_assertions": {
+        "container_or_handover_auto_classified": false,
+        "global_identity_claimed": false,
+        "state_persisted_across_unobserved_interval": false
+      },
+      "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+      "subsequent_state": "UNKNOWN",
+      "target_id": "TARGET_A",
+      "uncertainty": "sparse_sampling",
+      "window_cited_frame_aliases": [
+        "F0001",
+        "F0016",
+        "F0031",
+        "F0046",
+        "F0062",
+        "F0077",
+        "F0092",
+        "F0107"
+      ],
+      "window_outcome": "NO_CONFIRMED_EVENT"
+    },
+    "qualitative_review": {
+      "authoritative_structured_prediction": false,
+      "status": "UNREVIEWED"
+    },
+    "raw_bytes": 714,
+    "raw_sha256": "50c01aac9a6718210a04387004b9a2c52c982dee1d122747149eac2e8166061e",
+    "stages": {
+      "CITATION": "PASS",
+      "FULL_STRICT": "PASS",
+      "JSON_SYNTAX": "PASS",
+      "SCHEMA": "PASS",
+      "SEMANTIC": "PASS"
+    },
+    "validation": {
+      "citation_errors": [],
+      "semantic_errors": [],
+      "structural_errors": [],
+      "valid": true
+    }
+  },
+  "components_sha256": {
+    "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/prompt_candidate/v2_system_unchanged.txt": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json": "1a3ca15c7cd73641d32b0ec8231ada36d257f73609426c28093c32c390b1e384",
+    "scripts/run_pass_t_v1d_pilot.py": "2edcb6beb927e3b6756c0cdaedd360bf46031cca4f385076a7146e691fe8dc35",
+    "src/memory_graph/pass_t/phase2b/common.py": "4728823548401589a1a9ba061b09fb410e213156bf4f8f4d4714c8d2d772d79b",
+    "src/memory_graph/pass_t/phase2b/contracts/model_visible_payload_v1.json": "996fbd54f855c2ddcd42f77493f24b45e07bcab564cd215111858d6a51c5edda",
+    "src/memory_graph/pass_t/phase2b/contracts/prediction_v1.json": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+    "src/memory_graph/pass_t/phase2b/evaluation.py": "975c8706f11d0c8f05184cc2025bdd3f04ce2439eceb0a5970f0f91b227d33bb",
+    "src/memory_graph/pass_t/phase2b/local_vlm/catalog.py": "99bf3e241769781c0cc6ea24934d5698078db0aa0c41df3d4613095517477742",
+    "src/memory_graph/pass_t/phase2b/local_vlm/nf4.py": "fc15d9012a3a992e4dcb9e66a3b458b242c319b1efe5f4d30dae19b81364547b",
+    "src/memory_graph/pass_t/phase2b/local_vlm/qwen_contract.py": "6e52a2be7847ccb6c8e5f04bb7a229ded18d74908268967370169a5d42e1f397",
+    "src/memory_graph/pass_t/phase2b/local_vlm/runtime.py": "a498ec799647ec70c93a1d4d99aff74f65a11a701ace34f6570cf23c5851407d",
+    "src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py": "75ba3f8fc63b13b869eb684ba3c7dc1ab9061c68efc2bee19dc5ab4f72802cef",
+    "src/memory_graph/pass_t/phase2b/model_visible.py": "c4707239d795167d2c054e1a23ef2c1e153ada3e34477e85939d4fa80c10889c",
+    "src/memory_graph/pass_t/phase2b/predictions.py": "c4b077374d50fc478c29d0009180d488c60a463fa8bffa183a179c5f736f1d37",
+    "src/memory_graph/pass_t/phase2b/v1d_execution.py": "958f5d3d44803716290d218182fe02a8e1ff0070614c0e751b9d8b544e063ccf",
+    "src/memory_graph/pass_t/phase2b/v1d_outputs.py": "e746203c7f92cbcb4aa9e2af6a302325cdc8c8293bfc83a93b5317d73a2cb1f3",
+    "src/memory_graph/pass_t/phase2b/v1d_protocol.py": "ae41eb4debc944247f8339f45e0922a2228a5f55ce8331ddea962c76f3cff8e1"
+  },
+  "execution_authorization_sha256": "eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "execution_kind": "REAL_AUTHORIZED",
+  "generation_sha256": "60b187c02ed6833b821367da57ca6e451326eede684aa44bf74ac5aecf43a917",
+  "memory_graph_written": false,
+  "payload_sha256": "f3e213372b04504bc6f9c7bab7de1b1a15d73a997aeafec88e78bd5e7eb2aec2",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "provenance": {
+    "authorized_frame_list_sha256": "ebc523d663f4b2121c0c358109a1c3b6180eb074d8ecd9b83092c65d85f78122",
+    "frame_alias_mapping": [
+      {
+        "native_source_pts_s": 5.235,
+        "recorded_source_png_sha256": "c96bcb3464d1345ba7168df8ff8837929a847b7eb83952aaa087737da6b7a407",
+        "source_frame_id": "S000157",
+        "source_frame_index": 157,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000157.png",
+        "supplied_alias": "F0001",
+        "verified_source_file_sha256": "c96bcb3464d1345ba7168df8ff8837929a847b7eb83952aaa087737da6b7a407"
+      },
+      {
+        "native_source_pts_s": 5.736666666666666,
+        "recorded_source_png_sha256": "a423037171725e304306cbba99eb707117d2e5bb4a1a4f782858af48298c9376",
+        "source_frame_id": "S000172",
+        "source_frame_index": 172,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000172.png",
+        "supplied_alias": "F0016",
+        "verified_source_file_sha256": "a423037171725e304306cbba99eb707117d2e5bb4a1a4f782858af48298c9376"
+      },
+      {
+        "native_source_pts_s": 6.236666666666666,
+        "recorded_source_png_sha256": "e67b0aab5587c12ed833390a39ab4d1fee5edfe73d6abc6f8f6248bff177ce78",
+        "source_frame_id": "S000187",
+        "source_frame_index": 187,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000187.png",
+        "supplied_alias": "F0031",
+        "verified_source_file_sha256": "e67b0aab5587c12ed833390a39ab4d1fee5edfe73d6abc6f8f6248bff177ce78"
+      },
+      {
+        "native_source_pts_s": 6.736666666666666,
+        "recorded_source_png_sha256": "bf95a218f7ca83d04132a282c67c54ac5dddac6c7abf89ebb1f9efcc39dbf95d",
+        "source_frame_id": "S000202",
+        "source_frame_index": 202,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000202.png",
+        "supplied_alias": "F0046",
+        "verified_source_file_sha256": "bf95a218f7ca83d04132a282c67c54ac5dddac6c7abf89ebb1f9efcc39dbf95d"
+      },
+      {
+        "native_source_pts_s": 7.27,
+        "recorded_source_png_sha256": "c8c8249c52b055cbc00561cb1bc295264a0422458ee71ec3e6eaad3a72c43a23",
+        "source_frame_id": "S000218",
+        "source_frame_index": 218,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000218.png",
+        "supplied_alias": "F0062",
+        "verified_source_file_sha256": "c8c8249c52b055cbc00561cb1bc295264a0422458ee71ec3e6eaad3a72c43a23"
+      },
+      {
+        "native_source_pts_s": 7.77,
+        "recorded_source_png_sha256": "b7b6e79019122fff16fa390e7aa39fb439179c611e2aa62495314528ee28afc9",
+        "source_frame_id": "S000233",
+        "source_frame_index": 233,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000233.png",
+        "supplied_alias": "F0077",
+        "verified_source_file_sha256": "b7b6e79019122fff16fa390e7aa39fb439179c611e2aa62495314528ee28afc9"
+      },
+      {
+        "native_source_pts_s": 8.27,
+        "recorded_source_png_sha256": "ad3eedacb7b67c93f721174001742b85e557419955c4e4fb3a0308abd5de2e01",
+        "source_frame_id": "S000248",
+        "source_frame_index": 248,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000248.png",
+        "supplied_alias": "F0092",
+        "verified_source_file_sha256": "ad3eedacb7b67c93f721174001742b85e557419955c4e4fb3a0308abd5de2e01"
+      },
+      {
+        "native_source_pts_s": 8.77,
+        "recorded_source_png_sha256": "dfc305263abf16f0d007b0ce50d1a09c8cf5d5e3d130edeebe1a5b2aabe0dc98",
+        "source_frame_id": "S000263",
+        "source_frame_index": 263,
+        "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000263.png",
+        "supplied_alias": "F0107",
+        "verified_source_file_sha256": "dfc305263abf16f0d007b0ce50d1a09c8cf5d5e3d130edeebe1a5b2aabe0dc98"
+      }
+    ],
+    "media_integrity": "VERIFIED_APPROVED_INPUT_BYTES",
+    "native_PTS_provenance": "APPROVED_HASH_PINNED_SOURCE_METADATA",
+    "reference": "NONE",
+    "sampling": "GT_INDEPENDENT_UNIFORM_8",
+    "source_metadata_sha256": "f8ed581d87390a04e3c11cf8254b8a7921ca6ced4115abe3669bc343687a4d19",
+    "source_video_bytes_reverified": false,
+    "temporal_limitation": "FRAME_MATCHED_ONLY_8_SOURCE_FRAMES_4_UNITS",
+    "window_boundaries": {
+      "authorized_visual_manifest_sha256": "f1a7fb18caf043b168f5cfae90f572c1e35b135e2045a83639989151eafc7868",
+      "half_open_frames": [
+        156,
+        264
+      ],
+      "half_open_pts": [
+        5.202419855222337,
+        8.804095139607032
+      ],
+      "source_video_sha256": "b2a1eb317f9d729b637bb624a787f755b3c57d66deea824d2381b6ec37f888c3"
+    }
+  },
+  "qualitative_review": {
+    "authoritative_prediction": false,
+    "scope": "DESCRIPTIVE_ONLY",
+    "status": "UNREVIEWED"
+  },
+  "raw_sha256": "50c01aac9a6718210a04387004b9a2c52c982dee1d122747149eac2e8166061e",
+  "runtime_receipt_error": null,
+  "runtime_receipt_sha256": "34d3f134786232add97e1f5ef76238ec4a0ee5b6f0d6e9e78affdf828af6d70c",
+  "schema_version": "PASS_T_QWEN_NF4_V1D_PILOT_V1_CALL_RECEIPT",
+  "structured_matching": "PENDING_APPROVED_GT_EVALUATION"
+}

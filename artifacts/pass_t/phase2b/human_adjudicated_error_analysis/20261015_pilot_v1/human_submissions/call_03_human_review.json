@@ -1,0 +1,80 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "review_labels_are_not_GT": true,
+  "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170",
+  "records": [
+    {
+      "call_id": 3,
+      "window": "test5 W05",
+      "representation": "STORYBOARD",
+      "reviewer_id": "review_0",
+      "disposition": "SUPPORTED_BY_OBSERVED_EVIDENCE",
+      "supporting_frame_aliases": [
+        "F0001",
+        "F0016",
+        "F0062",
+        "F0077"
+      ],
+      "rationale": "The sampled frames support a smartphone being picked up from the table. The model correctly identifies the target object and physical event type. However, its exact timing claim at F0001 is unsupported, and the cited after-state at F0016 does not clearly demonstrate the held state. The event is therefore supported by visual evidence, with temporal-grounding limitations.",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": "IDENTIFIABLE_AND_CONSISTENT",
+          "frame_aliases": [
+            "F0001",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The manipulated object is identifiable as a smartphone, consistent with the model's description of a phone. The same object can be followed across the sampled frames."
+        },
+        "Q2_BEFORE": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "notes": "The smartphone is visibly resting on the table in F0001 and F0016, providing direct evidence of the ON_SURFACE state before the pickup."
+        },
+        "Q3_AFTER": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The smartphone is visibly held above the table in F0062 and F0077, providing direct evidence of the HELD_BY_PERSON state after the pickup. The model's cited F0016 does not yet establish this after-state."
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": "DIRECT_TRANSITION_VISIBLE",
+          "frame_aliases": [
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062"
+          ],
+          "notes": "The sequence shows the hand interacting with the smartphone while it is on the table, followed by the smartphone being lifted and held above the surface. This directly supports a PICKUP transition. However, the precise instant of separation from the table is not fully resolved by the sampled frames."
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": "CITATION_UNSUPPORTED",
+          "frame_aliases": [
+            "F0001",
+            "F0047",
+            "F0062"
+          ],
+          "notes": "The model assigns the PICKUP event to F0001, but the smartphone is still on the table in that frame. The subsequent frames show the transition toward a held state. The evidence supports a pickup occurring later in the sampled sequence, not at the model's claimed exact frame."
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": "CONTRADICTION_IDENTIFIED",
+          "frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0047",
+            "F0062"
+          ],
+          "notes": "The model correctly identifies the smartphone and the PICKUP action, but its exact event timing is inconsistent with the observed sequence. Its cited after-state frame F0016 does not clearly show the smartphone fully lifted. Sampling gaps also prevent precise localization of the separation from the table."
+        }
+      },
+      "reviewed_at_utc": "2026-10-15T10:13:10.081Z",
+      "raw_output_sha256": "bd63ac297c34802cbaab4b8460cc8a33c1a02b8cddda044d8f0779baf33139ce"
+    }
+  ]
+}

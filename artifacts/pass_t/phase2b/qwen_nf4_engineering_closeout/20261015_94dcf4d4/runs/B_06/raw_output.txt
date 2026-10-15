@@ -1,0 +1,61 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+  "target_id": "TARGET_A",
+  "window_outcome": "CONFIRMED_EVENTS",
+  "window_cited_frame_aliases": ["F0001", "F0002", "F0003", "F0004", "F0005", "F0006", "F0007", "F0008"],
+  "events": [
+    {
+      "event_id": "PRED_EVT_001",
+      "event_type": "PICKUP",
+      "timing": {
+        "status": "EXACT_SUPPLIED_FRAME",
+        "frame_alias": "F0001"
+      },
+      "cited_frame_aliases": ["F0001"],
+      "before_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0001"
+      },
+      "after_state": {
+        "state": "HELD_BY_PERSON",
+        "supporting_frame_alias": "F0002"
+      },
+      "target_association_uncertainty": "NONE",
+      "timing_uncertainty": "",
+      "rationale": "The object is visibly picked up from the surface."
+    },
+    {
+      "event_id": "PRED_EVT_002",
+      "event_type": "PLACEMENT",
+      "timing": {
+        "status": "EXACT_SUPPLIED_FRAME",
+        "frame_alias": "F0008"
+      },
+      "cited_frame_aliases": ["F0008"],
+      "before_state": {
+        "state": "HELD_BY_PERSON",
+        "supporting_frame_alias": "F0008"
+      },
+      "after_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0008"
+      },
+      "target_association_uncertainty": "NONE",
+      "timing_uncertainty": "",
+      "rationale": "The object is visibly placed back on the surface."
+    }
+  ],
+  "last_directly_supported_state": {
+    "state": "HELD_BY_PERSON",
+    "supporting_frame_alias": "F0008"
+  },
+  "end_visibility": "NOT_VISIBLE",
+  "subsequent_state": "UNKNOWN",
+  "rationale": "The object is not visible in the last frame.",
+  "uncertainty": "The object's final state is unknown.",
+  "safety_assertions": {
+    "global_identity_claimed": false,
+    "state_persisted_across_unobserved_interval": false,
+    "container_or_handover_auto_classified": false
+  }
+}

@@ -1,0 +1,339 @@
+[
+  {
+    "property": "model",
+    "value": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.model",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical synthetic execution only; not current DEV capacity"
+  },
+  {
+    "property": "revision",
+    "value": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.revision",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical synthetic execution only; not current DEV capacity"
+  },
+  {
+    "property": "model_load_seconds",
+    "value": 20.442865599994548,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.model_load_seconds",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical synthetic execution only; not current DEV capacity"
+  },
+  {
+    "property": "model_load_peak_vram_bytes",
+    "value": 7241465856,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.model_load_peak_vram_bytes",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical synthetic execution only; not current DEV capacity"
+  },
+  {
+    "property": "quantization_config",
+    "value": {
+      "_load_in_4bit": true,
+      "_load_in_8bit": false,
+      "bnb_4bit_compute_dtype": "bfloat16",
+      "bnb_4bit_quant_storage": "uint8",
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "llm_int8_enable_fp32_cpu_offload": false,
+      "llm_int8_has_fp16_weight": false,
+      "llm_int8_skip_modules": null,
+      "llm_int8_threshold": 6.0,
+      "load_in_4bit": true,
+      "load_in_8bit": false,
+      "quant_method": "bitsandbytes"
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.quantization_config",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "attention",
+    "value": "sdpa",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.attention",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "device_map",
+    "value": {
+      "": "cuda"
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.device_map",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "cpu_offload",
+    "value": false,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.cpu_offload",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "bitsandbytes_version",
+    "value": "0.50.2",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.bitsandbytes_version",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "torch_version",
+    "value": "2.10.0+cu128",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.torch_version",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "cuda_runtime",
+    "value": "12.8",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.cuda_runtime",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "transformers_version",
+    "value": "4.57.6",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.transformers_version",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "processor",
+    "value": {
+      "_processor_class": "Qwen2_5_VLProcessor",
+      "crop_size": null,
+      "data_format": "channels_first",
+      "default_to_square": true,
+      "device": null,
+      "disable_grouping": null,
+      "do_center_crop": null,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_pad": null,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "image_processor_type": "Qwen2VLImageProcessorFast",
+      "image_std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "input_data_format": null,
+      "max_pixels": 200704,
+      "merge_size": 2,
+      "min_pixels": 3136,
+      "pad_size": null,
+      "patch_size": 14,
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "return_tensors": null,
+      "size": {
+        "longest_edge": 12845056,
+        "shortest_edge": 3136
+      },
+      "temporal_patch_size": 2
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "health.effective_runtime.processor",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Historical effective configuration; image fast max_pixels and size fields may conflict, measure CPU behavior"
+  },
+  {
+    "property": "generated_tokens",
+    "value": 179,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.generated_tokens",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "runtime_seconds",
+    "value": 49.34192489999987,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.runtime_seconds",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "peak_inference_vram_bytes",
+    "value": 6304462336,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.peak_inference_vram_bytes",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "peak_reserved_bytes",
+    "value": 7354712064,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.peak_reserved_bytes",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "gpu_free_total_bytes",
+    "value": [
+      8326742016,
+      17066033152
+    ],
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.gpu_free_total_bytes",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "processor_grid_thw",
+    "value": [
+      [
+        1,
+        16,
+        16
+      ]
+    ],
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].resource_receipt.processor_grid_thw",
+    "verification_level": "REAL_RUNTIME_VERIFIED",
+    "limitation": "Allocation/end snapshot is not global GPU peak; no separate prefill timing"
+  },
+  {
+    "property": "Strict JSON and citations",
+    "value": {
+      "citation_errors": [],
+      "semantic_errors": [],
+      "structural_errors": [],
+      "valid": true
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "records[0].validation",
+    "verification_level": "RECEIPT_VERIFIED",
+    "limitation": "No visual correctness or event accuracy claim"
+  },
+  {
+    "property": "EOS",
+    "value": "NOT_VERIFIED",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json",
+    "field": "EOS field absent",
+    "verification_level": "NOT_VERIFIED",
+    "limitation": "179 < 512 and complete JSON does not prove EOS"
+  },
+  {
+    "property": "response_format_system",
+    "value": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.",
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "response_format_system",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "generation_timeout_seconds",
+    "value": 180,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "generation_timeout_seconds",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "max_images",
+    "value": 3,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "max_images",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "max_frames",
+    "value": 8,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "max_frames",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "processor_max_pixels",
+    "value": 200704,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "processor_max_pixels",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "synthetic_only",
+    "value": true,
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\deployment.json",
+    "field": "synthetic_only",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Synthetic configuration is not approved real-window protocol"
+  },
+  {
+    "property": "Generation configuration",
+    "value": {
+      "max_output_tokens": 512,
+      "sampling": false,
+      "seed": 42,
+      "temperature": 0.0
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\prepared\\02c46a89902a6bbb0b576fab616d503ff801137086d5a45bf0c9fd9a028cafc8\\config.json",
+    "field": "generation",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "Greedy temperature may be ignored; seed not determinism guarantee"
+  },
+  {
+    "property": "Local file integrity",
+    "value": {
+      "chat_template.json": "ad60d90252ed0b0705ba14e2d0ad0fec0beac1ea955642b54059b36052d8bc96",
+      "config.json": "77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43",
+      "download_provenance.json": "262283e6e7dffaf1e76c27f7d630e5e5ddc55db8c5f433f9fd19df05f00077e2",
+      "generation_config.json": "0a3aea82869fe29f20dc95ccf3e2bcff380eca1f5ad6447a4a4b37110b08e43e",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00005.safetensors": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e",
+      "model-00002-of-00005.safetensors": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024",
+      "model-00003-of-00005.safetensors": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507",
+      "model-00004-of-00005.safetensors": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed",
+      "model-00005-of-00005.safetensors": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67",
+      "model.safetensors.index.json": "73b333b0b16e5286ddba615d2caebcd495cf7e616f52eb217a81781393d79de9",
+      "preprocessor_config.json": "f2058c716eef96ccaed1cc1e2d0c08306b62586d535b28d9d08e691b2fab7ca0",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "4abd3520120e266da84c0864fee064d1fb10806f02225911a47253dd38dc5f56",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "source": "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\asset_audits\\3dcbc1f0a680104e0beb27366691f9e68b5b88a4e8df354c67da0ff3c2a6cf57\\assets.json",
+    "field": "files_sha256",
+    "verification_level": "RECEIPT_VERIFIED",
+    "limitation": "Rehashed in current preservation; upstream checksum unavailable"
+  },
+  {
+    "property": "Revision authority",
+    "value": "local download provenance",
+    "source": ".models\\Qwen2.5-VL-7B-Instruct\\download_provenance.json",
+    "field": "revision",
+    "verification_level": "RECEIPT_VERIFIED",
+    "limitation": "Pinned provenance != independent official checksum attestation"
+  },
+  {
+    "property": "Video system instruction",
+    "value": "NOT_APPLIED_IN_EXISTING_VIDEO_PATH",
+    "source": "src\\memory_graph\\pass_t\\phase2b\\local_vlm\\nf4.py",
+    "field": "generate_video conversation",
+    "verification_level": "STATIC_CODE_VERIFIED",
+    "limitation": "Current video ignores V2 system, seed and envelope do_sample; future parity adapter required"
+  }
+]

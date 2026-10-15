@@ -1,0 +1,145 @@
+{
+  "authority": {
+    "binding_causality_status": "CAUSALITY_UNVERIFIED",
+    "dataset_path": "artifacts/pass_t/phase2a/v2/external_returns/datasets/ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c/external_dev_gt.json",
+    "dataset_receipt_sha256": "92c3516a6f4cec82e0b15096e0011631162c6343f0464f7470a9f348d4e0f489",
+    "dataset_sha256": "ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c",
+    "exhaustiveness_sidecar_sha256": "fa0133e4e49e54bdbac2ba59420d29b504e8bf219fa8179b57cd1b35261a005c",
+    "identity_resolution_sha256": "07a6dae253e2060468b1153f4457cd475ae44ff4f7b5cd0f25db8ffa50747b5a",
+    "import_sha256": "3f85134d8c4f9f78e1b16bea3ec937225d37ff671e8caeb6620e401c3bb50a0b",
+    "negative_readiness_sha256": "aa0f381c9a6f9d30bcce7c7074c77a7a77d443a3f8eaba3273208cb8fbc0aa15",
+    "phase2a_manifest_sha256": "1c423256cd31ea0e585b1bc3e57610fc8b215fcbe2757108db3bd96736af9e46",
+    "policy_sha256": "c90f527eb01e3b320138961570c5647670536d3611feae3c4b7a1d10e33fdac4"
+  },
+  "capability_check": {
+    "config_valid": false,
+    "notes": [
+      "DECLARED is documentation only and is not runtime verification",
+      "No representation fallback or model substitution is permitted"
+    ],
+    "real_run_ready": false,
+    "schema_version": "PASS_T_PHASE2B_CAPABILITY_CHECK_V1",
+    "statuses": {
+      "MULTI_IMAGE": "UNKNOWN",
+      "REENCODED_AUTHORIZED_VIDEO": "UNKNOWN",
+      "STORYBOARD": "UNKNOWN"
+    },
+    "verified_representations": []
+  },
+  "created_at_utc": "2026-10-13T17:15:56.904685+00:00",
+  "decisions": {
+    "bounded_interval_overlap_required": null,
+    "budget_limit_usd": null,
+    "event_time_tolerance_s": null,
+    "multi_image_frame_count": null,
+    "pilot_item_ids": [
+      "PT2A_9d15d2a6b56b56d0",
+      "PT2A_b35d807b28b92101",
+      "PT2A_fe0910d66f4c5614",
+      "PT2A_eb60192e6986cb4f",
+      "PT2A_c58b4df88a2f6801",
+      "PT2A_5dbb180e8ff88762"
+    ],
+    "reference_policy": "NONE",
+    "repeat_count": null,
+    "run_order": null,
+    "storyboard_columns": null,
+    "storyboard_frame_count": null,
+    "video_fps": null
+  },
+  "eligibility_sha256": "116af0a7643d776c5f4c187d0e94ad2d0d78763cb3463b1f30fe5a4ff461a785",
+  "fixed_rules": {
+    "all_repeats_retained": true,
+    "best_of_selection_forbidden": true,
+    "global_metrics_forbidden": true,
+    "no_model_substitution": true,
+    "no_representation_fallback": true,
+    "same_model_all_representations": true,
+    "selection_is_gt_independent": true,
+    "test3_model_run_forbidden": true
+  },
+  "model_config": {
+    "backend": null,
+    "capabilities": {
+      "MULTI_IMAGE": {
+        "evidence": null,
+        "status": "UNKNOWN"
+      },
+      "REENCODED_AUTHORIZED_VIDEO": {
+        "evidence": null,
+        "status": "UNKNOWN"
+      },
+      "STORYBOARD": {
+        "evidence": null,
+        "status": "UNKNOWN"
+      }
+    },
+    "complete": false,
+    "execution_location": null,
+    "external_data_consent": false,
+    "generation": {
+      "max_output_tokens": null,
+      "sampling": false,
+      "seed": null,
+      "temperature": 0.0
+    },
+    "limits": {
+      "context_tokens": null,
+      "max_images": null,
+      "max_pixels_per_image": null
+    },
+    "modalities": [],
+    "model": null,
+    "provider": null,
+    "reference_policy": "NONE",
+    "revision": null,
+    "schema_version": "PASS_T_PHASE2B_MODEL_CONFIG_V1",
+    "transport": {
+      "max_retries": null,
+      "monetary_budget_usd": null,
+      "timeout_seconds": null
+    }
+  },
+  "model_config_sha256": "a670a9782793031c399f38ca65f68b4fc7c2ef2310e3cb475e37511735e28c5e",
+  "prompt_path": "artifacts/pass_t/phase2b/templates/event_reasoning_prompt_v1.txt",
+  "prompt_sha256": "94b52f47e965691e01f85012ab0c8ad7653271c4fa229222ba190f2d6eabf679",
+  "protocol_draft_sha256": "eb026569ce826d214ae73454a8cccdcfc648f14dfc88849ecf6f01f76914e9f3",
+  "schema_version": "PASS_T_PHASE2B_PROTOCOL_V1",
+  "status": "DRAFT_UNRESOLVED",
+  "unresolved_fields": [
+    "capabilities.runtime_verification",
+    "decisions.bounded_interval_overlap_required",
+    "decisions.budget_limit_usd",
+    "decisions.event_time_tolerance_s",
+    "decisions.multi_image_frame_count",
+    "decisions.repeat_count",
+    "decisions.run_order",
+    "decisions.storyboard_columns",
+    "decisions.storyboard_frame_count",
+    "decisions.video_fps",
+    "model_config.backend",
+    "model_config.complete",
+    "model_config.execution_location",
+    "model_config.execution_location.enum",
+    "model_config.generation",
+    "model_config.limits",
+    "model_config.model",
+    "model_config.provider",
+    "model_config.revision",
+    "model_config.schema.backend",
+    "model_config.schema.complete",
+    "model_config.schema.execution_location",
+    "model_config.schema.generation.max_output_tokens",
+    "model_config.schema.limits.context_tokens",
+    "model_config.schema.limits.max_images",
+    "model_config.schema.limits.max_pixels_per_image",
+    "model_config.schema.modalities",
+    "model_config.schema.model",
+    "model_config.schema.provider",
+    "model_config.schema.revision",
+    "model_config.schema.transport.max_retries",
+    "model_config.schema.transport.monetary_budget_usd",
+    "model_config.schema.transport.timeout_seconds",
+    "model_config.transport"
+  ]
+}

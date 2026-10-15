@@ -1,0 +1,41 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+  "target_id": "TARGET_A",
+  "window_outcome": "CONFIRMED_EVENTS",
+  "window_cited_frame_aliases": ["F0001", "F0016"],
+  "events": [
+    {
+      "event_id": "PRED_EVT_001",
+      "event_type": "PICKUP",
+      "timing": {
+        "status": "EXACT_SUPPLIED_FRAME",
+        "frame_alias": "F0001"
+      },
+      "cited_frame_aliases": ["F0001"],
+      "before_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0001"
+      },
+      "after_state": {
+        "state": "HELD_BY_PERSON",
+        "supporting_frame_alias": "F0016"
+      },
+      "target_association_uncertainty": "NONE",
+      "timing_uncertainty": "",
+      "rationale": "The ball is picked up from the surface in frame F0001."
+    }
+  ],
+  "last_directly_supported_state": {
+    "state": "HELD_BY_PERSON",
+    "supporting_frame_alias": "F0016"
+  },
+  "end_visibility": "PARTIALLY_VISIBLE",
+  "subsequent_state": "UNKNOWN",
+  "rationale": "The ball is visibly held by a person in frame F0016.",
+  "uncertainty": "",
+  "safety_assertions": {
+    "global_identity_claimed": false,
+    "state_persisted_across_unobserved_interval": false,
+    "container_or_handover_auto_classified": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1",
+  "request_id": "REQ_aef405003cc72cef0044",
+  "target": {
+    "opaque_id": "TARGET_A",
+    "description": "the authorized target object"
+  },
+  "ontology": {
+    "event_types": [
+      "PICKUP",
+      "PLACEMENT"
+    ],
+    "window_outcomes": [
+      "CONFIRMED_EVENTS",
+      "NO_CONFIRMED_EVENT",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ]
+  },
+  "representation": "STORYBOARD",
+  "media": [
+    {
+      "media_id": "MEDIA_001",
+      "media_type": "image/png",
+      "content_sha256": "7a926639cdeec06e4e41a21995a98c7e242a397e6fd0294aa648c3040a8a87e7",
+      "supplied_frame_aliases": [
+        "F0001",
+        "F0008",
+        "F0016",
+        "F0023",
+        "F0031",
+        "F0038",
+        "F0046",
+        "F0053",
+        "F0061",
+        "F0068",
+        "F0072"
+      ]
+    }
+  ],
+  "instructions": "You are evaluating a bounded visual window for physical transitions involving TARGET_A.\n\nUse only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.\n\nSupported events:\n- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.\n- PLACEMENT: directly supported transition from held to resting/supported at an observable location.\n\nChoose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.\n\nReturn only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.\n\nNative PTS map: F0001=5.400000000s, F0008=5.633333333s, F0016=5.900000000s, F0023=6.133333333s, F0031=6.400000000s, F0038=6.633333333s, F0046=6.900000000s, F0053=7.133333333s, F0061=7.400000000s, F0068=7.633333333s, F0072=7.766666667s.",
+  "output_contract": "PASS_T_PHASE2B_PREDICTION_V1"
+}

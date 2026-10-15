@@ -1,0 +1,9 @@
+# 最終補充核對
+
+完整保護hash核對後另補model temporal-position稽核與3個CPU計算tests。最終所有新scripts再做AST scan，完整結果及新的GPU/processsnapshot在FINAL_CPU_SAFETY_CHECKS.json。
+
+總uniqueCPUchecks為60+3=63，全通過；locked56frames/generatorhash再核對不變。原報告的10script ASTscan是當時範圍，最終scan包含後增補的time-position與此checker；沒有modelclassfrompretrained/generate/serverlaunchcall，唯一AutoProcessor loader保持local-only。
+
+model時間欄位需合讀MODEL_VISIBLE_TEMPORAL_POSITION_AUDIT：processor的gridseconds與model.long()後的relativepositionproxy分開。前者是CPU實際tensor，後者是installedsource的CPU算式，不是model forward。全部Video仍FRAME_MATCHED_ONLY，沒有改既有判定或fixture。
+
+此補充不改原保護驗證、原步驟回條或任何productionfile。GPU/process觀察不是全機連續trace，不聲稱能排除其他process的GPU操作。

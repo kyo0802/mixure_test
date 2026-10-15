@@ -1,0 +1,89 @@
+{
+  "schema_version": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1",
+  "request_id": "REQ_db55b29f820c2b3e3afb",
+  "target": {
+    "opaque_id": "TARGET_A",
+    "description": "the authorized target object"
+  },
+  "ontology": {
+    "event_types": [
+      "PICKUP",
+      "PLACEMENT"
+    ],
+    "window_outcomes": [
+      "CONFIRMED_EVENTS",
+      "NO_CONFIRMED_EVENT",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ]
+  },
+  "representation": "MULTI_IMAGE",
+  "media": [
+    {
+      "media_id": "MEDIA_001",
+      "media_type": "image/png",
+      "content_sha256": "8ee4ce41ab552b9830c2c47d91b10dd9affe5b792b5d297a89f20b78437526aa",
+      "supplied_frame_aliases": [
+        "F0001"
+      ]
+    },
+    {
+      "media_id": "MEDIA_002",
+      "media_type": "image/png",
+      "content_sha256": "5d21fe6b839f5596b2b30978bc0a753a2661483cf88d3243abcd0f2014dd083b",
+      "supplied_frame_aliases": [
+        "F0018"
+      ]
+    },
+    {
+      "media_id": "MEDIA_003",
+      "media_type": "image/png",
+      "content_sha256": "ec00ba537d7475a04561ebfcc4304d5262d50995b70003063aa301ee4c73d312",
+      "supplied_frame_aliases": [
+        "F0034"
+      ]
+    },
+    {
+      "media_id": "MEDIA_004",
+      "media_type": "image/png",
+      "content_sha256": "997925dd780189047f80eb5e1e714922425ce99ca58800f822f1fe8a42b6245a",
+      "supplied_frame_aliases": [
+        "F0051"
+      ]
+    },
+    {
+      "media_id": "MEDIA_005",
+      "media_type": "image/png",
+      "content_sha256": "c414528ae96158d56c6fdabccfb5f5aa484dbb46c41bdd93af1f80978849c1bf",
+      "supplied_frame_aliases": [
+        "F0068"
+      ]
+    },
+    {
+      "media_id": "MEDIA_006",
+      "media_type": "image/png",
+      "content_sha256": "dd82ce1e3eb0b281cc68c6f3a5caf7713fd395d71edfa13d2c75482cf13d4a70",
+      "supplied_frame_aliases": [
+        "F0085"
+      ]
+    },
+    {
+      "media_id": "MEDIA_007",
+      "media_type": "image/png",
+      "content_sha256": "b22d257cf1aa5c99f51c7543f390c2975668a79aa0825f1de3109d6ef49cd501",
+      "supplied_frame_aliases": [
+        "F0101"
+      ]
+    },
+    {
+      "media_id": "MEDIA_008",
+      "media_type": "image/png",
+      "content_sha256": "6950ee94292217e9a2c880d9eb82be1275c987d334ce2598bbb4eb011032b293",
+      "supplied_frame_aliases": [
+        "F0118"
+      ]
+    }
+  ],
+  "instructions": "You are evaluating a bounded visual window for physical transitions involving TARGET_A.\n\nUse only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.\n\nSupported events:\n- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.\n- PLACEMENT: directly supported transition from held to resting/supported at an observable location.\n\nChoose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.\n\nReturn only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.\n\nNative PTS map: F0001=31.211666667s, F0018=31.780000000s, F0034=32.313333333s, F0051=32.881666667s, F0068=33.448333333s, F0085=34.000000000s, F0101=34.533333333s, F0118=35.101666667s.",
+  "output_contract": "PASS_T_PHASE2B_PREDICTION_V1"
+}

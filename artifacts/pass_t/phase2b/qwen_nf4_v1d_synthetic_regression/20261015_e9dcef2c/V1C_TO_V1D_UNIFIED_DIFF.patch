@@ -1,0 +1,8 @@
+--- QWEN_NF4_EVENT_REASONING_PROMPT_V1C.txt
++++ QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt
+@@ -15,0 +16,3 @@
++Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.
++
++Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.
+@@ -17,0 +21 @@
++Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.

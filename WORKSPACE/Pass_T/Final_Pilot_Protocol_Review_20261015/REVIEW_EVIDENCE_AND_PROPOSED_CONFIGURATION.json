@@ -1,0 +1,1788 @@
+{
+  "candidate_semantic_sha256": "67b59d603e36bb11b9e496afc3796e9ea531d0cbca06d6d29359993a32726edf",
+  "task": "PASS_T_PHASE2B_QWEN_NF4_FINAL_PROTOCOL_REVIEW",
+  "status": "HUMAN_REVIEW_CANDIDATE_NOT_APPROVED_NOT_FROZEN",
+  "proposed_settings": {
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "quantization": "NF4 double/BF16/SDPA",
+    "task_prompt_sha256": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+    "system_sha256": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e",
+    "prediction_schema_sha256": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+    "representations": [
+      "MULTI_IMAGE",
+      "STORYBOARD",
+      "NATIVE_VIDEO_ARRAY"
+    ],
+    "frames_per_window": 8,
+    "sampling": "GT_INDEPENDENT_UNIFORM_8_ROUND_TIES_TO_EVEN_ENDPOINTS",
+    "reference": "NONE",
+    "citation_policy": "C3_RETAIN_SUPPLIED_ALIASES_REPORT_ONLY_TEMPORAL_UNITS",
+    "native_video": "FRAME_MATCHED_ONLY",
+    "source_time_authority": "NATIVE_SOURCE_PTS_PRIVATE",
+    "video_units": 4,
+    "native_fps_rule": "7/(PTS_last-PTS_first)",
+    "native_video_do_sample_frames": false,
+    "max_pixels": 200704,
+    "min_pixels": 3136,
+    "storyboard": {
+      "columns": 3,
+      "tile": [
+        480,
+        270
+      ],
+      "label_row_height": 32,
+      "canvas": [
+        1440,
+        906
+      ]
+    },
+    "generation": {
+      "do_sample": false,
+      "seed": 42,
+      "max_new_tokens": 1024,
+      "repeat": 1,
+      "extra_warmup_calls": 0
+    },
+    "timeouts_s": {
+      "load": 120,
+      "generation": 300,
+      "request": 330,
+      "whole_proposed": 6060
+    },
+    "hardware_gib": {
+      "load_free_gpu_min": 10,
+      "load_free_ram_min": 8,
+      "generation_free_gpu_min": 2,
+      "global_gpu_used_stop_above": 14.5,
+      "owned_tree_rss_stop_above": 20,
+      "system_ram_stop_below": 2
+    },
+    "retry": {
+      "generation_quality": 0,
+      "transport_before_generation_proposed": 0
+    },
+    "matching": {
+      "sensitivities_s": [
+        0,
+        0.2,
+        0.5
+      ],
+      "bounded_interval_overlap_required": false,
+      "algorithm_proposed": "greedy one-to-one closed-interval gap max(0,gs-pe,ps-ge); tie GT index then prediction index",
+      "current_source_discrepancy": "T04 interior predicted point inside bounded GT"
+    },
+    "strict_invalid_structured_matching": false,
+    "automatic_repair": false,
+    "new_identity_ambiguity_clause": false,
+    "memory_graph_writes": false,
+    "local_api_budget_limit_usd": 0,
+    "actual_calls_this_task": 0,
+    "planned_calls": 18
+  },
+  "cohort": [
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "original_pack_ids": [
+        "test1__W03",
+        "test1__W05"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "original_full_window_eligible": true,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "ASSISTANT_SPOT_CHECK",
+      "visual_review_limitations": [
+        "Only 7 of 107 frames received an additional assistant spot check"
+      ],
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "supported_positive_event_ids": [],
+      "source_frame_count": 107,
+      "source_first_frame": "S000157",
+      "source_last_frame": "S000263",
+      "reported_half_open_frames": [
+        156,
+        264
+      ],
+      "native_source_video_sha256_recorded": "b2a1eb317f9d729b637bb624a787f755b3c57d66deea824d2381b6ec37f888c3",
+      "uniform8_positions": [
+        0,
+        15,
+        30,
+        45,
+        61,
+        76,
+        91,
+        106
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000157",
+          "source_frame_index": 157,
+          "native_source_pts_s": 5.235,
+          "recorded_source_png_sha256": "c96bcb3464d1345ba7168df8ff8837929a847b7eb83952aaa087737da6b7a407"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000172",
+          "source_frame_index": 172,
+          "native_source_pts_s": 5.736666666666666,
+          "recorded_source_png_sha256": "a423037171725e304306cbba99eb707117d2e5bb4a1a4f782858af48298c9376"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000187",
+          "source_frame_index": 187,
+          "native_source_pts_s": 6.236666666666666,
+          "recorded_source_png_sha256": "e67b0aab5587c12ed833390a39ab4d1fee5edfe73d6abc6f8f6248bff177ce78"
+        },
+        {
+          "supplied_alias": "F0046",
+          "source_frame_id": "S000202",
+          "source_frame_index": 202,
+          "native_source_pts_s": 6.736666666666666,
+          "recorded_source_png_sha256": "bf95a218f7ca83d04132a282c67c54ac5dddac6c7abf89ebb1f9efcc39dbf95d"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000218",
+          "source_frame_index": 218,
+          "native_source_pts_s": 7.27,
+          "recorded_source_png_sha256": "c8c8249c52b055cbc00561cb1bc295264a0422458ee71ec3e6eaad3a72c43a23"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000233",
+          "source_frame_index": 233,
+          "native_source_pts_s": 7.77,
+          "recorded_source_png_sha256": "b7b6e79019122fff16fa390e7aa39fb439179c611e2aa62495314528ee28afc9"
+        },
+        {
+          "supplied_alias": "F0092",
+          "source_frame_id": "S000248",
+          "source_frame_index": 248,
+          "native_source_pts_s": 8.27,
+          "recorded_source_png_sha256": "ad3eedacb7b67c93f721174001742b85e557419955c4e4fb3a0308abd5de2e01"
+        },
+        {
+          "supplied_alias": "F0107",
+          "source_frame_id": "S000263",
+          "source_frame_index": 263,
+          "native_source_pts_s": 8.77,
+          "recorded_source_png_sha256": "dfc305263abf16f0d007b0ce50d1a09c8cf5d5e3d130edeebe1a5b2aabe0dc98"
+        }
+      ],
+      "native_array_fps_derived_from_span": 1.9801980198019806,
+      "native_array_second_per_grid_ts_proposed": 1.0099999999999998,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "native_source_pts_s": [
+            5.235,
+            5.736666666666666
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0031",
+            "F0046"
+          ],
+          "native_source_pts_s": [
+            6.236666666666666,
+            6.736666666666666
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "native_source_pts_s": [
+            7.27,
+            7.77
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0092",
+            "F0107"
+          ],
+          "native_source_pts_s": [
+            8.27,
+            8.77
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "cb4d1d665037770bdb4b26db6c7a00296eb0757fea4e68cbae425657c0fc3132",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "a829dbaffad53a23c1c0f0e2e9b91d3dc9b7ec42547b412a0cf0b78a7157a40a",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "original_pack_ids": [
+        "test2__W01"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "original_full_window_eligible": true,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "visual_review_limitations": [
+        "No independent full-window visual quality review beyond the accepted V2 response"
+      ],
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "supported_positive_event_ids": [],
+      "source_frame_count": 108,
+      "source_first_frame": "S000180",
+      "source_last_frame": "S000287",
+      "reported_half_open_frames": [
+        180,
+        288
+      ],
+      "native_source_video_sha256_recorded": "6ea954179859c6b0e6af6e1ac88c5bf1d3b296da6b7a076c113a2cca86817fe1",
+      "uniform8_positions": [
+        0,
+        15,
+        31,
+        46,
+        61,
+        76,
+        92,
+        107
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000180",
+          "source_frame_index": 180,
+          "native_source_pts_s": 6.008333333333334,
+          "recorded_source_png_sha256": "4da2b477f51fc99a2480c4e423947ef7cd63c708546203a7720ee4f165880a79"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000195",
+          "source_frame_index": 195,
+          "native_source_pts_s": 6.51,
+          "recorded_source_png_sha256": "ff3e91a4a10081e00b9e6c23f3bf5773562e153309960812a820e5f7d11a7433"
+        },
+        {
+          "supplied_alias": "F0032",
+          "source_frame_id": "S000211",
+          "source_frame_index": 211,
+          "native_source_pts_s": 7.043333333333333,
+          "recorded_source_png_sha256": "4e09d6211563fb9dc6b2f6254201be2a510a54d07327362042f2902c004cfca1"
+        },
+        {
+          "supplied_alias": "F0047",
+          "source_frame_id": "S000226",
+          "source_frame_index": 226,
+          "native_source_pts_s": 7.545,
+          "recorded_source_png_sha256": "4f3c81a049380c89ea284bc7378943fbbe43c2119e1e7f815b3d8b29234455ef"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000241",
+          "source_frame_index": 241,
+          "native_source_pts_s": 8.045,
+          "recorded_source_png_sha256": "c4c154354d592d988fcece8226fe5ad200419bfb7cb055474081fb20e2b3ba9b"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000256",
+          "source_frame_index": 256,
+          "native_source_pts_s": 8.545,
+          "recorded_source_png_sha256": "5104622569cf9a33399051cf37b6b9548a78ff4a4a6c8c10a842c6e639b4f70a"
+        },
+        {
+          "supplied_alias": "F0093",
+          "source_frame_id": "S000272",
+          "source_frame_index": 272,
+          "native_source_pts_s": 9.08,
+          "recorded_source_png_sha256": "527deef05ca17c4ac70357ed86a28cc47603f2cfaf99abfcd26fb31414d66949"
+        },
+        {
+          "supplied_alias": "F0108",
+          "source_frame_id": "S000287",
+          "source_frame_index": 287,
+          "native_source_pts_s": 9.58,
+          "recorded_source_png_sha256": "f529b360d0d340df4111375cebb0d74c104e2dca4dcdb9a6cdad67b5c1849ac9"
+        }
+      ],
+      "native_array_fps_derived_from_span": 1.959869342043864,
+      "native_array_second_per_grid_ts_proposed": 1.0204761904761903,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "native_source_pts_s": [
+            6.008333333333334,
+            6.51
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0032",
+            "F0047"
+          ],
+          "native_source_pts_s": [
+            7.043333333333333,
+            7.545
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "native_source_pts_s": [
+            8.045,
+            8.545
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0093",
+            "F0108"
+          ],
+          "native_source_pts_s": [
+            9.08,
+            9.58
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "f0661388241f309571d72634a8816043c3e3f24481a27a74f83ded233d7cd2eb",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "34aa93a0e6217ab5047bdc8ac0d786904212df25bbd3887bc543a7b9b4f25817",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "original_pack_ids": [
+        "test5__W01"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "original_full_window_eligible": true,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "visual_review_limitations": [
+        "No independent full-window visual quality review beyond the accepted V2 response"
+      ],
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "supported_positive_event_ids": [],
+      "source_frame_count": 72,
+      "source_first_frame": "S000162",
+      "source_last_frame": "S000233",
+      "reported_half_open_frames": [
+        162,
+        234
+      ],
+      "native_source_video_sha256_recorded": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+      "uniform8_positions": [
+        0,
+        10,
+        20,
+        30,
+        41,
+        51,
+        61,
+        71
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000162",
+          "source_frame_index": 162,
+          "native_source_pts_s": 5.4,
+          "recorded_source_png_sha256": "dc823f38acca0b7bec50d76c58a510b385664e069802a5b459b3137c40ebb866"
+        },
+        {
+          "supplied_alias": "F0011",
+          "source_frame_id": "S000172",
+          "source_frame_index": 172,
+          "native_source_pts_s": 5.733333333333333,
+          "recorded_source_png_sha256": "ff3dcaadb589f3ae0f4fbe46584d2f9c9fdb7898b0ae38bd11a3228e9687c606"
+        },
+        {
+          "supplied_alias": "F0021",
+          "source_frame_id": "S000182",
+          "source_frame_index": 182,
+          "native_source_pts_s": 6.066666666666666,
+          "recorded_source_png_sha256": "373eba8e1f2c7e85a443da2bfafee0616e6f38ba1eda9d0bfaeb3bdae388acf9"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000192",
+          "source_frame_index": 192,
+          "native_source_pts_s": 6.4,
+          "recorded_source_png_sha256": "585f0eb808d2533518d3f84b6e42009ea69da98476207baf5b63736b8754bc64"
+        },
+        {
+          "supplied_alias": "F0042",
+          "source_frame_id": "S000203",
+          "source_frame_index": 203,
+          "native_source_pts_s": 6.766666666666667,
+          "recorded_source_png_sha256": "8046ec3e296eceb642e9813666900059c9c0f337055c27efb140798c81abe73b"
+        },
+        {
+          "supplied_alias": "F0052",
+          "source_frame_id": "S000213",
+          "source_frame_index": 213,
+          "native_source_pts_s": 7.1,
+          "recorded_source_png_sha256": "173fa0288e6b5ccb434a3f95e48085536d4b031eba979ea8d9baab9e5946778b"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000223",
+          "source_frame_index": 223,
+          "native_source_pts_s": 7.433333333333334,
+          "recorded_source_png_sha256": "9407cc5926117fd00844f8d343335cf476617e6602c66b4bbd6858cde979edd8"
+        },
+        {
+          "supplied_alias": "F0072",
+          "source_frame_id": "S000233",
+          "source_frame_index": 233,
+          "native_source_pts_s": 7.766666666666667,
+          "recorded_source_png_sha256": "78d97a28db80f06ea186d6dbf5ddb2163a277f720afed0daf8af80233310d566"
+        }
+      ],
+      "native_array_fps_derived_from_span": 2.95774647887324,
+      "native_array_second_per_grid_ts_proposed": 0.6761904761904761,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0011"
+          ],
+          "native_source_pts_s": [
+            5.4,
+            5.733333333333333
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0021",
+            "F0031"
+          ],
+          "native_source_pts_s": [
+            6.066666666666666,
+            6.4
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0042",
+            "F0052"
+          ],
+          "native_source_pts_s": [
+            6.766666666666667,
+            7.1
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0062",
+            "F0072"
+          ],
+          "native_source_pts_s": [
+            7.433333333333334,
+            7.766666666666667
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "9b74f6792f532751f76b32b7aabaa1013e3e03525045ea61594b78de5aa5a54f",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "03f3fc3c650a4131c1cdf89755d8c5df34166ade6e7027d064bab85d46ef53f1",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "original_pack_ids": [
+        "test5__W05"
+      ],
+      "permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "original_full_window_eligible": false,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "HUMAN_PARTIAL",
+      "visual_review_limitations": [
+        "cannot meet V2 last-frame coverage requirement",
+        "Unlisted predicted events are UNEVALUATED, not false positives"
+      ],
+      "final_exhaustiveness_status": "NON_EXHAUSTIVE_CONFIRMED",
+      "supported_positive_event_ids": [
+        "EVT001"
+      ],
+      "source_frame_count": 108,
+      "source_first_frame": "S000342",
+      "source_last_frame": "S000449",
+      "reported_half_open_frames": [
+        342,
+        450
+      ],
+      "native_source_video_sha256_recorded": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+      "uniform8_positions": [
+        0,
+        15,
+        31,
+        46,
+        61,
+        76,
+        92,
+        107
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000342",
+          "source_frame_index": 342,
+          "native_source_pts_s": 11.4,
+          "recorded_source_png_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000357",
+          "source_frame_index": 357,
+          "native_source_pts_s": 11.9,
+          "recorded_source_png_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82"
+        },
+        {
+          "supplied_alias": "F0032",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "native_source_pts_s": 12.433333333333334,
+          "recorded_source_png_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7"
+        },
+        {
+          "supplied_alias": "F0047",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "native_source_pts_s": 12.933333333333334,
+          "recorded_source_png_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "native_source_pts_s": 13.433333333333334,
+          "recorded_source_png_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "native_source_pts_s": 13.933333333333334,
+          "recorded_source_png_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794"
+        },
+        {
+          "supplied_alias": "F0093",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "native_source_pts_s": 14.466666666666667,
+          "recorded_source_png_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624"
+        },
+        {
+          "supplied_alias": "F0108",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "native_source_pts_s": 14.966666666666667,
+          "recorded_source_png_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e"
+        }
+      ],
+      "native_array_fps_derived_from_span": 1.9626168224299068,
+      "native_array_second_per_grid_ts_proposed": 1.019047619047619,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "native_source_pts_s": [
+            11.4,
+            11.9
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0032",
+            "F0047"
+          ],
+          "native_source_pts_s": [
+            12.433333333333334,
+            12.933333333333334
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "native_source_pts_s": [
+            13.433333333333334,
+            13.933333333333334
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0093",
+            "F0108"
+          ],
+          "native_source_pts_s": [
+            14.466666666666667,
+            14.966666666666667
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "add895179c548adfee839ed1683b3bd67bcc47aaf4fed29092d06127e6b4f603",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "d92c917a40e3e3a69730f0753ee74ffbe6bc775d0a6eae32d9e9bdcf86f93386",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "original_pack_ids": [
+        "test7__W05"
+      ],
+      "permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "original_full_window_eligible": false,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "HUMAN_PARTIAL",
+      "visual_review_limitations": [
+        "cannot meet V2 last-frame coverage requirement",
+        "Unlisted predicted events are UNEVALUATED, not false positives"
+      ],
+      "final_exhaustiveness_status": "NON_EXHAUSTIVE_CONFIRMED",
+      "supported_positive_event_ids": [
+        "EVT001"
+      ],
+      "source_frame_count": 107,
+      "source_first_frame": "S000373",
+      "source_last_frame": "S000479",
+      "reported_half_open_frames": [
+        372,
+        480
+      ],
+      "native_source_video_sha256_recorded": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+      "uniform8_positions": [
+        0,
+        15,
+        30,
+        45,
+        61,
+        76,
+        91,
+        106
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "native_source_pts_s": 12.435,
+          "recorded_source_png_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "native_source_pts_s": 12.935,
+          "recorded_source_png_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "native_source_pts_s": 13.436666666666667,
+          "recorded_source_png_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67"
+        },
+        {
+          "supplied_alias": "F0046",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "native_source_pts_s": 13.936666666666667,
+          "recorded_source_png_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "native_source_pts_s": 14.471666666666666,
+          "recorded_source_png_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "native_source_pts_s": 14.971666666666666,
+          "recorded_source_png_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8"
+        },
+        {
+          "supplied_alias": "F0092",
+          "source_frame_id": "S000464",
+          "source_frame_index": 464,
+          "native_source_pts_s": 15.471666666666666,
+          "recorded_source_png_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c"
+        },
+        {
+          "supplied_alias": "F0107",
+          "source_frame_id": "S000479",
+          "source_frame_index": 479,
+          "native_source_pts_s": 15.973333333333333,
+          "recorded_source_png_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa"
+        }
+      ],
+      "native_array_fps_derived_from_span": 1.9783325482807355,
+      "native_array_second_per_grid_ts_proposed": 1.0109523809523806,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "native_source_pts_s": [
+            12.435,
+            12.935
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0031",
+            "F0046"
+          ],
+          "native_source_pts_s": [
+            13.436666666666667,
+            13.936666666666667
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "native_source_pts_s": [
+            14.471666666666666,
+            14.971666666666666
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0092",
+            "F0107"
+          ],
+          "native_source_pts_s": [
+            15.471666666666666,
+            15.973333333333333
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "c6932455d7e08b6ada461cf52dcaa8c7a3f5cb82c5600b3ec93566b82e93591c",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "8c8c44cad8f7add9411dc9c92b9c714feb631cd3cafe78268564e19c0ea1a9cf",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "original_pack_ids": [
+        "test8__W07"
+      ],
+      "permission": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+      "original_full_window_eligible": false,
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "visual_review_limitations": [
+        "No confirmed-event completeness or scoring claim"
+      ],
+      "final_exhaustiveness_status": "NO_COMPLETENESS_CLAIM",
+      "supported_positive_event_ids": [],
+      "source_frame_count": 118,
+      "source_first_frame": "S000936",
+      "source_last_frame": "S001053",
+      "reported_half_open_frames": [
+        936,
+        1054
+      ],
+      "native_source_video_sha256_recorded": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+      "uniform8_positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        84,
+        100,
+        117
+      ],
+      "selected_mapping": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000936",
+          "source_frame_index": 936,
+          "native_source_pts_s": 31.211666666666666,
+          "recorded_source_png_sha256": "efd1101349c160f6e5f0cc090e040ee54776d25b74aa247fe2d55a56972b91ea"
+        },
+        {
+          "supplied_alias": "F0018",
+          "source_frame_id": "S000953",
+          "source_frame_index": 953,
+          "native_source_pts_s": 31.78,
+          "recorded_source_png_sha256": "de8c2fc423fdcbf75a2712e948b535486383b0fe851186045232a9a5628d6201"
+        },
+        {
+          "supplied_alias": "F0034",
+          "source_frame_id": "S000969",
+          "source_frame_index": 969,
+          "native_source_pts_s": 32.31333333333333,
+          "recorded_source_png_sha256": "c247e1f263cbbd87a4826f836526ce1765f6cbe116f241d7cab05db1ea255f83"
+        },
+        {
+          "supplied_alias": "F0051",
+          "source_frame_id": "S000986",
+          "source_frame_index": 986,
+          "native_source_pts_s": 32.88166666666667,
+          "recorded_source_png_sha256": "006ea90212bead15e710bf836e07538d36277ada7a563177b2d0dde20fed94aa"
+        },
+        {
+          "supplied_alias": "F0068",
+          "source_frame_id": "S001003",
+          "source_frame_index": 1003,
+          "native_source_pts_s": 33.44833333333333,
+          "recorded_source_png_sha256": "bf7b7b801cf9d3408e830859801c19b843ab2390091ceeaf3e82ea7bf62d8b6b"
+        },
+        {
+          "supplied_alias": "F0085",
+          "source_frame_id": "S001020",
+          "source_frame_index": 1020,
+          "native_source_pts_s": 34.0,
+          "recorded_source_png_sha256": "7dd3100f769cd1236b77ed73bd915cf0a372b02419d12c5a06a13d85cc6aff6e"
+        },
+        {
+          "supplied_alias": "F0101",
+          "source_frame_id": "S001036",
+          "source_frame_index": 1036,
+          "native_source_pts_s": 34.53333333333333,
+          "recorded_source_png_sha256": "e2e6abc8591796ecb710790112c2706e161128220502f29b5e543268fd3035d6"
+        },
+        {
+          "supplied_alias": "F0118",
+          "source_frame_id": "S001053",
+          "source_frame_index": 1053,
+          "native_source_pts_s": 35.10166666666667,
+          "recorded_source_png_sha256": "4ef011631a8b9670114da16deee3a7d94edc3d04ce01a032cc5a9eac5dfadd1b"
+        }
+      ],
+      "native_array_fps_derived_from_span": 1.799485861182519,
+      "native_array_second_per_grid_ts_proposed": 1.1114285714285717,
+      "temporal_units": [
+        {
+          "unit": 0,
+          "supplied_aliases": [
+            "F0001",
+            "F0018"
+          ],
+          "native_source_pts_s": [
+            31.211666666666666,
+            31.78
+          ]
+        },
+        {
+          "unit": 1,
+          "supplied_aliases": [
+            "F0034",
+            "F0051"
+          ],
+          "native_source_pts_s": [
+            32.31333333333333,
+            32.88166666666667
+          ]
+        },
+        {
+          "unit": 2,
+          "supplied_aliases": [
+            "F0068",
+            "F0085"
+          ],
+          "native_source_pts_s": [
+            33.44833333333333,
+            34.0
+          ]
+        },
+        {
+          "unit": 3,
+          "supplied_aliases": [
+            "F0101",
+            "F0118"
+          ],
+          "native_source_pts_s": [
+            34.53333333333333,
+            35.10166666666667
+          ]
+        }
+      ],
+      "old_image_manifest_payload_sha256_not_V1D": "d44cdd226a29f51c476c35f916ac38cd4bba788c3da8dbfe837d6aab29e99825",
+      "old_image_manifest_rendered_chat_sha256_not_V1D": "89787bb3bbe4e6926498122f3c3459a695199eb3714dd2ee1b52b07c9166e059",
+      "recorded_reference_policy": "TARGET_REFERENCE_NONE_CANDIDATE_ONLY",
+      "media_integrity_status": "EXISTING_METADATA_VERIFIED_NOT_CURRENT_MEDIA_BYTES_REHASHED",
+      "real_V1D_rendered_prompt_sha256": null,
+      "real_native_array_execution_receipt": null
+    }
+  ],
+  "run_order": [
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "305dde5992c91814228f5617a9d84bd613f050c25e7786730f6db6249f55b7c3",
+      "proposed_call_index": 1
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "30c3789340b26e95d69555dce5791e4f964ca1217ded52ccd9a654000e27657e",
+      "proposed_call_index": 2
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "4150733e3b64bba20fac399ea623e75a45d72abae10fccedce9b47c52da5a7e3",
+      "proposed_call_index": 3
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "5486909bd5b88cfc133f2b030f95b9e0a9d01f47c167fae866691784d970944e",
+      "proposed_call_index": 4
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "58771eb150ce4abd1f7629f71d1a219ec15d7c2c748b59ee7cdc69d6834e4427",
+      "proposed_call_index": 5
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "5f37eeebb7e0722895603d07998c3e50f44dc6568a18d40d8eb1cc3f23474378",
+      "proposed_call_index": 6
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "61845992286b8a137768ef07e02649c66533497921229f7f6a6466da09b60f48",
+      "proposed_call_index": 7
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "6d955262e1554244b273d203bed80dd27ab054dee2b6ceef7966d2cb9c603bec",
+      "proposed_call_index": 8
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "756e21fdd1599060cd9268aef750acefc97be586c29ec8895d429cd97ab9f6e0",
+      "proposed_call_index": 9
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "76463c039f8a4f154d1b7f48af8a318ca54bfe9e9d1eed9442bd9f46bd866327",
+      "proposed_call_index": 10
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "7f3deb32f07eb6bd1257f3c96a62c2b9e09abf19810978604817aa260850a6cf",
+      "proposed_call_index": 11
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "84d3bcff2986a7e110bcf14e34f2ad573599d0bbc4397a801803e1a8ffbf39ca",
+      "proposed_call_index": 12
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "88b2e679d66d7193899f764989771ef8999dd2f6807a2c8d9d6998bdac1d9bb7",
+      "proposed_call_index": 13
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "9ff90aed1a36a61f79c2ad74eb31b23c256288d9835d8b0282c71f6169f4720b",
+      "proposed_call_index": 14
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "c0fd972e2f482b74b0761820f4ec58931299eb8f48dc8f723397b8ab1778fb80",
+      "proposed_call_index": 15
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "c35fc27f86aebbf449b6abbd13a22035147aed0b1095a53ec7fa317291855f75",
+      "proposed_call_index": 16
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "c4d7654bab1f9b5f424c4fa21aa39e1c4ccf5cecc4941cad15c51f9f88bdf908",
+      "proposed_call_index": 17
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "e005a3e488857927565833fd36471eeca245741c1fd7717faf44feb1b765edc2",
+      "proposed_call_index": 18
+    }
+  ],
+  "decisions": [
+    {
+      "id": "H01",
+      "decision": "Failed-regression risk acceptance",
+      "proposed_value": "Use immutable V1D for exploratory hypotheses despite strict 1/8; six event-bearing outputs all invalid",
+      "evidence": [
+        "E12",
+        "E13",
+        "E14",
+        "E19"
+      ],
+      "remaining_limitation": "Explicit exception to prior decision package warning; D4 did not turn REGRESSION_FAIL into PASS",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H02",
+      "decision": "Model/revision",
+      "proposed_value": "Existing local Qwen2.5-VL-7B-Instruct NF4 double quantization, BF16, SDPA; revision cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "evidence": [
+        "E15",
+        "E24"
+      ],
+      "remaining_limitation": "Existing asset receipts only; weights not reopened and no model substitution",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H03",
+      "decision": "Prompt/system/schema",
+      "proposed_value": "Exact V1D + unchanged V2 + unchanged Prediction V1/parser/validator; no V1E",
+      "evidence": [
+        "E16",
+        "E18",
+        "E22",
+        "E23"
+      ],
+      "remaining_limitation": "Full 18 real-input serialized hashes not captured or newly built",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H04",
+      "decision": "Representation choice",
+      "proposed_value": "All three representations, 8 source frames each; 18 planned calls, no 12-call fallback",
+      "evidence": [
+        "E10",
+        "E13",
+        "E25"
+      ],
+      "remaining_limitation": "Native route not presently real-DEV capable; T01/T02",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H05",
+      "decision": "Sampling",
+      "proposed_value": "Uniform8 round(i*(N-1)/7), Python ties-to-even, include endpoints; same selection all representations",
+      "evidence": [
+        "E07",
+        "E08"
+      ],
+      "remaining_limitation": "Can miss brief transitions; no offset/GT-driven frame selection",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H06",
+      "decision": "Target reference and ambiguity clause",
+      "proposed_value": "NONE for all six windows; no new identity-ambiguity clause; existing prompt/outcomes unchanged",
+      "evidence": [
+        "E10",
+        "E13",
+        "E16",
+        "E37"
+      ],
+      "remaining_limitation": "Opaque TARGET_A can remain ambiguous; this protocol does not authorize global identity or an implicit new prompt instruction",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H07",
+      "decision": "Citation C3",
+      "proposed_value": "Retain supplied per-frame aliases; native 8 aliases / 4 temporal units disclosed in report only",
+      "evidence": [
+        "E10",
+        "E25"
+      ],
+      "remaining_limitation": "No unit-level validator replacement, invented alias, precision claim or claim model distinguishes both paired frames",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H08",
+      "decision": "Native time contract",
+      "proposed_value": "FRAME_MATCHED_ONLY; private native source PTS authoritative; fps=7/(last-first), seconds/unit=2/fps, do_sample_frames=False",
+      "evidence": [
+        "E25",
+        "E07",
+        "E08"
+      ],
+      "remaining_limitation": "Model time is not native PTS faithful; no extra timestamp text/header; actual position_ids not instrumented",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H09",
+      "decision": "Pixel/layout budget",
+      "proposed_value": "min_pixels=3136, max effective spatial pixels=200704; storyboard 3 columns, 480x270 tile +32 alias row, 1440x906 canvas",
+      "evidence": [
+        "E15",
+        "E24",
+        "E25",
+        "E26",
+        "E07"
+      ],
+      "remaining_limitation": "Equal selected source frames does not imply equal visual token budget or retained detail; real grids must be logged later",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H10",
+      "decision": "Generation",
+      "proposed_value": "Greedy do_sample=False; seed42; max_new_tokens=1024; repeat1; temperature/top_p/top_k inactive",
+      "evidence": [
+        "E15",
+        "E26"
+      ],
+      "remaining_limitation": "Seed is not cross-platform determinism; no stability study or extra warmup",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H11",
+      "decision": "Timeouts",
+      "proposed_value": "load120s, generation max_time300s, supervised request330s; whole pilot6060s from load-start (derived 120+18*330)",
+      "evidence": [
+        "E05",
+        "E15",
+        "E31"
+      ],
+      "remaining_limitation": "6060s is a new proposed whole-run bound, not the old 8-call synthetic whole3200s; no verified real supervisor yet",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H12",
+      "decision": "Hardware gates",
+      "proposed_value": "Before load free GPU>=10GiB/RAM>=8GiB; generation free GPU>=2GiB; stop global GPU>14.5GiB, owned-tree RSS>20GiB or available RAM<2GiB; 1s nominal polling",
+      "evidence": [
+        "E15",
+        "E24",
+        "E31"
+      ],
+      "remaining_limitation": "Historical synthetic enforcement/measurements only; transient peaks can occur between polls; current free resources not probed",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H13",
+      "decision": "Failure/retry/continuation",
+      "proposed_value": "No generation-quality retry or automatic repair; proposed transport pre-generation retry0; continue on strict-invalid JSON if healthy; stop on hardware breach/OOM/process failure/deadline, mark remaining NOT_EXECUTED",
+      "evidence": [
+        "E05",
+        "E13",
+        "E29",
+        "E31"
+      ],
+      "remaining_limitation": "Changes historical proposed transport retry1 to explicit conservative retry0; no calls hidden as warmups or replacements",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H14",
+      "decision": "Time sensitivity and matching",
+      "proposed_value": "All 0,0.2,0.5s equally reported; greedy one-to-one closed-interval gap=max(0,GT_start-PRED_end,PRED_start-GT_end), require_overlap=False, stable GT then prediction order; TIMING_UNKNOWN unmatched/unresolved",
+      "evidence": [
+        "E10",
+        "E30"
+      ],
+      "remaining_limitation": "0.2 is not privileged; existing E30 interior-point case disagrees with proposed closed-interval semantics (T04); no matcher repair here; no optimal-cardinality or invented midpoint/duration claims",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H15",
+      "decision": "Cohort and GT permissions",
+      "proposed_value": "Three negative units, two nonexhaustive known PICKUP units, one uncertain; test1 W03/W05 deduplicated; exclude test3 W07",
+      "evidence": [
+        "E01",
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "remaining_limitation": "No validated PLACEMENT positive; independent negative quality review incomplete; causality/session independence unestablished",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H16",
+      "decision": "Strict-invalid exclusion and qualitative retention",
+      "proposed_value": "Every raw unchanged; full-strict valid only in structured matching; separate syntax/schema/semantic/citation/full status; invalid not NO_EVENT",
+      "evidence": [
+        "E22",
+        "E23",
+        "E29",
+        "E30"
+      ],
+      "remaining_limitation": "Validator early-return must remain; unassessed stages reported NOT_ASSESSED, not false PASS; T03",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H17",
+      "decision": "Physical reasoning assessment",
+      "proposed_value": "Qualitative manual support review separate from schema/GT matching; unsupported/uncertain/unreviewed remain distinct; no new adjudicated labels here",
+      "evidence": [
+        "E13",
+        "E19",
+        "E02"
+      ],
+      "remaining_limitation": "No physical correctness inferred solely from event claim, match or schema validity",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H18",
+      "decision": "Reporting and metrics",
+      "proposed_value": "Execution/contract counts, known-event case matching, negative case alerts, uncertain descriptive review, representation descriptions only",
+      "evidence": [
+        "E01",
+        "E02",
+        "E30"
+      ],
+      "remaining_limitation": "No accuracy/precision/recall/F1/FPR/hallucination rate/generalization/statistical superiority",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H19",
+      "decision": "Run order/budget",
+      "proposed_value": "18 deterministic prospective rows; sha256 UTF8 PASS_T_PILOT_ORDER_V1/opaque/representation/NONE/1; one repeat, no extra generations, local API budget USD0",
+      "evidence": [
+        "E05",
+        "E10"
+      ],
+      "remaining_limitation": "Order regenerated for final NONE/native-array labels, not reuse obsolete unresolved-reference order; no measured USD hardware cost",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H20",
+      "decision": "Model-visible information and time disclosure",
+      "proposed_value": "Neutral supplied aliases, authorized media, exact V1D/V2/schema only; private PTS/GT/eligibility/tracker and review metadata excluded",
+      "evidence": [
+        "E16",
+        "E18",
+        "E26",
+        "E37"
+      ],
+      "remaining_limitation": "No new model-visible time map; native time distortions disclosed privately/report-only",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H21",
+      "decision": "Freeze vs execution approval",
+      "proposed_value": "Separate explicit freeze-only authorization; later separately authorize exactly18 real calls after technical blockers resolved",
+      "evidence": [
+        "E28",
+        "E29",
+        "E13"
+      ],
+      "remaining_limitation": "This request approves preparation only; flags/env values/old synthetic approvals grant no real-run authorization",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    }
+  ],
+  "technical_findings": [
+    {
+      "id": "T01",
+      "severity": "BLOCKING_REAL_NATIVE_V1D",
+      "source": "E25 lines74-79",
+      "fact": "V1D prompt pin requires synthetic_only=True; honest real DEV deployment must not impersonate synthetic data.",
+      "needed": "Separately authorized future implementation review for a real-DEV V1D route, preserving the prompt/schema and approval boundary; no bypass/patch in this task."
+    },
+    {
+      "id": "T02",
+      "severity": "BLOCKING_AS_IS_FREEZE_AND_18_CALL_RUNNER",
+      "source": "E27 lines75-79, E28 lines17-18/92-99, E29; existing prepared deployments",
+      "fact": "Legacy freezer pins templates/event_reasoning_prompt_v1.txt; transport/prepared configurations use MULTI_IMAGE/STORYBOARD/REENCODED_AUTHORIZED_VIDEO and synthetic allowlists, not the proposed complete V1D native-array protocol. No verified approved real V1D 18-call manifest/config exists.",
+      "needed": "Future source/metadata-only integration authorization and newly reviewed component hashes before a supported freeze; do not label the present legacy path ready."
+    },
+    {
+      "id": "T03",
+      "severity": "UNVERIFIED_INTEGRATED_REPORTING_AND_GATING",
+      "source": "E23/E29/E30",
+      "fact": "Strict validator early returns on schema errors; evaluator accepts a prediction object and has no built-in full-strict-status parameter. Existing primitives do not alone prove all18 calls are gated and all3 sensitivities/stages are reported.",
+      "needed": "Before actual execution, verify a caller gates matching on full strict validity and reports unassessed stages without repair; no evaluator/schema changes authorized now."
+    },
+    {
+      "id": "M01",
+      "severity": "UNVERIFIED_CURRENT_MEDIA_INTEGRITY_AND_REAL_SERIALIZATION",
+      "source": "E07/E08 plus six INPUT metadata files",
+      "fact": "Uniform8/native PTS/source IDs/recorded hashes verified against existing JSON; no source media bytes, actual video pixels, real native arrays or final18 V1D processor receipts were opened/created.",
+      "needed": "Do not invent current media/payload hashes. Actual file integrity and real input receipts remain future authorized preflight/execution gates."
+    },
+    {
+      "id": "T04",
+      "severity": "BLOCKING_CLOSED_INTERVAL_MATCH_SEMANTICS",
+      "source": "E30 lines36-45",
+      "fact": "For nonzero-width GT intervals and a predicted point strictly inside, overlap length is zero and E30 uses distance to an endpoint instead of zero interval gap. Thus current implementation can reject a contained point at tolerance0. No actual GT times were opened to determine which six-window cases would trigger it.",
+      "needed": "Human must approve the intended closed-interval rule (H14), then separately authorize and verify minimal matcher integration/correction before scoring/freeze; do not silently use the current edge-case behavior or change evaluator in this task."
+    }
+  ],
+  "source_components": {
+    "E01": {
+      "path": "artifacts/pass_t/phase2b/readiness/eligibility.json",
+      "sha256": "c231967ccc7007749e80f570d0abb33c65ee964a036f5da51fb2f60cbbd5c07b",
+      "role": "Canonical seven-record eligibility; six admitted, one excluded",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E02": {
+      "path": "artifacts/pass_t/phase2b/readiness/GT_ELIGIBILITY_LIMITATIONS.md",
+      "sha256": "5b1ad17c0398719d3c9a35762dadfe891a57b969f2a77b1e81d03112cf5322c5",
+      "role": "Exploratory-only GT limitations",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E03": {
+      "path": "artifacts/pass_t/phase2a/v2/reports/current_status_20261013_48a92354/PHASE2A_CURRENT_REPORT.md",
+      "sha256": "c148ebbe914c8451b061a7f6052afb3c5b3720e303004a3559673ca68e9aba8e",
+      "role": "Phase2a completion and sidecar/negative quality caveats",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E04": {
+      "path": "artifacts/pass_t/phase2a/v2/readiness_checks/20261013_negative_review/NEGATIVE_READINESS_REPORT.md",
+      "sha256": "96df7be2328a402a9675297a88743ffcadb72b650aa7da3cc833e001404ca986",
+      "role": "Negative review provenance and limitations",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E05": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/pilot_preregistration_draft.json",
+      "sha256": "a91296147e184c608945bb328fd6802a2b89619e85f801ea56f030d4bc3281fd",
+      "role": "Historical unapproved pilot configuration and order",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E06": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/QWEN_NF4_PROTOCOL_DECISION_SHEET.md",
+      "sha256": "71ca5a35fdf885220bc8f5492614b6825f41949bdf1fa7105cbb1a9f9569e712",
+      "role": "Historical unresolved decisions",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E07": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/candidate_manifests.json",
+      "sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f",
+      "role": "Existing Uniform8 sample positions/IDs/PTS/recorded image hashes",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E08": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/timing.json",
+      "sha256": "be7b0a6ab0d35b5e869fde4a6591b640a38782830f25362c01c73c56a360cf2c",
+      "role": "Native source timing metadata and authorized frame counts",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E09": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/actual_container_pts_metadata.json",
+      "sha256": "ffac6819f07599efdf03658e92ec6787d3e9995464fb4e46df039defa629978c",
+      "role": "Old reencoded container timing; not native-array proof",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E10": {
+      "path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/QWEN_NF4_PILOT_DECISION_PACKAGE_V3.md",
+      "sha256": "f5e2486ccbeda92277f131c9bc1a0fe2b851e56c7adff5ef88426b7b6faf3b4d",
+      "role": "C1/C2/C3 temporal-unit citation and decision alternatives",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E11": {
+      "path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/freeze_blockers.json",
+      "sha256": "055e06cc97d92c192d20412417a1c40942a4120e38ee1b3c69972f2e0dfb2c61",
+      "role": "All historical 21-item unresolved/resolved statuses",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E12": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/PASS_T_PHASE2B_QWEN_NF4_V1D_REGRESSION_REPORT.md",
+      "sha256": "626e1685e381bf368d1ad32ba24ff4d1069f5faf23013671f74716e7029c0fc4",
+      "role": "V1D failed structured-output regression",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E13": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/V1D_HUMAN_PILOT_DECISION_PACKAGE.md",
+      "sha256": "f4224167ddd70801f8db1de120608a9820878b637ad6577452cc5b6dbf9cdce3",
+      "role": "Prior V1D warning and approval gates",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E14": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/V1D_REGRESSION_SUMMARY.json",
+      "sha256": "db57b314df9aa72938946c5ecf418d024dc2616fe17960459cc54d061193968e",
+      "role": "Existing eight-call result counts",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E15": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/V1D_PREREGISTERED_EXECUTION_MANIFEST.json",
+      "sha256": "f4a91abc2c43a8c8247c784a7b6d861aeba6e453e17381e79d75515101673c60",
+      "role": "Synthetic generation, resource and timeout settings",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E16": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt",
+      "sha256": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+      "role": "Immutable proposed task prompt",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E17": {
+      "path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/QWEN_NF4_EVENT_REASONING_PROMPT_V1C.txt",
+      "sha256": "3ee1259930984abb8ca321f0d4ca14e46843c6cd714516b09ef94d1b94223722",
+      "role": "Immutable V1C comparison prompt",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E18": {
+      "path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/prompt_candidate/v2_system_unchanged.txt",
+      "sha256": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e",
+      "role": "Immutable V2 system formatting",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E19": {
+      "path": "WORKSPACE/Pass_T/V1D_Contract_Diagnosis_20261015/diagnosis_report.md",
+      "sha256": "0f3cb73c20de77db8b438e3166d6d28d9c129845f07f9a934a7ab1295f1727a6",
+      "role": "D4 diagnosis, scoped limitations",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E20": {
+      "path": "WORKSPACE/Pass_T/V1D_Contract_Diagnosis_20261015/diagnosis_decision.json",
+      "sha256": "2eaf970c10b89e4d85c8e7449dbe07937ee81cedeb4d3e9e561389013d7f9f5e",
+      "role": "No observed C1-C3 defect; not a pass or approval",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E21": {
+      "path": "WORKSPACE/Pass_T/V1D_Contract_Diagnosis_20261015/final_verification.json",
+      "sha256": "96a6ca1914cfb994d5a16bdb5a07d002d768ae69159cdd37a3b09b916690c9d5",
+      "role": "Completed diagnosis preservation verification",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E22": {
+      "path": "src/memory_graph/pass_t/phase2b/contracts/prediction_v1.json",
+      "sha256": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+      "role": "Prediction V1 nonempty schema",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E23": {
+      "path": "src/memory_graph/pass_t/phase2b/predictions.py",
+      "sha256": "c4b077374d50fc478c29d0009180d488c60a463fa8bffa183a179c5f736f1d37",
+      "role": "Authoritative strict parser and validation",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E24": {
+      "path": "src/memory_graph/pass_t/phase2b/local_vlm/nf4.py",
+      "sha256": "fc15d9012a3a992e4dcb9e66a3b458b242c319b1efe5f4d30dae19b81364547b",
+      "role": "Shared existing Qwen NF4 runtime",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E25": {
+      "path": "src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py",
+      "sha256": "5cfebb8d93294585cc62531258fba79f2d5abc2cb57e0f1ba1e108664288ed4e",
+      "role": "Native array route; synthetic-only V1D pin",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E26": {
+      "path": "src/memory_graph/pass_t/phase2b/local_vlm/qwen_contract.py",
+      "sha256": "6e52a2be7847ccb6c8e5f04bb7a229ded18d74908268967370169a5d42e1f397",
+      "role": "Task/schema/system serialization and generation controls",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E27": {
+      "path": "src/memory_graph/pass_t/phase2b/local_vlm/transport.py",
+      "sha256": "e385b2c86fc7f6f4b59d563c0d0639dc1e7e6d9c05c8f85ab9478e9ea34f8cc6",
+      "role": "Legacy HTTP transport modality and permission gates",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E28": {
+      "path": "src/memory_graph/pass_t/phase2b/protocol.py",
+      "sha256": "bc860e6f89401ff54dc27c6dc2dcc7b0e7c794f59d12c8bad5f918381cecee32",
+      "role": "Legacy freeze protocol and base prompt pin",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E29": {
+      "path": "src/memory_graph/pass_t/phase2b/inference.py",
+      "sha256": "e6bdbf19d4e3fb9a84a318fc49a88fc4b1f41e9af889fc8b80f30377793ba67f",
+      "role": "Legacy authorized pilot executor",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E30": {
+      "path": "src/memory_graph/pass_t/phase2b/evaluation.py",
+      "sha256": "4d69a83f361579b0e22a00075b3e1e9a5255daec416c9a5937240f22c7f19826",
+      "role": "Existing event-local greedy one-to-one matcher",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E31": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/supervisor.py",
+      "sha256": "8143afa6207c73a822997f6f5cb0db37a5cc217d344cb381ffffd788dc99b9d5",
+      "role": "Synthetic supervisor resource and wall-time checks",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E32": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/inputs.py",
+      "sha256": "14fc94869ca72121ea75fd84caf9ebb9b36b478574b1735da8b7320db910b579",
+      "role": "Synthetic-only deployment; not a real deployment",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E33": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/V1D_RESOURCE_REPORT.json",
+      "sha256": "f1a23eeb191aa37e41ad866efdcf08f7b6b65cdedeb95a076cf8f431eb3711ad",
+      "role": "Observed synthetic resource limits, not new capacity run",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E34": {
+      "path": "artifacts/pass_t/phase2b/qwen_nf4_engineering_closeout/20261015_94dcf4d4/PASS_T_PHASE2B_QWEN_NF4_ENGINEERING_CLOSEOUT_REPORT.md",
+      "sha256": "ec12a357c5e0a310ec215417fa508897af1fe5b8a5c0d31cc86d04c44699b1df",
+      "role": "V1C engineering closeout",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E35": {
+      "path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/QWEN_NF4_MATCHED_VIDEO8_CPU_PREFLIGHT_REPORT.md",
+      "sha256": "0c70170c5a38c4b37dfe9535a94f102688f30f83351d591f458ab8ec19bf6d5d",
+      "role": "Existing CPU matched-frame evidence",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E36": {
+      "path": "artifacts/pass_t/phase2b/config/protocol_decisions.template.json",
+      "sha256": "69fa06e0f52039666f33338de3a9af060b6b7aece7f06a57851b822940eeea8e",
+      "role": "Historical decision field requirements",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E37": {
+      "path": "src/memory_graph/pass_t/phase2b/model_visible.py",
+      "sha256": "c4707239d795167d2c054e1a23ef2c1e153ada3e34477e85939d4fa80c10889c",
+      "role": "Permitted model-visible payload contract",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "E38": {
+      "path": "src/memory_graph/pass_t/phase2b/config.py",
+      "sha256": "64fae16245300fb52e51a1b1523fbd863004312b813b0e394b828b71954acea6",
+      "role": "Existing model/generation config checks",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_5597d9b003977e053d70": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_5597d9b003977e053d70/source.json",
+      "sha256": "f8ed581d87390a04e3c11cf8254b8a7921ca6ced4115abe3669bc343687a4d19",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_ec4751640324779435e6": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_ec4751640324779435e6/source.json",
+      "sha256": "1e01bf71cc40e70aff6930708f32970482d491ee28b0efd05ddb0fac03f125f8",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_aef405003cc72cef0044": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_aef405003cc72cef0044/source.json",
+      "sha256": "34cbd08d0b9b3e005ddb829545a48849918c56cf1249be300e9041fbdc07ecd5",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_f1d4f821d33515975293": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_f1d4f821d33515975293/source.json",
+      "sha256": "2a11b86871e25fe785b48441aefedf08c303ea28d271e0c813622758ff6f47b1",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_b8a53fea6aa8b92dc94f": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_b8a53fea6aa8b92dc94f/source.json",
+      "sha256": "3ad2d21c87cd15c909544e37754bca65c34a35d49edcb2e41e670cc5844c6749",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    },
+    "INPUT-W_db55b29f820c2b3e3afb": {
+      "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_db55b29f820c2b3e3afb/source.json",
+      "sha256": "7f5f4f0326f15721028496357b7d60badbe8b01520af77f5b0b4cd9385f770c6",
+      "role": "Existing authorized frame-list metadata; no image opened",
+      "evidence_scope": "existing text/metadata/source only"
+    }
+  },
+  "prior_decisions": {
+    "1 collect-all replay": "Historical resolved; keep diagnostic non-gating. H16.",
+    "2 Validator hash unchanged": "Preserved in E23, not weakened. H03/H16.",
+    "3 known-state taxonomy": "Preserve schema/source; no new taxonomy. H03.",
+    "4 prompt candidate approved": "H01/H03: propose V1D, not old V1C. PENDING.",
+    "5 identity clause approved/rejected": "H06: do not add the optional clause. PENDING.",
+    "6 fixtures locked before prompt": "Historical completed; no new fixtures. Not a new pilot gate.",
+    "7 regression design approved": "Historical V1D completed; no new regression authorized. H01 accepts its limitation only if human approves.",
+    "8 regression executed/reviewed": "Execution completed 8 calls; REGRESSION_FAIL remains. H01 risk acceptance PENDING.",
+    "9 CPU preflight performed DEV/synthetic": "Historical metadata/CPU checks recorded; not new real V1D validation. M01.",
+    "10 native/model-time mapping for approved use": "H08 FRAME_MATCHED_ONLY, native PTS only for authoritative matching. PENDING.",
+    "11 runtime model-consumed alias policy/granularity": "H07 C3 retain aliases + report-only paired temporal-unit disclosure. PENDING; T01/T02.",
+    "12 approved representation budgets": "H09 unchanged 200704/min3136/storyboard geometry. PENDING.",
+    "13 point/interval/uncertain matching approved": "H14 closed-interval gap/no midpoint/unknown unresolved/one-to-one. PENDING; T04 current interior-point discrepancy.",
+    "14 timing sensitivity approved": "H14 all 0/.2/.5 equally, no selected headline tolerance. PENDING.",
+    "15 approved final model-visible prompt hashes": "H03 exact task/system/schema pinned; all18 real serialized hashes unavailable. T02/M01.",
+    "16 generation settings approved": "H10/H11 greedy42/1024/repeat1/timeouts; PENDING.",
+    "17 failure/retry approved": "H13/H16 no repair/no generation retry/transport0; PENDING.",
+    "18 proposed run order fixed": "New final-label order is explicit 18 rows; H19 PENDING, not falsely old order unchanged.",
+    "19 source cohort fixed": "E01 confirms same6; H15 PENDING exploratory permission/negative caveats.",
+    "20 frame/fixture/sourceasset hashes verified": "Historical hashes retained; source media not rehashed. M01. No new fixture.",
+    "21 explicit final protocol human approval": "H21 NOT_GRANTED; freeze/run separate."
+  },
+  "metadata_checks": [
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "f8ed581d87390a04e3c11cf8254b8a7921ca6ced4115abe3669bc343687a4d19",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "1e01bf71cc40e70aff6930708f32970482d491ee28b0efd05ddb0fac03f125f8",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "34cbd08d0b9b3e005ddb829545a48849918c56cf1249be300e9041fbdc07ecd5",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "2a11b86871e25fe785b48441aefedf08c303ea28d271e0c813622758ff6f47b1",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "3ad2d21c87cd15c909544e37754bca65c34a35d49edcb2e41e670cc5844c6749",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "uniform_rule_reproduced": true,
+      "MI_storyboard_same_selection": true,
+      "native_PTS_list_matches_source_metadata": true,
+      "all8_unique_increasing": true,
+      "reference_none": true,
+      "existing_source_image_bytes_reverified": false,
+      "source_metadata_sha256": "7f5f4f0326f15721028496357b7d60badbe8b01520af77f5b0b4cd9385f770c6",
+      "sampling_manifest_sha256": "dde3f7a1e8b6d541416f9c8d4318aad6bb846cd78c09f0b076cf3d91930b0c8f"
+    }
+  ],
+  "historical_blocker_statuses": {
+    "1 collect-all replay": "RESOLVED",
+    "10 native/model-time mapping for approved use": "UNRESOLVED",
+    "11 runtime model-consumed alias policy/granularity": "UNRESOLVED",
+    "12 approved representation budgets": "UNRESOLVED",
+    "13 point/interval/uncertain matching approved": "UNRESOLVED",
+    "14 timing sensitivity approved": "UNRESOLVED",
+    "15 approved final model-visible prompt hashes": "UNRESOLVED",
+    "16 generation settings approved": "UNRESOLVED",
+    "17 failure/retry approved": "UNRESOLVED",
+    "18 proposed run order fixed": "RESOLVED",
+    "19 source cohort fixed": "RESOLVED",
+    "2 Validator hash unchanged": "RESOLVED",
+    "20 frame/fixture/sourceasset hashes verified": "RESOLVED",
+    "21 explicit final protocol human approval": "UNRESOLVED",
+    "3 known-state taxonomy": "RESOLVED",
+    "4 prompt candidate approved": "UNRESOLVED",
+    "5 identity clause approved/rejected": "UNRESOLVED",
+    "6 fixtures locked before prompt": "RESOLVED",
+    "7 regression design approved": "UNRESOLVED",
+    "8 regression executed/reviewed": "UNRESOLVED",
+    "9 CPU preflight performed DEV/synthetic": "RESOLVED"
+  }
+}

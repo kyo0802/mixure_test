@@ -1,0 +1,156 @@
+{
+  "records": [
+    {
+      "annotation_item_id": "PT2A_c58b4df88a2f6801",
+      "source": "artifacts/pass_t/phase2a/v2/external_returns/datasets/ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c/external_dev_gt.json",
+      "scoring_permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "non_exhaustive": true,
+      "original_known_events": [
+        {
+          "after_state": null,
+          "annotation_item_id": "PT2A_c58b4df88a2f6801",
+          "before_state": null,
+          "chronology_uncertainty": false,
+          "confidence": "HIGH",
+          "event_id": "EVT001",
+          "event_time": {
+            "end_frame_id": "S000404",
+            "end_timestamp_s": 13.47,
+            "start_frame_id": "S000404",
+            "start_timestamp_s": 13.47,
+            "status": "EXACT_OBSERVED_TRANSITION"
+          },
+          "event_type": "PICKUP",
+          "evidence": [
+            {
+              "frame_id": "S000380",
+              "kind": "DIRECT_VISUAL_ONLY",
+              "role": "BEFORE",
+              "source_observation_ids": [],
+              "source_timestamp_s": 12.668333333333333,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機在桌上"
+            },
+            {
+              "frame_id": "S000404",
+              "kind": "DIRECT_VISUAL_ONLY",
+              "role": "TRANSITION",
+              "source_observation_ids": [],
+              "source_timestamp_s": 13.47,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機在手中"
+            },
+            {
+              "frame_id": "S000445",
+              "kind": "DIRECT_VISUAL_ONLY",
+              "role": "AFTER",
+              "source_observation_ids": [],
+              "source_timestamp_s": 14.838333333333333,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機消失"
+            }
+          ],
+          "human_rationale": "可確實看到手機被拿起",
+          "local_candidate_reference": "32",
+          "observed_actor_reference": "VISIBLE_PERSON_UNRESOLVED",
+          "provenance": {
+            "annotation_origin": "HUMAN",
+            "evidence_scope": "AUTHORIZED_WINDOW_ONLY"
+          },
+          "uncertainty": {
+            "description": "無",
+            "status": "NO_ADDITIONAL_UNCERTAINTY"
+          }
+        }
+      ],
+      "interpretation": "Existing scoped reference only; not an adjudication of Qwen claims."
+    },
+    {
+      "annotation_item_id": "PT2A_eb60192e6986cb4f",
+      "source": "artifacts/pass_t/phase2a/v2/external_returns/datasets/ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c/external_dev_gt.json",
+      "scoring_permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "non_exhaustive": true,
+      "original_known_events": [
+        {
+          "after_state": null,
+          "annotation_item_id": "PT2A_eb60192e6986cb4f",
+          "before_state": {
+            "description": "手機在桌上",
+            "evidence": [
+              {
+                "frame_id": "S000342",
+                "kind": "CANDIDATE_OBSERVATION_BACKED",
+                "role": "STATE",
+                "source_observation_ids": [
+                  "raw:579@342"
+                ],
+                "source_timestamp_s": 11.4,
+                "target_association": "SUPPORTED",
+                "visual_description": "手機在桌上"
+              }
+            ],
+            "frame_id": "S000342",
+            "source_timestamp_s": 11.4,
+            "state": "ON_SURFACE"
+          },
+          "chronology_uncertainty": false,
+          "confidence": "HIGH",
+          "event_id": "EVT001",
+          "event_time": {
+            "end_frame_id": "S000389",
+            "end_timestamp_s": 12.966666666666667,
+            "start_frame_id": "S000389",
+            "start_timestamp_s": 12.966666666666667,
+            "status": "EXACT_OBSERVED_TRANSITION"
+          },
+          "event_type": "PICKUP",
+          "evidence": [
+            {
+              "frame_id": "S000342",
+              "kind": "CANDIDATE_OBSERVATION_BACKED",
+              "role": "BEFORE",
+              "source_observation_ids": [
+                "raw:579@342"
+              ],
+              "source_timestamp_s": 11.4,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機在桌上"
+            },
+            {
+              "frame_id": "S000389",
+              "kind": "DIRECT_VISUAL_ONLY",
+              "role": "TRANSITION",
+              "source_observation_ids": [],
+              "source_timestamp_s": 12.966666666666667,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機在手中"
+            },
+            {
+              "frame_id": "S000449",
+              "kind": "DIRECT_VISUAL_ONLY",
+              "role": "AFTER",
+              "source_observation_ids": [],
+              "source_timestamp_s": 14.966666666666667,
+              "target_association": "SUPPORTED",
+              "visual_description": "手機消失"
+            }
+          ],
+          "human_rationale": "可明確看到手機被拿起",
+          "local_candidate_reference": "44",
+          "observed_actor_reference": "VISIBLE_PERSON_UNRESOLVED",
+          "provenance": {
+            "annotation_origin": "HUMAN",
+            "evidence_scope": "AUTHORIZED_WINDOW_ONLY"
+          },
+          "uncertainty": {
+            "description": "沒有不確定",
+            "status": "NO_ADDITIONAL_UNCERTAINTY"
+          }
+        }
+      ],
+      "interpretation": "Existing scoped reference only; not an adjudication of Qwen claims."
+    }
+  ],
+  "human_adjudication": "UNREVIEWED",
+  "source_sha256": "ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c"
+}

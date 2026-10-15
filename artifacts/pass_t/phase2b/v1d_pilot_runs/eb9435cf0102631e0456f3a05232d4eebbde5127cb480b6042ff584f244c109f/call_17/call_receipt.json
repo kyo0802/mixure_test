@@ -1,0 +1,223 @@
+{
+  "call": {
+    "item_id": "PT2A_fe0910d66f4c5614",
+    "opaque_id": "W_aef405003cc72cef0044",
+    "order_key_sha256": "c4d7654bab1f9b5f424c4fa21aa39e1c4ccf5cecc4941cad15c51f9f88bdf908",
+    "proposed_call_index": 17,
+    "repeat": 1,
+    "representation": "MULTI_IMAGE"
+  },
+  "classification": {
+    "authoritative_prediction": {
+      "end_visibility": "NOT_VISIBLE",
+      "events": [],
+      "last_directly_supported_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0072"
+      },
+      "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+      "safety_assertions": {
+        "container_or_handover_auto_classified": false,
+        "global_identity_claimed": false,
+        "state_persisted_across_unobserved_interval": false
+      },
+      "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+      "subsequent_state": "UNKNOWN",
+      "target_id": "TARGET_A",
+      "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+      "window_cited_frame_aliases": [
+        "F0001",
+        "F0011",
+        "F0021",
+        "F0031",
+        "F0042",
+        "F0052",
+        "F0062",
+        "F0072"
+      ],
+      "window_outcome": "NO_CONFIRMED_EVENT"
+    },
+    "classification": "VALID_NO_CONFIRMED_EVENT",
+    "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+    "prediction": {
+      "end_visibility": "NOT_VISIBLE",
+      "events": [],
+      "last_directly_supported_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0072"
+      },
+      "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+      "safety_assertions": {
+        "container_or_handover_auto_classified": false,
+        "global_identity_claimed": false,
+        "state_persisted_across_unobserved_interval": false
+      },
+      "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+      "subsequent_state": "UNKNOWN",
+      "target_id": "TARGET_A",
+      "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+      "window_cited_frame_aliases": [
+        "F0001",
+        "F0011",
+        "F0021",
+        "F0031",
+        "F0042",
+        "F0052",
+        "F0062",
+        "F0072"
+      ],
+      "window_outcome": "NO_CONFIRMED_EVENT"
+    },
+    "qualitative_review": {
+      "authoritative_structured_prediction": false,
+      "status": "UNREVIEWED"
+    },
+    "raw_bytes": 836,
+    "raw_sha256": "3488252db0308d077887592c2a911ad435ba676c11ad2ddb9f5b68a69f00bec7",
+    "stages": {
+      "CITATION": "PASS",
+      "FULL_STRICT": "PASS",
+      "JSON_SYNTAX": "PASS",
+      "SCHEMA": "PASS",
+      "SEMANTIC": "PASS"
+    },
+    "validation": {
+      "citation_errors": [],
+      "semantic_errors": [],
+      "structural_errors": [],
+      "valid": true
+    }
+  },
+  "components_sha256": {
+    "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/prompt_candidate/v2_system_unchanged.txt": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json": "1a3ca15c7cd73641d32b0ec8231ada36d257f73609426c28093c32c390b1e384",
+    "scripts/run_pass_t_v1d_pilot.py": "2edcb6beb927e3b6756c0cdaedd360bf46031cca4f385076a7146e691fe8dc35",
+    "src/memory_graph/pass_t/phase2b/common.py": "4728823548401589a1a9ba061b09fb410e213156bf4f8f4d4714c8d2d772d79b",
+    "src/memory_graph/pass_t/phase2b/contracts/model_visible_payload_v1.json": "996fbd54f855c2ddcd42f77493f24b45e07bcab564cd215111858d6a51c5edda",
+    "src/memory_graph/pass_t/phase2b/contracts/prediction_v1.json": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+    "src/memory_graph/pass_t/phase2b/evaluation.py": "975c8706f11d0c8f05184cc2025bdd3f04ce2439eceb0a5970f0f91b227d33bb",
+    "src/memory_graph/pass_t/phase2b/local_vlm/catalog.py": "99bf3e241769781c0cc6ea24934d5698078db0aa0c41df3d4613095517477742",
+    "src/memory_graph/pass_t/phase2b/local_vlm/nf4.py": "fc15d9012a3a992e4dcb9e66a3b458b242c319b1efe5f4d30dae19b81364547b",
+    "src/memory_graph/pass_t/phase2b/local_vlm/qwen_contract.py": "6e52a2be7847ccb6c8e5f04bb7a229ded18d74908268967370169a5d42e1f397",
+    "src/memory_graph/pass_t/phase2b/local_vlm/runtime.py": "a498ec799647ec70c93a1d4d99aff74f65a11a701ace34f6570cf23c5851407d",
+    "src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py": "75ba3f8fc63b13b869eb684ba3c7dc1ab9061c68efc2bee19dc5ab4f72802cef",
+    "src/memory_graph/pass_t/phase2b/model_visible.py": "c4707239d795167d2c054e1a23ef2c1e153ada3e34477e85939d4fa80c10889c",
+    "src/memory_graph/pass_t/phase2b/predictions.py": "c4b077374d50fc478c29d0009180d488c60a463fa8bffa183a179c5f736f1d37",
+    "src/memory_graph/pass_t/phase2b/v1d_execution.py": "958f5d3d44803716290d218182fe02a8e1ff0070614c0e751b9d8b544e063ccf",
+    "src/memory_graph/pass_t/phase2b/v1d_outputs.py": "e746203c7f92cbcb4aa9e2af6a302325cdc8c8293bfc83a93b5317d73a2cb1f3",
+    "src/memory_graph/pass_t/phase2b/v1d_protocol.py": "ae41eb4debc944247f8339f45e0922a2228a5f55ce8331ddea962c76f3cff8e1"
+  },
+  "execution_authorization_sha256": "eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "execution_kind": "REAL_AUTHORIZED",
+  "generation_sha256": "60b187c02ed6833b821367da57ca6e451326eede684aa44bf74ac5aecf43a917",
+  "memory_graph_written": false,
+  "payload_sha256": "b32ad41cc5253308eb3d338024081d700eca6d0b88719dab327e4682e4e7942b",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "provenance": {
+    "authorized_frame_list_sha256": "4881065f4a3d8fa5a22b653c78d8ca24649f2b657d44bc23873c0a84cdef8c45",
+    "frame_alias_mapping": [
+      {
+        "native_source_pts_s": 5.4,
+        "recorded_source_png_sha256": "dc823f38acca0b7bec50d76c58a510b385664e069802a5b459b3137c40ebb866",
+        "source_frame_id": "S000162",
+        "source_frame_index": 162,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000162.png",
+        "supplied_alias": "F0001",
+        "verified_source_file_sha256": "dc823f38acca0b7bec50d76c58a510b385664e069802a5b459b3137c40ebb866"
+      },
+      {
+        "native_source_pts_s": 5.733333333333333,
+        "recorded_source_png_sha256": "ff3dcaadb589f3ae0f4fbe46584d2f9c9fdb7898b0ae38bd11a3228e9687c606",
+        "source_frame_id": "S000172",
+        "source_frame_index": 172,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000172.png",
+        "supplied_alias": "F0011",
+        "verified_source_file_sha256": "ff3dcaadb589f3ae0f4fbe46584d2f9c9fdb7898b0ae38bd11a3228e9687c606"
+      },
+      {
+        "native_source_pts_s": 6.066666666666666,
+        "recorded_source_png_sha256": "373eba8e1f2c7e85a443da2bfafee0616e6f38ba1eda9d0bfaeb3bdae388acf9",
+        "source_frame_id": "S000182",
+        "source_frame_index": 182,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000182.png",
+        "supplied_alias": "F0021",
+        "verified_source_file_sha256": "373eba8e1f2c7e85a443da2bfafee0616e6f38ba1eda9d0bfaeb3bdae388acf9"
+      },
+      {
+        "native_source_pts_s": 6.4,
+        "recorded_source_png_sha256": "585f0eb808d2533518d3f84b6e42009ea69da98476207baf5b63736b8754bc64",
+        "source_frame_id": "S000192",
+        "source_frame_index": 192,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000192.png",
+        "supplied_alias": "F0031",
+        "verified_source_file_sha256": "585f0eb808d2533518d3f84b6e42009ea69da98476207baf5b63736b8754bc64"
+      },
+      {
+        "native_source_pts_s": 6.766666666666667,
+        "recorded_source_png_sha256": "8046ec3e296eceb642e9813666900059c9c0f337055c27efb140798c81abe73b",
+        "source_frame_id": "S000203",
+        "source_frame_index": 203,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000203.png",
+        "supplied_alias": "F0042",
+        "verified_source_file_sha256": "8046ec3e296eceb642e9813666900059c9c0f337055c27efb140798c81abe73b"
+      },
+      {
+        "native_source_pts_s": 7.1,
+        "recorded_source_png_sha256": "173fa0288e6b5ccb434a3f95e48085536d4b031eba979ea8d9baab9e5946778b",
+        "source_frame_id": "S000213",
+        "source_frame_index": 213,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000213.png",
+        "supplied_alias": "F0052",
+        "verified_source_file_sha256": "173fa0288e6b5ccb434a3f95e48085536d4b031eba979ea8d9baab9e5946778b"
+      },
+      {
+        "native_source_pts_s": 7.433333333333334,
+        "recorded_source_png_sha256": "9407cc5926117fd00844f8d343335cf476617e6602c66b4bbd6858cde979edd8",
+        "source_frame_id": "S000223",
+        "source_frame_index": 223,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000223.png",
+        "supplied_alias": "F0062",
+        "verified_source_file_sha256": "9407cc5926117fd00844f8d343335cf476617e6602c66b4bbd6858cde979edd8"
+      },
+      {
+        "native_source_pts_s": 7.766666666666667,
+        "recorded_source_png_sha256": "78d97a28db80f06ea186d6dbf5ddb2163a277f720afed0daf8af80233310d566",
+        "source_frame_id": "S000233",
+        "source_frame_index": 233,
+        "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000233.png",
+        "supplied_alias": "F0072",
+        "verified_source_file_sha256": "78d97a28db80f06ea186d6dbf5ddb2163a277f720afed0daf8af80233310d566"
+      }
+    ],
+    "media_integrity": "VERIFIED_APPROVED_INPUT_BYTES",
+    "native_PTS_provenance": "APPROVED_HASH_PINNED_SOURCE_METADATA",
+    "reference": "NONE",
+    "sampling": "GT_INDEPENDENT_UNIFORM_8",
+    "source_metadata_sha256": "34cbd08d0b9b3e005ddb829545a48849918c56cf1249be300e9041fbdc07ecd5",
+    "source_video_bytes_reverified": false,
+    "temporal_limitation": "EIGHT_SOURCE_FRAMES_NOT_EQUAL_VISUAL_TOKEN_BUDGET",
+    "window_boundaries": {
+      "authorized_visual_manifest_sha256": "b6864f76e7ba175078c121a20fcdca47d98f7a048d766d9556bef20490db8f63",
+      "half_open_frames": [
+        162,
+        234
+      ],
+      "half_open_pts": [
+        5.4,
+        7.8
+      ],
+      "source_video_sha256": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f"
+    }
+  },
+  "qualitative_review": {
+    "authoritative_prediction": false,
+    "scope": "DESCRIPTIVE_ONLY",
+    "status": "UNREVIEWED"
+  },
+  "raw_sha256": "3488252db0308d077887592c2a911ad435ba676c11ad2ddb9f5b68a69f00bec7",
+  "runtime_receipt_error": null,
+  "runtime_receipt_sha256": "cdbd05fb763e801bdaa2a52938ae75108c5fa960bf458eaa23fa20ab684a5c8b",
+  "schema_version": "PASS_T_QWEN_NF4_V1D_PILOT_V1_CALL_RECEIPT",
+  "structured_matching": "PENDING_APPROVED_GT_EVALUATION"
+}

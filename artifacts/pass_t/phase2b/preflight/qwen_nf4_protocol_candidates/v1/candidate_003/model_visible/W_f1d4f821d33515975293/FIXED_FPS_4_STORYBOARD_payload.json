@@ -1,0 +1,48 @@
+{
+  "schema_version": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1",
+  "request_id": "REQ_f1d4f821d33515975293",
+  "target": {
+    "opaque_id": "TARGET_A",
+    "description": "the authorized target object"
+  },
+  "ontology": {
+    "event_types": [
+      "PICKUP",
+      "PLACEMENT"
+    ],
+    "window_outcomes": [
+      "CONFIRMED_EVENTS",
+      "NO_CONFIRMED_EVENT",
+      "INSUFFICIENT_EVIDENCE",
+      "TARGET_NOT_OBSERVABLE"
+    ]
+  },
+  "representation": "STORYBOARD",
+  "media": [
+    {
+      "media_id": "MEDIA_001",
+      "media_type": "image/png",
+      "content_sha256": "aa20ef76edd2b2a7416d64a6f6125f04d10b1189b64c45590be3368a2028bb0e",
+      "supplied_frame_aliases": [
+        "F0001",
+        "F0009",
+        "F0016",
+        "F0024",
+        "F0031",
+        "F0039",
+        "F0046",
+        "F0054",
+        "F0061",
+        "F0069",
+        "F0076",
+        "F0084",
+        "F0091",
+        "F0099",
+        "F0106",
+        "F0108"
+      ]
+    }
+  ],
+  "instructions": "You are evaluating a bounded visual window for physical transitions involving TARGET_A.\n\nUse only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.\n\nSupported events:\n- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.\n- PLACEMENT: directly supported transition from held to resting/supported at an observable location.\n\nChoose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.\n\nReturn only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.\n\nNative PTS map: F0001=11.400000000s, F0009=11.666666667s, F0016=11.900000000s, F0024=12.166666667s, F0031=12.400000000s, F0039=12.666666667s, F0046=12.900000000s, F0054=13.166666667s, F0061=13.400000000s, F0069=13.666666667s, F0076=13.900000000s, F0084=14.166666667s, F0091=14.400000000s, F0099=14.666666667s, F0106=14.900000000s, F0108=14.966666667s.",
+  "output_contract": "PASS_T_PHASE2B_PREDICTION_V1"
+}

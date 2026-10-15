@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "request_id", "target", "ontology", "representation", "media", "instructions", "output_contract"],
+  "properties": {
+    "schema_version": {"const": "PASS_T_PHASE2B_MODEL_PAYLOAD_V1"},
+    "request_id": {"type": "string", "pattern": "^REQ_[0-9a-f]{20}$"},
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["opaque_id", "description"],
+      "properties": {"opaque_id": {"const": "TARGET_A"}, "description": {"type": "string", "minLength": 1}}
+    },
+    "ontology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_types", "window_outcomes"],
+      "properties": {
+        "event_types": {"const": ["PICKUP", "PLACEMENT"]},
+        "window_outcomes": {"const": ["CONFIRMED_EVENTS", "NO_CONFIRMED_EVENT", "INSUFFICIENT_EVIDENCE", "TARGET_NOT_OBSERVABLE"]}
+      }
+    },
+    "representation": {"enum": ["REENCODED_AUTHORIZED_VIDEO", "MULTI_IMAGE", "STORYBOARD"]},
+    "media": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["media_id", "media_type", "content_sha256", "supplied_frame_aliases"],
+        "properties": {
+          "media_id": {"type": "string", "pattern": "^(MEDIA_[0-9]{3}|REFERENCE_[0-9]{2})$"},
+          "media_type": {"enum": ["image/png", "video/x-msvideo"]},
+          "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "supplied_frame_aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^F[0-9]{4}$"}}
+        }
+      }
+    },
+    "instructions": {"type": "string", "minLength": 1},
+    "output_contract": {"const": "PASS_T_PHASE2B_PREDICTION_V1"}
+  }
+}

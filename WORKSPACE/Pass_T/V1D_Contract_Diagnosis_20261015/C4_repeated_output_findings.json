@@ -1,0 +1,100 @@
+{
+  "repeated_natural_language_values": [
+    {
+      "text": "The hand is visibly holding the phone.",
+      "occurrences": [
+        {
+          "attempt_id": "R04_C03",
+          "path": "/events/0/rationale"
+        },
+        {
+          "attempt_id": "R04_C03",
+          "path": "/rationale"
+        },
+        {
+          "attempt_id": "R07_C02",
+          "path": "/events/0/rationale"
+        },
+        {
+          "attempt_id": "R07_C02",
+          "path": "/rationale"
+        }
+      ],
+      "distinct_attempts": 2,
+      "evidence_claim_ids": [
+        "C4-REPEATED-0-R04_C03/events/0/rationale",
+        "C4-REPEATED-1-R04_C03/rationale",
+        "C4-REPEATED-2-R07_C02/events/0/rationale",
+        "C4-REPEATED-3-R07_C02/rationale"
+      ],
+      "in_any_captured_prompt": false
+    },
+    {
+      "text": "The phone is visibly picked up from the surface.",
+      "occurrences": [
+        {
+          "attempt_id": "R05_C04",
+          "path": "/events/0/rationale"
+        },
+        {
+          "attempt_id": "R08_C05",
+          "path": "/events/0/rationale"
+        }
+      ],
+      "distinct_attempts": 2,
+      "evidence_claim_ids": [
+        "C4-REPEATED-0-R05_C04/events/0/rationale",
+        "C4-REPEATED-1-R08_C05/events/0/rationale"
+      ],
+      "in_any_captured_prompt": false
+    },
+    {
+      "text": "The phone is visibly placed back on the surface.",
+      "occurrences": [
+        {
+          "attempt_id": "R05_C04",
+          "path": "/events/1/rationale"
+        },
+        {
+          "attempt_id": "R08_C05",
+          "path": "/events/1/rationale"
+        }
+      ],
+      "distinct_attempts": 2,
+      "evidence_claim_ids": [
+        "C4-REPEATED-0-R05_C04/events/1/rationale",
+        "C4-REPEATED-1-R08_C05/events/1/rationale"
+      ],
+      "in_any_captured_prompt": false
+    },
+    {
+      "text": "The phone is picked up and then placed back down.",
+      "occurrences": [
+        {
+          "attempt_id": "R05_C04",
+          "path": "/rationale"
+        },
+        {
+          "attempt_id": "R08_C05",
+          "path": "/rationale"
+        }
+      ],
+      "distinct_attempts": 2,
+      "evidence_claim_ids": [
+        "C4-REPEATED-0-R05_C04/rationale",
+        "C4-REPEATED-1-R08_C05/rationale"
+      ],
+      "in_any_captured_prompt": false
+    }
+  ],
+  "complete_output_repeat": {
+    "attempt_ids": [
+      "R05_C04",
+      "R08_C05"
+    ],
+    "raw_bytes_identical": true,
+    "JSON_values_identical": true,
+    "distinct_private_intention": "zero versus one; designer intention is not physical GT",
+    "interpretation": "Repeated complete output is observable output stereotypy, not evidence of copying an absent transmitted empty template or experimental proof of its cause."
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEST7_W05 representation comparison</title><link rel="stylesheet" href="review.css"></head><body><nav><a href="PHYSICAL_EVIDENCE_REVIEW_INDEX.html" target="_blank">審閱首頁</a> <a href="TEST5_W05_REPRESENTATION_COMPARISON.html" target="_blank">test5 比較</a> <a href="TEST7_W05_REPRESENTATION_COMPARISON.html" target="_blank">test7 比較</a></nav><h1>TEST7_W05 representation comparison</h1><p>同一 window 的 exact eight sampled source frames；圖的標記屬於原始模型 claims，不是人類 event adjudication。</p><table><thead><tr><th>call</th><th>表示</th><th>outcome</th><th>原始 rationale</th><th>timing</th><th>contract status</th></tr></thead><tbody><tr><td>Call 2 comparator（不是第六個事件）</td><td>MULTI_IMAGE</td><td>NO_CONFIRMED_EVENT</td><td>NO_CONFIRMED_EVENT</td><td>—</td><td>STRICT_VALID_NO_CONFIRMED_EVENT_COMPARATOR</td></tr><tr><td><a href="EVENT_REVIEW_CARDS/call_04.html" target="_blank">Call 4</a></td><td>STORYBOARD</td><td>CONFIRMED_EVENTS</td><td>The ball is picked up from the surface in frame F0001.</td><td>{
+  &quot;frame_alias&quot;: &quot;F0001&quot;,
+  &quot;status&quot;: &quot;EXACT_SUPPLIED_FRAME&quot;
+}</td><td>STRICT_INVALID_DESCRIPTIVE_ONLY</td></tr><tr><td><a href="EVENT_REVIEW_CARDS/call_08.html" target="_blank">Call 8</a></td><td>NATIVE_VIDEO_ARRAY</td><td>CONFIRMED_EVENTS</td><td>The object is picked up from the table.</td><td>{
+  &quot;frame_alias&quot;: &quot;F0001&quot;,
+  &quot;status&quot;: &quot;EXACT_SUPPLIED_FRAME&quot;
+}</td><td>STRICT_INVALID_DESCRIPTIVE_ONLY</td></tr></tbody></table><div class="warning">名詞差異不能單獨證明 WRONG_TARGET；strict-invalid 不能轉成 valid event。Call 2 的 valid NO_CONFIRMED_EVENT 也不自動是 false negative。</div><h2>Call 2 · MULTI_IMAGE</h2><img class="sheet" alt="call 2 exact eight frames" src="CONTACT_SHEETS/call_02_eight_frames.png"><h3>Call 2 原始完整輸出</h3><pre>{
+  &quot;schema_version&quot;: &quot;PASS_T_PHASE2B_PREDICTION_V1&quot;,
+  &quot;target_id&quot;: &quot;TARGET_A&quot;,
+  &quot;window_outcome&quot;: &quot;NO_CONFIRMED_EVENT&quot;,
+  &quot;window_cited_frame_aliases&quot;: [
+    &quot;F0001&quot;,
+    &quot;F0016&quot;,
+    &quot;F0031&quot;,
+    &quot;F0046&quot;,
+    &quot;F0062&quot;,
+    &quot;F0077&quot;,
+    &quot;F0092&quot;,
+    &quot;F0107&quot;
+  ],
+  &quot;events&quot;: [],
+  &quot;last_directly_supported_state&quot;: {
+    &quot;state&quot;: &quot;ON_SURFACE&quot;,
+    &quot;supporting_frame_alias&quot;: &quot;F0001&quot;
+  },
+  &quot;end_visibility&quot;: &quot;NOT_VISIBLE&quot;,
+  &quot;subsequent_state&quot;: &quot;UNKNOWN&quot;,
+  &quot;rationale&quot;: &quot;The ball is not visible in any of the provided frames.&quot;,
+  &quot;uncertainty&quot;: &quot;The ball&#x27;s disappearance is not observed.&quot;,
+  &quot;safety_assertions&quot;: {
+    &quot;global_identity_claimed&quot;: false,
+    &quot;state_persisted_across_unobserved_interval&quot;: false,
+    &quot;container_or_handover_auto_classified&quot;: false
+  }
+}</pre><p><a href="../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_02/raw_output.txt" target="_blank">原始 raw</a> | <a href="../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_02/runtime_receipt.json" target="_blank">runtime receipt</a> | <a href="../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_02/call_receipt.json" target="_blank">call receipt</a></p><h2>Call 4 · STORYBOARD</h2><img class="sheet" alt="call 4 exact eight frames" src="CONTACT_SHEETS/call_04_eight_frames.png"><h2>Call 8 · NATIVE_VIDEO_ARRAY</h2><img class="sheet" alt="call 8 exact eight frames" src="CONTACT_SHEETS/call_08_eight_frames.png"></body></html>

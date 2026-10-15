@@ -1,0 +1,84 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "review_labels_are_not_GT": true,
+  "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170",
+  "records": [
+    {
+      "call_id": 4,
+      "window": "test7 W05",
+      "representation": "STORYBOARD",
+      "reviewer_id": "reviewer_0",
+      "disposition": "WRONG_TARGET",
+      "supporting_frame_aliases": [
+        "F0001",
+        "F0031",
+        "F0046",
+        "F0062"
+      ],
+      "rationale": "The sampled frames show a smartphone being picked up from the table, while the basketball remains on the surface. The model incorrectly attributes the pickup event to the basketball and assigns it to F0001, where no such transition is observed. The prediction is therefore classified as WRONG_TARGET, with unsupported target-state and temporal claims.",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": "IDENTIFIABLE_AND_CONSISTENT",
+          "frame_aliases": [
+            "F0001",
+            "F0031",
+            "F0046",
+            "F0062"
+          ],
+          "notes": "The model identifies the target as a ball, but the object visibly picked up is a smartphone. The basketball remains on the table during the observed phone manipulation. The model appears to have associated the pickup action with the wrong object."
+        },
+        "Q2_BEFORE": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "notes": "The basketball is visibly resting on the table in F0001 and F0016. This supports the ON_SURFACE state of the model's claimed target before the alleged pickup. However, it does not establish that the basketball was subsequently picked up."
+        },
+        "Q3_AFTER": {
+          "answer": "NOT_OBSERVED",
+          "frame_aliases": [
+            "F0031",
+            "F0046",
+            "F0062"
+          ],
+          "notes": "The basketball is not observed being held by a person. Instead, F0031 and F0046 show a smartphone being held, while the basketball remains on the table. The claimed HELD_BY_PERSON state for the basketball is unsupported."
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": "ALTERNATIVE_EXPLANATION",
+          "frame_aliases": [
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062"
+          ],
+          "notes": "The visible manipulation involves a smartphone being lifted from the table, not the basketball. The basketball remains on the surface while the phone is held. The model's ball PICKUP claim is better explained as incorrect association of the visible phone pickup with the basketball."
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": "CITATION_UNSUPPORTED",
+          "frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046"
+          ],
+          "notes": "The model assigns the basketball pickup to F0001, but the basketball is still resting on the table at that frame and remains visible on the surface in subsequent frames. No basketball pickup is observed at the cited time. The phone pickup occurs later in the sampled sequence."
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": "CONTRADICTION_IDENTIFIED",
+          "frame_aliases": [
+            "F0001",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The model claims that the basketball is picked up and held by a person, but the observed hand-held object is a smartphone. The basketball remains on the table in the earlier frames. The camera subsequently moves away, so the basketball leaving the field of view must not be interpreted as evidence of pickup. The target identity, claimed after-state, and event timing are inconsistent with the observed evidence."
+        }
+      },
+      "reviewed_at_utc": "2026-10-15T10:16:42.409Z",
+      "raw_output_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce"
+    }
+  ]
+}

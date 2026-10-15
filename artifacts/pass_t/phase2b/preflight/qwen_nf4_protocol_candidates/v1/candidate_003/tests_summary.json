@@ -1,0 +1,47 @@
+{
+  "executions": [
+    {
+      "file": "new_final_42_junit.xml",
+      "attempt": "FINAL",
+      "tests": 42,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "new_final_junit.xml",
+      "attempt": "FINAL",
+      "tests": 40,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "new_junit.xml",
+      "attempt": "INITIAL_RETAINED",
+      "tests": 40,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "regression_final_junit.xml",
+      "attempt": "FINAL",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "file": "regression_junit.xml",
+      "attempt": "INITIAL_RETAINED",
+      "tests": 16,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "regression_deselected": 23,
+  "reasons": "Avoid protocol freezing, inference/backend execution and GT/model scoring; only authority/eligibility/input/contracts/store/preservation selected.",
+  "initial_failures": "New fixture omitted mandatory source_frame_index; corrected fixture. Existing regression exceeded Windows260 path; same assertions passed with extended path. No core modification or assertion weakening."
+}

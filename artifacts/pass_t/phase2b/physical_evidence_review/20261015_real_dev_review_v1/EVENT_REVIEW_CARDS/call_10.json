@@ -1,0 +1,633 @@
+{
+  "call_id": 10,
+  "window": "test5 W05",
+  "item_id": "PT2A_eb60192e6986cb4f",
+  "representation": "MULTI_IMAGE",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "run_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "authorization_sha256": "eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "raw_output_source": {
+    "path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_10/raw_output.txt",
+    "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase2b\\v1d_pilot_runs\\eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f\\call_10\\raw_output.txt",
+    "recorded_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485",
+    "observed_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485",
+    "status": "VERIFIED",
+    "role": "unchanged_raw_output"
+  },
+  "call_receipt_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_10/call_receipt.json",
+  "runtime_receipt_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_10/runtime_receipt.json",
+  "original_fields": {
+    "window_outcome": "CONFIRMED_EVENTS",
+    "event": {
+      "after_state": {
+        "state": "HELD_BY_PERSON",
+        "supporting_frame_alias": "F0077"
+      },
+      "before_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0077"
+      },
+      "cited_frame_aliases": [
+        "F0077"
+      ],
+      "event_id": "PRED_EVT_0001",
+      "event_type": "PICKUP",
+      "rationale": "The phone is lifted from the table.",
+      "target_association_uncertainty": "NONE",
+      "timing": {
+        "frame_alias": "F0077",
+        "status": "EXACT_SUPPLIED_FRAME"
+      },
+      "timing_uncertainty": ""
+    },
+    "window_uncertainty": "",
+    "window_rationale": "The phone is lifted from the table.",
+    "window_cited_frame_aliases": [
+      "F0077"
+    ],
+    "last_directly_supported_state": {
+      "state": "HELD_BY_PERSON",
+      "supporting_frame_alias": "F0077"
+    }
+  },
+  "original_validation": {
+    "citation_errors": [],
+    "semantic_errors": [],
+    "structural_errors": [
+      "/events/0/event_id:'PRED_EVT_0001' does not match '^PRED_EVT_[0-9]{3}$'",
+      "/events/0/timing_uncertainty:'' should be non-empty",
+      "/uncertainty:'' should be non-empty"
+    ],
+    "valid": false
+  },
+  "original_stages": {
+    "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+    "FULL_STRICT": "FAIL",
+    "JSON_SYNTAX": "PASS",
+    "SCHEMA": "FAIL",
+    "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+  },
+  "classification": "STRICT_INVALID_DESCRIPTIVE_ONLY",
+  "referenced_aliases": [
+    "F0077"
+  ],
+  "unresolved_aliases": [],
+  "sampled_sequence": [
+    {
+      "native_source_pts_s": 11.4,
+      "recorded_source_png_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+      "source_frame_id": "S000342",
+      "source_frame_index": 342,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000342.png",
+      "supplied_alias": "F0001",
+      "verified_source_file_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+      "sample_order_1based": 1,
+      "authorized_window_index_0based": 0,
+      "alias_number_in_window_1based": 1,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000342.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000342.png",
+        "recorded_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+        "observed_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 11.9,
+      "recorded_source_png_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+      "source_frame_id": "S000357",
+      "source_frame_index": 357,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000357.png",
+      "supplied_alias": "F0016",
+      "verified_source_file_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+      "sample_order_1based": 2,
+      "authorized_window_index_0based": 15,
+      "alias_number_in_window_1based": 16,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000357.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000357.png",
+        "recorded_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+        "observed_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 12.433333333333334,
+      "recorded_source_png_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+      "source_frame_id": "S000373",
+      "source_frame_index": 373,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000373.png",
+      "supplied_alias": "F0032",
+      "verified_source_file_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+      "sample_order_1based": 3,
+      "authorized_window_index_0based": 31,
+      "alias_number_in_window_1based": 32,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000373.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000373.png",
+        "recorded_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+        "observed_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 12.933333333333334,
+      "recorded_source_png_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+      "source_frame_id": "S000388",
+      "source_frame_index": 388,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png",
+      "supplied_alias": "F0047",
+      "verified_source_file_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+      "sample_order_1based": 4,
+      "authorized_window_index_0based": 46,
+      "alias_number_in_window_1based": 47,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000388.png",
+        "recorded_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+        "observed_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 13.433333333333334,
+      "recorded_source_png_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+      "source_frame_id": "S000403",
+      "source_frame_index": 403,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000403.png",
+      "supplied_alias": "F0062",
+      "verified_source_file_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+      "sample_order_1based": 5,
+      "authorized_window_index_0based": 61,
+      "alias_number_in_window_1based": 62,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000403.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000403.png",
+        "recorded_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+        "observed_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 13.933333333333334,
+      "recorded_source_png_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+      "source_frame_id": "S000418",
+      "source_frame_index": 418,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000418.png",
+      "supplied_alias": "F0077",
+      "verified_source_file_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+      "sample_order_1based": 6,
+      "authorized_window_index_0based": 76,
+      "alias_number_in_window_1based": 77,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000418.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000418.png",
+        "recorded_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+        "observed_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [
+        "EVENT CITE",
+        "WINDOW CITE",
+        "TIMING CLAIM",
+        "BEFORE CLAIM",
+        "AFTER CLAIM"
+      ],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 14.466666666666667,
+      "recorded_source_png_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+      "source_frame_id": "S000434",
+      "source_frame_index": 434,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png",
+      "supplied_alias": "F0093",
+      "verified_source_file_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+      "sample_order_1based": 7,
+      "authorized_window_index_0based": 92,
+      "alias_number_in_window_1based": 93,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000434.png",
+        "recorded_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+        "observed_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 14.966666666666667,
+      "recorded_source_png_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+      "source_frame_id": "S000449",
+      "source_frame_index": 449,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png",
+      "supplied_alias": "F0108",
+      "verified_source_file_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+      "sample_order_1based": 8,
+      "authorized_window_index_0based": 107,
+      "alias_number_in_window_1based": 108,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test5__W05\\frames\\S000449.png",
+        "recorded_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+        "observed_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    }
+  ],
+  "source_order_verified": true,
+  "storyboard_source": {
+    "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_f1d4f821d33515975293/UNIFORM_8_STORYBOARD.png",
+    "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase2b\\preflight\\qwen_nf4_protocol_candidates\\v1\\candidate_003\\model_visible\\W_f1d4f821d33515975293\\UNIFORM_8_STORYBOARD.png",
+    "recorded_sha256": "d0c9db9bb6f445951f716fc51f266b741af8da0ef77759af3342cc7e22fe5c85",
+    "observed_sha256": "d0c9db9bb6f445951f716fc51f266b741af8da0ef77759af3342cc7e22fe5c85",
+    "status": "VERIFIED",
+    "role": "original_storyboard"
+  },
+  "processor_metadata": {
+    "input_image_dimensions": [
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "resized_dimensions_hw": {
+      "image_grid_thw": [
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ]
+      ]
+    },
+    "grids": {
+      "image_grid_thw": [
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ]
+      ]
+    },
+    "processor_frame_count": 8,
+    "rendered_prompt_sha256": "d56c4d700451b9028cc90b73e9b2de2f1c00cec7e64f9b9a11c06c693f2bcf83",
+    "tensor_records": {
+      "attention_mask": {
+        "canonical_sha256": "5db87889addef6d2a1e91b04ad52476875eca83d3803ae06f338669d40ff9dcf",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 3973,
+        "raw_le_c_sha256": "7ca6e128e3cc338943b3f3ca89fe9cf00ac34acedc7eecd12e09cc3c578cb3de",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          1,
+          3973
+        ],
+        "strides": [
+          3973,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "image_grid_thw": {
+        "canonical_sha256": "59a3a13973ede718afec4964aa26ca6723e87a53aa3f55ba7dd01bd3b6504712",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 24,
+        "raw_le_c_sha256": "4454859fa2a5db1e4108fd0008014f976b123e1c3ce23359eefdc7bdbfa539d3",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          8,
+          3
+        ],
+        "strides": [
+          3,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "input_ids": {
+        "canonical_sha256": "c3308cc93c84e1de87a2ce160db21c00497296b7c93d2a42cda86466989aea90",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 3973,
+        "raw_le_c_sha256": "c9bc77612bd36cdab147505cff3e3d7c09a1205a4f6d34b28d729cd59e2c50a7",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          1,
+          3973
+        ],
+        "strides": [
+          3973,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "canonical_sha256": "565d278ab121073e977a249b6af0bd4844dc13b08495a121baabe646217ec15b",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<f4",
+        "layout": "torch.strided",
+        "numel": 9483264,
+        "raw_le_c_sha256": "b5953d69c0106ffb4795955cd9dd878a44639d00711a78275c0e24e144f05d38",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          8064,
+          1176
+        ],
+        "strides": [
+          1176,
+          1
+        ],
+        "torch_dtype": "torch.float32"
+      }
+    }
+  },
+  "human_adjudication": "UNREVIEWED"
+}

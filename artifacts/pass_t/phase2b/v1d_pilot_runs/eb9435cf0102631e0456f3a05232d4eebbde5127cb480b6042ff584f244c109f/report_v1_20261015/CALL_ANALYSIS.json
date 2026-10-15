@@ -1,0 +1,3029 @@
+{
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "authorization_sha256": "eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "private_source_hashes": {
+    "artifacts\\pass_t\\phase2b\\readiness\\eligibility.json": "c231967ccc7007749e80f570d0abb33c65ee964a036f5da51fb2f60cbbd5c07b",
+    "artifacts\\pass_t\\phase2a\\v2\\external_returns\\datasets\\ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c\\external_dev_gt.json": "ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c"
+  },
+  "records": [
+    {
+      "call": {
+        "item_id": "PT2A_eb60192e6986cb4f",
+        "opaque_id": "W_f1d4f821d33515975293",
+        "order_key_sha256": "305dde5992c91814228f5617a9d84bd613f050c25e7786730f6db6249f55b7c3",
+        "proposed_call_index": 1,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 1,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "PARTIALLY_VISIBLE",
+          "events": [
+            {
+              "after_state": {
+                "state": "HELD_BY_PERSON",
+                "supporting_frame_alias": "F0016"
+              },
+              "before_state": {
+                "state": "ON_SURFACE",
+                "supporting_frame_alias": "F0001"
+              },
+              "cited_frame_aliases": [
+                "F0001"
+              ],
+              "event_id": "PRED_EVT_001",
+              "event_type": "PICKUP",
+              "rationale": "The card is picked up from the table.",
+              "target_association_uncertainty": "NONE",
+              "timing": {
+                "frame_alias": "F0001",
+                "status": "EXACT_SUPPLIED_FRAME"
+              },
+              "timing_uncertainty": ""
+            }
+          ],
+          "last_directly_supported_state": {
+            "state": "HELD_BY_PERSON",
+            "supporting_frame_alias": "F0016"
+          },
+          "rationale": "The card is visibly picked up and held.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "window_outcome": "CONFIRMED_EVENTS"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 1202,
+        "raw_sha256": "6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/events/0/timing_uncertainty:'' should be non-empty",
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428",
+      "runtime_receipt_sha256": "007742c84532a3fc8942ecbc3b55fc4b2ac7d352af6e15132616aa9adc60508b",
+      "runtime_seconds": 112.3942509999979,
+      "request_total_seconds": 113.56567129999894,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 359
+    },
+    {
+      "call": {
+        "item_id": "PT2A_c58b4df88a2f6801",
+        "opaque_id": "W_b8a53fea6aa8b92dc94f",
+        "order_key_sha256": "30c3789340b26e95d69555dce5791e4f964ca1217ded52ccd9a654000e27657e",
+        "proposed_call_index": 2,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 2,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The ball is not visible in any of the provided frames.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The ball's disappearance is not observed.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The ball is not visible in any of the provided frames.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The ball's disappearance is not observed.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 767,
+        "raw_sha256": "ed7ce16fd3f33494eaa51c969a90a3dca04415c304b5edf7fa35a59aae9acff2",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "ed7ce16fd3f33494eaa51c969a90a3dca04415c304b5edf7fa35a59aae9acff2",
+          "raw_bytes": 767,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The ball is not visible in any of the provided frames.",
+            "uncertainty": "The ball's disappearance is not observed.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The ball is not visible in any of the provided frames.",
+            "uncertainty": "The ball's disappearance is not observed.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_c58b4df88a2f6801",
+            "evaluation_scope": "KNOWN_EVENT_MATCHING_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "matches": [],
+            "unmatched_supported_gt_event_ids": [
+              "EVT001"
+            ],
+            "extra_predicted_event_ids": [],
+            "extra_predictions_interpretation": "UNEVALUATED",
+            "full_window_false_positive_claim": "UNDEFINED"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_c58b4df88a2f6801",
+            "evaluation_scope": "KNOWN_EVENT_MATCHING_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "matches": [],
+            "unmatched_supported_gt_event_ids": [
+              "EVT001"
+            ],
+            "extra_predicted_event_ids": [],
+            "extra_predictions_interpretation": "UNEVALUATED",
+            "full_window_false_positive_claim": "UNDEFINED"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_c58b4df88a2f6801",
+            "evaluation_scope": "KNOWN_EVENT_MATCHING_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "matches": [],
+            "unmatched_supported_gt_event_ids": [
+              "EVT001"
+            ],
+            "extra_predicted_event_ids": [],
+            "extra_predictions_interpretation": "UNEVALUATED",
+            "full_window_false_positive_claim": "UNDEFINED"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "ed7ce16fd3f33494eaa51c969a90a3dca04415c304b5edf7fa35a59aae9acff2",
+      "runtime_receipt_sha256": "834fa57ebaae288dca6b9721a5529e6094097ecfc4d026e482cd976789d80047",
+      "runtime_seconds": 70.00704639999822,
+      "request_total_seconds": 70.22996039999998,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 250
+    },
+    {
+      "call": {
+        "item_id": "PT2A_eb60192e6986cb4f",
+        "opaque_id": "W_f1d4f821d33515975293",
+        "order_key_sha256": "4150733e3b64bba20fac399ea623e75a45d72abae10fccedce9b47c52da5a7e3",
+        "proposed_call_index": 3,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 3,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "PARTIALLY_VISIBLE",
+          "events": [
+            {
+              "after_state": {
+                "state": "HELD_BY_PERSON",
+                "supporting_frame_alias": "F0016"
+              },
+              "before_state": {
+                "state": "ON_SURFACE",
+                "supporting_frame_alias": "F0001"
+              },
+              "cited_frame_aliases": [
+                "F0001"
+              ],
+              "event_id": "PRED_EVT_001",
+              "event_type": "PICKUP",
+              "rationale": "The phone is picked up from the surface.",
+              "target_association_uncertainty": "NONE",
+              "timing": {
+                "frame_alias": "F0001",
+                "status": "EXACT_SUPPLIED_FRAME"
+              },
+              "timing_uncertainty": ""
+            }
+          ],
+          "last_directly_supported_state": {
+            "state": "HELD_BY_PERSON",
+            "supporting_frame_alias": "F0016"
+          },
+          "rationale": "The phone is visibly held by a person's hand.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "window_outcome": "CONFIRMED_EVENTS"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 1211,
+        "raw_sha256": "bd63ac297c34802cbaab4b8460cc8a33c1a02b8cddda044d8f0779baf33139ce",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/events/0/timing_uncertainty:'' should be non-empty",
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "bd63ac297c34802cbaab4b8460cc8a33c1a02b8cddda044d8f0779baf33139ce",
+      "runtime_receipt_sha256": "b5b4cdbfeaff17bcdd1b1a971c0bb6506cb787221a54cc705ba9de889c98b01f",
+      "runtime_seconds": 105.39926480000213,
+      "request_total_seconds": 105.44197290000011,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 361
+    },
+    {
+      "call": {
+        "item_id": "PT2A_c58b4df88a2f6801",
+        "opaque_id": "W_b8a53fea6aa8b92dc94f",
+        "order_key_sha256": "5486909bd5b88cfc133f2b030f95b9e0a9d01f47c167fae866691784d970944e",
+        "proposed_call_index": 4,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 4,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "PARTIALLY_VISIBLE",
+          "events": [
+            {
+              "after_state": {
+                "state": "HELD_BY_PERSON",
+                "supporting_frame_alias": "F0016"
+              },
+              "before_state": {
+                "state": "ON_SURFACE",
+                "supporting_frame_alias": "F0001"
+              },
+              "cited_frame_aliases": [
+                "F0001"
+              ],
+              "event_id": "PRED_EVT_001",
+              "event_type": "PICKUP",
+              "rationale": "The ball is picked up from the surface in frame F0001.",
+              "target_association_uncertainty": "NONE",
+              "timing": {
+                "frame_alias": "F0001",
+                "status": "EXACT_SUPPLIED_FRAME"
+              },
+              "timing_uncertainty": ""
+            }
+          ],
+          "last_directly_supported_state": {
+            "state": "HELD_BY_PERSON",
+            "supporting_frame_alias": "F0016"
+          },
+          "rationale": "The ball is visibly held by a person in frame F0016.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "window_outcome": "CONFIRMED_EVENTS"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 1232,
+        "raw_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/events/0/timing_uncertainty:'' should be non-empty",
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce",
+      "runtime_receipt_sha256": "217f136e0c148ef263cdd84a50810dcfa8cf4532571ee636665cd446ef475eea",
+      "runtime_seconds": 12.304949599998508,
+      "request_total_seconds": 12.348414300002332,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 373
+    },
+    {
+      "call": {
+        "item_id": "PT2A_9d15d2a6b56b56d0",
+        "opaque_id": "W_5597d9b003977e053d70",
+        "order_key_sha256": "58771eb150ce4abd1f7629f71d1a219ec15d7c2c748b59ee7cdc69d6834e4427",
+        "proposed_call_index": 5,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 5,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No direct evidence of a transition between resting and held states.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of intermediate frames.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No direct evidence of a transition between resting and held states.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of intermediate frames.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 751,
+        "raw_sha256": "49f340321059e9e0dd391607efd8a1cf53d0c61a3ffe196edf5fd649f1556c70",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "49f340321059e9e0dd391607efd8a1cf53d0c61a3ffe196edf5fd649f1556c70",
+          "raw_bytes": 751,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No direct evidence of a transition between resting and held states.",
+            "uncertainty": "Sparse sampling and lack of intermediate frames.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No direct evidence of a transition between resting and held states.",
+            "uncertainty": "Sparse sampling and lack of intermediate frames.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "49f340321059e9e0dd391607efd8a1cf53d0c61a3ffe196edf5fd649f1556c70",
+      "runtime_receipt_sha256": "b253afd7306d8a42d7745c3576f4db4d680045b1370f007144b7f7700a0fe312",
+      "runtime_seconds": 5.76709259999916,
+      "request_total_seconds": 5.809758999999758,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 239
+    },
+    {
+      "call": {
+        "item_id": "PT2A_5dbb180e8ff88762",
+        "opaque_id": "W_db55b29f820c2b3e3afb",
+        "order_key_sha256": "5f37eeebb7e0722895603d07998c3e50f44dc6568a18d40d8eb1cc3f23474378",
+        "proposed_call_index": 6,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 6,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "STATE_UNKNOWN",
+            "supporting_frame_alias": null
+          },
+          "rationale": "No direct evidence of a transition involving TARGET_A.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Insufficient evidence to confirm or deny any transition.",
+          "window_cited_frame_aliases": [],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 676,
+        "raw_sha256": "fb1ae6f7fd17c3d3b58546b64c675e25af2bc11d2eda722cde77c81b9e0e13b5",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/window_cited_frame_aliases:[] should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "fb1ae6f7fd17c3d3b58546b64c675e25af2bc11d2eda722cde77c81b9e0e13b5",
+      "runtime_receipt_sha256": "d02feab7beadabb81297ba472086e77fd0b0d2427b23d09ebe94c46f3ce07997",
+      "runtime_seconds": 4.608525499999814,
+      "request_total_seconds": 4.767492499999207,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 179
+    },
+    {
+      "call": {
+        "item_id": "PT2A_b35d807b28b92101",
+        "opaque_id": "W_ec4751640324779435e6",
+        "order_key_sha256": "61845992286b8a137768ef07e02649c66533497921229f7f6a6466da09b60f48",
+        "proposed_call_index": 7,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 7,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No events were confirmed due to lack of direct observation.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Insufficient evidence",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No events were confirmed due to lack of direct observation.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Insufficient evidence",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 716,
+        "raw_sha256": "8311d4dc1ac1bcd99498dc533450c7533ca132a63ee909882255601861591070",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "8311d4dc1ac1bcd99498dc533450c7533ca132a63ee909882255601861591070",
+          "raw_bytes": 716,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No events were confirmed due to lack of direct observation.",
+            "uncertainty": "Insufficient evidence",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No events were confirmed due to lack of direct observation.",
+            "uncertainty": "Insufficient evidence",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "8311d4dc1ac1bcd99498dc533450c7533ca132a63ee909882255601861591070",
+      "runtime_receipt_sha256": "21dd0173734a2aa3de3a57cd1166975c737f3658e930814158162009ebf992c3",
+      "runtime_seconds": 5.840602899999794,
+      "request_total_seconds": 6.00460099999691,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 234
+    },
+    {
+      "call": {
+        "item_id": "PT2A_c58b4df88a2f6801",
+        "opaque_id": "W_b8a53fea6aa8b92dc94f",
+        "order_key_sha256": "6d955262e1554244b273d203bed80dd27ab054dee2b6ceef7966d2cb9c603bec",
+        "proposed_call_index": 8,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 8,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "PARTIALLY_VISIBLE",
+          "events": [
+            {
+              "after_state": {
+                "state": "HELD_BY_PERSON",
+                "supporting_frame_alias": "F0016"
+              },
+              "before_state": {
+                "state": "ON_SURFACE",
+                "supporting_frame_alias": "F0001"
+              },
+              "cited_frame_aliases": [
+                "F0001"
+              ],
+              "event_id": "PRED_EVT_001",
+              "event_type": "PICKUP",
+              "rationale": "The object is picked up from the table.",
+              "target_association_uncertainty": "NONE",
+              "timing": {
+                "frame_alias": "F0001",
+                "status": "EXACT_SUPPLIED_FRAME"
+              },
+              "timing_uncertainty": ""
+            }
+          ],
+          "last_directly_supported_state": {
+            "state": "HELD_BY_PERSON",
+            "supporting_frame_alias": "F0016"
+          },
+          "rationale": "The object is lifted from the table and held.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "window_outcome": "CONFIRMED_EVENTS"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 1210,
+        "raw_sha256": "d4c858d31766f21639391c522c4654422032abbc7349ecc8bdad5eb9931ff53e",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/events/0/timing_uncertainty:'' should be non-empty",
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "d4c858d31766f21639391c522c4654422032abbc7349ecc8bdad5eb9931ff53e",
+      "runtime_receipt_sha256": "925881abd2753f2c6ba78529459fd144581fe7d51bde8939e1ba668f02800885",
+      "runtime_seconds": 8.742425399999775,
+      "request_total_seconds": 8.897493500000564,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 360
+    },
+    {
+      "call": {
+        "item_id": "PT2A_fe0910d66f4c5614",
+        "opaque_id": "W_aef405003cc72cef0044",
+        "order_key_sha256": "756e21fdd1599060cd9268aef750acefc97be586c29ec8895d429cd97ab9f6e0",
+        "proposed_call_index": 9,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 9,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The basketball remains on the table throughout the sequence.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position is consistently observed on the table, indicating no transition occurred.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The basketball remains on the table throughout the sequence.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position is consistently observed on the table, indicating no transition occurred.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 795,
+        "raw_sha256": "0ca2025e0b8a8a09ffbf0ecda1302866ec8aa4213614592ed623a7c7a15a0c12",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "0ca2025e0b8a8a09ffbf0ecda1302866ec8aa4213614592ed623a7c7a15a0c12",
+          "raw_bytes": 795,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball remains on the table throughout the sequence.",
+            "uncertainty": "The basketball's position is consistently observed on the table, indicating no transition occurred.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball remains on the table throughout the sequence.",
+            "uncertainty": "The basketball's position is consistently observed on the table, indicating no transition occurred.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "0ca2025e0b8a8a09ffbf0ecda1302866ec8aa4213614592ed623a7c7a15a0c12",
+      "runtime_receipt_sha256": "c1e3098d8dcee023ccb2417071d0ce9fc9f8adf25370598926a1459d82b15ec1",
+      "runtime_seconds": 5.926845400001184,
+      "request_total_seconds": 6.095831700000417,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 245
+    },
+    {
+      "call": {
+        "item_id": "PT2A_eb60192e6986cb4f",
+        "opaque_id": "W_f1d4f821d33515975293",
+        "order_key_sha256": "76463c039f8a4f154d1b7f48af8a318ca54bfe9e9d1eed9442bd9f46bd866327",
+        "proposed_call_index": 10,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 10,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [
+            {
+              "after_state": {
+                "state": "HELD_BY_PERSON",
+                "supporting_frame_alias": "F0077"
+              },
+              "before_state": {
+                "state": "ON_SURFACE",
+                "supporting_frame_alias": "F0077"
+              },
+              "cited_frame_aliases": [
+                "F0077"
+              ],
+              "event_id": "PRED_EVT_0001",
+              "event_type": "PICKUP",
+              "rationale": "The phone is lifted from the table.",
+              "target_association_uncertainty": "NONE",
+              "timing": {
+                "frame_alias": "F0077",
+                "status": "EXACT_SUPPLIED_FRAME"
+              },
+              "timing_uncertainty": ""
+            }
+          ],
+          "last_directly_supported_state": {
+            "state": "HELD_BY_PERSON",
+            "supporting_frame_alias": "F0077"
+          },
+          "rationale": "The phone is lifted from the table.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0077"
+          ],
+          "window_outcome": "CONFIRMED_EVENTS"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 1206,
+        "raw_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/events/0/event_id:'PRED_EVT_0001' does not match '^PRED_EVT_[0-9]{3}$'",
+            "/events/0/timing_uncertainty:'' should be non-empty",
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485",
+      "runtime_receipt_sha256": "111287b2674e82773ed389dcfeb2bef7a9cbab2d6d5171d6c97eb0a2523d79cc",
+      "runtime_seconds": 37.15610970000125,
+      "request_total_seconds": 37.36802769999849,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 357
+    },
+    {
+      "call": {
+        "item_id": "PT2A_5dbb180e8ff88762",
+        "opaque_id": "W_db55b29f820c2b3e3afb",
+        "order_key_sha256": "7f3deb32f07eb6bd1257f3c96a62c2b9e09abf19810978604817aa260850a6cf",
+        "proposed_call_index": 11,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 11,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "STATE_UNKNOWN",
+            "supporting_frame_alias": null
+          },
+          "rationale": "The target is not visible in any of the provided frames.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The target is not visible in any of the provided frames.",
+          "window_cited_frame_aliases": [],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 678,
+        "raw_sha256": "9ace9da78979219d230d1cd30856a0efe41ebf8d5e83e60d72ce9ce673ff9995",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/window_cited_frame_aliases:[] should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "9ace9da78979219d230d1cd30856a0efe41ebf8d5e83e60d72ce9ce673ff9995",
+      "runtime_receipt_sha256": "a811c8d5e0f7dd7a1c15f12b9d4afb56986ecd6141769c83680d3d28999f0e0c",
+      "runtime_seconds": 5.022921399999177,
+      "request_total_seconds": 5.232782300001418,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 183
+    },
+    {
+      "call": {
+        "item_id": "PT2A_9d15d2a6b56b56d0",
+        "opaque_id": "W_5597d9b003977e053d70",
+        "order_key_sha256": "84d3bcff2986a7e110bcf14e34f2ad573599d0bbc4397a801803e1a8ffbf39ca",
+        "proposed_call_index": 12,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 12,
+        "status": "STRICT_INVALID"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": null,
+        "classification": "STRICT_INVALID",
+        "matching_status": "UNAVAILABLE_STRICT_INVALID",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The phone is consistently on the surface across all frames, indicating no pickup or placement.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 766,
+        "raw_sha256": "c3c0086986fe7346ad73279b7a68ce70aef0e7d0362d843bd5c26f5fe137aabe",
+        "stages": {
+          "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+          "FULL_STRICT": "FAIL",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "FAIL",
+          "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [
+            "/uncertainty:'' should be non-empty"
+          ],
+          "valid": false
+        }
+      },
+      "evaluation": {
+        "matching_status": "UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT",
+        "sensitivity_results": null,
+        "no_event_inferred": false
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "c3c0086986fe7346ad73279b7a68ce70aef0e7d0362d843bd5c26f5fe137aabe",
+      "runtime_receipt_sha256": "151d3b5c48708b04e8af1662b341440e5c7ae1b8bb03b8347bd0ad0b14e71d24",
+      "runtime_seconds": 6.2650237000016205,
+      "request_total_seconds": 6.488498999999138,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 247
+    },
+    {
+      "call": {
+        "item_id": "PT2A_b35d807b28b92101",
+        "opaque_id": "W_ec4751640324779435e6",
+        "order_key_sha256": "88b2e679d66d7193899f764989771ef8999dd2f6807a2c8d9d6998bdac1d9bb7",
+        "proposed_call_index": 13,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 13,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No evidence of pickup or placement within the provided frames.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No evidence of pickup or placement within the provided frames.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 763,
+        "raw_sha256": "aba5b146a132a03f89119d9ec27f6fec807225260c41cf491d44e5a33fbe9a14",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "aba5b146a132a03f89119d9ec27f6fec807225260c41cf491d44e5a33fbe9a14",
+          "raw_bytes": 763,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No evidence of pickup or placement within the provided frames.",
+            "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No evidence of pickup or placement within the provided frames.",
+            "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "aba5b146a132a03f89119d9ec27f6fec807225260c41cf491d44e5a33fbe9a14",
+      "runtime_receipt_sha256": "5b2fce1fe00c93a033753f67e8464b273452dc4b12f532bfde7d50708aaa498f",
+      "runtime_seconds": 5.7740950000006706,
+      "request_total_seconds": 5.817754800002149,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 241
+    },
+    {
+      "call": {
+        "item_id": "PT2A_5dbb180e8ff88762",
+        "opaque_id": "W_db55b29f820c2b3e3afb",
+        "order_key_sha256": "9ff90aed1a36a61f79c2ad74eb31b23c256288d9835d8b0282c71f6169f4720b",
+        "proposed_call_index": 14,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 14,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "STATE_UNKNOWN",
+            "supporting_frame_alias": null
+          },
+          "rationale": "No evidence of any physical transition involving TARGET_A.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0018",
+            "F0034",
+            "F0051",
+            "F0068",
+            "F0085",
+            "F0101",
+            "F0118"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "STATE_UNKNOWN",
+            "supporting_frame_alias": null
+          },
+          "rationale": "No evidence of any physical transition involving TARGET_A.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0018",
+            "F0034",
+            "F0051",
+            "F0068",
+            "F0085",
+            "F0101",
+            "F0118"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 795,
+        "raw_sha256": "3322737bd887fc20f384eb5349771566d52f73b1661b80d25d5135aa9bc8a514",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "3322737bd887fc20f384eb5349771566d52f73b1661b80d25d5135aa9bc8a514",
+          "raw_bytes": 795,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0018",
+              "F0034",
+              "F0051",
+              "F0068",
+              "F0085",
+              "F0101",
+              "F0118"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "STATE_UNKNOWN",
+              "supporting_frame_alias": null
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No evidence of any physical transition involving TARGET_A.",
+            "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0018",
+              "F0034",
+              "F0051",
+              "F0068",
+              "F0085",
+              "F0101",
+              "F0118"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "STATE_UNKNOWN",
+              "supporting_frame_alias": null
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No evidence of any physical transition involving TARGET_A.",
+            "uncertainty": "Sparse sampling and lack of direct observation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_5dbb180e8ff88762",
+            "evaluation_scope": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "descriptive_only": true,
+            "matching": "UNDEFINED",
+            "reason": "Human outcome is uncertain; no event-list completeness claim"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_5dbb180e8ff88762",
+            "evaluation_scope": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "descriptive_only": true,
+            "matching": "UNDEFINED",
+            "reason": "Human outcome is uncertain; no event-list completeness claim"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_5dbb180e8ff88762",
+            "evaluation_scope": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "descriptive_only": true,
+            "matching": "UNDEFINED",
+            "reason": "Human outcome is uncertain; no event-list completeness claim"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "3322737bd887fc20f384eb5349771566d52f73b1661b80d25d5135aa9bc8a514",
+      "runtime_receipt_sha256": "87bd15b867ac615cdb4a7a3ced83fdf08d0d401f4e81395496b75ab283598cbf",
+      "runtime_seconds": 5.7929693999976735,
+      "request_total_seconds": 5.8352261,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 246
+    },
+    {
+      "call": {
+        "item_id": "PT2A_b35d807b28b92101",
+        "opaque_id": "W_ec4751640324779435e6",
+        "order_key_sha256": "c0fd972e2f482b74b0761820f4ec58931299eb8f48dc8f723397b8ab1778fb80",
+        "proposed_call_index": 15,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 15,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The basketball is consistently on the table across all frames, indicating no pickup or placement.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The basketball is consistently on the table across all frames, indicating no pickup or placement.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077",
+            "F0093",
+            "F0108"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 836,
+        "raw_sha256": "167a6099c46d8a8e260b834e41b274a384f0267eed58827ad3aea97f29424638",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "167a6099c46d8a8e260b834e41b274a384f0267eed58827ad3aea97f29424638",
+          "raw_bytes": 836,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball is consistently on the table across all frames, indicating no pickup or placement.",
+            "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0032",
+              "F0047",
+              "F0062",
+              "F0077",
+              "F0093",
+              "F0108"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball is consistently on the table across all frames, indicating no pickup or placement.",
+            "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_b35d807b28b92101",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "167a6099c46d8a8e260b834e41b274a384f0267eed58827ad3aea97f29424638",
+      "runtime_receipt_sha256": "f641373e888b7e1bd4f56ac70090e6302e275e147f01fcb591d53fcfc8c0e9fb",
+      "runtime_seconds": 6.5137830000021495,
+      "request_total_seconds": 6.73462759999893,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 258
+    },
+    {
+      "call": {
+        "item_id": "PT2A_9d15d2a6b56b56d0",
+        "opaque_id": "W_5597d9b003977e053d70",
+        "order_key_sha256": "c35fc27f86aebbf449b6abbd13a22035147aed0b1095a53ec7fa317291855f75",
+        "proposed_call_index": 16,
+        "repeat": 1,
+        "representation": "NATIVE_VIDEO_ARRAY"
+      },
+      "execution_status": {
+        "call_id": 16,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The phone is initially on the surface but disappears from view.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "sparse_sampling",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "The phone is initially on the surface but disappears from view.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "sparse_sampling",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0031",
+            "F0046",
+            "F0062",
+            "F0077",
+            "F0092",
+            "F0107"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 714,
+        "raw_sha256": "50c01aac9a6718210a04387004b9a2c52c982dee1d122747149eac2e8166061e",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "50c01aac9a6718210a04387004b9a2c52c982dee1d122747149eac2e8166061e",
+          "raw_bytes": 714,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The phone is initially on the surface but disappears from view.",
+            "uncertainty": "sparse_sampling",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0016",
+              "F0031",
+              "F0046",
+              "F0062",
+              "F0077",
+              "F0092",
+              "F0107"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The phone is initially on the surface but disappears from view.",
+            "uncertainty": "sparse_sampling",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "50c01aac9a6718210a04387004b9a2c52c982dee1d122747149eac2e8166061e",
+      "runtime_receipt_sha256": "34d3f134786232add97e1f5ef76238ec4a0ee5b6f0d6e9e78affdf828af6d70c",
+      "runtime_seconds": 5.771443899997394,
+      "request_total_seconds": 5.935324300000502,
+      "peak_inference_vram_bytes": 6604483072,
+      "generated_tokens": 234
+    },
+    {
+      "call": {
+        "item_id": "PT2A_fe0910d66f4c5614",
+        "opaque_id": "W_aef405003cc72cef0044",
+        "order_key_sha256": "c4d7654bab1f9b5f424c4fa21aa39e1c4ccf5cecc4941cad15c51f9f88bdf908",
+        "proposed_call_index": 17,
+        "repeat": 1,
+        "representation": "MULTI_IMAGE"
+      },
+      "execution_status": {
+        "call_id": 17,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0072"
+          },
+          "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0072"
+          },
+          "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 836,
+        "raw_sha256": "3488252db0308d077887592c2a911ad435ba676c11ad2ddb9f5b68a69f00bec7",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "3488252db0308d077887592c2a911ad435ba676c11ad2ddb9f5b68a69f00bec7",
+          "raw_bytes": 836,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0072"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+            "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0072"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "The basketball is consistently on the table across all frames, indicating no transition occurred.",
+            "uncertainty": "The basketball's position remains constant, suggesting no movement.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "3488252db0308d077887592c2a911ad435ba676c11ad2ddb9f5b68a69f00bec7",
+      "runtime_receipt_sha256": "cdbd05fb763e801bdaa2a52938ae75108c5fa960bf458eaa23fa20ab684a5c8b",
+      "runtime_seconds": 6.426082699999824,
+      "request_total_seconds": 6.669176600000355,
+      "peak_inference_vram_bytes": 6780767744,
+      "generated_tokens": 257
+    },
+    {
+      "call": {
+        "item_id": "PT2A_fe0910d66f4c5614",
+        "opaque_id": "W_aef405003cc72cef0044",
+        "order_key_sha256": "e005a3e488857927565833fd36471eeca245741c1fd7717faf44feb1b765edc2",
+        "proposed_call_index": 18,
+        "repeat": 1,
+        "representation": "STORYBOARD"
+      },
+      "execution_status": {
+        "call_id": 18,
+        "status": "VALID_NO_CONFIRMED_EVENT"
+      },
+      "human_physical_adjudication": "UNREVIEWED",
+      "classification": {
+        "authoritative_prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No direct evidence of a transition between resting and held states.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and occlusion prevent confirmation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "classification": "VALID_NO_CONFIRMED_EVENT",
+        "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE",
+        "prediction": {
+          "end_visibility": "NOT_VISIBLE",
+          "events": [],
+          "last_directly_supported_state": {
+            "state": "ON_SURFACE",
+            "supporting_frame_alias": "F0001"
+          },
+          "rationale": "No direct evidence of a transition between resting and held states.",
+          "safety_assertions": {
+            "container_or_handover_auto_classified": false,
+            "global_identity_claimed": false,
+            "state_persisted_across_unobserved_interval": false
+          },
+          "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+          "subsequent_state": "UNKNOWN",
+          "target_id": "TARGET_A",
+          "uncertainty": "Sparse sampling and occlusion prevent confirmation of any transition.",
+          "window_cited_frame_aliases": [
+            "F0001",
+            "F0011",
+            "F0021",
+            "F0031",
+            "F0042",
+            "F0052",
+            "F0062",
+            "F0072"
+          ],
+          "window_outcome": "NO_CONFIRMED_EVENT"
+        },
+        "qualitative_review": {
+          "authoritative_structured_prediction": false,
+          "status": "UNREVIEWED"
+        },
+        "raw_bytes": 772,
+        "raw_sha256": "7dc843afa1fe3c3f6ea2c30df047745bf8aac1bd5898ee26c8e38638beaae888",
+        "stages": {
+          "CITATION": "PASS",
+          "FULL_STRICT": "PASS",
+          "JSON_SYNTAX": "PASS",
+          "SCHEMA": "PASS",
+          "SEMANTIC": "PASS"
+        },
+        "validation": {
+          "citation_errors": [],
+          "semantic_errors": [],
+          "structural_errors": [],
+          "valid": true
+        }
+      },
+      "evaluation": {
+        "classification": {
+          "raw_sha256": "7dc843afa1fe3c3f6ea2c30df047745bf8aac1bd5898ee26c8e38638beaae888",
+          "raw_bytes": 772,
+          "stages": {
+            "JSON_SYNTAX": "PASS",
+            "SCHEMA": "PASS",
+            "SEMANTIC": "PASS",
+            "CITATION": "PASS",
+            "FULL_STRICT": "PASS"
+          },
+          "prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No direct evidence of a transition between resting and held states.",
+            "uncertainty": "Sparse sampling and occlusion prevent confirmation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "authoritative_prediction": {
+            "schema_version": "PASS_T_PHASE2B_PREDICTION_V1",
+            "target_id": "TARGET_A",
+            "window_outcome": "NO_CONFIRMED_EVENT",
+            "window_cited_frame_aliases": [
+              "F0001",
+              "F0011",
+              "F0021",
+              "F0031",
+              "F0042",
+              "F0052",
+              "F0062",
+              "F0072"
+            ],
+            "events": [],
+            "last_directly_supported_state": {
+              "state": "ON_SURFACE",
+              "supporting_frame_alias": "F0001"
+            },
+            "end_visibility": "NOT_VISIBLE",
+            "subsequent_state": "UNKNOWN",
+            "rationale": "No direct evidence of a transition between resting and held states.",
+            "uncertainty": "Sparse sampling and occlusion prevent confirmation of any transition.",
+            "safety_assertions": {
+              "global_identity_claimed": false,
+              "state_persisted_across_unobserved_interval": false,
+              "container_or_handover_auto_classified": false
+            }
+          },
+          "qualitative_review": {
+            "status": "UNREVIEWED",
+            "authoritative_structured_prediction": false
+          },
+          "validation": {
+            "valid": true,
+            "structural_errors": [],
+            "citation_errors": [],
+            "semantic_errors": []
+          },
+          "classification": "VALID_NO_CONFIRMED_EVENT",
+          "matching_status": "ELIGIBLE_SUBJECT_TO_GT_SCOPE"
+        },
+        "matching_status": "EVALUATED_WITH_GT_SCOPE",
+        "sensitivity_results": {
+          "0": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.2": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          },
+          "0.5": {
+            "annotation_item_id": "PT2A_fe0910d66f4c5614",
+            "evaluation_scope": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+            "prediction_outcome": "NO_CONFIRMED_EVENT",
+            "predicted_event_count": 0,
+            "binding_causality_status": "CAUSALITY_UNVERIFIED",
+            "case_level_false_event_alert": false,
+            "population_false_positive_rate": "UNDEFINED",
+            "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"
+          }
+        },
+        "qualitative_review": {
+          "status": "UNREVIEWED",
+          "authoritative_structured_prediction": false
+        },
+        "formal_metrics": "UNDEFINED"
+      },
+      "runtime_receipt_error": null,
+      "raw_sha256": "7dc843afa1fe3c3f6ea2c30df047745bf8aac1bd5898ee26c8e38638beaae888",
+      "runtime_receipt_sha256": "c6a549e24fc10481a0eae3698ca7313d44bfd16d805e18a17f79ebd10e02927d",
+      "runtime_seconds": 5.822800699999789,
+      "request_total_seconds": 5.867699899998115,
+      "peak_inference_vram_bytes": 6452744192,
+      "generated_tokens": 242
+    }
+  ],
+  "stage_counts": {
+    "JSON_SYNTAX": {
+      "PASS": 18
+    },
+    "SCHEMA": {
+      "FAIL": 8,
+      "PASS": 10
+    },
+    "SEMANTIC": {
+      "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE": 8,
+      "PASS": 10
+    },
+    "CITATION": {
+      "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE": 8,
+      "PASS": 10
+    },
+    "FULL_STRICT": {
+      "FAIL": 8,
+      "PASS": 10
+    }
+  },
+  "representation_counts": {
+    "NATIVE_VIDEO_ARRAY": {
+      "recorded": 6,
+      "STRICT_INVALID": 3,
+      "VALID_NO_CONFIRMED_EVENT": 3
+    },
+    "MULTI_IMAGE": {
+      "recorded": 6,
+      "VALID_NO_CONFIRMED_EVENT": 3,
+      "STRICT_INVALID": 3
+    },
+    "STORYBOARD": {
+      "recorded": 6,
+      "STRICT_INVALID": 2,
+      "VALID_NO_CONFIRMED_EVENT": 4
+    }
+  },
+  "physical_adjudication": "UNREVIEWED"
+}

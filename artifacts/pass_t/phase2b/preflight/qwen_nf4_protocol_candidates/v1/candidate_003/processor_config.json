@@ -1,0 +1,87 @@
+{
+  "image": {
+    "_processor_class": "Qwen2_5_VLProcessor",
+    "size": {
+      "shortest_edge": 3136,
+      "longest_edge": 12845056
+    },
+    "min_pixels": 3136,
+    "max_pixels": 200704,
+    "patch_size": 14,
+    "temporal_patch_size": 2,
+    "merge_size": 2,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "image_processor_type": "Qwen2VLImageProcessorFast",
+    "crop_size": null,
+    "pad_size": null,
+    "do_resize": true,
+    "default_to_square": true,
+    "resample": 3,
+    "do_center_crop": null,
+    "do_rescale": true,
+    "rescale_factor": 0.00392156862745098,
+    "do_normalize": true,
+    "do_pad": null,
+    "do_convert_rgb": true,
+    "return_tensors": null,
+    "data_format": "channels_first",
+    "input_data_format": null,
+    "device": null,
+    "disable_grouping": null
+  },
+  "video": {
+    "_processor_class": "Qwen2_5_VLProcessor",
+    "size": {
+      "shortest_edge": 3136,
+      "longest_edge": 12845056
+    },
+    "crop_size": null,
+    "pad_size": null,
+    "do_convert_rgb": true,
+    "do_resize": true,
+    "default_to_square": true,
+    "resample": 3,
+    "do_rescale": true,
+    "rescale_factor": 0.00392156862745098,
+    "do_normalize": true,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "do_center_crop": null,
+    "data_format": "channels_first",
+    "input_data_format": null,
+    "device": null,
+    "do_sample_frames": false,
+    "video_metadata": null,
+    "fps": null,
+    "num_frames": null,
+    "return_metadata": false,
+    "min_pixels": 3136,
+    "max_pixels": 200704,
+    "patch_size": 14,
+    "temporal_patch_size": 2,
+    "merge_size": 2,
+    "min_frames": 4,
+    "max_frames": 768,
+    "video_processor_type": "Qwen2VLVideoProcessor"
+  },
+  "offline": true,
+  "cuda_visible_devices": "",
+  "model_loaded": false
+}

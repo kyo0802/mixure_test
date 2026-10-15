@@ -1,0 +1,1136 @@
+--- a/src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py
++++ b/src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py
+@@ -42,6 +42,14 @@
+     return rows
+ 
+ def prepare_video_array(processor,envelope,deployment):
++    # Real-pilot eligibility is checked before importing torch or examining pixels.
++    # The original synthetic V1C/V1D gate below remains the default.
++    real_receipt=None
++    if deployment.get('real_pilot_mode') is not None:
++        from ..v1d_protocol import bridge_eligibility,require_production_human_records
++        real_receipt=bridge_eligibility(envelope,deployment)
++        context=deployment['real_pilot_context']
++        require_production_human_records(context['frozen_bundle'],context['execution_authorization'])
+     """Local in-process opt-in extension; no AVI/image fallback or new prediction schema."""
+     import numpy as np
+     import torch
+@@ -72,7 +80,7 @@
+         raise ValueError('EXPLICIT_IN_PROCESS_NATIVE_ARRAY_ROUTE_REQUIRED')
+     prompt=payload['instructions']
+     expected_prompt_sha256=deployment.get('experimental_task_prompt_sha256',V1C_SHA256)
+-    if expected_prompt_sha256!=V1C_SHA256 and (
++    if real_receipt is None and expected_prompt_sha256!=V1C_SHA256 and (
+         deployment.get('synthetic_only') is not True or deployment.get('experimental_task_prompt_candidate')!='V1D'
+         or not isinstance(expected_prompt_sha256,str) or re.fullmatch(r'[0-9a-f]{64}',expected_prompt_sha256) is None):
+         raise ValueError('EXPLICIT_PINNED_SYNTHETIC_V1D_CANDIDATE_REQUIRED')
+@@ -112,4 +120,6 @@
+       'alias_unit_mapping':[{'unit':i//2,'aliases':aliases[i:i+2]} for i in range(0,8,2)],
+       'static_timeline':static_timeline(aliases,pts,fps,seconds),'actual_model_positions':'NOT_INSTRUMENTED',
+       'identity_clause_enabled':False,'tensor_records':{k:tensor_record(v) for k,v in inputs.items()},**accounting}
++    if real_receipt is not None:
++        receipt['real_pilot_eligibility']=real_receipt
+     return inputs,receipt
+--- a/src/memory_graph/pass_t/phase2b/evaluation.py
++++ b/src/memory_graph/pass_t/phase2b/evaluation.py
+@@ -2,6 +2,46 @@
+ from __future__ import annotations
+ 
+ from .common import Phase2BBlocked
++from decimal import Decimal, InvalidOperation
++
++LEGACY_MATCHER = "LEGACY_OVERLAP_V0"
++CLOSED_INTERVAL_MATCHER = "CLOSED_INTERVAL_GAP_V1"
++
++
++def closed_interval_gap(gt_interval, predicted_interval):
++    """Temporal compatibility of closed evidence intervals, never event duration.
++
++    Decimal(str(timestamp)) makes the registered decimal tolerance boundary
++    deterministic without an undocumented epsilon. Missing/nonfinite/reversed
++    intervals are unmatchable, not zero distance.
++    """
++    try:
++        if gt_interval is None or predicted_interval is None:
++            return None
++        a, b = [Decimal(str(x)) for x in gt_interval]
++        c, d = [Decimal(str(x)) for x in predicted_interval]
++        if not all(x.is_finite() for x in (a,b,c,d)) or a>b or c>d:
++            return None
++        return max(c-b, a-d, Decimal(0))
++    except (TypeError, ValueError, InvalidOperation):
++        return None
++
++
++def _compatible_closed_v1(gt, pred, mapping, tolerance):
++    if pred.get("target_association_uncertainty") != "NONE" or gt.get("event_type") != pred.get("event_type"):
++        return False, float("inf")
++    if not pred.get("cited_frame_aliases"):
++        return False, float("inf")
++    try:
++        p = _prediction_interval(pred, mapping)
++        g = _gt_interval(gt)
++        gap = closed_interval_gap(g,p)
++        limit = Decimal(str(tolerance))
++        if gap is None or not limit.is_finite() or limit < 0:
++            return False, float("inf")
++        return gap <= limit, float(gap)
++    except (KeyError, TypeError, ValueError, InvalidOperation):
++        return False, float("inf")
+ 
+ 
+ FORBIDDEN_METRICS = ["accuracy", "precision", "recall", "F1", "hallucination_rate", "significance", "superiority", "generalization"]
+@@ -45,11 +85,16 @@
+     return distance <= tolerance, distance
+ 
+ 
+-def match_known_events(gt_events: list[dict], predicted: list[dict], mapping: list[dict], tolerance_s: float, require_overlap: bool) -> dict:
++def match_known_events(gt_events: list[dict], predicted: list[dict], mapping: list[dict], tolerance_s: float, require_overlap: bool, *, matcher_policy: str = LEGACY_MATCHER) -> dict:
++    if matcher_policy not in {LEGACY_MATCHER,CLOSED_INTERVAL_MATCHER}:
++        raise Phase2BBlocked("UNKNOWN_MATCHER_POLICY")
++    if matcher_policy == CLOSED_INTERVAL_MATCHER and require_overlap:
++        raise Phase2BBlocked("CLOSED_INTERVAL_V1_REQUIRES_DISTANCE_POLICY")
+     candidates = []
+     for gi, gt in enumerate(gt_events):
+         for pi, pred in enumerate(predicted):
+-            ok, score = _compatible(gt, pred, mapping, tolerance_s, require_overlap)
++            ok, score = (_compatible(gt, pred, mapping, tolerance_s, require_overlap)
++                         if matcher_policy == LEGACY_MATCHER else _compatible_closed_v1(gt,pred,mapping,tolerance_s))
+             if ok:
+                 candidates.append((score, gi, pi))
+     matches, used_gt, used_pred = [], set(), set()
+@@ -79,7 +124,8 @@
+     if permission == "KNOWN_EVENT_MATCHING_ONLY":
+         supported = [event for event in record["response"]["events"] if event["event_id"] in eligibility["supported_positive_event_ids"]]
+         result = match_known_events(supported, prediction["events"], representation["private_mapping"],
+-                                    float(decisions["event_time_tolerance_s"]), bool(decisions["bounded_interval_overlap_required"]))
++                                    float(decisions["event_time_tolerance_s"]), bool(decisions["bounded_interval_overlap_required"]),
++                                    matcher_policy=decisions.get("matcher_policy",LEGACY_MATCHER))
+         return {**base, **result, "extra_predictions_interpretation": "UNEVALUATED", "full_window_false_positive_claim": "UNDEFINED"}
+     if permission == "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS":
+         return {**base, "case_level_false_event_alert": bool(prediction["events"]), "population_false_positive_rate": "UNDEFINED", "population_false_positive_rate_reason": "Three selected DEV strict-negative cases are not a benchmark population"}
+--- /dev/null
++++ b/src/memory_graph/pass_t/phase2b/v1d_protocol.py
+@@ -0,0 +1,215 @@
++"""Explicit V1D pilot contracts. Text/metadata only; no model/media imports.
++
++Approval records are caller-supplied human provenance, not cryptographic proof of
++human authorship. No function infers approval from a draft or environment flag.
++"""
++from __future__ import annotations
++import copy
++import json
++import math
++import re
++from datetime import datetime, timezone
++from pathlib import Path
++from .common import Phase2BBlocked, canonical_bytes, digest, file_sha256, read_json, safe_join, exclusive_tree, pretty_bytes, repository_root
++
++VERSION = 'PASS_T_QWEN_NF4_V1D_PILOT_V1'
++REAL_MODE = 'FROZEN_V1D_PILOT_V1'
++MATCHER = 'CLOSED_INTERVAL_GAP_V1'
++REPRESENTATIONS = ('MULTI_IMAGE', 'STORYBOARD', 'NATIVE_VIDEO_ARRAY')
++V1D_SHA = '7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0'
++V2_SHA = '9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e'
++SCHEMA_SHA = 'f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3'
++VALIDATOR_SHA = 'c4b077374d50fc478c29d0009180d488c60a463fa8bffa183a179c5f736f1d37'
++MODEL = 'Qwen/Qwen2.5-VL-7B-Instruct'
++REVISION = 'cc594898137f460bfe9f0759e9844b3ce807cfb5'
++REVIEW = 'WORKSPACE/Pass_T/Final_Pilot_Protocol_Review_20261015/FINAL_COMPONENT_HASH_MANIFEST.json'
++REVIEW_SHA = '97be3f4a1e93583eaa295348ba9a01f3d1fb1d855bf3a28e5a26857e917d95a1'
++ASSETS = 'artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json'
++BASE = 'src/memory_graph/pass_t/phase2b/'
++COMPONENTS = (BASE+'local_vlm/nf4.py', BASE+'local_vlm/video_array_bridge.py', BASE+'local_vlm/qwen_contract.py',
++              BASE+'local_vlm/runtime.py', BASE+'local_vlm/catalog.py', BASE+'common.py', BASE+'model_visible.py',
++              BASE+'predictions.py', BASE+'contracts/prediction_v1.json', BASE+'contracts/model_visible_payload_v1.json', BASE+'evaluation.py',
++              BASE+'v1d_protocol.py', BASE+'v1d_execution.py', BASE+'v1d_outputs.py',
++              'scripts/run_pass_t_v1d_pilot.py', ASSETS)
++
++def require(condition, message):
++    if not condition:
++        raise Phase2BBlocked(message)
++
++def _root(root):
++    return Path(root) if root is not None else repository_root()
++
++def _review(root):
++    p = safe_join(root, REVIEW)
++    require(file_sha256(p) == REVIEW_SHA, 'REVIEW_AUTHORITY_CHANGED')
++    return read_json(p)
++
++def _source(window, root):
++    path = safe_join(root, window['source_metadata_path'])
++    require(file_sha256(path) == window['source_metadata_sha256'], 'WINDOW_METADATA_CHANGED')
++    return read_json(path)
++
++def uniform8(frames):
++    require(len(frames) >= 8, 'EIGHT_DISTINCT_SOURCE_FRAMES_REQUIRED')
++    return [round(i * (len(frames)-1) / 7) for i in range(8)]
++
++def draft_protocol(root=None):
++    """Construct an UNAPPROVED metadata draft, never open image/model bytes."""
++    root = _root(root); review = _review(root)
++    sources = review['source_components']
++    sample_path=safe_join(root,sources['E07']['path'])
++    require(file_sha256(sample_path)==sources['E07']['sha256'],'SAMPLING_MANIFEST_AUTHORITY_CHANGED')
++    sampling_manifests=json.loads(sample_path.read_text(encoding='utf8'))
++    windows = []
++    for row in review['cohort']:
++        meta = sources['INPUT-'+row['opaque_id']]
++        source = read_json(safe_join(root, meta['path']))
++        frames = source['frames']; pos = uniform8(frames)
++        selected = []
++        for i, index in enumerate(pos):
++            f = frames[index]; recorded = row['selected_mapping'][i]
++            require(f['frame_id'] == recorded['source_frame_id'] and f['sha256'] == recorded['recorded_source_png_sha256']
++                    and f['source_timestamp_s'] == recorded['native_source_pts_s'], 'REVIEW_SELECTION_MISMATCH')
++            selected.append({**recorded, 'source_path': f['image_path']})
++        sb=next(x for x in sampling_manifests if x['item_id']==row['item_id'] and x['name']=='UNIFORM_8_STORYBOARD')
++        require(sb['sampling']['positions']==pos and sb['reference_count']==0, 'STORYBOARD_SELECTION_CHANGED')
++        sb_path=str(Path(sources['E07']['path']).parent.parent/ sb['media_files'][0]).replace('\\','/')
++        sb_hash=sb['media_hashes'][0] if isinstance(sb['media_hashes'],list) else sb['media_hashes'][sb['media_files'][0]]
++        windows.append({'item_id':row['item_id'], 'opaque_id':row['opaque_id'], 'original_pack_ids':row['original_pack_ids'],
++            'permission':row['permission'], 'source_metadata_path':meta['path'], 'source_metadata_sha256':meta['sha256'],
++            'authorized_frame_list_sha256':digest(canonical_bytes(frames)),
++            'window_boundaries':{k:source['authoritative_item_metadata'][k] for k in ('half_open_frames','half_open_pts','source_video_sha256','authorized_visual_manifest_sha256')},
++            'positions':pos, 'selected':selected, 'storyboard_media':{'path':sb_path,'sha256':sb_hash},
++            'media_integrity':'PENDING_AUTHORIZED_EXECUTION'})
++    components = {p:file_sha256(safe_join(root,p)) for p in COMPONENTS}
++    for key, expected in [('E16',V1D_SHA),('E18',V2_SHA),('E22',SCHEMA_SHA),('E23',VALIDATOR_SHA)]:
++        p = sources[key]['path']; require(file_sha256(safe_join(root,p)) == expected, 'IMMUTABLE_COMPONENT_CHANGED:'+key)
++        components[p] = expected
++    return {'schema_version':VERSION, 'status':'DRAFT', 'review_authority':{'path':REVIEW,'sha256':REVIEW_SHA},
++        'settings':copy.deepcopy(review['proposed_settings']), 'matcher_policy':MATCHER,
++        'human_decisions':copy.deepcopy(review['human_decisions']), 'windows':windows,
++        'run_order':copy.deepcopy(review['proposed_run_order']), 'components_sha256':components,
++        'prompt_path':sources['E16']['path'], 'system_path':sources['E18']['path'],
++        'model_assets_manifest':ASSETS, 'model_snapshot':'.models/Qwen2.5-VL-7B-Instruct',
++        'execution_route':'EXPLICIT_IN_PROCESS_NF4_V1D', 'media_integrity':'PENDING_AUTHORIZED_EXECUTION',
++        'engineering_resolution':{'T01':'SEPARATE_FROZEN_REAL_V1D_GATE','T02':'VERSIONED_IN_PROCESS_PROTOCOL_ROUTE','T04':MATCHER,
++                                 'historical_decision_risk_text':'Preserved from review; not an updated approval or historical artifact rewrite'},
++        'protocol_approval':None, 'execution_authorization':None}
++
++def validate_draft(draft, root=None):
++    root = _root(root); expected = draft_protocol(root)
++    # Full equality prevents silent new fields, changes to any of the 21 decisions,
++    # scientific settings, source boundaries, model, sampling or legacy fallbacks.
++    require(draft == expected, 'V1D_DRAFT_OR_COMPONENT_MISMATCH')
++    require(len(draft['windows']) == 6 and len(draft['run_order']) == 18, 'SIX_BY_THREE_REQUIRED')
++    require({r['representation'] for r in draft['run_order']} == set(REPRESENTATIONS), 'REPRESENTATION_MISMATCH')
++    require(len({(r['opaque_id'],r['representation']) for r in draft['run_order']}) == 18, 'DUPLICATE_CALL')
++    for w in draft['windows']:
++        source = _source(w, root); frames = source['frames']
++        require(digest(canonical_bytes(frames)) == w['authorized_frame_list_sha256'], 'FRAME_LIST_CHANGED')
++        require(w['positions'] == uniform8(frames), 'NON_UNIFORM_SELECTION')
++        times = [f['native_source_pts_s'] for f in w['selected']]
++        require(all(type(t) in (int,float) and math.isfinite(t) for t in times) and all(b>a for a,b in zip(times,times[1:])), 'NATIVE_PTS_INVALID')
++        require(len({s['supplied_alias'] for s in w['selected']}) == 8, 'SOURCE_ALIAS_DUPLICATE')
++        require(all(re.fullmatch(r'F\d{4}',s['supplied_alias']) for s in w['selected']), 'SOURCE_ALIAS_INVALID')
++    return {'valid':True,'status':'DRAFT_NOT_APPROVED','draft_sha256':digest(canonical_bytes(draft)),
++            'decisions_pending':21,'planned_calls':18,'media_integrity':'PENDING_AUTHORIZED_EXECUTION'}
++
++def decision_digest(decision):
++    return digest(canonical_bytes(decision))
++
++def _approval(draft, approval):
++    expected = 'APPROVE_PHASE2B_V1D_FREEZE '+digest(canonical_bytes(draft))+' NO_EXECUTION'
++    require(isinstance(approval,dict) and approval.get('confirmation') == expected, 'EXPLICIT_HUMAN_FREEZE_APPROVAL_REQUIRED')
++    require(isinstance(approval.get('reviewer_id'),str) and bool(approval['reviewer_id'].strip()), 'HUMAN_REVIEWER_REQUIRED')
++    actual = approval.get('decisions')
++    required = [{'id':d['id'],'decision_sha256':decision_digest(d),'status':'APPROVED'} for d in draft['human_decisions']]
++    require(actual == required and len(actual) == 21, 'ALL_21_EXPLICIT_DECISIONS_REQUIRED')
++    require(approval.get('execution_authorized') is False, 'FREEZE_IS_NOT_EXECUTION')
++
++def frozen_bundle(draft, approval, root=None):
++    """Pure serialization, used by freeze writer and *in-memory mock* tests.
++
++    This does not create a frozen artifact or grant a human approval.
++    """
++    validate_draft(draft,root); _approval(draft,approval)
++    protocol = {'schema_version':VERSION,'status':'FROZEN','draft':copy.deepcopy(draft),'human_approval':copy.deepcopy(approval)}
++    return {'protocol':protocol,'freeze_receipt':{'protocol_sha256':digest(canonical_bytes(protocol)),
++        'draft_sha256':digest(canonical_bytes(draft)), 'approval_sha256':digest(canonical_bytes(approval))}}
++
++def freeze_protocol(draft, approval, root=None, output_base=None):
++    """Future explicit freeze operation; never called in the readiness task."""
++    require(not str(approval.get('reviewer_id','')).upper().startswith('MOCK'), 'MOCK_APPROVAL_CANNOT_CREATE_REAL_FREEZE')
++    root=_root(root); bundle=frozen_bundle(draft,approval,root)
++    return exclusive_tree(output_base or root/'artifacts/pass_t/phase2b/v1d_protocols',
++        {'frozen_bundle.json':pretty_bytes(bundle)}, {'schema_version':VERSION,'kind':'HUMAN_APPROVED_FREEZE_ONLY',**bundle['freeze_receipt']})
++
++def verify_frozen(bundle, root=None):
++    require(isinstance(bundle,dict) and set(bundle)=={'protocol','freeze_receipt'}, 'VALID_FROZEN_V1D_MANIFEST_REQUIRED')
++    p=bundle['protocol'];receipt=bundle['freeze_receipt']
++    require(p.get('schema_version')==VERSION and p.get('status')=='FROZEN', 'FROZEN_V1D_PROTOCOL_REQUIRED')
++    validate_draft(p['draft'],root); _approval(p['draft'],p['human_approval'])
++    require(receipt=={'protocol_sha256':digest(canonical_bytes(p)),'draft_sha256':digest(canonical_bytes(p['draft'])),
++        'approval_sha256':digest(canonical_bytes(p['human_approval']))}, 'FROZEN_MANIFEST_HASH_MISMATCH')
++    return p['draft']
++
++def authorize_execution(bundle, authorization, call_id=None, root=None, now=None):
++    draft=verify_frozen(bundle,root)
++    h=bundle['freeze_receipt']['protocol_sha256']
++    require(isinstance(authorization,dict), 'SEPARATE_EXECUTION_AUTHORIZATION_REQUIRED')
++    require(authorization.get('schema_version')==VERSION+'_EXECUTION_AUTHORIZATION', 'EXECUTION_AUTHORIZATION_VERSION')
++    require(authorization.get('confirmation')=='EXECUTE_PHASE2B_V1D '+h+' 18_CALLS', 'SEPARATE_EXECUTION_AUTHORIZATION_REQUIRED')
++    require(authorization.get('protocol_sha256')==h and authorization.get('max_calls')==18, 'AUTHORIZATION_BINDING_MISMATCH')
++    require(isinstance(authorization.get('reviewer_id'),str) and bool(authorization['reviewer_id'].strip()), 'EXECUTION_REVIEWER_REQUIRED')
++    require(isinstance(authorization.get('nonce'),str) and re.fullmatch(r'[0-9a-f]{32}',authorization['nonce']), 'EXECUTION_NONCE_REQUIRED')
++    try:
++        until=datetime.fromisoformat(authorization['expires_at_utc'])
++        current=now or datetime.now(timezone.utc)
++        require(until.tzinfo is not None and until>current, 'EXECUTION_AUTHORIZATION_EXPIRED')
++    except (KeyError,TypeError,ValueError) as error:
++        raise Phase2BBlocked('EXECUTION_AUTHORIZATION_EXPIRY_INVALID') from error
++    ids=[r['proposed_call_index'] for r in draft['run_order']]
++    require(authorization.get('call_ids')==ids, 'AUTHORIZED_CALL_INVENTORY_MISMATCH')
++    if call_id is not None:require(call_id in ids, 'CALL_NOT_AUTHORIZED')
++    return draft
++
++def call_context(draft, call_id):
++    rows=[r for r in draft['run_order'] if r['proposed_call_index']==call_id]
++    require(len(rows)==1, 'UNKNOWN_CALL_ID')
++    r=rows[0];w=next(x for x in draft['windows'] if x['opaque_id']==r['opaque_id'])
++    return r,w
++
++def require_production_human_records(bundle,authorization):
++    require(not str(authorization.get('reviewer_id','')).upper().startswith('MOCK')
++            and not str(bundle['protocol']['human_approval']['reviewer_id']).upper().startswith('MOCK'),
++            'MOCK_RECORDS_CANNOT_AUTHORIZE_REAL_MODEL_OR_FREEZE')
++
++def bridge_eligibility(envelope, deployment, root=None):
++    """Separate real-pilot gate, evaluated before torch/processor imports."""
++    require(deployment.get('real_pilot_mode')==REAL_MODE and deployment.get('synthetic_only') is False, 'REAL_PILOT_MODE_REQUIRED')
++    context=deployment.get('real_pilot_context')
++    require(isinstance(context,dict), 'FROZEN_PILOT_CONTEXT_REQUIRED')
++    draft=authorize_execution(context.get('frozen_bundle'),context.get('execution_authorization'),context.get('call_id'),root)
++    call,w=call_context(draft,context['call_id'])
++    require(call['representation']=='NATIVE_VIDEO_ARRAY', 'NATIVE_REPRESENTATION_NOT_AUTHORIZED')
++    require(deployment.get('experimental_task_prompt_sha256')==V1D_SHA and deployment.get('experimental_task_prompt_candidate')=='V1D', 'REAL_V1D_PIN_REQUIRED')
++    require(deployment.get('identity_clause_enabled') is False, 'IDENTITY_CLAUSE_NOT_APPROVED')
++    require(deployment.get('processor_max_pixels')==200704 and deployment.get('generation_timeout_seconds')==300, 'REAL_DEPLOYMENT_BUDGET_CHANGED')
++    root=_root(root)
++    require(deployment.get('response_format_system')==safe_join(root,draft['system_path']).read_text(encoding='utf8'), 'REAL_V2_FORMATTING_CHANGED')
++    payload=envelope.get('payload',{})
++    require(payload.get('instructions')==safe_join(root,draft['prompt_path']).read_text(encoding='utf8'), 'REAL_V1D_PROMPT_CHANGED')
++    require(payload.get('representation')=='NATIVE_VIDEO_ARRAY' and payload.get('media')==[], 'REAL_REPRESENTATION_MISMATCH')
++    native=envelope.get('native_video_array',{})
++    require(native.get('aliases')==[s['supplied_alias'] for s in w['selected']], 'REAL_ALIAS_MAPPING_CHANGED')
++    require(native.get('native_pts_s')==[s['native_source_pts_s'] for s in w['selected']], 'REAL_NATIVE_PTS_CHANGED')
++    from .v1d_execution import inspect_envelope
++    inspect_envelope(envelope,call,w,draft,root)
++    return {'protocol_sha256':context['frozen_bundle']['freeze_receipt']['protocol_sha256'],
++            'execution_authorization_sha256':digest(canonical_bytes(context['execution_authorization'])),
++            'call_id':context['call_id'],'representation_status':'FRAME_MATCHED_ONLY', 'source_frames':8,'temporal_units':4}
++
++def dry_run(root=None):
++    draft=draft_protocol(root); result=validate_draft(draft,root)
++    return {'draft':draft,'readiness':result,'next_freeze_confirmation':'APPROVE_PHASE2B_V1D_FREEZE '+result['draft_sha256']+' NO_EXECUTION',
++            'model_initialized':False,'media_read':False,'protocol_frozen':False,'calls_executed':0}
+--- /dev/null
++++ b/src/memory_graph/pass_t/phase2b/v1d_outputs.py
+@@ -0,0 +1,54 @@
++"""Raw-preserving staged strict validation and explicitly gated event matching."""
++from __future__ import annotations
++import json
++from pathlib import Path
++from .common import Phase2BBlocked, digest, pretty_bytes
++from .predictions import parse_raw, validate_prediction
++from .evaluation import evaluate_item, CLOSED_INTERVAL_MATCHER
++
++STAGES = ('JSON_SYNTAX','SCHEMA','SEMANTIC','CITATION','FULL_STRICT')
++
++def classify_output(raw: bytes | None, supplied_aliases: list[str]):
++    stages={k:'NOT_ASSESSED' for k in STAGES}
++    base={'raw_sha256':digest(raw) if raw is not None else None,'raw_bytes':len(raw) if raw is not None else None,
++          'stages':stages,'prediction':None,'authoritative_prediction':None,'qualitative_review':{'status':'UNREVIEWED','authoritative_structured_prediction':False}}
++    if raw is None:
++        return {**base,'classification':'ABSENT_PREDICTION','failure':'No model output available'}
++    try:
++        prediction=parse_raw(raw)
++    except Phase2BBlocked as error:
++        stages['JSON_SYNTAX']='FAIL';stages['FULL_STRICT']='FAIL'
++        return {**base,'classification':'INVALID_JSON','failure':str(error)}
++    stages['JSON_SYNTAX']='PASS'
++    result=validate_prediction(prediction,supplied_aliases)
++    base['prediction']=prediction; base['validation']=result
++    stages['SCHEMA']='FAIL' if result['structural_errors'] else 'PASS'
++    if result['structural_errors']:
++        stages['SEMANTIC']=stages['CITATION']='NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE'
++    else:
++        stages['SEMANTIC']='FAIL' if result['semantic_errors'] else 'PASS'
++        stages['CITATION']='FAIL' if result['citation_errors'] else 'PASS'
++    stages['FULL_STRICT']='PASS' if result['valid'] else 'FAIL'
++    if not result['valid']:
++        return {**base,'classification':'STRICT_INVALID','matching_status':'UNAVAILABLE_STRICT_INVALID'}
++    return {**base,'classification':'VALID_NO_CONFIRMED_EVENT' if prediction['window_outcome']=='NO_CONFIRMED_EVENT' else 'VALID_'+prediction['window_outcome'],
++            'authoritative_prediction':prediction,'matching_status':'ELIGIBLE_SUBJECT_TO_GT_SCOPE'}
++
++def preserve_raw(path: Path, raw: bytes):
++    """Exclusive durable raw write must occur before parsing/receipt validation."""
++    import os
++    with Path(path).open('xb') as stream:
++        stream.write(raw);stream.flush();os.fsync(stream.fileno())
++    return digest(raw)
++
++def gated_evaluation(raw, aliases, record, eligibility, representation, *, matcher_policy=CLOSED_INTERVAL_MATCHER):
++    classified=classify_output(raw,aliases)
++    if classified['authoritative_prediction'] is None:
++        return {'classification':classified,'matching_status':classified.get('matching_status','UNAVAILABLE_ABSENT_OR_INVALID'),
++                'sensitivity_results':None,'no_event_inferred':False,'qualitative_review':classified['qualitative_review']}
++    results={}
++    for tolerance in (0,0.2,0.5):
++        results[str(tolerance)]=evaluate_item(record,eligibility,classified['authoritative_prediction'],representation,
++            {'event_time_tolerance_s':tolerance,'bounded_interval_overlap_required':False,'matcher_policy':matcher_policy})
++    return {'classification':classified,'matching_status':'EVALUATED_WITH_GT_SCOPE','sensitivity_results':results,
++            'qualitative_review':classified['qualitative_review'],'formal_metrics':'UNDEFINED'}
+--- /dev/null
++++ b/src/memory_graph/pass_t/phase2b/v1d_execution.py
+@@ -0,0 +1,317 @@
++"""Explicit in-process V1D transport, guarded media boundary and supervised run.
++
++Importing this module or dry-running does not import a pixel/model/GPU library.
++Legacy HTTP/AVI executors are deliberately never selected as a fallback.
++"""
++from __future__ import annotations
++import base64
++import json
++import os
++import time
++import traceback
++from pathlib import Path
++from .common import canonical_bytes, digest, file_sha256, pretty_bytes, read_json, safe_join, environment_bool, repository_root
++from .v1d_protocol import (authorize_execution, call_context, require, require_production_human_records, REAL_MODE, V1D_SHA, VERSION, MODEL, REVISION)
++from .v1d_outputs import classify_output, preserve_raw, gated_evaluation
++
++def _save(path,value):
++    path=Path(path);tmp=path.with_suffix(path.suffix+'.pending')
++    tmp.write_bytes(pretty_bytes(value));os.replace(tmp,path)
++
++def runtime_deployment(bundle,authorization,call_id,root=None):
++    root=Path(root) if root is not None else repository_root()
++    draft=authorize_execution(bundle,authorization,call_id,root)
++    call,_=call_context(draft,call_id)
++    return {'approved':True,'synthetic_only':False,'real_pilot_mode':REAL_MODE,
++        'real_pilot_context':{'frozen_bundle':bundle,'execution_authorization':authorization,'call_id':call_id},
++        'processor_max_pixels':200704,'generation_timeout_seconds':300,
++        'response_format_system':safe_join(root,draft['system_path']).read_text(encoding='utf8'),
++        'asset_audit_path':str(safe_join(root,draft['model_assets_manifest'])),
++        'identity_clause_enabled':False,'video_input_mode':'NATIVE_ARRAY_EXPERIMENTAL' if call['representation']=='NATIVE_VIDEO_ARRAY' else 'NATIVE_VIDEO_ARRAY_DISABLED',
++        'experimental_task_prompt_candidate':'V1D','experimental_task_prompt_sha256':V1D_SHA}
++
++def inspect_envelope(envelope,call,window,draft,root=None):
++    """Retain the existing schema/key/serialized-leak guards for every format.
++
++    The new in-process array has no encoded-media rows. Its *validation-only*
++    projection uses the approved source descriptors to apply the unchanged
++    legacy payload schema/leak guard. The projection is never sent to Qwen.
++    Array dtype/order/pixels remain separately checked by the unchanged bridge.
++    """
++    import copy
++    from .model_visible import inspect_payload
++    root=Path(root) if root is not None else repository_root()
++    payload=envelope['payload'];rep=call['representation']
++    require(payload.get('representation')==rep,'PAYLOAD_REPRESENTATION_CHANGED')
++    require(payload.get('instructions')==safe_join(root,draft['prompt_path']).read_text(encoding='utf8'),'PAYLOAD_TASK_CHANGED')
++    require(envelope.get('generation')=={'max_output_tokens':1024,'sampling':False,'seed':42},'PAYLOAD_GENERATION_CHANGED')
++    require(payload.get('target')=={'opaque_id':'TARGET_A','description':'the designated object in supplied bounded media'},'PAYLOAD_TARGET_CHANGED')
++    aliases=[f['supplied_alias'] for f in window['selected']]
++    expected=[{'media_id':f'MEDIA_{i:03d}','media_type':'image/png','content_sha256':f['recorded_source_png_sha256'],'supplied_frame_aliases':[f['supplied_alias']]} for i,f in enumerate(window['selected'])]
++    projection=copy.deepcopy(payload)
++    if rep=='NATIVE_VIDEO_ARRAY':
++        require(payload['media']==[] and envelope['media']==[], 'NATIVE_ARRAY_MUST_NOT_USE_ENCODED_TRANSPORT')
++        projection['representation']='MULTI_IMAGE';projection['media']=expected
++    else:
++        if rep=='STORYBOARD':expected=[{'media_id':'MEDIA_000','media_type':'image/png','content_sha256':window['storyboard_media']['sha256'],'supplied_frame_aliases':aliases}]
++        require(payload['media']==expected,'PAYLOAD_MEDIA_IDENTITY_CHANGED')
++        rows=envelope['media'];require(len(rows)==len(expected),'ENCODED_MEDIA_COUNT_CHANGED')
++        for blob,descriptor in zip(rows,expected):
++            require(set(blob)=={'media_id','base64'} and blob['media_id']==descriptor['media_id'],'ENCODED_MEDIA_ID_CHANGED')
++            require(digest(base64.b64decode(blob['base64'],validate=True))==descriptor['content_sha256'],'ENCODED_MEDIA_BYTES_CHANGED')
++    inspection=inspect_payload(projection)
++    require(inspection['safe'],'MODEL_VISIBLE_SECURITY_GUARD:'+json.dumps(inspection['errors']))
++    return {'safe':True,'validation_projection_only':rep=='NATIVE_VIDEO_ARRAY','actual_payload_sha256':digest(canonical_bytes(payload))}
++
++def load_envelope(bundle,authorization,call_id,root=None):
++    """Only authorized future execution opens the approved image bytes here."""
++    root=Path(root) if root is not None else repository_root()
++    draft=authorize_execution(bundle,authorization,call_id,root)
++    call,w=call_context(draft,call_id)
++    blobs=[];identities=[]
++    for frame in w['selected']:
++        raw=safe_join(root,frame['source_path']).read_bytes()
++        require(digest(raw)==frame['recorded_source_png_sha256'], 'APPROVED_SOURCE_MEDIA_HASH_CHANGED')
++        i=frame['source_frame_index'];pts=frame['native_source_pts_s'];bounds=w['window_boundaries']
++        require(bounds['half_open_frames'][0]<=i<bounds['half_open_frames'][1] and bounds['half_open_pts'][0]<=pts<bounds['half_open_pts'][1], 'SOURCE_FRAME_OUTSIDE_APPROVED_WINDOW')
++        blobs.append(raw);identities.append({**frame,'verified_source_file_sha256':digest(raw)})
++    aliases=[f['supplied_alias'] for f in w['selected']]
++    payload={'schema_version':'PASS_T_PHASE2B_MODEL_PAYLOAD_V1','request_id':'REQ_'+digest(canonical_bytes({'protocol':bundle['freeze_receipt']['protocol_sha256'],'call':call_id}))[:20],
++       'target':{'opaque_id':'TARGET_A','description':'the designated object in supplied bounded media'},
++       'ontology':{'event_types':['PICKUP','PLACEMENT'],'window_outcomes':['CONFIRMED_EVENTS','NO_CONFIRMED_EVENT','INSUFFICIENT_EVIDENCE','TARGET_NOT_OBSERVABLE']},
++       'representation':call['representation'],'instructions':safe_join(root,draft['prompt_path']).read_text(encoding='utf8'),'media':[],
++       'output_contract':'PASS_T_PHASE2B_PREDICTION_V1'}
++    envelope={'payload':payload,'media':[],'generation':{'max_output_tokens':1024,'sampling':False,'seed':42}}
++    if call['representation']=='NATIVE_VIDEO_ARRAY':
++        # All approval/hash checks above precede any pixel/model imports.
++        import io
++        import numpy as np
++        from PIL import Image
++        arrays=[]
++        for raw in blobs:
++            with Image.open(io.BytesIO(raw)) as image:arrays.append(np.asarray(image.convert('RGB')).copy())
++        envelope['native_video_array']={'frames':np.stack(arrays),'aliases':aliases,
++           'native_pts_s':[s['native_source_pts_s'] for s in w['selected']],
++           'source_rgb_sha256':[digest(a.tobytes()) for a in arrays]}
++    else:
++        rows=list(zip(blobs,[[a] for a in aliases]))
++        if call['representation']=='STORYBOARD':
++            raw=safe_join(root,w['storyboard_media']['path']).read_bytes()
++            require(digest(raw)==w['storyboard_media']['sha256'], 'APPROVED_STORYBOARD_HASH_CHANGED')
++            rows=[(raw,aliases)]
++        for i,(raw,used_aliases) in enumerate(rows):
++            media_id=f'MEDIA_{i:03d}'
++            payload['media'].append({'media_id':media_id,'media_type':'image/png','content_sha256':digest(raw),'supplied_frame_aliases':used_aliases})
++            envelope['media'].append({'media_id':media_id,'base64':base64.b64encode(raw).decode('ascii')})
++    inspect_envelope(envelope,call,w,draft,root)
++    return envelope,{'media_integrity':'VERIFIED_APPROVED_INPUT_BYTES','source_video_bytes_reverified':False,
++        'native_PTS_provenance':'APPROVED_HASH_PINNED_SOURCE_METADATA','source_metadata_sha256':w['source_metadata_sha256'],
++        'authorized_frame_list_sha256':w['authorized_frame_list_sha256'],'window_boundaries':w['window_boundaries'],
++        'frame_alias_mapping':identities,'reference':'NONE','sampling':'GT_INDEPENDENT_UNIFORM_8',
++        'temporal_limitation':'FRAME_MATCHED_ONLY_8_SOURCE_FRAMES_4_UNITS' if call['representation']=='NATIVE_VIDEO_ARRAY' else 'EIGHT_SOURCE_FRAMES_NOT_EQUAL_VISUAL_TOKEN_BUDGET'}
++
++def validate_runtime_receipt(receipt,envelope,call,window,draft):
++    require(receipt.get('model')==MODEL and receipt.get('revision')==REVISION, 'RUNTIME_MODEL_CHANGED')
++    require(receipt.get('generation_controls')=={'do_sample':False,'max_new_tokens':1024,'max_time':300} and receipt.get('seed_applied')==42, 'GENERATION_POLICY_CHANGED')
++    text=receipt.get('rendered_prompt')
++    require(isinstance(text,str) and digest(text.encode())==receipt.get('rendered_prompt_sha256'), 'RENDERED_TEXT_RECEIPT_REQUIRED')
++    require(envelope['payload']['instructions'] in text, 'V1D_NOT_IN_CAPTURED_RENDERED_TEXT')
++    require(digest(receipt.get('captured_system_text','').encode())==draft['settings']['system_sha256'], 'V2_SYSTEM_CAPTURE_REQUIRED')
++    require(receipt['captured_system_text'] in text, 'V2_NOT_IN_CAPTURED_RENDERED_TEXT')
++    require(receipt.get('processed_frame_aliases')==[s['supplied_alias'] for s in window['selected']], 'PROCESSOR_ALIAS_MAPPING_CHANGED')
++    require(receipt.get('processor_frame_count')==8 and receipt.get('reference_image_count')==0, 'PROCESSOR_FRAME_REFERENCE_CHANGED')
++    require(receipt.get('configured_pixel_cap')==200704, 'PROCESSOR_CAP_CHANGED')
++    if call['representation']=='NATIVE_VIDEO_ARRAY':
++        require(receipt.get('native_video_modality') is True and receipt.get('temporal_patch_count')==4 and receipt.get('representation_status')=='FRAME_MATCHED_ONLY', 'NATIVE_VIDEO_UNITS_CHANGED')
++
++def record_call_result(destination,raw,receipt,envelope,provenance,bundle,authorization,call_id,*,execution_kind='REAL_AUTHORIZED',root=None):
++    """Common durable recording path; mock tests explicitly label their receipts."""
++    root=Path(root) if root is not None else repository_root()
++    draft=authorize_execution(bundle,authorization,call_id,root)
++    call,w=call_context(draft,call_id);destination=Path(destination)
++    destination.mkdir(parents=True,exist_ok=False)
++    preserve_raw(destination/'raw_output.txt',raw)
++    # Save every original runtime receipt before validating it; never discard raw.
++    _save(destination/'runtime_receipt.json',receipt)
++    aliases=[s['supplied_alias'] for s in w['selected']]
++    classified=classify_output(raw,aliases)
++    receipt_error=None
++    try:validate_runtime_receipt(receipt,envelope,call,w,draft)
++    except Exception as error:
++        receipt_error=str(error);classified['authoritative_prediction']=None
++        classified['matching_status']='UNAVAILABLE_INVALID_RUNTIME_RECEIPT'
++    record={'schema_version':VERSION+'_CALL_RECEIPT','execution_kind':execution_kind,
++        'protocol_sha256':bundle['freeze_receipt']['protocol_sha256'],'execution_authorization_sha256':digest(canonical_bytes(authorization)),
++        'call':call,'components_sha256':draft['components_sha256'],'provenance':provenance,
++        'payload_sha256':digest(canonical_bytes(envelope['payload'])),'generation_sha256':digest(canonical_bytes(envelope['generation'])),
++        'runtime_receipt_sha256':file_sha256(destination/'runtime_receipt.json'),'raw_sha256':digest(raw),
++        'classification':classified,'runtime_receipt_error':receipt_error,
++        'qualitative_review':{'status':'UNREVIEWED','scope':'DESCRIPTIVE_ONLY','authoritative_prediction':False},
++        'structured_matching':'PENDING_APPROVED_GT_EVALUATION' if classified['authoritative_prediction'] is not None else classified.get('matching_status','UNAVAILABLE_INVALID'),
++        'memory_graph_written':False}
++    _save(destination/'call_receipt.json',record)
++    if receipt_error:raise ValueError('RUNTIME_RECEIPT_INVALID_RAW_PRESERVED:'+receipt_error)
++    return record
++
++def evaluate_recorded_call(destination,bundle,authorization,record,eligibility,root=None):
++    """CPU-only post-call matching, with GT supplied only to this private API.
++
++    Never reads GT itself or exposes it to model input; software mocks are not GT.
++    """
++    root=Path(root) if root is not None else repository_root();destination=Path(destination)
++    saved=read_json(destination/'call_receipt.json');cid=saved['call']['proposed_call_index']
++    draft=authorize_execution(bundle,authorization,cid,root);_,w=call_context(draft,cid)
++    require(saved['protocol_sha256']==bundle['freeze_receipt']['protocol_sha256'] and saved['execution_authorization_sha256']==digest(canonical_bytes(authorization)), 'RECORDED_CALL_PROTOCOL_CHANGED')
++    require(file_sha256(destination/'raw_output.txt')==saved['raw_sha256'] and file_sha256(destination/'runtime_receipt.json')==saved['runtime_receipt_sha256'], 'RECORDED_CALL_BYTES_CHANGED')
++    require(record['annotation_item_id']==w['item_id'] and eligibility['annotation_item_id']==w['item_id'] and eligibility['pilot_scoring_permission']==w['permission'], 'EVALUATION_SCOPE_CHANGED')
++    if saved['runtime_receipt_error'] or saved['classification']['authoritative_prediction'] is None:
++        return {'matching_status':'UNAVAILABLE_STRICT_INVALID_OR_BAD_RECEIPT','sensitivity_results':None,'no_event_inferred':False}
++    mapping=[{'opaque_alias':x['supplied_alias'],'source_timestamp_s':x['native_source_pts_s']} for x in w['selected']]
++    return gated_evaluation((destination/'raw_output.txt').read_bytes(),[x['opaque_alias'] for x in mapping],record,eligibility,
++                            {'private_mapping':mapping},matcher_policy=draft['matcher_policy'])
++
++def safety_reason(sample,stage):
++    if stage=='BEFORE_LOAD' and (sample['gpu_free_gib']<10 or sample['ram_available_gib']<8):return 'LOAD_RESOURCE_GATE'
++    if stage=='BEFORE_GENERATION' and sample['gpu_free_gib']<2:return 'GENERATION_RESOURCE_GATE'
++    if sample['gpu_used_gib']>14.5 or sample['owned_rss_gib']>20 or sample['ram_available_gib']<2:return 'RESOURCE_STOP'
++    return None
++
++def call_completion_summary(destination,run_order):
++    """Absent, incomplete and never-started calls stay separate from valid NO_EVENT."""
++    destination=Path(destination);rows=[]
++    for call in run_order:
++        cid=call['proposed_call_index'];folder=destination/f'call_{cid:02d}'
++        if (folder/'call_receipt.json').exists():
++            receipt=read_json(folder/'call_receipt.json')
++            status='INVALID_RUNTIME_RECEIPT' if receipt['runtime_receipt_error'] else receipt['classification']['classification']
++        elif (folder/'raw_output.txt').exists():status='INCOMPLETE_RECEIPT_RAW_PRESERVED'
++        elif (destination/f'call_{cid:02d}.started').exists():status='ABSENT_PREDICTION_AFTER_START'
++        else:status='NOT_EXECUTED_AFTER_STOP'
++        rows.append({'call_id':cid,'status':status})
++    return rows
++
++def staged_run_summary(destination,run_order):
++    from collections import Counter
++    destination=Path(destination)
++    states=call_completion_summary(destination,run_order)
++    stages={k:Counter() for k in ('JSON_SYNTAX','SCHEMA','SEMANTIC','CITATION','FULL_STRICT')}
++    for row in states:
++        file=destination/f"call_{row['call_id']:02d}/call_receipt.json"
++        if file.exists():
++            classified=read_json(file)['classification']
++            for key,counter in stages.items():counter[classified['stages'][key]]+=1
++    return {'planned_calls':len(run_order),'call_classifications':dict(Counter(s['status'] for s in states)),
++            'stage_counts_over_recorded_outputs':{k:dict(v) for k,v in stages.items()},
++            'no_event_inferred_from_invalid':False,'formal_metrics':'UNDEFINED'}
++
++def claim_authorization_use(destination,authorization):
++    """Exclusive lease: replay cannot restart the same 18-call permission."""
++    destination=Path(destination);destination.mkdir(parents=True,exist_ok=False)
++    _save(destination/'authorization_use.json',authorization)
++
++def _resources(pid=None):
++    import subprocess,psutil
++    text=subprocess.check_output(['nvidia-smi','--query-gpu=memory.used,memory.free','--format=csv,noheader,nounits'],text=True,timeout=5)
++    require(len(text.strip().splitlines())==1,'EXACTLY_ONE_GPU_REQUIRED')
++    used,free=[float(v.strip())/1024 for v in text.strip().split(',')]
++    rss=0
++    if pid:
++        try:
++            parent=psutil.Process(pid)
++            for process in [parent]+parent.children(recursive=True):
++                try:rss+=process.memory_info().rss
++                except (psutil.NoSuchProcess,psutil.AccessDenied):pass
++        except psutil.NoSuchProcess:pass
++    return {'gpu_used_gib':used,'gpu_free_gib':free,'ram_available_gib':psutil.virtual_memory().available/2**30,'owned_rss_gib':rss/2**30}
++
++def _runtime_factory(deployment,draft,root):
++    # The shared NF4 loader/generate source is not edited. This observer only
++    # captures original CPU processor tensors before its unchanged CUDA transfer.
++    context=deployment['real_pilot_context']
++    require_production_human_records(context['frozen_bundle'],context['execution_authorization'])
++    from .local_vlm.nf4 import QwenNF4Runtime
++    from .local_vlm.catalog import SPECS
++    from .local_vlm.video_array_bridge import tensor_record
++    class ObservedNF4(QwenNF4Runtime):
++        def preprocess(self,envelope):
++            inputs,receipt=super().preprocess(envelope)
++            records={k:tensor_record(t) for k,t in inputs.items()}
++            if 'tensor_records' in receipt:require(receipt['tensor_records']==records,'PROCESSOR_TENSOR_CAPTURE_CHANGED')
++            receipt['tensor_records']=records
++            receipt['captured_input_ids']=inputs['input_ids'].tolist()
++            receipt['captured_system_text']=self.deployment['response_format_system']
++            return inputs,receipt
++    return ObservedNF4(SPECS['qwen_nf4'],deployment,safe_join(root,draft['model_snapshot']),None)
++
++def _worker(bundle,authorization,destination,root,execution_kind='REAL_AUTHORIZED'):
++    root=Path(root);destination=Path(destination);runtime=None
++    try:
++        draft=authorize_execution(bundle,authorization,root=root)
++        require(environment_bool('PASS_T_LOCAL_RUNTIME_APPROVAL') and environment_bool('PASS_T_PHASE2B_REAL_RUN_PERMISSION'), 'EXTERNAL_RUNTIME_AND_REAL_RUN_PERMISSION_REQUIRED')
++        reason=safety_reason(_resources(),'BEFORE_LOAD');require(reason is None,str(reason))
++        first=draft['run_order'][0]['proposed_call_index']
++        deployment=runtime_deployment(bundle,authorization,first,root);deployment['scratch_path']=str(destination/'scratch')
++        _save(destination/'progress.json',{'stage':'MODEL_LOADING','started_unix':time.time()})
++        runtime=_runtime_factory(deployment,draft,root)
++        for call in draft['run_order']:
++            cid=call['proposed_call_index'];authorize_execution(bundle,authorization,cid,root)
++            _save(destination/'progress.json',{'stage':'CALL','call_id':cid,'started_unix':time.time()})
++            reason=safety_reason(_resources(os.getpid()),'BEFORE_GENERATION');require(reason is None,str(reason))
++            # Exclusive claim is persistent even if a worker crashes mid-generation.
++            with (destination/f'call_{cid:02d}.started').open('xb') as f:f.write(canonical_bytes({'call_id':cid,'started_unix':time.time()}))
++            envelope,provenance=load_envelope(bundle,authorization,cid,root)
++            runtime.deployment=runtime_deployment(bundle,authorization,cid,root);runtime.deployment['scratch_path']=str(destination/'scratch')
++            result=runtime.generate(envelope)  # Exactly one call, no retries/warmups.
++            raw=result.pop('raw_output').encode('utf8')
++            record_call_result(destination/f'call_{cid:02d}',raw,result,envelope,provenance,bundle,authorization,cid,root=root,execution_kind=execution_kind)
++            require(not result.get('generation_deadline_reached',False),'GENERATION_DEADLINE_RAW_PRESERVED')
++        _save(destination/'progress.json',{'stage':'COMPLETE','completed_calls':18,'started_unix':time.time()})
++    except BaseException:
++        _save(destination/'worker_failure.json',{'error':traceback.format_exc(),'retry':False})
++        raise
++    finally:
++        if runtime is not None:del runtime
++
++def execute_authorized(bundle,authorization,root=None):
++    """The only production run entry. It is never invoked by CPU dry-run.
++
++    Authorization-use directory prevents reuse/replay of the same permission;
++    no arbitrary output directory or legacy transport fallback is accepted.
++    """
++    root=Path(root) if root is not None else repository_root()
++    draft=authorize_execution(bundle,authorization,root=root)
++    require_production_human_records(bundle,authorization)
++    require(environment_bool('PASS_T_LOCAL_RUNTIME_APPROVAL') and environment_bool('PASS_T_PHASE2B_REAL_RUN_PERMISSION'), 'EXTERNAL_RUNTIME_AND_REAL_RUN_PERMISSION_REQUIRED')
++    destination=root/'artifacts/pass_t/phase2b/v1d_pilot_runs'/digest(canonical_bytes(authorization))
++    claim_authorization_use(destination,authorization)
++    _save(destination/'frozen_bundle.json',bundle)
++    import multiprocessing
++    process=multiprocessing.get_context('spawn').Process(target=_worker,args=(bundle,authorization,str(destination),str(root)))
++    samples=[];reason=None;began=time.time()
++    process.start()
++    try:
++        while process.is_alive():
++            sample=_resources(process.pid);samples.append({'elapsed_s':time.time()-began,**sample})
++            reason=safety_reason(sample,'RUNNING')
++            progress_path=destination/'progress.json'
++            if progress_path.exists():
++                progress=read_json(progress_path);elapsed=time.time()-progress['started_unix']
++                if progress['stage']=='MODEL_LOADING' and elapsed>120:reason='LOAD_TIMEOUT'
++                if progress['stage']=='CALL' and elapsed>330:reason='REQUEST_TIMEOUT'
++            if time.time()-began>6060:reason='WHOLE_PILOT_TIMEOUT'
++            if reason:break
++            process.join(timeout=1)
++    except BaseException:
++        reason='SUPERVISOR_FAILURE';raise
++    finally:
++        if process.is_alive():process.terminate()
++        process.join(timeout=10)
++        if process.is_alive():process.kill();process.join(timeout=10)
++        statuses=call_completion_summary(destination,draft['run_order'])
++        missing=[r['call_id'] for r in statuses if r['status'] in {'NOT_EXECUTED_AFTER_STOP','ABSENT_PREDICTION_AFTER_START','INCOMPLETE_RECEIPT_RAW_PRESERVED'}]
++        _save(destination/'run_receipt.json',{'protocol_sha256':bundle['freeze_receipt']['protocol_sha256'],
++            'authorization_sha256':digest(canonical_bytes(authorization)),'planned_calls':18,'missing_call_ids':missing,
++            'call_statuses':statuses,'stage_summary':staged_run_summary(destination,draft['run_order']),
++            'stop_reason':reason,'worker_exit_code':process.exitcode,
++            'resource_samples':samples,'generation_retries':0,'memory_graph_written':False,'formal_metrics':'UNDEFINED'})
++    return destination
+--- /dev/null
++++ b/scripts/run_pass_t_v1d_pilot.py
+@@ -0,0 +1,35 @@
++"""Explicit V1D draft/freeze/run commands; default is CPU metadata dry-run."""
++import sys
++sys.dont_write_bytecode=True
++from pathlib import Path
++ROOT=Path(__file__).resolve().parents[1]
++# Match the already successful V1D worker's local dependency search path.
++# No install/download or alternate model/runtime environment is selected.
++sys.path[:0]=[str(ROOT/'src'),str(ROOT/'artifacts/pass_i/runtime/vendor'),
++             str(ROOT/'outputs/current_development/video_event_experiment/.deps')]
++import argparse,json
++from memory_graph.pass_t.phase2b.common import read_json,pretty_bytes
++from memory_graph.pass_t.phase2b.v1d_protocol import dry_run,freeze_protocol
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('mode',choices=['dry-run','freeze','run'],nargs='?',default='dry-run')
++    parser.add_argument('--draft');parser.add_argument('--human-approval');parser.add_argument('--frozen');parser.add_argument('--execution-authorization')
++    parser.add_argument('--output',help='New dry-run JSON file only; never overwritten')
++    args=parser.parse_args()
++    if args.mode=='dry-run':
++        result=dry_run(ROOT)
++        if args.output:
++            with Path(args.output).open('xb') as f:f.write(pretty_bytes(result['draft']))
++        print(json.dumps({'mode':'CPU_METADATA_DRY_RUN','draft_sha256':result['readiness']['draft_sha256'],
++            'decisions_pending':21,'planned_calls':18,'media_integrity':'PENDING_AUTHORIZED_EXECUTION',
++            'model_initialized':False,'calls_executed':0,'protocol_frozen':False}))
++    elif args.mode=='freeze':
++        if not args.draft or not args.human_approval:parser.error('freeze requires --draft and --human-approval; no approval inferred')
++        print(freeze_protocol(read_json(Path(args.draft)),read_json(Path(args.human_approval)),ROOT))
++    else:
++        if not args.frozen or not args.execution_authorization:parser.error('run requires --frozen and --execution-authorization')
++        from memory_graph.pass_t.phase2b.v1d_execution import execute_authorized
++        print(execute_authorized(read_json(Path(args.frozen)),read_json(Path(args.execution_authorization)),ROOT))
++
++if __name__=='__main__':main()
+--- /dev/null
++++ b/tests/test_pass_t_v1d_readiness.py
+@@ -0,0 +1,389 @@
++"""Bounded CPU tests. Every event below is deterministic software mock data,
++not a VLM prediction, visual fixture, human annotation or physical-event GT.
++"""
++import sys
++sys.dont_write_bytecode=True
++import os,json,copy,unittest,datetime,hashlib,importlib.util
++from pathlib import Path
++from unittest.mock import patch,Mock
++ROOT=Path(__file__).resolve().parents[1]
++OUT=ROOT/'WORKSPACE/Pass_T/Execution_Readiness_Repair_20261015'
++sys.path[:0]=[str(ROOT/'src'),str(ROOT/'artifacts/pass_i/runtime/vendor')]
++DENIED=[]
++def guard(event,args):
++    if event=='import' and str(args[0]).split('.')[0] in {'torch','transformers','PIL','cv2','tensorflow','huggingface_hub'}:
++        DENIED.append(event+':'+str(args[0]));raise RuntimeError('CPU_TEST_MODEL_PIXEL_IMPORT_DENIED')
++    if event.startswith('socket.'):
++        DENIED.append(event);raise RuntimeError('CPU_TEST_NETWORK_DENIED')
++    if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
++        p=Path(os.fsdecode(args[0])).resolve();low=str(p).lower().replace('\\','/')
++        if p.suffix.lower() in {'.png','.jpg','.jpeg','.mp4','.avi','.mov','.safetensors','.bin','.pt','.pth','.npy','.npz'} or '/.models/' in low or low.endswith('/external_dev_gt.json') or '/val_set/' in low:
++            DENIED.append(str(p));raise RuntimeError('CPU_TEST_MEDIA_WEIGHT_GT_DENIED')
++        mode,flags=args[1:3]
++        writing=(isinstance(mode,str) and any(c in mode for c in 'wax+')) or (isinstance(flags,int) and flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC))
++        if writing and not p.is_relative_to(OUT):raise RuntimeError('CPU_TEST_WRITE_OUTSIDE_REPORT')
++sys.addaudithook(guard)
++
++from memory_graph.pass_t.phase2b import v1d_protocol as p
++from memory_graph.pass_t.phase2b import v1d_execution as x
++from memory_graph.pass_t.phase2b import v1d_outputs as o
++from memory_graph.pass_t.phase2b.evaluation import (closed_interval_gap,match_known_events,evaluate_item,CLOSED_INTERVAL_MATCHER)
++from memory_graph.pass_t.phase2b.common import canonical_bytes,digest,Phase2BBlocked
++
++def mock_approval(draft):
++    return {'confirmation':'APPROVE_PHASE2B_V1D_FREEZE '+digest(canonical_bytes(draft))+' NO_EXECUTION',
++       'reviewer_id':'MOCK_HUMAN_NOT_ACTUAL_APPROVAL','execution_authorized':False,
++       'decisions':[{'id':d['id'],'decision_sha256':p.decision_digest(d),'status':'APPROVED'} for d in draft['human_decisions']]}
++def mock_auth(bundle):
++    h=bundle['freeze_receipt']['protocol_sha256']
++    return {'schema_version':p.VERSION+'_EXECUTION_AUTHORIZATION','confirmation':'EXECUTE_PHASE2B_V1D '+h+' 18_CALLS',
++       'protocol_sha256':h,'max_calls':18,'reviewer_id':'MOCK_NOT_REAL_EXECUTION_AUTHORIZATION','nonce':'a'*32,
++       'expires_at_utc':'2099-01-01T00:00:00+00:00','call_ids':list(range(1,19))}
++def mock_native_envelope(draft,cid):
++    call,w=p.call_context(draft,cid)
++    return {'payload':{'schema_version':'PASS_T_PHASE2B_MODEL_PAYLOAD_V1','request_id':'REQ_'+'a'*20,
++       'representation':'NATIVE_VIDEO_ARRAY','media':[], 'instructions':(ROOT/draft['prompt_path']).read_text(encoding='utf8'),
++       'target':{'opaque_id':'TARGET_A','description':'the designated object in supplied bounded media'},
++       'ontology':{'event_types':['PICKUP','PLACEMENT'],'window_outcomes':['CONFIRMED_EVENTS','NO_CONFIRMED_EVENT','INSUFFICIENT_EVIDENCE','TARGET_NOT_OBSERVABLE']},
++       'output_contract':'PASS_T_PHASE2B_PREDICTION_V1'},'media':[],
++       'generation':{'max_output_tokens':1024,'sampling':False,'seed':42},
++       'native_video_array':{'aliases':[f['supplied_alias'] for f in w['selected']],'native_pts_s':[f['native_source_pts_s'] for f in w['selected']]}}
++def mock_no_event(aliases):
++    return {'schema_version':'PASS_T_PHASE2B_PREDICTION_V1','target_id':'TARGET_A','window_outcome':'NO_CONFIRMED_EVENT',
++        'window_cited_frame_aliases':[aliases[0]],'events':[],
++        'last_directly_supported_state':{'state':'STATE_UNKNOWN','supporting_frame_alias':None},
++        'end_visibility':'UNKNOWN','subsequent_state':'UNKNOWN','rationale':'Software mock only.',
++        'uncertainty':'No physical judgment from software mock.',
++        'safety_assertions':{'global_identity_claimed':False,'state_persisted_across_unobserved_interval':False,'container_or_handover_auto_classified':False}}
++def mock_event(alias='F0001',event_id='PRED_EVT_001'):
++    return {'event_id':event_id,'event_type':'PICKUP','timing':{'status':'EXACT_SUPPLIED_FRAME','frame_alias':alias},
++        'cited_frame_aliases':[alias],'before_state':{'state':'STATE_UNKNOWN','supporting_frame_alias':None},
++        'after_state':{'state':'STATE_UNKNOWN','supporting_frame_alias':None},'target_association_uncertainty':'NONE',
++        'timing_uncertainty':'Mock time compatibility only.','rationale':'Deterministic software test, not evidence.'}
++def mock_gt(a,b,event_id='MOCK_GT_1'):
++    return {'event_id':event_id,'event_type':'PICKUP','event_time':{'start_timestamp_s':a,'end_timestamp_s':b}}
++
++class GuardTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.draft=p.draft_protocol(ROOT)
++        cls.bundle=p.frozen_bundle(cls.draft,mock_approval(cls.draft),ROOT) # memory only; no freeze writer called
++        cls.auth=mock_auth(cls.bundle)
++    def test_draft_is_unapproved_and_all_21_pending(self):
++        self.assertEqual(p.validate_draft(self.draft,ROOT)['decisions_pending'],21)
++        self.assertTrue(all(d['human_approval_status']=='PROPOSED_AWAITING_HUMAN_APPROVAL' for d in self.draft['human_decisions']))
++    def test_three_representations_exact_six_by_three(self):
++        self.assertEqual({r['representation'] for r in self.draft['run_order']},set(p.REPRESENTATIONS))
++        self.assertEqual(len(self.draft['run_order']),18)
++    def test_no_execution_without_frozen_manifest_before_loader(self):
++        with patch.object(x,'_runtime_factory') as factory,patch.object(x,'load_envelope') as loader:
++            with self.assertRaises(Phase2BBlocked):x.execute_authorized({},self.auth,ROOT)
++            factory.assert_not_called();loader.assert_not_called()
++    def test_no_execution_without_separate_authorization(self):
++        with patch.object(x,'_runtime_factory') as factory,patch.object(x,'load_envelope') as loader:
++            with self.assertRaises(Phase2BBlocked):x.execute_authorized(self.bundle,None,ROOT)
++            factory.assert_not_called();loader.assert_not_called()
++    def test_no_external_permission_flags_no_resources_media_or_model(self):
++        with patch.dict(os.environ,{'PASS_T_LOCAL_RUNTIME_APPROVAL':'','PASS_T_PHASE2B_REAL_RUN_PERMISSION':''}),\
++             patch.object(x,'_resources') as resources,patch.object(x,'_runtime_factory') as factory:
++            with self.assertRaises(Phase2BBlocked):x.execute_authorized(self.bundle,self.auth,ROOT)
++            resources.assert_not_called();factory.assert_not_called()
++    def test_authorization_expired(self):
++        auth=copy.deepcopy(self.auth);auth['expires_at_utc']='2000-01-01T00:00:00+00:00'
++        with self.assertRaises(Phase2BBlocked):p.authorize_execution(self.bundle,auth,root=ROOT)
++    def test_authorization_does_not_reuse_other_protocol(self):
++        auth=copy.deepcopy(self.auth);auth['protocol_sha256']='0'*64
++        with self.assertRaises(Phase2BBlocked):p.authorize_execution(self.bundle,auth,root=ROOT)
++    def test_authorization_call_budget_and_inventory(self):
++        for key,val in [('max_calls',19),('call_ids',[1]),('nonce','bad')]:
++            auth=copy.deepcopy(self.auth);auth[key]=val
++            with self.subTest(key=key),self.assertRaises(Phase2BBlocked):p.authorize_execution(self.bundle,auth,root=ROOT)
++    def test_call_outside_budget(self):
++        with self.assertRaises(Phase2BBlocked):p.authorize_execution(self.bundle,self.auth,19,ROOT)
++    def test_freeze_requires_all_21_decisions(self):
++        approval=mock_approval(self.draft);approval['decisions'].pop()
++        with self.assertRaises(Phase2BBlocked):p.frozen_bundle(self.draft,approval,ROOT)
++    def test_freeze_rejects_implicit_approval(self):
++        with self.assertRaises(Phase2BBlocked):p.frozen_bundle(self.draft,{'approved':True},ROOT)
++    def test_draft_settings_tampering_and_legacy_rejected(self):
++        for key,val in [('reference','STATIC_PRIMARY'),('model','other'),('max_pixels',999999),('representations',['REENCODED_AUTHORIZED_VIDEO']),('task_prompt_sha256','0'*64),('new_identity_ambiguity_clause',True)]:
++            draft=copy.deepcopy(self.draft);draft['settings'][key]=val
++            with self.subTest(key=key),self.assertRaises(Phase2BBlocked):p.validate_draft(draft,ROOT)
++    def test_component_nf4_and_bridge_hash_tampering(self):
++        for name in [p.BASE+'local_vlm/nf4.py',p.BASE+'local_vlm/video_array_bridge.py',p.BASE+'contracts/prediction_v1.json']:
++            b=copy.deepcopy(self.bundle);b['protocol']['draft']['components_sha256'][name]='0'*64
++            with self.subTest(name=name),self.assertRaises(Phase2BBlocked):p.verify_frozen(b,ROOT)
++    def test_frozen_receipt_hash_tampering(self):
++        b=copy.deepcopy(self.bundle);b['freeze_receipt']['protocol_sha256']='0'*64
++        with self.assertRaises(Phase2BBlocked):p.verify_frozen(b,ROOT)
++    def test_uniform8_not_target_or_gt_selected(self):
++        self.assertEqual(p.uniform8(list(range(108))),[0,15,31,46,61,76,92,107])
++        for w in self.draft['windows']:
++            self.assertEqual(w['media_integrity'],'PENDING_AUTHORIZED_EXECUTION')
++        draft=copy.deepcopy(self.draft);draft['windows'][0]['positions'][1]+=1
++        with self.assertRaises(Phase2BBlocked):p.validate_draft(draft,ROOT)
++    def test_native_bridge_cpu_eligibility(self):
++        cid=next(r['proposed_call_index'] for r in self.draft['run_order'] if r['representation']=='NATIVE_VIDEO_ARRAY')
++        dep=x.runtime_deployment(self.bundle,self.auth,cid,ROOT);_,w=p.call_context(self.draft,cid)
++        envelope=mock_native_envelope(self.draft,cid)
++        result=p.bridge_eligibility(envelope,dep,ROOT)
++        self.assertEqual((result['source_frames'],result['temporal_units']),(8,4))
++    def test_bridge_alias_pts_prompt_system_and_leak_tampering(self):
++        cid=next(r['proposed_call_index'] for r in self.draft['run_order'] if r['representation']=='NATIVE_VIDEO_ARRAY')
++        for mutation in ['aliases','pts','prompt','system','leak','generation']:
++            dep=x.runtime_deployment(self.bundle,self.auth,cid,ROOT);env=mock_native_envelope(self.draft,cid)
++            if mutation=='aliases':env['native_video_array']['aliases'][0]='F9999'
++            if mutation=='pts':env['native_video_array']['native_pts_s'][0]+=1
++            if mutation=='prompt':env['payload']['instructions']='different'
++            if mutation=='system':dep['response_format_system']='different'
++            if mutation=='leak':env['payload']['physical_gt']='forbidden'
++            if mutation=='generation':env['generation']['max_output_tokens']=1
++            with self.subTest(mutation=mutation),self.assertRaises(Phase2BBlocked):p.bridge_eligibility(env,dep,ROOT)
++    def test_bridge_rejects_before_torch_import(self):
++        from memory_graph.pass_t.phase2b.local_vlm.video_array_bridge import prepare_video_array
++        with self.assertRaises(Phase2BBlocked):prepare_video_array(None,{}, {'real_pilot_mode':p.REAL_MODE,'synthetic_only':False})
++        self.assertNotIn('torch',sys.modules)
++    def test_mock_bridge_cannot_enter_real_preprocessor(self):
++        from memory_graph.pass_t.phase2b.local_vlm.video_array_bridge import prepare_video_array
++        cid=next(r['proposed_call_index'] for r in self.draft['run_order'] if r['representation']=='NATIVE_VIDEO_ARRAY')
++        dep=x.runtime_deployment(self.bundle,self.auth,cid,ROOT);env=mock_native_envelope(self.draft,cid)
++        with self.assertRaisesRegex(Phase2BBlocked,'MOCK_RECORDS'):
++            prepare_video_array(None,env,dep)
++        self.assertNotIn('torch',sys.modules)
++    def test_real_mode_does_not_impersonate_synthetic(self):
++        cid=next(r['proposed_call_index'] for r in self.draft['run_order'] if r['representation']=='NATIVE_VIDEO_ARRAY')
++        dep=x.runtime_deployment(self.bundle,self.auth,cid,ROOT);dep['synthetic_only']=True
++        with self.assertRaises(Phase2BBlocked):p.bridge_eligibility({},dep,ROOT)
++    def test_real_native_does_not_use_unauthorized_representation(self):
++        cid=next(r['proposed_call_index'] for r in self.draft['run_order'] if r['representation']=='MULTI_IMAGE')
++        dep=x.runtime_deployment(self.bundle,self.auth,cid,ROOT)
++        with self.assertRaises(Phase2BBlocked):p.bridge_eligibility({},dep,ROOT)
++    def test_real_media_loader_guard_precedes_file_reads(self):
++        with self.assertRaises(Phase2BBlocked):x.load_envelope({},self.auth,1,ROOT)
++        self.assertNotIn('PIL',sys.modules)
++    def test_legacy_bridge_synthetic_guard_preserved_as_source(self):
++        text=(ROOT/p.BASE/'local_vlm/video_array_bridge.py').read_text(encoding='utf8')
++        self.assertIn("real_receipt is None and expected_prompt_sha256!=V1C_SHA256",text)
++        self.assertIn("deployment.get('synthetic_only') is not True",text)
++    def test_dry_run_cannot_invoke_model_or_media(self):
++        with patch.object(x,'_runtime_factory') as factory,patch.object(x,'load_envelope') as loader:
++            dry=p.dry_run(ROOT)
++            self.assertEqual(dry['calls_executed'],0);self.assertFalse(dry['protocol_frozen'])
++            factory.assert_not_called();loader.assert_not_called()
++    def test_cli_default_is_cpu_dry_run(self):
++        import io,contextlib
++        spec=importlib.util.spec_from_file_location('mock_v1d_cli',ROOT/'scripts/run_pass_t_v1d_pilot.py')
++        cli=importlib.util.module_from_spec(spec);spec.loader.exec_module(cli)
++        output=io.StringIO()
++        with patch.object(sys,'argv',['run_pass_t_v1d_pilot.py']),contextlib.redirect_stdout(output):cli.main()
++        result=json.loads(output.getvalue());self.assertEqual(result['mode'],'CPU_METADATA_DRY_RUN');self.assertEqual(result['calls_executed'],0)
++    def test_cli_output_is_direct_unapproved_draft(self):
++        import io,contextlib,tempfile
++        spec=importlib.util.spec_from_file_location('mock_v1d_cli_out',ROOT/'scripts/run_pass_t_v1d_pilot.py')
++        cli=importlib.util.module_from_spec(spec);spec.loader.exec_module(cli)
++        folder=Path(tempfile.mkdtemp(prefix='MOCK_DRAFT_',dir=OUT/'mock_records'));output=folder/'draft.json'
++        with patch.object(sys,'argv',['run_pass_t_v1d_pilot.py','dry-run','--output',str(output)]),contextlib.redirect_stdout(io.StringIO()):cli.main()
++        value=json.loads(output.read_text(encoding='utf8'));self.assertEqual(value['status'],'DRAFT');p.validate_draft(value,ROOT)
++    def test_mock_human_records_cannot_load_real_runtime(self):
++        with self.assertRaises(Phase2BBlocked):p.require_production_human_records(self.bundle,self.auth)
++        dep=x.runtime_deployment(self.bundle,self.auth,1,ROOT)
++        with self.assertRaises(Phase2BBlocked):x._runtime_factory(dep,self.draft,ROOT)
++        self.assertNotIn('torch',sys.modules)
++
++class MatcherTests(unittest.TestCase):
++    def test_closed_interval_cases(self):
++        for gt,pred,wanted in [((0,2),(1,1),0),((0,2),(0,0),0),((0,2),(2,2),0),((0,2),(-1,-1),1),
++            ((0,2),(3,3),1),((0,2),(1,3),0),((0,2),(2,4),0),((0,2),(3,4),1),((1,1),(1,1),0),((1,1),(2,2),1)]:
++            with self.subTest(gt=gt,pred=pred):self.assertEqual(closed_interval_gap(gt,pred),wanted)
++    def test_missing_nonfinite_and_reversed_intervals(self):
++        for gt,pred in [(None,(0,0)),((0,1),None),((2,1),(0,0)),((0,1),(float('nan'),1)),((0,1),(2,1))]:
++            with self.subTest(gt=gt,pred=pred):self.assertIsNone(closed_interval_gap(gt,pred))
++    def match(self,at,tolerance,gt=None,pred=None):
++        return match_known_events(gt or [mock_gt(0,0)],pred or [mock_event()], [{'opaque_alias':'F0001','source_timestamp_s':at}],tolerance,False,matcher_policy=CLOSED_INTERVAL_MATCHER)
++    def test_exact_boundaries_at_all_three_tolerances(self):
++        for tolerance in (0,0.2,0.5):
++            with self.subTest(tolerance=tolerance):
++                self.assertEqual(len(self.match(tolerance,tolerance)['matches']),1)
++                self.assertEqual(len(self.match(tolerance+0.000001,tolerance)['matches']),0)
++    def test_decimal_boundary_without_epsilon(self):
++        gt=[mock_gt(0.1,0.1)]
++        self.assertEqual(len(self.match(0.3,0.2,gt=gt)['matches']),1)
++        self.assertEqual(len(self.match(0.3000000001,0.2,gt=gt)['matches']),0)
++    def test_legacy_reproduction_and_new_policy_explicit(self):
++        gt=[mock_gt(0,2)];pred=[mock_event()];mapping=[{'opaque_alias':'F0001','source_timestamp_s':1}]
++        self.assertEqual(len(match_known_events(gt,pred,mapping,0,False)['matches']),0)
++        self.assertEqual(len(match_known_events(gt,pred,mapping,0,False,matcher_policy=CLOSED_INTERVAL_MATCHER)['matches']),1)
++    def test_one_to_one_duplicate_prediction_and_duplicate_gt(self):
++        preds=[mock_event(),mock_event(event_id='PRED_EVT_002')]
++        self.assertEqual(len(self.match(0,0,pred=preds)['matches']),1)
++        self.assertEqual(len(self.match(0,0,gt=[mock_gt(0,0),mock_gt(0,0,'MOCK_GT_2')])['matches']),1)
++    def test_unknown_missing_time_or_uncertain_association_no_match(self):
++        for mutation in [{'timing':{'status':'TIMING_UNKNOWN'}},{'timing':{}},{'target_association_uncertainty':'POSSIBLE'},{'cited_frame_aliases':[]}]:
++            pred=mock_event();pred.update(mutation)
++            with self.subTest(mutation=mutation):self.assertEqual(len(self.match(0,0,pred=[pred])['matches']),0)
++    def test_unknown_matcher_policy_rejected(self):
++        with self.assertRaises(Phase2BBlocked):match_known_events([],[],[],0,False,matcher_policy='UNAPPROVED')
++    def test_point_containment_not_physical_duration(self):
++        # No event-duration fields or invented midpoint are created by the matcher.
++        result=self.match(1,0,gt=[mock_gt(0,2)])
++        self.assertEqual(result['matches'][0]['temporal_match_score'],0)
++        self.assertNotIn('duration',json.dumps(result))
++
++class OutputTests(unittest.TestCase):
++    def test_absent_is_not_no_event(self):
++        result=o.classify_output(None,['F0001'])
++        self.assertEqual(result['classification'],'ABSENT_PREDICTION');self.assertIsNone(result['authoritative_prediction'])
++    def test_invalid_json_not_repaired(self):
++        for raw in [b'',b'```json\n{}\n```',b'{"x":1,"x":2}',b'{"x":NaN}',b'[]',b'\xff']:
++            with self.subTest(raw=raw):
++                r=o.classify_output(raw,['F0001']);self.assertEqual(r['classification'],'INVALID_JSON');self.assertIsNone(r['authoritative_prediction'])
++    def test_valid_no_event_distinguished(self):
++        result=o.classify_output(json.dumps(mock_no_event(['F0001'])).encode(),['F0001'])
++        self.assertEqual(result['classification'],'VALID_NO_CONFIRMED_EVENT')
++        self.assertTrue(all(v=='PASS' for v in result['stages'].values()))
++    def test_schema_invalid_stages_not_assessed(self):
++        value=mock_no_event(['F0001']);value['uncertainty']=''
++        r=o.classify_output(json.dumps(value).encode(),['F0001'])
++        self.assertEqual(r['classification'],'STRICT_INVALID');self.assertEqual(r['stages']['SCHEMA'],'FAIL')
++        self.assertEqual(r['stages']['SEMANTIC'],'NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE')
++        self.assertIsNone(r['authoritative_prediction'])
++    def test_citation_failure_separate(self):
++        value=mock_no_event(['F9999']);r=o.classify_output(json.dumps(value).encode(),['F0001'])
++        self.assertEqual((r['stages']['SCHEMA'],r['stages']['SEMANTIC'],r['stages']['CITATION']),('PASS','PASS','FAIL'))
++    def test_semantic_failure_separate(self):
++        value=mock_no_event(['F0001']);value['window_outcome']='CONFIRMED_EVENTS'
++        r=o.classify_output(json.dumps(value).encode(),['F0001'])
++        self.assertEqual((r['stages']['SCHEMA'],r['stages']['SEMANTIC'],r['stages']['CITATION']),('PASS','FAIL','PASS'))
++    def test_invalid_cannot_enter_authoritative_matching(self):
++        with patch('memory_graph.pass_t.phase2b.v1d_outputs.evaluate_item') as evaluator:
++            for raw in [None,b'bad',b'{}']:
++                result=o.gated_evaluation(raw,['F0001'],{}, {}, {})
++                self.assertIsNone(result['sensitivity_results']);self.assertFalse(result['no_event_inferred'])
++            evaluator.assert_not_called()
++    def test_uncertain_window_not_negative_or_match(self):
++        value=mock_no_event(['F0001']);value['window_outcome']='INSUFFICIENT_EVIDENCE'
++        result=o.gated_evaluation(json.dumps(value).encode(),['F0001'],{'annotation_item_id':'SOFTWARE_MOCK'},
++            {'pilot_scoring_permission':'DESCRIPTIVE_UNCERTAINTY_ONLY'}, {'private_mapping':[]})
++        for row in result['sensitivity_results'].values():
++            self.assertTrue(row['descriptive_only']);self.assertNotIn('case_level_false_event_alert',row)
++    def test_nonexhaustive_extra_prediction_unevaluated_three_sensitivities(self):
++        value=mock_no_event(['F0001']);value['window_outcome']='CONFIRMED_EVENTS';value['events']=[mock_event()]
++        result=o.gated_evaluation(json.dumps(value).encode(),['F0001'],
++            {'annotation_item_id':'SOFTWARE_MOCK','response':{'events':[]}},
++            {'pilot_scoring_permission':'KNOWN_EVENT_MATCHING_ONLY','supported_positive_event_ids':[]},
++            {'private_mapping':[{'opaque_alias':'F0001','source_timestamp_s':0}]})
++        self.assertEqual(set(result['sensitivity_results']),{'0','0.2','0.5'})
++        self.assertTrue(all(r['extra_predictions_interpretation']=='UNEVALUATED' for r in result['sensitivity_results'].values()))
++    def test_raw_bytes_exclusive_and_unchanged(self):
++        path=OUT/'mock_records'/'raw_preservation.txt';path.parent.mkdir(parents=True,exist_ok=True)
++        raw=b'not repaired \n ``` {}'
++        if path.exists():self.assertEqual(path.read_bytes(),raw)
++        else:o.preserve_raw(path,raw)
++        self.assertEqual(path.read_bytes(),raw)
++        with self.assertRaises(FileExistsError):o.preserve_raw(path,b'replacement')
++
++class MockReceiptTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.draft=p.draft_protocol(ROOT)
++        cls.bundle=p.frozen_bundle(cls.draft,mock_approval(cls.draft),ROOT)
++        cls.auth=mock_auth(cls.bundle)
++    def test_mock_receipt_bound_to_protocol_sources_and_invalid_excluded(self):
++        cid=self.draft['run_order'][0]['proposed_call_index'];call,w=p.call_context(self.draft,cid)
++        aliases=[f['supplied_alias'] for f in w['selected']]
++        prompt=(ROOT/self.draft['prompt_path']).read_text(encoding='utf8')
++        system=(ROOT/self.draft['system_path']).read_text(encoding='utf8')
++        rendered=system+'\nMODEL_INPUT_MOCK_NO_PIXELS\n'+prompt
++        receipt={'model':p.MODEL,'revision':p.REVISION,'generation_controls':{'do_sample':False,'max_new_tokens':1024,'max_time':300},'seed_applied':42,
++            'rendered_prompt':rendered,'rendered_prompt_sha256':digest(rendered.encode()),'captured_system_text':system,'processed_frame_aliases':aliases,
++            'processor_frame_count':8,'reference_image_count':0,'configured_pixel_cap':200704,
++            'native_video_modality':True,'temporal_patch_count':4,'representation_status':'FRAME_MATCHED_ONLY','tensor_records':{'mock':'NO_TENSOR_OR_VISUAL_INPUT'}}
++        envelope={'payload':{'instructions':prompt},'generation':{'sampling':False,'seed':42,'max_output_tokens':1024}}
++        destination=OUT/'mock_records'/('invalid_receipt_'+self.bundle['freeze_receipt']['protocol_sha256'][:12])
++        if destination.exists():
++            saved=json.loads((destination/'call_receipt.json').read_text(encoding='utf8'))
++        else:
++            saved=x.record_call_result(destination,b'{}',receipt,envelope,{'media_integrity':'MOCK_METADATA_ONLY'},self.bundle,self.auth,cid,execution_kind='MOCK_METADATA_ONLY',root=ROOT)
++        self.assertEqual(saved['execution_kind'],'MOCK_METADATA_ONLY');self.assertIsNone(saved['classification']['authoritative_prediction'])
++        self.assertEqual(saved['protocol_sha256'],self.bundle['freeze_receipt']['protocol_sha256'])
++        self.assertEqual(saved['components_sha256'],self.draft['components_sha256'])
++        self.assertEqual((destination/'raw_output.txt').read_bytes(),b'{}')
++    def test_mock_18_call_worker_no_model_pixels_or_gt(self):
++        import tempfile
++        destination=Path(tempfile.mkdtemp(prefix='MOCK_18_METADATA_',dir=OUT/'mock_records'))
++        require_mock_path=destination.resolve().is_relative_to(OUT.resolve());self.assertTrue(require_mock_path)
++        state={'calls':0}
++        draft=self.draft;bundle=self.bundle;auth=self.auth
++        def loader(_b,_a,cid,_r):
++            _,w=p.call_context(draft,cid)
++            return {'payload':{'instructions':(ROOT/draft['prompt_path']).read_text(encoding='utf8')},
++                    'generation':{'max_output_tokens':1024,'sampling':False,'seed':42},'mock_call_id':cid}, {'media_integrity':'MOCK_METADATA_ONLY','frame_alias_mapping':w['selected']}
++        class SoftwareMockRuntime:
++            def __init__(self):self.deployment={}
++            def generate(self,env):
++                state['calls']+=1;cid=env['mock_call_id'];_,w=p.call_context(draft,cid)
++                aliases=[f['supplied_alias'] for f in w['selected']];system=(ROOT/draft['system_path']).read_text(encoding='utf8')
++                rendered=system+'\n'+env['payload']['instructions']
++                raw='{}' if state['calls']==1 else 'invalid software mock' if state['calls']==2 else json.dumps(mock_no_event(aliases))
++                return {'raw_output':raw,'model':p.MODEL,'revision':p.REVISION,
++                    'generation_controls':{'do_sample':False,'max_new_tokens':1024,'max_time':300},'seed_applied':42,
++                    'rendered_prompt':rendered,'rendered_prompt_sha256':digest(rendered.encode()),'captured_system_text':system,
++                    'processed_frame_aliases':aliases,'processor_frame_count':8,'reference_image_count':0,'configured_pixel_cap':200704,
++                    'native_video_modality':True,'temporal_patch_count':4,'representation_status':'FRAME_MATCHED_ONLY'}
++        good={'gpu_free_gib':10,'gpu_used_gib':6,'ram_available_gib':8,'owned_rss_gib':1}
++        with patch.dict(os.environ,{'PASS_T_LOCAL_RUNTIME_APPROVAL':'1','PASS_T_PHASE2B_REAL_RUN_PERMISSION':'1'}),\
++             patch.object(x,'_resources',return_value=good),patch.object(x,'load_envelope',side_effect=loader),\
++             patch.object(x,'_runtime_factory',return_value=SoftwareMockRuntime()) as factory:
++            x._worker(bundle,auth,destination,ROOT,execution_kind='MOCK_METADATA_ONLY')
++        self.assertEqual(state['calls'],18);factory.assert_called_once()
++        self.assertEqual(json.loads((destination/'progress.json').read_text())['stage'],'COMPLETE')
++        summary=x.staged_run_summary(destination,draft['run_order'])
++        self.assertEqual(summary['call_classifications'],{'STRICT_INVALID':1,'INVALID_JSON':1,'VALID_NO_CONFIRMED_EVENT':16})
++        self.assertEqual(summary['stage_counts_over_recorded_outputs']['FULL_STRICT'],{'FAIL':2,'PASS':16})
++        self.assertTrue(all(json.loads(f.read_text())['execution_kind']=='MOCK_METADATA_ONLY' for f in destination.glob('call_*/call_receipt.json')))
++        self.assertNotIn('torch',sys.modules);self.assertNotIn('PIL',sys.modules)
++    def test_authorization_lease_replay_rejected(self):
++        import tempfile
++        parent=Path(tempfile.mkdtemp(prefix='MOCK_LEASE_',dir=OUT/'mock_records'))
++        folder=parent/'lease';x.claim_authorization_use(folder,self.auth)
++        with self.assertRaises(FileExistsError):x.claim_authorization_use(folder,self.auth)
++    def test_bad_runtime_receipt_preserves_raw_and_blocks_matching(self):
++        import tempfile
++        parent=Path(tempfile.mkdtemp(prefix='MOCK_BAD_RECEIPT_',dir=OUT/'mock_records'));folder=parent/'call'
++        cid=self.draft['run_order'][0]['proposed_call_index']
++        with self.assertRaisesRegex(ValueError,'RAW_PRESERVED'):
++            x.record_call_result(folder,b'{}',{'model':'WRONG'}, {'payload':{},'generation':{}},{'media_integrity':'MOCK_METADATA_ONLY'},self.bundle,self.auth,cid,execution_kind='MOCK_METADATA_ONLY',root=ROOT)
++        self.assertEqual((folder/'raw_output.txt').read_bytes(),b'{}')
++        saved=json.loads((folder/'call_receipt.json').read_text());self.assertIsNone(saved['classification']['authoritative_prediction'])
++    def test_missing_vs_incomplete_vs_not_started(self):
++        import tempfile
++        path=Path(tempfile.mkdtemp(prefix='MOCK_STOP_',dir=OUT/'mock_records'))
++        (path/'call_01.started').write_text('software mock')
++        (path/'call_02').mkdir();(path/'call_02/raw_output.txt').write_bytes(b'{}')
++        rows=x.call_completion_summary(path,[{'proposed_call_index':i} for i in (1,2,3)])
++        self.assertEqual([r['status'] for r in rows],['ABSENT_PREDICTION_AFTER_START','INCOMPLETE_RECEIPT_RAW_PRESERVED','NOT_EXECUTED_AFTER_STOP'])
++    def test_historical_v1d_result_is_not_reclassified(self):
++        directory=ROOT/'artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c'
++        summary=json.loads((directory/'V1D_REGRESSION_SUMMARY.json').read_text())
++        self.assertEqual(summary['strict_full_pass'],1);self.assertEqual(summary['actual_event_bearing'],6)
++        calls=[json.loads(f.read_text()) for f in directory.glob('runs/*/completed.json')]
++        bearing=[r for r in calls if r['validation']['event_count']]
++        self.assertEqual(len(bearing),6);self.assertTrue(all(not r['validation']['STRICT_FULL_PASS'] for r in bearing))
++    def test_safety_boundaries_cpu_mock(self):
++        good={'gpu_free_gib':10,'gpu_used_gib':6,'ram_available_gib':8,'owned_rss_gib':1}
++        self.assertIsNone(x.safety_reason(good,'BEFORE_LOAD'))
++        for field,value in [('gpu_free_gib',9.99),('ram_available_gib',7.99)]:
++            with self.subTest(field=field):self.assertEqual(x.safety_reason({**good,field:value},'BEFORE_LOAD'),'LOAD_RESOURCE_GATE')
++        self.assertEqual(x.safety_reason({**good,'gpu_free_gib':1.99},'BEFORE_GENERATION'),'GENERATION_RESOURCE_GATE')
++        for field,value in [('gpu_used_gib',14.51),('owned_rss_gib',20.01),('ram_available_gib',1.99)]:
++            with self.subTest(field=field):self.assertEqual(x.safety_reason({**good,field:value},'RUNNING'),'RESOURCE_STOP')
++
++def main():
++    suite=unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])
++    result=unittest.TextTestRunner(verbosity=2).run(suite)
++    summary={'tests_run':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped),
++        'cpu_only':True,'model_modules_loaded':[m for m in sys.modules if m.split('.')[0] in {'torch','transformers','PIL','cv2'}],
++        'guard_denials':DENIED,'mock_data_are_physical_GT':False,'actual_model_calls':0,'protocol_freeze_writer_called':False}
++    (OUT/'CPU_TEST_RESULTS.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf8')
++    return 0 if result.wasSuccessful() else 1
++if __name__=='__main__':raise SystemExit(main())

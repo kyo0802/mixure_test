@@ -1,0 +1,299 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "review_labels_are_not_GT": true,
+  "allowed_dispositions": [
+    "SUPPORTED_BY_OBSERVED_EVIDENCE",
+    "UNSUPPORTED_BY_OBSERVED_EVIDENCE",
+    "INDETERMINATE",
+    "WRONG_TARGET",
+    "INSUFFICIENT_VISUAL_QUALITY"
+  ],
+  "questions": [
+    {
+      "key": "Q1_TARGET_IDENTITY",
+      "title": "目標身分",
+      "guidance": "目標能否辨識？模型名詞符合影像嗎？是否模糊不清或描述了另一物件？",
+      "options": [
+        "IDENTIFIABLE_AND_CONSISTENT",
+        "AMBIGUOUS",
+        "POSSIBLY_DIFFERENT_OBJECT",
+        "NOT_ASSESSABLE"
+      ]
+    },
+    {
+      "key": "Q2_BEFORE",
+      "title": "BEFORE 證據",
+      "guidance": "事件前是否直接看見物件由所稱表面支撐？指出 alias；不要將推論當觀察。",
+      "options": [
+        "DIRECTLY_OBSERVED",
+        "INFERRED_ONLY",
+        "NOT_OBSERVED",
+        "NOT_ASSESSABLE"
+      ]
+    },
+    {
+      "key": "Q3_AFTER",
+      "title": "AFTER 證據",
+      "guidance": "事件後是否直接看見人手持有物件？指出 alias；不要將推論當觀察。",
+      "options": [
+        "DIRECTLY_OBSERVED",
+        "INFERRED_ONLY",
+        "NOT_OBSERVED",
+        "NOT_ASSESSABLE"
+      ]
+    },
+    {
+      "key": "Q4_PHYSICAL_TRANSITION",
+      "title": "物理轉換",
+      "guidance": "ON_SURFACE → HELD_BY_PERSON 是否可見？有直接 manipulation 證據嗎？是否僅由消失／遮擋推論？其他解釋是什麼？",
+      "options": [
+        "DIRECT_TRANSITION_VISIBLE",
+        "BRACKETED_STATES_ONLY",
+        "DISAPPEARANCE_OR_OCCLUSION_ONLY",
+        "ALTERNATIVE_EXPLANATION",
+        "NOT_ASSESSABLE"
+      ]
+    },
+    {
+      "key": "Q5_TEMPORAL_SUPPORT",
+      "title": "時間支持",
+      "guidance": "citation 支持轉換瞬間，還是只有某狀態？是否只有 before/after bracket？實際瞬間是否未觀察？alias 有效不代表時間主張正確。",
+      "options": [
+        "OBSERVED_TRANSITION_TIME",
+        "STATE_ONLY",
+        "BRACKET_ONLY_MOMENT_UNOBSERVED",
+        "CITATION_UNSUPPORTED",
+        "NOT_ASSESSABLE"
+      ]
+    },
+    {
+      "key": "Q6_CONTRADICTIONS",
+      "title": "矛盾與不確定",
+      "guidance": "before/after、timing 與 rationale 是否一致？指出遮擋、缺失觀察、抽樣間隙或替代解釋。",
+      "options": [
+        "NO_CONTRADICTION_IDENTIFIED",
+        "CONTRADICTION_IDENTIFIED",
+        "IMPORTANT_OBSERVATION_GAPS",
+        "NOT_ASSESSABLE"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "call_id": 1,
+      "window": "test5 W05",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "reviewer_id": "",
+      "disposition": "UNREVIEWED",
+      "supporting_frame_aliases": [],
+      "rationale": "",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q2_BEFORE": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q3_AFTER": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        }
+      },
+      "reviewed_at_utc": null,
+      "raw_output_sha256": "6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428"
+    },
+    {
+      "call_id": 3,
+      "window": "test5 W05",
+      "representation": "STORYBOARD",
+      "reviewer_id": "",
+      "disposition": "UNREVIEWED",
+      "supporting_frame_aliases": [],
+      "rationale": "",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q2_BEFORE": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q3_AFTER": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        }
+      },
+      "reviewed_at_utc": null,
+      "raw_output_sha256": "bd63ac297c34802cbaab4b8460cc8a33c1a02b8cddda044d8f0779baf33139ce"
+    },
+    {
+      "call_id": 4,
+      "window": "test7 W05",
+      "representation": "STORYBOARD",
+      "reviewer_id": "",
+      "disposition": "UNREVIEWED",
+      "supporting_frame_aliases": [],
+      "rationale": "",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q2_BEFORE": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q3_AFTER": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        }
+      },
+      "reviewed_at_utc": null,
+      "raw_output_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce"
+    },
+    {
+      "call_id": 8,
+      "window": "test7 W05",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "reviewer_id": "",
+      "disposition": "UNREVIEWED",
+      "supporting_frame_aliases": [],
+      "rationale": "",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q2_BEFORE": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q3_AFTER": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        }
+      },
+      "reviewed_at_utc": null,
+      "raw_output_sha256": "d4c858d31766f21639391c522c4654422032abbc7349ecc8bdad5eb9931ff53e"
+    },
+    {
+      "call_id": 10,
+      "window": "test5 W05",
+      "representation": "MULTI_IMAGE",
+      "reviewer_id": "",
+      "disposition": "UNREVIEWED",
+      "supporting_frame_aliases": [],
+      "rationale": "",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q2_BEFORE": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q3_AFTER": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": null,
+          "frame_aliases": [],
+          "notes": ""
+        }
+      },
+      "reviewed_at_utc": null,
+      "raw_output_sha256": "f6feb12d7a7a724ebed7661d05e471ebf041b5891a94f47483b309d9b9106485"
+    }
+  ]
+}

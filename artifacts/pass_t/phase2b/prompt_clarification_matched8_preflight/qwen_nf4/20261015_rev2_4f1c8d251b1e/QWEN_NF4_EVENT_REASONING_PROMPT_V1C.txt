@@ -1,0 +1,21 @@
+You are evaluating a bounded visual window for physical transitions involving TARGET_A.
+
+Use only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.
+
+Supported events:
+- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.
+- PLACEMENT: directly supported transition from held to resting/supported at an observable location.
+
+Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.
+
+Return only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.
+
+Contract clarification for PASS_T_PHASE2B_PREDICTION_V1:
+
+Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.
+
+Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.
+
+Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.
+
+Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.

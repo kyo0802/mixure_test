@@ -1,0 +1,238 @@
+{
+  "authority": {
+    "binding_causality_status": "CAUSALITY_UNVERIFIED",
+    "dataset_path": "artifacts/pass_t/phase2a/v2/external_returns/datasets/ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c/external_dev_gt.json",
+    "dataset_receipt_sha256": "92c3516a6f4cec82e0b15096e0011631162c6343f0464f7470a9f348d4e0f489",
+    "dataset_sha256": "ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c",
+    "exhaustiveness_sidecar_sha256": "fa0133e4e49e54bdbac2ba59420d29b504e8bf219fa8179b57cd1b35261a005c",
+    "identity_resolution_sha256": "07a6dae253e2060468b1153f4457cd475ae44ff4f7b5cd0f25db8ffa50747b5a",
+    "import_sha256": "3f85134d8c4f9f78e1b16bea3ec937225d37ff671e8caeb6620e401c3bb50a0b",
+    "negative_readiness_sha256": "aa0f381c9a6f9d30bcce7c7074c77a7a77d443a3f8eaba3273208cb8fbc0aa15",
+    "phase2a_manifest_sha256": "1c423256cd31ea0e585b1bc3e57610fc8b215fcbe2757108db3bd96736af9e46",
+    "policy_sha256": "c90f527eb01e3b320138961570c5647670536d3611feae3c4b7a1d10e33fdac4"
+  },
+  "metric_policy": {
+    "forbidden_global_metrics": [
+      "accuracy",
+      "precision",
+      "recall",
+      "F1",
+      "hallucination_rate",
+      "significance",
+      "superiority",
+      "generalization"
+    ],
+    "positive_windows": "conditional known-event matching only; extra predictions are UNEVALUATED",
+    "strict_negative_windows": "case-level false-event alerts only; no population false-positive rate",
+    "uncertain_windows": "descriptive outputs only"
+  },
+  "records": [
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_0bfb99c324769681",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [
+        "unauthorized_future_material_viewed",
+        "unapproved_source_video_scrubbing",
+        "experimental_answer_keys_viewed",
+        "model_predictions_viewed",
+        "previous_event_answers_viewed",
+        "claims_global_identity",
+        "claims_unsupported_track_extension",
+        "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+      ],
+      "exploratory_matching_allowed": false,
+      "final_exhaustiveness_status": "NOT_ATTESTED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "original_pack_ids": [
+        "test3__W07"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": false,
+      "pilot_scoring_permission": "AUDIT_ONLY_NO_MODEL_RUN",
+      "source_video_identifier": "test3",
+      "strict_negative_supported": false,
+      "supported_positive_event_ids": [],
+      "unlisted_events_status": "NOT_SCORED",
+      "v2_full_window_evidence_supported": false,
+      "visual_review_limitations": [
+        "unauthorized_future_material_viewed",
+        "unapproved_source_video_scrubbing",
+        "experimental_answer_keys_viewed",
+        "model_predictions_viewed",
+        "previous_event_answers_viewed",
+        "claims_global_identity",
+        "claims_unsupported_track_extension",
+        "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_5dbb180e8ff88762",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [
+        "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+      ],
+      "exploratory_matching_allowed": false,
+      "final_exhaustiveness_status": "NO_COMPLETENESS_CLAIM",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "original_pack_ids": [
+        "test8__W07"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": false,
+      "pilot_scoring_permission": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+      "source_video_identifier": "test8",
+      "strict_negative_supported": false,
+      "supported_positive_event_ids": [],
+      "unlisted_events_status": "NOT_SCORED",
+      "v2_full_window_evidence_supported": false,
+      "visual_review_limitations": [
+        "No confirmed-event completeness or scoring claim"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [],
+      "exploratory_matching_allowed": false,
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "ASSISTANT_SPOT_CHECK",
+      "original_pack_ids": [
+        "test1__W03",
+        "test1__W05"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": true,
+      "pilot_scoring_permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_video_identifier": "test1",
+      "strict_negative_supported": true,
+      "supported_positive_event_ids": [],
+      "unlisted_events_status": "CASE_LEVEL_ALERT_ONLY",
+      "v2_full_window_evidence_supported": true,
+      "visual_review_limitations": [
+        "Only 7 of 107 frames received an additional assistant spot check"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_b35d807b28b92101",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [],
+      "exploratory_matching_allowed": false,
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "original_pack_ids": [
+        "test2__W01"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": true,
+      "pilot_scoring_permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_video_identifier": "test2",
+      "strict_negative_supported": true,
+      "supported_positive_event_ids": [],
+      "unlisted_events_status": "CASE_LEVEL_ALERT_ONLY",
+      "v2_full_window_evidence_supported": true,
+      "visual_review_limitations": [
+        "No independent full-window visual quality review beyond the accepted V2 response"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_c58b4df88a2f6801",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [
+        "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+      ],
+      "exploratory_matching_allowed": true,
+      "final_exhaustiveness_status": "NON_EXHAUSTIVE_CONFIRMED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "HUMAN_PARTIAL",
+      "original_pack_ids": [
+        "test7__W05"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": false,
+      "pilot_scoring_permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "source_video_identifier": "test7",
+      "strict_negative_supported": false,
+      "supported_positive_event_ids": [
+        "EVT001"
+      ],
+      "unlisted_events_status": "UNEVALUATED",
+      "v2_full_window_evidence_supported": false,
+      "visual_review_limitations": [
+        "cannot meet V2 last-frame coverage requirement",
+        "Unlisted predicted events are UNEVALUATED, not false positives"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_eb60192e6986cb4f",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [
+        "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+      ],
+      "exploratory_matching_allowed": true,
+      "final_exhaustiveness_status": "NON_EXHAUSTIVE_CONFIRMED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "HUMAN_PARTIAL",
+      "original_pack_ids": [
+        "test5__W05"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": false,
+      "pilot_scoring_permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "source_video_identifier": "test5",
+      "strict_negative_supported": false,
+      "supported_positive_event_ids": [
+        "EVT001"
+      ],
+      "unlisted_events_status": "UNEVALUATED",
+      "v2_full_window_evidence_supported": false,
+      "visual_review_limitations": [
+        "cannot meet V2 last-frame coverage requirement",
+        "Unlisted predicted events are UNEVALUATED, not false positives"
+      ]
+    },
+    {
+      "additional_visual_quality_verified": false,
+      "annotation_item_id": "PT2A_fe0910d66f4c5614",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "exclusion_reasons": [],
+      "exploratory_matching_allowed": false,
+      "final_exhaustiveness_status": "STRICT_NEGATIVE_FULL_WINDOW_ATTESTED",
+      "formal_benchmark_permission": false,
+      "independent_visual_review_status": "NONE",
+      "original_pack_ids": [
+        "test5__W01"
+      ],
+      "original_response_valid": true,
+      "original_v2_full_window_eligible": true,
+      "pilot_scoring_permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_video_identifier": "test5",
+      "strict_negative_supported": true,
+      "supported_positive_event_ids": [],
+      "unlisted_events_status": "CASE_LEVEL_ALERT_ONLY",
+      "v2_full_window_evidence_supported": true,
+      "visual_review_limitations": [
+        "No independent full-window visual quality review beyond the accepted V2 response"
+      ]
+    }
+  ],
+  "schema_version": "PASS_T_PHASE2B_ELIGIBILITY_V1",
+  "summary": {
+    "additional_human_full_visual_reviews": 0,
+    "audit_only": 1,
+    "descriptive_uncertainty_only": 1,
+    "formal_benchmark_eligible": 0,
+    "known_event_matching_only": 2,
+    "strict_negative_case_alerts": 3,
+    "total": 7
+  }
+}

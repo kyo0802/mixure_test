@@ -1,0 +1,185 @@
+{
+  "batch_uuid": "b3346e0e-6a00-4aaf-b337-15e944579a8f",
+  "genuine_human_review_records": 2,
+  "human_source": {
+    "last_frame_answers_verbatim": {
+      "A": "NO",
+      "B": "NO"
+    },
+    "phase0_sha256": "46cfcdb77437936abdac9419b949b5b1417930558288aa50e09c5ca8334c5088",
+    "relationship_verbatim": "不是原 ZIP 標註者",
+    "review_mode": "INFORMED",
+    "reviewer_id_verbatim": "reviewer_0",
+    "source": "Direct explicit human replies in this conversation"
+  },
+  "new_exhaustive_attestations": 0,
+  "new_v2_responses": 0,
+  "phase2b_contract": "For these windows read exhaustive_review_readiness separately from the unchanged original V2 eligibility flag. False blocks exhaustive/full-window scoring.",
+  "recorded_at_utc": "2026-10-13T08:34:35.063060+00:00",
+  "records": [
+    {
+      "adjudicated_view_retained_event_count": 1,
+      "attestation_note": "Not supplied and not required for the Phase0 NO branch; none inferred or filled.",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "blocking_reason": "cannot meet V2 last-frame coverage requirement",
+      "coverage_assessment": "LAST_FRAME_TARGET_NOT_VISIBLY_SUPPORTED_HUMAN_CONFIRMED",
+      "entire_window_inspection_claimed": false,
+      "event_additions_or_challenges": "NOT_REANNOTATED_IN_PHASE0; no new event added",
+      "exact_original_validator_rule": "    strict_coverage = (response['window_outcome'] == 'NO_CONFIRMED_EVENT' or\n                       response.get('event_list_exhaustiveness') == 'EXHAUSTIVE_ATTESTED')\n    if strict_coverage:\n        need(response['coverage_assessment'] == 'THROUGHOUT_ASSESSABLE', 'Unobservable gap blocks exhaustive/negative claim')\n        need(frames[0]['frame_id'] in coverage_ids and frames[-1]['frame_id'] in coverage_ids,\n             'Coverage requires first and last authorized frames')\n        need(any(len(frames) // 3 <= positions.get(fid, -1) < math.ceil(2 * len(frames) / 3)\n                 for fid in coverage_ids), 'Coverage requires middle-third frame')\n        need(all(c['target_association'] == 'SUPPORTED' for c in response['coverage_citations']),\n             'Coverage target association unsupported')\n        need(response['visibility_at_window_end']['visibility'] in ('VISIBLE', 'PARTIALLY_OCCLUDED'),\n             'Coverage claims assessable visible target at end but end visibility contradicts it')\n    elif response['window_outcome'] == 'CONFIRMED_EVENTS':",
+      "exhaustive_list_supported": false,
+      "exhaustive_review_readiness": false,
+      "exploratory_pickup_positive_retained": true,
+      "exposure_disclosure": {
+        "other_exposures": "NOT_COLLECTED_IN_PHASE0_STOP_BRANCH",
+        "prior_labels_and_visual_support_notes_seen": true
+      },
+      "extra_predictions_status": "UNEVALUATED",
+      "formal_eligible": 0,
+      "four_exhaustiveness_attestations": {
+        "all_confirmable_target_pickup_and_placement_annotated": null,
+        "entire_authorized_window_reviewed": null,
+        "no_unresolved_gap_could_conceal_additional_target_events": null,
+        "scope_limited_to_pickup_placement_ontology": null
+      },
+      "inferred_state_note": {
+        "classification": "INFERRED_STATE_NOT_DIRECTLY_OBSERVED",
+        "counts_as_coverage_or_gap_support": false,
+        "frame_id": "S000449",
+        "source": "Explicit statement in current user attachment",
+        "state": "HELD_BY_PERSON"
+      },
+      "inspected_frames_human_declared_for_this_decision": [
+        "S000449"
+      ],
+      "last_frame": {
+        "frame_id": "S000449",
+        "image_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png",
+        "sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+        "source_frame_index": 449,
+        "source_timestamp_s": 14.966666666666667,
+        "timestamp_provenance": "NATIVE_PTS",
+        "url": "/media/107"
+      },
+      "last_frame_human_answer": "NO",
+      "new_event_annotations_created": 0,
+      "not_blind_or_independent": true,
+      "original_event_count": 1,
+      "original_v2_event_list_exhaustiveness": "NOT_ATTESTED",
+      "original_v2_full_window_dev_supported": false,
+      "outcome": "NON_EXHAUSTIVE_CONFIRMED",
+      "parent": {
+        "annotation_item_id": "PT2A_eb60192e6986cb4f",
+        "archive_sha256": "3f85134d8c4f9f78e1b16bea3ec937225d37ff671e8caeb6620e401c3bb50a0b",
+        "authorized_visual_manifest_sha256": "416263741f5f4eb97bccc2898df85dd89949afcbc0514ce20cd2324e3c27b831",
+        "item_sha256": "a265127fc8df6766bb287364c3b37d35efa3a4150c3f0b6257612bd6a2e7f522",
+        "response_sha256": "0c6d8f2ed0797fb303c12cf554bde95ccf660d7d250031b1f287f74c6cc4134f",
+        "submission_id": "d496cd5a-a130-4d34-abe9-b61b2fba4086"
+      },
+      "permitted_use": "Known-positive recall/hit matching only under future preregistered exploratory scoring; not full-window recall.",
+      "phase0_frame_table_sha256": "46cfcdb77437936abdac9419b949b5b1417930558288aa50e09c5ca8334c5088",
+      "phases_1_2": "SKIPPED_PER_HUMAN_NO",
+      "pickup_visual_support": "HUMAN_SUPPORTED_PREVIOUS_SEPARATE_REVIEW",
+      "quality_released": false,
+      "recorded_at_utc": "2026-10-13T08:34:35.063060+00:00",
+      "relationship_to_original_annotator": "NOT_ORIGINAL_ANNOTATOR_HUMAN_DECLARED",
+      "retained_event_references": [
+        {
+          "event_id": "EVT001",
+          "parent_response_sha256": "0c6d8f2ed0797fb303c12cf554bde95ccf660d7d250031b1f287f74c6cc4134f"
+        }
+      ],
+      "review_mode": "INFORMED",
+      "review_submission_uuid": "db30b21e-7dea-419e-9620-eb1716e876d3",
+      "reviewer_id": "reviewer_0",
+      "unresolved_gaps": {
+        "complete_gap_ledger_collected": false,
+        "last_frame_not_supported": true,
+        "note": "Exact unobserved interval boundaries not adjudicated; Phase1 skipped."
+      },
+      "valid_annotation_original_validator": true,
+      "window": "test5 W05",
+      "window_letter": "A"
+    },
+    {
+      "adjudicated_view_retained_event_count": 1,
+      "attestation_note": "Not supplied and not required for the Phase0 NO branch; none inferred or filled.",
+      "binding_causality_status": "CAUSALITY_UNVERIFIED",
+      "blocking_reason": "cannot meet V2 last-frame coverage requirement",
+      "coverage_assessment": "LAST_FRAME_TARGET_NOT_VISIBLY_SUPPORTED_HUMAN_CONFIRMED",
+      "entire_window_inspection_claimed": false,
+      "event_additions_or_challenges": "NOT_REANNOTATED_IN_PHASE0; no new event added",
+      "exact_original_validator_rule": "    strict_coverage = (response['window_outcome'] == 'NO_CONFIRMED_EVENT' or\n                       response.get('event_list_exhaustiveness') == 'EXHAUSTIVE_ATTESTED')\n    if strict_coverage:\n        need(response['coverage_assessment'] == 'THROUGHOUT_ASSESSABLE', 'Unobservable gap blocks exhaustive/negative claim')\n        need(frames[0]['frame_id'] in coverage_ids and frames[-1]['frame_id'] in coverage_ids,\n             'Coverage requires first and last authorized frames')\n        need(any(len(frames) // 3 <= positions.get(fid, -1) < math.ceil(2 * len(frames) / 3)\n                 for fid in coverage_ids), 'Coverage requires middle-third frame')\n        need(all(c['target_association'] == 'SUPPORTED' for c in response['coverage_citations']),\n             'Coverage target association unsupported')\n        need(response['visibility_at_window_end']['visibility'] in ('VISIBLE', 'PARTIALLY_OCCLUDED'),\n             'Coverage claims assessable visible target at end but end visibility contradicts it')\n    elif response['window_outcome'] == 'CONFIRMED_EVENTS':",
+      "exhaustive_list_supported": false,
+      "exhaustive_review_readiness": false,
+      "exploratory_pickup_positive_retained": true,
+      "exposure_disclosure": {
+        "other_exposures": "NOT_COLLECTED_IN_PHASE0_STOP_BRANCH",
+        "prior_labels_and_visual_support_notes_seen": true
+      },
+      "extra_predictions_status": "UNEVALUATED",
+      "formal_eligible": 0,
+      "four_exhaustiveness_attestations": {
+        "all_confirmable_target_pickup_and_placement_annotated": null,
+        "entire_authorized_window_reviewed": null,
+        "no_unresolved_gap_could_conceal_additional_target_events": null,
+        "scope_limited_to_pickup_placement_ontology": null
+      },
+      "inferred_state_note": null,
+      "inspected_frames_human_declared_for_this_decision": [
+        "S000479"
+      ],
+      "last_frame": {
+        "frame_id": "S000479",
+        "image_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000479.png",
+        "sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+        "source_frame_index": 479,
+        "source_timestamp_s": 15.973333333333333,
+        "timestamp_provenance": "NATIVE_PTS",
+        "url": "/media/214"
+      },
+      "last_frame_human_answer": "NO",
+      "new_event_annotations_created": 0,
+      "not_blind_or_independent": true,
+      "original_event_count": 1,
+      "original_v2_event_list_exhaustiveness": "NOT_ATTESTED",
+      "original_v2_full_window_dev_supported": false,
+      "outcome": "NON_EXHAUSTIVE_CONFIRMED",
+      "parent": {
+        "annotation_item_id": "PT2A_c58b4df88a2f6801",
+        "archive_sha256": "3f85134d8c4f9f78e1b16bea3ec937225d37ff671e8caeb6620e401c3bb50a0b",
+        "authorized_visual_manifest_sha256": "5352b82613741ef896589ab6e2c19e61947f3c0f590d78f5bfb88d87dcb9123d",
+        "item_sha256": "921cc846658d27685fa6bfa1012b6cd2721d91271451c2331620ed08d560e691",
+        "response_sha256": "7a05e2b899027010382f614f7732d4644a7aa7e5b38736372bac025f9174cc1c",
+        "submission_id": "16c417ed-e8ce-4c9e-9507-f3b5c94d717f"
+      },
+      "permitted_use": "Known-positive recall/hit matching only under future preregistered exploratory scoring; not full-window recall.",
+      "phase0_frame_table_sha256": "46cfcdb77437936abdac9419b949b5b1417930558288aa50e09c5ca8334c5088",
+      "phases_1_2": "SKIPPED_PER_HUMAN_NO",
+      "pickup_visual_support": "HUMAN_SUPPORTED_PREVIOUS_SEPARATE_REVIEW",
+      "quality_released": false,
+      "recorded_at_utc": "2026-10-13T08:34:35.063060+00:00",
+      "relationship_to_original_annotator": "NOT_ORIGINAL_ANNOTATOR_HUMAN_DECLARED",
+      "retained_event_references": [
+        {
+          "event_id": "EVT001",
+          "parent_response_sha256": "7a05e2b899027010382f614f7732d4644a7aa7e5b38736372bac025f9174cc1c"
+        }
+      ],
+      "review_mode": "INFORMED",
+      "review_submission_uuid": "f8ac2703-6d00-4ec5-9fc1-db63f2ec2f9d",
+      "reviewer_id": "reviewer_0",
+      "unresolved_gaps": {
+        "complete_gap_ledger_collected": false,
+        "last_frame_not_supported": true,
+        "note": "Exact unobserved interval boundaries not adjudicated; Phase1 skipped."
+      },
+      "valid_annotation_original_validator": true,
+      "window": "test7 W05",
+      "window_letter": "B"
+    }
+  ],
+  "schema_version": "PASS_T_PHASE0_NON_EXHAUSTIVE_ADJUDICATED_DEV_VIEW_V1",
+  "scope": "Sidecar only. Immutable original responses/export remain authoritative historical records.",
+  "status": "PASS_T_PHASE2A_EXHAUSTIVENESS_REVIEW_COMPLETE_NON_EXHAUSTIVE",
+  "test3_quarantine": "UNCHANGED_OUT_OF_SCOPE"
+}

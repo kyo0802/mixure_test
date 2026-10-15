@@ -1,0 +1,3 @@
+# Pre-lock renderer technical check correction
+
+Initial renderer stopped on an arbitrary >100 distinct RGB-colour assertion, before fixture lock, prompt authorship or any GPU call. A limited-palette illustration can contain meaningful objects/edges; that assertion did not measure blankness. Replaced only that check with image contrast and spatial-edge tests; renderer scene/config/pose/pixels unchanged. Partial PNGs are resumed only after exact-byte equality against deterministic encoding. No old images loaded, no alternative scenario selected, no response observed, no fixture redrawn or replaced. Full fixtures are locked only after all eight pass. This is a pre-lock validator development correction, not a GPU recovery or prompt iteration.

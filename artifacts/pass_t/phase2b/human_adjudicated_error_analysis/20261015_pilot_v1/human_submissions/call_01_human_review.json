@@ -1,0 +1,84 @@
+{
+  "schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "review_labels_are_not_GT": true,
+  "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170",
+  "records": [
+    {
+      "call_id": 1,
+      "window": "test5 W05",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "reviewer_id": "reviewer_0",
+      "disposition": "WRONG_TARGET",
+      "supporting_frame_aliases": [
+        "F0001",
+        "F0016",
+        "F0062",
+        "F0077"
+      ],
+      "rationale": "The visual evidence supports a smartphone being picked up from the table, but the model incorrectly identifies the target as a card. The model also assigns the event to F0001, which shows the smartphone still on the table. Therefore, the prediction is classified as WRONG_TARGET, with an additional temporal-grounding error.",
+      "question_answers": {
+        "Q1_TARGET_IDENTITY": {
+          "answer": "IDENTIFIABLE_AND_CONSISTENT",
+          "frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047"
+          ],
+          "notes": "The manipulated object appears to be a smartphone rather than a card. The model's target description is inconsistent with the visible object. The object is identifiable across the sampled frames."
+        },
+        "Q2_BEFORE": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0001",
+            "F0016"
+          ],
+          "notes": "A smartphone is visibly resting on the table in F0001 and F0016. This supports the ON_SURFACE state for the smartphone, but not the model's claimed card."
+        },
+        "Q3_AFTER": {
+          "answer": "DIRECTLY_OBSERVED",
+          "frame_aliases": [
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The smartphone is visibly held above the table in F0062 and F0077. This supports the HELD_BY_PERSON state for the smartphone. It does not establish that a card was picked up."
+        },
+        "Q4_PHYSICAL_TRANSITION": {
+          "answer": "DIRECT_TRANSITION_VISIBLE",
+          "frame_aliases": [
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The sampled sequence shows a hand interacting with the smartphone on the table, followed by the smartphone being lifted and held above the surface. This supports a PICKUP transition for the smartphone. However, the model identifies the manipulated object as a card, which is inconsistent with the visible evidence."
+        },
+        "Q5_TEMPORAL_SUPPORT": {
+          "answer": "NOT_ASSESSABLE",
+          "frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0032",
+            "F0047",
+            "F0062"
+          ],
+          "notes": "The model cites F0001 as the exact PICKUP time, but the smartphone is still resting on the table at that frame. The subsequent frames show interaction with the object and its eventual lifting. The exact transition time is not established by F0001, so the model's timing claim is unsupported."
+        },
+        "Q6_CONTRADICTIONS": {
+          "answer": "CONTRADICTION_IDENTIFIED",
+          "frame_aliases": [
+            "F0001",
+            "F0016",
+            "F0062",
+            "F0077"
+          ],
+          "notes": "The model describes a card, whereas the visible manipulated object appears to be a smartphone. It also assigns the PICKUP event to F0001, when the smartphone remains on the table. Although the later frames support a smartphone PICKUP, the model's target identity and exact timing claims are inconsistent with the visual evidence. The sampled frames do not establish the precise instant of the transition."
+        }
+      },
+      "reviewed_at_utc": "2026-10-15T10:02:17.231Z",
+      "raw_output_sha256": "6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428"
+    }
+  ]
+}

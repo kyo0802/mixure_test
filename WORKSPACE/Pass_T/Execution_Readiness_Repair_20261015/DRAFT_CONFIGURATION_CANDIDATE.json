@@ -1,0 +1,1151 @@
+{
+  "schema_version": "PASS_T_QWEN_NF4_V1D_PILOT_V1",
+  "status": "DRAFT",
+  "review_authority": {
+    "path": "WORKSPACE/Pass_T/Final_Pilot_Protocol_Review_20261015/FINAL_COMPONENT_HASH_MANIFEST.json",
+    "sha256": "97be3f4a1e93583eaa295348ba9a01f3d1fb1d855bf3a28e5a26857e917d95a1"
+  },
+  "settings": {
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "quantization": "NF4 double/BF16/SDPA",
+    "task_prompt_sha256": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+    "system_sha256": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e",
+    "prediction_schema_sha256": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+    "representations": [
+      "MULTI_IMAGE",
+      "STORYBOARD",
+      "NATIVE_VIDEO_ARRAY"
+    ],
+    "frames_per_window": 8,
+    "sampling": "GT_INDEPENDENT_UNIFORM_8_ROUND_TIES_TO_EVEN_ENDPOINTS",
+    "reference": "NONE",
+    "citation_policy": "C3_RETAIN_SUPPLIED_ALIASES_REPORT_ONLY_TEMPORAL_UNITS",
+    "native_video": "FRAME_MATCHED_ONLY",
+    "source_time_authority": "NATIVE_SOURCE_PTS_PRIVATE",
+    "video_units": 4,
+    "native_fps_rule": "7/(PTS_last-PTS_first)",
+    "native_video_do_sample_frames": false,
+    "max_pixels": 200704,
+    "min_pixels": 3136,
+    "storyboard": {
+      "columns": 3,
+      "tile": [
+        480,
+        270
+      ],
+      "label_row_height": 32,
+      "canvas": [
+        1440,
+        906
+      ]
+    },
+    "generation": {
+      "do_sample": false,
+      "seed": 42,
+      "max_new_tokens": 1024,
+      "repeat": 1,
+      "extra_warmup_calls": 0
+    },
+    "timeouts_s": {
+      "load": 120,
+      "generation": 300,
+      "request": 330,
+      "whole_proposed": 6060
+    },
+    "hardware_gib": {
+      "load_free_gpu_min": 10,
+      "load_free_ram_min": 8,
+      "generation_free_gpu_min": 2,
+      "global_gpu_used_stop_above": 14.5,
+      "owned_tree_rss_stop_above": 20,
+      "system_ram_stop_below": 2
+    },
+    "retry": {
+      "generation_quality": 0,
+      "transport_before_generation_proposed": 0
+    },
+    "matching": {
+      "sensitivities_s": [
+        0,
+        0.2,
+        0.5
+      ],
+      "bounded_interval_overlap_required": false,
+      "algorithm_proposed": "greedy one-to-one closed-interval gap max(0,gs-pe,ps-ge); tie GT index then prediction index",
+      "current_source_discrepancy": "T04 interior predicted point inside bounded GT"
+    },
+    "strict_invalid_structured_matching": false,
+    "automatic_repair": false,
+    "new_identity_ambiguity_clause": false,
+    "memory_graph_writes": false,
+    "local_api_budget_limit_usd": 0,
+    "actual_calls_this_task": 0,
+    "planned_calls": 18
+  },
+  "matcher_policy": "CLOSED_INTERVAL_GAP_V1",
+  "human_decisions": [
+    {
+      "id": "H01",
+      "decision": "Failed-regression risk acceptance",
+      "proposed_value": "Use immutable V1D for exploratory hypotheses despite strict 1/8; six event-bearing outputs all invalid",
+      "evidence": [
+        "E12",
+        "E13",
+        "E14",
+        "E19"
+      ],
+      "remaining_limitation": "Explicit exception to prior decision package warning; D4 did not turn REGRESSION_FAIL into PASS",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H02",
+      "decision": "Model/revision",
+      "proposed_value": "Existing local Qwen2.5-VL-7B-Instruct NF4 double quantization, BF16, SDPA; revision cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "evidence": [
+        "E15",
+        "E24"
+      ],
+      "remaining_limitation": "Existing asset receipts only; weights not reopened and no model substitution",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H03",
+      "decision": "Prompt/system/schema",
+      "proposed_value": "Exact V1D + unchanged V2 + unchanged Prediction V1/parser/validator; no V1E",
+      "evidence": [
+        "E16",
+        "E18",
+        "E22",
+        "E23"
+      ],
+      "remaining_limitation": "Full 18 real-input serialized hashes not captured or newly built",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H04",
+      "decision": "Representation choice",
+      "proposed_value": "All three representations, 8 source frames each; 18 planned calls, no 12-call fallback",
+      "evidence": [
+        "E10",
+        "E13",
+        "E25"
+      ],
+      "remaining_limitation": "Native route not presently real-DEV capable; T01/T02",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H05",
+      "decision": "Sampling",
+      "proposed_value": "Uniform8 round(i*(N-1)/7), Python ties-to-even, include endpoints; same selection all representations",
+      "evidence": [
+        "E07",
+        "E08"
+      ],
+      "remaining_limitation": "Can miss brief transitions; no offset/GT-driven frame selection",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H06",
+      "decision": "Target reference and ambiguity clause",
+      "proposed_value": "NONE for all six windows; no new identity-ambiguity clause; existing prompt/outcomes unchanged",
+      "evidence": [
+        "E10",
+        "E13",
+        "E16",
+        "E37"
+      ],
+      "remaining_limitation": "Opaque TARGET_A can remain ambiguous; this protocol does not authorize global identity or an implicit new prompt instruction",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H07",
+      "decision": "Citation C3",
+      "proposed_value": "Retain supplied per-frame aliases; native 8 aliases / 4 temporal units disclosed in report only",
+      "evidence": [
+        "E10",
+        "E25"
+      ],
+      "remaining_limitation": "No unit-level validator replacement, invented alias, precision claim or claim model distinguishes both paired frames",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H08",
+      "decision": "Native time contract",
+      "proposed_value": "FRAME_MATCHED_ONLY; private native source PTS authoritative; fps=7/(last-first), seconds/unit=2/fps, do_sample_frames=False",
+      "evidence": [
+        "E25",
+        "E07",
+        "E08"
+      ],
+      "remaining_limitation": "Model time is not native PTS faithful; no extra timestamp text/header; actual position_ids not instrumented",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H09",
+      "decision": "Pixel/layout budget",
+      "proposed_value": "min_pixels=3136, max effective spatial pixels=200704; storyboard 3 columns, 480x270 tile +32 alias row, 1440x906 canvas",
+      "evidence": [
+        "E15",
+        "E24",
+        "E25",
+        "E26",
+        "E07"
+      ],
+      "remaining_limitation": "Equal selected source frames does not imply equal visual token budget or retained detail; real grids must be logged later",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H10",
+      "decision": "Generation",
+      "proposed_value": "Greedy do_sample=False; seed42; max_new_tokens=1024; repeat1; temperature/top_p/top_k inactive",
+      "evidence": [
+        "E15",
+        "E26"
+      ],
+      "remaining_limitation": "Seed is not cross-platform determinism; no stability study or extra warmup",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H11",
+      "decision": "Timeouts",
+      "proposed_value": "load120s, generation max_time300s, supervised request330s; whole pilot6060s from load-start (derived 120+18*330)",
+      "evidence": [
+        "E05",
+        "E15",
+        "E31"
+      ],
+      "remaining_limitation": "6060s is a new proposed whole-run bound, not the old 8-call synthetic whole3200s; no verified real supervisor yet",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H12",
+      "decision": "Hardware gates",
+      "proposed_value": "Before load free GPU>=10GiB/RAM>=8GiB; generation free GPU>=2GiB; stop global GPU>14.5GiB, owned-tree RSS>20GiB or available RAM<2GiB; 1s nominal polling",
+      "evidence": [
+        "E15",
+        "E24",
+        "E31"
+      ],
+      "remaining_limitation": "Historical synthetic enforcement/measurements only; transient peaks can occur between polls; current free resources not probed",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H13",
+      "decision": "Failure/retry/continuation",
+      "proposed_value": "No generation-quality retry or automatic repair; proposed transport pre-generation retry0; continue on strict-invalid JSON if healthy; stop on hardware breach/OOM/process failure/deadline, mark remaining NOT_EXECUTED",
+      "evidence": [
+        "E05",
+        "E13",
+        "E29",
+        "E31"
+      ],
+      "remaining_limitation": "Changes historical proposed transport retry1 to explicit conservative retry0; no calls hidden as warmups or replacements",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H14",
+      "decision": "Time sensitivity and matching",
+      "proposed_value": "All 0,0.2,0.5s equally reported; greedy one-to-one closed-interval gap=max(0,GT_start-PRED_end,PRED_start-GT_end), require_overlap=False, stable GT then prediction order; TIMING_UNKNOWN unmatched/unresolved",
+      "evidence": [
+        "E10",
+        "E30"
+      ],
+      "remaining_limitation": "0.2 is not privileged; existing E30 interior-point case disagrees with proposed closed-interval semantics (T04); no matcher repair here; no optimal-cardinality or invented midpoint/duration claims",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H15",
+      "decision": "Cohort and GT permissions",
+      "proposed_value": "Three negative units, two nonexhaustive known PICKUP units, one uncertain; test1 W03/W05 deduplicated; exclude test3 W07",
+      "evidence": [
+        "E01",
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "remaining_limitation": "No validated PLACEMENT positive; independent negative quality review incomplete; causality/session independence unestablished",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H16",
+      "decision": "Strict-invalid exclusion and qualitative retention",
+      "proposed_value": "Every raw unchanged; full-strict valid only in structured matching; separate syntax/schema/semantic/citation/full status; invalid not NO_EVENT",
+      "evidence": [
+        "E22",
+        "E23",
+        "E29",
+        "E30"
+      ],
+      "remaining_limitation": "Validator early-return must remain; unassessed stages reported NOT_ASSESSED, not false PASS; T03",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H17",
+      "decision": "Physical reasoning assessment",
+      "proposed_value": "Qualitative manual support review separate from schema/GT matching; unsupported/uncertain/unreviewed remain distinct; no new adjudicated labels here",
+      "evidence": [
+        "E13",
+        "E19",
+        "E02"
+      ],
+      "remaining_limitation": "No physical correctness inferred solely from event claim, match or schema validity",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H18",
+      "decision": "Reporting and metrics",
+      "proposed_value": "Execution/contract counts, known-event case matching, negative case alerts, uncertain descriptive review, representation descriptions only",
+      "evidence": [
+        "E01",
+        "E02",
+        "E30"
+      ],
+      "remaining_limitation": "No accuracy/precision/recall/F1/FPR/hallucination rate/generalization/statistical superiority",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H19",
+      "decision": "Run order/budget",
+      "proposed_value": "18 deterministic prospective rows; sha256 UTF8 PASS_T_PILOT_ORDER_V1/opaque/representation/NONE/1; one repeat, no extra generations, local API budget USD0",
+      "evidence": [
+        "E05",
+        "E10"
+      ],
+      "remaining_limitation": "Order regenerated for final NONE/native-array labels, not reuse obsolete unresolved-reference order; no measured USD hardware cost",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H20",
+      "decision": "Model-visible information and time disclosure",
+      "proposed_value": "Neutral supplied aliases, authorized media, exact V1D/V2/schema only; private PTS/GT/eligibility/tracker and review metadata excluded",
+      "evidence": [
+        "E16",
+        "E18",
+        "E26",
+        "E37"
+      ],
+      "remaining_limitation": "No new model-visible time map; native time distortions disclosed privately/report-only",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "H21",
+      "decision": "Freeze vs execution approval",
+      "proposed_value": "Separate explicit freeze-only authorization; later separately authorize exactly18 real calls after technical blockers resolved",
+      "evidence": [
+        "E28",
+        "E29",
+        "E13"
+      ],
+      "remaining_limitation": "This request approves preparation only; flags/env values/old synthetic approvals grant no real-run authorization",
+      "human_approval_status": "PROPOSED_AWAITING_HUMAN_APPROVAL"
+    }
+  ],
+  "windows": [
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "original_pack_ids": [
+        "test1__W03",
+        "test1__W05"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_5597d9b003977e053d70/source.json",
+      "source_metadata_sha256": "f8ed581d87390a04e3c11cf8254b8a7921ca6ced4115abe3669bc343687a4d19",
+      "authorized_frame_list_sha256": "ebc523d663f4b2121c0c358109a1c3b6180eb074d8ecd9b83092c65d85f78122",
+      "window_boundaries": {
+        "half_open_frames": [
+          156,
+          264
+        ],
+        "half_open_pts": [
+          5.202419855222337,
+          8.804095139607032
+        ],
+        "source_video_sha256": "b2a1eb317f9d729b637bb624a787f755b3c57d66deea824d2381b6ec37f888c3",
+        "authorized_visual_manifest_sha256": "f1a7fb18caf043b168f5cfae90f572c1e35b135e2045a83639989151eafc7868"
+      },
+      "positions": [
+        0,
+        15,
+        30,
+        45,
+        61,
+        76,
+        91,
+        106
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000157",
+          "source_frame_index": 157,
+          "native_source_pts_s": 5.235,
+          "recorded_source_png_sha256": "c96bcb3464d1345ba7168df8ff8837929a847b7eb83952aaa087737da6b7a407",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000157.png"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000172",
+          "source_frame_index": 172,
+          "native_source_pts_s": 5.736666666666666,
+          "recorded_source_png_sha256": "a423037171725e304306cbba99eb707117d2e5bb4a1a4f782858af48298c9376",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000172.png"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000187",
+          "source_frame_index": 187,
+          "native_source_pts_s": 6.236666666666666,
+          "recorded_source_png_sha256": "e67b0aab5587c12ed833390a39ab4d1fee5edfe73d6abc6f8f6248bff177ce78",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000187.png"
+        },
+        {
+          "supplied_alias": "F0046",
+          "source_frame_id": "S000202",
+          "source_frame_index": 202,
+          "native_source_pts_s": 6.736666666666666,
+          "recorded_source_png_sha256": "bf95a218f7ca83d04132a282c67c54ac5dddac6c7abf89ebb1f9efcc39dbf95d",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000202.png"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000218",
+          "source_frame_index": 218,
+          "native_source_pts_s": 7.27,
+          "recorded_source_png_sha256": "c8c8249c52b055cbc00561cb1bc295264a0422458ee71ec3e6eaad3a72c43a23",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000218.png"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000233",
+          "source_frame_index": 233,
+          "native_source_pts_s": 7.77,
+          "recorded_source_png_sha256": "b7b6e79019122fff16fa390e7aa39fb439179c611e2aa62495314528ee28afc9",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000233.png"
+        },
+        {
+          "supplied_alias": "F0092",
+          "source_frame_id": "S000248",
+          "source_frame_index": 248,
+          "native_source_pts_s": 8.27,
+          "recorded_source_png_sha256": "ad3eedacb7b67c93f721174001742b85e557419955c4e4fb3a0308abd5de2e01",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000248.png"
+        },
+        {
+          "supplied_alias": "F0107",
+          "source_frame_id": "S000263",
+          "source_frame_index": 263,
+          "native_source_pts_s": 8.77,
+          "recorded_source_png_sha256": "dfc305263abf16f0d007b0ce50d1a09c8cf5d5e3d130edeebe1a5b2aabe0dc98",
+          "source_path": "artifacts/pass_t/phase2a/v2/items/PT2A_9d15d2a6b56b56d0/frames/S000263.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_5597d9b003977e053d70/UNIFORM_8_STORYBOARD.png",
+        "sha256": "c859e4080f2aea1ea23a1a14c5c106af6a0e9955ab273afbefb5b87992d842c5"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "original_pack_ids": [
+        "test2__W01"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_ec4751640324779435e6/source.json",
+      "source_metadata_sha256": "1e01bf71cc40e70aff6930708f32970482d491ee28b0efd05ddb0fac03f125f8",
+      "authorized_frame_list_sha256": "a287586c6ab701f00422aae870b9059c56d416011f079081ca9491b5998c56e9",
+      "window_boundaries": {
+        "half_open_frames": [
+          180,
+          288
+        ],
+        "half_open_pts": [
+          6.002272727272727,
+          9.603636363636364
+        ],
+        "source_video_sha256": "6ea954179859c6b0e6af6e1ac88c5bf1d3b296da6b7a076c113a2cca86817fe1",
+        "authorized_visual_manifest_sha256": "01d99f0df86fd3a73ac576cbb498bb346cad859e506d02485dd233c6d4a94717"
+      },
+      "positions": [
+        0,
+        15,
+        31,
+        46,
+        61,
+        76,
+        92,
+        107
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000180",
+          "source_frame_index": 180,
+          "native_source_pts_s": 6.008333333333334,
+          "recorded_source_png_sha256": "4da2b477f51fc99a2480c4e423947ef7cd63c708546203a7720ee4f165880a79",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000180.png"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000195",
+          "source_frame_index": 195,
+          "native_source_pts_s": 6.51,
+          "recorded_source_png_sha256": "ff3e91a4a10081e00b9e6c23f3bf5773562e153309960812a820e5f7d11a7433",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000195.png"
+        },
+        {
+          "supplied_alias": "F0032",
+          "source_frame_id": "S000211",
+          "source_frame_index": 211,
+          "native_source_pts_s": 7.043333333333333,
+          "recorded_source_png_sha256": "4e09d6211563fb9dc6b2f6254201be2a510a54d07327362042f2902c004cfca1",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000211.png"
+        },
+        {
+          "supplied_alias": "F0047",
+          "source_frame_id": "S000226",
+          "source_frame_index": 226,
+          "native_source_pts_s": 7.545,
+          "recorded_source_png_sha256": "4f3c81a049380c89ea284bc7378943fbbe43c2119e1e7f815b3d8b29234455ef",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000226.png"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000241",
+          "source_frame_index": 241,
+          "native_source_pts_s": 8.045,
+          "recorded_source_png_sha256": "c4c154354d592d988fcece8226fe5ad200419bfb7cb055474081fb20e2b3ba9b",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000241.png"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000256",
+          "source_frame_index": 256,
+          "native_source_pts_s": 8.545,
+          "recorded_source_png_sha256": "5104622569cf9a33399051cf37b6b9548a78ff4a4a6c8c10a842c6e639b4f70a",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000256.png"
+        },
+        {
+          "supplied_alias": "F0093",
+          "source_frame_id": "S000272",
+          "source_frame_index": 272,
+          "native_source_pts_s": 9.08,
+          "recorded_source_png_sha256": "527deef05ca17c4ac70357ed86a28cc47603f2cfaf99abfcd26fb31414d66949",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000272.png"
+        },
+        {
+          "supplied_alias": "F0108",
+          "source_frame_id": "S000287",
+          "source_frame_index": 287,
+          "native_source_pts_s": 9.58,
+          "recorded_source_png_sha256": "f529b360d0d340df4111375cebb0d74c104e2dca4dcdb9a6cdad67b5c1849ac9",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test2__W01/frames/S000287.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_ec4751640324779435e6/UNIFORM_8_STORYBOARD.png",
+        "sha256": "dc48ba57ed435442c2905fb9103d2119802b2d3239e3373c937e8b543ba44d5c"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "original_pack_ids": [
+        "test5__W01"
+      ],
+      "permission": "STRICT_NEGATIVE_CASE_ALERT_ANALYSIS",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_aef405003cc72cef0044/source.json",
+      "source_metadata_sha256": "34cbd08d0b9b3e005ddb829545a48849918c56cf1249be300e9041fbdc07ecd5",
+      "authorized_frame_list_sha256": "4881065f4a3d8fa5a22b653c78d8ca24649f2b657d44bc23873c0a84cdef8c45",
+      "window_boundaries": {
+        "half_open_frames": [
+          162,
+          234
+        ],
+        "half_open_pts": [
+          5.4,
+          7.8
+        ],
+        "source_video_sha256": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+        "authorized_visual_manifest_sha256": "b6864f76e7ba175078c121a20fcdca47d98f7a048d766d9556bef20490db8f63"
+      },
+      "positions": [
+        0,
+        10,
+        20,
+        30,
+        41,
+        51,
+        61,
+        71
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000162",
+          "source_frame_index": 162,
+          "native_source_pts_s": 5.4,
+          "recorded_source_png_sha256": "dc823f38acca0b7bec50d76c58a510b385664e069802a5b459b3137c40ebb866",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000162.png"
+        },
+        {
+          "supplied_alias": "F0011",
+          "source_frame_id": "S000172",
+          "source_frame_index": 172,
+          "native_source_pts_s": 5.733333333333333,
+          "recorded_source_png_sha256": "ff3dcaadb589f3ae0f4fbe46584d2f9c9fdb7898b0ae38bd11a3228e9687c606",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000172.png"
+        },
+        {
+          "supplied_alias": "F0021",
+          "source_frame_id": "S000182",
+          "source_frame_index": 182,
+          "native_source_pts_s": 6.066666666666666,
+          "recorded_source_png_sha256": "373eba8e1f2c7e85a443da2bfafee0616e6f38ba1eda9d0bfaeb3bdae388acf9",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000182.png"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000192",
+          "source_frame_index": 192,
+          "native_source_pts_s": 6.4,
+          "recorded_source_png_sha256": "585f0eb808d2533518d3f84b6e42009ea69da98476207baf5b63736b8754bc64",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000192.png"
+        },
+        {
+          "supplied_alias": "F0042",
+          "source_frame_id": "S000203",
+          "source_frame_index": 203,
+          "native_source_pts_s": 6.766666666666667,
+          "recorded_source_png_sha256": "8046ec3e296eceb642e9813666900059c9c0f337055c27efb140798c81abe73b",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000203.png"
+        },
+        {
+          "supplied_alias": "F0052",
+          "source_frame_id": "S000213",
+          "source_frame_index": 213,
+          "native_source_pts_s": 7.1,
+          "recorded_source_png_sha256": "173fa0288e6b5ccb434a3f95e48085536d4b031eba979ea8d9baab9e5946778b",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000213.png"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000223",
+          "source_frame_index": 223,
+          "native_source_pts_s": 7.433333333333334,
+          "recorded_source_png_sha256": "9407cc5926117fd00844f8d343335cf476617e6602c66b4bbd6858cde979edd8",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000223.png"
+        },
+        {
+          "supplied_alias": "F0072",
+          "source_frame_id": "S000233",
+          "source_frame_index": 233,
+          "native_source_pts_s": 7.766666666666667,
+          "recorded_source_png_sha256": "78d97a28db80f06ea186d6dbf5ddb2163a277f720afed0daf8af80233310d566",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W01/frames/S000233.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_aef405003cc72cef0044/UNIFORM_8_STORYBOARD.png",
+        "sha256": "587c53157b7a27c5f5c84151e1723b408a922baabbb222d450f15879f4db8f71"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "original_pack_ids": [
+        "test5__W05"
+      ],
+      "permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_f1d4f821d33515975293/source.json",
+      "source_metadata_sha256": "2a11b86871e25fe785b48441aefedf08c303ea28d271e0c813622758ff6f47b1",
+      "authorized_frame_list_sha256": "30b295b36a9a91ae866f1011d6916316361cc78ac27ea4d3208dc3b4af8057aa",
+      "window_boundaries": {
+        "half_open_frames": [
+          342,
+          450
+        ],
+        "half_open_pts": [
+          11.4,
+          15.0
+        ],
+        "source_video_sha256": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+        "authorized_visual_manifest_sha256": "416263741f5f4eb97bccc2898df85dd89949afcbc0514ce20cd2324e3c27b831"
+      },
+      "positions": [
+        0,
+        15,
+        31,
+        46,
+        61,
+        76,
+        92,
+        107
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000342",
+          "source_frame_index": 342,
+          "native_source_pts_s": 11.4,
+          "recorded_source_png_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000342.png"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000357",
+          "source_frame_index": 357,
+          "native_source_pts_s": 11.9,
+          "recorded_source_png_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000357.png"
+        },
+        {
+          "supplied_alias": "F0032",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "native_source_pts_s": 12.433333333333334,
+          "recorded_source_png_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000373.png"
+        },
+        {
+          "supplied_alias": "F0047",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "native_source_pts_s": 12.933333333333334,
+          "recorded_source_png_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "native_source_pts_s": 13.433333333333334,
+          "recorded_source_png_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000403.png"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "native_source_pts_s": 13.933333333333334,
+          "recorded_source_png_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000418.png"
+        },
+        {
+          "supplied_alias": "F0093",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "native_source_pts_s": 14.466666666666667,
+          "recorded_source_png_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png"
+        },
+        {
+          "supplied_alias": "F0108",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "native_source_pts_s": 14.966666666666667,
+          "recorded_source_png_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_f1d4f821d33515975293/UNIFORM_8_STORYBOARD.png",
+        "sha256": "d0c9db9bb6f445951f716fc51f266b741af8da0ef77759af3342cc7e22fe5c85"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "original_pack_ids": [
+        "test7__W05"
+      ],
+      "permission": "KNOWN_EVENT_MATCHING_ONLY",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_b8a53fea6aa8b92dc94f/source.json",
+      "source_metadata_sha256": "3ad2d21c87cd15c909544e37754bca65c34a35d49edcb2e41e670cc5844c6749",
+      "authorized_frame_list_sha256": "3b5b3cf942577792e00ca2c570897fe8230ef36da56a5d0d5b6031f8db5f8c70",
+      "window_boundaries": {
+        "half_open_frames": [
+          372,
+          480
+        ],
+        "half_open_pts": [
+          12.403768996960485,
+          16.0048632218845
+        ],
+        "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+        "authorized_visual_manifest_sha256": "5352b82613741ef896589ab6e2c19e61947f3c0f590d78f5bfb88d87dcb9123d"
+      },
+      "positions": [
+        0,
+        15,
+        30,
+        45,
+        61,
+        76,
+        91,
+        106
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "native_source_pts_s": 12.435,
+          "recorded_source_png_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000373.png"
+        },
+        {
+          "supplied_alias": "F0016",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "native_source_pts_s": 12.935,
+          "recorded_source_png_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000388.png"
+        },
+        {
+          "supplied_alias": "F0031",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "native_source_pts_s": 13.436666666666667,
+          "recorded_source_png_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000403.png"
+        },
+        {
+          "supplied_alias": "F0046",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "native_source_pts_s": 13.936666666666667,
+          "recorded_source_png_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000418.png"
+        },
+        {
+          "supplied_alias": "F0062",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "native_source_pts_s": 14.471666666666666,
+          "recorded_source_png_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000434.png"
+        },
+        {
+          "supplied_alias": "F0077",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "native_source_pts_s": 14.971666666666666,
+          "recorded_source_png_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000449.png"
+        },
+        {
+          "supplied_alias": "F0092",
+          "source_frame_id": "S000464",
+          "source_frame_index": 464,
+          "native_source_pts_s": 15.471666666666666,
+          "recorded_source_png_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000464.png"
+        },
+        {
+          "supplied_alias": "F0107",
+          "source_frame_id": "S000479",
+          "source_frame_index": 479,
+          "native_source_pts_s": 15.973333333333333,
+          "recorded_source_png_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000479.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_b8a53fea6aa8b92dc94f/UNIFORM_8_STORYBOARD.png",
+        "sha256": "3bcfad3aac8bcc74d82e3be437469be3c83a9410efa961fa1be49055e84ab988"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "original_pack_ids": [
+        "test8__W07"
+      ],
+      "permission": "DESCRIPTIVE_UNCERTAINTY_ONLY",
+      "source_metadata_path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/private/W_db55b29f820c2b3e3afb/source.json",
+      "source_metadata_sha256": "7f5f4f0326f15721028496357b7d60badbe8b01520af77f5b0b4cd9385f770c6",
+      "authorized_frame_list_sha256": "3a0fb9321bee624b113d1c7edaef3b15bc019fe31be22693e9f38459bbfff844",
+      "window_boundaries": {
+        "half_open_frames": [
+          936,
+          1054
+        ],
+        "half_open_pts": [
+          31.202828649138713,
+          35.13651858567543
+        ],
+        "source_video_sha256": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+        "authorized_visual_manifest_sha256": "b19b9b47fbd29f15f5e35fc900b4e12be0f69965b9b586227272929867c8b552"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        84,
+        100,
+        117
+      ],
+      "selected": [
+        {
+          "supplied_alias": "F0001",
+          "source_frame_id": "S000936",
+          "source_frame_index": 936,
+          "native_source_pts_s": 31.211666666666666,
+          "recorded_source_png_sha256": "efd1101349c160f6e5f0cc090e040ee54776d25b74aa247fe2d55a56972b91ea",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S000936.png"
+        },
+        {
+          "supplied_alias": "F0018",
+          "source_frame_id": "S000953",
+          "source_frame_index": 953,
+          "native_source_pts_s": 31.78,
+          "recorded_source_png_sha256": "de8c2fc423fdcbf75a2712e948b535486383b0fe851186045232a9a5628d6201",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S000953.png"
+        },
+        {
+          "supplied_alias": "F0034",
+          "source_frame_id": "S000969",
+          "source_frame_index": 969,
+          "native_source_pts_s": 32.31333333333333,
+          "recorded_source_png_sha256": "c247e1f263cbbd87a4826f836526ce1765f6cbe116f241d7cab05db1ea255f83",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S000969.png"
+        },
+        {
+          "supplied_alias": "F0051",
+          "source_frame_id": "S000986",
+          "source_frame_index": 986,
+          "native_source_pts_s": 32.88166666666667,
+          "recorded_source_png_sha256": "006ea90212bead15e710bf836e07538d36277ada7a563177b2d0dde20fed94aa",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S000986.png"
+        },
+        {
+          "supplied_alias": "F0068",
+          "source_frame_id": "S001003",
+          "source_frame_index": 1003,
+          "native_source_pts_s": 33.44833333333333,
+          "recorded_source_png_sha256": "bf7b7b801cf9d3408e830859801c19b843ab2390091ceeaf3e82ea7bf62d8b6b",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S001003.png"
+        },
+        {
+          "supplied_alias": "F0085",
+          "source_frame_id": "S001020",
+          "source_frame_index": 1020,
+          "native_source_pts_s": 34.0,
+          "recorded_source_png_sha256": "7dd3100f769cd1236b77ed73bd915cf0a372b02419d12c5a06a13d85cc6aff6e",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S001020.png"
+        },
+        {
+          "supplied_alias": "F0101",
+          "source_frame_id": "S001036",
+          "source_frame_index": 1036,
+          "native_source_pts_s": 34.53333333333333,
+          "recorded_source_png_sha256": "e2e6abc8591796ecb710790112c2706e161128220502f29b5e543268fd3035d6",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S001036.png"
+        },
+        {
+          "supplied_alias": "F0118",
+          "source_frame_id": "S001053",
+          "source_frame_index": 1053,
+          "native_source_pts_s": 35.10166666666667,
+          "recorded_source_png_sha256": "4ef011631a8b9670114da16deee3a7d94edc3d04ce01a032cc5a9eac5dfadd1b",
+          "source_path": "artifacts/pass_t/human_seed_review/items/test8__W07/frames/S001053.png"
+        }
+      ],
+      "storyboard_media": {
+        "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_db55b29f820c2b3e3afb/UNIFORM_8_STORYBOARD.png",
+        "sha256": "682b4e2e06adf937b059f9e03bd9b345472ec5c4d0123ec149cbb6fe842af8fd"
+      },
+      "media_integrity": "PENDING_AUTHORIZED_EXECUTION"
+    }
+  ],
+  "run_order": [
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "305dde5992c91814228f5617a9d84bd613f050c25e7786730f6db6249f55b7c3",
+      "proposed_call_index": 1
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "30c3789340b26e95d69555dce5791e4f964ca1217ded52ccd9a654000e27657e",
+      "proposed_call_index": 2
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "4150733e3b64bba20fac399ea623e75a45d72abae10fccedce9b47c52da5a7e3",
+      "proposed_call_index": 3
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "5486909bd5b88cfc133f2b030f95b9e0a9d01f47c167fae866691784d970944e",
+      "proposed_call_index": 4
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "58771eb150ce4abd1f7629f71d1a219ec15d7c2c748b59ee7cdc69d6834e4427",
+      "proposed_call_index": 5
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "5f37eeebb7e0722895603d07998c3e50f44dc6568a18d40d8eb1cc3f23474378",
+      "proposed_call_index": 6
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "61845992286b8a137768ef07e02649c66533497921229f7f6a6466da09b60f48",
+      "proposed_call_index": 7
+    },
+    {
+      "item_id": "PT2A_c58b4df88a2f6801",
+      "opaque_id": "W_b8a53fea6aa8b92dc94f",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "6d955262e1554244b273d203bed80dd27ab054dee2b6ceef7966d2cb9c603bec",
+      "proposed_call_index": 8
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "756e21fdd1599060cd9268aef750acefc97be586c29ec8895d429cd97ab9f6e0",
+      "proposed_call_index": 9
+    },
+    {
+      "item_id": "PT2A_eb60192e6986cb4f",
+      "opaque_id": "W_f1d4f821d33515975293",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "76463c039f8a4f154d1b7f48af8a318ca54bfe9e9d1eed9442bd9f46bd866327",
+      "proposed_call_index": 10
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "7f3deb32f07eb6bd1257f3c96a62c2b9e09abf19810978604817aa260850a6cf",
+      "proposed_call_index": 11
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "84d3bcff2986a7e110bcf14e34f2ad573599d0bbc4397a801803e1a8ffbf39ca",
+      "proposed_call_index": 12
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "88b2e679d66d7193899f764989771ef8999dd2f6807a2c8d9d6998bdac1d9bb7",
+      "proposed_call_index": 13
+    },
+    {
+      "item_id": "PT2A_5dbb180e8ff88762",
+      "opaque_id": "W_db55b29f820c2b3e3afb",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "9ff90aed1a36a61f79c2ad74eb31b23c256288d9835d8b0282c71f6169f4720b",
+      "proposed_call_index": 14
+    },
+    {
+      "item_id": "PT2A_b35d807b28b92101",
+      "opaque_id": "W_ec4751640324779435e6",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "c0fd972e2f482b74b0761820f4ec58931299eb8f48dc8f723397b8ab1778fb80",
+      "proposed_call_index": 15
+    },
+    {
+      "item_id": "PT2A_9d15d2a6b56b56d0",
+      "opaque_id": "W_5597d9b003977e053d70",
+      "representation": "NATIVE_VIDEO_ARRAY",
+      "repeat": 1,
+      "order_key_sha256": "c35fc27f86aebbf449b6abbd13a22035147aed0b1095a53ec7fa317291855f75",
+      "proposed_call_index": 16
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "MULTI_IMAGE",
+      "repeat": 1,
+      "order_key_sha256": "c4d7654bab1f9b5f424c4fa21aa39e1c4ccf5cecc4941cad15c51f9f88bdf908",
+      "proposed_call_index": 17
+    },
+    {
+      "item_id": "PT2A_fe0910d66f4c5614",
+      "opaque_id": "W_aef405003cc72cef0044",
+      "representation": "STORYBOARD",
+      "repeat": 1,
+      "order_key_sha256": "e005a3e488857927565833fd36471eeca245741c1fd7717faf44feb1b765edc2",
+      "proposed_call_index": 18
+    }
+  ],
+  "components_sha256": {
+    "src/memory_graph/pass_t/phase2b/local_vlm/nf4.py": "fc15d9012a3a992e4dcb9e66a3b458b242c319b1efe5f4d30dae19b81364547b",
+    "src/memory_graph/pass_t/phase2b/local_vlm/video_array_bridge.py": "75ba3f8fc63b13b869eb684ba3c7dc1ab9061c68efc2bee19dc5ab4f72802cef",
+    "src/memory_graph/pass_t/phase2b/local_vlm/qwen_contract.py": "6e52a2be7847ccb6c8e5f04bb7a229ded18d74908268967370169a5d42e1f397",
+    "src/memory_graph/pass_t/phase2b/local_vlm/runtime.py": "a498ec799647ec70c93a1d4d99aff74f65a11a701ace34f6570cf23c5851407d",
+    "src/memory_graph/pass_t/phase2b/local_vlm/catalog.py": "99bf3e241769781c0cc6ea24934d5698078db0aa0c41df3d4613095517477742",
+    "src/memory_graph/pass_t/phase2b/common.py": "4728823548401589a1a9ba061b09fb410e213156bf4f8f4d4714c8d2d772d79b",
+    "src/memory_graph/pass_t/phase2b/model_visible.py": "c4707239d795167d2c054e1a23ef2c1e153ada3e34477e85939d4fa80c10889c",
+    "src/memory_graph/pass_t/phase2b/predictions.py": "c4b077374d50fc478c29d0009180d488c60a463fa8bffa183a179c5f736f1d37",
+    "src/memory_graph/pass_t/phase2b/contracts/prediction_v1.json": "f8b0dfb6c62301baabff5e1adfddf14dc6be9381aa84c884fc70f5318abcedc3",
+    "src/memory_graph/pass_t/phase2b/contracts/model_visible_payload_v1.json": "996fbd54f855c2ddcd42f77493f24b45e07bcab564cd215111858d6a51c5edda",
+    "src/memory_graph/pass_t/phase2b/evaluation.py": "975c8706f11d0c8f05184cc2025bdd3f04ce2439eceb0a5970f0f91b227d33bb",
+    "src/memory_graph/pass_t/phase2b/v1d_protocol.py": "ae41eb4debc944247f8339f45e0922a2228a5f55ce8331ddea962c76f3cff8e1",
+    "src/memory_graph/pass_t/phase2b/v1d_execution.py": "958f5d3d44803716290d218182fe02a8e1ff0070614c0e751b9d8b544e063ccf",
+    "src/memory_graph/pass_t/phase2b/v1d_outputs.py": "e746203c7f92cbcb4aa9e2af6a302325cdc8c8293bfc83a93b5317d73a2cb1f3",
+    "scripts/run_pass_t_v1d_pilot.py": "2edcb6beb927e3b6756c0cdaedd360bf46031cca4f385076a7146e691fe8dc35",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json": "1a3ca15c7cd73641d32b0ec8231ada36d257f73609426c28093c32c390b1e384",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt": "7008254e618dc8bacdbdeaae3cbf471220afb5efd6c80afc8b9ea5fb5c96b9b0",
+    "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/prompt_candidate/v2_system_unchanged.txt": "9b76b7e320dfb677a1cb8566c16dff15785759bc4915375123bc12dd118fd08e"
+  },
+  "prompt_path": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/QWEN_NF4_EVENT_REASONING_PROMPT_V1D.txt",
+  "system_path": "artifacts/pass_t/phase2b/prompt_clarification_matched8_preflight/qwen_nf4/20261015_rev2_4f1c8d251b1e/prompt_candidate/v2_system_unchanged.txt",
+  "model_assets_manifest": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json",
+  "model_snapshot": ".models/Qwen2.5-VL-7B-Instruct",
+  "execution_route": "EXPLICIT_IN_PROCESS_NF4_V1D",
+  "media_integrity": "PENDING_AUTHORIZED_EXECUTION",
+  "engineering_resolution": {
+    "T01": "SEPARATE_FROZEN_REAL_V1D_GATE",
+    "T02": "VERSIONED_IN_PROCESS_PROTOCOL_ROUTE",
+    "T04": "CLOSED_INTERVAL_GAP_V1",
+    "historical_decision_risk_text": "Preserved from review; not an updated approval or historical artifact rewrite"
+  },
+  "protocol_approval": null,
+  "execution_authorization": null
+}

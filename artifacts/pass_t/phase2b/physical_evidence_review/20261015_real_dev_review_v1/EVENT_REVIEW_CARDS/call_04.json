@@ -1,0 +1,545 @@
+{
+  "call_id": 4,
+  "window": "test7 W05",
+  "item_id": "PT2A_c58b4df88a2f6801",
+  "representation": "STORYBOARD",
+  "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d",
+  "run_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "authorization_sha256": "eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f",
+  "raw_output_source": {
+    "path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/raw_output.txt",
+    "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase2b\\v1d_pilot_runs\\eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f\\call_04\\raw_output.txt",
+    "recorded_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce",
+    "observed_sha256": "e9c71610f372aa52d4024e94a09f0697e7bf3acbe501bd990d6a9cc829d048ce",
+    "status": "VERIFIED",
+    "role": "unchanged_raw_output"
+  },
+  "call_receipt_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/call_receipt.json",
+  "runtime_receipt_path": "artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/runtime_receipt.json",
+  "original_fields": {
+    "window_outcome": "CONFIRMED_EVENTS",
+    "event": {
+      "after_state": {
+        "state": "HELD_BY_PERSON",
+        "supporting_frame_alias": "F0016"
+      },
+      "before_state": {
+        "state": "ON_SURFACE",
+        "supporting_frame_alias": "F0001"
+      },
+      "cited_frame_aliases": [
+        "F0001"
+      ],
+      "event_id": "PRED_EVT_001",
+      "event_type": "PICKUP",
+      "rationale": "The ball is picked up from the surface in frame F0001.",
+      "target_association_uncertainty": "NONE",
+      "timing": {
+        "frame_alias": "F0001",
+        "status": "EXACT_SUPPLIED_FRAME"
+      },
+      "timing_uncertainty": ""
+    },
+    "window_uncertainty": "",
+    "window_rationale": "The ball is visibly held by a person in frame F0016.",
+    "window_cited_frame_aliases": [
+      "F0001",
+      "F0016"
+    ],
+    "last_directly_supported_state": {
+      "state": "HELD_BY_PERSON",
+      "supporting_frame_alias": "F0016"
+    }
+  },
+  "original_validation": {
+    "citation_errors": [],
+    "semantic_errors": [],
+    "structural_errors": [
+      "/events/0/timing_uncertainty:'' should be non-empty",
+      "/uncertainty:'' should be non-empty"
+    ],
+    "valid": false
+  },
+  "original_stages": {
+    "CITATION": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE",
+    "FULL_STRICT": "FAIL",
+    "JSON_SYNTAX": "PASS",
+    "SCHEMA": "FAIL",
+    "SEMANTIC": "NOT_ASSESSED_DUE_TO_SCHEMA_FAILURE"
+  },
+  "classification": "STRICT_INVALID_DESCRIPTIVE_ONLY",
+  "referenced_aliases": [
+    "F0001",
+    "F0016"
+  ],
+  "unresolved_aliases": [],
+  "sampled_sequence": [
+    {
+      "native_source_pts_s": 12.435,
+      "recorded_source_png_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+      "source_frame_id": "S000373",
+      "source_frame_index": 373,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000373.png",
+      "supplied_alias": "F0001",
+      "verified_source_file_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+      "sample_order_1based": 1,
+      "authorized_window_index_0based": 0,
+      "alias_number_in_window_1based": 1,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000373.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000373.png",
+        "recorded_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+        "observed_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [
+        "EVENT CITE",
+        "WINDOW CITE",
+        "TIMING CLAIM",
+        "BEFORE CLAIM"
+      ],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 12.935,
+      "recorded_source_png_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+      "source_frame_id": "S000388",
+      "source_frame_index": 388,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000388.png",
+      "supplied_alias": "F0016",
+      "verified_source_file_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+      "sample_order_1based": 2,
+      "authorized_window_index_0based": 15,
+      "alias_number_in_window_1based": 16,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000388.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000388.png",
+        "recorded_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+        "observed_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [
+        "WINDOW CITE",
+        "AFTER CLAIM"
+      ],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 13.436666666666667,
+      "recorded_source_png_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+      "source_frame_id": "S000403",
+      "source_frame_index": 403,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000403.png",
+      "supplied_alias": "F0031",
+      "verified_source_file_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+      "sample_order_1based": 3,
+      "authorized_window_index_0based": 30,
+      "alias_number_in_window_1based": 31,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000403.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000403.png",
+        "recorded_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+        "observed_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 13.936666666666667,
+      "recorded_source_png_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+      "source_frame_id": "S000418",
+      "source_frame_index": 418,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000418.png",
+      "supplied_alias": "F0046",
+      "verified_source_file_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+      "sample_order_1based": 4,
+      "authorized_window_index_0based": 45,
+      "alias_number_in_window_1based": 46,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000418.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000418.png",
+        "recorded_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+        "observed_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 14.471666666666666,
+      "recorded_source_png_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+      "source_frame_id": "S000434",
+      "source_frame_index": 434,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000434.png",
+      "supplied_alias": "F0062",
+      "verified_source_file_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+      "sample_order_1based": 5,
+      "authorized_window_index_0based": 61,
+      "alias_number_in_window_1based": 62,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000434.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000434.png",
+        "recorded_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+        "observed_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 14.971666666666666,
+      "recorded_source_png_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+      "source_frame_id": "S000449",
+      "source_frame_index": 449,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000449.png",
+      "supplied_alias": "F0077",
+      "verified_source_file_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+      "sample_order_1based": 6,
+      "authorized_window_index_0based": 76,
+      "alias_number_in_window_1based": 77,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000449.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000449.png",
+        "recorded_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+        "observed_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 15.471666666666666,
+      "recorded_source_png_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+      "source_frame_id": "S000464",
+      "source_frame_index": 464,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000464.png",
+      "supplied_alias": "F0092",
+      "verified_source_file_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+      "sample_order_1based": 7,
+      "authorized_window_index_0based": 91,
+      "alias_number_in_window_1based": 92,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000464.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000464.png",
+        "recorded_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+        "observed_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    },
+    {
+      "native_source_pts_s": 15.973333333333333,
+      "recorded_source_png_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+      "source_frame_id": "S000479",
+      "source_frame_index": 479,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000479.png",
+      "supplied_alias": "F0107",
+      "verified_source_file_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+      "sample_order_1based": 8,
+      "authorized_window_index_0based": 106,
+      "alias_number_in_window_1based": 107,
+      "source_file": {
+        "path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000479.png",
+        "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\human_seed_review\\items\\test7__W05\\frames\\S000479.png",
+        "recorded_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+        "observed_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+        "status": "VERIFIED",
+        "role": "existing_sampled_PNG"
+      },
+      "verification_checks": {
+        "call_vs_frozen_mapping": true,
+        "native_PTS": true,
+        "source_frame_id": true,
+        "source_path": true,
+        "recorded_source_hash": true,
+        "source_frame_index": true,
+        "within_approved_bounds": true
+      },
+      "available_for_display": true,
+      "claim_roles": [],
+      "recorded_temporal_unit_0based": null,
+      "presentation": {
+        "source_dimensions": [
+          1280,
+          720
+        ],
+        "derivative_display_dimensions": [
+          560,
+          315
+        ],
+        "cropped": false
+      }
+    }
+  ],
+  "source_order_verified": true,
+  "storyboard_source": {
+    "path": "artifacts/pass_t/phase2b/preflight/qwen_nf4_protocol_candidates/v1/candidate_003/model_visible/W_b8a53fea6aa8b92dc94f/UNIFORM_8_STORYBOARD.png",
+    "absolute_path": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase2b\\preflight\\qwen_nf4_protocol_candidates\\v1\\candidate_003\\model_visible\\W_b8a53fea6aa8b92dc94f\\UNIFORM_8_STORYBOARD.png",
+    "recorded_sha256": "3bcfad3aac8bcc74d82e3be437469be3c83a9410efa961fa1be49055e84ab988",
+    "observed_sha256": "3bcfad3aac8bcc74d82e3be437469be3c83a9410efa961fa1be49055e84ab988",
+    "status": "VERIFIED",
+    "role": "original_storyboard"
+  },
+  "processor_metadata": {
+    "input_image_dimensions": [
+      [
+        1440,
+        906
+      ]
+    ],
+    "resized_dimensions_hw": {
+      "image_grid_thw": [
+        [
+          336,
+          560
+        ]
+      ]
+    },
+    "grids": {
+      "image_grid_thw": [
+        [
+          1,
+          24,
+          40
+        ]
+      ]
+    },
+    "processor_frame_count": 8,
+    "rendered_prompt_sha256": "a7c8284527934e27bb40529e90d6d87cc0af37f5b7d92bd9eb289fcaf07a92df",
+    "tensor_records": {
+      "attention_mask": {
+        "canonical_sha256": "0a1c53537dd1d736f7ca74919d03f698440781cfa44ef27fcd4e7a9252d8088d",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 2162,
+        "raw_le_c_sha256": "d8f055028bb9de7db5ba4230a90039be917f03b33446df202122a67dd4f408d9",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          1,
+          2162
+        ],
+        "strides": [
+          2162,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "image_grid_thw": {
+        "canonical_sha256": "82d6647f94c5ad3e38862b0d3b2aae9b27ecef1764517b09c166bdecaab6a0d2",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 3,
+        "raw_le_c_sha256": "1b34bb3599814e2c8754feec4e4212e74726a30a7f79d75c1643724082dfce63",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          1,
+          3
+        ],
+        "strides": [
+          3,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "input_ids": {
+        "canonical_sha256": "4645a15a00bdfd77fc0f30ea5a0428723a48ead836ec3c19110235cad7354735",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<i8",
+        "layout": "torch.strided",
+        "numel": 2162,
+        "raw_le_c_sha256": "add5b7978276b69b69eebc1675e0dfa3cf145d1ee5cafda593894f0325372667",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          1,
+          2162
+        ],
+        "strides": [
+          2162,
+          1
+        ],
+        "torch_dtype": "torch.int64"
+      },
+      "pixel_values": {
+        "canonical_sha256": "39c7b39e5625636d0c93c650dc7205c8e2bf9faa85000701c8f8079e0efb2713",
+        "contiguous": true,
+        "device": "cpu",
+        "dtype": "<f4",
+        "layout": "torch.strided",
+        "numel": 1128960,
+        "raw_le_c_sha256": "47fa91a559cce3a9f78412d3e8b6d18b44b8c1e48c1f3850766a0d1a30f8980b",
+        "serialization": "TENSOR_LE_C_V1",
+        "shape": [
+          960,
+          1176
+        ],
+        "strides": [
+          1176,
+          1
+        ],
+        "torch_dtype": "torch.float32"
+      }
+    }
+  },
+  "human_adjudication": "UNREVIEWED"
+}

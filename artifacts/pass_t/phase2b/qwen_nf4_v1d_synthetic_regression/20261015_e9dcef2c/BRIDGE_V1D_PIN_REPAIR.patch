@@ -1,0 +1,25 @@
+--- V1C_pinned_bridge.py
++++ explicit_synthetic_prompt_pin_bridge.py
+@@ -71,7 +71,12 @@
+     if payload.get('representation')!='NATIVE_VIDEO_ARRAY' or payload.get('media')!=[]:
+         raise ValueError('EXPLICIT_IN_PROCESS_NATIVE_ARRAY_ROUTE_REQUIRED')
+     prompt=payload['instructions']
+-    if hashlib.sha256(prompt.encode()).hexdigest()!=V1C_SHA256:raise ValueError('V1C_HASH_CHANGED')
++    expected_prompt_sha256=deployment.get('experimental_task_prompt_sha256',V1C_SHA256)
++    if expected_prompt_sha256!=V1C_SHA256 and (
++        deployment.get('synthetic_only') is not True or deployment.get('experimental_task_prompt_candidate')!='V1D'
++        or not isinstance(expected_prompt_sha256,str) or re.fullmatch(r'[0-9a-f]{64}',expected_prompt_sha256) is None):
++        raise ValueError('EXPLICIT_PINNED_SYNTHETIC_V1D_CANDIDATE_REQUIRED')
++    if hashlib.sha256(prompt.encode()).hexdigest()!=expected_prompt_sha256:raise ValueError('PINNED_TASK_PROMPT_HASH_CHANGED')
+     cap=deployment['processor_max_pixels']
+     if cap!=200704:raise ValueError('PINNED_PIXEL_CAP_REQUIRED')
+     for component in [processor.image_processor,processor.video_processor]:
+@@ -103,7 +108,7 @@
+       'processor_fps':fps,'second_per_grid_ts':inputs['second_per_grid_ts'].tolist(),
+       'native_pts_model_visible':False,'native_time_sidecar_usage':'span only determines FPS; individual native PTS never serialized',
+       'rendered_prompt':rendered,'rendered_prompt_sha256':hashlib.sha256(rendered.encode()).hexdigest(),
+-      'task_prompt_sha256':V1C_SHA256,'configured_pixel_cap':cap,'input_image_dimensions':[],
++      'task_prompt_sha256':expected_prompt_sha256,'configured_pixel_cap':cap,'input_image_dimensions':[],
+       'alias_unit_mapping':[{'unit':i//2,'aliases':aliases[i:i+2]} for i in range(0,8,2)],
+       'static_timeline':static_timeline(aliases,pts,fps,seconds),'actual_model_positions':'NOT_INSTRUMENTED',
+       'identity_clause_enabled':False,'tensor_records':{k:tensor_record(v) for k,v in inputs.items()},**accounting}

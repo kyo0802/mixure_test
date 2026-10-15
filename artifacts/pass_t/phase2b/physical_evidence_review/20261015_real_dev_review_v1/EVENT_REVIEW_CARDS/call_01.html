@@ -1,0 +1,455 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Call 01 — test5 W05 — NATIVE_VIDEO_ARRAY</title><link rel="stylesheet" href="../review.css"></head><body><nav><a href="../PHYSICAL_EVIDENCE_REVIEW_INDEX.html" target="_blank">審閱首頁</a> <a href="../TEST5_W05_REPRESENTATION_COMPARISON.html" target="_blank">test5 比較</a> <a href="../TEST7_W05_REPRESENTATION_COMPARISON.html" target="_blank">test7 比較</a></nav><h1>Call 01 — test5 W05 — NATIVE_VIDEO_ARRAY</h1><p class="badge">OUTPUT_CONTRACT_FAILURE：STRICT_INVALID_DESCRIPTIVE_ONLY</p><p class="badge">PHYSICAL_EVIDENCE_ASSESSMENT：UNREVIEWED</p><h2>原始模型 claim</h2><blockquote>The card is picked up from the table.</blockquote><pre>{
+  &quot;window_outcome&quot;: &quot;CONFIRMED_EVENTS&quot;,
+  &quot;event&quot;: {
+    &quot;after_state&quot;: {
+      &quot;state&quot;: &quot;HELD_BY_PERSON&quot;,
+      &quot;supporting_frame_alias&quot;: &quot;F0016&quot;
+    },
+    &quot;before_state&quot;: {
+      &quot;state&quot;: &quot;ON_SURFACE&quot;,
+      &quot;supporting_frame_alias&quot;: &quot;F0001&quot;
+    },
+    &quot;cited_frame_aliases&quot;: [
+      &quot;F0001&quot;
+    ],
+    &quot;event_id&quot;: &quot;PRED_EVT_001&quot;,
+    &quot;event_type&quot;: &quot;PICKUP&quot;,
+    &quot;rationale&quot;: &quot;The card is picked up from the table.&quot;,
+    &quot;target_association_uncertainty&quot;: &quot;NONE&quot;,
+    &quot;timing&quot;: {
+      &quot;frame_alias&quot;: &quot;F0001&quot;,
+      &quot;status&quot;: &quot;EXACT_SUPPLIED_FRAME&quot;
+    },
+    &quot;timing_uncertainty&quot;: &quot;&quot;
+  },
+  &quot;window_uncertainty&quot;: &quot;&quot;,
+  &quot;window_rationale&quot;: &quot;The card is visibly picked up and held.&quot;,
+  &quot;window_cited_frame_aliases&quot;: [
+    &quot;F0001&quot;,
+    &quot;F0016&quot;
+  ],
+  &quot;last_directly_supported_state&quot;: {
+    &quot;state&quot;: &quot;HELD_BY_PERSON&quot;,
+    &quot;supporting_frame_alias&quot;: &quot;F0016&quot;
+  }
+}</pre><div class="warning">以上是模型原話，不是已驗證的物件身分或事件。單張持有狀態不證明何時何地拿起；首張 observation 不等於事件瞬間。</div><h2>原始驗證缺陷</h2><pre>{
+  &quot;citation_errors&quot;: [],
+  &quot;semantic_errors&quot;: [],
+  &quot;structural_errors&quot;: [
+    &quot;/events/0/timing_uncertainty:&#x27;&#x27; should be non-empty&quot;,
+    &quot;/uncertainty:&#x27;&#x27; should be non-empty&quot;
+  ],
+  &quot;valid&quot;: false
+}</pre><p><strong>FRAME_MATCHED_ONLY — 8 source frames / 4 temporal units</strong></p><pre>[
+  {
+    &quot;aliases&quot;: [
+      &quot;F0001&quot;,
+      &quot;F0016&quot;
+    ],
+    &quot;unit&quot;: 0
+  },
+  {
+    &quot;aliases&quot;: [
+      &quot;F0032&quot;,
+      &quot;F0047&quot;
+    ],
+    &quot;unit&quot;: 1
+  },
+  {
+    &quot;aliases&quot;: [
+      &quot;F0062&quot;,
+      &quot;F0077&quot;
+    ],
+    &quot;unit&quot;: 2
+  },
+  {
+    &quot;aliases&quot;: [
+      &quot;F0093&quot;,
+      &quot;F0108&quot;
+    ],
+    &quot;unit&quot;: 3
+  }
+]</pre><p>此圖不是 attention 或模型內部 visual-token perception 的重現。unit 為原始 receipt 的零基底編號。</p><figure><a href="../CONTACT_SHEETS/call_01_eight_frames.png"><img class="sheet" alt="八張原始 sampled frames 的 display derivative" src="../CONTACT_SHEETS/call_01_eight_frames.png"></a><figcaption>點圖可放大。橘框為模型 event citation／timing claim，藍框為其他 window citation／state claim；這些標記不代表人工認定。保持 source aspect ratio，未裁切。</figcaption></figure><h2>個別原始影格 — 可點選原尺寸</h2><div class="grid"><div class="original cited timing"><strong>#1 F0001 · S000342</strong><br>native PTS 11.400000000s<br><span class="pill">EVENT CITE / WINDOW CITE / TIMING CLAIM / BEFORE CLAIM</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000342.png" target="_blank"><img loading="lazy" alt="F0001 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000342.png"></a></div><div class="original cited"><strong>#2 F0016 · S000357</strong><br>native PTS 11.900000000s<br><span class="pill">WINDOW CITE / AFTER CLAIM</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000357.png" target="_blank"><img loading="lazy" alt="F0016 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000357.png"></a></div><div class="original"><strong>#3 F0032 · S000373</strong><br>native PTS 12.433333333s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000373.png" target="_blank"><img loading="lazy" alt="F0032 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000373.png"></a></div><div class="original"><strong>#4 F0047 · S000388</strong><br>native PTS 12.933333333s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000388.png" target="_blank"><img loading="lazy" alt="F0047 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000388.png"></a></div><div class="original"><strong>#5 F0062 · S000403</strong><br>native PTS 13.433333333s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000403.png" target="_blank"><img loading="lazy" alt="F0062 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000403.png"></a></div><div class="original"><strong>#6 F0077 · S000418</strong><br>native PTS 13.933333333s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000418.png" target="_blank"><img loading="lazy" alt="F0077 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000418.png"></a></div><div class="original"><strong>#7 F0093 · S000434</strong><br>native PTS 14.466666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000434.png" target="_blank"><img loading="lazy" alt="F0093 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000434.png"></a></div><div class="original"><strong>#8 F0108 · S000449</strong><br>native PTS 14.966666667s<br><span class="pill">CONTEXT</span><a href="../../../../human_seed_review/items/test5__W05/frames/S000449.png" target="_blank"><img loading="lazy" alt="F0108 原始影格" src="../../../../human_seed_review/items/test5__W05/frames/S000449.png"></a></div></div><h2>來源 mapping</h2><table><thead><tr><th>order</th><th>alias</th><th>window index (0)</th><th>source index</th><th>native PTS</th><th>roles</th><th>status</th><th>SHA-256</th></tr></thead><tbody><tr><td>1</td><td>F0001</td><td>0</td><td>342</td><td>11.4</td><td>EVENT CITE, WINDOW CITE, TIMING CLAIM, BEFORE CLAIM</td><td>VERIFIED</td><td><code>10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27</code></td></tr><tr><td>2</td><td>F0016</td><td>15</td><td>357</td><td>11.9</td><td>WINDOW CITE, AFTER CLAIM</td><td>VERIFIED</td><td><code>220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82</code></td></tr><tr><td>3</td><td>F0032</td><td>31</td><td>373</td><td>12.433333333333334</td><td></td><td>VERIFIED</td><td><code>b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7</code></td></tr><tr><td>4</td><td>F0047</td><td>46</td><td>388</td><td>12.933333333333334</td><td></td><td>VERIFIED</td><td><code>8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d</code></td></tr><tr><td>5</td><td>F0062</td><td>61</td><td>403</td><td>13.433333333333334</td><td></td><td>VERIFIED</td><td><code>03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487</code></td></tr><tr><td>6</td><td>F0077</td><td>76</td><td>418</td><td>13.933333333333334</td><td></td><td>VERIFIED</td><td><code>ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794</code></td></tr><tr><td>7</td><td>F0093</td><td>92</td><td>434</td><td>14.466666666666667</td><td></td><td>VERIFIED</td><td><code>48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624</code></td></tr><tr><td>8</td><td>F0108</td><td>107</td><td>449</td><td>14.966666666666667</td><td></td><td>VERIFIED</td><td><code>a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e</code></td></tr></tbody></table><details><summary>原始 processor resize / grids / temporal metadata</summary><pre>{
+  &quot;input_image_dimensions&quot;: [],
+  &quot;resized_dimensions_hw&quot;: {
+    &quot;video_grid_thw&quot;: [
+      [
+        336,
+        588
+      ]
+    ]
+  },
+  &quot;grids&quot;: {
+    &quot;video_grid_thw&quot;: [
+      [
+        4,
+        24,
+        42
+      ]
+    ]
+  },
+  &quot;processor_frame_count&quot;: 8,
+  &quot;processor_selected_indices&quot;: [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  &quot;alias_unit_mapping&quot;: [
+    {
+      &quot;aliases&quot;: [
+        &quot;F0001&quot;,
+        &quot;F0016&quot;
+      ],
+      &quot;unit&quot;: 0
+    },
+    {
+      &quot;aliases&quot;: [
+        &quot;F0032&quot;,
+        &quot;F0047&quot;
+      ],
+      &quot;unit&quot;: 1
+    },
+    {
+      &quot;aliases&quot;: [
+        &quot;F0062&quot;,
+        &quot;F0077&quot;
+      ],
+      &quot;unit&quot;: 2
+    },
+    {
+      &quot;aliases&quot;: [
+        &quot;F0093&quot;,
+        &quot;F0108&quot;
+      ],
+      &quot;unit&quot;: 3
+    }
+  ],
+  &quot;actual_model_positions&quot;: &quot;NOT_INSTRUMENTED&quot;,
+  &quot;representation_status&quot;: &quot;FRAME_MATCHED_ONLY&quot;,
+  &quot;source_rgb_sha256&quot;: [
+    &quot;46344ecd116a96990fe0b678a27aa2ee4de92c4e86c63d2b515f1e02094de82f&quot;,
+    &quot;3f40a5991396f2d114c5d33291941e7b6f1c628d22a0c520ca73140fe5a67c41&quot;,
+    &quot;ed2a10484015f8dc14470602bfb760ad272f3425c49dab8cf4a95bbf8dcfcf2b&quot;,
+    &quot;435f696e4cf32bdb7f7a112a87e5540cca85432675be5c193a1d91da53a29f2c&quot;,
+    &quot;d76d02f89cdde7760f21f66041195257148a9652230a85b3b71b0bda4ae6e6ac&quot;,
+    &quot;1eccbfaf3ecf5371a40171081b9ca2254c4387583640a920977d35d2d6368fd0&quot;,
+    &quot;eeb4ea0c7a11955a77dd6a49cc04ed4c752a15b3aefcce226925fadd26c4b0f7&quot;,
+    &quot;68e4b371f09981e0c7df126709ebdf72926d9a853854f409534ea71bc607abe9&quot;
+  ],
+  &quot;rendered_prompt_sha256&quot;: &quot;22516c2b13e44368b4f8b9fc580c5cc2e436e2cff4be40b8167903597ed863e3&quot;,
+  &quot;tensor_records&quot;: {
+    &quot;attention_mask&quot;: {
+      &quot;canonical_sha256&quot;: &quot;8a59c7840091c102b48887d9e36a90781973d8585b0adeb5fee634c1b8f69a47&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 2930,
+      &quot;raw_le_c_sha256&quot;: &quot;ae597d49285c38a10b5f894abb516589937e82382b2415f7a437034f15982c1f&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        2930
+      ],
+      &quot;strides&quot;: [
+        2930,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    },
+    &quot;input_ids&quot;: {
+      &quot;canonical_sha256&quot;: &quot;c648e80daabf85bf9f151ce206440492e3bbcff7c36b6adc0e216579b7d82fbe&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 2930,
+      &quot;raw_le_c_sha256&quot;: &quot;fcb534599987b15e61e49f74acc714f5f160fd4ae7e84f2d83d9a383b84db9b3&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        2930
+      ],
+      &quot;strides&quot;: [
+        2930,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    },
+    &quot;pixel_values_videos&quot;: {
+      &quot;canonical_sha256&quot;: &quot;81448efb683fe2aab6edd160e264ed4327a82edca71e4ca0bd0cc37438fb619c&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;f4&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 4741632,
+      &quot;raw_le_c_sha256&quot;: &quot;d729cc4b334bd4d226797acfc52a3627346a0e673861fd5eb521361520cfce4a&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        4032,
+        1176
+      ],
+      &quot;strides&quot;: [
+        1176,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.float32&quot;
+    },
+    &quot;second_per_grid_ts&quot;: {
+      &quot;canonical_sha256&quot;: &quot;de0ba48633e430865b86328ded3f0a3d894781bf4e5a3326cdcfd0a93ad13b6d&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;f4&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 1,
+      &quot;raw_le_c_sha256&quot;: &quot;9351aa21aa6d41c4d69e258f6042f477338dc9767c46a93369214169cf37d21f&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1
+      ],
+      &quot;strides&quot;: [
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.float32&quot;
+    },
+    &quot;video_grid_thw&quot;: {
+      &quot;canonical_sha256&quot;: &quot;258d35104fd7a30890944e8938b45d0d7ec661c873bd06d6219e6eb54b330fe1&quot;,
+      &quot;contiguous&quot;: true,
+      &quot;device&quot;: &quot;cpu&quot;,
+      &quot;dtype&quot;: &quot;&lt;i8&quot;,
+      &quot;layout&quot;: &quot;torch.strided&quot;,
+      &quot;numel&quot;: 3,
+      &quot;raw_le_c_sha256&quot;: &quot;0d199fd238752bcc68b48b971d5ad70cd8bbd6858580ad6688a367b31c509e44&quot;,
+      &quot;serialization&quot;: &quot;TENSOR_LE_C_V1&quot;,
+      &quot;shape&quot;: [
+        1,
+        3
+      ],
+      &quot;strides&quot;: [
+        3,
+        1
+      ],
+      &quot;torch_dtype&quot;: &quot;torch.int64&quot;
+    }
+  },
+  &quot;static_timeline&quot;: [
+    {
+      &quot;alias&quot;: &quot;F0001&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 0.0,
+      &quot;native_relative_s&quot;: 0.0,
+      &quot;native_synthetic_pts_s&quot;: 11.4,
+      &quot;nominal_reconstruction_error_s&quot;: 0.0,
+      &quot;processor_quantization_from_nominal_s&quot;: 0.0,
+      &quot;processor_unit_time_s&quot;: 0.0,
+      &quot;processor_unit_vs_native_error_s&quot;: 0.0,
+      &quot;reconstructed_frame_time_s&quot;: 0.0,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 0,
+      &quot;static_model_proxy_error_s&quot;: 0.0,
+      &quot;static_relative_model_temporal_id&quot;: 0,
+      &quot;temporal_unit&quot;: 0,
+      &quot;unit_aliases&quot;: [
+        &quot;F0001&quot;,
+        &quot;F0016&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        11.4,
+        11.9
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0016&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 0.0,
+      &quot;native_relative_s&quot;: 0.5,
+      &quot;native_synthetic_pts_s&quot;: 11.9,
+      &quot;nominal_reconstruction_error_s&quot;: 0.00952380952380949,
+      &quot;processor_quantization_from_nominal_s&quot;: -0.5095238095238095,
+      &quot;processor_unit_time_s&quot;: 0.0,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.5,
+      &quot;reconstructed_frame_time_s&quot;: 0.5095238095238095,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 1,
+      &quot;static_model_proxy_error_s&quot;: -0.5,
+      &quot;static_relative_model_temporal_id&quot;: 0,
+      &quot;temporal_unit&quot;: 0,
+      &quot;unit_aliases&quot;: [
+        &quot;F0001&quot;,
+        &quot;F0016&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        11.4,
+        11.9
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0032&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 1.0,
+      &quot;native_relative_s&quot;: 1.0333333333333332,
+      &quot;native_synthetic_pts_s&quot;: 12.433333333333334,
+      &quot;nominal_reconstruction_error_s&quot;: -0.014285714285714235,
+      &quot;processor_quantization_from_nominal_s&quot;: -1.1353264994795609e-09,
+      &quot;processor_unit_time_s&quot;: 1.0190476179122925,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.014285715421040734,
+      &quot;reconstructed_frame_time_s&quot;: 1.019047619047619,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 2,
+      &quot;static_model_proxy_error_s&quot;: -0.033333333333333215,
+      &quot;static_relative_model_temporal_id&quot;: 2,
+      &quot;temporal_unit&quot;: 1,
+      &quot;unit_aliases&quot;: [
+        &quot;F0032&quot;,
+        &quot;F0047&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        12.433333333333334,
+        12.933333333333334
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0047&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 1.0,
+      &quot;native_relative_s&quot;: 1.5333333333333332,
+      &quot;native_synthetic_pts_s&quot;: 12.933333333333334,
+      &quot;nominal_reconstruction_error_s&quot;: -0.004761904761904745,
+      &quot;processor_quantization_from_nominal_s&quot;: -0.509523810659136,
+      &quot;processor_unit_time_s&quot;: 1.0190476179122925,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.5142857154210407,
+      &quot;reconstructed_frame_time_s&quot;: 1.5285714285714285,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 3,
+      &quot;static_model_proxy_error_s&quot;: -0.5333333333333332,
+      &quot;static_relative_model_temporal_id&quot;: 2,
+      &quot;temporal_unit&quot;: 1,
+      &quot;unit_aliases&quot;: [
+        &quot;F0032&quot;,
+        &quot;F0047&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        12.433333333333334,
+        12.933333333333334
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0062&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 2.0,
+      &quot;native_relative_s&quot;: 2.033333333333333,
+      &quot;native_synthetic_pts_s&quot;: 13.433333333333334,
+      &quot;nominal_reconstruction_error_s&quot;: 0.004761904761904745,
+      &quot;processor_quantization_from_nominal_s&quot;: -2.2706529989591218e-09,
+      &quot;processor_unit_time_s&quot;: 2.038095235824585,
+      &quot;processor_unit_vs_native_error_s&quot;: 0.004761902491251746,
+      &quot;reconstructed_frame_time_s&quot;: 2.038095238095238,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 4,
+      &quot;static_model_proxy_error_s&quot;: -0.033333333333333215,
+      &quot;static_relative_model_temporal_id&quot;: 4,
+      &quot;temporal_unit&quot;: 2,
+      &quot;unit_aliases&quot;: [
+        &quot;F0062&quot;,
+        &quot;F0077&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        13.433333333333334,
+        13.933333333333334
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0077&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 2.0,
+      &quot;native_relative_s&quot;: 2.533333333333333,
+      &quot;native_synthetic_pts_s&quot;: 13.933333333333334,
+      &quot;nominal_reconstruction_error_s&quot;: 0.014285714285714235,
+      &quot;processor_quantization_from_nominal_s&quot;: -0.5095238117944625,
+      &quot;processor_unit_time_s&quot;: 2.038095235824585,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.49523809750874825,
+      &quot;reconstructed_frame_time_s&quot;: 2.5476190476190474,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 5,
+      &quot;static_model_proxy_error_s&quot;: -0.5333333333333332,
+      &quot;static_relative_model_temporal_id&quot;: 4,
+      &quot;temporal_unit&quot;: 2,
+      &quot;unit_aliases&quot;: [
+        &quot;F0062&quot;,
+        &quot;F0077&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        13.433333333333334,
+        13.933333333333334
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0093&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 3.0,
+      &quot;native_relative_s&quot;: 3.0666666666666664,
+      &quot;native_synthetic_pts_s&quot;: 14.466666666666667,
+      &quot;nominal_reconstruction_error_s&quot;: -0.00952380952380949,
+      &quot;processor_quantization_from_nominal_s&quot;: -3.4059794984386826e-09,
+      &quot;processor_unit_time_s&quot;: 3.0571428537368774,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.009523812929788988,
+      &quot;reconstructed_frame_time_s&quot;: 3.057142857142857,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 6,
+      &quot;static_model_proxy_error_s&quot;: -0.06666666666666643,
+      &quot;static_relative_model_temporal_id&quot;: 6,
+      &quot;temporal_unit&quot;: 3,
+      &quot;unit_aliases&quot;: [
+        &quot;F0093&quot;,
+        &quot;F0108&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        14.466666666666667,
+        14.966666666666667
+      ]
+    },
+    {
+      &quot;alias&quot;: &quot;F0108&quot;,
+      &quot;id_div_tokens_per_second_proxy_s&quot;: 3.0,
+      &quot;native_relative_s&quot;: 3.5666666666666664,
+      &quot;native_synthetic_pts_s&quot;: 14.966666666666667,
+      &quot;nominal_reconstruction_error_s&quot;: 0.0,
+      &quot;processor_quantization_from_nominal_s&quot;: -0.509523812929789,
+      &quot;processor_unit_time_s&quot;: 3.0571428537368774,
+      &quot;processor_unit_vs_native_error_s&quot;: -0.509523812929789,
+      &quot;reconstructed_frame_time_s&quot;: 3.5666666666666664,
+      &quot;runtime_position_verification&quot;: &quot;STATIC_SOURCE_CALCULATION_NOT_ACTUAL_FORWARD_POSITIONS&quot;,
+      &quot;seconds_after_source_integer_cast&quot;: 1,
+      &quot;seconds_per_grid_ts&quot;: 1.0190476179122925,
+      &quot;source_frame_position&quot;: 7,
+      &quot;static_model_proxy_error_s&quot;: -0.5666666666666664,
+      &quot;static_relative_model_temporal_id&quot;: 6,
+      &quot;temporal_unit&quot;: 3,
+      &quot;unit_aliases&quot;: [
+        &quot;F0093&quot;,
+        &quot;F0108&quot;
+      ],
+      &quot;unit_native_span_s&quot;: [
+        14.466666666666667,
+        14.966666666666667
+      ]
+    }
+  ],
+  &quot;processor_fps&quot;: 1.9626168224299068,
+  &quot;second_per_grid_ts&quot;: [
+    1.0190476179122925
+  ],
+  &quot;native_pts_model_visible&quot;: false
+}</pre></details><section><h2>首影格 timing claim 提醒</h2><p>此 call 宣稱 F0001 發生 PICKUP。F0001 是首個 supplied observation；本套 evidence 沒有更早 sampled observation。請分開檢查 BEFORE、AFTER 及 transition，不能由 alias 排序自動判定事件時間。兩張不同 state 支持的 bracket 也不是已觀察的瞬間。</p></section><section><h2>空白人工審定表 — Q1–Q7</h2><p>這是 review labels，不是新 GT。沒有預選物理結論。請以可觀察影像為依據，不以 schema 成敗或既有非完整 GT 代替判斷。</p><form id="human-review"><label>Reviewer ID<input name="reviewer_id" autocomplete="off"></label><fieldset><legend>Q1_TARGET_IDENTITY：目標身分</legend><p>目標能否辨識？模型名詞符合影像嗎？是否模糊不清或描述了另一物件？</p><label>回答<select name="Q1_TARGET_IDENTITY"><option value="" selected>尚未回答</option><option>IDENTIFIABLE_AND_CONSISTENT</option><option>AMBIGUOUS</option><option>POSSIBLY_DIFFERENT_OBJECT</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q1_TARGET_IDENTITY_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q1_TARGET_IDENTITY_notes"></textarea></label></fieldset><fieldset><legend>Q2_BEFORE：BEFORE 證據</legend><p>事件前是否直接看見物件由所稱表面支撐？指出 alias；不要將推論當觀察。</p><label>回答<select name="Q2_BEFORE"><option value="" selected>尚未回答</option><option>DIRECTLY_OBSERVED</option><option>INFERRED_ONLY</option><option>NOT_OBSERVED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q2_BEFORE_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q2_BEFORE_notes"></textarea></label></fieldset><fieldset><legend>Q3_AFTER：AFTER 證據</legend><p>事件後是否直接看見人手持有物件？指出 alias；不要將推論當觀察。</p><label>回答<select name="Q3_AFTER"><option value="" selected>尚未回答</option><option>DIRECTLY_OBSERVED</option><option>INFERRED_ONLY</option><option>NOT_OBSERVED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q3_AFTER_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q3_AFTER_notes"></textarea></label></fieldset><fieldset><legend>Q4_PHYSICAL_TRANSITION：物理轉換</legend><p>ON_SURFACE → HELD_BY_PERSON 是否可見？有直接 manipulation 證據嗎？是否僅由消失／遮擋推論？其他解釋是什麼？</p><label>回答<select name="Q4_PHYSICAL_TRANSITION"><option value="" selected>尚未回答</option><option>DIRECT_TRANSITION_VISIBLE</option><option>BRACKETED_STATES_ONLY</option><option>DISAPPEARANCE_OR_OCCLUSION_ONLY</option><option>ALTERNATIVE_EXPLANATION</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q4_PHYSICAL_TRANSITION_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q4_PHYSICAL_TRANSITION_notes"></textarea></label></fieldset><fieldset><legend>Q5_TEMPORAL_SUPPORT：時間支持</legend><p>citation 支持轉換瞬間，還是只有某狀態？是否只有 before/after bracket？實際瞬間是否未觀察？alias 有效不代表時間主張正確。</p><label>回答<select name="Q5_TEMPORAL_SUPPORT"><option value="" selected>尚未回答</option><option>OBSERVED_TRANSITION_TIME</option><option>STATE_ONLY</option><option>BRACKET_ONLY_MOMENT_UNOBSERVED</option><option>CITATION_UNSUPPORTED</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q5_TEMPORAL_SUPPORT_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q5_TEMPORAL_SUPPORT_notes"></textarea></label></fieldset><fieldset><legend>Q6_CONTRADICTIONS：矛盾與不確定</legend><p>before/after、timing 與 rationale 是否一致？指出遮擋、缺失觀察、抽樣間隙或替代解釋。</p><label>回答<select name="Q6_CONTRADICTIONS"><option value="" selected>尚未回答</option><option>NO_CONTRADICTION_IDENTIFIED</option><option>CONTRADICTION_IDENTIFIED</option><option>IMPORTANT_OBSERVATION_GAPS</option><option>NOT_ASSESSABLE</option></select></label><label>Supporting aliases（逗號／空白分隔）<input name="Q6_CONTRADICTIONS_aliases"></label><label>具體觀察、替代解釋與限制<textarea name="Q6_CONTRADICTIONS_notes"></textarea></label></fieldset><fieldset><legend>Q7：Human disposition</legend><label>判定<select name="disposition"><option value="UNREVIEWED" selected>UNREVIEWED — 尚未人工判定</option><option>SUPPORTED_BY_OBSERVED_EVIDENCE</option><option>UNSUPPORTED_BY_OBSERVED_EVIDENCE</option><option>INDETERMINATE</option><option>WRONG_TARGET</option><option>INSUFFICIENT_VISUAL_QUALITY</option></select></label><label>Supporting frame aliases<input name="supporting_frame_aliases"></label><label>總結 rationale<textarea name="rationale"></textarea></label></fieldset><button type="submit">下載本筆人工審閱 JSON</button><p id="save-status" role="status"></p></form><p class="small">本頁不向伺服器傳送資料、不自動保存。離開前請下載；每筆一個 JSON，請保存在另外的人工作業位置。下載檔案不會自動匯入 GT。</p></section><h2>追溯來源</h2><p>Protocol SHA：<code>b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d</code></p><p>Raw output SHA：<code>6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428</code></p><p><a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_01/raw_output.txt" target="_blank">原始 raw output</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_01/call_receipt.json" target="_blank">原始 call receipt</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_01/runtime_receipt.json" target="_blank">原始 runtime receipt</a> | <a href="../../../v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/authorization_use.json" target="_blank">原始 execution authorization</a> | <a href="../EVIDENCE_PROVENANCE_MANIFEST.json" target="_blank">來源與衍生圖 manifest</a></p><script id="review-config" type="application/json">{"schema_version": "PASS_T_PHASE2B_PHYSICAL_EVIDENCE_HUMAN_REVIEW_V1", "protocol_sha256": "b7929b0e6ecaa651d7a316e838efe0b4c6437920a93b5b33bf41b6ce34740c9d", "source_template_sha256": "d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170", "initial": {"call_id": 1, "window": "test5 W05", "representation": "NATIVE_VIDEO_ARRAY", "reviewer_id": "", "disposition": "UNREVIEWED", "supporting_frame_aliases": [], "rationale": "", "question_answers": {"Q1_TARGET_IDENTITY": {"answer": null, "frame_aliases": [], "notes": ""}, "Q2_BEFORE": {"answer": null, "frame_aliases": [], "notes": ""}, "Q3_AFTER": {"answer": null, "frame_aliases": [], "notes": ""}, "Q4_PHYSICAL_TRANSITION": {"answer": null, "frame_aliases": [], "notes": ""}, "Q5_TEMPORAL_SUPPORT": {"answer": null, "frame_aliases": [], "notes": ""}, "Q6_CONTRADICTIONS": {"answer": null, "frame_aliases": [], "notes": ""}}, "reviewed_at_utc": null, "raw_output_sha256": "6848ce8243c5a08088da7ac094356f6b513d3030cf1107c1fef0a476bd37b428"}, "aliases": ["F0001", "F0016", "F0032", "F0047", "F0062", "F0077", "F0093", "F0108"], "question_keys": ["Q1_TARGET_IDENTITY", "Q2_BEFORE", "Q3_AFTER", "Q4_PHYSICAL_TRANSITION", "Q5_TEMPORAL_SUPPORT", "Q6_CONTRADICTIONS"]}</script><script src="../review.js"></script></body></html>

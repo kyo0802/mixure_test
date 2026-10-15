@@ -1,0 +1,6 @@
+# PREPARED ONLY — NOT EXECUTED. Requires a separately human-authorized file.
+Set-Location -LiteralPath 'C:\Users\smile\Desktop\test2\mixure_test_SAM'
+if (-not (Test-Path -LiteralPath 'C:\Users\smile\Desktop\test2\mixure_test_SAM\WORKSPACE\Pass_T\Post_Freeze_Verification_20261015\execution_authorization.APPROVED.json')) { throw 'Separate approved execution authorization is missing.' }
+$env:PASS_T_LOCAL_RUNTIME_APPROVAL = '1'
+$env:PASS_T_PHASE2B_REAL_RUN_PERMISSION = '1'
+& 'C:\Users\smile\Desktop\test2\mixure_test_SAM\.venv\Scripts\python.exe' -B 'C:\Users\smile\Desktop\test2\mixure_test_SAM\scripts\run_pass_t_v1d_pilot.py' run --frozen 'C:\Users\smile\Desktop\test2\mixure_test_SAM\artifacts\pass_t\phase2b\v1d_protocols\3f10dfb6bdb03ae2209745e87467d2ad0d1af84502c03eccdbc8dc2e27bd189a\frozen_bundle.json' --execution-authorization 'C:\Users\smile\Desktop\test2\mixure_test_SAM\WORKSPACE\Pass_T\Post_Freeze_Verification_20261015\execution_authorization.APPROVED.json'

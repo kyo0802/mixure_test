@@ -1,0 +1,7 @@
+# Native → processor → model timing
+
+See cpu/video_<fixture>.json for all 8 rows per locked synthetic fixture. Separate quantities: source synthetic PTS, nominal i/fps, processor unit floor(i/2)*second_per_grid_ts, static model relative temporal contribution. Separate columns retain nominal reconstruction error, processor quantization from nominal, processor-vs-native and static proxy-vs-native error. No container was encoded. Native PTS is private; span determines reconstructed FPS, individual PTS never entered the model text.
+
+Important correction to previous simplified static proxy: installed modeling_qwen2_5_vl.py first calls torch.as_tensor(second_per_grid_t,dtype=range_tensor.dtype), with range_tensor=int64, BEFORE multiplication and final.long(). Source-faithful static calculation uses that cast. For hypothetical seconds=.99, previous floating simplification gives [0,1,3,5], whereas installed-source relative contribution gives [0,0,0,0]. Old reports remain untouched; their float proxy is not an exact reproduction of this installed integer-cast path. Unit count4 also does not guarantee4 distinct temporal position IDs.
+
+GPU smoke proves native Video tensor route and actual forward/generation complete, not independently observed absolute position_ids or per-frame attention. Actual model position_ids were not instrumented; scalar source proxy must not be promoted to a runtime measurement. Source code/config hashes are in execution manifest. No architectural patch to temporal grouping/position code.

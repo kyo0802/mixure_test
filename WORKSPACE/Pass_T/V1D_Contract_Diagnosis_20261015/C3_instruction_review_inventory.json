@@ -1,0 +1,578 @@
+[
+  {
+    "claim_id": "C3-R01_C01-1",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-2",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-3",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-4",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-5",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-6",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-7",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-8",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R01_C01-9",
+    "attempt_id": "R01_C01",
+    "representation": "MULTI_IMAGE",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-10",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-11",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-12",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-13",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-14",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-15",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-16",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-17",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R02_C06-18",
+    "attempt_id": "R02_C06",
+    "representation": "STORYBOARD",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-19",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-20",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-21",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-22",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-23",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-24",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-25",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-26",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R03_C08-27",
+    "attempt_id": "R03_C08",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-28",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-29",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-30",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-31",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-32",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-33",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-34",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-35",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R04_C03-36",
+    "attempt_id": "R04_C03",
+    "representation": "MULTI_IMAGE",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-37",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-38",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-39",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-40",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-41",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-42",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-43",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-44",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R05_C04-45",
+    "attempt_id": "R05_C04",
+    "representation": "STORYBOARD",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-46",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-47",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-48",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-49",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-50",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-51",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-52",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-53",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R06_C07-54",
+    "attempt_id": "R06_C07",
+    "representation": "NATIVE_VIDEO_ARRAY",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-55",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-56",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-57",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-58",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-59",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-60",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-61",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-62",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R07_C02-63",
+    "attempt_id": "R07_C02",
+    "representation": "MULTI_IMAGE",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-64",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Respond with exactly one compact JSON object conforming to the user supplied schema. Begin with { and end with }. Do not use Markdown fences or prose outside JSON. Keep rationale and uncertainty strings short; do not copy the schema into the response.<|im_end|>",
+    "instruction_level": "system",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-65",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-66",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Timing: each reported event requires a nonempty timing_uncertainty string. This is a truthful textual explanation, not an extra enum or a numerical precision requirement. For EXACT_SUPPLIED_FRAME, use it only when the transition itself is directly visible; explain the limits of the observation, including when no additional timing uncertainty is observed. For BOUNDED_SUPPLIED_FRAMES, explain the gap or interval limitation using the supplied boundary aliases. For TIMING_UNKNOWN, explain why the transition time cannot be established. An empty string, null, or omitted timing_uncertainty does not satisfy the contract. Never invent a precise time to satisfy a field.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-67",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Timing evidence: make timing_uncertainty meaningful and specific to the observed sampling resolution, direct transition, genuine observation gap, or unresolved timing. No fixed number of bounding frames is required. Missing observations are not observed event motion; BEFORE/AFTER evidence brackets do not establish physical event duration.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-68",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Window uncertainty (/uncertainty): this required root-level string must be nonempty for every window outcome. Summarize only evidence-supported window-level limitations, such as sparse sampling, occlusion, uncertain target association, or lack of observed transition evidence; do not assert a limitation merely because it is listed here. If no additional limitation is observable, describe that assessment relative to the supplied observations without fabricating a limitation. Do not indiscriminately duplicate event-specific explanations, and do not leave the string empty merely because no event was confirmed.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-69",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Window evidence: this schema requires at least one window_cited_frame_aliases entry for each of CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, and TARGET_NOT_OBSERVABLE. Cite only aliases actually supplied for the visual media. Window citations identify evidence supporting the assessment or its limitations; they do not certify continuous assessability. A confirmed event also requires nonempty event-specific cited_frame_aliases. For uncertain or non-observable outcomes, cite the available evidence supporting those limitations; preserve uncertainty and do not fabricate a supporting observation. Never cite unprocessed frames from an encoded clip, private frame IDs, annotations, or static target-reference media as event evidence. If a required citation genuinely cannot be supported, acknowledge the evidentiary conflict truthfully rather than inventing an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-70",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Citation scope: a supplied alias is eligible only if its frame was actually processor-consumed. When observations cannot establish an event, use the existing permitted uncertain outcome with citations supporting that assessment or its limitations; never manufacture event evidence or an alias.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-71",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Physical-state evidence: ON_SURFACE, HELD_BY_PERSON, and OTHER_OBSERVED require a supplied supporting_frame_alias in before_state, after_state, and last_directly_supported_state. STATE_UNKNOWN requires supporting_frame_alias=null. Use STATE_UNKNOWN when a physical state has no directly supporting observation. Visibility alone does not establish that an object is held. Occlusion does not establish placement; disappearance does not establish pickup; leaving the view does not prove final location. Unsupported continuity stays uncertain. A change of observed state is not automatically a confirmed PICKUP or PLACEMENT.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  },
+  {
+    "claim_id": "C3-R08_C05-72",
+    "attempt_id": "R08_C05",
+    "representation": "STORYBOARD",
+    "text": "Keep the existing fields, permitted values, safety assertions, and subsequent_state=UNKNOWN. Do not add fields. Report only transitions supported by the bounded supplied evidence; do not fabricate events to exercise a response branch. Return only the required JSON object without Markdown or additional prose.",
+    "instruction_level": "user",
+    "determination": "REQUIRES_SEMANTIC_REVIEW_NOT_AUTOMATIC_CONFLICT"
+  }
+]

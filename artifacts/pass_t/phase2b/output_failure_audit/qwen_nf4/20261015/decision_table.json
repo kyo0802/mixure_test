@@ -1,0 +1,194 @@
+[
+  {
+    "decision": "01 Baseline",
+    "verified_evidence": "VERIFIED：歷史health/revision資產metadata",
+    "proposed_choice": "原Qwen2.5-VL7B NF4 double/BF16/SDPA；revision cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "alternatives": "不換AWQ/3B",
+    "risk": "只有local revision provenance；無官方獨立checksum",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "02 Prompt/system",
+    "verified_evidence": "VERIFIED：V3 task/schema與V2system各1hash",
+    "proposed_choice": "保留baseline，候選prompt另版本",
+    "alternatives": "原V3直接pilot",
+    "risk": "13event全失敗",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "03 Repair",
+    "verified_evidence": "VERIFIED：13空timing、5空cite、11secondary",
+    "proposed_choice": "PROMPT_CHANGE_PROPOSED；V1schema維持",
+    "alternatives": "独立schema review若必要",
+    "risk": "prompt改後branchcoverage未測",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "04 Frame count",
+    "verified_evidence": "VERIFIED：8frame各3/3pass",
+    "proposed_choice": "PROPOSED UNIFORM_8",
+    "alternatives": "12/16另sensitivity",
+    "risk": "passing均no-event，非準確度",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "05 Sampling",
+    "verified_evidence": "VERIFIED：existinguniform8 source inventory",
+    "proposed_choice": "round/endpoint/tie算法原樣",
+    "alternatives": "fixedFPS另實驗",
+    "risk": "coarse gap漏短事件",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "06 Video matched8",
+    "verified_evidence": "VERIFIED synthetic8 indices0..7；DEV未建",
+    "proposed_choice": "PROPOSED FFV1/AVI4fps8sourceframes",
+    "alternatives": "維持UNRESOLVED，不替換fullclip",
+    "risk": "VIDEO_MATCHED_8_NOT_YET_VERIFIED",
+    "human_approval": "UNRESOLVED"
+  },
+  {
+    "decision": "07 Storyboard",
+    "verified_evidence": "VERIFIED：3col/480×270+32",
+    "proposed_choice": "PROPOSED 1440×906 canvas8frame",
+    "alternatives": "其他layout另版",
+    "risk": "整張縮圖降低targetpixel",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "08 Pixels",
+    "verified_evidence": "VERIFIED：200704有效上限",
+    "proposed_choice": "PROPOSED common200704+actualgridreceipt",
+    "alternatives": "高cap另pixelstudy",
+    "risk": "不匹配各representation總token",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "09 Reference",
+    "verified_evidence": "VERIFIED NONE已有offline六窗",
+    "proposed_choice": "PROPOSED NONE commonprimary",
+    "alternatives": "5-windowpaired另授權",
+    "risk": "TARGET_A opaque≠localization",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "10 Target ambiguity",
+    "verified_evidence": "VERIFIED I_E+uncertainty可表达",
+    "proposed_choice": "PROPOSED unresolved target→INSUFFICIENT_EVIDENCE",
+    "alternatives": "独立newschema若必要",
+    "risk": "confirmed HIGH目前validator允許",
+    "human_approval": "UNRESOLVED"
+  },
+  {
+    "decision": "11 Fairness",
+    "verified_evidence": "VERIFIED 2016/240/1008tokens",
+    "proposed_choice": "matchedsource/time、部署條件描述比較",
+    "alternatives": "匹配token另protocol",
+    "risk": "不能純representation因果聲稱",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "12 Output budget",
+    "verified_evidence": "VERIFIED max633/1024、无cap",
+    "proposed_choice": "PROPOSED 1024",
+    "alternatives": "另budgetstudy",
+    "risk": "真實multi-event未驗證",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "13 Decoding",
+    "verified_evidence": "VERIFIED do_sample=false seed42",
+    "proposed_choice": "PROPOSED greedy，inactive temperature/top-p",
+    "alternatives": "decoding另study",
+    "risk": "seed不保證determinism",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "14 Repeat",
+    "verified_evidence": "VERIFIED repeatedsynthetic會變動",
+    "proposed_choice": "PROPOSED 1 per DEV condition",
+    "alternatives": "2repeat另stabilitystudy",
+    "risk": "一次只表可能性",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "15 Deadlines",
+    "verified_evidence": "VERIFIED existingprobe generation300s",
+    "proposed_choice": "PROPOSED load120/gen300/request330",
+    "alternatives": "另budgetproposal",
+    "risk": "18×330=99min不含load",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "16 Retry",
+    "verified_evidence": "VERIFIED preservingfailedraw工具存在",
+    "proposed_choice": "PROPOSED generation0、pre-generationinfra最多1",
+    "alternatives": "完全0infra retry",
+    "risk": "開始判定/ownedPID證明須固定",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "17 Run order",
+    "verified_evidence": "VERIFIED deterministic proposed18list",
+    "proposed_choice": "PROPOSED SHA排序固定，不因結果改",
+    "alternatives": "另固定humanorder",
+    "risk": "modelsession順序可影響latency",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "18 Tolerance",
+    "verified_evidence": "VERIFIED三敏感度已列草案",
+    "proposed_choice": "PROPOSED全報0/.2/.5",
+    "alternatives": "獨立tasktolerance另提",
+    "risk": "沒有選最好或gap/2",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "19 GT time matching",
+    "verified_evidence": "VERIFIED status三種；現matcher有空隙",
+    "proposed_choice": "PROPOSED status-aware最大一對一closedinterval",
+    "alternatives": "保留UNRESOLVED直至CPU規則定稿",
+    "risk": "Decimal/timebase、greedy與pointinside需修復審查",
+    "human_approval": "UNRESOLVED"
+  },
+  {
+    "decision": "20 Cohort",
+    "verified_evidence": "VERIFIED 6clean；test3excluded",
+    "proposed_choice": "PROPOSED固定6窗×3×1=18",
+    "alternatives": "不加test3",
+    "risk": "DEVselected，session independence未知",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "21 Analysis",
+    "verified_evidence": "VERIFIED authority用途限制",
+    "proposed_choice": "PROPOSEDknown-only/negativealerts/descriptive",
+    "alternatives": "正式metrics禁止",
+    "risk": "formaleligible0、CAUSALITY_UNVERIFIED",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "22 Hashes",
+    "verified_evidence": "VERIFIEDhistoricalcapacity/authority",
+    "proposed_choice": "PROPOSEDfinalprompt/config/input/order全hash",
+    "alternatives": "目前不freeze",
+    "risk": "finalcandidate與matchedvideoassets尚缺",
+    "human_approval": "UNRESOLVED"
+  },
+  {
+    "decision": "23 Regression",
+    "verified_evidence": "VERIFIED allreported-eventsfail",
+    "proposed_choice": "PROPOSED先候選preflight後18syntheticcalls",
+    "alternatives": "無regression直接pilot風險高",
+    "risk": "regression未批准/未執行",
+    "human_approval": "REQUIRES_APPROVAL"
+  },
+  {
+    "decision": "24 Freeze",
+    "verified_evidence": "VERIFIED humanapproval本task未給",
+    "proposed_choice": "PROTOCOL_NOT_READY_TO_FREEZE",
+    "alternatives": "補完後独立freeze任務",
+    "risk": "兩道human gate仍存在",
+    "human_approval": "UNRESOLVED"
+  }
+]

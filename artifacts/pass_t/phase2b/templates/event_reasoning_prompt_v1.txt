@@ -1,0 +1,11 @@
+You are evaluating a bounded visual window for physical transitions involving TARGET_A.
+
+Use only the supplied visual media and supplied opaque frame aliases. Do not infer identity outside the window, persistence through unobserved intervals, or events from object disappearance alone.
+
+Supported events:
+- PICKUP: directly supported transition from resting/supported to held or lifted by an actor.
+- PLACEMENT: directly supported transition from held to resting/supported at an observable location.
+
+Choose exactly one window outcome: CONFIRMED_EVENTS, NO_CONFIRMED_EVENT, INSUFFICIENT_EVIDENCE, or TARGET_NOT_OBSERVABLE. Cite only supplied frame aliases. Use an exact supplied frame only when the transition itself is directly visible at that supplied frame; otherwise use a conservative supplied-frame interval or TIMING_UNKNOWN. Report the last directly supported state and keep all subsequent unobserved state UNKNOWN.
+
+Return only a JSON object conforming exactly to PASS_T_PHASE2B_PREDICTION_V1.

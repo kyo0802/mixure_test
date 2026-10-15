@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "PASS_T_PHASE2B_MODEL_CONFIG_V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "provider", "backend", "model", "revision", "execution_location", "external_data_consent", "modalities", "capabilities", "limits", "generation", "transport", "reference_policy", "complete"],
+  "properties": {
+    "schema_version": {"const": "PASS_T_PHASE2B_MODEL_CONFIG_V1"},
+    "provider": {"type": "string", "minLength": 1},
+    "backend": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "revision": {"type": "string", "minLength": 1},
+    "execution_location": {"enum": ["LOCAL", "EXTERNAL"]},
+    "external_data_consent": {"type": "boolean"},
+    "modalities": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "capabilities": {
+      "type": "object", "additionalProperties": false,
+      "required": ["MULTI_IMAGE", "REENCODED_AUTHORIZED_VIDEO", "STORYBOARD"],
+      "properties": {
+        "MULTI_IMAGE": {"$ref": "#/$defs/capability"},
+        "REENCODED_AUTHORIZED_VIDEO": {"$ref": "#/$defs/capability"},
+        "STORYBOARD": {"$ref": "#/$defs/capability"}
+      }
+    },
+    "limits": {"type": "object", "additionalProperties": false, "required": ["max_images", "max_pixels_per_image", "context_tokens"], "properties": {"max_images": {"type": "integer", "minimum": 1}, "max_pixels_per_image": {"type": "integer", "minimum": 1}, "context_tokens": {"type": "integer", "minimum": 1}}},
+    "generation": {"type": "object", "additionalProperties": false, "required": ["temperature", "sampling", "seed", "max_output_tokens"], "properties": {"temperature": {"type": "number", "minimum": 0}, "sampling": {"type": "boolean"}, "seed": {"type": ["integer", "null"]}, "max_output_tokens": {"type": "integer", "minimum": 1}}},
+    "transport": {"type": "object", "additionalProperties": false, "required": ["timeout_seconds", "max_retries", "monetary_budget_usd"], "properties": {"timeout_seconds": {"type": "number", "exclusiveMinimum": 0}, "max_retries": {"type": "integer", "minimum": 0}, "monetary_budget_usd": {"type": "number", "minimum": 0}}},
+    "reference_policy": {"enum": ["NONE", "AUTHORIZED_STATIC_REFERENCE", "APPROVED_NEUTRAL_LOCALIZATION"]},
+    "complete": {"const": true}
+  },
+  "$defs": {"capability": {"type": "object", "additionalProperties": false, "required": ["status", "evidence"], "properties": {"status": {"enum": ["DECLARED", "LOCALLY_VERIFIED", "PROVIDER_VERIFIED", "UNKNOWN", "UNSUPPORTED"]}, "evidence": {"type": ["string", "null"]}}}}
+}

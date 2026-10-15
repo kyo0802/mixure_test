@@ -1,0 +1,176 @@
+{
+  "historical_smoke_attempts": [
+    {
+      "version": "V1",
+      "name": "single_image",
+      "generated_tokens": 253,
+      "runtime_seconds": 80.16418970000814,
+      "peak_allocated_bytes": 6269740032,
+      "grids": [
+        [
+          1,
+          16,
+          16
+        ]
+      ],
+      "strict_valid": false,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "generation deadline consistent with partial output and80s receipt",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c/summary.json",
+      "source_field": "records[0].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    },
+    {
+      "version": "V1",
+      "name": "multi_image",
+      "generated_tokens": 362,
+      "runtime_seconds": 80.08300370001234,
+      "peak_allocated_bytes": 6299514880,
+      "grids": [
+        [
+          1,
+          16,
+          16
+        ],
+        [
+          1,
+          16,
+          16
+        ],
+        [
+          1,
+          16,
+          16
+        ]
+      ],
+      "strict_valid": false,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "generation deadline consistent with partial output and80s receipt",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c/summary.json",
+      "source_field": "records[1].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    },
+    {
+      "version": "V1",
+      "name": "storyboard",
+      "generated_tokens": 613,
+      "runtime_seconds": 80.15933640000003,
+      "peak_allocated_bytes": 6300465152,
+      "grids": [
+        [
+          1,
+          18,
+          48
+        ]
+      ],
+      "strict_valid": false,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "generation deadline consistent with partial output and80s receipt",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c/summary.json",
+      "source_field": "records[2].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    },
+    {
+      "version": "V1",
+      "name": "synthetic_video",
+      "generated_tokens": 404,
+      "runtime_seconds": 9.282103000005009,
+      "peak_allocated_bytes": 6321174528,
+      "grids": [
+        [
+          4,
+          16,
+          16
+        ]
+      ],
+      "strict_valid": false,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "no deadline reached recorded",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c/summary.json",
+      "source_field": "records[3].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    },
+    {
+      "version": "V1",
+      "name": "structured_contract",
+      "generated_tokens": 183,
+      "runtime_seconds": 4.524872100009816,
+      "peak_allocated_bytes": 6296966656,
+      "grids": [
+        [
+          1,
+          16,
+          16
+        ]
+      ],
+      "strict_valid": false,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "no deadline reached recorded",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c/summary.json",
+      "source_field": "records[4].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    },
+    {
+      "version": "V2",
+      "name": "structured_contract_v2",
+      "generated_tokens": 179,
+      "runtime_seconds": 49.34192489999987,
+      "peak_allocated_bytes": 6304462336,
+      "grids": [
+        [
+          1,
+          16,
+          16
+        ]
+      ],
+      "strict_valid": true,
+      "eos": "NOT_VERIFIED_NO_EXPLICIT_TOKEN_RECEIPT",
+      "stage_timeout": "no deadline reached recorded",
+      "source": "artifacts/pass_t/phase2b/local_runtime/qwen_nf4/smoke_results/8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0/summary.json",
+      "source_field": "records[0].resource_receipt",
+      "verification_level": "REAL_RUNTIME_VERIFIED",
+      "limitation": "historical synthetic only; no visual correctness/DEV resource extrapolation"
+    }
+  ],
+  "tokenizer_configuration": {
+    "tokenizer_class": "Qwen2Tokenizer",
+    "model_max_length": 131072,
+    "eos_token": "<|im_end|>",
+    "source": ".models\\Qwen2.5-VL-7B-Instruct\\tokenizer_config.json",
+    "field": "tokenizer_class/model_max_length/eos_token",
+    "verification_level": "CONFIG_DECLARED"
+  },
+  "generation_config": {
+    "values": {
+      "bos_token_id": 151643,
+      "pad_token_id": 151643,
+      "do_sample": true,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "repetition_penalty": 1.05,
+      "temperature": 1e-06,
+      "transformers_version": "4.37.0"
+    },
+    "source": ".models\\Qwen2.5-VL-7B-Instruct\\generation_config.json",
+    "verification_level": "CONFIG_DECLARED",
+    "limitation": "token ids in config do not prove emitted EOS"
+  },
+  "model_context": {
+    "max_position_embeddings": 128000,
+    "verification_level": "CONFIG_DECLARED"
+  },
+  "source_hashes": {
+    "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\d6a3483296bee8e68e72d3de8635b87ac1d23512db28c3bb206adab48bd65c5c\\summary.json": "f99e08875bee9953a26128441bab1d43e3c8d1ec6193490d4a9bde9b7110581f",
+    "artifacts\\pass_t\\phase2b\\local_runtime\\qwen_nf4\\smoke_results\\8705118349b877ca45cf01bdade1810a0a82efbd7723167c55eea40cc6b718b0\\summary.json": "cccb24e6f5fde2f165d71771fd488551ea202aa879552ee4b9a889482f333043",
+    ".models\\Qwen2.5-VL-7B-Instruct\\tokenizer_config.json": "4abd3520120e266da84c0864fee064d1fb10806f02225911a47253dd38dc5f56",
+    ".models\\Qwen2.5-VL-7B-Instruct\\generation_config.json": "0a3aea82869fe29f20dc95ccf3e2bcff380eca1f5ad6447a4a4b37110b08e43e",
+    ".models\\Qwen2.5-VL-7B-Instruct\\config.json": "77d9ec7321cc572e3579e2c84799c9cadaded63c49ce93b101733349fc330c43"
+  }
+}
