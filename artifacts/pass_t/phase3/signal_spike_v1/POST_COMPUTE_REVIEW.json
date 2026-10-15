@@ -1,0 +1,56 @@
+{
+  "reviewed_utc": "2026-10-15T14:26:48.714781+00:00",
+  "computed_receipt_sha256": "8ad408cbb41b4548e7e34ae4bb85e8dcf5326debf2da14d2878b251b1ffa88cc",
+  "human_source": "artifacts\\pass_t\\phase2b\\human_adjudicated_error_analysis\\20261015_pilot_v1\\HUMAN_ADJUDICATED_CALLS.json",
+  "human_source_sha256": "ed10a0cbd73079e290e54253c72be16387601b647ba8daa7cb33fa3ae89537e4",
+  "comparisons": [
+    {
+      "call_id": 1,
+      "existing_human_disposition": "WRONG_TARGET",
+      "source_human_sha256": "1f1a6b9a80bfc691698481140e3ba56eb540f2fff9b09812813367190518a2be",
+      "qualitative_visual_observation_by_report_author": "test5 F0001/F0016 的物件可見相機模組／手機背面；F0062/F0077 可見手中直立／橫持手機。",
+      "independent_computed_evidence_limit": "手機類別只在早期3張被偵測；沒有獨立 card producer 或持握判定，不能自動宣告 card claim 已被驗證為錯。",
+      "automatic_physical_decision": "NOT_ESTABLISHED",
+      "human_decision_modified": false
+    },
+    {
+      "call_id": 3,
+      "existing_human_disposition": "SUPPORTED_BY_OBSERVED_EVIDENCE",
+      "source_human_sha256": "b2d11e88d3825bedd9e4327280ca71db88e6a0c85ab20e459d6d2f0fe1f7c680",
+      "qualitative_visual_observation_by_report_author": "test5 F0001/F0016/F0032 支持桌面手機的視覺脈絡；F0062/F0077 可見手持手機，與既有人工 pickup 說明一致。",
+      "independent_computed_evidence_limit": "後狀態手機漏檢、沒有 grip/support primitive，計算結果不足以獨立支持 PICKUP；F0016 不能作為已拿起的證據。",
+      "automatic_physical_decision": "NOT_ESTABLISHED",
+      "human_decision_modified": false
+    },
+    {
+      "call_id": 4,
+      "existing_human_disposition": "WRONG_TARGET",
+      "source_human_sha256": "ce521769a0a544d399b763d85f1b8e056778bd6610fe467a7add98509fc2cc7d",
+      "qualitative_visual_observation_by_report_author": "test7 F0001/F0016/F0031/F0046 的籃球仍在桌邊，手操作的是手機；F0062 的籃球變大伴隨相機接近，之後轉向而離開畫面。",
+      "independent_computed_evidence_limit": "F0031 球漏檢使 ball local chain 中斷；未觀測到自動的 surface/contact state，不能靠消失或影像移動自動拒絕球 pickup。",
+      "automatic_physical_decision": "NOT_ESTABLISHED",
+      "human_decision_modified": false
+    },
+    {
+      "call_id": 8,
+      "existing_human_disposition": "SUPPORTED_BY_OBSERVED_EVIDENCE",
+      "source_human_sha256": "94ac01b5b593fc420d96818e001ef9693f09276df610ded264b37e8a29b2d41b",
+      "qualitative_visual_observation_by_report_author": "test7 F0031/F0046 可見手抓握手機，支持既有人工作出的 physical-event-level 判斷。",
+      "independent_computed_evidence_limit": "手機 F0031 轉為新 local ID，F0046 漏檢；generic object 無法僅靠現有連續性可靠綁定同一手機。",
+      "automatic_physical_decision": "NOT_ESTABLISHED",
+      "human_decision_modified": false
+    },
+    {
+      "call_id": 10,
+      "existing_human_disposition": "SUPPORTED_BY_OBSERVED_EVIDENCE",
+      "source_human_sha256": "5cc83a62555b15addbad7e81cd454c2d8753f169d9c4e67fdb815a844cfdea9e",
+      "qualitative_visual_observation_by_report_author": "test5 F0062/F0077 可見手持手機，F0077 已是後狀態，不能同時充當 before／事件精確時間。",
+      "independent_computed_evidence_limit": "計算後狀態沒有手機候選，因此不能以這次 independent evidence 支持原時間與完整狀態轉換。",
+      "automatic_physical_decision": "NOT_ESTABLISHED",
+      "human_decision_modified": false
+    }
+  ],
+  "investigator_blind": false,
+  "runtime_features_use_human_labels": false,
+  "note": "Hashing human records for preservation is byte access, not semantic parsing or label input. The computed-file human_data_read=false and receipt runtime_never_reads_human_data=true refer only to semantic/feature consumption, not byte hashing. This clarification supersedes any literal no-byte-access reading."
+}

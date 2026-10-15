@@ -1,0 +1,140 @@
+{
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "quantization": "NF4_DOUBLE_BF16",
+  "input_token_count": 3174,
+  "context_limit": 128000,
+  "context_headroom_after_output_cap": 123802,
+  "generated_tokens": 335,
+  "last_generated_token_id": 151645,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "eos_observed": true,
+  "output_cap_reached": false,
+  "generation_deadline_reached": false,
+  "generation_controls": {
+    "max_new_tokens": 1024,
+    "do_sample": false,
+    "max_time": 300
+  },
+  "seed_applied": 42,
+  "seed_guarantees_determinism": false,
+  "runtime_seconds": 104.0807907999988,
+  "prefill_first_model_forward_seconds": 3.3771100000012666,
+  "prefill_scope": "vision+first complete model forward; independent hooks/synchronize",
+  "decode_and_generation_overhead_seconds": 100.70368079999753,
+  "request_total_seconds": 105.1080776000017,
+  "peak_inference_vram_bytes": 6654219264,
+  "cpu_offload_used": false,
+  "preprocessing_seconds": 0.22639560000243364,
+  "grid_accounting": {
+    "grids": {
+      "image_grid_thw": [
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ]
+      ]
+    },
+    "grid_derived_visual_tokens": 2016,
+    "resized_dimensions_hw": {
+      "image_grid_thw": [
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ]
+      ]
+    },
+    "per_grid_spatial_pixels": {
+      "image_grid_thw": [
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568
+      ]
+    }
+  },
+  "input_receipt_sha256": "1f3df1ec0aad1ef35715e02c3c792b4d1071dcc8f43be418d5e855c5c7c2d18a",
+  "baseline_id": "QWEN25_VL_7B_INSTRUCT_NF4_BF16_SDPA",
+  "real_model": true,
+  "peak_reserved_bytes": 7371489280,
+  "gpu_free_total_bytes": [
+    8286896128,
+    17066033152
+  ],
+  "window": "test5__W05",
+  "call": "A",
+  "completed_utc": "2026-10-15T15:05:32.459185+00:00",
+  "raw_sha256": "e9bdf8df96058e54edb9c0d8506ee63497e5891ff3e925f67dbfc35420cee778",
+  "frozen_experiment_sha256": "d5a31c9c1aabfe458cf0a83da62d8171313b31f0f779b5dfa2dedbac127cef6f"
+}

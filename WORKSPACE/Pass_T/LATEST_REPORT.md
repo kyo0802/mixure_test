@@ -1,309 +1,78 @@
 # WORKSPACE 最新報告
 
-來源：[PHASE2B_HUMAN_ADJUDICATED_ERROR_ANALYSIS.md](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/PHASE2B_HUMAN_ADJUDICATED_ERROR_ANALYSIS.md)；更新：2026-10-15。
+來源：[VLM_PHYSICAL_STATE_EXPERIMENT_REPORT.md](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/VLM_PHYSICAL_STATE_EXPERIMENT_REPORT.md)；更新：2026-10-15（Asia/Taipei）。
 
-# Phase 2b — Human-Adjudicated Error Analysis
+# Phase 3 — VLM-first Physical-State Feasibility
 
-更新：2026-10-15T10:28:53.421415+00:00。**PASS_T_PHASE2B_HUMAN_ADJUDICATED_ERROR_ANALYSIS_COMPLETE**。
+更新：2026-10-15（Asia/Taipei）。建議：**REVISE_VLM_OBSERVATION_APPROACH**。
 
-權威分析目錄：`artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1`。本報告整理使用者提交的五份人工審閱；不是新 inference、GT 或重新驗證模型輸出。
+## 結論
 
-## 1. 摘要：事件假說有用，但現有輸出還不能直接使用
+**已完成授權的兩次真實 Qwen 生成，重試0、追加呼叫0。** test5 的輸出文字有正確的手機 PICKUP 與 before/after 敘述；test7 的文字卻否認可見的手機拿起。**兩份原始回應均不符合 JSON／V3 合約，有效結構化預測0筆。** 目前有繼續研究的局部訊號，尚不足以直接進入完整 Phase 3 整合；本次停止，沒有自動改 prompt 或補跑。
 
-五筆人工作業全部完成且 provenance 核對通過：**3 筆 SUPPORTED_BY_OBSERVED_EVIDENCE、2 筆 WRONG_TARGET**。其他三種 disposition 與 UNREVIEWED 均為 0。沒有排除提交。
+這是受既有 DEV 失敗啟發的兩視窗可行性實驗，非獨立或無偏 benchmark。沒有計算 accuracy、precision、recall、F1 或泛化能力。
 
-三筆 supported 只表示審閱者支持 physical-event-level PICKUP；不代表目標綁定、精確時間、state citations 或輸出合約全對。五筆全部仍是 strict-invalid；**strict-valid event-bearing predictions 維持 0**，不得回填 authoritative structured matching。
+## 真實執行設定
 
-**五筆審閱文字都指出 exact event timing 不受引用影格支持。** Raw Q5 選項是 4 筆 CITATION_UNSUPPORTED、1 筆 NOT_ASSESSABLE（Call 1）；本報告沒有改選項，5 筆 timing 問題是明示人工 notes 的摘要。
+- 模型：既有本機 `Qwen/Qwen2.5-VL-7B-Instruct`；revision `cc594898137f460bfe9f0759e9844b3ce807cfb5`。沿用未修改的 `QwenNF4Runtime` 載入與生成方法，僅為新 V3 任務提供獨立的多圖 preprocessing adapter。
+- 量化／裝置：bitsandbytes NF4、double quantization、BF16 compute、SDPA、CUDA；沒有換模型、下載權重或 CPU offload。Transformers4.57.6、bitsandbytes0.50.2、Torch2.10.0+cu128。
+- 每窗恰好8張 frozen Uniform8 原始PNG，16/16 SHA驗證相符，保留各自 alias、source index、native PTS、hash與順序，無近鄰替代。詳見 [configuration.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/configuration.json)。沒有解碼原影片。
+- 表示：**8張獨立 chronological multi-image stills**，不是 native video。原圖1280×720，實際 `Qwen2VLImageProcessorFast` resize為588×336；每張197,568 pixels，符合 max200,704/min3,136設定。八個 image grids各 `[1,24,42]`，共2,016 visual tokens；沒有 video grid／video temporal units。
+- 同一份 system/task/schema，圖片前逐一標示 `Image N corresponds exactly to frame alias Fxxxx`。Task未提 smartphone、basketball、test5、test7或預期答案。模型未收到PTS、私人路徑、人工答案、YOLO／SAM結果、舊call outcomes或GT。
+- Greedy：`do_sample=False`、seed42、`max_new_tokens=1024`、generation deadline300秒，無品質重試、額外warmup或替代表示。沒有傳temperature；checkpoint繼承的temperature在非sampling模式被忽略的警告已保留於runtime.log。Seed不代表所有GPU計算保證可重現。
+- 保留原硬體門檻：載入前≥10GiB free VRAM／≥8GiB RAM；生成前≥2GiB free VRAM；全GPU使用>14.5GiB、owned RSS>20GiB或系統RAM<2GiB等停止條件。兩次生成皆到EOS，未觸及token cap或generation deadline。
 
-人工回覆支援「兩個視窗中的手機 pickup 具有可見依據」；不能進一步說所有模型聲稱的物件、事件瞬間或完整因果鏈都成立。Call 1/4 的 terminal WRONG_TARGET 必須保留，不能因畫面另有 phone pickup 而改成 supported。
+| Call／視窗 | 生成完成 | 生成tokens | input tokens | 生成秒數 | Torch峰值allocated／reserved | 原始JSON | V3 schema／citation／semantic |
+|---|---|---:|---:|---:|---|---|---|
+| A：test5 W05 | 是，EOS | 335 | 3174 | 104.08 | 6.197／6.865 GiB | FAIL | NOT_EVALUATED：JSON解析失敗 |
+| B：test7 W05 | 是，EOS | 47 | 3174 | 2.00 | 6.197／6.865 GiB | FAIL | NOT_EVALUATED：JSON解析失敗 |
 
-| Call | 視窗 | Representation | 人類 disposition（原值） | Supporting aliases（原值） |
-|---|---|---|---|---|
-| 1 | test5 W05 | NATIVE_VIDEO_ARRAY | WRONG_TARGET | F0001, F0016, F0062, F0077 |
-| 3 | test5 W05 | STORYBOARD | SUPPORTED_BY_OBSERVED_EVIDENCE | F0001, F0016, F0062, F0077 |
-| 4 | test7 W05 | STORYBOARD | WRONG_TARGET | F0001, F0031, F0046, F0062 |
-| 8 | test7 W05 | NATIVE_VIDEO_ARRAY | SUPPORTED_BY_OBSERVED_EVIDENCE | F0001, F0016, F0031, F0046 |
-| 10 | test5 W05 | MULTI_IMAGE | SUPPORTED_BY_OBSERVED_EVIDENCE | F0001, F0047, F0062, F0077 |
+模型載入27.48秒，載入峰值allocated6.744GiB。從parent start至最後一筆完成163.59秒；兩次長度／啟動條件不同，不能當受控效能比較。Torch數字不是整張GPU的峰值。
 
-## 2. 匯入驗證、審閱者與保存
+## 原始輸出與嚴格處理
 
-- 5/5 protocol、template SHA、raw SHA、call/window/representation、完成欄位、Q1–Q6 enums、UTC 提交時間及所有引用 aliases 通過。template SHA：`d0827edb333b4d341fbbc8fe3ee3cc0ff7c88d6c35685092276ff8876eb34170`。
-- Reviewer：Call 3 原值 `review_0`，其他 `reviewer_0`。使用者明確確認「同一位，Call 3 是拼字差異」。以獨立 identity-resolution sidecar 記錄，同一 canonical reviewer_0，原檔不變。**這是一位 reviewer，不是多位獨立仲裁者。**
-- 五份 Downloads 原始檔逐 byte 複製至 human_submissions/；保留原路徑與 SHA。既有 evidence review template/cards 繼續保留當時 UNREVIEWED 的歷史狀態；現行已完成結果在本分析，不覆寫歷史模板。
-- 匯入格式／來源 PASS 不代表人工判斷無誤；Q1/notes 等一致性問題在下節公開。
+- [Call A原文](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_A_raw.txt)／[驗證診斷](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_A_parsed.json)：外層有 ```` ```json ```` code fence，第一字元即不符合JSON。**不去除fence、不修復或重新解析為有效預測。** 報告作者直接閱讀文字另發現兩個`other_objects`缺少schema必填的`evidence`；這是人工式文字檢視，並非修復後的schema驗證結果。
+- [Call B原文](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_B_raw.txt)／[驗證診斷](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_B_parsed.json)：同樣有code fence。直接閱讀可見只有`status`／`notes`，缺少必填`events`。也未以補上空陣列的方式轉成有效NO_EVENT。
+- 正式 parser 兩筆均為 **INVALID_MODEL_OUTPUT**，`parsed=null`；schema/citation/semantic皆未執行而非通過。沒有任何一筆被提升為 `VLM_EVENT_CANDIDATE` 或 `VLM_NO_CONFIRMED_EVENT`。
+- 原始UTF-8回應在驗證前立即原樣落盤並fsync；原始內容、SHA與EOS／token／resource receipts均保留。沒有修改歷史Phase2b strict-invalid結果。
 
-## 3. 錯誤分層：不將 human support 等同完整正確
+## 生成完成後的質性對照
 
-| Call | 目標 grounding：人工文字摘要 | Q5 原始選項 | Before/after citation：人工文字摘要 | Full strict |
-|---|---|---|---|---|
-| 1 | 人工 WRONG_TARGET：card 與所見 smartphone 不一致 | NOT_ASSESSABLE | 模型 F0016 held claim 與人類 F0016 on-surface 描述衝突 | FAIL，維持排除 |
-| 3 | 人工認為 phone 與操作目標一致 | CITATION_UNSUPPORTED | 模型 F0016 不足；人類引用 F0062/F0077 | FAIL，維持排除 |
-| 4 | 人工 WRONG_TARGET：將 phone 操作歸到 ball | CITATION_UNSUPPORTED | ball HELD_BY_PERSON 未觀察；人類看到 held smartphone | FAIL，維持排除 |
-| 8 | 泛稱 object；人工保留 target association 未解 | CITATION_UNSUPPORTED | 模型 F0016 不足；人類引用 F0031/F0046 | FAIL，維持排除 |
-| 10 | 人工認為 phone 與操作目標一致 | CITATION_UNSUPPORTED | F0077 支持 AFTER，不支持 BEFORE 或 exact pickup | FAIL，維持排除 |
+以下是**報告作者的 qualitative reviewer analysis**，參照原影格及既有人工審閱；不是新增人類GT、獨立感測器或deterministic SUPPORTED Decision。
 
-### 3.1 Output contract
+| 問題 | test5 W05：Call A文字 | test7 W05：Call B文字 |
+|---|---|---|
+| 操作物件 | 明確寫`phone`，符合可見手機，沒有誤說card | notes寫`phone`，物件類型辨認合理，但否認pickup |
+| 事件／狀態 | 寫PICKUP、ON_SURFACE→HELD_BY_PERSON，與主要可見轉換相符 | 沒有before/after狀態或事件記錄；「does not show the phone being picked up」與影格脈絡衝突 |
+| BEFORE引用 | F0001/F0016/F0032/F0047；桌面手機與手接近的脈絡合理 | 沒有引用 |
+| AFTER引用 | F0062/F0077可見手持手機；F0093手機已在箱口、受箱邊／手遮擋，不能單獨證明仍完全由手支撐 | F0031/F0046可見直立手機被手抓握，卻未被用來支持事件 |
+| 其他物件／錯球 | 將basketball及box列為ON_SURFACE、NOT_OBSERVED manipulation；球的文字敘述與所引畫面相容 | 沒有球pickup claim，但也沒有球的狀態或理由；不能把避開所有事件當作可靠的球／手機辨別成功 |
+| 不確定性／時間 | `uncertainty=NONE`對F0093遮擋過於肯定；未發明精確timestamp。這些aliases是狀態引用，不是事件精確發生時間 | 未發明精確時間，但缺乏引用；未用UNCERTAIN表達不足，而是文字上否認事件 |
 
-五筆 event timing_uncertainty 與 window uncertainty 為空；Call 10 event_id `PRED_EVT_0001` 亦不符三位數格式。這是既有 validator 失敗原因，未修復、未弱化、不因 human support 轉為 valid。
+既有人工審閱：test5舊Calls03/10在physical-event-level支持手機pickup，舊Call01的card attribution錯誤；test7舊Call08支持generic pickup但target grounding有限，舊Call04的ball pickup錯誤。本次A的文字與test5人工事件說明一致、避免card／ball歸因；本次B對test7的文字否認與原人工事件說明及F0031/F0046不符。**這只是對照與可見事件遺漏的質性描述，不是正式false-negative計分。** 原人工答案與舊calls皆未改寫。
 
-### 3.2 Target grounding / action-object association
+可直接查看原始關鍵影格：[test5 F0047](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png)、[F0093](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png)、[test7 F0031](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000403.png)、[F0046](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000418.png)。
 
-- Calls **1、4** 的人工 terminal disposition 為 WRONG_TARGET。人工不是僅依 noun 不同下結論，而有手機/籃球操作、表面支撐與 held-state 的影格說明。
-- Call **8** 的 generic object 假說獲 event-level 支持，但 reviewer 明確保留 explicit target-object association 未解，不能當完成 target binding 或全域身分確認。
-- Calls **3、10** 的人工文字認為 phone 與可見物件一致。沒有因此建立 PersistentEntity 或修改 identity authorization。
+## 執行收尾錯誤及保全
 
-### 3.3 Temporal localization
+兩份raw、execution與parsed receipts落盤、log寫出`CALL_COMPLETED A/B`後，parent在資源輪詢遇到子程序已結束的`psutil.NoSuchProcess`，parent command exit1，未及寫總結。**這不是兩次模型生成失敗，也未觸發模型重跑。** [execution_summary.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/execution_summary.json)明確標示總結由已落盤receipts做CPU重建；worker exit code未捕獲，不宣稱為0。Parent記憶體中的RSS／整卡VRAM peak亦未落盤，標為未記錄，不能事後補造。
 
-- Calls **1、3、4、8** 指到 F0001；人工指出該影格仍是 surface state，或所稱 ball 沒有 pickup。第一個 supplied observation 不等於 transition time。
-- Call **10** 的 F0077 為有效 alias，對應第六張 sampled source S000418、13.933333333333334 秒。人工認為該處已是 held-state，不能支撐精確拿起瞬間。
-- 人工可以支持 action-level transition，同時無法確定 separation 的精確時刻。Q4 的 DIRECT_TRANSITION_VISIBLE 原選項不自動產生 exact frame GT，也不將 before/after bracket 當事件 duration。
+已保留 [runner_as_executed.py](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/runner_as_executed.py)（與freeze內runner SHA相同），只在目前新runner修正「poll後process消失」的例外分支。確切diff與before/after SHA見 [post_execution_monitor_patch.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/post_execution_monitor_patch.json)。以CPU deterministic exited-process mock及AST檢查通過，未重新推論；prompt、schema、配置、shared NF4程式完全不變。修補後runner對這份舊freeze會拒絕source hash不一致，**不可用它resume／補跑這次已耗完的2-call授權**；後續新實驗需新命名空間與另行授權。
 
-### 3.4 State evidence / citations
+四個必要parser CPU檢查通過：malformed不轉NO_EVENT、EVENTS不可空、UNCERTAIN與NO_CONFIRMED_EVENT可區分。551個既有source／reference／人工review／signal-spike檔案hash皆未變；16張PNG、prompt/config/schema及舊shared runtime hash均相符，詳細保全結果見 [verification.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/verification.json)。歷史 `PHASE3_SIGNAL_CHECKPOINT_BLOCKED` 保持不變，沒有Graph／persistent identity更新、commit或push。
 
-- Calls 1/3/8 的 F0016 after-state claim 與人類所指可見 state 不符或不足；Call 4 對 ball 的 held-state 沒有可見支持。這四個個案的具體證據見逐 call 表，不能只因後續有手機被拿起而替原 citation 補證。
-- Call 10 以 F0077 同時證明 ON_SURFACE、HELD_BY_PERSON 與 exact event。人工接受它作 AFTER，指出它不能支撐 BEFORE 或 transition instant。
-- 每一 human alias 都經現有 call mapping 驗證；alias 合法性與 cited evidence 是否支持主張是不同問題。
+## 固定輸入雜湊與入口
 
-### 3.5 人工表單一致性警示（不自動修正）
+- Prompt：`86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9` — [prompt_v3.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/prompt_v3.json)
+- Schema：`f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5` — [schema_v3.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/schema_v3.json)
+- 配置：`7e3ebc404bb2c9f9bad579daca754c37d515dfc81c95c40fb0e4f2b783c5dc56` — [configuration.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/configuration.json)
+- 所有執行前hash：[frozen_experiment.json](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/frozen_experiment.json)；精確rendered model-facing text、8張alias對應、processor設定、tensor metadata及canonical hashes：[A input receipt](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_A_input_receipt.json)／[B input receipt](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_B_input_receipt.json)。
+- 可重用小型runner：[run_phase3_vlm_physical_state.py](C:/Users/smile/Desktop/test2/mixure_test_SAM/scripts/run_phase3_vlm_physical_state.py)；保留at-most-once標記與現有輸出不可覆寫限制。不要直接重新執行此次已完成目錄。
 
-- Calls **1、4** Q1 均選 IDENTIFIABLE_AND_CONSISTENT，但 notes 與 terminal WRONG_TARGET 指出 model-object mismatch。兩者並列保存；不把 Q1 的 5/5 該選項解讀成 5/5 正確 target grounding。
-- Call **8** Q1 相同選項，但 notes 保留 explicit target association 未解；不能抹去限定語。
-- Call **1** Q5 選 NOT_ASSESSABLE，notes 明確否定 F0001 exact timing。原 enum 計數與 notes 摘要分別報告。
-- 上述不一致提醒日後若要做欄位級定量分析，需人類明確澄清；目前 terminal disposition 計數只忠實統計提交原值，未替人類重選。
+## 下一步建議與限制
 
-## 4. 原始問項統計（只統計所選欄位）
+選擇 **REVISE_VLM_OBSERVATION_APPROACH**：test5有可讀的物理事件理解訊號，值得繼續研究；但test7漏掉明顯後狀態，兩份又都無法輸出合約可接受的JSON，現在直接整合會隱藏兩種失敗。
 
-| Question | 原始回答 counts |
-|---|---|
-| Q1_TARGET_IDENTITY | {'IDENTIFIABLE_AND_CONSISTENT': 5} |
-| Q2_BEFORE | {'DIRECTLY_OBSERVED': 5} |
-| Q3_AFTER | {'DIRECTLY_OBSERVED': 4, 'NOT_OBSERVED': 1} |
-| Q4_PHYSICAL_TRANSITION | {'DIRECT_TRANSITION_VISIBLE': 4, 'ALTERNATIVE_EXPLANATION': 1} |
-| Q5_TEMPORAL_SUPPORT | {'NOT_ASSESSABLE': 1, 'CITATION_UNSUPPORTED': 4} |
-| Q6_CONTRADICTIONS | {'CONTRADICTION_IDENTIFIED': 5} |
+若後續另行授權，建議下一個實驗只針對**狀態觀察與引用的穩定性**做受控設計，保留原始回應與invalid gating；不要將本次文字補成通過結果。本次不選新prompt、不再生成、不開始完整整合。
 
-報告 secondary themes 的 codes 在 HUMAN_ADJUDICATED_CALLS.json 逐項引用 human notes/rationale，是分析者對已提交文字的摘要，不是新增 reviewer-selected 標籤；不同 theme 可重疊，不能相加當不同錯誤個案總數。
-
-## 5. Representation 與 window 描述
-
-| Representation | 本次五筆選定 event-bearing calls 的人類判定 |
-|---|---|
-| NATIVE_VIDEO_ARRAY | {'WRONG_TARGET': 1, 'SUPPORTED_BY_OBSERVED_EVIDENCE': 1} |
-| STORYBOARD | {'SUPPORTED_BY_OBSERVED_EVIDENCE': 1, 'WRONG_TARGET': 1} |
-| MULTI_IMAGE | {'SUPPORTED_BY_OBSERVED_EVIDENCE': 1} |
-
-- **test5 W05**：Native Call 1 WRONG_TARGET；Storyboard Call 3 supported，但 F0001 timing / F0016 after citation 有問題；Multi-image Call 10 supported，但 F0077 被錯當 before 與 exact timing。這是同一 source window 的三種輸出，不是三個獨立實例或排名。
-- **test7 W05**：Storyboard Call 4 WRONG_TARGET（ball/phone association）；Native Call 8 supported at event level，但 explicit target association 與時間定位仍有問題。
-- test7 Multi-image **Call 2** 原為 strict-valid NO_CONFIRMED_EVENT，這次五份提交沒有 Call 2 adjudication。雖然同視窗其他輸出的人工文字支持 phone pickup，仍不能把 Call 2 自動標成 human-adjudicated false negative。
-
-## 6. 與完整 18-call pilot 的關係
-
-既有 pilot 18/18 完成，10 筆 strict-valid 全為 NO_CONFIRMED_EVENT，8 筆 strict-invalid；本次只審閱其中 **5 筆 event-bearing strict-invalid**。另外 3 筆 invalid 與 10 筆 valid no-event 不因這次審閱獲得 physical correctness label。
-原有 known-event matching、strict-negative case alerts 與不確定視窗結果均未改寫。人類支持不授權繞過 strict gate，也不構成新 structured prediction、NO_EVENT、更動過的 GT 或全視窗完整性。
-
-## 7. 保守結論與當前瓶頸
-
-此 pilot 的人類審閱顯示 VLM 可以提出有可見依據的 physical-event-level hypotheses（Calls 3/8/10），但目前仍同時存在 **structured-output contract failure、target/action misassociation 或 unresolved binding、temporal localization 與 state-citation grounding** 問題。現有輸出不能直接視為可靠的可執行事件記錄。
-本結果支持把「是否有 pickup 依據」與「哪個物件、何時、哪些影格支持」分開評估；不證明 deterministic software 已能修復缺失，也不授權改寫模型事件。
-架構維持 VLM 產生 physical-event hypothesis；deterministic software 後續做 evidence validation/temporal resolution/Memory Graph construction。這次沒有重新設計接口或實作修補。
-
-**科學限制：** 僅一位 reviewer、兩個 non-exhaustive DEV windows、五個事先選定 event-bearing calls；重複 window/表示相依。八影格抽樣有未觀察間隙；Native 為 8 source frames / 4 temporal units。沒有 independent blinded inter-rater adjudication、沒有完整事件清單、沒有 validated PLACEMENT positive，也沒有新增 exact-event-time GT。人工對敘述的支持不能推廣到其他影片或完整系統。
-不報正式 accuracy、precision、recall、F1、FPR、hallucination rate 或 generalization；3/5 是這五份提交的 disposition 計數，不是模型準確率。
-
-## 8. 逐 case 完整審閱與證據
-
-### Call 1 — test5 W05 / NATIVE_VIDEO_ARRAY
-
-**人類原始判定：WRONG_TARGET**；原始 reviewer `reviewer_0`，確認後同一人 `reviewer_0`；提交時間 `2026-10-15T10:02:17.231Z`。
-
-模型原話：The card is picked up from the table.
-
-原始 timing：`{"frame_alias": "F0001", "status": "EXACT_SUPPLIED_FRAME"}`；before：`{"state": "ON_SURFACE", "supporting_frame_alias": "F0001"}`；after：`{"state": "HELD_BY_PERSON", "supporting_frame_alias": "F0016"}`。
-
-**人工總結原文（保留限定語）：**
-
-> The visual evidence supports a smartphone being picked up from the table, but the model incorrectly identifies the target as a card. The model also assigns the event to F0001, which shows the smartphone still on the table. Therefore, the prediction is classified as WRONG_TARGET, with an additional temporal-grounding error.
-
-| 欄位 | 人工原選項 | 引用 aliases | 人工說明原文 |
-|---|---|---|---|
-| Q1_TARGET_IDENTITY | IDENTIFIABLE_AND_CONSISTENT | F0001, F0016, F0032, F0047 | The manipulated object appears to be a smartphone rather than a card. The model's target description is inconsistent with the visible object. The object is identifiable across the sampled frames. |
-| Q2_BEFORE | DIRECTLY_OBSERVED | F0001, F0016 | A smartphone is visibly resting on the table in F0001 and F0016. This supports the ON_SURFACE state for the smartphone, but not the model's claimed card. |
-| Q3_AFTER | DIRECTLY_OBSERVED | F0062, F0077 | The smartphone is visibly held above the table in F0062 and F0077. This supports the HELD_BY_PERSON state for the smartphone. It does not establish that a card was picked up. |
-| Q4_PHYSICAL_TRANSITION | DIRECT_TRANSITION_VISIBLE | F0016, F0032, F0047, F0062, F0077 | The sampled sequence shows a hand interacting with the smartphone on the table, followed by the smartphone being lifted and held above the surface. This supports a PICKUP transition for the smartphone. However, the model identifies the manipulated object as a card, which is inconsistent with the visible evidence. |
-| Q5_TEMPORAL_SUPPORT | NOT_ASSESSABLE | F0001, F0016, F0032, F0047, F0062 | The model cites F0001 as the exact PICKUP time, but the smartphone is still resting on the table at that frame. The subsequent frames show interaction with the object and its eventual lifting. The exact transition time is not established by F0001, so the model's timing claim is unsupported. |
-| Q6_CONTRADICTIONS | CONTRADICTION_IDENTIFIED | F0001, F0016, F0062, F0077 | The model describes a card, whereas the visible manipulated object appears to be a smartphone. It also assigns the PICKUP event to F0001, when the smartphone remains on the table. Although the later frames support a smartphone PICKUP, the model's target identity and exact timing claims are inconsistent with the visual evidence. The sampled frames do not establish the precise instant of the transition. |
-
-**引用影格來源（只映射既有 PTS，不建立新 GT 時間）：**
-
-| Alias | Source frame | Native PTS 秒 | Source PNG SHA-256 |
-|---|---|---|---|
-| F0001 | S000342 | 11.4 | 10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27 |
-| F0016 | S000357 | 11.9 | 220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82 |
-| F0032 | S000373 | 12.433333333333334 | b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7 |
-| F0047 | S000388 | 12.933333333333334 | 8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d |
-| F0062 | S000403 | 13.433333333333334 | 03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487 |
-| F0077 | S000418 | 13.933333333333334 | ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794 |
-
-結構缺陷維持原樣：`["/events/0/timing_uncertainty:'' should be non-empty", "/uncertainty:'' should be non-empty"]`。
-
-**保留的人工表單一致性警示：** Selected IDENTIFIABLE_AND_CONSISTENT, but notes and final WRONG_TARGET identify a model/object-description inconsistency. Preserve both; do not use Q1 alone to count correct grounding. Selected NOT_ASSESSABLE; notes explicitly reject F0001 exact timing. Raw selection remains NOT_ASSESSABLE, not recoded to CITATION_UNSUPPORTED.
-
-[原始人工提交副本](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/human_submissions/call_01_human_review.json) | [原始模型輸出](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_01/raw_output.txt) | [歷史證據卡（初始空白表單）](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/EVENT_REVIEW_CARDS/call_01.html)
-
-### Call 3 — test5 W05 / STORYBOARD
-
-**人類原始判定：SUPPORTED_BY_OBSERVED_EVIDENCE**；原始 reviewer `review_0`，確認後同一人 `reviewer_0`；提交時間 `2026-10-15T10:13:10.081Z`。
-
-模型原話：The phone is picked up from the surface.
-
-原始 timing：`{"frame_alias": "F0001", "status": "EXACT_SUPPLIED_FRAME"}`；before：`{"state": "ON_SURFACE", "supporting_frame_alias": "F0001"}`；after：`{"state": "HELD_BY_PERSON", "supporting_frame_alias": "F0016"}`。
-
-**人工總結原文（保留限定語）：**
-
-> The sampled frames support a smartphone being picked up from the table. The model correctly identifies the target object and physical event type. However, its exact timing claim at F0001 is unsupported, and the cited after-state at F0016 does not clearly demonstrate the held state. The event is therefore supported by visual evidence, with temporal-grounding limitations.
-
-| 欄位 | 人工原選項 | 引用 aliases | 人工說明原文 |
-|---|---|---|---|
-| Q1_TARGET_IDENTITY | IDENTIFIABLE_AND_CONSISTENT | F0001, F0062, F0077 | The manipulated object is identifiable as a smartphone, consistent with the model's description of a phone. The same object can be followed across the sampled frames. |
-| Q2_BEFORE | DIRECTLY_OBSERVED | F0001, F0016 | The smartphone is visibly resting on the table in F0001 and F0016, providing direct evidence of the ON_SURFACE state before the pickup. |
-| Q3_AFTER | DIRECTLY_OBSERVED | F0062, F0077 | The smartphone is visibly held above the table in F0062 and F0077, providing direct evidence of the HELD_BY_PERSON state after the pickup. The model's cited F0016 does not yet establish this after-state. |
-| Q4_PHYSICAL_TRANSITION | DIRECT_TRANSITION_VISIBLE | F0016, F0032, F0047, F0062 | The sequence shows the hand interacting with the smartphone while it is on the table, followed by the smartphone being lifted and held above the surface. This directly supports a PICKUP transition. However, the precise instant of separation from the table is not fully resolved by the sampled frames. |
-| Q5_TEMPORAL_SUPPORT | CITATION_UNSUPPORTED | F0001, F0047, F0062 | The model assigns the PICKUP event to F0001, but the smartphone is still on the table in that frame. The subsequent frames show the transition toward a held state. The evidence supports a pickup occurring later in the sampled sequence, not at the model's claimed exact frame. |
-| Q6_CONTRADICTIONS | CONTRADICTION_IDENTIFIED | F0001, F0016, F0047, F0062 | The model correctly identifies the smartphone and the PICKUP action, but its exact event timing is inconsistent with the observed sequence. Its cited after-state frame F0016 does not clearly show the smartphone fully lifted. Sampling gaps also prevent precise localization of the separation from the table. |
-
-**引用影格來源（只映射既有 PTS，不建立新 GT 時間）：**
-
-| Alias | Source frame | Native PTS 秒 | Source PNG SHA-256 |
-|---|---|---|---|
-| F0001 | S000342 | 11.4 | 10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27 |
-| F0016 | S000357 | 11.9 | 220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82 |
-| F0032 | S000373 | 12.433333333333334 | b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7 |
-| F0047 | S000388 | 12.933333333333334 | 8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d |
-| F0062 | S000403 | 13.433333333333334 | 03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487 |
-| F0077 | S000418 | 13.933333333333334 | ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794 |
-
-結構缺陷維持原樣：`["/events/0/timing_uncertainty:'' should be non-empty", "/uncertainty:'' should be non-empty"]`。
-
-[原始人工提交副本](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/human_submissions/call_03_human_review.json) | [原始模型輸出](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_03/raw_output.txt) | [歷史證據卡（初始空白表單）](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/EVENT_REVIEW_CARDS/call_03.html)
-
-### Call 4 — test7 W05 / STORYBOARD
-
-**人類原始判定：WRONG_TARGET**；原始 reviewer `reviewer_0`，確認後同一人 `reviewer_0`；提交時間 `2026-10-15T10:16:42.409Z`。
-
-模型原話：The ball is picked up from the surface in frame F0001.
-
-原始 timing：`{"frame_alias": "F0001", "status": "EXACT_SUPPLIED_FRAME"}`；before：`{"state": "ON_SURFACE", "supporting_frame_alias": "F0001"}`；after：`{"state": "HELD_BY_PERSON", "supporting_frame_alias": "F0016"}`。
-
-**人工總結原文（保留限定語）：**
-
-> The sampled frames show a smartphone being picked up from the table, while the basketball remains on the surface. The model incorrectly attributes the pickup event to the basketball and assigns it to F0001, where no such transition is observed. The prediction is therefore classified as WRONG_TARGET, with unsupported target-state and temporal claims.
-
-| 欄位 | 人工原選項 | 引用 aliases | 人工說明原文 |
-|---|---|---|---|
-| Q1_TARGET_IDENTITY | IDENTIFIABLE_AND_CONSISTENT | F0001, F0031, F0046, F0062 | The model identifies the target as a ball, but the object visibly picked up is a smartphone. The basketball remains on the table during the observed phone manipulation. The model appears to have associated the pickup action with the wrong object. |
-| Q2_BEFORE | DIRECTLY_OBSERVED | F0001, F0016 | The basketball is visibly resting on the table in F0001 and F0016. This supports the ON_SURFACE state of the model's claimed target before the alleged pickup. However, it does not establish that the basketball was subsequently picked up. |
-| Q3_AFTER | NOT_OBSERVED | F0031, F0046, F0062 | The basketball is not observed being held by a person. Instead, F0031 and F0046 show a smartphone being held, while the basketball remains on the table. The claimed HELD_BY_PERSON state for the basketball is unsupported. |
-| Q4_PHYSICAL_TRANSITION | ALTERNATIVE_EXPLANATION | F0016, F0031, F0046, F0062 | The visible manipulation involves a smartphone being lifted from the table, not the basketball. The basketball remains on the surface while the phone is held. The model's ball PICKUP claim is better explained as incorrect association of the visible phone pickup with the basketball. |
-| Q5_TEMPORAL_SUPPORT | CITATION_UNSUPPORTED | F0001, F0016, F0031, F0046 | The model assigns the basketball pickup to F0001, but the basketball is still resting on the table at that frame and remains visible on the surface in subsequent frames. No basketball pickup is observed at the cited time. The phone pickup occurs later in the sampled sequence. |
-| Q6_CONTRADICTIONS | CONTRADICTION_IDENTIFIED | F0001, F0031, F0046, F0062, F0077 | The model claims that the basketball is picked up and held by a person, but the observed hand-held object is a smartphone. The basketball remains on the table in the earlier frames. The camera subsequently moves away, so the basketball leaving the field of view must not be interpreted as evidence of pickup. The target identity, claimed after-state, and event timing are inconsistent with the observed evidence. |
-
-**引用影格來源（只映射既有 PTS，不建立新 GT 時間）：**
-
-| Alias | Source frame | Native PTS 秒 | Source PNG SHA-256 |
-|---|---|---|---|
-| F0001 | S000373 | 12.435 | e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1 |
-| F0016 | S000388 | 12.935 | 4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7 |
-| F0031 | S000403 | 13.436666666666667 | 5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67 |
-| F0046 | S000418 | 13.936666666666667 | 12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c |
-| F0062 | S000434 | 14.471666666666666 | 7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1 |
-| F0077 | S000449 | 14.971666666666666 | a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8 |
-
-結構缺陷維持原樣：`["/events/0/timing_uncertainty:'' should be non-empty", "/uncertainty:'' should be non-empty"]`。
-
-**保留的人工表單一致性警示：** Selected IDENTIFIABLE_AND_CONSISTENT, but notes and final WRONG_TARGET describe basketball/phone misassociation. Preserve the contradiction.
-
-[原始人工提交副本](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/human_submissions/call_04_human_review.json) | [原始模型輸出](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_04/raw_output.txt) | [歷史證據卡（初始空白表單）](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/EVENT_REVIEW_CARDS/call_04.html)
-
-### Call 8 — test7 W05 / NATIVE_VIDEO_ARRAY
-
-**人類原始判定：SUPPORTED_BY_OBSERVED_EVIDENCE**；原始 reviewer `reviewer_0`，確認後同一人 `reviewer_0`；提交時間 `2026-10-15T10:19:16.306Z`。
-
-模型原話：The object is picked up from the table.
-
-原始 timing：`{"frame_alias": "F0001", "status": "EXACT_SUPPLIED_FRAME"}`；before：`{"state": "ON_SURFACE", "supporting_frame_alias": "F0001"}`；after：`{"state": "HELD_BY_PERSON", "supporting_frame_alias": "F0016"}`。
-
-**人工總結原文（保留限定語）：**
-
-> The sampled frames support a smartphone being picked up from the table, consistent with the model's generic PICKUP hypothesis. However, the model does not explicitly identify the smartphone, and its exact event timing at F0001 is unsupported. The prediction is therefore supported at the physical-event level, with unresolved target grounding and temporal localization.
-
-| 欄位 | 人工原選項 | 引用 aliases | 人工說明原文 |
-|---|---|---|---|
-| Q1_TARGET_IDENTITY | IDENTIFIABLE_AND_CONSISTENT | F0001, F0031, F0046 | The visible manipulated object is a smartphone. However, the model refers to it only as "the object" without specifying its identity. The event description is compatible with the visible phone pickup, but the model does not establish an explicit target-object association. |
-| Q2_BEFORE | DIRECTLY_OBSERVED | F0001, F0016 | A smartphone is visibly resting on the table in F0001 and F0016. This provides direct evidence of an ON_SURFACE state before the observed pickup. |
-| Q3_AFTER | DIRECTLY_OBSERVED | F0031, F0046 | The smartphone is visibly held above the table in F0031 and F0046. This supports the HELD_BY_PERSON state for the smartphone. The model's cited F0016 does not clearly establish that the object has already been lifted. |
-| Q4_PHYSICAL_TRANSITION | DIRECT_TRANSITION_VISIBLE | F0016, F0031, F0046 | The sampled sequence shows a smartphone on the table, followed by the same smartphone being held above the surface. This provides visual support for a PICKUP transition. However, the model's generic reference to "the object" does not explicitly identify the smartphone, and the exact moment of lifting is not resolved. |
-| Q5_TEMPORAL_SUPPORT | CITATION_UNSUPPORTED | F0001, F0016, F0031 | The model assigns the pickup to F0001, but the smartphone remains on the table in that frame. F0016 still shows the hand interacting with the phone near the surface, while F0031 shows the phone being held above the table. The pickup is supported by the later state transition, but not at the model's claimed exact frame. |
-| Q6_CONTRADICTIONS | CONTRADICTION_IDENTIFIED | F0001, F0016, F0031, F0046 | The visible sequence supports a smartphone pickup, but the model does not identify the target beyond the generic term "object". Its exact timing claim at F0001 is inconsistent with the observed ON_SURFACE state, and its cited after-state at F0016 is not clearly sufficient to establish that the object is already held. The precise transition time remains uncertain. |
-
-**引用影格來源（只映射既有 PTS，不建立新 GT 時間）：**
-
-| Alias | Source frame | Native PTS 秒 | Source PNG SHA-256 |
-|---|---|---|---|
-| F0001 | S000373 | 12.435 | e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1 |
-| F0016 | S000388 | 12.935 | 4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7 |
-| F0031 | S000403 | 13.436666666666667 | 5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67 |
-| F0046 | S000418 | 13.936666666666667 | 12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c |
-
-結構缺陷維持原樣：`["/events/0/timing_uncertainty:'' should be non-empty", "/uncertainty:'' should be non-empty"]`。
-
-**保留的人工表單一致性警示：** Selected IDENTIFIABLE_AND_CONSISTENT, while notes/rationale retain unresolved explicit target association. This is a scope qualification, not fully validated target binding.
-
-[原始人工提交副本](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/human_submissions/call_08_human_review.json) | [原始模型輸出](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_08/raw_output.txt) | [歷史證據卡（初始空白表單）](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/EVENT_REVIEW_CARDS/call_08.html)
-
-### Call 10 — test5 W05 / MULTI_IMAGE
-
-**人類原始判定：SUPPORTED_BY_OBSERVED_EVIDENCE**；原始 reviewer `reviewer_0`，確認後同一人 `reviewer_0`；提交時間 `2026-10-15T10:21:05.931Z`。
-
-模型原話：The phone is lifted from the table.
-
-原始 timing：`{"frame_alias": "F0077", "status": "EXACT_SUPPLIED_FRAME"}`；before：`{"state": "ON_SURFACE", "supporting_frame_alias": "F0077"}`；after：`{"state": "HELD_BY_PERSON", "supporting_frame_alias": "F0077"}`。
-
-**人工總結原文（保留限定語）：**
-
-> The sampled frames support a smartphone being picked up from the table, and the model correctly identifies the target object and event type. However, its citation of F0077 as the before-state, after-state, and exact event time is inconsistent with the observed sequence. The prediction is supported at the physical-event level, but its temporal localization and before-state citation are incorrect.
-
-| 欄位 | 人工原選項 | 引用 aliases | 人工說明原文 |
-|---|---|---|---|
-| Q1_TARGET_IDENTITY | IDENTIFIABLE_AND_CONSISTENT | F0001, F0062, F0077 | The manipulated object is identifiable as a smartphone, consistent with the model's description of a phone. The same object can be followed from its initial position on the table to the later hand-held state. |
-| Q2_BEFORE | DIRECTLY_OBSERVED | F0001, F0016 | The smartphone is visibly resting on the table in F0001 and F0016, providing direct evidence of the ON_SURFACE state before the pickup. The model's cited F0077 does not support this before-state because the phone has already been lifted by that frame. |
-| Q3_AFTER | DIRECTLY_OBSERVED | F0062, F0077 | The smartphone is visibly held above the table in F0062 and F0077. This directly supports the HELD_BY_PERSON state after the pickup, consistent with the model's after-state claim. |
-| Q4_PHYSICAL_TRANSITION | DIRECT_TRANSITION_VISIBLE | F0016, F0032, F0047, F0062, F0077 | The sampled sequence shows a hand interacting with the smartphone on the table, followed by the smartphone being lifted and held above the surface. This supports a PICKUP transition rather than disappearance caused solely by occlusion. The exact moment of separation from the table is not fully resolved. |
-| Q5_TEMPORAL_SUPPORT | CITATION_UNSUPPORTED | F0047, F0062, F0077 | The model assigns the exact PICKUP time to F0077 (13.933 s), but the smartphone is already held above the table in that frame. The transition is supported by earlier observations, particularly between the near-surface state in F0047 and the lifted state visible in F0062. F0077 supports the post-pickup state, not the exact instant of pickup. |
-| Q6_CONTRADICTIONS | CONTRADICTION_IDENTIFIED | F0001, F0047, F0062, F0077 | The model correctly identifies the smartphone and the PICKUP event, but it cites F0077 as the before-state, after-state, and exact event time. Since the smartphone is already held above the table in F0077, that frame cannot establish the preceding ON_SURFACE state or the exact transition moment. Earlier frames provide the before-state evidence, while sampling gaps limit precise temporal localization. |
-
-**引用影格來源（只映射既有 PTS，不建立新 GT 時間）：**
-
-| Alias | Source frame | Native PTS 秒 | Source PNG SHA-256 |
-|---|---|---|---|
-| F0001 | S000342 | 11.4 | 10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27 |
-| F0016 | S000357 | 11.9 | 220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82 |
-| F0032 | S000373 | 12.433333333333334 | b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7 |
-| F0047 | S000388 | 12.933333333333334 | 8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d |
-| F0062 | S000403 | 13.433333333333334 | 03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487 |
-| F0077 | S000418 | 13.933333333333334 | ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794 |
-
-結構缺陷維持原樣：`["/events/0/event_id:'PRED_EVT_0001' does not match '^PRED_EVT_[0-9]{3}$'", "/events/0/timing_uncertainty:'' should be non-empty", "/uncertainty:'' should be non-empty"]`。
-
-[原始人工提交副本](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/human_submissions/call_10_human_review.json) | [原始模型輸出](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/v1d_pilot_runs/eb9435cf0102631e0456f3a05232d4eebbde5127cb480b6042ff584f244c109f/call_10/raw_output.txt) | [歷史證據卡（初始空白表單）](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/EVENT_REVIEW_CARDS/call_10.html)
-
-
-## 9. 交付與停止
-
-- [Import/provenance audit](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/ADJUDICATION_IMPORT_AUDIT.json)
-- [Machine-readable human records and sourced error themes](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/HUMAN_ADJUDICATED_CALLS.json)
-- [Human-confirmed reviewer identity correction](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/REVIEWER_IDENTITY_RESOLUTION.json)
-- [Original-source preservation audit](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/READONLY_PRESERVATION_REPORT.json)
-- [Deliverable SHA-256 manifest](C:/Users/smile/Desktop/test2/mixure_test_SAM/artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1/DELIVERABLE_HASHES.json)
-
-五份人類標註皆已完成；沒有待補的 terminal disposition。欄位級 Q1/Q5 一致性限制仍如上揭露，不在本任務自動改答案。此處停止，不調 prompt、不重跑、不追加模型、不更動 GT、不寫 Memory Graph、不 commit/push。
+即使文字正確，VLM仍同時提出事件與自述證據，沒有獨立physical-event validation；沒有證明persistent identity、長時追蹤、校準confidence、精確動作時間、false-negative performance或Graph寫入安全。588×336縮圖、Uniform8稀疏採樣、已知DEV案例與僅兩次生成也是限制。

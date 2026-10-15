@@ -1,0 +1,287 @@
+{
+  "prompt_sha256": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+  "schema_sha256": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+  "rendered_text": "<|im_start|>system\nYou are analyzing chronological observations from a real-world video. Identify physical object interactions using only visible evidence. Distinguish objects resting on surfaces from objects held by a person. Do not infer pickup solely from an object disappearing, changing screen position, or leaving the field of view. Do not infer manipulation solely from camera movement. Do not assume visually similar objects are the same physical instance without supporting evidence. If object identity, state transition, or temporal order is unclear, report uncertainty. Reference only supplied frame aliases. Do not invent exact event timestamps. Do not use prior knowledge of the recording or an expected answer. Return only structured JSON, without markdown or extra text.<|im_end|>\n<|im_start|>user\nImage 1 corresponds exactly to frame alias F0001.<|vision_start|><|image_pad|><|vision_end|>Image 2 corresponds exactly to frame alias F0016.<|vision_start|><|image_pad|><|vision_end|>Image 3 corresponds exactly to frame alias F0032.<|vision_start|><|image_pad|><|vision_end|>Image 4 corresponds exactly to frame alias F0047.<|vision_start|><|image_pad|><|vision_end|>Image 5 corresponds exactly to frame alias F0062.<|vision_start|><|image_pad|><|vision_end|>Image 6 corresponds exactly to frame alias F0077.<|vision_start|><|image_pad|><|vision_end|>Image 7 corresponds exactly to frame alias F0093.<|vision_start|><|image_pad|><|vision_end|>Image 8 corresponds exactly to frame alias F0108.<|vision_start|><|image_pad|><|vision_end|>Examine the supplied chronological images. The text immediately before each image identifies its image number and frame alias. Identify any visually supported PICKUP or PLACEMENT event. For each proposed event identify the manipulated object from its visible appearance, its observed BEFORE and AFTER states, the supporting BEFORE and AFTER frame aliases, a concise explanation of visible physical evidence, and any uncertainty. PICKUP means a transition from surface support to being held; PLACEMENT means a transition from being held to surface support. Allow UNKNOWN states and uncertainty about the target rather than inventing evidence. BEFORE citations must precede AFTER citations in the supplied image order. Also describe any visually relevant object that could be confused with the manipulated object and whether manipulation of that object is OBSERVED, NOT_OBSERVED, or UNCERTAIN. NOT_OBSERVED means it is not shown in these images, not proof of its absence during unobserved intervals. Do not invent a negative claim when an object's state is obscured. Use status EVENTS only with one or more proposed events. Use UNCERTAIN with no events if evidence is insufficient to establish an event. Use NO_CONFIRMED_EVENT with no events only for a clearly observed no-event sequence in the supplied observations. Do not interpret these sparse images as exhaustive continuous coverage. Explain abstention in notes. Do not force descriptions of every object. Use only the JSON fields and values in the supplied schema. Set event uncertainty to NONE only when the visible evidence warrants it; otherwise provide a concise uncertainty description. No timestamps or persistent identifiers. Your event descriptions are hypotheses, not independently validated physical decisions.\nRequired JSON schema:\n{\"$defs\": {\"event\": {\"additionalProperties\": false, \"properties\": {\"after_frames\": {\"$ref\": \"#/$defs/frames\"}, \"after_state\": {\"$ref\": \"#/$defs/state\"}, \"before_frames\": {\"$ref\": \"#/$defs/frames\"}, \"before_state\": {\"$ref\": \"#/$defs/state\"}, \"event_type\": {\"enum\": [\"PICKUP\", \"PLACEMENT\"]}, \"evidence\": {\"minLength\": 1, \"type\": \"string\"}, \"target\": {\"minLength\": 1, \"type\": \"string\"}, \"uncertainty\": {\"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"event_type\", \"target\", \"before_state\", \"after_state\", \"before_frames\", \"after_frames\", \"evidence\", \"uncertainty\"], \"type\": \"object\"}, \"frames\": {\"items\": {\"pattern\": \"^F[0-9]{4}$\", \"type\": \"string\"}, \"minItems\": 1, \"type\": \"array\", \"uniqueItems\": true}, \"other\": {\"additionalProperties\": false, \"properties\": {\"evidence\": {\"minLength\": 1, \"type\": \"string\"}, \"frames\": {\"$ref\": \"#/$defs/frames\"}, \"manipulation\": {\"enum\": [\"OBSERVED\", \"NOT_OBSERVED\", \"UNCERTAIN\"]}, \"observed_state\": {\"$ref\": \"#/$defs/state\"}, \"target\": {\"minLength\": 1, \"type\": \"string\"}}, \"required\": [\"target\", \"observed_state\", \"frames\", \"manipulation\", \"evidence\"], \"type\": \"object\"}, \"state\": {\"enum\": [\"ON_SURFACE\", \"HELD_BY_PERSON\", \"OTHER\", \"UNKNOWN\"]}}, \"$schema\": \"https://json-schema.org/draft/2020-12/schema\", \"additionalProperties\": false, \"allOf\": [{\"else\": {\"properties\": {\"events\": {\"maxItems\": 0}}}, \"if\": {\"properties\": {\"status\": {\"const\": \"EVENTS\"}}}, \"then\": {\"properties\": {\"events\": {\"minItems\": 1}}}}], \"properties\": {\"events\": {\"items\": {\"$ref\": \"#/$defs/event\"}, \"type\": \"array\"}, \"notes\": {\"type\": \"string\"}, \"other_objects\": {\"items\": {\"$ref\": \"#/$defs/other\"}, \"type\": \"array\"}, \"status\": {\"enum\": [\"EVENTS\", \"NO_CONFIRMED_EVENT\", \"UNCERTAIN\"]}}, \"required\": [\"status\", \"events\", \"notes\"], \"title\": \"FindMind VLM Physical-State Feasibility V3\", \"type\": \"object\"}<|im_end|>\n<|im_start|>assistant\n",
+  "rendered_text_sha256": "e73718a9d5d889761746bdd560313e4a115a72826d9b4b2f2245095d15e48c01",
+  "frame_mapping": [
+    {
+      "native_source_pts_s": 11.4,
+      "recorded_source_png_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+      "source_frame_id": "S000342",
+      "source_frame_index": 342,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000342.png",
+      "supplied_alias": "F0001"
+    },
+    {
+      "native_source_pts_s": 11.9,
+      "recorded_source_png_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+      "source_frame_id": "S000357",
+      "source_frame_index": 357,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000357.png",
+      "supplied_alias": "F0016"
+    },
+    {
+      "native_source_pts_s": 12.433333333333334,
+      "recorded_source_png_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+      "source_frame_id": "S000373",
+      "source_frame_index": 373,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000373.png",
+      "supplied_alias": "F0032"
+    },
+    {
+      "native_source_pts_s": 12.933333333333334,
+      "recorded_source_png_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+      "source_frame_id": "S000388",
+      "source_frame_index": 388,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png",
+      "supplied_alias": "F0047"
+    },
+    {
+      "native_source_pts_s": 13.433333333333334,
+      "recorded_source_png_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+      "source_frame_id": "S000403",
+      "source_frame_index": 403,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000403.png",
+      "supplied_alias": "F0062"
+    },
+    {
+      "native_source_pts_s": 13.933333333333334,
+      "recorded_source_png_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+      "source_frame_id": "S000418",
+      "source_frame_index": 418,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000418.png",
+      "supplied_alias": "F0077"
+    },
+    {
+      "native_source_pts_s": 14.466666666666667,
+      "recorded_source_png_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+      "source_frame_id": "S000434",
+      "source_frame_index": 434,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png",
+      "supplied_alias": "F0093"
+    },
+    {
+      "native_source_pts_s": 14.966666666666667,
+      "recorded_source_png_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+      "source_frame_id": "S000449",
+      "source_frame_index": 449,
+      "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png",
+      "supplied_alias": "F0108"
+    }
+  ],
+  "representation": "MULTI_IMAGE_8_CHRONOLOGICAL_STILLS",
+  "effective_temporal_representation": "Eight independent image inputs in chronological order, no native video tensor/time units; source PTS kept private in receipt only",
+  "grid_accounting": {
+    "grids": {
+      "image_grid_thw": [
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ]
+      ]
+    },
+    "grid_derived_visual_tokens": 2016,
+    "resized_dimensions_hw": {
+      "image_grid_thw": [
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ]
+      ]
+    },
+    "per_grid_spatial_pixels": {
+      "image_grid_thw": [
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568
+      ]
+    }
+  },
+  "tensor_records": {
+    "input_ids": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        1,
+        3174
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 3174,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        3174,
+        1
+      ],
+      "canonical_sha256": "d2709079b55cece80050ad0c58f754f0435e0a7e06fe37402869c6d7370f5952",
+      "raw_le_c_sha256": "047ebc7c0e109a72518625930983af24337dc53815bc38f28fb51eaefcb00a5c"
+    },
+    "attention_mask": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        1,
+        3174
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 3174,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        3174,
+        1
+      ],
+      "canonical_sha256": "de557d221c49420b3d22e7ee58f1fb4e0198865eb4a5a83267f2965388856379",
+      "raw_le_c_sha256": "eafa12ff63d8eb361a13c85f79864c378990d81079c2a3a740d908a0fbaa8db2"
+    },
+    "pixel_values": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<f4",
+      "shape": [
+        8064,
+        1176
+      ],
+      "torch_dtype": "torch.float32",
+      "device": "cpu",
+      "numel": 9483264,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        1176,
+        1
+      ],
+      "canonical_sha256": "565d278ab121073e977a249b6af0bd4844dc13b08495a121baabe646217ec15b",
+      "raw_le_c_sha256": "b5953d69c0106ffb4795955cd9dd878a44639d00711a78275c0e24e144f05d38"
+    },
+    "image_grid_thw": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        8,
+        3
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 24,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        3,
+        1
+      ],
+      "canonical_sha256": "59a3a13973ede718afec4964aa26ca6723e87a53aa3f55ba7dd01bd3b6504712",
+      "raw_le_c_sha256": "4454859fa2a5db1e4108fd0008014f976b123e1c3ce23359eefdc7bdbfa539d3"
+    }
+  },
+  "processor_effective": {
+    "_processor_class": "Qwen2_5_VLProcessor",
+    "size": {
+      "shortest_edge": 3136,
+      "longest_edge": 200704
+    },
+    "min_pixels": 3136,
+    "max_pixels": 200704,
+    "patch_size": 14,
+    "temporal_patch_size": 2,
+    "merge_size": 2,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "image_processor_type": "Qwen2VLImageProcessorFast",
+    "crop_size": null,
+    "pad_size": null,
+    "do_resize": true,
+    "default_to_square": true,
+    "resample": 3,
+    "do_center_crop": null,
+    "do_rescale": true,
+    "rescale_factor": 0.00392156862745098,
+    "do_normalize": true,
+    "do_pad": null,
+    "do_convert_rgb": true,
+    "return_tensors": null,
+    "data_format": "channels_first",
+    "input_data_format": null,
+    "device": null,
+    "disable_grouping": null
+  },
+  "preprocessing_seconds": 0.22639560000243364
+}

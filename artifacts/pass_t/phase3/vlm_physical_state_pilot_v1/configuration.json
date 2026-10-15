@@ -1,0 +1,191 @@
+{
+  "experiment": "PHASE3_VLM_FIRST_PHYSICAL_STATE_V1",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "model_snapshot": ".models/Qwen2.5-VL-7B-Instruct",
+  "model_assets_manifest": "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json",
+  "quantization": "NF4_DOUBLE_BF16",
+  "attention": "sdpa",
+  "device": "cuda",
+  "representation": "MULTI_IMAGE_8_CHRONOLOGICAL_STILLS",
+  "reference": "NONE",
+  "processor_max_pixels": 200704,
+  "processor_min_pixels": 3136,
+  "max_images": 8,
+  "generation": {
+    "sampling": false,
+    "seed": 42,
+    "max_output_tokens": 1024
+  },
+  "generation_timeout_seconds": 300,
+  "load_timeout_seconds": 120,
+  "request_timeout_seconds": 330,
+  "max_calls": 2,
+  "retry": 0,
+  "hardware_gib": {
+    "generation_free_gpu_min": 2,
+    "global_gpu_used_stop_above": 14.5,
+    "load_free_gpu_min": 10,
+    "load_free_ram_min": 8,
+    "owned_tree_rss_stop_above": 20,
+    "system_ram_stop_below": 2
+  },
+  "windows": [
+    {
+      "window": "test5__W05",
+      "call": "A",
+      "frames": [
+        {
+          "native_source_pts_s": 11.4,
+          "recorded_source_png_sha256": "10cc01413d92bd21672cfb1c7310f4be4b1e1fac3ac6708d525981d7b96c9f27",
+          "source_frame_id": "S000342",
+          "source_frame_index": 342,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000342.png",
+          "supplied_alias": "F0001"
+        },
+        {
+          "native_source_pts_s": 11.9,
+          "recorded_source_png_sha256": "220497de57fab64e8a6964fbc022a682b814c4e548063b5a6ee58c0fb0b77d82",
+          "source_frame_id": "S000357",
+          "source_frame_index": 357,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000357.png",
+          "supplied_alias": "F0016"
+        },
+        {
+          "native_source_pts_s": 12.433333333333334,
+          "recorded_source_png_sha256": "b2c53d6b0b61b8326bd06b1b6758e516b1f19d8f8b2442c01d9a5ddd540311e7",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000373.png",
+          "supplied_alias": "F0032"
+        },
+        {
+          "native_source_pts_s": 12.933333333333334,
+          "recorded_source_png_sha256": "8fd6ad4e1602cbc458eb214dd9ac606861c769b4238bae45123bfc715dcfa08d",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000388.png",
+          "supplied_alias": "F0047"
+        },
+        {
+          "native_source_pts_s": 13.433333333333334,
+          "recorded_source_png_sha256": "03b066756b322b77d1f723a4b30e3b3f23013d92bc01da1fdc37f5f08e70a487",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000403.png",
+          "supplied_alias": "F0062"
+        },
+        {
+          "native_source_pts_s": 13.933333333333334,
+          "recorded_source_png_sha256": "ae177c755952014df4259765c76b0e25eeceb318c5800a785e72f177a9053794",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000418.png",
+          "supplied_alias": "F0077"
+        },
+        {
+          "native_source_pts_s": 14.466666666666667,
+          "recorded_source_png_sha256": "48dccf469d84539f22e76a563f24337bcad2f91281103bd87d56c89e09584624",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000434.png",
+          "supplied_alias": "F0093"
+        },
+        {
+          "native_source_pts_s": 14.966666666666667,
+          "recorded_source_png_sha256": "a7d23c7026f542c956c4b745983eb1e92bf7c688e6341b9c7b8d934d7e8c862e",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test5__W05/frames/S000449.png",
+          "supplied_alias": "F0108"
+        }
+      ],
+      "recorded_source_video_sha256": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+      "source_video_reopened": false
+    },
+    {
+      "window": "test7__W05",
+      "call": "B",
+      "frames": [
+        {
+          "native_source_pts_s": 12.435,
+          "recorded_source_png_sha256": "e7b2f09f119510a117c550138f5e8c659354f7f0df6ba737d2936b7e2a244ca1",
+          "source_frame_id": "S000373",
+          "source_frame_index": 373,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000373.png",
+          "supplied_alias": "F0001"
+        },
+        {
+          "native_source_pts_s": 12.935,
+          "recorded_source_png_sha256": "4e8770c51400fa0105dcafd5b54b61826ba4417df99733b2eedce411e1dea8f7",
+          "source_frame_id": "S000388",
+          "source_frame_index": 388,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000388.png",
+          "supplied_alias": "F0016"
+        },
+        {
+          "native_source_pts_s": 13.436666666666667,
+          "recorded_source_png_sha256": "5ec94a5b70fa68a9b144d78e94b3f0727c30944462adb6b3009bd3023a5acf67",
+          "source_frame_id": "S000403",
+          "source_frame_index": 403,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000403.png",
+          "supplied_alias": "F0031"
+        },
+        {
+          "native_source_pts_s": 13.936666666666667,
+          "recorded_source_png_sha256": "12f6213b67ce89b8c300065de20809fc38c9963fe981fdbe95f8226d878cc43c",
+          "source_frame_id": "S000418",
+          "source_frame_index": 418,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000418.png",
+          "supplied_alias": "F0046"
+        },
+        {
+          "native_source_pts_s": 14.471666666666666,
+          "recorded_source_png_sha256": "7620fdb3160afaefcfb496588c2c2c3e084537e8d42c9c9d61453f334a219ba1",
+          "source_frame_id": "S000434",
+          "source_frame_index": 434,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000434.png",
+          "supplied_alias": "F0062"
+        },
+        {
+          "native_source_pts_s": 14.971666666666666,
+          "recorded_source_png_sha256": "a12f87d8dc22b55e7cee417cd2fc0a54b42cb7352646fc00b693087b653326d8",
+          "source_frame_id": "S000449",
+          "source_frame_index": 449,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000449.png",
+          "supplied_alias": "F0077"
+        },
+        {
+          "native_source_pts_s": 15.471666666666666,
+          "recorded_source_png_sha256": "9305b535e199fca3dac5c12668c54a10910862c9fa5742441ca556d3aef6f11c",
+          "source_frame_id": "S000464",
+          "source_frame_index": 464,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000464.png",
+          "supplied_alias": "F0092"
+        },
+        {
+          "native_source_pts_s": 15.973333333333333,
+          "recorded_source_png_sha256": "6289ef44e2654d0d122724df72ba8b3fed75b41e84d8366723aa35d44b3b8eaa",
+          "source_frame_id": "S000479",
+          "source_frame_index": 479,
+          "source_path": "artifacts/pass_t/human_seed_review/items/test7__W05/frames/S000479.png",
+          "supplied_alias": "F0107"
+        }
+      ],
+      "recorded_source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+      "source_video_reopened": false
+    }
+  ],
+  "authorization": {
+    "source": "Explicit user attachment authorizes two calls only, no separate GPU approval required",
+    "attachment_sha256": "2927bf674fe8ac32f102b79dc9bae06eced9092a7c51937ab91c1397d7f1849f",
+    "historical_phase2b_lease_reused": false
+  },
+  "parser_contract_checks": {
+    "malformed_stays_invalid": true,
+    "empty_events_status_rejected": true,
+    "valid_uncertain_kept_distinct": true,
+    "valid_no_event_kept_distinct": true
+  },
+  "no_memory_graph_writes": true
+}

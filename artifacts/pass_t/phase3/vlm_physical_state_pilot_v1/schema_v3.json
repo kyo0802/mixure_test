@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FindMind VLM Physical-State Feasibility V3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "events", "notes"],
+  "properties": {
+    "status": {"enum": ["EVENTS", "NO_CONFIRMED_EVENT", "UNCERTAIN"]},
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}},
+    "other_objects": {"type": "array", "items": {"$ref": "#/$defs/other"}},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {"if": {"properties": {"status": {"const": "EVENTS"}}}, "then": {"properties": {"events": {"minItems": 1}}}, "else": {"properties": {"events": {"maxItems": 0}}}}
+  ],
+  "$defs": {
+    "state": {"enum": ["ON_SURFACE", "HELD_BY_PERSON", "OTHER", "UNKNOWN"]},
+    "frames": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^F[0-9]{4}$"}},
+    "event": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_type", "target", "before_state", "after_state", "before_frames", "after_frames", "evidence", "uncertainty"],
+      "properties": {
+        "event_type": {"enum": ["PICKUP", "PLACEMENT"]},
+        "target": {"type": "string", "minLength": 1},
+        "before_state": {"$ref": "#/$defs/state"},
+        "after_state": {"$ref": "#/$defs/state"},
+        "before_frames": {"$ref": "#/$defs/frames"},
+        "after_frames": {"$ref": "#/$defs/frames"},
+        "evidence": {"type": "string", "minLength": 1},
+        "uncertainty": {"type": "string", "minLength": 1}
+      }
+    },
+    "other": {
+      "type": "object", "additionalProperties": false,
+      "required": ["target", "observed_state", "frames", "manipulation", "evidence"],
+      "properties": {
+        "target": {"type": "string", "minLength": 1},
+        "observed_state": {"$ref": "#/$defs/state"},
+        "frames": {"$ref": "#/$defs/frames"},
+        "manipulation": {"enum": ["OBSERVED", "NOT_OBSERVED", "UNCERTAIN"]},
+        "evidence": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

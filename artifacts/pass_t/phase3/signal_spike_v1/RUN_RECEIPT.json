@@ -1,0 +1,60 @@
+{
+  "script_sha256": "07fbeefe7695a9310991967966edbb748b24dc3635de80b48b9cf8ecc359878d",
+  "preregistration_sha256": "2ab15d53ea5577e4bab82db5a7c89ffd32cae9ff7293370615e4d00352e79a05",
+  "bundle_sha256": "3e1c0c2ace701ff7fef6b2b6d536e8b14125f27236a3030f760a075392270ebf",
+  "model_hashes": {
+    ".models/yolo11s.pt": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    ".models/yolo11n-pose.pt": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0"
+  },
+  "versions": {
+    "ultralytics": "8.4.158",
+    "torch": "2.10.0+cu128",
+    "opencv-python": "4.14.0.94"
+  },
+  "device": "0",
+  "elapsed_s": 19.976214499998605,
+  "torch_peak_allocated_bytes": 139622400,
+  "torch_peak_reserved_bytes": 184549376,
+  "summary": {
+    "test5__W05": {
+      "frames": 8,
+      "phone_frames": 3,
+      "ball_frames": 8,
+      "pose_frames": 7,
+      "wrist_frames": 5,
+      "reliable_camera_pairs": 7,
+      "local_candidate_ids": 2,
+      "physical_states": {
+        "UNKNOWN": 11
+      },
+      "exact_masks_frames": 1,
+      "guard_authorized_frames": 0
+    },
+    "test7__W05": {
+      "frames": 8,
+      "phone_frames": 3,
+      "ball_frames": 4,
+      "pose_frames": 7,
+      "wrist_frames": 7,
+      "reliable_camera_pairs": 6,
+      "local_candidate_ids": 5,
+      "physical_states": {
+        "UNKNOWN": 7
+      },
+      "exact_masks_frames": 0,
+      "guard_authorized_frames": 0
+    }
+  },
+  "threshold_revisions": 0,
+  "qwen_calls": 0,
+  "graph_writes": 0,
+  "source_video_decodes": 0,
+  "pose_download": {
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo11n-pose.pt",
+    "bytes": 6255593
+  },
+  "preservation": {
+    "checked": 310,
+    "mismatches": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "version": "phase3_signal_spike_v1",
+  "purpose": "Development-set feasibility; not a validated PICKUP detector",
+  "scope": ["test5__W05", "test7__W05"],
+  "inputs": "Exact frozen Uniform8 PNGs only, native source PTS, no nearest substitution",
+  "detector": {"model": ".models/yolo11s.pt", "conf": 0.25, "imgsz": 960},
+  "pose": {"model": ".models/yolo11n-pose.pt", "conf": 0.25, "imgsz": 960, "keypoint_conf": 0.5, "wrists_zero_based": [9,10], "max_download_bytes": 100000000},
+  "camera": {"method": "Sparse LK background flow and RANSAC homography, excluding detected person/phone/ball boxes", "max_corners": 1000, "quality_level": 0.01, "min_distance_px": 8, "fb_error_px": 1.5, "ransac_px": 3, "min_inliers": 30, "min_inlier_ratio": 0.45, "max_median_reprojection_px": 3},
+  "motion": {"min_object_flow_points": 4, "stationary_max_residual_px": 3, "moving_min_residual_px": 12, "interpretation": "Image-relative diagnostic only; not physical support, lift, or pickup"},
+  "local_consistency": {"same_class": true, "min_iou": 0.3, "max_gap_seconds": 0.65, "require_unique_candidate_above_threshold": true, "meaning": "Tentative local association only; no persistent identity, no association across gaps or classes"},
+  "physical_state": {
+    "ON_SURFACE": {"required_support_boundary_confidence": 0.8, "required_reliable_camera": true, "max_stationary_residual_px": 3, "min_consecutive_observations": 2},
+    "HELD_BY_PERSON": {"required_grip_or_contact_confidence": 0.8, "required_surface_separation_confidence": 0.8, "required_wrist_confidence": 0.5, "max_wrist_bbox_distance_px": 40, "max_object_hand_relative_displacement_px": 6, "min_consecutive_observations": 2},
+    "UNKNOWN": "Any required physical observation missing, uncalibrated, contradictory, or insufficient continuity. No known contact/support classifier is available: unavailable primitives remain null, not fabricated confidence values.",
+    "prohibited_shortcuts": ["bbox overlap alone", "wrist proximity alone", "image motion alone", "disappearance", "person containment", "stationary image projection as mechanical support"]
+  },
+  "evaluation_separation": "Runtime must not open human review, GT, or call outputs. Save both windows computed states and all candidate objects, seal receipt, then compare human review in a separate reporting step. Investigator already knows historical DEV outcomes: this is not blind validation.",
+  "revision_budget": 2,
+  "current_revision": 0,
+  "checkpoint": "PASS requires plausible independent correctly targeted phone pickup evidence AND discrimination of false ball attribution; partial if only one; blocked if neither is established. No lowering criteria to obtain PASS.",
+  "stop": "No Qwen, no final Decision layer, no Graph writes, no commit/push. Stop at signal checkpoint."
+}

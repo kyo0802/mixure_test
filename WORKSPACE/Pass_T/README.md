@@ -2,7 +2,7 @@
 
 最新更新：2026-10-15。**[最新完整報告](LATEST_REPORT.md)** 固定放在本資料夾，每次完成工作都更新同一入口。
 
-目前主要工作仍在 Pass I/T 平行標註＋實作。**Phase 2b Human-Adjudicated Error Analysis 已完成**：五份人工審閱全部匯入並核對來源；3 筆 SUPPORTED_BY_OBSERVED_EVIDENCE、2 筆 WRONG_TARGET。五筆人工文字都指出時間定位問題，原始模型輸出全部仍 strict-invalid。原始 Q1/Q5 選項與文字的一致性警示已揭露，沒有自動修標註、追加推論或改 GT。詳見最新完整報告。
+目前主要工作仍在 Pass I/T 平行標註＋實作。**Phase 3 VLM-first兩次真實Qwen實驗已完成，建議 REVISE_VLM_OBSERVATION_APPROACH**：test5文字辨認出手機pickup；test7文字卻否認pickup。兩份均有Markdown fence而JSON解析失敗，有效V3結構化預測0筆。未修復輸出、未重試、未自動開始整合；原CV signal checkpoint仍為BLOCKED。詳細原文、質性對照、收尾監控錯誤及CPU修正見最新報告。沒有GT／Graph更新或commit／push。
 
 [回到總入口](../../START_HERE.md)
 
@@ -10,6 +10,9 @@
 |---|---|
 | 最新完整報告 | [直接閱讀](LATEST_REPORT.md) |
 | 最新待批准決策 | [直接閱讀](LATEST_DECISIONS.md) |
+| Phase 3 VLM-first：兩次真實生成、原始輸出與實驗報告 | [完整實驗資料夾](../../artifacts/pass_t/phase3/vlm_physical_state_pilot_v1) |
+| Phase 3 物理訊號 checkpoint、逐格圖與封存計算結果 | [完整資料夾](../../artifacts/pass_t/phase3/signal_spike_v1) |
+| Phase 3A 稽核（架構圖、48 欄 matrix、真實樣本與 roadmap） | [完整稽核資料夾](Phase3_Observation_Capability_Audit_20261015) |
 | 最新 Human-Adjudicated Error Analysis 與五份原始提交 | [分析資料夾](../../artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1) |
 | 歷史 PICKUP 人工審閱頁（保留初始空白表單；已完成結果看最新報告） | [開啟證據頁](../../artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1/PHYSICAL_EVIDENCE_REVIEW_INDEX.html) |
 | 歷史 evidence review 完整資料 | [套件目錄](../../artifacts/pass_t/phase2b/physical_evidence_review/20261015_real_dev_review_v1) |

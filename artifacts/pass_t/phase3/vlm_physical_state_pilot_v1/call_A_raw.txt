@@ -1,0 +1,32 @@
+```json
+{
+  "status": "EVENTS",
+  "events": [
+    {
+      "target": "phone",
+      "before_state": "ON_SURFACE",
+      "after_state": "HELD_BY_PERSON",
+      "before_frames": ["F0001", "F0016", "F0032", "F0047"],
+      "after_frames": ["F0062", "F0077", "F0093"],
+      "event_type": "PICKUP",
+      "evidence": "The phone transitions from being on the table to being held by a hand.",
+      "uncertainty": "NONE"
+    }
+  ],
+  "notes": "",
+  "other_objects": [
+    {
+      "target": "basketball",
+      "frames": ["F0001", "F0016", "F0032", "F0047", "F0062", "F0077", "F0093"],
+      "manipulation": "NOT_OBSERVED",
+      "observed_state": "ON_SURFACE"
+    },
+    {
+      "target": "box",
+      "frames": ["F0001", "F0016", "F0032", "F0047", "F0062", "F0077", "F0093"],
+      "manipulation": "NOT_OBSERVED",
+      "observed_state": "ON_SURFACE"
+    }
+  ]
+}
+```

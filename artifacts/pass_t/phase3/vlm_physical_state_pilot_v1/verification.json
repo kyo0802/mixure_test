@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-15T15:10:42.288886+00:00",
+  "checks": {
+    "protected_551_files_unchanged": true,
+    "all_16_pngs_match": true,
+    "prompt_schema_config_unchanged": true,
+    "shared_nf4_sources_unchanged": true,
+    "model_asset_manifest_unchanged": true,
+    "executed_runner_matches_frozen_hash": true,
+    "two_durable_attempt_markers_only": true,
+    "both_raw_outputs_match_receipts": true,
+    "both_generations_eos_no_cap": true,
+    "both_invalid_kept_invalid": true,
+    "both_inputs_exactly_eight_image_grids": true,
+    "same_prompt_and_schema_both_inputs": true
+  },
+  "preserved_files": 551,
+  "mismatches": [],
+  "valid_structured_predictions": 0,
+  "model_generations_completed": 2,
+  "additional_inference_for_checks": 0,
+  "current_runner_changed_only_by_disclosed_post_execution_cpu_patch": {
+    "applied_after_both_generations": true,
+    "model_reexecuted": false,
+    "original_executed_runner_sha256": "7e43d97748b40d7701806434b2a0115b7176014ff6ce821f975f0c22c1ebccd3",
+    "current_runner_sha256": "3dfeaf84ad16b26a5a866c71c71ea8d8fc3b870a07b9ae724600f9f2e04c60b3",
+    "diff": "--- runner_as_executed.py\n+++ scripts/run_phase3_vlm_physical_state.py\n@@ -198,7 +198,12 @@\n         t0=time.monotonic();reason=None;last_gpu=0;peak_rss=0;peak_gpu_used=0\n         while p.poll() is None:\n             time.sleep(1)\n-            process=psutil.Process(p.pid)\n+            try:\n+                process=psutil.Process(p.pid)\n+            except psutil.NoSuchProcess:\n+                # Child may exit between poll() and resource sampling.\n+                p.wait()\n+                break\n             try: rss=sum(x.memory_info().rss for x in [process]+process.children(recursive=True) if x.is_running())/2**30\n             except psutil.NoSuchProcess:rss=0\n             peak_rss=max(peak_rss,rss)\n",
+    "cpu_verification": "AST parse and deterministic missing-child branch; no model run",
+    "current_frozen_run_is_not_resumable_with_patched_runner": true,
+    "missing_child_branch_test": "PASS"
+  }
+}
