@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; media-src 'self' file: blob:; img-src 'self' file: data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<title>FindMind 離線人工 GT 標註</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div><h1>FindMind <span>離線人工標註</span></h1><p id="identity">原始影片 · 人工判斷 · 本機保存</p></div><nav aria-label="檔案操作">
+<button id="backup" disabled>下載備份</button><button id="export" class="primary" disabled>匯出標註成果（JSON）</button><button id="import">匯入先前 JSON</button><button id="new-session">新審閱者／工作階段</button></nav></header>
+<div id="message" role="status" aria-live="polite">請先建立工作階段，或匯入先前備份。</div>
+<div id="storage-warning" class="warning" hidden>此瀏覽器無法可靠寫入本機暫存。請經常下載 JSON 備份；關閉頁面可能遺失尚未匯出的工作。</div>
+<input id="import-file" type="file" accept=".json,application/json" hidden><input id="media-file" type="file" accept=".mp4,video/mp4" multiple hidden>
+<section id="welcome" class="welcome"><h2>開始人工審閱</h2><p>所有操作都在本機進行，不需帳號、網路或程式安裝。JSON 是可攜備份與繳交檔。</p>
+<form id="session-form"><label>審閱者 ID／暱稱 <input id="reviewer" required maxlength="64" placeholder="例如 teammate_01" autocomplete="off"></label>
+<label>分工／備註（選填）<input id="assignment" maxlength="2048" placeholder="例如只負責 test1–test3"></label><fieldset><legend>這次負責的影片（其他影片仍可切換）</legend><div id="assignments" class="checks"></div></fieldset><button class="primary">建立獨立標註檔</button></form>
+<section><h3>繼續此瀏覽器的暫存</h3><select id="saved-sessions" aria-label="既有工作階段"></select><button id="resume">繼續</button><p class="muted">換瀏覽器、移動資料夾或清除瀏覽資料可能失去暫存；請以 JSON 備份為準。</p></section>
+<p><a href="guide.html#rules" target="_blank" rel="noopener">標註準則</a> · <a href="guide.html#start" target="_blank" rel="noopener">啟動與提交說明</a> · <a href="guide.html#acceptance" target="_blank" rel="noopener">瀏覽器驗收步驟</a></p></section>
+<main id="workspace" hidden>
+<aside class="videos"><h2>影片與進度</h2><div id="video-list"></div><p class="muted">不會因影片播放到最後就自動確認完整審閱。</p><button id="clear-local">刪除此工作階段的本機暫存</button></aside>
+<section class="player-area"><h2 id="video-title"></h2><video id="player" controls preload="metadata" playsinline></video><div id="media-status" class="muted"></div>
+<div class="transport"><button id="play">播放／暫停</button><button id="prev-frame" title="前一原生 PTS 的近似 seek">前一影格時間點</button><button id="next-frame">下一影格時間點</button><label>速度 <select id="speed"><option>0.25</option><option>0.5</option><option>0.75</option><option selected>1</option><option>1.5</option><option>2</option></select></label></div>
+<label class="seek-label">來源時間 <input id="seek" type="range" min="0" max="1" step="0.001" value="0"></label><div id="markers" aria-label="標註時間軸"></div>
+<div class="time-row"><output id="clock">0.000 s</output><label>跳到秒數 <input id="jump-time" type="number" min="0" step="0.001" value="0"></label><button id="jump">跳轉並暫停</button></div><p id="frame-info" class="muted"></p>
+<details><summary>時間精度與快捷鍵</summary><p>時間均為原片秒數。按原生 PTS seek 仍受 HTML5 解碼限制，鄰近影格只是候選；匯出不宣稱 frame-accurate，source_frame_index 保留 null。</p><p>空白鍵：播放／暫停；←／→：前後 0.2 秒；,／.：前後一原生影格時間點；[／]：事件開始／結束；E：新事件；S：新 state；Ctrl+S：下載備份。輸入欄位內不攔截字鍵。</p></details>
+<button id="choose-media">選取本機 MP4 並驗證 SHA-256（選用）</button>
+<section class="records"><h3>本片事件／其他觀察</h3><div id="event-list"></div><h3>物件 state</h3><div id="state-list"></div></section></section>
+<section class="annotation"><div class="tabs" role="tablist"><button id="tab-event" role="tab" aria-selected="true">事件／觀察</button><button id="tab-state" role="tab" aria-selected="false">State</button><button id="tab-coverage" role="tab" aria-selected="false">審閱覆蓋</button></div>
+<section id="panel-event"><h2 id="event-heading">新增事件／觀察</h2><form id="event-form">
+<label>類型<select id="event-type"><option value="PICKUP">PICKUP 拿起</option><option value="PLACEMENT">PLACEMENT 放下</option><option value="CONTACT_ONLY">CONTACT_ONLY 只有接觸</option><option value="CAMERA_MOTION_ONLY">CAMERA_MOTION_ONLY 只有鏡頭移動</option><option value="OCCLUSION_INSUFFICIENT_EVIDENCE">遮擋／證據不足（非確定事件）</option><option value="OTHER">OTHER 其他觀察</option></select></label>
+<div class="two"><label>物件類別<input id="event-category" list="categories" required maxlength="160" placeholder="Phone / 自訂類別"></label><label>片內實體 ID<input id="event-instance" value="UNKNOWN" required maxlength="160" placeholder="phone_01 / UNKNOWN"></label></div>
+<p class="muted">同類可有 phone_01、phone_02。ID 僅代表你在本片的判斷，不是跨片 PersistentEntity。</p>
+<div class="two"><label>開始秒數<input id="event-start" type="number" min="0" step="0.001" required value="0"></label><label>結束秒數<input id="event-end" type="number" min="0" step="0.001" required value="0"></label></div>
+<div class="two"><button type="button" id="set-start">設定開始時間 [</button><button type="button" id="set-end">設定結束時間 ]</button></div>
+<div class="two"><label>Before state<select id="before-state" class="state-options"></select></label><label>After state<select id="after-state" class="state-options"></select></label></div>
+<div class="two"><label>Before 可見度<select id="before-visibility" class="visibility-options"></select></label><label>After 可見度<select id="after-visibility" class="visibility-options"></select></label></div>
+<label>Before 證據秒數（逗號分隔）<input id="before-evidence" placeholder="例如 4.100, 4.300"></label><button type="button" id="add-before">加入目前時間至 Before</button>
+<label>After 證據秒數（逗號分隔）<input id="after-evidence" placeholder="例如 4.800"></label><button type="button" id="add-after">加入目前時間至 After</button>
+<div class="two"><label>目標身分把握<select id="event-identity" class="identity-options"></select></label><label>物理證據<select id="event-certainty" class="certainty-options"></select></label></div>
+<label>可見度／遮擋限制<textarea id="event-limitations" maxlength="6000" rows="2"></textarea></label><label>判斷依據與備註<textarea id="event-notes" maxlength="6000" rows="3"></textarea></label>
+<div class="two"><button class="primary" id="save-event">儲存事件／觀察</button><button id="reset-event" type="button">取消編輯／新增</button></div></form></section>
+<section id="panel-state" hidden><h2 id="state-heading">新增物件 State</h2><p>只標重要時間點，不需逐格填滿。沒有標註的物件不會自動變成 UNKNOWN。</p><form id="state-form">
+<div class="two"><label>物件類別<input id="state-category" list="categories" required maxlength="160"></label><label>片內實體 ID<input id="state-instance" value="UNKNOWN" required maxlength="160"></label></div>
+<label>來源秒數<input id="state-time" type="number" min="0" step="0.001" required value="0"></label><button type="button" id="set-state-time">使用目前時間</button>
+<label>物理狀態<select id="physical-state" class="state-options"></select></label><label>可見度<select id="state-visibility" class="visibility-options"></select></label>
+<label>證據把握<select id="state-certainty" class="certainty-options"></select></label><label>物件身分把握<select id="state-identity" class="identity-options"></select></label><label>備註<textarea id="state-notes" rows="3" maxlength="6000"></textarea></label><div class="two"><button class="primary">儲存 State</button><button id="reset-state" type="button">取消編輯／新增</button></div></form></section>
+<section id="panel-coverage" hidden><h2>人工審閱覆蓋</h2><p>「看完」與「能排除其他事件」不同。全片審閱仍可有無法判斷的缺口。</p><form id="coverage-form"><label>進度<select id="review-status"><option value="NOT_STARTED">尚未開始</option><option value="IN_PROGRESS">進行中</option><option value="PARTIALLY_REVIEWED">已審閱部分</option><option value="COMPLETE_WITH_LIMITATIONS">審閱完成，但有侷限</option><option value="EXHAUSTIVELY_REVIEWED">已刻意審閱全片（須確認下列事項）</option></select></label><div id="attestations" class="checks"></div><label>本片備註<textarea id="video-notes" rows="3" maxlength="10000"></textarea></label><button class="primary">儲存覆蓋狀態與確認</button></form>
+<output id="exhaustiveness"></output><hr><h3>新增／編輯已審閱區間</h3><form id="interval-form"><div class="two"><label>開始秒<input id="interval-start" type="number" step="0.001" min="0" value="0" required></label><label>結束秒<input id="interval-end" type="number" step="0.001" min="0" value="0" required></label></div><div class="two"><button type="button" id="interval-from">設為目前時間</button><button type="button" id="interval-to">設為目前時間</button></div><label>備註<input id="interval-notes" maxlength="6000"></label><button>儲存區間</button><button type="button" id="reset-interval">取消編輯</button><button type="button" id="full-interval">我已刻意審閱全片，加入全長區間</button></form><div id="interval-list"></div>
+<hr><h3>遮擋／不確定區間</h3><form id="uncertainty-form"><div class="two"><label>開始秒<input id="uncertainty-start" type="number" step="0.001" min="0" value="0" required></label><label>結束秒<input id="uncertainty-end" type="number" step="0.001" min="0" value="0" required></label></div><div class="two"><button type="button" id="uncertainty-from">設為目前時間</button><button type="button" id="uncertainty-to">設為目前時間</button></div><label>限制原因<input id="uncertainty-reason" required maxlength="6000"></label><label class="check"><input id="conceal-event" type="checkbox" checked>缺口可能藏有額外事件</label><label class="check"><input id="uncertain-identity" type="checkbox" checked>物件身分／關聯仍不確定</label><button>儲存不確定區間</button><button type="button" id="reset-uncertainty">取消編輯</button></form><div id="uncertainty-list"></div>
+</section></section></main>
+<datalist id="categories"><option value="Phone"><option value="Keys"><option value="Wallet"><option value="Ball"><option value="Bottle"><option value="Box"><option value="Remote"><option value="Other"></datalist>
+<noscript>此工具需要瀏覽器允許本機 JavaScript。請將 ZIP 完整解壓後以 Chrome 或 Edge 開啟 index.html。</noscript>
+<script src="manifest.js"></script><script src="schema.js"></script><script src="contract.js"></script><script src="app.js"></script></body></html>
