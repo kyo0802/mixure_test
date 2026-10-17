@@ -1,0 +1,532 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "\\S"
+    },
+    "dataset_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "\\S"
+    },
+    "dataset_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "\\S"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "\\S"
+    },
+    "assignment": {
+      "type": "string",
+      "maxLength": 2048
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 40,
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d+)?(?:Z|\\+00:00)$"
+    },
+    "updated_at": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 40,
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d+)?(?:Z|\\+00:00)$"
+    },
+    "exported_at": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 40,
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d+)?(?:Z|\\+00:00)$"
+    },
+    "export_kind": {
+      "type": "string",
+      "enum": [
+        "BACKUP",
+        "FINAL"
+      ]
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/video"
+      },
+      "minItems": 9,
+      "maxItems": 9
+    }
+  },
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "dataset_version",
+    "dataset_manifest_sha256",
+    "reviewer_id",
+    "session_id",
+    "assignment",
+    "created_at",
+    "updated_at",
+    "exported_at",
+    "export_kind",
+    "videos"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FindMind offline human annotation v1.0",
+  "definitions": {
+    "interval": {
+      "type": "object",
+      "properties": {
+        "interval_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "start_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 6000
+        }
+      },
+      "required": [
+        "interval_id",
+        "start_s",
+        "end_s",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "uncertainty": {
+      "type": "object",
+      "properties": {
+        "uncertainty_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "start_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000,
+          "pattern": "\\S"
+        },
+        "could_conceal_event": {
+          "type": "boolean"
+        },
+        "identity_uncertain": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "uncertainty_id",
+        "start_s",
+        "end_s",
+        "reason",
+        "could_conceal_event",
+        "identity_uncertain"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "PICKUP",
+            "PLACEMENT",
+            "CONTACT_ONLY",
+            "CAMERA_MOTION_ONLY",
+            "OCCLUSION_INSUFFICIENT_EVIDENCE",
+            "OTHER"
+          ]
+        },
+        "object_category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "local_instance_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "start_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "end_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "before_state": {
+          "type": "string",
+          "enum": [
+            "ON_SURFACE",
+            "HELD_BY_PERSON",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "after_state": {
+          "type": "string",
+          "enum": [
+            "ON_SURFACE",
+            "HELD_BY_PERSON",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "before_visibility": {
+          "type": "string",
+          "enum": [
+            "VISIBLE",
+            "PARTIALLY_OCCLUDED",
+            "NOT_VISIBLE",
+            "UNCERTAIN"
+          ]
+        },
+        "after_visibility": {
+          "type": "string",
+          "enum": [
+            "VISIBLE",
+            "PARTIALLY_OCCLUDED",
+            "NOT_VISIBLE",
+            "UNCERTAIN"
+          ]
+        },
+        "before_evidence_times_s": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "maxItems": 100
+        },
+        "after_evidence_times_s": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "maxItems": 100
+        },
+        "target_identity_certainty": {
+          "type": "string",
+          "enum": [
+            "CERTAIN",
+            "UNCERTAIN",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_certainty": {
+          "type": "string",
+          "enum": [
+            "CONFIRMED",
+            "UNCERTAIN",
+            "INSUFFICIENT"
+          ]
+        },
+        "visibility_limitations": {
+          "type": "string",
+          "maxLength": 6000
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 6000
+        },
+        "updated_at": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 40,
+          "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d+)?(?:Z|\\+00:00)$"
+        }
+      },
+      "required": [
+        "event_id",
+        "type",
+        "object_category",
+        "local_instance_id",
+        "start_s",
+        "end_s",
+        "before_state",
+        "after_state",
+        "before_visibility",
+        "after_visibility",
+        "before_evidence_times_s",
+        "after_evidence_times_s",
+        "target_identity_certainty",
+        "evidence_certainty",
+        "visibility_limitations",
+        "notes",
+        "updated_at"
+      ],
+      "additionalProperties": false
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "state_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "object_category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "local_instance_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "source_time_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "source_frame_index": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "nearest_source_frame_index": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "timing_precision": {
+          "const": "HTML5_TIMESTAMP_APPROXIMATE"
+        },
+        "physical_state": {
+          "type": "string",
+          "enum": [
+            "ON_SURFACE",
+            "HELD_BY_PERSON",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "VISIBLE",
+            "PARTIALLY_OCCLUDED",
+            "NOT_VISIBLE",
+            "UNCERTAIN"
+          ]
+        },
+        "evidence_certainty": {
+          "type": "string",
+          "enum": [
+            "CONFIRMED",
+            "UNCERTAIN",
+            "INSUFFICIENT"
+          ]
+        },
+        "target_identity_certainty": {
+          "type": "string",
+          "enum": [
+            "CERTAIN",
+            "UNCERTAIN",
+            "UNKNOWN"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 6000
+        },
+        "updated_at": {
+          "type": "string",
+          "minLength": 20,
+          "maxLength": 40,
+          "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\d(?:\\.\\d+)?(?:Z|\\+00:00)$"
+        }
+      },
+      "required": [
+        "state_id",
+        "object_category",
+        "local_instance_id",
+        "source_time_s",
+        "source_frame_index",
+        "nearest_source_frame_index",
+        "timing_precision",
+        "physical_state",
+        "visibility",
+        "evidence_certainty",
+        "target_identity_certainty",
+        "notes",
+        "updated_at"
+      ],
+      "additionalProperties": false
+    },
+    "attestations": {
+      "type": "object",
+      "properties": {
+        "entire_timeline_reviewed": {
+          "type": "boolean"
+        },
+        "all_pickup_placement_annotated": {
+          "type": "boolean"
+        },
+        "all_uncertainty_recorded": {
+          "type": "boolean"
+        },
+        "identity_not_guessed": {
+          "type": "boolean"
+        },
+        "no_unobservable_gap": {
+          "type": "boolean"
+        },
+        "target_association_resolved": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "entire_timeline_reviewed",
+        "all_pickup_placement_annotated",
+        "all_uncertainty_recorded",
+        "identity_not_guessed",
+        "no_unobservable_gap",
+        "target_association_resolved"
+      ],
+      "additionalProperties": false
+    },
+    "video": {
+      "type": "object",
+      "properties": {
+        "video_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "pattern": "\\S"
+        },
+        "source_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_duration_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "assigned": {
+          "type": "boolean"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "NOT_STARTED",
+            "IN_PROGRESS",
+            "PARTIALLY_REVIEWED",
+            "COMPLETE_WITH_LIMITATIONS",
+            "EXHAUSTIVELY_REVIEWED"
+          ]
+        },
+        "reviewed_intervals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/interval"
+          },
+          "maxItems": 5000
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/event"
+          },
+          "maxItems": 5000
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/state"
+          },
+          "maxItems": 20000
+        },
+        "uncertain_intervals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/uncertainty"
+          },
+          "maxItems": 5000
+        },
+        "coverage_attestations": {
+          "$ref": "#/definitions/attestations"
+        },
+        "event_list_exhaustiveness": {
+          "type": "string",
+          "enum": [
+            "EXHAUSTIVE_ATTESTED",
+            "NOT_ATTESTED",
+            "UNKNOWN"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 10000
+        }
+      },
+      "required": [
+        "video_id",
+        "source_sha256",
+        "source_duration_s",
+        "assigned",
+        "review_status",
+        "reviewed_intervals",
+        "events",
+        "states",
+        "uncertain_intervals",
+        "coverage_attestations",
+        "event_list_exhaustiveness",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

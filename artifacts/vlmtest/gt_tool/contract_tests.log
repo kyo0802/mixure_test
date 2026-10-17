@@ -1,0 +1,14 @@
+PASS independent sessions
+PASS JSON export/import round trip preserves annotations
+PASS wrong dataset/source/ranges reject without mutating original
+PASS duplicate annotation IDs are rejected
+PASS no inferred source frame index
+PASS visible state support is independent of visibility
+PASS confirmed pickup requires before/after support
+PASS full review is not automatically exhaustive event GT
+PASS all explicit attestations permit eligible negative only without uncertainty
+PASS incomplete reviewed union cannot attest full review
+PASS strict JSON rejects duplicate keys, nonfinite, trailing payload and broken syntax
+PASS unknown fields never enter portable submission
+PASS preview paths and native timing match package
+RESULT 13 contract checks passed; synthetic labels remained in memory only.

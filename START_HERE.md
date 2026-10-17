@@ -7,7 +7,8 @@
 | 要做什麼 | 入口 |
 |---|---|
 | 看身分標註結果、QC、六案複核 | [Pass I](WORKSPACE/Pass_I/README.md) |
-| 看事件標註、Qwen 合成測試、下一步待決策 | [Pass T](WORKSPACE/Pass_T/README.md) |
+| 看事件標註、GT 政策、契約與相關實作 | [Pass T](WORKSPACE/Pass_T/README.md) |
+| 看 VLM 測試報告、開啟九影片離線 GT 標註工具 | [VLMtest](WORKSPACE/VLMtest/README.md) |
 | 找影片、資料、外部標註包、V297 基線 | [資料](WORKSPACE/Data/README.md) |
 | 看這次搬移、驗證與完整資料夾說明 | [整理報告](docs/project_organization/REPORT.md) |
 
