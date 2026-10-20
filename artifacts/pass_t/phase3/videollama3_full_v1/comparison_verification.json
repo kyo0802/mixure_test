@@ -1,0 +1,294 @@
+{
+  "input_comparability": [
+    {
+      "condition": "A",
+      "window": "test5__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "1f3df1ec0aad1ef35715e02c3c792b4d1071dcc8f43be418d5e855c5c7c2d18a",
+      "same_task_schema": false,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    },
+    {
+      "condition": "A",
+      "window": "test7__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "5d208f81b7d385e84ca7c6068be2d4a1aedfb09d1280c3535ccaae768107a573",
+      "same_task_schema": false,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    },
+    {
+      "condition": "B",
+      "window": "test5__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "763ef2c6c9abc1cad2b5e109acc65f141d372058cce0a20039cec830214f8daa",
+      "same_task_schema": false,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    },
+    {
+      "condition": "B",
+      "window": "test7__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "811ba483dff60aaf97380ac4746b4d36448ef9a70ff0dc7c95884066453be994",
+      "same_task_schema": false,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    },
+    {
+      "condition": "C",
+      "window": "test5__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "2b6baa3ea04e5a0ebb5b1f0a5c9cdd04178fcac8090dfde661fdc4efa4fc936b",
+      "same_task_schema": true,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    },
+    {
+      "condition": "C",
+      "window": "test7__W05",
+      "same_ordered_alias_index_native_pts_png_hashes": true,
+      "source_input_receipt_sha256": "e1396ed7c0984936548a4caba359547799736584a87e726f712153f3c19caae0",
+      "same_task_schema": true,
+      "same_model_specific_transport_text": false,
+      "same_preprocessing": false
+    }
+  ],
+  "common_parsing_diagnostics": [
+    {
+      "condition": "A",
+      "window": "test5__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": false,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "SCHEMA",
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "stage": "SCHEMA",
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    },
+    {
+      "condition": "A",
+      "window": "test7__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": false,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "SCHEMA",
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    },
+    {
+      "condition": "B",
+      "window": "test5__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": false,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "SCHEMA",
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "stage": "SCHEMA",
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    },
+    {
+      "condition": "B",
+      "window": "test7__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": false,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "SCHEMA",
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    },
+    {
+      "condition": "C",
+      "window": "test5__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": true,
+        "citation_valid": true,
+        "semantic_valid": true,
+        "full_valid": true,
+        "classification": "VLM_NO_CONFIRMED_EVENT",
+        "errors": []
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    },
+    {
+      "condition": "C",
+      "window": "test7__W05",
+      "raw_strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "exact_single_outer_fence_body_check": {
+        "json_valid": true,
+        "schema_valid": true,
+        "citation_valid": true,
+        "semantic_valid": true,
+        "full_valid": true,
+        "classification": "VLM_NO_CONFIRMED_EVENT",
+        "errors": []
+      },
+      "descriptive_only": true,
+      "original_raw_changed": false,
+      "invalid_promoted_to_authoritative": false
+    }
+  ],
+  "prior_563_file_preservation_baseline_checked": 563,
+  "changed_prior_protected_files": []
+}

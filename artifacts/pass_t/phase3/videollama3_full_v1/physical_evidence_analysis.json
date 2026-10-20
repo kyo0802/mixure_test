@@ -1,0 +1,375 @@
+{
+  "analysis_type": "ASSISTANT_VISUAL_AND_EXISTING_REFERENCE_ANALYSIS_NOT_NEW_HUMAN_GT",
+  "analysis_was_not_model_visible": true,
+  "gt_sources": {
+    "artifacts\\pass_t\\phase2a\\v2\\external_returns\\datasets\\ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c\\external_dev_gt.json": "ad1af02ab2d086b5070e8611cc4f7053abc030f83680fa27f50c5ab5da6b3a6c",
+    "artifacts\\pass_t\\phase2a\\v2\\exhaustive_reviews\\adjudicated_7e28b9edf80a8e4da88caa66\\adjudicated_dev_view.json": "fa0133e4e49e54bdbac2ba59420d29b504e8bf219fa8179b57cd1b35261a005c"
+  },
+  "sidecar_status": "PASS_T_PHASE2A_EXHAUSTIVENESS_REVIEW_COMPLETE_NON_EXHAUSTIVE",
+  "all_notes_are_retrospective_and_not_input_features": true,
+  "records": [
+    {
+      "window": "test1__W01",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test1__W03",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "PHONE_OMITTED; BASKETBALL_ONLY",
+        "before_after_state": "Selected phone frames compatible with surface support; model provides no phone states.",
+        "physical_event": "Human strict-negative reference; model strict-invalid, not an authoritative negative.",
+        "wrong_target_event_attribution": "NO_VALID_EVENT_CANDIDATE; distractor-focused observations.",
+        "unsupported_state_claims": "OTHER is unexplained alongside ON_SURFACE.",
+        "citation_quality": "All parsed aliases supplied; physical meaning of OTHER not established.",
+        "uncertainty": "Missing required uncertainty; no global identity established.",
+        "structured_output": "INVALID_SCHEMA"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_9d15d2a6b56b56d0",
+        "response_sha256": "4db7400f398e57b832ce86e70aac4971ead33867125bdb37df099888aff1a77b",
+        "window_outcome": "NO_CONFIRMED_EVENT",
+        "event_list_exhaustiveness": null,
+        "event_types": [],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "STRICT_NO_CONFIRMED_EVENT",
+          "event_evaluation_exclusion_reasons": [],
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": true,
+          "primary_full_window_metrics_eligible": true,
+          "supported_event_exploratory_use_allowed": false,
+          "unlisted_events_status": "FUTURE_SCORING_TBD"
+        },
+        "sidecar_must_be_applied": false
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test2__W01",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "PHONE_CATEGORY_PRESENT; INSTANCE_IDENTITY_UNAUTHORIZED",
+        "before_after_state": "Phone ON_SURFACE is compatible with all eight selected frames.",
+        "physical_event": "NO_CONFIRMED_EVENT; compatible with existing target-specific strict-negative reference.",
+        "wrong_target_event_attribution": "NO_EVENT_CANDIDATE",
+        "unsupported_state_claims": "No definite unsupported phone state identified in these selected frames; no full-window verification claim.",
+        "citation_quality": "All eight supplied aliases; selected imagery supports phone surface observation.",
+        "uncertainty": "Per-object UNCERTAIN strings preserved; not a calibrated certainty measure.",
+        "structured_output": "FULL_STRICT_VALID"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_b35d807b28b92101",
+        "response_sha256": "b03ce2095bf23e251324c2832e38ae7d3d350838251e2ad267f20690c6317c80",
+        "window_outcome": "NO_CONFIRMED_EVENT",
+        "event_list_exhaustiveness": null,
+        "event_types": [],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "STRICT_NO_CONFIRMED_EVENT",
+          "event_evaluation_exclusion_reasons": [],
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": true,
+          "primary_full_window_metrics_eligible": true,
+          "supported_event_exploratory_use_allowed": false,
+          "unlisted_events_status": "FUTURE_SCORING_TBD"
+        },
+        "sidecar_must_be_applied": false
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test2__W08",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": null,
+      "assistant_extra_note": "Assistant contact-sheet inspection: visible held phone called brush. Later phone visibility is obscured; all-frame HELD assertion not fully supported. No new event GT assigned.",
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test3__W02",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test3__W03",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test3__W07",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_0bfb99c324769681",
+        "response_sha256": "1f641ab7f432820375f54fb41a3c6b17da8f492fc966fe52bd0fb2fa4f7546ec",
+        "window_outcome": "CONFIRMED_EVENTS",
+        "event_list_exhaustiveness": "NOT_ATTESTED",
+        "event_types": [
+          "PICKUP"
+        ],
+        "formal_eligible": 0,
+        "quarantine_excluded": true,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "NON_EXHAUSTIVE",
+          "event_evaluation_exclusion_reasons": [
+            "unauthorized_future_material_viewed",
+            "unapproved_source_video_scrubbing",
+            "experimental_answer_keys_viewed",
+            "model_predictions_viewed",
+            "previous_event_answers_viewed",
+            "claims_global_identity",
+            "claims_unsupported_track_extension",
+            "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+          ],
+          "event_list_exhaustiveness": "NOT_ATTESTED",
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": false,
+          "primary_full_window_metrics_eligible": false,
+          "supported_event_exploratory_use_allowed": false,
+          "unlisted_events_status": "UNEVALUATED"
+        },
+        "sidecar_must_be_applied": false
+      },
+      "evaluation_scope": "EXCLUDED_GT_QUARANTINE"
+    },
+    {
+      "window": "test4__W06",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test4__W08",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test5__W01",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "PHONE_OMITTED; BASKETBALL_ONLY",
+        "before_after_state": "Phone remains on surface in the eight selected images; model omits phone.",
+        "physical_event": "Human strict-negative reference; invalid output cannot support structured negative scoring.",
+        "wrong_target_event_attribution": "NO_VALID_EVENT_CANDIDATE",
+        "unsupported_state_claims": "OTHER at invented F0008 cannot be grounded.",
+        "citation_quality": "Seven unsupplied aliases in parsed content.",
+        "uncertainty": "Missing required uncertainty.",
+        "structured_output": "INVALID_SCHEMA_AND_UNSUPPLIED_ALIASES"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_fe0910d66f4c5614",
+        "response_sha256": "4f23f2442d20b97c97e9af06ed614337d81590ce8719b7c9b55c9c35e3bfd913",
+        "window_outcome": "NO_CONFIRMED_EVENT",
+        "event_list_exhaustiveness": null,
+        "event_types": [],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "STRICT_NO_CONFIRMED_EVENT",
+          "event_evaluation_exclusion_reasons": [],
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": true,
+          "primary_full_window_metrics_eligible": true,
+          "supported_event_exploratory_use_allowed": false,
+          "unlisted_events_status": "FUTURE_SCORING_TBD"
+        },
+        "sidecar_must_be_applied": false
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test5__W05",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "NO_USABLE_PHONE_OBSERVATION",
+        "before_after_state": "Selected F0001/F0016/F0032 show phone at table; F0062/F0077 show phone held. Later occluded frames do not establish continued holding.",
+        "physical_event": "Existing human non-exhaustive PICKUP retained; model provides no usable hypothesis. Invalid is not NO_EVENT.",
+        "wrong_target_event_attribution": "NO_VALID_EVENT_CANDIDATE; raw prefix focuses on basketball.",
+        "unsupported_state_claims": "Malformed raw enumeration cannot support physical states.",
+        "citation_quality": "Raw lists aliases beyond the supplied eight; not parsed into authoritative citations.",
+        "uncertainty": "Output truncation is a generation failure of the contract, not deliberate abstention.",
+        "structured_output": "TOKEN_CAP_1024_INVALID_JSON"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_eb60192e6986cb4f",
+        "response_sha256": "0c6d8f2ed0797fb303c12cf554bde95ccf660d7d250031b1f287f74c6cc4134f",
+        "window_outcome": "CONFIRMED_EVENTS",
+        "event_list_exhaustiveness": "NOT_ATTESTED",
+        "event_types": [
+          "PICKUP"
+        ],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "NON_EXHAUSTIVE",
+          "event_evaluation_exclusion_reasons": [
+            "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+          ],
+          "event_list_exhaustiveness": "NOT_ATTESTED",
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": false,
+          "primary_full_window_metrics_eligible": false,
+          "supported_event_exploratory_use_allowed": true,
+          "unlisted_events_status": "UNEVALUATED"
+        },
+        "sidecar_must_be_applied": true
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test7__W05",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "PHONE_OMITTED; BASKETBALL_ONLY",
+        "before_after_state": "F0001/F0016 phone at table; F0031/F0046 phone visibly held. Model omits this state change.",
+        "physical_event": "Existing human non-exhaustive PICKUP retained; no usable phone event hypothesis.",
+        "wrong_target_event_attribution": "NO_VALID_EVENT_CANDIDATE; no claim that wrong-target problem is solved.",
+        "unsupported_state_claims": "Later basketball OTHER lacks explanatory grounding.",
+        "citation_quality": "Aliases exist, but citations concern basketball rather than known phone transition.",
+        "uncertainty": "Missing uncertainty; does not explain later phone unobservability.",
+        "structured_output": "INVALID_SCHEMA"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_c58b4df88a2f6801",
+        "response_sha256": "7a05e2b899027010382f614f7732d4644a7aa7e5b38736372bac025f9174cc1c",
+        "window_outcome": "CONFIRMED_EVENTS",
+        "event_list_exhaustiveness": "NOT_ATTESTED",
+        "event_types": [
+          "PICKUP"
+        ],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "NON_EXHAUSTIVE",
+          "event_evaluation_exclusion_reasons": [
+            "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+          ],
+          "event_list_exhaustiveness": "NOT_ATTESTED",
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": false,
+          "primary_full_window_metrics_eligible": false,
+          "supported_event_exploratory_use_allowed": true,
+          "unlisted_events_status": "UNEVALUATED"
+        },
+        "sidecar_must_be_applied": true
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test8__W04",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": false,
+      "assistant_dimensions": null,
+      "assistant_extra_note": null,
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test8__W06",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": null,
+      "assistant_extra_note": "Assistant contact-sheet inspection only; raw output is truncated and cannot be converted into a scored state/event. No new event GT assigned.",
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    },
+    {
+      "window": "test8__W07",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": {
+        "target_identification": "NO_OBJECT_OBSERVATIONS; NO_INSTANCE_BINDING",
+        "before_after_state": "No model states to assess.",
+        "physical_event": "Existing INSUFFICIENT_EVIDENCE must not be converted into exhaustive negative by the valid empty model output.",
+        "wrong_target_event_attribution": "NO_EVENT_CANDIDATE",
+        "unsupported_state_claims": "No states claimed; this is not evidence of successful physical reasoning.",
+        "citation_quality": "No citations; membership validation passes vacuously.",
+        "uncertainty": "NO_CONFIRMED_EVENT without visibility explanation does not establish appropriate abstention.",
+        "structured_output": "FULL_STRICT_VALID_EMPTY_OBSERVATIONS"
+      },
+      "assistant_extra_note": null,
+      "existing_human_reference": {
+        "annotation_item_id": "PT2A_5dbb180e8ff88762",
+        "response_sha256": "5ef75bc44261884f7f83c9a691e1c628a948d0505ef8ccbd1f5219e52cff58b6",
+        "window_outcome": "INSUFFICIENT_EVIDENCE",
+        "event_list_exhaustiveness": null,
+        "event_types": [],
+        "formal_eligible": 0,
+        "quarantine_excluded": false,
+        "original_evaluation": {
+          "binding_causality_status": "CAUSALITY_UNVERIFIED",
+          "completeness_basis": "NOT_APPLICABLE",
+          "event_evaluation_exclusion_reasons": [
+            "FULL_WINDOW_COMPLETENESS_UNSUPPORTED"
+          ],
+          "formal_eligible": false,
+          "full_window_event_evaluation_supported": false,
+          "primary_full_window_metrics_eligible": false,
+          "supported_event_exploratory_use_allowed": false,
+          "unlisted_events_status": "UNEVALUATED"
+        },
+        "sidecar_must_be_applied": false
+      },
+      "evaluation_scope": "DESCRIPTIVE_REFERENCE_COMPARISON_ONLY"
+    },
+    {
+      "window": "test9__W03",
+      "new_human_adjudication": false,
+      "graph_write_authorized": false,
+      "assistant_visual_review": true,
+      "assistant_dimensions": null,
+      "assistant_extra_note": "Assistant contact-sheet inspection only: raw calls hand HELD_BY_PERSON, malformed brackets and invented sequential aliases. No event GT assigned.",
+      "evaluation_scope": "NO_CONFIRMED_USABLE_EVENT_GT_UNREVIEWED_FOR_SCORING"
+    }
+  ],
+  "formal_scores": null
+}

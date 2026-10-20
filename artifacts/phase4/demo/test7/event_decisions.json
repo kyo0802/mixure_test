@@ -1,0 +1,1036 @@
+[
+  {
+    "hypothesis_id": "event:480fdecce53c611d19e201c5",
+    "run_id": "d643add22df87dce16aa0c86",
+    "window_id": "test7__W05",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:96fc49de14abbbe910d1fbc8",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 372,
+        "native_pts_s": 12.401666666666667,
+        "native_pts": 7441,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000372.png",
+        "sha256": "2d2ee61edca4009de66e534a4999030b1717863fd144581deb413c45dd8aabb5"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 387,
+        "native_pts_s": 12.901666666666667,
+        "native_pts": 7741,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000387.png",
+        "sha256": "591c7b8235afcde3086046703e6f75e7c86b164cd1c3696d1d36cd45c4d51607"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      12.401666666666667,
+      12.901666666666667
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__W05\\raw.txt",
+    "raw_strict_valid": true,
+    "validation_errors": [],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:d561b6a416b0ab942a7266d9",
+    "run_id": "48d484994f8a859288d7b04c",
+    "window_id": "test7__C0000",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "basketball",
+    "object_description": "basketball",
+    "object_instance_candidate": "vlm:188e921d5d0638d6909fe801",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 0,
+        "native_pts_s": 0.0,
+        "native_pts": 0,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000000.png",
+        "sha256": "35fe860f31e833ec930c1f841d4eb8d90609e9f57739e89c349eb5e0d5ac1fc8"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 119,
+        "native_pts_s": 3.9716666666666667,
+        "native_pts": 2383,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000119.png",
+        "sha256": "e70df3b160f0b66f41fe76acf9d207ecf39ae734e7d0bc3e4aef0bfd71f9fea8"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": [
+      0.0,
+      3.9716666666666667
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0000\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_TEMPORAL_ORDER",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:156fb14c802ca7f611eb875b",
+    "run_id": "48d484994f8a859288d7b04c",
+    "window_id": "test7__C0000",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "basketball",
+    "object_description": "basketball",
+    "object_instance_candidate": "vlm:188e921d5d0638d6909fe801",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 119,
+        "native_pts_s": 3.9716666666666667,
+        "native_pts": 2383,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000119.png",
+        "sha256": "e70df3b160f0b66f41fe76acf9d207ecf39ae734e7d0bc3e4aef0bfd71f9fea8"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 0,
+        "native_pts_s": 0.0,
+        "native_pts": 0,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000000.png",
+        "sha256": "35fe860f31e833ec930c1f841d4eb8d90609e9f57739e89c349eb5e0d5ac1fc8"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": null,
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0000\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_TEMPORAL_ORDER",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": false,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INVALID_SOURCE_TEMPORAL_CITATIONS"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:f2de5c5433e0fced66d7fbc8",
+    "run_id": "db992f14319c846f70e5a3db",
+    "window_id": "test7__C0001",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:78a8f12d804764149658f2e3",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 77,
+        "native_pts_s": 2.57,
+        "native_pts": 1542,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000077.png",
+        "sha256": "229553baf1e999f793ddf52b29c0c4a4aa97ac80d1b14b417da1c64d24b94f2d"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 162,
+        "native_pts_s": 5.408333333333333,
+        "native_pts": 3245,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000162.png",
+        "sha256": "dc8934e135284aec57bb1bb2c48cd5660be0134d4ec8f45c108dcb4025c2b0b3"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      2.57,
+      5.408333333333333
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0001\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:3c04b6b9b5cba44c43d72aaf",
+    "run_id": "db992f14319c846f70e5a3db",
+    "window_id": "test7__C0001",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:78a8f12d804764149658f2e3",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 162,
+        "native_pts_s": 5.408333333333333,
+        "native_pts": 3245,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000162.png",
+        "sha256": "dc8934e135284aec57bb1bb2c48cd5660be0134d4ec8f45c108dcb4025c2b0b3"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 179,
+        "native_pts_s": 5.975,
+        "native_pts": 3585,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000179.png",
+        "sha256": "ea46f247484e048bb6aa6dbfdc0b223ca5830bc4534db0d2632d565bf90a6741"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "UNKNOWN"
+    ],
+    "native_interval_s": [
+      5.408333333333333,
+      5.975
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0001\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "STRICT_INVALID_NOT_AUTHORITATIVE",
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:0f050fc1ee369df96294d786",
+    "run_id": "b5779902851f4477387ac0ac",
+    "window_id": "test7__C0002",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "cell phone",
+    "object_instance_candidate": "vlm:3101655e4f872838c4b77f39",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 137,
+        "native_pts_s": 4.573333333333333,
+        "native_pts": 2744,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000137.png",
+        "sha256": "c34e71ee93f0e8337e46bfaf2d97822cfa6069690ad48b817da7dbcfff874075"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0006",
+        "source_frame_index": 205,
+        "native_pts_s": 6.843333333333334,
+        "native_pts": 4106,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000205.png",
+        "sha256": "536e275334f7f7c03baccb64a319e72199486cf511fdd20ea1d3c6267738b7b1"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": [
+      4.573333333333333,
+      6.843333333333334
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0002\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:f15ab39b0db534d9e8a0d618",
+    "run_id": "1e440e1166e447897774a3b8",
+    "window_id": "test7__C0005",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:bea73e35ee5873346ab75093",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 300,
+        "native_pts_s": 10.015,
+        "native_pts": 6009,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000300.png",
+        "sha256": "d6d19895a2891a140d078237ab676bb33ff33619c47444435c80a09b04c5bc4b"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 419,
+        "native_pts_s": 13.97,
+        "native_pts": 8382,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000419.png",
+        "sha256": "ed56be82189f601165607e2e3d15065271d2a80ca2ede8967f24c45383f8823b"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      10.015,
+      13.97
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0005\\raw.txt",
+    "raw_strict_valid": true,
+    "validation_errors": [],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:81aee3f969a3ca3257486ff7",
+    "run_id": "e2609615d1b04f2dace9c637",
+    "window_id": "test7__C0009",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "person",
+    "object_description": "person",
+    "object_instance_candidate": "vlm:e6b0a38589bcf48a5fafa47c",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0006",
+        "source_frame_index": 625,
+        "native_pts_s": 20.846666666666668,
+        "native_pts": 12508,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000625.png",
+        "sha256": "0e96c218a78352e8fc1cdb766301c1679246795efbbb3404cd8268d1209af9e8"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 642,
+        "native_pts_s": 21.415,
+        "native_pts": 12849,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000642.png",
+        "sha256": "8bcc5ccdfee228a638ded38f17f200c0bb872eb49a4fdea514bcc9365bf77ba9"
+      }
+    ],
+    "before_claims": [
+      "UNKNOWN"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      20.846666666666668,
+      21.415
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0009\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "STRICT_INVALID_NOT_AUTHORITATIVE",
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:fe9ecf48115d3a355bc0c101",
+    "run_id": "ee4dca9ebd0122a6f55f4df4",
+    "window_id": "test7__C0010",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:84f7804bf17ee7a7af45ec7a",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 702,
+        "native_pts_s": 23.4,
+        "native_pts": 14040,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000702.png",
+        "sha256": "5e9bc8d7ad1ddc4b3a4cf1769e336829b6ad2ea92dd0687a3435d77f70f0a820"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 719,
+        "native_pts_s": 23.968333333333334,
+        "native_pts": 14381,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000719.png",
+        "sha256": "f6fb201afda2d7eaddab1dcaa8506256ada85234d1f7603c2fcb73c0c8777ca6"
+      }
+    ],
+    "before_claims": [
+      "UNKNOWN"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      23.4,
+      23.968333333333334
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0010\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "STRICT_INVALID_NOT_AUTHORITATIVE",
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:25916e580b11cdcf189125e4",
+    "run_id": "1aacf0ea3af0c9aa842d73f2",
+    "window_id": "test7__C0011",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "cell phone",
+    "object_instance_candidate": "vlm:7d3ab3561d7cd18330018eaa",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 677,
+        "native_pts_s": 22.566666666666666,
+        "native_pts": 13540,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000677.png",
+        "sha256": "0ad84047b86a2a3180f8477645b91845e1dc3365d238454a24129d609e24c451"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 762,
+        "native_pts_s": 25.403333333333332,
+        "native_pts": 15242,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000762.png",
+        "sha256": "257af800d8e52f8b9692494d4b770ae644036c3de998cb70d81a5dc8dfb13a37"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      22.566666666666666,
+      25.403333333333332
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0011\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:4a2c582cf2aa8cfd0fe77b0d",
+    "run_id": "cb9019267a12bcedac366fa1",
+    "window_id": "test7__C0012",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:1debd99e5f8ecf9c8a0b0593",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 720,
+        "native_pts_s": 24.001666666666665,
+        "native_pts": 14401,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000720.png",
+        "sha256": "eae2e0eff8fa09657632dfb916c50491ea4fae54269eb76eafc309e150bd5a41"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 839,
+        "native_pts_s": 27.973333333333333,
+        "native_pts": 16784,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000839.png",
+        "sha256": "4e257ef386986977a64a5a39caf832c98f12f62e8aa3dae79aab211079913264"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": [
+      24.001666666666665,
+      27.973333333333333
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0012\\raw.txt",
+    "raw_strict_valid": true,
+    "validation_errors": [],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:e67fa759cedef19ef99a12e1",
+    "run_id": "53b28deadf33a4b89e3a8880",
+    "window_id": "test7__C0014",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:ba9d23745be757c16c497623",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 840,
+        "native_pts_s": 28.006666666666668,
+        "native_pts": 16804,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000840.png",
+        "sha256": "ee9a080eedf44a5582fed0009a11e66f222034e5f9d3c5c223560927f75baf55"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 959,
+        "native_pts_s": 31.98,
+        "native_pts": 19188,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000959.png",
+        "sha256": "85dbacf0724e48b932133548ae536c41bfce434827a2fcfe95560991ec29847d"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": [
+      28.006666666666668,
+      31.98
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0014\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_TEMPORAL_ORDER",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:5fa0ad2dee1542e68fc291d3",
+    "run_id": "53b28deadf33a4b89e3a8880",
+    "window_id": "test7__C0014",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "phone",
+    "object_instance_candidate": "vlm:ba9d23745be757c16c497623",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 959,
+        "native_pts_s": 31.98,
+        "native_pts": 19188,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000959.png",
+        "sha256": "85dbacf0724e48b932133548ae536c41bfce434827a2fcfe95560991ec29847d"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 840,
+        "native_pts_s": 28.006666666666668,
+        "native_pts": 16804,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000840.png",
+        "sha256": "ee9a080eedf44a5582fed0009a11e66f222034e5f9d3c5c223560927f75baf55"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": null,
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0014\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_TEMPORAL_ORDER",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": false,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INVALID_SOURCE_TEMPORAL_CITATIONS"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:733cd4dbc38e7be8c9080547",
+    "run_id": "5b69d5b0ca30cbfacf304284",
+    "window_id": "test7__C0015",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "Phone",
+    "object_instance_candidate": "vlm:8fe320e9d6a450d781630904",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 900,
+        "native_pts_s": 30.01,
+        "native_pts": 18006,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000900.png",
+        "sha256": "7ce6a0423463b1cc622d4a10ef97eff168f2e88377acdb580498c8b304edce01"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 917,
+        "native_pts_s": 30.578333333333333,
+        "native_pts": 18347,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S000917.png",
+        "sha256": "1ab7534b1449a32774946831430e87b6f32d8fb6cbc561c2babdcefc732fb51b"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "UNKNOWN"
+    ],
+    "native_interval_s": [
+      30.01,
+      30.578333333333333
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0015\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:bf428b6cf18ea5ddcbea09a9",
+    "run_id": "5b69d5b0ca30cbfacf304284",
+    "window_id": "test7__C0015",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "phone",
+    "object_description": "Phone",
+    "object_instance_candidate": "vlm:8fe320e9d6a450d781630904",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 1002,
+        "native_pts_s": 33.415,
+        "native_pts": 20049,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001002.png",
+        "sha256": "b12c04b1c4716406578ed71ac79ba31fdd430f73489501f3c7ccd073533251ef"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 1019,
+        "native_pts_s": 33.96666666666667,
+        "native_pts": 20380,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001019.png",
+        "sha256": "bcbf588aa559e90eae879d518cbbb385094e2143d8c655a9fb1191b481e1aa9b"
+      }
+    ],
+    "before_claims": [
+      "UNKNOWN"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      33.415,
+      33.96666666666667
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0015\\raw.txt",
+    "raw_strict_valid": false,
+    "validation_errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT",
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ],
+    "temporal_valid": true,
+    "decision": "REJECTED",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "MODEL_STATE_TRANSITION_CONTRADICTION"
+    ],
+    "unresolved_assumptions": [],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:278b3f88ff0e3e21fa026ab5",
+    "run_id": "a6a937a2969970fd9f5d8318",
+    "window_id": "test7__C0017",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "stuffed animal",
+    "object_description": "stuffed animal",
+    "object_instance_candidate": "vlm:201d5b0b30d09061d7e8a91f",
+    "type": "PICKUP",
+    "before_refs": [
+      {
+        "alias": "F0001",
+        "source_frame_index": 1020,
+        "native_pts_s": 34.0,
+        "native_pts": 20400,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001020.png",
+        "sha256": "00e07b75c7fca209718ff8be622ea2fe1e95a827a6b36156307f0b0c2d1aaa9e"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0002",
+        "source_frame_index": 1037,
+        "native_pts_s": 34.56666666666667,
+        "native_pts": 20740,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001037.png",
+        "sha256": "6ff35df7616913a00102c50dfe7fdd61ac08219ecb2441ddc5787188aba2a056"
+      }
+    ],
+    "before_claims": [
+      "ON_SURFACE"
+    ],
+    "after_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "native_interval_s": [
+      34.0,
+      34.56666666666667
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0017\\raw.txt",
+    "raw_strict_valid": true,
+    "validation_errors": [],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  },
+  {
+    "hypothesis_id": "event:9669476f12523ca2ba6512be",
+    "run_id": "a6a937a2969970fd9f5d8318",
+    "window_id": "test7__C0017",
+    "video_id": "test7",
+    "source_video_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+    "object_category": "stuffed animal",
+    "object_description": "stuffed animal",
+    "object_instance_candidate": "vlm:201d5b0b30d09061d7e8a91f",
+    "type": "PLACEMENT",
+    "before_refs": [
+      {
+        "alias": "F0007",
+        "source_frame_index": 1122,
+        "native_pts_s": 37.405,
+        "native_pts": 22443,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001122.png",
+        "sha256": "a9315ef0bab847abbb11944492a8a36a94fd5c8b4311f2db62d4a54ff62d9d01"
+      }
+    ],
+    "after_refs": [
+      {
+        "alias": "F0008",
+        "source_frame_index": 1139,
+        "native_pts_s": 37.971666666666664,
+        "native_pts": 22783,
+        "time_base": "1/600",
+        "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test7/S001139.png",
+        "sha256": "bfb4c54a3cfbd7989acd4fb4f1e2ca80ba8c09f4d4505993be7527710eaa479a"
+      }
+    ],
+    "before_claims": [
+      "HELD_BY_PERSON"
+    ],
+    "after_claims": [
+      "ON_SURFACE"
+    ],
+    "native_interval_s": [
+      37.405,
+      37.971666666666664
+    ],
+    "interval_meaning": "BEFORE_AFTER_EVIDENCE_BOUND_NOT_EVENT_DURATION",
+    "raw_ref": "C:\\Users\\smile\\Desktop\\test2\\mixure_test_SAM\\artifacts\\pass_t\\phase3\\three_vlm_full_v1\\runs\\nemotron\\test7__C0017\\raw.txt",
+    "raw_strict_valid": true,
+    "validation_errors": [],
+    "temporal_valid": true,
+    "decision": "UNCERTAIN",
+    "authorized_entity_id": null,
+    "supporting_observation_ids": [],
+    "conflicting_observation_ids": [],
+    "reason_codes": [
+      "INSTANCE_ASSOCIATION_UNRESOLVED",
+      "NO_INDEPENDENT_STATE_EVIDENCE"
+    ],
+    "unresolved_assumptions": [
+      "VLM object description has no CV instance binding",
+      "VLM states are assertions, not independent confirmation"
+    ],
+    "visual_grounding_status": "UNVERIFIED"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "model": "DAMO-NLP-SG/VideoLLaMA3-7B",
+  "revision": "d5b763e368861e7f5096e7ff1b49f92fbccf8ae6",
+  "model_path": ".models/VideoLLaMA3-7B",
+  "adapter": "memory_graph.experiments.videollama3_adapter.VideoLLaMA3Adapter",
+  "quantization": "LANGUAGE_NF4_DOUBLE_QUANT_BF16_COMPUTE_VISION_PROJECTOR_BF16",
+  "attention": "sdpa",
+  "preprocessing": {
+    "max_visual_tokens_total": 4096,
+    "min_visual_tokens": 16,
+    "image_merge_size": 1
+  },
+  "generation": {
+    "do_sample": false,
+    "seed": 42,
+    "max_new_tokens": 1024,
+    "timeout_seconds": 300
+  },
+  "reference": "NONE",
+  "target_identity_authorization": false,
+  "memory_graph_writes": false,
+  "quality_retries": 0
+}

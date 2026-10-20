@@ -1,0 +1,52 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "microwave",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "stuffed animal",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "person",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "HELD_BY_PERSON"
+        },
+        {
+          "frame": "F0008",
+          "state": "OTHER"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "person",
+      "before_frames": ["F0001"],
+      "after_frames": ["F0008"]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "model": "DAMO-NLP-SG/VideoLLaMA3-7B",
+  "revision": "d5b763e368861e7f5096e7ff1b49f92fbccf8ae6",
+  "transformers": "4.46.3",
+  "torch": "2.10.0+cu128",
+  "bitsandbytes": "0.50.2",
+  "attention": "OFFICIAL_SDPA",
+  "linear4bit_module_count": 196,
+  "quantized_vision_or_projector": false,
+  "vision_parameter_dtypes": [
+    "torch.bfloat16"
+  ],
+  "load_seconds": 28.547309099987615,
+  "device_map": {
+    "": "cuda:0"
+  },
+  "resources": {
+    "process_rss_gib": 0.9384384155273438,
+    "free_ram_gib": 9.659431457519531,
+    "gpu_allocated_gib": 6.0278239250183105,
+    "gpu_reserved_gib": 6.08203125,
+    "gpu_peak_allocated_gib": 6.02799654006958
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-10-17T08:45:27.653846+00:00",
+  "checks": {
+    "protected_files_unchanged": true,
+    "frozen_components_unchanged": true,
+    "exactly_four_new_attempts": true,
+    "four_completed_worker_exit_zero": true,
+    "raw_response_hashes_match_receipts": true,
+    "all_four_eos": true,
+    "B_prompt_schema_byte_identical_A": true,
+    "B_higher_detail_effective": true,
+    "C_original_visual_budget_effective": true,
+    "same_decoding_and_frames_all_conditions": true,
+    "all_16_sources_match_manifest": true,
+    "invalid_outputs_not_promoted": true
+  },
+  "count_passed": 12,
+  "preserved_files": 563,
+  "changed_protected_files": [],
+  "interface_cpu_tests": {
+    "command": "PYTHONPATH=src .venv/Scripts/python.exe -X utf8 -B -m unittest discover -s tests -p test_observation_interface.py -v",
+    "passed": 4,
+    "failed": 0,
+    "real_model_calls": 0
+  },
+  "parser_cpu_preflight_checks": {
+    "fence_is_strict_invalid": true,
+    "invalid_never_no_event": true,
+    "missing_events_reported": true
+  },
+  "frozen_run_sha256": "a80145037f4cb161892abf4125a43ebb6584a27449647a12f9ba94d04d9a16df",
+  "new_sources_sha256": {
+    "scripts/run_phase3_observation_ablation.py": "fb25f791ad9a3b2196ec1dbad7018d735b79f12bd49716401502559ca48db7e9",
+    "src/memory_graph/experiments/__init__.py": "9a552b86823dde15a0b9cbb0a22e3cd5734fea5badb4462385156d920b21fa57",
+    "src/memory_graph/experiments/observation_interface.py": "a89ec0318b34bc27afb9632b1de9115f6d923a68d8f4df6f43b739da002432c4",
+    "tests/test_observation_interface.py": "4a4f0ae4bc07e1a4c60799e737c9f70ad4e8caa94779e9c3619783f460c97b1a"
+  }
+}

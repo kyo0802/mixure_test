@@ -1,5 +1,30 @@
 # VLMtest — 目前結論與下一步
 
+更新：2026-10-20。**PHASE4_RECORDED_INTEGRATION_COMPLETE**。
+
+- [最新報告](LATEST_REPORT.md)：已實作 adapter、獨立證據 decision、既有 TemporalMemory 持久化與證據排序搜尋。
+- 九片、184 回應、8,163 CV 觀察；143 假說為 0 SUPPORTED／53 REJECTED／90 UNCERTAIN。110 筆 CV 觀察保留經核對的歷史身分關聯，不傳遞給未綁定 VLM 類別。
+- 九片手機搜尋 UNKNOWN，沒有支援具名位置；缺口是 runtime 實例 grounding、獨立 physical-state 及 spatial-zone 量測。程式可接新 raw result，不依賴歷史 window ID。
+- 22 CPU tests 通過；九片 Graph 重新載入搜尋一致；1,643 執行輸入及 2,235 歷史保護檔案 hash 驗證通過。
+- 只寫 `artifacts/phase4/` 隔離 Graph；無新推論、無 GT／review 查表、無 production memory 更新、無 commit／push。
+
+## 歷史：AI 原片裁決
+
+- [歷史中文裁決](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/AI_VISUAL_ADJUDICATION_REPORT.md)包含 34 組原片裁決與證據連結。15 個可見轉換（8 拿起、7 放下）、13 個不確定物理轉換、6 組其他觀察。
+- 額外查看 39 筆模型引用：13 支持、16 不支持、10 不確定。去重正事件支持數 Qwen 1、VideoLLaMA3 0、Nemotron 9；strict-valid 支持數 0、0、7。
+- 這是 AI 視覺複核，原始人工 JSON／CSV 不變，不冒充 HUMAN_REVIEWED；沒有完整負例資格，正式 precision／recall／F1 不可報告。其餘 128 筆候選未視覺裁決。
+- 既有 552 次推論沿用；2,235 個保留檔案 SHA 驗證通過，21 項 CPU 測試通過。未 commit／push，未更新 Graph。
+
+## 歷史：2026-10-19 原始人工裁決工作表
+
+- huang 19 筆、KUO 34 筆原始紀錄已驗證，對齊成 34 組（19 雙人候選／15 單人紀錄）。原始 33 筆 state 作為證據保留。
+- [填主裁決表](../../artifacts/vlmtest/gt_consolidation_v1/adjudication.csv)與[局部 coverage](../../artifacts/vlmtest/gt_consolidation_v1/coverage_adjudication.csv)；[操作說明](../../artifacts/vlmtest/gt_consolidation_v1/EDITING_GUIDE.md)。優先 G003/G004、G022/G023、G024/G025。
+- 兩位九片全為 NOT_ATTESTED，不能自動當完整負例。局部 scopes 可獨立核准；未解事件與遮擋不當成無事件。
+- 552 次原始生成沿用；raw full-strict Qwen 0、VideoLLaMA3 83、Nemotron 108／184。167 筆假說不能憑名稱或重疊時間自動完成實物關聯及去重。
+- 21 項 CPU 測試通過。等待實際人工決策；之後直接執行 final GT 及評估指令。未跑模型、未寫 Graph、未 commit／push。
+
+## 歷史：離線工具交付
+
 更新：2026-10-18。**OFFLINE_GT_ANNOTATION_TOOL_READY**。
 
 - [離線標註工具](../../tools/findmind-gt-annotator/index.html)與[獨立 ZIP](../../dist/findmind-gt-annotator.zip)已完成，內含九支原片；審閱者不需安裝環境。使用者已回報播放、標註與匯出再匯入成功。

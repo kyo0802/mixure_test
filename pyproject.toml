@@ -9,6 +9,7 @@ dependencies = ["ultralytics>=8.3,<9", "opencv-python>=4.10,<5", "numpy>=1.26,<3
 dev = ["pytest>=8,<9"]
 
 [project.optional-dependencies]
+integration = ["jsonschema>=4,<5"]
 vlm = ["transformers>=4.57,<5", "Pillow>=12,<13", "huggingface-hub>=0.34,<1", "psutil>=5.9,<8"]
 gpu = ["torch==2.10.0; sys_platform == 'win32'", "torchvision==0.25.0; sys_platform == 'win32'"]
 quantized = ["accelerate>=1.0,<2", "bitsandbytes>=0.48,<0.51"]

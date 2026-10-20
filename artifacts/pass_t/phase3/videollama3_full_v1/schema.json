@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Model-neutral State-first Observation V1",
+  "type": "object", "additionalProperties": false,
+  "required": ["status", "observations"],
+  "properties": {
+    "status": {"enum": ["EVENTS", "NO_CONFIRMED_EVENT", "UNCERTAIN"]},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}},
+    "notes": {"type": "string"}
+  },
+  "allOf": [{"if": {"properties": {"status": {"const": "EVENTS"}}}, "then": {"required": ["events"], "properties": {"events": {"minItems": 1}, "observations": {"minItems": 1}}}, "else": {"properties": {"events": {"maxItems": 0}}}}],
+  "$defs": {
+    "frames": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^F[0-9]{4}$"}},
+    "observation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["object", "states", "uncertainty"],
+      "properties": {
+        "object": {"type": "string", "minLength": 1},
+        "states": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "additionalProperties": false, "required": ["state", "frames"],
+          "properties": {"state": {"enum": ["ON_SURFACE", "HELD_BY_PERSON", "OTHER", "UNKNOWN"]}, "frames": {"$ref": "#/$defs/frames"}}
+        }},
+        "uncertainty": {"type": "string", "minLength": 1}
+      }
+    },
+    "event": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_type", "object", "before_frames", "after_frames"],
+      "properties": {
+        "event_type": {"enum": ["PICKUP", "PLACEMENT"]}, "object": {"type": "string", "minLength": 1},
+        "before_frames": {"$ref": "#/$defs/frames"}, "after_frames": {"$ref": "#/$defs/frames"}
+      }
+    }
+  }
+}

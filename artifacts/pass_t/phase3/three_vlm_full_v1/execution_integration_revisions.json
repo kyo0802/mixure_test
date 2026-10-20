@@ -1,0 +1,22 @@
+{
+  "changes": [
+    {
+      "file": "scripts/run_nemotron_full.py",
+      "before_sha256": "c7c9bcdeaf84111fd4bcfc6efc7f35a5b821d702f15da54b72c2165c14d5dd37",
+      "after_sha256": "f62923249c46e94661c88f648ca793efac2bd46bf0f64fbcba71f596ced32617",
+      "reason": "Actual official vLLM CPU video preprocessing attempted Torch Inductor without g++; disable optional Torch compile in existing enforce-eager deployment. No semantic prompt/schema/source selection/model/generation change.",
+      "error_evidence": "nemotron_input_inspection.log",
+      "generations_before_change": 0
+    },
+    {
+      "file": "scripts/run_nemotron_full.py",
+      "before_sha256": "c7c9bcdeaf84111fd4bcfc6efc7f35a5b821d702f15da54b72c2165c14d5dd37",
+      "intermediate_previous_sha256": "f62923249c46e94661c88f648ca793efac2bd46bf0f64fbcba71f596ced32617",
+      "after_sha256": "ec36034b2630dc259d8a79277afe5e1d2cbc766f3d64cf85ca3c877f34f8ecd5",
+      "reason": "Actual vLLM ZMQ IPC path exceeded Linux 107-byte limit; short repository AF_UNIX bind also returned ENOTSUP on DrvFS. Use native /tmp only for ephemeral IPC. Inputs, models, task, schema and decoding unchanged.",
+      "error_evidence": "runs/nemotron/load_failure_01.json",
+      "error_evidence_sha256": "0613ec7691ffc90716eb91dad9fd1cbbe5c2237b2c06a7a1802de6bf84c45b10",
+      "generations_before_change": 0
+    }
+  ]
+}

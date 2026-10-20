@@ -1,0 +1,31 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "smartphone",
+      "states": [
+        {
+          "frame": "F0007",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    },
+    {
+      "object": "smartphone",
+      "states": [
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PLACEMENT",
+      "object": "smartphone",
+      "before_frames": ["F0007"],
+      "after_frames": ["F0008"]
+    }
+  ]
+}

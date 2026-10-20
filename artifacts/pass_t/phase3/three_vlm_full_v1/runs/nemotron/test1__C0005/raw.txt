@@ -1,0 +1,41 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "phone",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0006",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    },
+    {
+      "object": "basketball",
+      "states": [
+        {
+          "frame": "F0007",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "phone",
+      "before_frames": ["F0001"],
+      "after_frames": ["F0006"]
+    },
+    {
+      "type": "PICKUP",
+      "object": "basketball",
+      "before_frames": ["F0007"],
+      "after_frames": []
+    }
+  ]
+}

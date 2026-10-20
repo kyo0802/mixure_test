@@ -1,8 +1,8 @@
 # Pass_T
 
-最新更新：2026-10-15。**[最新完整報告](LATEST_REPORT.md)** 固定放在本資料夾，每次完成工作都更新同一入口。
+最新更新：2026-10-18。**[最新完整報告](LATEST_REPORT.md)** 固定放在本資料夾，每次完成工作都更新同一入口。
 
-目前主要工作仍在 Pass I/T 平行標註＋實作。**Phase 3 VLM-first兩次真實Qwen實驗已完成，建議 REVISE_VLM_OBSERVATION_APPROACH**：test5文字辨認出手機pickup；test7文字卻否認pickup。兩份均有Markdown fence而JSON解析失敗，有效V3結構化預測0筆。未修復輸出、未重試、未自動開始整合；原CV signal checkpoint仍為BLOCKED。詳細原文、質性對照、收尾監控錯誤及CPU修正見最新報告。沒有GT／Graph更新或commit／push。
+Pass T 保留事件標註、GT 政策、契約與相關實作的入口。**VLM 模型整合、推論、消融與比較報告已移至 [WORKSPACE/VLMtest](../VLMtest/README.md)**；最新三模型結果請直接看 [VLM 報告](../VLMtest/LATEST_REPORT.md)。
 
 [回到總入口](../../START_HERE.md)
 
@@ -10,7 +10,12 @@
 |---|---|
 | 最新完整報告 | [直接閱讀](LATEST_REPORT.md) |
 | 最新待批准決策 | [直接閱讀](LATEST_DECISIONS.md) |
-| Phase 3 VLM-first：兩次真實生成、原始輸出與實驗報告 | [完整實驗資料夾](../../artifacts/pass_t/phase3/vlm_physical_state_pilot_v1) |
+| VLM 模型測試、比較與人工審閱 | [VLMtest](../VLMtest/README.md) |
+| 歷史 VideoLLaMA3：16 組輸入實驗與報告 | [歷史實驗資料夾](../../artifacts/pass_t/phase3/videollama3_full_v1) |
+| 歷史 VideoLLaMA3：逐視窗原文與回條 | [直接開啟](../../artifacts/pass_t/phase3/videollama3_full_v1/calls) |
+| 歷史 VideoLLaMA3：16 組來源影格 | [直接開啟](../../artifacts/pass_t/phase3/videollama3_full_v1/contact_sheets) |
+| 歷史 Qwen A/B/C消融、跨模型介面與候選相容性 | [歷史實驗資料夾](../../artifacts/pass_t/phase3/observation_ablation_v1) |
+| 歷史 Phase 3 VLM-first：兩次真實生成、原始輸出與實驗報告 | [完整實驗資料夾](../../artifacts/pass_t/phase3/vlm_physical_state_pilot_v1) |
 | Phase 3 物理訊號 checkpoint、逐格圖與封存計算結果 | [完整資料夾](../../artifacts/pass_t/phase3/signal_spike_v1) |
 | Phase 3A 稽核（架構圖、48 欄 matrix、真實樣本與 roadmap） | [完整稽核資料夾](Phase3_Observation_Capability_Audit_20261015) |
 | 最新 Human-Adjudicated Error Analysis 與五份原始提交 | [分析資料夾](../../artifacts/pass_t/phase2b/human_adjudicated_error_analysis/20261015_pilot_v1) |

@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "observations",
+    "events"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "EVENTS",
+        "NO_CONFIRMED_EVENT",
+        "UNCERTAIN"
+      ]
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "object",
+          "states"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "states": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "frame",
+                "state"
+              ],
+              "properties": {
+                "frame": {
+                  "type": "string"
+                },
+                "state": {
+                  "enum": [
+                    "ON_SURFACE",
+                    "HELD_BY_PERSON",
+                    "OTHER",
+                    "UNKNOWN"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "object",
+          "before_frames",
+          "after_frames"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "PICKUP",
+              "PLACEMENT"
+            ]
+          },
+          "object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "before_frames": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "after_frames": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

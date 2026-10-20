@@ -1,0 +1,28 @@
+{
+  "analysis_origin": "ASSISTANT_VISUAL_ANALYSIS_NOT_NEW_HUMAN_GROUND_TRUTH",
+  "used_as_model_input": false,
+  "selection_basis": "Existing two known PICKUP windows, plus actual contract/visibility failures; not a random correctness audit.",
+  "summary": "兩個既有 known-PICKUP 窗中，Qwen 都未提手機 PICKUP；VideoLLaMA 只在 test7 提出，但引用與 state 不相容；Nemotron 兩窗都提出 raw-strict-valid 的手機 PICKUP，卻仍有 after citation 遮擋或過早的 grounding 問題。這是兩個已知個案的描述，不是 recall 或全體模型排名；以下影像分析由助理完成，沒有新增人類 GT 或完整性認證。",
+  "cases": [
+    {
+      "window_id": "test5__W05",
+      "evidence": "本次選取 S342/357/373/388/404/419/435/450。F0001–F0004 手機在桌面，F0005/S404 與 F0006/S419 可見手持；F0007–F0008 不能可靠直接確認手機是否仍被握持。既有人工支持 PICKUP，但事件清單非完整，最後新採樣 S450 亦超出舊 half-open GT。",
+      "analysis": "Qwen：phone F0005 寫 ON_SURFACE，與可見手持不符；F0006 正確描述 HELD，但 F0007/F0008 繼續確定 HELD 缺直接可見支持。仍回 NO_CONFIRMED_EVENT、events=[]，沒有提出已知手機拿起假說；原文帶 fence，不能當 raw-strict valid。VideoLLaMA：這次辨識到 phone，但 F0005 仍寫 ON_SURFACE，F0006–F0008 改為 OTHER，沒有捕捉可見的手持狀態；status=EVENTS 卻 events=[]，因此 semantic-invalid，不能把狀態字串 EVENTS 當成已產生 PICKUP。Nemotron：raw full-strict valid，提出 phone PICKUP，before F0001/ON_SURFACE、after F0008/HELD_BY_PERSON。這與既有已知事件類型相符，但沒有引用真正可見手持的 F0005/F0006，反而用手機被盒子遮擋且超出舊 GT scope 的 F0008；該格不能直接確認持握。因此僅能說它找到合理事件假說，不能說完成具物理支持的 grounding 或正式時間匹配。"
+    },
+    {
+      "window_id": "test7__W05",
+      "evidence": "本次選取 S372/387/403/418/434/449/465/480。F0001/F0002 手機在桌面，F0003/S403、F0004/S418 可見手持；F0005 起沒有足夠直接手機可見支持。後段鏡頭移開，也無法從這些畫面直接確認籃球桌面狀態。既有人工支持 PICKUP，清單非完整。",
+      "analysis": "Qwen：phone 與 basketball 都整段 F0001–F0008 寫 ON_SURFACE。手機在 F0003/F0004 的 state 錯誤，後段不可見物件的確定 ON_SURFACE 缺直接支持；回 NO_CONFIRMED_EVENT，漏掉已知手機拿起。VideoLLaMA：提出 basketball 與 cell phone 各一個 PICKUP，卻都引用 F0001→F0002；球在這兩格仍在桌面，沒有該球 pickup 的可見支持；手機在這兩格尚在桌面，模型已寫 HELD_BY_PERSON，真正可見手持的 F0003/F0004 又寫 OTHER。事件 citations 與它自己的 state 序列也不相容，strict semantic-invalid。Nemotron：raw full-strict valid，提出 phone PICKUP F0001→F0002；F0003/F0004 的 HELD 與可見手持相符，但 F0002/S387 尚未有確證拿起的支撐轉移，模型過早宣告 HELD，之後 F0005–F0008 又將不可直接看見的手機持續寫 HELD，且把後段不可見的球確定寫 ON_SURFACE。事件類型合理不等於時間或 after citation 正確；不能算已完成 grounded known-positive match。三模型都仍需要獨立 state/visibility/citation review。"
+    },
+    {
+      "window_id": "test1__W02 (canonical input for W03/W05)",
+      "evidence": "本次選取 S156/171/187/202/218/233/249/264。F0001–F0003 有手接觸桌上的手機；單憑接觸不能確證拿起。F0004/S202 明確可見手機在桌面且沒有手持，之後仍在桌面。舊 test1 W03/W05 負例共用本 canonical input；新末格 S264 在舊 half-open scope 之外，不因此擴張負例 GT。",
+      "analysis": "Qwen：可解析 fence-body 將手機全程寫 ON_SURFACE，沒有事件，這些可見狀態與採樣圖沒有上述矛盾，但 raw 仍因 fence 無效。VideoLLaMA：F0001/F0002 寫 HELD_BY_PERSON，手接觸本身不足支持；status=EVENTS 卻 events=[]，semantic-invalid。Nemotron：raw full-strict valid 且 NO_CONFIRMED_EVENT，然而將手機 F0001–F0004 寫 HELD_BY_PERSON，尤其 F0004 已沒有手持，與可見畫面不符。這是 schema/consistency 有效仍可含錯誤物理 state 的具體例子；不是新增 human GT 或可外推的錯誤率。"
+    },
+    {
+      "window_id": "test9__C0007",
+      "evidence": "本次選取 S420/437/454/471/488/505/522/539。視點隨鏡頭改變；F0006 有手接觸球，後段球的完整支撐關係不易由樣本確證。盒子在 F0007/F0008 仍可見位於桌面，沒有手持盒子之支持。沒有本視窗的人類事件 GT，因此不將全部事件判成陰性。",
+      "analysis": "VideoLLaMA：同時提出 basketball 與 box 的 PICKUP，after 引用 F0007/F0008；但自身 box state 在兩格仍寫 ON_SURFACE，事件與 state 不相容，strict-invalid，且這些影像也未支持盒子被拿起。鏡頭造成的畫面位置改變不能作為 pickup 證據；不能據此推定模型內部錯誤原因。對籃球保留不確定，不因這組稀疏樣本直接排除實際拿起。Qwen：沒有事件，球全段 ON_SURFACE；後兩格的支撐判斷需要人工確認，不能把其無事件當真實負例。Nemotron：raw full-strict valid，僅提出 basketball PICKUP F0001→F0008，沒有盒子事件；後格球僅部分可見，仍須人工完整影片確認支撐轉移，不能從 raw-valid 直接建立 positive GT。cell phone 在 F0007/F0008 的類別描述也沒有建立跨窗物理身分。"
+    }
+  ]
+}

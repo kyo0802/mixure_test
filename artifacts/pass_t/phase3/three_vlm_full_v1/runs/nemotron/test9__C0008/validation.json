@@ -1,0 +1,66 @@
+{
+  "raw": {
+    "json_valid": true,
+    "schema_valid": true,
+    "citation_valid": true,
+    "semantic_valid": true,
+    "full_valid": true,
+    "parsed": {
+      "status": "EVENTS",
+      "observations": [
+        {
+          "object": "basketball",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0002",
+              "state": "HELD_BY_PERSON"
+            }
+          ]
+        },
+        {
+          "object": "phone",
+          "states": [
+            {
+              "frame": "F0005",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0006",
+              "state": "HELD_BY_PERSON"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "PICKUP",
+          "object": "basketball",
+          "before_frames": [
+            "F0001"
+          ],
+          "after_frames": [
+            "F0002"
+          ]
+        },
+        {
+          "type": "PICKUP",
+          "object": "phone",
+          "before_frames": [
+            "F0005"
+          ],
+          "after_frames": [
+            "F0006"
+          ]
+        }
+      ]
+    },
+    "errors": []
+  },
+  "normalized_body": null,
+  "physical_evidence_validity": "UNREVIEWED_NOT_INFERRED_FROM_CONTRACT",
+  "invalid_is_not_no_event": true
+}

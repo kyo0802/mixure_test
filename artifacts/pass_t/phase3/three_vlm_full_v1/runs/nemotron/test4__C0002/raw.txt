@@ -1,0 +1,35 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "phone",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "HELD_BY_PERSON"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "basketball",
+      "states": [
+        {
+          "frame": "F0005",
+          "state": "ON_SURFACE"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PLACEMENT",
+      "object": "phone",
+      "before_frames": ["F0007"],
+      "after_frames": ["F0008"]
+    }
+  ]
+}

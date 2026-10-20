@@ -1,0 +1,121 @@
+{
+    "status": "EVENTS",
+    "observations": {
+        "microwave": {
+            "states": [
+                {
+                    "frame": "F0001",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0002",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0003",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0004",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0005",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0006",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0007",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0008",
+                    "state": "ON_SURFACE"
+                }
+            ]
+        },
+        "phone": {
+            "states": [
+                {
+                    "frame": "F0001",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0002",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0003",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0004",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0005",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0006",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0007",
+                    "state": "HELD_BY_PERSON"
+                },
+                {
+                    "frame": "F0008",
+                    "state": "HELD_BY_PERSON"
+                }
+            ]
+        },
+        "stuffed_toy": {
+            "states": [
+                {
+                    "frame": "F0001",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0002",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0003",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0004",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0005",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0006",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0007",
+                    "state": "ON_SURFACE"
+                },
+                {
+                    "frame": "F0008",
+                    "state": "ON_SURFACE"
+                }
+            ]
+        }
+    },
+    "events": [
+        {
+            "type": "PICKUP",
+            "object": "phone",
+            "before_frames": ["F0001", "F0002", "F0003", "F0004", "F0005", "F0006", "F0007"],
+            "after_frames": ["F0008"]
+        }
+    ]
+}

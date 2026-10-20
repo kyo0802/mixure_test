@@ -1,4 +1,26 @@
-# Pass T — Phase 3 VLM-first Physical-State Experiment
+# Pass T — 事件標註與契約
+
+2026-10-18：VLM 模型測試與比較的目前結論已移至 [VLMtest](../VLMtest/LATEST_DECISIONS.md)。後續模型實驗報告使用該入口。
+
+## 歷史 VideoLLaMA3 實際資料集推論
+
+更新：2026-10-17。**VIDEOLLAMA3_AVAILABLE_WINDOW_INFERENCE_COMPLETE**。69 筆條目中 17 個具既有視覺配置，16 個不同輸入全部實際生成，test1 W05 明確共用 W03，0 執行失敗、0 重試。52 個空配置條目列 unavailable；test6 無推論，不臨時補採樣。
+
+13／16 raw JSON 可解析，2／16 full strict-valid；2 份 token-cap 截斷、1 份括號錯誤。大量輸出只寫籃球，test5/test7 known PICKUP 均無可用手機事件假說。**VideoLLaMA 本配置不取代 Qwen、不進主流程、暫不做 hybrid。** 保留 Qwen C 為研究基線，不代表它已具可靠事件／身分／Graph 更新能力。
+
+下一步僅建議人工盲評 test5/test7 同一組影格的逐物件 state 與 alias 支持，尚未啟動。沒有改 prompt、GT、Qwen runtime 或既有 Graph；沒有 commit／push。模型環境已可用，沒有未解決的載入／生成 blocker。
+
+[最新完整報告](LATEST_REPORT.md)；[本次原始輸出與來源資料](../../artifacts/pass_t/phase3/videollama3_full_v1)。
+
+## 歷史 Qwen Observation Ablation ＋ Cross-model Preparation
+
+更新：2026-10-17。**STATE_FIRST_IS_PROMISING，僅限partial state-observation signal。** B高細節2次、C state-first2次全部完成，無重試；A未重跑。B未解決test7事件遺漏；C寫出test7手機桌面／手持，卻沒有PICKUP hypothesis並仍回NO_CONFIRMED_EVENT。部分HELD引用超出可見支持。六筆A/B/C原文都含Markdown fence，各strict0/2，沒有補欄位或提升invalid。
+
+四次授權已結束；不再追加Qwen試驗。已備model-neutral adapter boundary與4個CPU contract tests，未下載／執行新VLM。下一個任務建議比較同8張source frames的逐物件可見狀態、alias與不確定性，事件另列；完整共享prompt與模型版本／量化／環境／call上限仍需使用者授權。較小候選VideoLLaMA3-7B的16GB量化／custom code相容性未驗證；Nemotron有更明顯記憶體／4-image與Linux依賴限制。沒有宣稱模型品質排名或直接開始下一實驗。
+
+[最新完整報告](LATEST_REPORT.md)；[跨模型準備與官方來源](../../artifacts/pass_t/phase3/observation_ablation_v1/CROSS_MODEL_PREPARATION.md)。原CV checkpoint、歷史實驗、human reviews及GT不變；未寫Graph、未commit／push。
+
+## 歷史 Phase 3 VLM-first Physical-State Experiment
 
 **兩次授權真實生成已完成，建議 REVISE_VLM_OBSERVATION_APPROACH。** test5文字描述phone PICKUP與ON_SURFACE→HELD合理；test7文字否認pickup，與可見手持後狀態及既有人工事件說明不符。兩筆皆有Markdown fence，原始JSON解析失敗；A另缺other_objects.evidence，B缺events。沒有去fence、補欄位或把invalid當有效NO_EVENT。
 

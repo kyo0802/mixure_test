@@ -1,0 +1,1040 @@
+{
+  "schema_version": "1.0",
+  "dataset_id": "findmind_test1_test9",
+  "dataset_version": "original9_nativepts_v1",
+  "dataset_manifest_sha256": "86ab0644ba2a40c97149a81ceea7d94e061b90820ed5d0c3ab5d3fbf66739ce0",
+  "reviewer_id": "annotator_huang",
+  "session_id": "session_3f7dd8df-2110-4c4d-85c6-eec4595bb062",
+  "assignment": "test1-test9",
+  "created_at": "2026-10-19T14:24:10.996Z",
+  "updated_at": "2026-10-19T15:11:29.325Z",
+  "exported_at": "2026-10-19T15:11:46.767Z",
+  "export_kind": "FINAL",
+  "videos": [
+    {
+      "video_id": "test1",
+      "source_sha256": "b2a1eb317f9d729b637bb624a787f755b3c57d66deea824d2381b6ec37f888c3",
+      "source_duration_s": 32.248333333333335,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_97bc4f07-d0d4-4e56-9829-c3f1f247420c",
+          "start_s": 0,
+          "end_s": 32.248333333333335,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_d7f04a41-332b-4945-acde-b29bb87bd6f7",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 4.468,
+          "end_s": 6.12,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            3.503454
+          ],
+          "after_evidence_times_s": [
+            7.200012
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "可完整見到手機被放下",
+          "notes": "",
+          "updated_at": "2026-10-19T14:29:39.493Z"
+        },
+        {
+          "event_id": "event_b4cbed54-d8d2-4c33-90e2-6ea2df4c5b88",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 11.53,
+          "end_s": 14.44,
+          "before_state": "ON_SURFACE",
+          "after_state": "UNKNOWN",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "PARTIALLY_OCCLUDED",
+          "before_evidence_times_s": [
+            11.117261
+          ],
+          "after_evidence_times_s": [
+            14.758646
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "一開始可見物體在表面",
+          "notes": "",
+          "updated_at": "2026-10-19T14:33:05.352Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_d77a97b9-7430-4f3e-a995-126641d65e2d",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 8.11,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 243,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:33:42.450Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_6a157a18-f02d-4240-b333-842c4ed14a71",
+          "start_s": 15.08,
+          "end_s": 17.4,
+          "reason": "被ball遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test2",
+      "source_sha256": "6ea954179859c6b0e6af6e1ac88c5bf1d3b296da6b7a076c113a2cca86817fe1",
+      "source_duration_s": 30.811666666666667,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_773cd17c-9404-460d-96a9-fb063a1746bf",
+          "start_s": 0,
+          "end_s": 30.811666666666667,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_f7576ea2-862f-4aa9-af1c-26daf2672c91",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 3.5,
+          "end_s": 5.81,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            2.556656
+          ],
+          "after_evidence_times_s": [
+            5.904032
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:36:38.542Z"
+        },
+        {
+          "event_id": "event_d896c1d7-d9b2-4925-bfea-afc85a344db0",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 10.22,
+          "end_s": 10.51,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "UNCERTAIN",
+          "after_visibility": "UNCERTAIN",
+          "before_evidence_times_s": [
+            9.27
+          ],
+          "after_evidence_times_s": [
+            10.911916
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:38:20.744Z"
+        },
+        {
+          "event_id": "event_b4ff2bef-ee9c-4ac2-9a3b-36074dbf5264",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 19.41,
+          "end_s": 22.63,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "OTHER",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "PARTIALLY_OCCLUDED",
+          "before_evidence_times_s": [
+            19.214461
+          ],
+          "after_evidence_times_s": [
+            23.168054
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:39:43.556Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_7e11eaae-4171-4914-a644-35f2f6cbbba3",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 6.87,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 206,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:36:53.673Z"
+        },
+        {
+          "state_id": "state_136b94d4-e63f-4e8d-a145-00aeab7b4ab2",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 17.77,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 533,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:38:42.775Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_eecf0242-d00c-482c-b9ff-e1ff41164a92",
+          "start_s": 19.71,
+          "end_s": 23.03,
+          "reason": "被玩偶遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test3",
+      "source_sha256": "fdef0b789e509668ccac4a8dd674fb2c8f38980a3a8ba1ffae6c3feebf52be9a",
+      "source_duration_s": 38.97333333333333,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_5dcf45ac-48f9-4292-98fe-96fd7e093f9c",
+          "start_s": 0,
+          "end_s": 38.97333333333333,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_5b9c8bd3-ea10-4f38-aff0-266ff562ea04",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 6.07,
+          "end_s": 7.19,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            5.667636
+          ],
+          "after_evidence_times_s": [
+            7.701317
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:41:23.264Z"
+        },
+        {
+          "event_id": "event_b8bdac5a-750d-478b-9310-3809e85e1b23",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 13.53,
+          "end_s": 15.03,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            12.10207
+          ],
+          "after_evidence_times_s": [
+            15.235939
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:42:09.865Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_c3057558-d523-4449-9477-450c06094299",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 5.63,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 169,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:40:43.591Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_3d0cef95-4011-445e-b7e0-e0dae96a917a",
+          "start_s": 16.73,
+          "end_s": 20.3,
+          "reason": "被箱子遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test4",
+      "source_sha256": "c86204ba5b31f174c3a6f71f4f5eee71dc044985e62831395310c23efb880e47",
+      "source_duration_s": 38.97333333333333,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_58f2eba4-c1ee-438d-b516-7c884595a08e",
+          "start_s": 0,
+          "end_s": 38.97333333333333,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_212e0717-7bff-4f02-8d2b-4e11bb5d76aa",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 6.6,
+          "end_s": 8.74,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            3.967345
+          ],
+          "after_evidence_times_s": [
+            9.068217
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:51:47.044Z"
+        },
+        {
+          "event_id": "event_9fa42c16-5937-4aa1-abd3-56a3678b4ee5",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 12.23,
+          "end_s": 14.94,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "UNCERTAIN",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            11.435289
+          ],
+          "after_evidence_times_s": [
+            15.573139
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:53:34.802Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_93fa0068-3bdb-4d6b-ac46-533455d2e3c1",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 3.19,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 96,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:52:10.517Z"
+        },
+        {
+          "state_id": "state_28907633-2566-47da-b090-00769b58c6aa",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 9.83,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 294,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:53:00.876Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_7306e4c7-7905-47e4-9516-c013d62ffb6e",
+          "start_s": 16.26,
+          "end_s": 19.87,
+          "reason": "被ball遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test5",
+      "source_sha256": "da637b42681ec7e59d8161ace0680aae7878e45da0ca7799c565f9828720f81f",
+      "source_duration_s": 37.233333333333334,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_646575b1-23bc-4612-b2b1-12ab7debc25c",
+          "start_s": 0,
+          "end_s": 37.233333333333334,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_c6160431-2c6d-45ec-baac-93e59f7ff94a",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 3.67,
+          "end_s": 5.47,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            3.69
+          ],
+          "after_evidence_times_s": [
+            5.47
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:56:49.327Z"
+        },
+        {
+          "event_id": "event_8ede9359-661a-4653-924e-f4b4a203e0a1",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 12.39,
+          "end_s": 13.21,
+          "before_state": "UNKNOWN",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            11.147704
+          ],
+          "after_evidence_times_s": [
+            13.536498
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T14:57:46.103Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_4a3131a7-adc9-4ff2-8a01-f06e7ec3b0d2",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 3.66,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 110,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "INSUFFICIENT",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:55:54.359Z"
+        },
+        {
+          "state_id": "state_4186914d-6dea-410f-9b42-2e20215e2aac",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 9.56,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 287,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:57:13.044Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_fbad1b4e-99cb-468f-b7d2-82e9ac6c69d5",
+          "start_s": 15.63,
+          "end_s": 18.55,
+          "reason": "被箱子遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test6",
+      "source_sha256": "f9a1fa3339003495d1f636495cd3a0108e03bc31aa227ba5ffbad98fe1c0a9e6",
+      "source_duration_s": 33.114999999999995,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_0ab9f636-075f-43ab-9d40-0be4fd4ccc41",
+          "start_s": 0,
+          "end_s": 33.114999999999995,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_4ccbae05-39e4-4b2b-b051-e36a0d8249fd",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 11.76,
+          "end_s": 13.82,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            11.359379
+          ],
+          "after_evidence_times_s": [
+            13.82
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:00:07.710Z"
+        },
+        {
+          "event_id": "event_c224970d-1ec0-440f-8ef0-4dd2ab76326a",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 23.02,
+          "end_s": 25.44,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            22.278148
+          ],
+          "after_evidence_times_s": [
+            26.382665
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:01:10.267Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_0b6ffefd-dd07-4119-9c32-8035384a0bc1",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 7.04,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 211,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T14:59:32.431Z"
+        },
+        {
+          "state_id": "state_1ac8bcc3-2d5e-4705-abd5-14aee7f5b9e5",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 21.24,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 637,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:00:35.397Z"
+        }
+      ],
+      "uncertain_intervals": [],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test7",
+      "source_sha256": "c9c607bff707404120cd9e83e37aab2304b58bf2141477a1f96ba48560eba881",
+      "source_duration_s": 43.879999999999995,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_858e1967-574e-49bb-b8ec-46ec9e5a38c4",
+          "start_s": 0,
+          "end_s": 43.879999999999995,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_4cb2d5dc-7e97-4f28-aba1-9ec61fb7318b",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 11.91,
+          "end_s": 13.94,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            10.524857
+          ],
+          "after_evidence_times_s": [
+            14.41396
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:02:37.612Z"
+        },
+        {
+          "event_id": "event_d5eee868-4fa7-4121-843e-02e3a419df2f",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 25.89,
+          "end_s": 32.44,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "UNKNOWN",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "PARTIALLY_OCCLUDED",
+          "before_evidence_times_s": [
+            24.676
+          ],
+          "after_evidence_times_s": [
+            33.500849
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:03:54.609Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_34f4f5a4-802f-4d6f-9fa7-0c7b9fb259f6",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 5.39,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 161,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:01:58.020Z"
+        },
+        {
+          "state_id": "state_76e4b2ba-daac-4c19-965a-81661d539bc1",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 24.23,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 727,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:02:57.593Z"
+        },
+        {
+          "state_id": "state_81360e5f-df0e-4a68-8c55-88f394d1c749",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 38.28,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 1148,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "UNKNOWN",
+          "visibility": "PARTIALLY_OCCLUDED",
+          "evidence_certainty": "UNCERTAIN",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:04:22.620Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_bd7554e4-5ff5-4e64-96e9-7c84917f0a57",
+          "start_s": 32.09,
+          "end_s": 38.51,
+          "reason": "被玩偶遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test8",
+      "source_sha256": "932b70d6ece1c5b3149321bfd9d633d78da5c1961d88dbf1b06311b5eb9bdee4",
+      "source_duration_s": 36.769999999999996,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_45bc4bbd-c688-4574-bf7a-9a331e3c1bd4",
+          "start_s": 0,
+          "end_s": 36.769999999999996,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_71b8002d-8e6f-4067-85ab-07a4e1a1f3b2",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 14.34,
+          "end_s": 16.55,
+          "before_state": "ON_SURFACE",
+          "after_state": "UNKNOWN",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "NOT_VISIBLE",
+          "before_evidence_times_s": [
+            13.934225
+          ],
+          "after_evidence_times_s": [
+            16.558439
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:06:16.853Z"
+        },
+        {
+          "event_id": "event_843344e4-fe22-45e3-9563-fa9b049d4277",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 29.7,
+          "end_s": 30.7,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            29.252437
+          ],
+          "after_evidence_times_s": [
+            31.621556
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:07:21.517Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_889b58cb-1d0a-49c6-9692-9c153d1ddb83",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 6.84,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 205,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "ON_SURFACE",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:05:30.053Z"
+        },
+        {
+          "state_id": "state_b37ed66a-eccb-4150-99c6-84297ba19151",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 28.7,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 861,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:06:39.160Z"
+        }
+      ],
+      "uncertain_intervals": [],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    },
+    {
+      "video_id": "test9",
+      "source_sha256": "29ac3d80e79207c6e0b1fa0f2bbd62bb22cd9aa62f9fcd1dceba0649fbee5e12",
+      "source_duration_s": 40.00833333333333,
+      "assigned": true,
+      "review_status": "EXHAUSTIVELY_REVIEWED",
+      "reviewed_intervals": [
+        {
+          "interval_id": "interval_0e2e3dce-21f1-4a38-9651-fddb50c6e0fd",
+          "start_s": 0,
+          "end_s": 40.00833333333333,
+          "notes": "Reviewer explicitly marked full timeline reviewed."
+        }
+      ],
+      "events": [
+        {
+          "event_id": "event_ab2139d5-087b-4eb7-9bbc-9cd1680fb6d1",
+          "type": "PICKUP",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 20.04,
+          "end_s": 20.45,
+          "before_state": "ON_SURFACE",
+          "after_state": "HELD_BY_PERSON",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "VISIBLE",
+          "before_evidence_times_s": [
+            19.234117
+          ],
+          "after_evidence_times_s": [
+            20.73
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:09:22.077Z"
+        },
+        {
+          "event_id": "event_fc4c5e9b-39c2-470b-bef1-9f24623baa98",
+          "type": "PLACEMENT",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "start_s": 29.06,
+          "end_s": 30.65,
+          "before_state": "HELD_BY_PERSON",
+          "after_state": "ON_SURFACE",
+          "before_visibility": "VISIBLE",
+          "after_visibility": "PARTIALLY_OCCLUDED",
+          "before_evidence_times_s": [
+            28.303585
+          ],
+          "after_evidence_times_s": [
+            31.144211
+          ],
+          "target_identity_certainty": "UNKNOWN",
+          "evidence_certainty": "UNCERTAIN",
+          "visibility_limitations": "",
+          "notes": "",
+          "updated_at": "2026-10-19T15:10:20.870Z"
+        }
+      ],
+      "states": [
+        {
+          "state_id": "state_99f8f749-c7ed-42f1-89ee-eda11f48fe4e",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 6.87,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 206,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:08:16.680Z"
+        },
+        {
+          "state_id": "state_a3cb5e0b-8773-47a9-bf85-f495aa496d0b",
+          "object_category": "Phone",
+          "local_instance_id": "UNKNOWN",
+          "source_time_s": 26.94,
+          "source_frame_index": null,
+          "nearest_source_frame_index": 808,
+          "timing_precision": "HTML5_TIMESTAMP_APPROXIMATE",
+          "physical_state": "HELD_BY_PERSON",
+          "visibility": "VISIBLE",
+          "evidence_certainty": "CONFIRMED",
+          "target_identity_certainty": "UNKNOWN",
+          "notes": "",
+          "updated_at": "2026-10-19T15:09:40.943Z"
+        }
+      ],
+      "uncertain_intervals": [
+        {
+          "uncertainty_id": "uncertainty_141bde64-cf9e-4568-b1a1-7658b97ba924",
+          "start_s": 28.4,
+          "end_s": 31.14,
+          "reason": "被物件遮擋",
+          "could_conceal_event": true,
+          "identity_uncertain": true
+        }
+      ],
+      "coverage_attestations": {
+        "entire_timeline_reviewed": true,
+        "all_pickup_placement_annotated": true,
+        "all_uncertainty_recorded": true,
+        "identity_not_guessed": true,
+        "no_unobservable_gap": true,
+        "target_association_resolved": true
+      },
+      "event_list_exhaustiveness": "NOT_ATTESTED",
+      "notes": ""
+    }
+  ]
+}

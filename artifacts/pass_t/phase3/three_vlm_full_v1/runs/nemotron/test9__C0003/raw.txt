@@ -1,0 +1,59 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "basketball",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0002",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0003",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0004",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0005",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0006",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0007",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "smartphone",
+      "states": [
+        {
+          "frame": "F0002",
+          "state": "ON_SURFACE"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "basketball",
+      "before_frames": ["F0001", "F0002", "F0003", "F0004", "F0005", "F0006", "F0007"],
+      "after_frames": ["F0008"]
+    }
+  ]
+}

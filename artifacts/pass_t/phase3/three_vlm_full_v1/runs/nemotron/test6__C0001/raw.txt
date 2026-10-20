@@ -1,0 +1,39 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "basketball",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0005",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "remote control",
+      "states": [
+        {
+          "frame": "F0005",
+          "state": "HELD_BY_PERSON"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "remote control",
+      "before_frames": ["F0005"],
+      "after_frames": ["F0008"]
+    }
+  ]
+}

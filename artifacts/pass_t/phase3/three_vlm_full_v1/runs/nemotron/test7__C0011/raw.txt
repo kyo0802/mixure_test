@@ -1,0 +1,39 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "stuffed animal",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "cell phone",
+      "states": [
+        {
+          "frame": "F0002",
+          "state": "HELD_BY_PERSON"
+        },
+        {
+          "frame": "F0007",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "cell phone",
+      "before_frames": ["F0002"],
+      "after_frames": ["F0007"]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "frames": [
+    {
+      "alias": "F0001",
+      "source_frame_index": 600,
+      "native_pts_s": 20.01,
+      "native_pts": 12006,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000600.png",
+      "sha256": "219b343fae9f51d4370b24d60d316d649cabeb2ec5ef96062977290fc8fd1d69"
+    },
+    {
+      "alias": "F0002",
+      "source_frame_index": 617,
+      "native_pts_s": 20.576666666666668,
+      "native_pts": 12346,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000617.png",
+      "sha256": "e4293fa10ac215f434a405b480fe555ebd8c399a0ea85364ba03f8c28bc61a34"
+    },
+    {
+      "alias": "F0003",
+      "source_frame_index": 634,
+      "native_pts_s": 21.143333333333334,
+      "native_pts": 12686,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000634.png",
+      "sha256": "a97d5e0efa892b30907d4edad783283edbe718df6c9303fb2bdbaf7461f164b4"
+    },
+    {
+      "alias": "F0004",
+      "source_frame_index": 651,
+      "native_pts_s": 21.71,
+      "native_pts": 13026,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000651.png",
+      "sha256": "61de6605b470073755dcf474844daa00acc459663248a0801d61c5ec3a386828"
+    },
+    {
+      "alias": "F0005",
+      "source_frame_index": 668,
+      "native_pts_s": 22.276666666666667,
+      "native_pts": 13366,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000668.png",
+      "sha256": "030c330e67325e3eee70d30f0efe0d4e08103f034ac0fdd5a737eafc684e6084"
+    },
+    {
+      "alias": "F0006",
+      "source_frame_index": 685,
+      "native_pts_s": 22.843333333333334,
+      "native_pts": 13706,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000685.png",
+      "sha256": "36e327f441161fe9a9498d5036e7169ed90735e9174e2115627d677f918a6d96"
+    },
+    {
+      "alias": "F0007",
+      "source_frame_index": 702,
+      "native_pts_s": 23.41,
+      "native_pts": 14046,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000702.png",
+      "sha256": "24563745913f0454f90deb64a5652faf71b1b179e397084deae23a386a608bab"
+    },
+    {
+      "alias": "F0008",
+      "source_frame_index": 719,
+      "native_pts_s": 23.97833333333333,
+      "native_pts": 14387,
+      "time_base": "1/600",
+      "path": "artifacts/pass_t/phase3/three_vlm_full_v1/frames/test1/S000719.png",
+      "sha256": "953706d4d7ab9698974b3f415b3e4bce47946f87a9fe23dfd5b8deab2e413a7b"
+    }
+  ],
+  "array_shape": [
+    8,
+    720,
+    1280,
+    3
+  ],
+  "array_sha256": "3753143e32121607cf055dbcbbdbcf2da4f62c855ab8a3858c3fc42a862f7331",
+  "hf_video_tensor_shape": [
+    8,
+    3,
+    512,
+    512
+  ],
+  "submitted_frames": 8,
+  "hf_preview_consumed_frames": 8,
+  "processor_class": "NanoNemotronVLProcessor",
+  "rendered_text": "<s><SPECIAL_10>System\nYou analyze chronological visual observations using only visible evidence. Return one JSON object, without markdown or extra text.\n<SPECIAL_11>User\n<video>\nVideo frame 1 corresponds exactly to alias F0001, authoritative native source PTS 20.010000000 seconds.\nVideo frame 2 corresponds exactly to alias F0002, authoritative native source PTS 20.576666667 seconds.\nVideo frame 3 corresponds exactly to alias F0003, authoritative native source PTS 21.143333333 seconds.\nVideo frame 4 corresponds exactly to alias F0004, authoritative native source PTS 21.710000000 seconds.\nVideo frame 5 corresponds exactly to alias F0005, authoritative native source PTS 22.276666667 seconds.\nVideo frame 6 corresponds exactly to alias F0006, authoritative native source PTS 22.843333333 seconds.\nVideo frame 7 corresponds exactly to alias F0007, authoritative native source PTS 23.410000000 seconds.\nVideo frame 8 corresponds exactly to alias F0008, authoritative native source PTS 23.978333333 seconds.\nVideo frame positions are ordinal selected frames; use the supplied native source PTS mapping.\nAnalyze the supplied chronological source frames. Identify relevant movable objects using generic descriptions. For each object, report directly observable physical states and its relation to a supporting surface or person. ON_SURFACE means visibly supported by a surface; HELD_BY_PERSON means visibly held by a person. Use OTHER for a visible state outside these categories and UNKNOWN when visibility or support is insufficient. Do not infer continued holding, existence, nonexistence, or manipulation from disappearance or occlusion. Do not equate camera motion with object motion. Similar appearance alone does not establish the same physical instance.\nFirst record observations, then propose only visibly supported PICKUP (surface to held) or PLACEMENT (held to surface) transitions. Events are optional. Cite only the supplied aliases; do not invent intermediate aliases or exact event times. Each state entry refers to exactly one supplied frame. Use each alias at most once per object and keep states chronological. Event object descriptions must exactly match an observation; before/after references must cite its corresponding observed states. Omit unsupported transitions and use UNCERTAIN if evidence cannot establish a conclusion. NO_CONFIRMED_EVENT means no transition was established from these samples, not an exhaustive negative claim. Keep the response compact. Always include status, observations, and events (an empty list if none).\nRequired JSON schema:\n{\"additionalProperties\": false, \"properties\": {\"events\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"after_frames\": {\"items\": {\"type\": \"string\"}, \"minItems\": 1, \"type\": \"array\", \"uniqueItems\": true}, \"before_frames\": {\"items\": {\"type\": \"string\"}, \"minItems\": 1, \"type\": \"array\", \"uniqueItems\": true}, \"object\": {\"minLength\": 1, \"type\": \"string\"}, \"type\": {\"enum\": [\"PICKUP\", \"PLACEMENT\"]}}, \"required\": [\"type\", \"object\", \"before_frames\", \"after_frames\"], \"type\": \"object\"}, \"type\": \"array\"}, \"observations\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"object\": {\"minLength\": 1, \"type\": \"string\"}, \"states\": {\"items\": {\"additionalProperties\": false, \"properties\": {\"frame\": {\"type\": \"string\"}, \"state\": {\"enum\": [\"ON_SURFACE\", \"HELD_BY_PERSON\", \"OTHER\", \"UNKNOWN\"]}}, \"required\": [\"frame\", \"state\"], \"type\": \"object\"}, \"maxItems\": 8, \"minItems\": 1, \"type\": \"array\"}}, \"required\": [\"object\", \"states\"], \"type\": \"object\"}, \"type\": \"array\"}, \"status\": {\"enum\": [\"EVENTS\", \"NO_CONFIRMED_EVENT\", \"UNCERTAIN\"]}}, \"required\": [\"status\", \"observations\", \"events\"], \"type\": \"object\"}\n<SPECIAL_11>Assistant\n<think></think>",
+  "dataset_freeze_sha256": "dffa0aa2ee2e993639fabe052adb46270149df553b57595c24df38a55d25cf3a",
+  "temporal_positions": "NATIVE_SOURCE_PTS_EXPLICIT_IN_TEXT; ENGINE_TIMESTAMPS_ROUNDED_FROM_RECORDED_SOURCE_FPS",
+  "video_pruning_rate": 0,
+  "engine_worker_attention_trace_available": false
+}

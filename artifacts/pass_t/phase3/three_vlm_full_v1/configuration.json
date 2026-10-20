@@ -1,0 +1,192 @@
+{
+  "models": {
+    "qwen": {
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "model_path": ".models/Qwen2.5-VL-7B-Instruct",
+      "quantization": "EXISTING_NF4_BF16",
+      "representation": "8_CHRONOLOGICAL_IMAGES",
+      "processor_max_pixels": 200704
+    },
+    "videollama": {
+      "model": "DAMO-NLP-SG/VideoLLaMA3-7B",
+      "revision": "d5b763e368861e7f5096e7ff1b49f92fbccf8ae6",
+      "model_path": ".models/VideoLLaMA3-7B",
+      "quantization": "EXISTING_LANGUAGE_NF4_VISION_BF16",
+      "representation": "8_CHRONOLOGICAL_IMAGES",
+      "preprocessing": {
+        "max_visual_tokens_total": 4096,
+        "min_visual_tokens": 16,
+        "image_merge_size": 1
+      }
+    },
+    "nemotron": {
+      "repository": "nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-NVFP4-QAD",
+      "revision": "16853d6c682223e967d5622c99d0082cb994b771",
+      "license": "nvidia-open-model-license",
+      "variant": "OFFICIAL_NVFP4_QAD_12B_VL",
+      "vllm_version": "0.31.0",
+      "files": [
+        {
+          "name": ".gitattributes",
+          "bytes": 1570
+        },
+        {
+          "name": "README.md",
+          "bytes": 12512
+        },
+        {
+          "name": "bias.md",
+          "bytes": 2891
+        },
+        {
+          "name": "chat_template.jinja",
+          "bytes": 8616
+        },
+        {
+          "name": "config.json",
+          "bytes": 11419
+        },
+        {
+          "name": "configuration.py",
+          "bytes": 2291
+        },
+        {
+          "name": "configuration_nemotron_h.py",
+          "bytes": 12176
+        },
+        {
+          "name": "configuration_radio.py",
+          "bytes": 5693
+        },
+        {
+          "name": "evs.py",
+          "bytes": 2917
+        },
+        {
+          "name": "explainability.md",
+          "bytes": 3363
+        },
+        {
+          "name": "generation_config.json",
+          "bytes": 158
+        },
+        {
+          "name": "hf_quant_config.json",
+          "bytes": 457
+        },
+        {
+          "name": "image_processing.py",
+          "bytes": 5548
+        },
+        {
+          "name": "llama_nemotron_toolcall_parser_no_streaming.py",
+          "bytes": 21381
+        },
+        {
+          "name": "model-00001-of-00003.safetensors",
+          "bytes": 4995144200
+        },
+        {
+          "name": "model-00002-of-00003.safetensors",
+          "bytes": 4998153184
+        },
+        {
+          "name": "model-00003-of-00003.safetensors",
+          "bytes": 607688368
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "bytes": 115263
+        },
+        {
+          "name": "modeling.py",
+          "bytes": 12945
+        },
+        {
+          "name": "modeling_nemotron_h.py",
+          "bytes": 78656
+        },
+        {
+          "name": "nano_v2_inference_chat_template.jinja",
+          "bytes": 5472
+        },
+        {
+          "name": "nano_v2_llm_template.jinja",
+          "bytes": 2935
+        },
+        {
+          "name": "non_reasoning_nano_v2_inference_chat_template.jinja",
+          "bytes": 4748
+        },
+        {
+          "name": "preprocessor_config.json",
+          "bytes": 518
+        },
+        {
+          "name": "privacy.md",
+          "bytes": 2765
+        },
+        {
+          "name": "processing.py",
+          "bytes": 14218
+        },
+        {
+          "name": "processing_utils.py",
+          "bytes": 3018
+        },
+        {
+          "name": "safety.md",
+          "bytes": 2943
+        },
+        {
+          "name": "special_tokens_map.json",
+          "bytes": 422
+        },
+        {
+          "name": "tokenizer.json",
+          "bytes": 17079976
+        },
+        {
+          "name": "tokenizer_config.json",
+          "bytes": 185845
+        },
+        {
+          "name": "video_io.py",
+          "bytes": 6831
+        }
+      ],
+      "runtime": "LINUX_WSL2_VLLM_MODELOPT_FP4",
+      "video_policy": "8_EXACT_SOURCE_FRAMES_NO_PRUNING",
+      "weights_bf16_fallback": false,
+      "model_path": ".models/Nemotron-Nano-12B-v2-VL-NVFP4-QAD",
+      "quantization": "OFFICIAL_MODELOPT_NVFP4",
+      "representation": "OFFICIAL_VIDEO_ARRAY_8_FRAMES",
+      "video_pruning_rate": 0,
+      "max_model_len": 8192,
+      "gpu_memory_utilization": 0.85,
+      "max_num_seqs": 1
+    }
+  },
+  "generation": {
+    "do_sample": false,
+    "seed": 42,
+    "max_new_tokens": 1536,
+    "timeout_seconds": 300
+  },
+  "evaluation": {
+    "interval_tolerances_seconds": [
+      0,
+      0.2,
+      0.5
+    ],
+    "primary_tolerance_seconds": 0.2,
+    "physical_brackets_are_not_event_duration": true,
+    "event_matching": "SAME_HUMAN_REVIEWED_OBJECT_ID_AND_TYPE; ONE_TO_ONE_MAXIMUM_CARDINALITY",
+    "cross_window_dedup": "SAME_REVIEWED_OBJECT_TYPE_OVERLAPPING_CITATION_BRACKETS; REVIEW_REQUIRED_WHEN_SEPARATE_EVENTS_CANNOT_BE_DISAMBIGUATED",
+    "unknown_unreviewed_labels": "EXCLUDED_NOT_NEGATIVE"
+  },
+  "quality_retries": 0,
+  "graph_writes": false,
+  "target_reference": "NONE"
+}

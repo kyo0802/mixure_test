@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-17T08:35:43.834911+00:00",
+  "components": {
+    "scripts/run_phase3_observation_ablation.py": "fb25f791ad9a3b2196ec1dbad7018d735b79f12bd49716401502559ca48db7e9",
+    "src/memory_graph/pass_t/phase2b/local_vlm/nf4.py": "fc15d9012a3a992e4dcb9e66a3b458b242c319b1efe5f4d30dae19b81364547b",
+    "src/memory_graph/pass_t/phase2b/local_vlm/qwen_contract.py": "6e52a2be7847ccb6c8e5f04bb7a229ded18d74908268967370169a5d42e1f397",
+    "artifacts/pass_t/phase2b/qwen_nf4_v1d_synthetic_regression/20261015_e9dcef2c/model_assets.json": "1a3ca15c7cd73641d32b0ec8231ada36d257f73609426c28093c32c390b1e384",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_b_higher_detail/configuration.json": "eb1aa467604069518f80b8322e97b0d36e06d416f6f4ace3c0d1e1c77f1f8856",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_b_higher_detail/prompt.json": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_b_higher_detail/schema.json": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_c_state_first/configuration.json": "d450d98a7c455f8aea8e15be6d09d31bdbdb2509db4bf24473a2fc61404f6bed",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_c_state_first/prompt.json": "ef69002cd66cf61f1448fa741cbf52f4f712d5d7b5ac09fcea0c1d1f1061da1b",
+    "artifacts/pass_t/phase3/observation_ablation_v1/condition_c_state_first/schema.json": "6c929159a5259a82ee9312fe839d3d1cd12fc7bd1cbe8929f730495270599730"
+  },
+  "maximum_new_generations": 4,
+  "order": [
+    "B_A",
+    "B_B",
+    "C_A",
+    "C_B"
+  ],
+  "source_authorization_sha256": "eff77bfe3fc0b373e6064e7b97baadc51677b8624f10a0f09a5c1867b74cde31",
+  "baseline_reexecuted": false,
+  "future_models_authorized": false,
+  "evaluation_rubric": [
+    "target",
+    "state",
+    "temporal",
+    "event",
+    "wrong_target",
+    "uncertainty",
+    "structure"
+  ],
+  "qualitative_extraction_policy": "Exact single outer fence body may be JSON-read in a separately labeled non-authoritative record; never feeds strict validation or repairs missing fields"
+}

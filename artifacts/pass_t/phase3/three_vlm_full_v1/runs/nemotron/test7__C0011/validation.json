@@ -1,0 +1,58 @@
+{
+  "raw": {
+    "json_valid": true,
+    "schema_valid": true,
+    "citation_valid": true,
+    "semantic_valid": false,
+    "full_valid": false,
+    "parsed": {
+      "status": "EVENTS",
+      "observations": [
+        {
+          "object": "stuffed animal",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0008",
+              "state": "ON_SURFACE"
+            }
+          ]
+        },
+        {
+          "object": "cell phone",
+          "states": [
+            {
+              "frame": "F0002",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0007",
+              "state": "HELD_BY_PERSON"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "PICKUP",
+          "object": "cell phone",
+          "before_frames": [
+            "F0002"
+          ],
+          "after_frames": [
+            "F0007"
+          ]
+        }
+      ]
+    },
+    "errors": [
+      "EVENT_STATE_CITATIONS_INCONSISTENT"
+    ]
+  },
+  "normalized_body": null,
+  "physical_evidence_validity": "UNREVIEWED_NOT_INFERRED_FROM_CONTRACT",
+  "invalid_is_not_no_event": true
+}

@@ -1,10 +1,47 @@
 # VLMtest
 
-更新：2026-10-18。最新工作：**離線人工 GT 標註工具完成**。
+更新：2026-10-20。最新工作：**Phase 4 Nemotron → 既有 Memory Graph → Object Search recorded integration 完成**。
 
 **[最新完整報告](LATEST_REPORT.md)** · [目前結論與下一步](LATEST_DECISIONS.md) · [回到工作區](../README.md)
 
-## 人工標註工具
+## Phase 4：目前入口
+
+- [目前版本進度與 GitHub 保存範圍](VERSION_STATUS.md)
+
+- **[最新中文整合報告](LATEST_REPORT.md)**：實作、限制、架構與重播指令。
+- [九片端到端 Demo 摘要](../../artifacts/phase4/demo/DEMO.md)
+- [真實執行與來源 hash](../../artifacts/phase4/demo/run_receipt.json)
+- [test1 Graph](../../artifacts/phase4/demo/test1/memory_graph.json) · [事件決策](../../artifacts/phase4/demo/test1/event_decisions.json) · [手機搜尋](../../artifacts/phase4/demo/test1/search_result.json)
+- [22 項 CPU 測試](../../artifacts/phase4/cpu_tests.txt)
+
+184 份既有 Nemotron 回應、8,163 筆 CV 觀察已接入隔離 Graph。143 筆假說：0 SUPPORTED、53 REJECTED、90 UNCERTAIN。九片搜尋皆 UNKNOWN：尚缺可授權的 VLM-to-CV 實例關聯、獨立 physical-state 與具名 location 量測。沒有用 AI review verdict 當 runtime GT，沒有新推論或 production Graph 寫入。
+
+## 歷史：原片 AI 裁決與局部模型比較
+
+不需要填 CSV。依 owner 委託檢視原片採樣序列，保留 15 個可見轉換（8 拿起、7 放下），13 組物理事件不確定，另 6 組接觸／鏡頭移動／遮擋描述。原始人工標註不變，AI 裁決獨立存放，不冒充人工 GT。
+
+- [中文逐組裁決與模型比較](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/AI_VISUAL_ADJUDICATION_REPORT.md)：點選證據連結即可查看原片影格。
+- [39 筆模型引用前後畫面複核](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/MODEL_CITATION_REVIEW.md)
+- [AI 正事件參考 JSON](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/final_gt.json)
+- [完整裁決與原始 event ID](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/adjudication_decisions.json)
+- [最後驗證與檔案清單](../../artifacts/vlmtest/gt_consolidation_v1/ai_visual_review/final_review_receipt.json)
+
+既有 552 次推論全部沿用。正事件子集去重後，引用支持：Qwen 1、VideoLLaMA3 0、Nemotron 9；strict-valid 支持：0、0、7。這不是正式 precision／recall／F1；沒有充分完備負例範圍，其餘 128 筆候選尚未視覺裁決。2,235 個保留檔案驗證通過，21 項 CPU 測試通過。
+
+## 歷史：原始 owner CSV 工作流程
+
+53 筆原始紀錄已對齊成 34 組；552 筆模型輸出 hash 已核對，21 項 CPU 測試通過。兩人全片皆 NOT_ATTESTED，尚無自動負例資格。
+
+- **[主裁決 CSV：34 組](../../artifacts/vlmtest/gt_consolidation_v1/adjudication.csv)**
+- **[局部 coverage 裁決：41 段](../../artifacts/vlmtest/gt_consolidation_v1/coverage_adjudication.csv)**
+- [逐欄填寫說明與兩條後續指令](../../artifacts/vlmtest/gt_consolidation_v1/EDITING_GUIDE.md)
+- [只讀兩人對齊](../../artifacts/vlmtest/gt_consolidation_v1/gt_alignment.csv)
+- [既有模型假說獨立審閱表](../../artifacts/vlmtest/gt_consolidation_v1/prediction_review.csv)（人工 GT 裁決後才看；可只審欲評分區間）
+- [格式統計與評估限制](../../artifacts/vlmtest/gt_consolidation_v1/evaluation_readiness/THREE_VLM_COMPARATIVE_REPORT.md)
+
+以上為原先人工工作表，原件保留未覆寫；目前入口以最新中文報告為準。身分、時間、去重或 coverage 尚未審定的模型假說保留未評分。
+
+## 既有人工標註工具
 
 | 找什麼 | 入口 |
 |---|---|

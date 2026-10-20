@@ -1,0 +1,97 @@
+{
+  "raw": {
+    "json_valid": true,
+    "schema_valid": false,
+    "citation_valid": null,
+    "semantic_valid": null,
+    "full_valid": false,
+    "parsed": {
+      "status": "EVENTS",
+      "observations": [
+        {
+          "object": "basketball",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0002",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0003",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0004",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0005",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0006",
+              "state": "OTHER"
+            },
+            {
+              "frame": "F0007",
+              "state": "OTHER"
+            },
+            {
+              "frame": "F0008",
+              "state": "OTHER"
+            }
+          ]
+        },
+        {
+          "object": "phone",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0002",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0003",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0004",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0005",
+              "state": "OTHER"
+            },
+            {
+              "frame": "F0006",
+              "state": "PLACEMENT"
+            },
+            {
+              "frame": "F0007",
+              "state": "PLACEMENT"
+            },
+            {
+              "frame": "F0008",
+              "state": "PLACEMENT"
+            }
+          ]
+        }
+      ],
+      "events": []
+    },
+    "errors": [
+      "SCHEMA:['observations', 1, 'states', 5, 'state']:'PLACEMENT' is not one of ['ON_SURFACE', 'HELD_BY_PERSON', 'OTHER', 'UNKNOWN']",
+      "SCHEMA:['observations', 1, 'states', 6, 'state']:'PLACEMENT' is not one of ['ON_SURFACE', 'HELD_BY_PERSON', 'OTHER', 'UNKNOWN']",
+      "SCHEMA:['observations', 1, 'states', 7, 'state']:'PLACEMENT' is not one of ['ON_SURFACE', 'HELD_BY_PERSON', 'OTHER', 'UNKNOWN']"
+    ]
+  },
+  "normalized_body": null,
+  "physical_evidence_validity": "UNREVIEWED_NOT_INFERRED_FROM_CONTRACT",
+  "invalid_is_not_no_event": true
+}

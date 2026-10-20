@@ -1,0 +1,39 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "white cylindrical object",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0007",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    },
+    {
+      "object": "pen",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "HELD_BY_PERSON"
+        },
+        {
+          "frame": "F0007",
+          "state": "HELD_BY_PERSON"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "white cylindrical object",
+      "before_frames": ["F0001"],
+      "after_frames": ["F0007"]
+    }
+  ]
+}

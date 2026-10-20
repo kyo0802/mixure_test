@@ -1,0 +1,267 @@
+{
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "quantization": "NF4_DOUBLE_BF16",
+  "input_token_count": 2892,
+  "context_limit": 128000,
+  "context_headroom_after_output_cap": 123572,
+  "generated_tokens": 636,
+  "last_generated_token_id": 151645,
+  "eos_token_ids": [
+    151643,
+    151645
+  ],
+  "eos_observed": true,
+  "output_cap_reached": false,
+  "generation_deadline_reached": false,
+  "generation_controls": {
+    "max_new_tokens": 1536,
+    "do_sample": false,
+    "max_time": 300
+  },
+  "seed_applied": 42,
+  "seed_guarantees_determinism": false,
+  "runtime_seconds": 15.015227500000037,
+  "prefill_first_model_forward_seconds": 0.8231717000016943,
+  "prefill_scope": "vision+first complete model forward; independent hooks/synchronize",
+  "decode_and_generation_overhead_seconds": 14.192055799998343,
+  "request_total_seconds": 15.028082200005883,
+  "peak_inference_vram_bytes": 6612990464,
+  "cpu_offload_used": false,
+  "consumed_aliases": [
+    "F0001",
+    "F0002",
+    "F0003",
+    "F0004",
+    "F0005",
+    "F0006",
+    "F0007",
+    "F0008"
+  ],
+  "grid": {
+    "grids": {
+      "image_grid_thw": [
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ],
+        [
+          1,
+          24,
+          42
+        ]
+      ]
+    },
+    "grid_derived_visual_tokens": 2016,
+    "resized_dimensions_hw": {
+      "image_grid_thw": [
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ],
+        [
+          336,
+          588
+        ]
+      ]
+    },
+    "per_grid_spatial_pixels": {
+      "image_grid_thw": [
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568,
+        197568
+      ]
+    }
+  },
+  "tensors": {
+    "input_ids": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        1,
+        2892
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 2892,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        2892,
+        1
+      ],
+      "canonical_sha256": "9a3f0e3ef56a5cf7ef41e01468f6f04996f73711458cb39daed7a7a548e3aab5",
+      "raw_le_c_sha256": "86bade6ce757c53e3b04b34439421e8286887a22d8f5a23309b144bfcb17e017"
+    },
+    "attention_mask": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        1,
+        2892
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 2892,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        2892,
+        1
+      ],
+      "canonical_sha256": "044cbbd98ace1ac9e7eb00c643fc01ccd0bdc339bafbdb039151805a99c05c92",
+      "raw_le_c_sha256": "47eee601686a0ea7c5ca2b46d7624a6c4389d0f84d7284443038009764b82dd1"
+    },
+    "pixel_values": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<f4",
+      "shape": [
+        8064,
+        1176
+      ],
+      "torch_dtype": "torch.float32",
+      "device": "cpu",
+      "numel": 9483264,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        1176,
+        1
+      ],
+      "canonical_sha256": "c3206da17f3deb0c54c0042798482459351ed7beaa8551395f4b99e09be0fa0b",
+      "raw_le_c_sha256": "63588fff55ead236bdcaa5fe7ee55b486f042f54fa860cdfb80d8ef42b01cff9"
+    },
+    "image_grid_thw": {
+      "serialization": "TENSOR_LE_C_V1",
+      "dtype": "<i8",
+      "shape": [
+        8,
+        3
+      ],
+      "torch_dtype": "torch.int64",
+      "device": "cpu",
+      "numel": 24,
+      "layout": "torch.strided",
+      "contiguous": true,
+      "strides": [
+        3,
+        1
+      ],
+      "canonical_sha256": "59a3a13973ede718afec4964aa26ca6723e87a53aa3f55ba7dd01bd3b6504712",
+      "raw_le_c_sha256": "4454859fa2a5db1e4108fd0008014f976b123e1c3ce23359eefdc7bdbfa539d3"
+    }
+  },
+  "source_dimensions": [
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "effective_temporal_representation": "INDEPENDENT_CHRONOLOGICAL_IMAGES",
+  "baseline_id": "QWEN25_VL_7B_INSTRUCT_NF4_BF16_SDPA",
+  "real_model": true,
+  "peak_reserved_bytes": 7369392128,
+  "gpu_free_total_bytes": [
+    8182038528,
+    17066033152
+  ],
+  "elapsed_s": 15.015227500000037,
+  "eos_reached": true,
+  "token_cap_reached": false,
+  "timeout_reached": false,
+  "resources": {
+    "process_rss_gib": 4.091815948486328,
+    "free_ram_gib": 12.736457824707031,
+    "gpu_allocated_gib": 5.538586139678955,
+    "gpu_reserved_gib": 6.86328125,
+    "gpu_peak_allocated_gib": 6.158827304840088
+  }
+}

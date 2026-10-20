@@ -1,0 +1,531 @@
+{
+  "built_utc": "2026-10-17T08:45:27.373164+00:00",
+  "recommendation": "STATE_FIRST_IS_PROMISING",
+  "recommendation_scope": "Partial state-observation signal only; event and structure remain unresolved",
+  "author": "assistant qualitative review, NOT new human adjudication",
+  "source_human_reviews_consulted_after_all_four_calls": true,
+  "existing_human_review_summary": {
+    "supported_physical_event_calls": [
+      3,
+      8,
+      10
+    ],
+    "wrong_target_calls": [
+      1,
+      4
+    ],
+    "no_new_labels": true
+  },
+  "baseline_reexecuted": false,
+  "records": [
+    {
+      "condition": "A",
+      "window": "test5__W05",
+      "call": "A",
+      "raw_path": "artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_A_raw.txt",
+      "raw_sha256": "e9bdf8df96058e54edb9c0d8506ee63497e5891ff3e925f67dbfc35420cee778",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "EVENTS",
+          "events": [
+            {
+              "target": "phone",
+              "before_state": "ON_SURFACE",
+              "after_state": "HELD_BY_PERSON",
+              "before_frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047"
+              ],
+              "after_frames": [
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "event_type": "PICKUP",
+              "evidence": "The phone transitions from being on the table to being held by a hand.",
+              "uncertainty": "NONE"
+            }
+          ],
+          "notes": "",
+          "other_objects": [
+            {
+              "target": "basketball",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            },
+            {
+              "target": "box",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            }
+          ]
+        },
+        "body_schema_errors": [
+          {
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "phone在事件文字中辨認正確",
+        "state": "ON_SURFACE→HELD_BY_PERSON的主要脈絡合理",
+        "temporal": "F0062/F0077有用；F0093已遮擋，HELD不能單靠該格確認",
+        "event": "raw文字提出PICKUP；不構成有效結構化預測",
+        "wrong_target": "未將球或card說成被拿起；其他物件否定僅限可見影格",
+        "uncertainty": "NONE對箱口遮擋過於肯定",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    },
+    {
+      "condition": "A",
+      "window": "test7__W05",
+      "call": "B",
+      "raw_path": "artifacts/pass_t/phase3/vlm_physical_state_pilot_v1/call_B_raw.txt",
+      "raw_sha256": "117dd0ca7fbc94521a47329301e5945021a0087e7b3b67d6ca8b7c521fdd2e0e",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "notes": "The sequence shows a person interacting with a phone on a table but does not show the phone being picked up or placed down."
+        },
+        "body_schema_errors": [
+          {
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "notes提phone，未提出操作物件事件",
+        "state": "沒有before/after狀態",
+        "temporal": "沒有引用",
+        "event": "raw文字否認pickup，與F0031/F0046及既有人工事件說明不符",
+        "wrong_target": "未宣稱球pickup，但不等於正確辨別操作物",
+        "uncertainty": "以無事件而非不足處理可見手持後狀態",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    },
+    {
+      "condition": "B",
+      "window": "test5__W05",
+      "call": "A",
+      "raw_path": "artifacts/pass_t/phase3/observation_ablation_v1/condition_b_higher_detail/call_A_raw.txt",
+      "raw_sha256": "c0f0eb785844421bdb512b779222c0d16fdba82402f0f752dea66770537c75c9",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "EVENTS",
+          "events": [
+            {
+              "target": "phone",
+              "before_state": "ON_SURFACE",
+              "after_state": "HELD_BY_PERSON",
+              "before_frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047"
+              ],
+              "after_frames": [
+                "F0077",
+                "F0093"
+              ],
+              "event_type": "PICKUP",
+              "evidence": "The phone transitions from being on the table to being held by a hand.",
+              "uncertainty": "NONE"
+            }
+          ],
+          "notes": "",
+          "other_objects": [
+            {
+              "target": "basketball",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            },
+            {
+              "target": "box",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            }
+          ]
+        },
+        "body_schema_errors": [
+          {
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "phone事件辨認與A相同",
+        "state": "主要ON_SURFACE→HELD描述合理，沒有明確改善",
+        "temporal": "F0077有用，F0093仍遮擋；反而未引用明確手持的F0062",
+        "event": "raw文字提出PICKUP，仍strict-invalid",
+        "wrong_target": "未提出球/card pickup；不能據此宣稱全面grounding成功",
+        "uncertainty": "NONE保留，遮擋引用仍過於肯定",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    },
+    {
+      "condition": "B",
+      "window": "test7__W05",
+      "call": "B",
+      "raw_path": "artifacts/pass_t/phase3/observation_ablation_v1/condition_b_higher_detail/call_B_raw.txt",
+      "raw_sha256": "6f9fcd2db343c0e2682ba088a60324234fcba9fc705974a152632eb6488ca976",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "notes": "The video does not show any clear evidence of a person picking up or placing down an object."
+        },
+        "body_schema_errors": [
+          {
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "未辨認操作物件，只否認清楚事件",
+        "state": "沒有狀態觀察",
+        "temporal": "沒有引用",
+        "event": "pickup omission持續；不能計成有效NO_EVENT或正式FN",
+        "wrong_target": "無球pickup文字，不等於完成phone/ball辨別",
+        "uncertainty": "沒有UNCERTAIN，仍文字否認可見事件",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    },
+    {
+      "condition": "C",
+      "window": "test5__W05",
+      "call": "A",
+      "raw_path": "artifacts/pass_t/phase3/observation_ablation_v1/condition_c_state_first/call_A_raw.txt",
+      "raw_sha256": "5c00642cfed11192841eb7cb825269c892fbf93b56762e37fc0627a545a7db83",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "observations": [
+            {
+              "object": "basketball",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016",
+                    "F0032"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0047",
+                    "F0062",
+                    "F0077",
+                    "F0093",
+                    "F0108"
+                  ],
+                  "state": "UNKNOWN"
+                }
+              ],
+              "uncertainty": "The basketball's state changes between frames, but the exact transition is unclear."
+            },
+            {
+              "object": "phone",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016",
+                    "F0032"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0047",
+                    "F0062",
+                    "F0077",
+                    "F0093",
+                    "F0108"
+                  ],
+                  "state": "HELD_BY_PERSON"
+                }
+              ],
+              "uncertainty": "The phone transitions from being on the surface to being held by a person."
+            }
+          ]
+        },
+        "body_schema_errors": []
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "phone與basketball分別列出，手機狀態變化被辨認",
+        "state": "phone早期ON_SURFACE、後期HELD有局部價值；延伸至F0047及F0093/F0108欠明確可見支持",
+        "temporal": "F0062/F0077有用；F0108無清楚手機，不能假定一直HELD",
+        "event": "status仍NO_CONFIRMED_EVENT，沒有events；與自身手機transition敘述不一致",
+        "wrong_target": "無球pickup；球從F0047起列UNKNOWN，對仍可見在桌上的球過度棄判",
+        "uncertainty": "球uncertainty寫state changes缺乏明確支持，手機遮擋卻持續HELD",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    },
+    {
+      "condition": "C",
+      "window": "test7__W05",
+      "call": "B",
+      "raw_path": "artifacts/pass_t/phase3/observation_ablation_v1/condition_c_state_first/call_B_raw.txt",
+      "raw_sha256": "d4f0cad21777622e0cd67852af926235b55b262e0d5f6b07a1ca42c577cde811",
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "observations": [
+            {
+              "object": "basketball",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0031",
+                    "F0046",
+                    "F0062"
+                  ],
+                  "state": "UNKNOWN"
+                }
+              ],
+              "uncertainty": "The basketball's state after F0062 is uncertain."
+            },
+            {
+              "object": "phone",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0031",
+                    "F0046",
+                    "F0062"
+                  ],
+                  "state": "HELD_BY_PERSON"
+                }
+              ],
+              "uncertainty": "The phone's state after F0062 is held by a person."
+            }
+          ]
+        },
+        "body_schema_errors": []
+      },
+      "historical_result_not_overwritten": true,
+      "new_human_adjudication": false,
+      "common_semantic_rubric": {
+        "target": "phone在observations中辨認，與球分開",
+        "state": "F0001/F0016 ON_SURFACE、F0031/F0046 HELD有意義；F0062未清楚見到手機仍被列HELD",
+        "temporal": "F0031/F0046支持手持；F0062不能外推延續",
+        "event": "沒有PICKUP hypothesis且status仍NO_CONFIRMED_EVENT；事件層的omission未解決",
+        "wrong_target": "沒有球pickup；可見桌上球卻部分UNKNOWN，未可靠解釋球的支持狀態",
+        "uncertainty": "phone uncertainty文字並未表達遮擋疑慮，引用超出可見支持",
+        "structure": "原始JSON因Markdown fence失敗；strict結果不使用extraction"
+      }
+    }
+  ],
+  "formal_generalization_metrics": null,
+  "independent_physical_validation": false
+}

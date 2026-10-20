@@ -1,0 +1,66 @@
+{
+  "status": "EVENTS",
+  "observations": [
+    {
+      "object": "phone",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "basket",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    },
+    {
+      "object": "basket",
+      "states": [
+        {
+          "frame": "F0001",
+          "state": "ON_SURFACE"
+        },
+        {
+          "frame": "F0008",
+          "state": "ON_SURFACE"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PICKUP",
+      "object": "phone",
+      "before_frames": [
+        "F0001"
+      ],
+      "after_frames": [
+        "F0008"
+      ]
+    },
+    {
+      "type": "PLACEMENT",
+      "object": "phone",
+      "before_frames": [
+        "F0008"
+      ],
+      "after_frames": [
+        "F0001"
+      ]
+    }
+  ]
+}

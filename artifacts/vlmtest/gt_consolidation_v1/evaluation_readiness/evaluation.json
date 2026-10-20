@@ -1,0 +1,251 @@
+{
+  "ground_truth_supplied": false,
+  "final_gt_sha256": null,
+  "prediction_review_sha256": "d08a95dcb2603542ee5dee5d5a2ab19a89ba2d1da9b7e33d2f47a3f527bbd5c2",
+  "temporal_tolerances_seconds": [
+    0,
+    0.2,
+    0.5
+  ],
+  "input_preservation_verified": true,
+  "new_generations": 0,
+  "models": {
+    "qwen": {
+      "completed_calls": 184,
+      "contract": {
+        "json_valid": {
+          "pass": 0,
+          "fail": 184,
+          "not_assessable": 0
+        },
+        "schema_valid": {
+          "pass": 0,
+          "fail": 0,
+          "not_assessable": 184
+        },
+        "semantic_valid": {
+          "pass": 0,
+          "fail": 0,
+          "not_assessable": 184
+        },
+        "citation_valid": {
+          "pass": 0,
+          "fail": 0,
+          "not_assessable": 184
+        },
+        "full_valid": {
+          "pass": 0,
+          "fail": 184,
+          "not_assessable": 0
+        }
+      },
+      "event_proposals": 6,
+      "strict_event_proposals": 0,
+      "unreviewed_or_unusable_proposals": 6,
+      "state_claim_count": 2640,
+      "views": {
+        "physical_candidates": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 6
+        },
+        "strict_valid": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 6
+        }
+      },
+      "temporal_grounding_pairs_descriptive": [],
+      "wrong_target_review": {
+        "UNREVIEWED": 6
+      },
+      "state_evidence_review": {
+        "UNREVIEWED": 6
+      },
+      "internal_state_consistency": {
+        "raw_calls_flagged_event_state_citations_inconsistent": 0,
+        "fence_body_calls_flagged_event_state_citations_inconsistent": 4,
+        "physical_correctness_not_inferred": true
+      },
+      "native_citation_bounds": {
+        "ordered": 6,
+        "missing_or_reversed": 0,
+        "not_physical_duration": true
+      },
+      "state_accuracy": null,
+      "state_accuracy_reason": "33 original reviewer state records are evidence, not owner-adjudicated exhaustive states; event evidence review reported separately.",
+      "normalized_body_full_valid_historical": 157,
+      "unparseable_calls": 3
+    },
+    "videollama": {
+      "completed_calls": 184,
+      "contract": {
+        "json_valid": {
+          "pass": 147,
+          "fail": 37,
+          "not_assessable": 0
+        },
+        "schema_valid": {
+          "pass": 144,
+          "fail": 3,
+          "not_assessable": 37
+        },
+        "semantic_valid": {
+          "pass": 83,
+          "fail": 61,
+          "not_assessable": 40
+        },
+        "citation_valid": {
+          "pass": 144,
+          "fail": 0,
+          "not_assessable": 40
+        },
+        "full_valid": {
+          "pass": 83,
+          "fail": 101,
+          "not_assessable": 0
+        }
+      },
+      "event_proposals": 15,
+      "strict_event_proposals": 2,
+      "unreviewed_or_unusable_proposals": 15,
+      "state_claim_count": 2254,
+      "views": {
+        "physical_candidates": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 15
+        },
+        "strict_valid": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 15
+        }
+      },
+      "temporal_grounding_pairs_descriptive": [],
+      "wrong_target_review": {
+        "UNREVIEWED": 15
+      },
+      "state_evidence_review": {
+        "UNREVIEWED": 15
+      },
+      "internal_state_consistency": {
+        "raw_calls_flagged_event_state_citations_inconsistent": 5,
+        "fence_body_calls_flagged_event_state_citations_inconsistent": 0,
+        "physical_correctness_not_inferred": true
+      },
+      "native_citation_bounds": {
+        "ordered": 14,
+        "missing_or_reversed": 1,
+        "not_physical_duration": true
+      },
+      "state_accuracy": null,
+      "state_accuracy_reason": "33 original reviewer state records are evidence, not owner-adjudicated exhaustive states; event evidence review reported separately.",
+      "normalized_body_full_valid_historical": 0,
+      "unparseable_calls": 37
+    },
+    "nemotron": {
+      "completed_calls": 184,
+      "contract": {
+        "json_valid": {
+          "pass": 166,
+          "fail": 18,
+          "not_assessable": 0
+        },
+        "schema_valid": {
+          "pass": 163,
+          "fail": 3,
+          "not_assessable": 18
+        },
+        "semantic_valid": {
+          "pass": 108,
+          "fail": 55,
+          "not_assessable": 21
+        },
+        "citation_valid": {
+          "pass": 162,
+          "fail": 1,
+          "not_assessable": 21
+        },
+        "full_valid": {
+          "pass": 108,
+          "fail": 76,
+          "not_assessable": 0
+        }
+      },
+      "event_proposals": 146,
+      "strict_event_proposals": 58,
+      "unreviewed_or_unusable_proposals": 146,
+      "state_claim_count": 1526,
+      "views": {
+        "physical_candidates": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 146
+        },
+        "strict_valid": {
+          "eligible_scope_ids": [],
+          "blocked_scopes": [],
+          "deduplicated_predictions": [],
+          "gt_event_ids": [],
+          "metrics_by_tolerance": null,
+          "overall_full_dataset_f1": null,
+          "overall_reason": "NO_FULL_DATASET_ALL_OBJECTS_EXHAUSTIVE_GROUND_TRUTH",
+          "scope_only_metrics": true,
+          "excluded_proposals": 146
+        }
+      },
+      "temporal_grounding_pairs_descriptive": [],
+      "wrong_target_review": {
+        "UNREVIEWED": 146
+      },
+      "state_evidence_review": {
+        "UNREVIEWED": 146
+      },
+      "internal_state_consistency": {
+        "raw_calls_flagged_event_state_citations_inconsistent": 47,
+        "fence_body_calls_flagged_event_state_citations_inconsistent": 0,
+        "physical_correctness_not_inferred": true
+      },
+      "native_citation_bounds": {
+        "ordered": 140,
+        "missing_or_reversed": 6,
+        "not_physical_duration": true
+      },
+      "state_accuracy": null,
+      "state_accuracy_reason": "33 original reviewer state records are evidence, not owner-adjudicated exhaustive states; event evidence review reported separately.",
+      "normalized_body_full_valid_historical": 1,
+      "unparseable_calls": 17
+    }
+  }
+}

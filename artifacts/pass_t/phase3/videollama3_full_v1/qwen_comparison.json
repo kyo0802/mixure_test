@@ -1,0 +1,497 @@
+[
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "A",
+    "window": "test5__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\vlm_physical_state_pilot_v1\\call_A_raw.txt",
+    "raw_sha256": "e9bdf8df96058e54edb9c0d8506ee63497e5891ff3e925f67dbfc35420cee778",
+    "prompt_sha256": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+    "schema_sha256": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "EVENTS",
+          "events": [
+            {
+              "target": "phone",
+              "before_state": "ON_SURFACE",
+              "after_state": "HELD_BY_PERSON",
+              "before_frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047"
+              ],
+              "after_frames": [
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "event_type": "PICKUP",
+              "evidence": "The phone transitions from being on the table to being held by a hand.",
+              "uncertainty": "NONE"
+            }
+          ],
+          "notes": "",
+          "other_objects": [
+            {
+              "target": "basketball",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            },
+            {
+              "target": "box",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0062",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            }
+          ]
+        },
+        "body_schema_errors": [
+          {
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": false,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  },
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "A",
+    "window": "test7__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\vlm_physical_state_pilot_v1\\call_B_raw.txt",
+    "raw_sha256": "117dd0ca7fbc94521a47329301e5945021a0087e7b3b67d6ca8b7c521fdd2e0e",
+    "prompt_sha256": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+    "schema_sha256": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "notes": "The sequence shows a person interacting with a phone on a table but does not show the phone being picked up or placed down."
+        },
+        "body_schema_errors": [
+          {
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": false,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  },
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "B",
+    "window": "test5__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\observation_ablation_v1\\condition_b_higher_detail\\call_A_raw.txt",
+    "raw_sha256": "c0f0eb785844421bdb512b779222c0d16fdba82402f0f752dea66770537c75c9",
+    "prompt_sha256": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+    "schema_sha256": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "EVENTS",
+          "events": [
+            {
+              "target": "phone",
+              "before_state": "ON_SURFACE",
+              "after_state": "HELD_BY_PERSON",
+              "before_frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047"
+              ],
+              "after_frames": [
+                "F0077",
+                "F0093"
+              ],
+              "event_type": "PICKUP",
+              "evidence": "The phone transitions from being on the table to being held by a hand.",
+              "uncertainty": "NONE"
+            }
+          ],
+          "notes": "",
+          "other_objects": [
+            {
+              "target": "basketball",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            },
+            {
+              "target": "box",
+              "frames": [
+                "F0001",
+                "F0016",
+                "F0032",
+                "F0047",
+                "F0077",
+                "F0093"
+              ],
+              "manipulation": "NOT_OBSERVED",
+              "observed_state": "ON_SURFACE"
+            }
+          ]
+        },
+        "body_schema_errors": [
+          {
+            "path": [
+              "other_objects",
+              0
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          },
+          {
+            "path": [
+              "other_objects",
+              1
+            ],
+            "message": "'evidence' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": false,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  },
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "B",
+    "window": "test7__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\observation_ablation_v1\\condition_b_higher_detail\\call_B_raw.txt",
+    "raw_sha256": "6f9fcd2db343c0e2682ba088a60324234fcba9fc705974a152632eb6488ca976",
+    "prompt_sha256": "86160b6e8797ad6a61e680afae326a5247816a2e2d37c36898b9c665a45cfbc9",
+    "schema_sha256": "f9cd268d8e574ccba55b407d42fc4e1e7f0de378081d94bd002d002cda52ecb5",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "notes": "The video does not show any clear evidence of a person picking up or placing down an object."
+        },
+        "body_schema_errors": [
+          {
+            "path": [],
+            "message": "'events' is a required property",
+            "validator": "required"
+          }
+        ]
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": false,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  },
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "C",
+    "window": "test5__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\observation_ablation_v1\\condition_c_state_first\\call_A_raw.txt",
+    "raw_sha256": "5c00642cfed11192841eb7cb825269c892fbf93b56762e37fc0627a545a7db83",
+    "prompt_sha256": "ef69002cd66cf61f1448fa741cbf52f4f712d5d7b5ac09fcea0c1d1f1061da1b",
+    "schema_sha256": "6c929159a5259a82ee9312fe839d3d1cd12fc7bd1cbe8929f730495270599730",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "observations": [
+            {
+              "object": "basketball",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016",
+                    "F0032"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0047",
+                    "F0062",
+                    "F0077",
+                    "F0093",
+                    "F0108"
+                  ],
+                  "state": "UNKNOWN"
+                }
+              ],
+              "uncertainty": "The basketball's state changes between frames, but the exact transition is unclear."
+            },
+            {
+              "object": "phone",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016",
+                    "F0032"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0047",
+                    "F0062",
+                    "F0077",
+                    "F0093",
+                    "F0108"
+                  ],
+                  "state": "HELD_BY_PERSON"
+                }
+              ],
+              "uncertainty": "The phone transitions from being on the surface to being held by a person."
+            }
+          ]
+        },
+        "body_schema_errors": []
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": true,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  },
+  {
+    "model": "Qwen2.5-VL-7B-Instruct NF4",
+    "condition": "C",
+    "window": "test7__W05",
+    "raw_path": "artifacts\\pass_t\\phase3\\observation_ablation_v1\\condition_c_state_first\\call_B_raw.txt",
+    "raw_sha256": "d4f0cad21777622e0cd67852af926235b55b262e0d5f6b07a1ca42c577cde811",
+    "prompt_sha256": "ef69002cd66cf61f1448fa741cbf52f4f712d5d7b5ac09fcea0c1d1f1061da1b",
+    "schema_sha256": "6c929159a5259a82ee9312fe839d3d1cd12fc7bd1cbe8929f730495270599730",
+    "validation": {
+      "strict": {
+        "json_valid": false,
+        "schema_valid": null,
+        "citation_valid": null,
+        "semantic_valid": null,
+        "full_valid": false,
+        "classification": "INVALID_MODEL_OUTPUT",
+        "errors": [
+          {
+            "stage": "JSON",
+            "message": "Expecting value: line 1 column 1 (char 0)"
+          }
+        ]
+      },
+      "strict_parsed": null,
+      "formatting_errors": [
+        "MARKDOWN_FENCE"
+      ],
+      "qualitative_extraction": {
+        "method": "EXACT_SINGLE_OUTER_FENCE_BODY_JSON_READ_ONLY",
+        "authoritative": false,
+        "changes_strict_validity": false,
+        "claims": {
+          "status": "NO_CONFIRMED_EVENT",
+          "observations": [
+            {
+              "object": "basketball",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0031",
+                    "F0046",
+                    "F0062"
+                  ],
+                  "state": "UNKNOWN"
+                }
+              ],
+              "uncertainty": "The basketball's state after F0062 is uncertain."
+            },
+            {
+              "object": "phone",
+              "states": [
+                {
+                  "frames": [
+                    "F0001",
+                    "F0016"
+                  ],
+                  "state": "ON_SURFACE"
+                },
+                {
+                  "frames": [
+                    "F0031",
+                    "F0046",
+                    "F0062"
+                  ],
+                  "state": "HELD_BY_PERSON"
+                }
+              ],
+              "uncertainty": "The phone's state after F0062 is held by a person."
+            }
+          ]
+        },
+        "body_schema_errors": []
+      },
+      "independent_physical_validation": false
+    },
+    "direct_task_and_schema_comparison_with_videollama": true,
+    "image_preprocessing_matched": false,
+    "physical_correctness": "REQUIRES_SEPARATE_EVIDENCE_REVIEW"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "raw": {
+    "json_valid": true,
+    "schema_valid": true,
+    "citation_valid": true,
+    "semantic_valid": true,
+    "full_valid": true,
+    "parsed": {
+      "status": "EVENTS",
+      "observations": [
+        {
+          "object": "cell phone",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0004",
+              "state": "HELD_BY_PERSON"
+            },
+            {
+              "frame": "F0007",
+              "state": "ON_SURFACE"
+            }
+          ]
+        },
+        {
+          "object": "box",
+          "states": [
+            {
+              "frame": "F0001",
+              "state": "ON_SURFACE"
+            },
+            {
+              "frame": "F0007",
+              "state": "ON_SURFACE"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "PICKUP",
+          "object": "cell phone",
+          "before_frames": [
+            "F0001"
+          ],
+          "after_frames": [
+            "F0004"
+          ]
+        },
+        {
+          "type": "PLACEMENT",
+          "object": "cell phone",
+          "before_frames": [
+            "F0004"
+          ],
+          "after_frames": [
+            "F0007"
+          ]
+        }
+      ]
+    },
+    "errors": []
+  },
+  "normalized_body": null,
+  "physical_evidence_validity": "UNREVIEWED_NOT_INFERRED_FROM_CONTRACT",
+  "invalid_is_not_no_event": true
+}
