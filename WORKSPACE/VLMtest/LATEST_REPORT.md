@@ -1,122 +1,118 @@
-# Phase 4：Nemotron → Memory Graph → 物件搜尋整合
+# Phase 9：完整競賽 Demo — 離開提醒與找物 Agent
 
-更新：2026-10-20。**已完成可執行的 CPU recorded-output 端到端整合與真實資料示範。** 目前不是新影片的全自動感知服務，也沒有證明模型整體正確率。
+更新：2026-10-21。**PHASE9_COMPETITION_DEMO_IMPLEMENTED_AND_VALIDATED**
 
-## 實際執行結果
+正式來源：`artifacts/phase9/PHASE9_REPORT.md`。已在既有 Streamlit 應用中接上持久化必帶清單、離開檢查與 Object Search。完整流程已用真實保存的 test8 記憶在瀏覽器操作驗證；未重新執行 GPU 推論。
 
-使用 test1–test9 原片身分與 native PTS，重用全部 **184 份既有 Nemotron 回應**，沒有重新推論。讀取既有 YOLO／ByteTrack、SAM 紀錄與 IdentityGuard `runs_final` 最終 ledger。
+## 開啟與展示
 
-| 項目 | 結果 |
-|---|---:|
-| Nemotron 回應 | 184 |
-| 原始 strict-valid 回應 | 108 |
-| 可正規化 VLM state claims | 1,523 |
-| CV 觀察 | 8,163 |
-| 其中 YOLO／ByteTrack | 7,702 |
-| 其中 SAM propagation | 461 |
-| 通過 exact observation／capability／revocation 核對的 CV 身分關聯 | 110 |
-| 可正規化事件假說 | 143 |
-| SUPPORTED | 0 |
-| REJECTED | 53 |
-| UNCERTAIN | 90 |
-| 確認的 physical transitions／具名位置 | 0／0 |
-| 手機搜尋 | 九片均 UNKNOWN |
+本機入口：**http://127.0.0.1:8514/**
 
-53 筆拒絕包含 **48 筆模型自身前後 state 與事件矛盾、5 筆來源引用時間不合法**。這是拒絕該筆假說／證據，並非證明影片沒有事件。90 筆不確定皆缺實例關聯及獨立物理 state 證據，其中 32 筆另有 raw strict-invalid 問題。
-
-20 份回應無可使用的 schema 結構，保留完整 raw response 與診斷，沒有轉成 NO_EVENT。這次採用既有 strict schema／明確外層 fence 分離政策，沒有把歷史描述性提取的全部 146 筆候選強行變成 143 筆合法事件；不滿足可正規化結構的內容留在 response receipt。外層 fence 的可讀內容仍保持 raw strict-invalid。
-
-## 已實作的連線
-
-```mermaid
-flowchart TD
-    C[既有 YOLO / ByteTrack / SAM] --> N[觀察正規化與 native PTS]
-    I[IdentityGuard final ledger] --> N
-    V[Nemotron 原始輸出] --> P[既有 strict parser / validator]
-    P --> N
-    N --> D[SUPPORTED / REJECTED / UNCERTAIN]
-    N --> G[既有 TemporalMemory：觀察與 provenance]
-    D --> G
-    G --> S[依證據關聯與時間排序搜尋]
-    S --> R[位置候選或 UNKNOWN + 最後可用觀察]
-```
-
-- **Nemotron adapter**：保留 window ID、alias→source frame／PTS、object description、state claims、before／after 引用、raw 原文與 hash、各層 validation。原始 CRLF 不會被正規化改寫。
-- **CV adapter**：保留 detector bbox、信心值、track candidate、SAM 診斷。原先以 FPS 換算的 timestamp 留在 provenance；canonical time 取原片 native timeline。bbox、mask 或 track 名稱都不產生手持、放置、桌面位置或持久身分。
-- **IdentityGuard adapter**：核對最終有效 alias、觀察授權 capability、exact observation ID、candidate、digest 與原始 bbox。授權只對應該筆 CV 觀察，並按影片 SHA 分隔 entity；不把 audit JSON 重建成可寫 production 的 live capability。VLM 的 phone 類別不會因此取得授權。
-- **Event Decision**：必須有明確指向前後 CV 觀察的 association、相同授權實例、獨立 CV physical-state measurement、合法 native time 與 raw strict-valid，才可 SUPPORTED。現有 CV 無該量測，因此真實資料沒有自動升格事件。
-- **事件分組**：同影片／類型／類別及相容證據才記可能關聯；單純視窗重疊不合併。已授權且 exact evidence 相同的 supported 事件僅存一次 transition；不同證據 bracket 重疊而無法辨識是否同事件時保留不確定。
-- **Memory Graph**：沿用 `SemanticEntity`、`TemporalMemory` 的 entities／events／transitions／metadata，以及既有 `memory_store.save_json`。normalized observations、關聯邊、raw receipts 與 grouping 存入 metadata，沒有重寫舊 Graph schema。事件假說與確認 transition 分開。
-- **搜尋**：依身分授權、後續不確定事件、native time 與穩定 ID 排序，不使用加權分數。只在同一授權物件上讓較新可信位置取代舊位置；確認拿起或後來獨立觀察到手持會讓舊位置失去「目前位置」資格，但歷史仍保留。不確定事件只加註疑慮，不生成目的地。
-
-## 真實搜尋結果及限制
-
-實際執行 `Where is my phone?`，九片皆回傳：
-
-```json
-{
-  "query": "Where is my phone?",
-  "status": "UNKNOWN",
-  "candidates": [],
-  "reason": "No independently grounded named location"
-}
-```
-
-完整輸出另外包含 `last_useful_observation`、`evidence_history_observation_ids` 與 `event_ids`。最後觀察保留來源是 CV 或 VLM 及原始有效性；不是把最後一次出現 phone 文字當成答案。
-
-**這次缺的是量測與關聯，不是 Graph 儲存或搜尋程式沒接好：**
-
-1. Nemotron generic object description 尚無可靠的 spatial region／CV instance association。
-2. 現有 detector／SAM／追蹤幾何無法獨立確認 ON_SURFACE ↔ HELD_BY_PERSON。
-3. 沒有合資格的具名 spatial-zone／支撐物位置觀察。ON_SURFACE 不能翻成「桌上」，附近看到箱子也不能翻成「箱內」。
-
-實例未明的 VLM 候選、授權 CV 實例、時間與來源各自保留。沒有把既有 9 個 AI-review 支持關聯或 7 個 strict-valid 個案當成 runtime 查表答案；**runtime 不載入 GT 或 AI review verdict**。
-
-## 檔案與執行
-
-主要實作：
-
-- `src/memory_graph/integration/adapters.py`
-- `src/memory_graph/integration/pipeline.py`
-- `scripts/run_phase4_demo.py`
-- `tests/test_phase4_integration.py`
-- `pyproject.toml` 新增 CPU `integration` optional dependency：jsonschema；本機可重用既有 vendor。
-
-重播指令（輸出目錄需尚未存在）：
+從 `C:\Users\smile\Desktop\test2\mixure_test_SAM` 啟動：
 
 ```powershell
-cd C:\Users\smile\Desktop\test2\mixure_test_SAM
-.\.venv\Scripts\python.exe -X utf8 -B scripts/run_phase4_demo.py --output artifacts/phase4/demo_replay
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\start_findmind_demo.ps1
 ```
 
-可加 `--videos test1 test7` 選片，`--query "手機"` 或明確 entity 名稱查詢。每個輸出目錄拒絕覆寫；持久化強制限制於本專案 `artifacts/phase4/`，不能指定 production memory。
+使用既有環境，保持啟動程序執行即可。詳細展示步驟見 `artifacts/phase9/DEMO_GUIDE.md`。
 
-本次正式示範輸出在 **`artifacts/phase4/demo/`**：
+**首頁 → 選影片記憶 → 我要出門了 → 尋找手機 → 看同格原片 → 返回清單 → 手動確認 → 完成 → 開始新檢查。**
 
-- `run_receipt.json`：各片統計、輸入與程式 hash、保存驗證。
-- `DEMO.md`：執行摘要與流程圖。
-- `<video>/memory_graph.json`：可重新載入的既有 TemporalMemory。
-- `<video>/event_decisions.json`：理由碼、引用、未解假設。
-- `<video>/search_result.json`：查詢結果、觀察與事件來源。
+本機目前保留一份「展示已完成」歷史紀錄，以及一份新的三件未確認檢查，可直接重複展示。所有此次瀏覽器驗收確認均標為 DEMO_PRESENTATION／UI_DEMO_CONFIRMATION，**不代表使用者真的已攜帶任何物品**。
 
-`recorded_demo_v1/`、`integrated_demo/` 是實作期間的 CPU 檢查輸出；目前結果以 `demo/` 為準，不是額外實驗或新模型生成。
+## 本次完成內容
 
-## 新影片接入
+| 功能 | 實際行為 |
+|---|---|
+| 首頁 | 同一份記憶下提供 Find an Item、I'm Leaving、Analyze New Video |
+| 必帶物品設定 | 新增、改名、設定搜尋類別、啟用／停用、移除；預設手機／鑰匙／錢包只是範例 |
+| 離開檢查 | 依選定記憶開始或續用當次檢查，保存建立時間、物品快照與確認事件 |
+| 手動確認與撤銷 | 只由明確按鈕操作改變；重複相同狀態不增加事件 |
+| 提醒 Agent | 直接向既有 Graph 搜尋取證，說明未確認物品與歷史線索，不聲稱忘帶 |
+| 找物串接 | 點物品的 Find，填入正確問題與類別，在同一記憶自動執行原搜尋 |
+| 證據 | 重用既有框／mask、區域、native PTS、來源影格與引用檢查 |
+| 新檢查／重設 | 建立全新確認集合，不刪 Graph、不繼承舊確認，舊檢查可只讀檢視 |
+| 跨記憶與重啟 | 每份記憶有各自 active check；設定與歷史在本機 JSON 保存 |
+| 原有功能 | 保留中英搜尋、候選卡片、時間線、上傳、背景工作與 GPU 鎖 |
 
-`adapt_nemotron(raw, window, video_metadata, raw_ref, root)` 可直接處理新 raw response；不依賴 test 編號或歷史 window ID。
+設定修改**套用到下一次新檢查**；當次與歷史紀錄保持自己的快照，避免改名／移除物品後歷史也被改寫。介面有明確提示。
 
-CLI `--future-bundle <path>` 接受：
+首次在錄製模式開啟「我要出門了」會建立展示檢查。要記錄一次實際使用者出門檢查，在「開始新檢查」前取消「展示檢查」勾選；其來源記為 USER_MANUAL_CONFIRMATION，仍是使用者自述，不是影像驗證持有。
 
-- `source_manifest`：含 videos、source path／SHA、duration、native frame timeline。
-- `results`：每項含 `window`、`raw_path`、`raw_sha256`；window 含影片身分、任意 window ID、alias／來源格號／native PTS／影像路徑與 hash。
-- 可選 `cv_sources`：以影片 ID 指向相同既有格式的 identity／metrics／tracks／sam。
+## 清單、觀察與打包不是同一種資料
 
-新影片仍需上游產生這些感知與模型檔案；本任務沒有啟動 fresh inference，也沒有新增 hand-contact detector。若之後有可信 state／zone provider，可透過現有 observation／association 介面補入獨立證據，不需改 Graph 或搜尋邏輯；不得以人工／AI verdict 偽裝成 CV_MEASUREMENT。
+`packing_status` 與 `evidence_status` 分開保存和顯示：
 
-## 驗證
+- **USER_CONFIRMED_PACKED**：這次檢查有明確手動確認，並保留來源及時間。
+- **NEEDS_CONFIRMATION**：仍需本人確認。即使有物體、手持或位置線索，也不會自動帶妥。
+- **HAS_LOCATION_CANDIDATE**：Graph 有歷史位置線索；仍不保證是同一件個人物品或現在仍在原處。
+- **NO_RELEVANT_OBSERVATION**：沒有相關可用觀察，不表示忘記攜帶。
+- 若只有物體觀察、沒有區域，另記 **OBSERVATION_ONLY**，仍需手動確認。
 
-**22 項 focused CPU tests 全通過**，涵蓋真實 raw／frame hash、未知新 window、invalid／fence、native PTS、接觸／遮擋／held-to-held、授權／撤銷、獨立證據、位置保留／失效、去重、重疊衝突、排序、具名位置必要性與 production 寫入拒絕。
+本版所有 `possession_verified` 都是 false。人工確認只進清單紀錄，**不會寫成 PICKUP、改 Graph 或升成 VERIFIED**。所有 enabled snapshot items 明確確認後才顯示完成；沒有啟用物品時會請先設定，不會空清單自動恭喜完成。
 
-九片 Graph 寫入後皆以既有 `TemporalMemory` schema 重新載入，再搜尋並核對結果一致。執行輸入 1,643 個檔案前後 hash 一致；既有 2,235 個歷史保護檔案驗證通過。測試量測均為明確 CPU mock，沒有充作真實事件 GT。
+## 真實瀏覽器驗收
 
-沒有新 GPU／VLM 推論、沒有改人工 GT／歷史模型輸出、沒有修改 production memory、沒有 commit／push。**Phase 4 recorded integration 已完成；可信實例關聯、物理 state 及具名位置量測仍是實際找物能力的缺口。**
+使用現有 Phase 7 test8 session，實際操作：
+
+1. 首頁點 I'm Leaving，顯示 **3 件需確認**。
+2. 手機取得 13.803333 秒桌面相關候選；鑰匙／錢包無相關可用觀察。
+3. 點「尋找手機」開啟原搜尋，顯示 3 筆底層紀錄整理成 2 組時間／區域證據，包含 f414、f180 原片。
+4. 返回後仍是 **3 件未確認**，沒有因搜尋自動勾選。
+5. 手動確認手機後剩 **2 件**；撤銷後回到 **3 件**。
+6. 再逐項確認，出現「你已在本次檢查手動確認所有必帶物品」。
+7. 開始新檢查後，3 件全回未確認；之前的 COMPLETE 紀錄仍可檢視。
+8. 真正重啟 Streamlit 服務，再開頁面；保留 3 個清單設定、2 次檢查、同一份新的未確認 active check。
+9. 新檢查點「尋找鑰匙」，正確回 **UNKNOWN**，沒有顯示舊手機結果；返回後仍是 3 件未確認。
+10. 首頁「分析新影片」仍開啟原上傳表單；無檔提交會阻擋，沒有啟動推論。
+
+瀏覽器驗收紀錄：
+已完成展示檢查 `295aa5eebc334a869ef1af57284de059`，5 個操作事件（含一次撤銷），3 件確認；目前新檢查 `c6e55439a90849f1ad1ff92eb3be1a65`，0 個確認事件。兩者皆為展示用途。
+
+這是**實際瀏覽器操作**。不同記憶的隔離、清單 CRUD 與並非現有真實資料的分支另以 CPU／AppTest 驗證，不把測試 fixture 說成影片真值。
+
+## 測試與完整性
+
+**101／101 項通過：**
+
+| 範圍 | 結果 |
+|---|---|
+| Phase 9 清單／提醒／串接與 AppTest | 15／15，9.257 秒 |
+| Phase 8 搜尋／工作／證據回歸 | 15／15，4.213 秒 |
+| Phase 4–7 原有 focused tests | 71／71，0.127 秒 |
+
+新增測試涵蓋：設定保存、增刪改與停用、新檢查／續用／提交去重、確認與撤銷、舊確認不移轉、跨記憶隔離、快照不被設定編輯改寫、全確認與空清單、展示來源、候選不確認打包、無觀察不等於忘帶、正確 handoff、真實 Graph 提醒、其他指定類別、完整 UI 往返與重新開啟。
+
+另外確認：
+- 新 Python process 載入同一清單後保留 COMPLETE／OPEN 兩份紀錄。
+- 提醒評估一次含三種物品 Graph 查詢，冷啟動量測約 **635 ms**；此數值不含完整頁面及影像渲染。
+- 錄製／清單路徑未匯入 torch、vLLM、Ultralytics、Transformers。
+- 原 session Graph／manifest、Nemotron raw hashes 未變，3,273 個歷史保護檔未變。
+- 沒有新增 GPU 工作、模型推論、GT 裁決、production memory write、commit 或 push。
+
+## 實作與儲存位置
+
+新增：
+`src/findmind_demo/checklist_store.py`、`departure.py`、`departure_ui.py`、`tests/test_findmind_departure.py`。
+
+修改：
+既有 `apps/findmind_demo.py` 加入首頁與導航；
+`agent.py` 增加由清單明確指定類別的搜尋，沿用原查詢 API 及類別正規化；
+原 Demo UI 測試補上新的首頁導航操作。
+
+偏好與檢查資料：
+**`artifacts/findmind_demo/checklist_state.json`**。
+使用 OS 檔案鎖及 flush／fsync／atomic replace，避免重跑與多視窗覆寫。這個 store 不接受 Graph 路徑，也沒有 Graph 寫入功能。
+
+正式報告、截圖與測試：
+`artifacts/phase9/`。
+日常入口：
+`WORKSPACE/VLMtest/LATEST_REPORT.md`。
+
+## 保留的限制
+
+這是**使用者啟動的離開助理**，沒有自動偵測出門、背景攝影機、地理圍欄、忘帶判定或實體持有量測。手機候選可能不是本人同一支手機，鑰匙／錢包的感知效果仍未驗證，現有真實記憶仍 **0 VERIFIED locations**。
+
+本次沒有重跑完整新影片 GPU 流程；保留 Phase 7／8 已完成的背景串接及其品質限制。實際多個不同真實影片的離開流程尚未擴大測試，記憶隔離已以明確的 store／Agent／UI 測試驗證。
+
+競賽流程現在可連續操作，完成訊息代表**本次清單的明確手動確認完成**，不代表系統已從視覺證實物品隨身。

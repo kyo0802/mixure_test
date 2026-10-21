@@ -1,5 +1,11 @@
 # FindMind 工作區
 
+目前最新：**Phase 9 完整競賽 Demo：離開提醒與找物。** [應用](http://127.0.0.1:8514/) · [最新報告](VLMtest/LATEST_REPORT.md) · [操作指南](../artifacts/phase9/DEMO_GUIDE.md)。
+
+最新：**Phase 8 互動找物 Demo**。[本機入口](http://127.0.0.1:8514/) · [最新報告](VLMtest/LATEST_REPORT.md) · [啟動與操作](../artifacts/phase8/README.md)。
+
+目前最新：**Phase 7 新影片端到端實作與 fresh inference 驗證**。[報告](VLMtest/LATEST_REPORT.md) · [單一指令操作說明](../artifacts/phase7/README.md)。
+
 [總覽與進度](../START_HERE.md) · [Pass I](Pass_I/README.md) · [Pass T](Pass_T/README.md) · [VLMtest](VLMtest/README.md) · [資料](Data/README.md)
 
 最新報告一律放在對應工作區，以固定的 `LATEST_REPORT.md` 開啟，並同步更新該資料夾的 README。模型整合、推論、消融與比較報告放在 **[VLMtest](VLMtest/LATEST_REPORT.md)**；Pass T 保留事件標註與契約工作。

@@ -1,5 +1,55 @@
 # VLMtest — 目前結論與下一步
 
+更新：2026-10-21。**Phase 9 離開提醒＋Object Search 已整合完成。**
+
+- 首頁／離開檢查／找物同一應用，必帶設定與檢查快照保存於獨立 JSON。
+- 只有明確確認／撤銷按鈕改打包狀態；影像、PICKUP 假說或漏偵測不會自動判定已帶妥／忘帶。
+- 101 tests 通過；真實瀏覽器完整流程、重設、歷史與服務重啟驗證完成，未重跑 GPU。
+- 目前保留一份完成的展示紀錄及一份新的三件未確認檢查。展示確認不作實際攜帶證明；Graph 仍 0 VERIFIED。
+- [最新報告](LATEST_REPORT.md) · [展示指南](../../artifacts/phase9/DEMO_GUIDE.md) · [開啟應用](http://127.0.0.1:8514/) · [版本保存範圍](VERSION_STATUS.md)。本機個人清單與完整推論 session 不納入 GitHub。下方為各階段當時的歷史結論。
+
+## 歷史：Phase 8 結論
+
+更新：2026-10-21。**Phase 8 本機互動 Demo 已完成並開啟 8514。**
+
+- 錄製記憶可立即中英文搜尋、看同格證據與時間線；新影片可透過明確提交啟動原 Phase 7 背景工作。
+- 15 Demo tests＋71 prior tests 通過；實際瀏覽器驗證完成。未重新推論；候選與可信狀態未放寬。
+- 現有 test8 仍是 2 組時間／區域證據、0 VERIFIED；不能聲稱可靠追蹤使用者特定物品或目前位置。
+- [最新報告](LATEST_REPORT.md) · [開啟 Demo](http://127.0.0.1:8514/) · [使用說明](../../artifacts/phase8/README.md)。未 commit／push。
+
+## 歷史：Phase 7 結論
+
+更新：2026-10-21。**Phase 7 新影片端到端已可執行與保存後查詢。**
+
+- 單一入口 `scripts/run_findmind_video.py`：new MP4 → native PTS → fresh CV／Nemotron／target-surface → isolated Graph → query。
+- test8 fresh inference 723.39 秒，3 筆 phone candidates，0 VERIFIED；模型執行全完成，Nemotron strict-valid 1／4。
+- 71 focused CPU tests；獨立新 process 查詢不載 torch／vLLM／Ultralytics／Transformers。
+- 現在可帶新影片試用，仍須明示候選與目前位置未知。優先改善載入時間、表面／小物體定位及身分；未做 Agent UI 或 production memory。
+- [最新報告](LATEST_REPORT.md) · [使用方式](../../artifacts/phase7/README.md)。本機變更未 commit／push。
+
+## 歷史：Phase 6 結論
+
+更新：2026-10-21。**Phase 6 感知與候選搜尋整合完成；產品可信位置尚未達成。**
+
+- 21 張最終真實影格、19 筆契約有效；6 張 CV 漏框獲合理手機定位，2 張定位偏移，3 張仍漏掉。
+- test5／test8 有實際桌面查詢改善；微波爐頂面仍常含機身。更多候選不等於更準確。
+- 62 CPU tests，18 個保存查詢重載一致，歷史受保護檔案不變。
+- 下一步優先處理可靠頂面、小物體定位與接觸證據；身分與目前位置仍不可由類別或投影代替。
+- [最新完整報告](LATEST_REPORT.md) · [正式 Phase 6 報告](../../artifacts/phase6/PHASE6_REPORT.md)。未 commit／push。
+
+## 歷史：Phase 5 結論
+
+更新：2026-10-20。**PHASE5_CANDIDATE_SPATIAL_MEMORY_IMPLEMENTED**。
+
+- [最新報告](LATEST_REPORT.md)：Scene Spatial Registry、逐影格幾何、VLM-to-CV 候選、位置歷史、既有 Graph 搜尋與九片實跑完成。
+- 6／9 片有候選位置、3 片 UNKNOWN；1,043 區域觀察、88 手機候選位置、17 筆有既有 CV 身分授權的候選；VERIFIED 位置仍為 0。
+- 目前是可查詢的候選空間記憶，尚不是可靠的目前位置或目標 smartphone 身分判定。
+- 44 CPU tests 通過，九片 Graph 重載／查詢一致；Phase 4 事件仍 0／53／90。
+- 優先補：同格 surface／小物體定位、實例分辨、獨立接觸證據、跨視角區域對應。
+- 只寫 Phase 5 隔離 Graph；沒有新推論、GT 查表、production writes 或本次 commit／push。
+
+## 歷史：Phase 4 結論
+
 更新：2026-10-20。**PHASE4_RECORDED_INTEGRATION_COMPLETE**。
 
 - [最新報告](LATEST_REPORT.md)：已實作 adapter、獨立證據 decision、既有 TemporalMemory 持久化與證據排序搜尋。

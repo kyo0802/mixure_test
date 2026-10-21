@@ -162,6 +162,12 @@ def trusted_location(obs):
 
 def search(memory, query, entity_id=None):
     """Lexicographic evidence ordering, no numeric weighted confidence."""
+    if memory.metadata.get("perception_version") == "phase6_v1":
+        from .target_surface import query_result
+        return query_result(memory, query, entity_id)
+    if memory.metadata.get("spatial_version") == "phase5_v1":
+        from .spatial import search_spatial
+        return search_spatial(memory, query, entity_id)
     q=query.strip().lower()
     if entity_id is None:
         identities={o.get("authorized_entity_id") for o in memory.metadata["observations"] if o.get("authorized_entity_id")}

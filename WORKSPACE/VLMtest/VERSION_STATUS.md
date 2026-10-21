@@ -1,34 +1,30 @@
-# FindMind 目前版本進度
+# FindMind 版本保存範圍
 
-更新：2026-10-20。分支：`codex/pass-i-current`。
+更新：2026-10-21。分支：`codex/pass-i-current`。
 
-本次版本保存 Phase 3 三模型實驗、GT 整理與 AI 視覺裁決，以及 Phase 4 recorded-output 整合。主要入口：[最新整合報告](LATEST_REPORT.md)。
+本次版本整理 Phase 5–9 的程式、測試、進度報告與展示指南，接續已提交的 Phase 4（`44620185`）。最新操作入口見 [專案 README](../../README.md)，功能與實測見 [最新報告](LATEST_REPORT.md)。實際 commit 與遠端狀態以 Git 為準：
 
-## 已完成
+```powershell
+git log -1 --oneline
+git rev-parse HEAD
+git ls-remote origin refs/heads/codex/pass-i-current
+```
 
-- test1–test9 三模型各 184 次推論，共 552 次，結果與 raw 文字保留；沒有本次新推論。
-- 兩位人工標註 53 筆紀錄對齊成 34 組；原片採樣影格 AI 裁決得到 15 個可見轉換（8 PICKUP、7 PLACEMENT）、13 個不確定物理轉換及 6 組其他觀察。
-- 39 筆模型引用視覺複核與局部探索性比較完成；AI review 不等同人工 GT，不進 runtime 決策查表。
-- Phase 4 已實作 Nemotron adapter、CV／IdentityGuard adapter、事件決策、既有 TemporalMemory 持久化與證據排序搜尋；新 raw result 可使用相同入口。
-- 九片端到端 CPU 重播完成：184 份 Nemotron 回應、8,163 筆 CV 觀察；143 筆事件假說為 0 SUPPORTED、53 REJECTED、90 UNCERTAIN；九片手機搜尋皆 UNKNOWN，保留原始證據與原因。
-- 本次提交前 55 個 focused CPU tests 通過：整合、GT consolidation、三模型契約、observation interface。測試紀錄：`artifacts/phase4/version_control_tests.txt`。
+## 此次保存
 
-## 尚未具備
+- Phase 5：表面區域、物體／區域關係候選與既有 TemporalMemory 搜尋整合。
+- Phase 6：Qwen 目標／表面定位與 SAM2.1 refinement。
+- Phase 7：新影片單一入口、原生 PTS／來源追溯、順序 GPU 階段與隔離 session。
+- Phase 8：Streamlit 中英找物、歷史候選與同格證據、磁碟背景工作。
+- Phase 9：可編輯必帶清單、每次檢查、本人確認／撤銷、找物交接、歷史與展示重設。
+- 測試、各階段文字報告、Phase 8／9 小型展示截圖與測試紀錄。
 
-1. VLM 描述到 CV 實體的可靠區域／實例關聯。
-2. 獨立確認 ON_SURFACE ↔ HELD_BY_PERSON 的 runtime 量測。
-3. 可追溯的具名位置／spatial zone 量測。
-4. 全體事件與負例完備範圍的裁決；目前不能報正式整體 precision／recall／F1。
-5. 新影片自動推論服務與可信 production Memory Graph 更新；目前完成的是重用既有輸出的隔離整合。
+Phase 9 完成時 101 focused tests 通過，並完成瀏覽器與服務重啟驗證。本次版本整理沒有新增模型推論。仍是候選空間記憶，0 VERIFIED；本人清單確認不等同視覺持有證明。
 
-目前仍在感知／事件與記憶整合實作階段，沒有宣稱 Shadow mode 或完整新影片找物已驗收。
+## 留在本機
 
-## GitHub 保存內容與本機資料
+模型、環境、原片、完整推論 session／Graph／證據影格、上傳資料、背景工作、個人清單與檢查紀錄，以及大型診斷／暫存。
 
-提交程式、測試、設定、進度報告、三模型 raw 文字與必要結果／來源 metadata、裁決文字資料，以及正式 demo 的事件決策／搜尋結果／執行 receipt。
+其他人 clone 後需要另備相容環境與資料，才能執行 GPU 分析或查詢錄製結果。報告中的本機資產連結不代表它們已上傳。
 
-模型權重、環境、影格、影片、視覺比較圖與大型 demo Graph 留在本機。原始 evidence manifests 及 hash 可用於驗證，但 GitHub clone 本身不包含全部 replay 所需資產。真實資料重播需放回對應原片、影格及既有 CV／IdentityGuard 輸出；CPU real-artifact test 也需要該本機證據。安裝程式與依賴宣告不包含模型／環境本體。
-
-工作目錄中既有大量歷史刪除及無關暫存未納入本次提交。GitHub 版本保留那些既有歷史檔案，不表示本機工作目錄已完全乾淨。
-
-重播方式與 fresh-result bundle 格式見 [整合報告](LATEST_REPORT.md)。沒有修改 production memory。
+這次僅提交明確選取的相關檔案。工作目錄中既有大量歷史刪除與無關暫存保留原狀，未納入提交；GitHub 保存的既有歷史檔案也未清除。

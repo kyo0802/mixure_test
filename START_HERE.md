@@ -1,5 +1,13 @@
 # FindMind — 從這裡開始
 
+**2026-10-21 最新：Phase 9 離開提醒＋找物競賽 Demo。** [開啟應用](http://127.0.0.1:8514/) · [展示指南](artifacts/phase9/DEMO_GUIDE.md) · [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。下方為歷史進度。
+
+**2026-10-21 最新：Phase 8 互動找物 Demo 已完成。** [開啟本機應用](http://127.0.0.1:8514/) · [操作說明](artifacts/phase8/README.md) · [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。以下為歷史工作進度。
+
+**2026-10-21 最新：Phase 7 新影片端到端處理與保存後查詢已實跑。** [用法](artifacts/phase7/README.md) · [完整報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。可建立候選空間記憶，尚無可信實例位置。下面保留歷史階段紀錄。
+
+**2026-10-21 最新：Phase 6 感知與候選空間記憶示範。** 請先看 [VLMtest 最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)：桌面定位有局部改善，微波爐頂面與可信實例位置仍未完成。以下保留早期 workflow 與整理說明。
+
 更新：2026-10-14。**目前在 Pass I/T 平行標註＋實作。**
 
 日常只需開啟 [WORKSPACE](WORKSPACE/)：
