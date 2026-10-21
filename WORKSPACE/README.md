@@ -1,6 +1,6 @@
 # FindMind 工作區
 
-目前最新：**Phase 9 完整競賽 Demo：離開提醒與找物。** [應用](http://127.0.0.1:8514/) · [最新報告](VLMtest/LATEST_REPORT.md) · [操作指南](../artifacts/phase9/DEMO_GUIDE.md)。
+目前最新：**Phase 9.1：互動 Memory Graph＋Nemotron 驗證快取。** [應用](http://127.0.0.1:8514/) · [最新報告](VLMtest/LATEST_REPORT.md)。GPU／整支影片加速量測尚未執行。以下保留歷史入口。
 
 最新：**Phase 8 互動找物 Demo**。[本機入口](http://127.0.0.1:8514/) · [最新報告](VLMtest/LATEST_REPORT.md) · [啟動與操作](../artifacts/phase8/README.md)。
 

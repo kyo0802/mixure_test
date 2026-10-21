@@ -2,13 +2,14 @@
 
 用影片建立可查詢的物體空間記憶，並提供找物與出門清單的互動展示。
 
-**目前版本：Phase 9 競賽 Demo（2026-10-21）**。已串接新影片分析、歷史候選位置查詢、影格證據、出門提醒與本人手動確認。這是研究原型；目前實跑沒有 VERIFIED 位置，歷史候選不代表物品現在的位置，也不代表使用者已隨身攜帶。
+**目前版本：Phase 9.1 競賽 Demo（2026-10-21）**。已串接新影片分析、歷史候選位置查詢、互動記憶圖譜、影格證據、出門提醒與本人手動確認。這是研究原型；目前實跑沒有 VERIFIED 位置，歷史候選不代表物品現在的位置，也不代表使用者已隨身攜帶。
 
 ## 先看這裡
 
 | 需求 | 入口 |
 | --- | --- |
 | 最新進度、驗證結果與限制 | [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md) |
+| Phase 9.1 圖譜、啟動優化與量測檔案 | [Phase 9.1 說明](artifacts/phase9_1/README.md) |
 | 展示操作步驟 | [Phase 9 Demo Guide](artifacts/phase9/DEMO_GUIDE.md) |
 | 版本保存範圍 | [Version Status](WORKSPACE/VLMtest/VERSION_STATUS.md) |
 | 新影片 CLI 與保存後查詢 | [Phase 7 使用說明](artifacts/phase7/README.md) |
@@ -20,6 +21,8 @@
 - **新影片入口**：上傳 MP4，背景執行 CV、事件推論、目標／表面定位，建立獨立的記憶 session。
 - **找物 Agent**：中英文類別查詢、歷史候選排序、原生影片時間、框／遮罩、來源影格與不確定性。
 - **空間記憶**：物體觀察、表面區域與關係候選保存在既有 TemporalMemory；證據不足時回 UNKNOWN。
+- **互動記憶圖譜**：搜尋可帶原始 record IDs 進圖譜，點節點／關係查看同格證據，支援縮放、平移與類別／原生時間／狀態篩選；全程使用 CPU。
+- **Nemotron 驗證快取**：固定資產 manifest、第一次完整 SHA、後續 metadata receipt，支援 strict／force 重驗；實測僅驗證步驟由 63.723 s 降至 0.324 s，整體 GPU 加速尚未重測。[Phase 9.1 報告](artifacts/phase9_1/PHASE9_1_REPORT.md)
 - **出門提醒**：手機／鑰匙／錢包等清單可編輯，每次檢查獨立保存，支援明確確認、撤銷、新檢查與歷史紀錄。
 - **找物交接**：清單中的「尋找」帶入同一份記憶，返回後保留當次檢查狀態。
 - **來源與執行追溯**：影片及 Graph hashes、native PTS、frame mapping、模型原文、階段結果與失敗紀錄。
@@ -39,6 +42,9 @@ flowchart TD
     F --> G[每影片隔離 TemporalMemory]
     G --> H[找物查詢 / 候選排序 / 證據時間線]
     H --> I[Streamlit Demo]
+    G --> L[唯讀圖譜投影 / CPU]
+    H -->|原始 record IDs| L
+    L --> I
     J[本機清單與每次檢查] --> I
     I --> K[本人確認 / 撤銷 / 歷史]
 ```
@@ -60,10 +66,21 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\start_findmind_d
 1. 選「錄製結果 Demo」及已有的影片記憶。
 2. 首頁選「我要出門了」，需要時按「開始新檢查」。
 3. 點手機的「尋找」，查看歷史候選與來源影格。
-4. 返回出門檢查，由本人按「我已帶妥」；可撤銷。
-5. 展示下一輪時開新檢查，不沿用上一輪確認。
+4. 按「在記憶圖譜中查看」，點選觀察／區域／關係，查看同格證據及原生時間。
+5. 返回搜尋，再回出門檢查，由本人按「我已帶妥」；可撤銷。
+6. 展示下一輪時開新檢查，不沿用上一輪確認。
 
 錄製模式只查已保存的記憶，不載入 GPU 模型。新影片模式必須上傳 MP4 並明確勾選 GPU 分析；背景工作狀態保存於磁碟，可在頁面重新整理後查看。
+
+### 記憶圖譜操作
+
+- 從側欄選 **Memory Graph / 記憶圖譜**，或從找物結果直接帶入對應紀錄。
+- 拖曳背景平移，使用滾輪或 ＋／－ 縮放；點節點或連線查看詳情、來源引用與證據。
+- 可依類別、節點種類、原生時間、關係及狀態篩選。搜尋帶入時預設只看相關紀錄；取消「只看搜尋證據與直接連結」可展開更多記憶。
+- 預設最多顯示 100 節點，可調至 300；介面會列出隱藏數量。這是顯示限制，不會合併或刪除原始紀錄。
+- 切換影片會清除舊圖譜選取。沒有相關證據的物品顯示空圖，不會生成替代節點。
+
+test8 的實例是三筆手機位置候選、兩組時間／區域證據，並非三支已確認手機。圖中的 UNKNOWN、UNCERTAIN、REJECTED 也保留原本狀態。
 
 ### 給其他人的環境說明
 
@@ -95,18 +112,45 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\start_findmind_d
 
 輸出保存在獨立 session；原始影片不會被複製進去。處理失敗時保留階段輸出與日誌，未提供自動重試／續跑。背景工作鎖失聯時，先確認 Windows 與 WSL 模型程序確實停止，再由操作者處理；不要盲目解除 GPU 鎖。
 
+### Nemotron 資產驗證與啟動診斷
+
+新影片仍使用單一 Nemotron 程序處理該影片所有視窗，退出後才交接其他模型；沒有新增常駐 GPU server。
+
+預設 `cached`：第一次完整 SHA 驗證，後續僅在 revision、manifest、policy、位置與檔案 metadata 相符時復用 receipt。這是可信本機 metadata 的效能取捨，**不等同每次完整 cryptographic revalidation**。檔案或 receipt 異常會重驗或拒絕執行。
+
+在已配置 WSL runtime 的電腦，從專案根目錄執行以下 CPU-only 命令；不載入模型或生成預測：
+
+```powershell
+$repoWindows = (Get-Location).Path
+$repoLinux = (wsl -d Ubuntu --exec wslpath -a $repoWindows).Trim()
+wsl -d Ubuntu --exec "$repoLinux/.runtime/nemotron/venv_linux/bin/python" -B "$repoLinux/scripts/verify_findmind_nemotron.py" --mode cached
+# 完整 SHA：將 --mode cached 改成 --mode strict，或加 --force
+```
+
+需要新影片每次啟動都完整驗證時，在啟動 CLI／Streamlit 前設定；參數會明確傳入 WSL：
+
+```powershell
+$env:FINDMIND_NEMOTRON_VERIFICATION = 'strict'
+# 恢復預設：改回 'cached'；FINDMIND_NEMOTRON_FORCE_VERIFY='1' 也可強制重驗，設 '0' 關閉。
+```
+
+實測完整驗證 63.723 秒、快取驗證 0.324 秒；尚未重測 GPU cold start、warm generation 或整支影片耗時，不能把這個差額當成端到端加速。新工作會留下 `nemotron_process_timing.jsonl`、`vlm/timing.jsonl` 及 `vlm/asset_verification.json` 供追蹤。
+
 ## 資料夾
 
 ```text
 apps/findmind_demo.py          Streamlit 應用入口
 src/findmind_demo/            找物 Agent、session、證據、工作與出門清單
+src/findmind_demo/graph_component/ 本機 SVG 互動圖譜元件
 src/memory_graph/integration/ 事件／CV adapter、空間整合、新影片流程
+config/findmind_nemotron_assets.json 固定版本的資產 digest manifest
 scripts/                     Demo、CLI 與各階段執行入口
 tests/                       契約與功能測試
 WORKSPACE/VLMtest/            固定名稱的最新報告與目前決策
 WORKSPACE/Pass_I/             身分標註與實驗導覽
 WORKSPACE/Pass_T/             時間事件標註與契約導覽
 artifacts/phase5–phase9/      各階段報告（部分大型證據僅在本機）
+artifacts/phase9_1/           圖譜、快取量測、測試與發佈驗證摘要
 tools/findmind-gt-annotator/   已有的離線人工 GT 工具
 ```
 
@@ -124,7 +168,7 @@ artifacts/findmind_demo/      個人清單、手動確認與歷史檢查
 
 ## 驗證與限制
 
-Phase 9 完成時 **101 個 focused tests 通過**：15 出門清單、15 Demo、71 Phase 4–7 回歸。另已驗證完整瀏覽器流程與服務重啟後狀態保存。測試原文見 [Phase 9 報告](artifacts/phase9/PHASE9_REPORT.md)。
+Phase 9.1 完成時 **149 項測試通過**：32 項資產／圖譜測試、46 項既有 Demo／出門流程與離線 GT 工具測試、71 項 Phase 4–7 回歸。已實際操作搜尋 → 圖譜 → 節點／關係 → 原始影格、UNKNOWN 空圖、跨 session 隔離，以及清單確認／撤銷。[驗證紀錄](artifacts/phase9_1/README.md)。本次版本整理未新增推論。
 
 在原本已配置的本機環境可執行：
 
@@ -132,9 +176,9 @@ Phase 9 完成時 **101 個 focused tests 通過**：15 出門清單、15 Demo�
 New-Item -ItemType Directory -Force .runtime\findmind_demo\temp | Out-Null
 $env:TEMP = (Resolve-Path .runtime\findmind_demo\temp).Path
 $env:TMP = $env:TEMP
-.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p test_findmind_departure.py
-.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p test_findmind_demo.py
-.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p "test_phase*_*.py"
+.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p "test_phase9_1*.py"
+.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p "test_findmind_*.py"
+.venv\Scripts\python.exe -X utf8 -B -m unittest discover -s tests -p "test_phase[4-7]_*.py"
 ```
 
 部分整合測試依賴未上傳的真實 session／本機資產；不是乾淨 clone 的通用 CI 命令。
@@ -149,4 +193,4 @@ $env:TMP = $env:TEMP
 
 ## 階段報告
 
-[Phase 5 空間記憶](artifacts/phase5/PHASE5_SPATIAL_MEMORY_REPORT.md) · [Phase 6 目標與表面感知](artifacts/phase6/PHASE6_REPORT.md) · [Phase 7 新影片流程](artifacts/phase7/PHASE7_REPORT.md) · [Phase 8 找物 Demo](artifacts/phase8/PHASE8_REPORT.md) · [Phase 9 出門提醒](artifacts/phase9/PHASE9_REPORT.md)
+[Phase 9.1 圖譜與啟動優化](artifacts/phase9_1/README.md) · [Phase 9 出門提醒](artifacts/phase9/PHASE9_REPORT.md) · [Phase 8 找物 Demo](artifacts/phase8/PHASE8_REPORT.md) · [Phase 7 新影片流程](artifacts/phase7/PHASE7_REPORT.md) · [Phase 6 目標與表面感知](artifacts/phase6/PHASE6_REPORT.md) · [Phase 5 空間記憶](artifacts/phase5/PHASE5_SPATIAL_MEMORY_REPORT.md)

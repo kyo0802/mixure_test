@@ -106,7 +106,8 @@ class DepartureIntegrationTests(unittest.TestCase):
     def setUpClass(cls):
         rows=[s for s in discover_sessions(ROOT) if s['queryable']]
         if not rows:raise unittest.SkipTest('Real saved session not available')
-        cls.sid=rows[0]['id']
+        cls.sid=next((s['id'] for s in rows if s['id'].startswith('video_932b70')),None)
+        if not cls.sid:raise unittest.SkipTest('Known test8 evidence session unavailable')
 
     def test_real_graph_reminder_then_manual_completion_no_graph_write(self):
         graph=ROOT/'artifacts/findmind_sessions'/self.sid/'memory_graph.json';before=sha(graph)
@@ -132,6 +133,7 @@ class DepartureIntegrationTests(unittest.TestCase):
             store=ChecklistStore(Path(temp));store.read()
             with patch('findmind_demo.checklist_store.ChecklistStore',return_value=store),patch('findmind_demo.departure_ui.ChecklistStore',return_value=store):
                 app=AppTest.from_file(str(ROOT/'apps/findmind_demo.py'),default_timeout=30).run()
+                app.selectbox[0].set_value(self.sid).run()
                 next(b for b in app.button if b.label=="我要出門了 / I'm Leaving").click();app.run()
                 self.assertFalse(app.exception)
                 self.assertTrue(any('3 件' in w.value for w in app.warning))
@@ -151,6 +153,7 @@ class DepartureIntegrationTests(unittest.TestCase):
                 self.assertEqual(store.active(self.sid)['confirmations'],{})
                 # A new AppTest script session simulates application/UI restart.
                 again=AppTest.from_file(str(ROOT/'apps/findmind_demo.py'),default_timeout=30).run()
+                again.selectbox[0].set_value(self.sid).run()
                 again.radio[1].set_value('我要出門了').run()
                 self.assertFalse(again.exception)
                 self.assertEqual(len(store.read()['checks']),2)

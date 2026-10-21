@@ -15,6 +15,7 @@ from findmind_demo.evidence import overlay,source_frame,source_video
 from findmind_demo.jobs import store_upload,submit,list_jobs,poll,job_path
 from findmind_demo.checklist_store import ChecklistStore
 from findmind_demo.departure_ui import render_departure,preferences
+from findmind_demo.graph_ui import render_graph,request_graph
 
 st.set_page_config(page_title='FindMind · 找物記憶',page_icon='🧭',layout='wide')
 st.markdown('''<style>
@@ -26,6 +27,7 @@ h1{letter-spacing:-.04em} [data-testid="stMetric"]{background:var(--secondary-ba
 
 MODE_RECORDED='錄製結果 Demo';MODE_NEW='新影片分析'
 VIEW_HOME='FindMind 首頁';VIEW_DEPARTURE='我要出門了';VIEW_SEARCH='尋找物品'
+VIEW_GRAPH='Memory Graph / 記憶圖譜'
 if st.session_state.get('pending_mode'):st.session_state['demo_mode']=st.session_state.pop('pending_mode')
 if st.session_state.get('pending_view'):st.session_state['demo_view']=st.session_state.pop('pending_view')
 if st.session_state.get('pending_open'):
@@ -62,6 +64,9 @@ def results(identifier,response):
     else:st.warning('位置未能確認 · UNKNOWN')
     st.write(response['answer'])
     st.caption(f"查詢耗時 {response['elapsed_s']*1000:.0f} ms · 從已保存 Graph 取證 · 本次搜尋沒有模型推論")
+    if st.button('在記憶圖譜中查看 / View in Memory Graph',key='search_to_graph'):
+        st.session_state['pending_graph']=request_graph(ROOT,identifier,response)
+        st.session_state['pending_view']=VIEW_GRAPH;st.rerun()
     if result.get('incomplete_stages'):st.warning('這份記憶有未完成階段；目前顯示可安全讀取的部分證據。')
     for n,group in enumerate(response['groups'][:6]):
         c=group['primary'];verified=c['grounding_status']=='VERIFIED'
@@ -120,7 +125,7 @@ rows=discover_sessions(ROOT);available={r['id']:r for r in rows if r['queryable'
 with st.sidebar:
     st.markdown('## 🧭 FindMind')
     mode=st.radio('使用方式',[MODE_RECORDED,MODE_NEW],key='demo_mode')
-    if mode==MODE_RECORDED:view=st.radio('FindMind 導覽',[VIEW_HOME,VIEW_DEPARTURE,VIEW_SEARCH],key='demo_view')
+    if mode==MODE_RECORDED:view=st.radio('FindMind 導覽',[VIEW_HOME,VIEW_DEPARTURE,VIEW_SEARCH,VIEW_GRAPH],key='demo_view')
     st.caption('錄製結果可離線立即互動。新影片需要實際 GPU 處理。')
     if st.button('重新整理記憶清單'):st.rerun()
     st.divider()
@@ -190,6 +195,10 @@ if view==VIEW_HOME:
 if view==VIEW_DEPARTURE:
     try:render_departure(ROOT,identifier,show_evidence)
     except (OSError,ValueError,RuntimeError) as exc:st.error('離開檢查無法儲存：'+str(exc))
+    st.stop()
+if view==VIEW_GRAPH:
+    try:render_graph(ROOT,identifier,show_evidence)
+    except (OSError,ValueError,KeyError,StopIteration) as exc:st.error('圖譜無法安全顯示：'+str(exc))
     st.stop()
 if st.button('返回出門檢查 / Back to checklist'):
     st.session_state['pending_view']=VIEW_DEPARTURE;st.rerun()

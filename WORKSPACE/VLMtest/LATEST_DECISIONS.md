@@ -1,6 +1,18 @@
 # VLMtest — 目前結論與下一步
 
-更新：2026-10-21。**Phase 9 離開提醒＋Object Search 已整合完成。**
+更新：2026-10-21。**Phase 9.1 互動 Memory Graph 與 Nemotron 驗證快取完成。**
+
+- 選擇 optimized cold start，維持既有單影片／多視窗 model reuse；16 GiB GPU 採順序模型 ownership，不新增常駐服務。
+- 22 個模型資產採 pinned SHA manifest。Full verification 63.723 s；metadata cache 0.324 s。嚴格／force 模式保留，cache 不是 fresh crypto 等價替代。
+- 原 435 s aggregate 仍不能全歸因為 hashing；新 instrumentation 接入，但 optimized GPU cold／warm 與整體新影片耗時未量測。
+- Graph 是已保存紀錄的唯讀投影；可選取節點／關係、看精確來源影格、依時間與狀態篩選，支援搜尋與出門找物交接。
+- test8 仍為三筆位置候選、兩組時間／區域證據、0 VERIFIED；keys 無證據就空圖，session 切換清除舊 selection。
+- 149 tests 與實際瀏覽器流程通過。17 份歷史 session 檔案 SHA 保留；新增一份獨立展示檢查並確認後撤銷。程式／報告納入 Phase 9.1 版本，個人狀態不發佈；[版本保存範圍](VERSION_STATUS.md)。
+- [最新報告](LATEST_REPORT.md) · [開啟 FindMind](http://127.0.0.1:8514/)。
+
+## 歷史：Phase 9 結論
+
+Phase 9 離開提醒＋Object Search 已整合完成。
 
 - 首頁／離開檢查／找物同一應用，必帶設定與檢查快照保存於獨立 JSON。
 - 只有明確確認／撤銷按鈕改打包狀態；影像、PICKUP 假說或漏偵測不會自動判定已帶妥／忘帶。

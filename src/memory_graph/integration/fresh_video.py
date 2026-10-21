@@ -152,19 +152,30 @@ def linux_path(path):
 
 def run_worker(root, session, stage, timeout):
     start=time.monotonic();log=session/(stage+'.log')
+    from .runtime_timing import Trace
+    trace=Trace(session/(stage+'_process_timing.jsonl'))
+    launched=datetime.now(timezone.utc).isoformat()
+    trace.event('parent_launch_begin',worker_stage=stage)
     if stage=='nemotron':
         py=root/'.runtime/nemotron/venv_linux/bin/python'
+        verification_mode=os.environ.get('FINDMIND_NEMOTRON_VERIFICATION','cached')
+        forced=os.environ.get('FINDMIND_NEMOTRON_FORCE_VERIFY','0')
+        if verification_mode not in {'cached','strict'} or forced not in {'0','1'}:
+            raise ValueError('INVALID_NEMOTRON_VERIFICATION_CONFIGURATION')
         args=[linux_path(py),linux_path(root/'scripts/run_findmind_nemotron.py'),'--session',linux_path(session)]
-        command=['wsl','-d','Ubuntu','--exec',*args] if os.name=='nt' else args
+        command=['wsl','-d','Ubuntu','--exec','env','FINDMIND_WORKER_LAUNCH_UTC='+launched,
+            'FINDMIND_NEMOTRON_VERIFICATION='+verification_mode,'FINDMIND_NEMOTRON_FORCE_VERIFY='+forced,*args] if os.name=='nt' else args
     else:command=[sys.executable,'-X','utf8','-B',str(root/'scripts/run_findmind_video.py'),'--worker',stage,'--session',str(session)]
     with log.open('x',encoding='utf8') as out:
         process=subprocess.Popen(command,cwd=root,stdout=out,stderr=subprocess.STDOUT)
+        trace.event('subprocess_created',worker_pid=process.pid,worker_stage=stage)
         try:code=process.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             # Stop only this process tree; do not kill unrelated GPU processes.
             if os.name=='nt':subprocess.run(['taskkill','/PID',str(process.pid),'/T','/F'],capture_output=True)
             else:process.kill()
             process.wait();code=-9
+    trace.event('subprocess_exited',seconds=time.monotonic()-start,exit_code=code,worker_stage=stage)
     return dict(stage=stage,status='COMPLETE' if code==0 else 'FAILED',exit_code=code,
         elapsed_s=time.monotonic()-start,log=str(log.relative_to(root)),
         error=None if code==0 else 'WORKER_FAILURE_OR_TIMEOUT; inspect log; successful artifacts retained')

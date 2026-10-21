@@ -1,6 +1,6 @@
 # FindMind — 從這裡開始
 
-**2026-10-21 最新：Phase 9 離開提醒＋找物競賽 Demo。** [開啟應用](http://127.0.0.1:8514/) · [展示指南](artifacts/phase9/DEMO_GUIDE.md) · [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。下方為歷史進度。
+**2026-10-21 最新：Phase 9.1 互動 Memory Graph＋Nemotron 驗證快取。** [開啟應用](http://127.0.0.1:8514/) · [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。GPU／整體新影片耗時尚待量測；下方為歷史進度。
 
 **2026-10-21 最新：Phase 8 互動找物 Demo 已完成。** [開啟本機應用](http://127.0.0.1:8514/) · [操作說明](artifacts/phase8/README.md) · [最新報告](WORKSPACE/VLMtest/LATEST_REPORT.md)。以下為歷史工作進度。
 

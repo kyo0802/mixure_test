@@ -1,10 +1,17 @@
 # VLMtest
 
-更新：2026-10-21。最新工作：**Phase 9 離開提醒＋找物 Agent 已整合，完整競賽流程與保存重啟已實際驗證**。
+更新：2026-10-21。最新工作：**Phase 9.1 互動記憶圖譜＋Nemotron verification cache**。CPU 與瀏覽器驗收完成；GPU 啟動與整支影片加速仍待量測。
 
 **[最新完整報告](LATEST_REPORT.md)** · [目前結論與下一步](LATEST_DECISIONS.md) · [回到工作區](../README.md)
 
-## Phase 9：目前入口
+## Phase 9.1：目前入口
+
+- [完整實作／量測報告](../../artifacts/phase9_1/PHASE9_1_REPORT.md) · [圖譜畫面](../../artifacts/phase9_1/MEMORY_GRAPH.png) · [精確影格證據](../../artifacts/phase9_1/GRAPH_EVIDENCE.png)
+- [開啟 FindMind](http://127.0.0.1:8514/) → 選取記憶 → Memory Graph。也可從找物結果按「在記憶圖譜中查看」。
+- 實際 WSL CPU 驗證：full SHA 63.723 s → cached metadata 0.324 s；不是整支影片加速或 warm inference 數字。
+- 149 tests 通過。兩支 session 的 17 份歷史 Graph／來源／raw SHA 不變；只有新增的展示檢查留下 confirm／undo 記錄。[版本保存範圍](VERSION_STATUS.md) · [Phase 9.1 發佈說明](../../artifacts/phase9_1/README.md)。
+
+## 歷史：Phase 9
 
 - **[開啟 FindMind](http://127.0.0.1:8514/)** · [啟動與兩分鐘展示指南](../../artifacts/phase9/DEMO_GUIDE.md)
 - [正式中文報告](../../artifacts/phase9/PHASE9_REPORT.md) · [找物交接畫面](../../artifacts/phase9/SEARCH_HANDOFF.png) · [檢查完成畫面](../../artifacts/phase9/DEPARTURE_COMPLETE.png)

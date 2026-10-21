@@ -148,6 +148,8 @@ def list_jobs(root):
 def run_job(root,job_id):
     folder=job_path(root,job_id);config=read(folder/'config.json');lock=folder.parent/'gpu.lock'
     if not lock.exists() or read(lock).get('job_id')!=job_id:raise RuntimeError('Job has no GPU execution lease')
+    from memory_graph.integration.runtime_timing import Trace
+    timing=Trace(folder/'timing.jsonl');timing.event('authorized_job_wrapper_entry')
     # A second wrapper for the same job must never launch another pipeline.
     with (folder/'worker.started').open('x') as f:f.write(str(os.getpid()))
     atomic(lock,dict(job_id=job_id,owner_pid=os.getpid(),created=config['created']))
@@ -160,6 +162,7 @@ def run_job(root,job_id):
         with (folder/'pipeline.log').open('w',encoding='utf8') as log:
             process=subprocess.Popen(command,cwd=root,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,
                 text=True,encoding='utf8',errors='replace',bufsize=1,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+            timing.event('phase7_subprocess_created',worker_pid=process.pid)
             atomic(folder/'pipeline_process.json',dict(pid=process.pid))
             for line in process.stdout:
                 log.write(line);log.flush()
@@ -174,7 +177,7 @@ def run_job(root,job_id):
         if r and (session/'memory_graph.json').exists():
             state['status']='PARTIAL' if code or r.get('assembly_errors') or any(s['status']!='COMPLETE' for s in r['stages']) else 'COMPLETED'
         else:state.update(status='FAILED',error=f'Phase 7 未建立可查詢 Graph（exit {code}）。請查看日誌。')
-        state['exit_code']=code
+        state['exit_code']=code;timing.event('phase7_subprocess_exited',exit_code=code)
     except Exception as e:state.update(status='FAILED',error=str(e))
     finally:
         state['updated']=stamp();atomic(folder/'state.json',state)

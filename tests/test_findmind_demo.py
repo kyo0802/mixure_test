@@ -162,6 +162,10 @@ class StreamlitJourneyTests(unittest.TestCase):
         saved=[s for s in sessions.discover_sessions(ROOT) if s['queryable']]
         if not saved:self.skipTest('No saved real session available')
         app=AppTest.from_file(str(ROOT/'apps/findmind_demo.py'),default_timeout=30).run()
+        # This assertion concerns the known test8 fixture, not whichever upload is newest.
+        test8=next((s['id'] for s in saved if s['id'].startswith('video_932b70')),None)
+        if not test8:self.skipTest('Known test8 evidence session unavailable')
+        app.selectbox[0].set_value(test8).run()
         app.radio[1].set_value('尋找物品').run()
         self.assertFalse(app.exception)
         self.assertEqual(app.session_state['response']['result']['status'],'POSSIBLE_LOCATIONS')
